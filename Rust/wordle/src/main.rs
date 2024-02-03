@@ -233,8 +233,7 @@ fn main() -> io::Result<()> {
     let mut rng = rand::thread_rng();
     let w_idx = rng.gen_range(0..words.len());
 
-    // let answer_word = &words[w_idx];
-    let answer_word = &("guess".to_string());
+    let answer_word = &words[w_idx];
 
     execute!(io::stdout(), EnterAlternateScreen)?;
     enable_raw_mode();
