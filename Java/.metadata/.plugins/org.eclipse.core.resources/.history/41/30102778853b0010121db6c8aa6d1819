@@ -1,0 +1,108 @@
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ 
+/*     */ public class kb
+/*     */ {
+/*     */   protected final Minecraft a;
+/*  14 */   public boolean b = false;
+/*     */ 
+/*     */   public kb(Minecraft paramMinecraft) {
+/*  17 */     this.a = paramMinecraft;
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn) {
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  24 */     b(paramInt1, paramInt2, paramInt3, paramInt4);
+/*     */   }
+/*     */ 
+/*     */   public boolean b(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  28 */     this.a.h.a(paramInt1, paramInt2, paramInt3);
+/*  29 */     dn localdn = this.a.e;
+/*  30 */     pj localpj = pj.m[localdn.a(paramInt1, paramInt2, paramInt3)];
+/*  31 */     int i = localdn.e(paramInt1, paramInt2, paramInt3);
+/*  32 */     boolean bool = localdn.e(paramInt1, paramInt2, paramInt3, 0);
+/*  33 */     if ((localpj != null) && (bool)) {
+/*  34 */       this.a.A.b(localpj.br.a(), paramInt1 + 0.5F, paramInt2 + 0.5F, paramInt3 + 0.5F, (localpj.br.b() + 1.0F) / 2.0F, localpj.br.c() * 0.8F);
+/*  35 */       localpj.b(localdn, paramInt1, paramInt2, paramInt3, i);
+/*     */     }
+/*  37 */     return bool;
+/*     */   }
+/*     */ 
+/*     */   public void c(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*     */   }
+/*     */ 
+/*     */   public void a() {
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat) {
+/*     */   }
+/*     */ 
+/*     */   public float b() {
+/*  50 */     return 5.0F;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(eu parameu, dn paramdn, gm paramgm) {
+/*  54 */     int i = paramgm.a;
+/*  55 */     gm localgm = paramgm.a(paramdn, parameu);
+/*  56 */     if ((localgm != paramgm) || ((localgm != null) && (localgm.a != i))) {
+/*  57 */       parameu.f.a[parameu.f.c] = localgm;
+/*  58 */       if (localgm.a == 0) {
+/*  59 */         parameu.f.a[parameu.f.c] = null;
+/*     */       }
+/*  61 */       return true;
+/*     */     }
+/*  63 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public void a(eu parameu)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void c()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public boolean d()
+/*     */   {
+/*  77 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public void b(eu parameu) {
+/*     */   }
+/*     */ 
+/*     */   public boolean a(eu parameu, dn paramdn, gm paramgm, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  84 */     int i = paramdn.a(paramInt1, paramInt2, paramInt3);
+/*  85 */     if ((i > 0) && 
+/*  86 */       (pj.m[i].a(paramdn, paramInt1, paramInt2, paramInt3, parameu))) return true;
+/*     */ 
+/*  88 */     if (paramgm == null) return false;
+/*  89 */     return paramgm.a(parameu, paramdn, paramInt1, paramInt2, paramInt3, paramInt4);
+/*     */   }
+/*     */ 
+/*     */   public eu b(dn paramdn) {
+/*  93 */     return new bz(this.a, paramdn, this.a.i, paramdn.q.g);
+/*     */   }
+/*     */ 
+/*     */   public void a(eu parameu, nl paramnl) {
+/*  97 */     parameu.c(paramnl);
+/*     */   }
+/*     */ 
+/*     */   public void b(eu parameu, nl paramnl) {
+/* 101 */     parameu.d(paramnl);
+/*     */   }
+/*     */ 
+/*     */   public gm a(int paramInt1, int paramInt2, int paramInt3, eu parameu) {
+/* 105 */     return parameu.h.a(paramInt2, paramInt3, parameu);
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt, eu parameu) {
+/* 109 */     parameu.h.a(parameu);
+/* 110 */     parameu.h = parameu.g;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     kb
+ * JD-Core Version:    0.6.0
+ */

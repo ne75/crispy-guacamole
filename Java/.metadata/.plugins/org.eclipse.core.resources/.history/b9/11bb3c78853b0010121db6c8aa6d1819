@@ -1,0 +1,37 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class si extends hj
+/*    */ {
+/*    */   public String a;
+/*    */ 
+/*    */   public si()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public si(String paramString)
+/*    */   {
+/* 12 */     this.a = paramString;
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream) {
+/* 16 */     this.a = paramDataInputStream.readUTF();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 20 */     paramDataOutputStream.writeUTF(this.a);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 24 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 28 */     return this.a.length();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     si
+ * JD-Core Version:    0.6.0
+ */

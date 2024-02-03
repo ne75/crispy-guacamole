@@ -1,0 +1,488 @@
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class pj
+/*     */ {
+/*  56 */   public static final br d = new br("stone", 1.0F, 1.0F);
+/*  57 */   public static final br e = new br("wood", 1.0F, 1.0F);
+/*  58 */   public static final br f = new br("gravel", 1.0F, 1.0F);
+/*  59 */   public static final br g = new br("grass", 1.0F, 1.0F);
+/*  60 */   public static final br h = new br("stone", 1.0F, 1.0F);
+/*  61 */   public static final br i = new br("stone", 1.0F, 1.5F);
+/*  62 */   public static final br j = new ac("stone", 1.0F, 1.0F);
+/*     */ 
+/*  67 */   public static final br k = new br("cloth", 1.0F, 1.0F);
+/*  68 */   public static final br l = new aa("sand", 1.0F, 1.0F);
+/*     */ 
+/*  90 */   public static final pj[] m = new pj[256];
+/*     */ 
+/*  92 */   public static final boolean[] n = new boolean[256];
+/*  93 */   public static final boolean[] o = new boolean[256];
+/*  94 */   public static final boolean[] p = new boolean[256];
+/*  95 */   public static final int[] q = new int[256];
+/*  96 */   public static final boolean[] r = new boolean[256];
+/*  97 */   public static final int[] s = new int[256];
+/*     */ 
+/* 100 */   public static final pj t = new da(1, 1).c(1.5F).b(10.0F).a(h).a("stone");
+/* 101 */   public static final qp u = (qp)new qp(2).c(0.6F).a(g).a("grass");
+/* 102 */   public static final pj v = new km(3, 2).c(0.5F).a(f).a("dirt");
+/* 103 */   public static final pj w = new pj(4, 16, ic.d).c(2.0F).b(10.0F).a(h).a("stonebrick");
+/* 104 */   public static final pj x = new pj(5, 4, ic.c).c(2.0F).b(5.0F).a(e).a("wood");
+/* 105 */   public static final pj y = new fc(6, 15).c(0.0F).a(g).a("sapling");
+/* 106 */   public static final pj z = new pj(7, 17, ic.d).c(-1.0F).b(6000000.0F).a(h).a("bedrock");
+/* 107 */   public static final pj A = new kh(8, ic.f).c(100.0F).e(3).a("water");
+/* 108 */   public static final pj B = new jx(9, ic.f).c(100.0F).e(3).a("water");
+/* 109 */   public static final pj C = new kh(10, ic.g).c(0.0F).a(1.0F).e(255).a("lava");
+/* 110 */   public static final pj D = new jx(11, ic.g).c(100.0F).a(1.0F).e(255).a("lava");
+/* 111 */   public static final pj E = new en(12, 18).c(0.5F).a(l).a("sand");
+/* 112 */   public static final pj F = new jh(13, 19).c(0.6F).a(f).a("gravel");
+/* 113 */   public static final pj G = new jd(14, 32).c(3.0F).b(5.0F).a(h).a("oreGold");
+/* 114 */   public static final pj H = new jd(15, 33).c(3.0F).b(5.0F).a(h).a("oreIron");
+/* 115 */   public static final pj I = new jd(16, 34).c(3.0F).b(5.0F).a(h).a("oreCoal");
+/* 116 */   public static final pj J = new ps(17).c(2.0F).a(e).a("log");
+/* 117 */   public static final at K = (at)new at(18, 52).c(0.2F).e(1).a(g).a("leaves");
+/* 118 */   public static final pj L = new rb(19).c(0.6F).a(g).a("sponge");
+/* 119 */   public static final pj M = new dt(20, 49, ic.o, false).c(0.3F).a(j).a("glass");
+/* 120 */   public static final pj N = new jd(21, 160).c(3.0F).b(5.0F).a(h).a("oreLapis");
+/* 121 */   public static final pj O = new pj(22, 144, ic.d).c(3.0F).b(5.0F).a(h).a("blockLapis");
+/* 122 */   public static final pj P = new rj(23).c(3.5F).a(h).a("dispenser");
+/* 123 */   public static final pj Q = new mi(24).a(h).c(0.8F).a("sandStone");
+/* 124 */   public static final pj R = new lh(25).c(0.8F).a("musicBlock");
+/* 125 */   public static final pj S = null;
+/* 126 */   public static final pj T = null;
+/* 127 */   public static final pj U = null;
+/* 128 */   public static final pj V = null;
+/* 129 */   public static final pj W = null;
+/* 130 */   public static final pj X = null;
+/* 131 */   public static final pj Y = null;
+/* 132 */   public static final pj Z = null;
+/* 133 */   public static final pj aa = null;
+/* 134 */   public static final pj ab = new cu().c(0.8F).a(k).a("cloth");
+/* 135 */   public static final pj ac = null;
+/* 136 */   public static final qg ad = (qg)new qg(37, 13).c(0.0F).a(g).a("flower");
+/* 137 */   public static final qg ae = (qg)new qg(38, 12).c(0.0F).a(g).a("rose");
+/* 138 */   public static final qg af = (qg)new og(39, 29).c(0.0F).a(g).a(0.125F).a("mushroom");
+/* 139 */   public static final qg ag = (qg)new og(40, 28).c(0.0F).a(g).a("mushroom");
+/* 140 */   public static final pj ah = new g(41, 23).c(3.0F).b(10.0F).a(i).a("blockGold");
+/* 141 */   public static final pj ai = new g(42, 22).c(5.0F).b(10.0F).a(i).a("blockIron");
+/* 142 */   public static final pj aj = new sj(43, true).c(2.0F).b(10.0F).a(h).a("stoneSlab");
+/* 143 */   public static final pj ak = new sj(44, false).c(2.0F).b(10.0F).a(h).a("stoneSlab");
+/* 144 */   public static final pj al = new pj(45, 7, ic.d).c(2.0F).b(10.0F).a(h).a("brick");
+/* 145 */   public static final pj am = new z(46, 8).c(0.0F).a(g).a("tnt");
+/* 146 */   public static final pj an = new fa(47, 35).c(1.5F).a(e).a("bookshelf");
+/* 147 */   public static final pj ao = new pj(48, 36, ic.d).c(2.0F).b(10.0F).a(h).a("stoneMoss");
+/* 148 */   public static final pj ap = new dl(49, 37).c(10.0F).b(2000.0F).a(h).a("obsidian");
+/* 149 */   public static final pj aq = new pv(50, 80).c(0.0F).a(0.9375F).a(e).a("torch");
+/* 150 */   public static final sh ar = (sh)new sh(51, 31).c(0.0F).a(1.0F).a(e).a("fire");
+/* 151 */   public static final pj as = new ca(52, 65).c(5.0F).a(i).a("mobSpawner");
+/* 152 */   public static final pj at = new nq(53, x).a("stairsWood");
+/* 153 */   public static final pj au = new c(54).c(2.5F).a(e).a("chest");
+/* 154 */   public static final pj av = new nk(55, 84).c(0.0F).a(d).a("redstoneDust");
+/* 155 */   public static final pj aw = new jd(56, 50).c(3.0F).b(5.0F).a(h).a("oreDiamond");
+/* 156 */   public static final pj ax = new g(57, 24).c(5.0F).b(10.0F).a(i).a("blockDiamond");
+/* 157 */   public static final pj ay = new ds(58).c(2.5F).a(e).a("workbench");
+/* 158 */   public static final pj az = new jm(59, 88).c(0.0F).a(g).a("crops");
+/* 159 */   public static final pj aA = new pu(60).c(0.6F).a(f).a("farmland");
+/* 160 */   public static final pj aB = new ny(61, false).c(3.5F).a(h).a("furnace");
+/* 161 */   public static final pj aC = new ny(62, true).c(3.5F).a(h).a(0.875F).a("furnace");
+/* 162 */   public static final pj aD = new pa(63, sc.class, true).c(1.0F).a(e).a("sign");
+/* 163 */   public static final pj aE = new hv(64, ic.c).c(3.0F).a(e).a("doorWood");
+/* 164 */   public static final pj aF = new ck(65, 83).c(0.4F).a(e).a("ladder");
+/* 165 */   public static final pj aG = new ku(66, 128).c(0.7F).a(i).a("rail");
+/* 166 */   public static final pj aH = new nq(67, w).a("stairsStone");
+/* 167 */   public static final pj aI = new pa(68, sc.class, false).c(1.0F).a(e).a("sign");
+/* 168 */   public static final pj aJ = new rk(69, 96).c(0.5F).a(e).a("lever");
+/* 169 */   public static final pj aK = new az(70, t.bh, mt.b).c(0.5F).a(h).a("pressurePlate");
+/*     */ 
+/* 171 */   public static final pj aL = new hv(71, ic.e).c(5.0F).a(i).a("doorIron");
+/* 172 */   public static final pj aM = new az(72, x.bh, mt.a).c(0.5F).a(e).a("pressurePlate");
+/*     */ 
+/* 174 */   public static final pj aN = new aw(73, 51, false).c(3.0F).b(5.0F).a(h).a("oreRedstone");
+/* 175 */   public static final pj aO = new aw(74, 51, true).a(0.625F).c(3.0F).b(5.0F).a(h).a("oreRedstone");
+/*     */ 
+/* 177 */   public static final pj aP = new bx(75, 115, false).c(0.0F).a(e).a("notGate");
+/* 178 */   public static final pj aQ = new bx(76, 99, true).c(0.0F).a(0.5F).a(e).a("notGate");
+/* 179 */   public static final pj aR = new ke(77, t.bh).c(0.5F).a(h).a("button");
+/* 180 */   public static final pj aS = new gx(78, 66).c(0.1F).a(k).a("snow");
+/* 181 */   public static final pj aT = new jn(79, 67).c(0.5F).e(3).a(j).a("ice");
+/* 182 */   public static final pj aU = new v(80, 66).c(0.2F).a(k).a("snow");
+/* 183 */   public static final pj aV = new kl(81, 70).c(0.4F).a(k).a("cactus");
+/* 184 */   public static final pj aW = new mx(82, 72).c(0.6F).a(f).a("clay");
+/* 185 */   public static final pj aX = new mm(83, 73).c(0.0F).a(g).a("reeds");
+/* 186 */   public static final pj aY = new dv(84, 74).c(2.0F).b(10.0F).a(h).a("jukebox");
+/* 187 */   public static final pj aZ = new hb(85, 4).c(2.0F).b(5.0F).a(e).a("fence");
+/* 188 */   public static final pj ba = new dm(86, 102, false).c(1.0F).a(e).a("pumpkin");
+/* 189 */   public static final pj bb = new sa(87, 103).c(0.4F).a(h).a("hellrock");
+/* 190 */   public static final pj bc = new jz(88, 104).c(0.5F).a(l).a("hellsand");
+/* 191 */   public static final pj bd = new il(89, 105, ic.o).c(0.3F).a(j).a(1.0F).a("lightgem");
+/* 192 */   public static final ab be = (ab)new ab(90, 14).c(-1.0F).a(j).a(0.75F).a("portal");
+/* 193 */   public static final pj bf = new dm(91, 102, true).c(1.0F).a(e).a(1.0F).a("litpumpkin");
+/* 194 */   public static final pj bg = new pc(92, 121).c(0.5F).a(k).a("cake");
+/*     */   public int bh;
+/*     */   public final int bi;
+/*     */   protected float bj;
+/*     */   protected float bk;
+/*     */   public double bl;
+/*     */   public double bm;
+/*     */   public double bn;
+/*     */   public double bo;
+/*     */   public double bp;
+/*     */   public double bq;
+/* 214 */   public br br = d;
+/*     */ 
+/* 216 */   public float bs = 1.0F;
+/*     */   public final ic bt;
+/* 218 */   public float bu = 0.6F;
+/*     */   private String a;
+/*     */ 
+/*     */   protected pj(int paramInt, ic paramic)
+/*     */   {
+/* 223 */     if (m[paramInt] != null) {
+/* 224 */       throw new IllegalArgumentException("Slot " + paramInt + " is already occupied by " + m[paramInt] + " when adding " + this);
+/*     */     }
+/* 226 */     this.bt = paramic;
+/* 227 */     m[paramInt] = this;
+/* 228 */     this.bi = paramInt;
+/* 229 */     a(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+/* 230 */     o[paramInt] = a();
+/* 231 */     q[paramInt] = (a() ? 'ÿ' : 0);
+/* 232 */     r[paramInt] = j();
+/* 233 */     p[paramInt] = false;
+/*     */   }
+/*     */ 
+/*     */   protected pj(int paramInt1, int paramInt2, ic paramic) {
+/* 237 */     this(paramInt1, paramic);
+/* 238 */     this.bh = paramInt2;
+/*     */   }
+/*     */ 
+/*     */   protected pj a(br parambr) {
+/* 242 */     this.br = parambr;
+/* 243 */     return this;
+/*     */   }
+/*     */ 
+/*     */   protected pj e(int paramInt) {
+/* 247 */     q[this.bi] = paramInt;
+/* 248 */     return this;
+/*     */   }
+/*     */ 
+/*     */   protected pj a(float paramFloat) {
+/* 252 */     s[this.bi] = (int)(15.0F * paramFloat);
+/* 253 */     return this;
+/*     */   }
+/*     */ 
+/*     */   protected pj b(float paramFloat) {
+/* 257 */     this.bk = (paramFloat * 3.0F);
+/* 258 */     return this;
+/*     */   }
+/*     */ 
+/*     */   private boolean j() {
+/* 262 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean b() {
+/* 266 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public int g() {
+/* 270 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   protected pj c(float paramFloat) {
+/* 274 */     this.bj = paramFloat;
+/* 275 */     if (this.bk < paramFloat * 5.0F) this.bk = (paramFloat * 5.0F);
+/* 276 */     return this;
+/*     */   }
+/*     */ 
+/*     */   protected void b(boolean paramBoolean) {
+/* 280 */     n[this.bi] = paramBoolean;
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6) {
+/* 284 */     this.bl = paramFloat1;
+/* 285 */     this.bm = paramFloat2;
+/* 286 */     this.bn = paramFloat3;
+/* 287 */     this.bo = paramFloat4;
+/* 288 */     this.bp = paramFloat5;
+/* 289 */     this.bq = paramFloat6;
+/*     */   }
+/*     */ 
+/*     */   public float d(ri paramri, int paramInt1, int paramInt2, int paramInt3) {
+/* 293 */     return paramri.c(paramInt1, paramInt2, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   public boolean b(ri paramri, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/* 307 */     if ((paramInt4 == 0) && (this.bm > 0.0D)) return true;
+/* 308 */     if ((paramInt4 == 1) && (this.bp < 1.0D)) return true;
+/* 309 */     if ((paramInt4 == 2) && (this.bn > 0.0D)) return true;
+/* 310 */     if ((paramInt4 == 3) && (this.bq < 1.0D)) return true;
+/* 311 */     if ((paramInt4 == 4) && (this.bl > 0.0D)) return true;
+/* 312 */     if ((paramInt4 == 5) && (this.bo < 1.0D)) return true;
+/* 313 */     return !paramri.g(paramInt1, paramInt2, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   public int a(ri paramri, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 317 */     return a(paramInt4, paramri.e(paramInt1, paramInt2, paramInt3));
+/*     */   }
+/*     */ 
+/*     */   public int a(int paramInt1, int paramInt2) {
+/* 321 */     return a(paramInt1);
+/*     */   }
+/*     */ 
+/*     */   public int a(int paramInt) {
+/* 325 */     return this.bh;
+/*     */   }
+/*     */ 
+/*     */   public db f(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 329 */     return db.b(paramInt1 + this.bl, paramInt2 + this.bm, paramInt3 + this.bn, paramInt1 + this.bo, paramInt2 + this.bp, paramInt3 + this.bq);
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, db paramdb, ArrayList paramArrayList) {
+/* 333 */     db localdb = d(paramdn, paramInt1, paramInt2, paramInt3);
+/* 334 */     if ((localdb != null) && (paramdb.a(localdb))) paramArrayList.add(localdb); 
+/*     */   }
+/*     */ 
+/*     */   public db d(dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/* 338 */     return db.b(paramInt1 + this.bl, paramInt2 + this.bm, paramInt3 + this.bn, paramInt1 + this.bo, paramInt2 + this.bp, paramInt3 + this.bq);
+/*     */   }
+/*     */ 
+/*     */   public boolean a() {
+/* 342 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(int paramInt, boolean paramBoolean) {
+/* 346 */     return h();
+/*     */   }
+/*     */ 
+/*     */   public boolean h() {
+/* 350 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, Random paramRandom)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3, Random paramRandom)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*     */   }
+/*     */ 
+/*     */   public int d() {
+/* 369 */     return 10;
+/*     */   }
+/*     */ 
+/*     */   public void e(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*     */   }
+/*     */ 
+/*     */   public int a(Random paramRandom) {
+/* 379 */     return 1;
+/*     */   }
+/*     */ 
+/*     */   public int a(int paramInt, Random paramRandom) {
+/* 383 */     return this.bi;
+/*     */   }
+/*     */ 
+/*     */   public float a(eu parameu) {
+/* 387 */     if (this.bj < 0.0F) return 0.0F;
+/* 388 */     if (!parameu.b(this)) return 1.0F / this.bj / 100.0F;
+/* 389 */     return parameu.a(this) / this.bj / 30.0F;
+/*     */   }
+/*     */ 
+/*     */   public void b_(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 393 */     a(paramdn, paramInt1, paramInt2, paramInt3, paramInt4, 1.0F);
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4, float paramFloat) {
+/* 397 */     if (paramdn.z) return;
+/* 398 */     int i1 = a(paramdn.l);
+/* 399 */     for (int i2 = 0; i2 < i1; i2++)
+/* 400 */       if (paramdn.l.nextFloat() <= paramFloat) {
+/* 401 */         int i3 = a(paramInt4, paramdn.l);
+/* 402 */         if (i3 > 0) {
+/* 403 */           float f1 = 0.7F;
+/* 404 */           double d1 = paramdn.l.nextFloat() * f1 + (1.0F - f1) * 0.5D;
+/* 405 */           double d2 = paramdn.l.nextFloat() * f1 + (1.0F - f1) * 0.5D;
+/* 406 */           double d3 = paramdn.l.nextFloat() * f1 + (1.0F - f1) * 0.5D;
+/* 407 */           fh localfh = new fh(paramdn, paramInt1 + d1, paramInt2 + d2, paramInt3 + d3, new gm(i3, 1, b(paramInt4)));
+/* 408 */           localfh.c = 10;
+/* 409 */           paramdn.a(localfh);
+/*     */         }
+/*     */       }
+/*     */   }
+/*     */ 
+/*     */   protected int b(int paramInt)
+/*     */   {
+/* 420 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public float a(nl paramnl) {
+/* 424 */     return this.bk / 5.0F;
+/*     */   }
+/*     */ 
+/*     */   public pr a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, ax paramax1, ax paramax2) {
+/* 428 */     a(paramdn, paramInt1, paramInt2, paramInt3);
+/* 429 */     paramax1 = paramax1.c(-paramInt1, -paramInt2, -paramInt3);
+/* 430 */     paramax2 = paramax2.c(-paramInt1, -paramInt2, -paramInt3);
+/*     */ 
+/* 432 */     ax localax1 = paramax1.a(paramax2, this.bl);
+/* 433 */     ax localax2 = paramax1.a(paramax2, this.bo);
+/*     */ 
+/* 435 */     ax localax3 = paramax1.b(paramax2, this.bm);
+/* 436 */     ax localax4 = paramax1.b(paramax2, this.bp);
+/*     */ 
+/* 438 */     ax localax5 = paramax1.c(paramax2, this.bn);
+/* 439 */     ax localax6 = paramax1.c(paramax2, this.bq);
+/*     */ 
+/* 441 */     if (!a(localax1)) localax1 = null;
+/* 442 */     if (!a(localax2)) localax2 = null;
+/* 443 */     if (!b(localax3)) localax3 = null;
+/* 444 */     if (!b(localax4)) localax4 = null;
+/* 445 */     if (!c(localax5)) localax5 = null;
+/* 446 */     if (!c(localax6)) localax6 = null;
+/*     */ 
+/* 448 */     ax localax7 = null;
+/*     */ 
+/* 450 */     if ((localax1 != null) && ((localax7 == null) || (paramax1.c(localax1) < paramax1.c(localax7)))) localax7 = localax1;
+/* 451 */     if ((localax2 != null) && ((localax7 == null) || (paramax1.c(localax2) < paramax1.c(localax7)))) localax7 = localax2;
+/* 452 */     if ((localax3 != null) && ((localax7 == null) || (paramax1.c(localax3) < paramax1.c(localax7)))) localax7 = localax3;
+/* 453 */     if ((localax4 != null) && ((localax7 == null) || (paramax1.c(localax4) < paramax1.c(localax7)))) localax7 = localax4;
+/* 454 */     if ((localax5 != null) && ((localax7 == null) || (paramax1.c(localax5) < paramax1.c(localax7)))) localax7 = localax5;
+/* 455 */     if ((localax6 != null) && ((localax7 == null) || (paramax1.c(localax6) < paramax1.c(localax7)))) localax7 = localax6;
+/*     */ 
+/* 457 */     if (localax7 == null) return null;
+/*     */ 
+/* 459 */     int i1 = -1;
+/*     */ 
+/* 461 */     if (localax7 == localax1) i1 = 4;
+/* 462 */     if (localax7 == localax2) i1 = 5;
+/* 463 */     if (localax7 == localax3) i1 = 0;
+/* 464 */     if (localax7 == localax4) i1 = 1;
+/* 465 */     if (localax7 == localax5) i1 = 2;
+/* 466 */     if (localax7 == localax6) i1 = 3;
+/*     */ 
+/* 468 */     return new pr(paramInt1, paramInt2, paramInt3, i1, localax7.c(paramInt1, paramInt2, paramInt3));
+/*     */   }
+/*     */ 
+/*     */   private boolean a(ax paramax) {
+/* 472 */     if (paramax == null) return false;
+/* 473 */     return (paramax.b >= this.bm) && (paramax.b <= this.bp) && (paramax.c >= this.bn) && (paramax.c <= this.bq);
+/*     */   }
+/*     */ 
+/*     */   private boolean b(ax paramax) {
+/* 477 */     if (paramax == null) return false;
+/* 478 */     return (paramax.a >= this.bl) && (paramax.a <= this.bo) && (paramax.c >= this.bn) && (paramax.c <= this.bq);
+/*     */   }
+/*     */ 
+/*     */   private boolean c(ax paramax) {
+/* 482 */     if (paramax == null) return false;
+/* 483 */     return (paramax.a >= this.bl) && (paramax.a <= this.bo) && (paramax.b >= this.bm) && (paramax.b <= this.bp);
+/*     */   }
+/*     */ 
+/*     */   public void c(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*     */   }
+/*     */ 
+/*     */   public int c() {
+/* 490 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 494 */     int i1 = paramdn.a(paramInt1, paramInt2, paramInt3);
+/* 495 */     return (i1 == 0) || (m[i1].bt.d());
+/*     */   }
+/*     */ 
+/*     */   public boolean a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, eu parameu) {
+/* 499 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3, nl paramnl)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void d(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3, eu parameu)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, nl paramnl, ax paramax)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void a(ri paramri, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public int b(ri paramri, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/* 525 */     return 16777215;
+/*     */   }
+/*     */ 
+/*     */   public boolean c(ri paramri, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/* 533 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean e() {
+/* 537 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, nl paramnl) {
+/*     */   }
+/*     */ 
+/*     */   public boolean c(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 544 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public void f() {
+/*     */   }
+/*     */ 
+/*     */   public void a_(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 551 */     b_(paramdn, paramInt1, paramInt2, paramInt3, paramInt4);
+/*     */   }
+/*     */ 
+/*     */   public boolean g(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 555 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, ig paramig) {
+/*     */   }
+/*     */ 
+/*     */   public pj a(String paramString) {
+/* 562 */     this.a = ("tile." + paramString);
+/* 563 */     return this;
+/*     */   }
+/*     */ 
+/*     */   public String i() {
+/* 567 */     return this.a;
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   static
+/*     */   {
+/* 200 */     eo.c[ab.bi] = new as(ab.bi - 256).a("cloth");
+/* 201 */     eo.c[J.bi] = new er(J.bi - 256).a("log");
+/* 202 */     for (int i1 = 0; i1 < 256; i1++)
+/* 203 */       if ((m[i1] != null) && (eo.c[i1] == null))
+/* 204 */         eo.c[i1] = new bl(i1 - 256);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     pj
+ * JD-Core Version:    0.6.0
+ */

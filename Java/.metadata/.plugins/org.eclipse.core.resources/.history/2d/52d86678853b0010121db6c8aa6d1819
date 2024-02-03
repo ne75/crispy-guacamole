@@ -1,0 +1,24 @@
+/*    */ package org.lwjgl.opengl;
+/*    */ 
+/*    */ import org.lwjgl.BufferChecks;
+/*    */ 
+/*    */ public final class EXTBlendEquationSeparate
+/*    */ {
+/*    */   public static final int GL_BLEND_EQUATION_RGB_EXT = 32777;
+/*    */   public static final int GL_BLEND_EQUATION_ALPHA_EXT = 34877;
+/*    */ 
+/*    */   public static void glBlendEquationSeparateEXT(int modeRGB, int modeAlpha)
+/*    */   {
+/* 22 */     ContextCapabilities caps = GLContext.getCapabilities();
+/* 23 */     long function_pointer = caps.EXT_blend_equation_separate_glBlendEquationSeparateEXT_pointer;
+/* 24 */     BufferChecks.checkFunctionAddress(function_pointer);
+/* 25 */     nglBlendEquationSeparateEXT(modeRGB, modeAlpha, function_pointer);
+/*    */   }
+/*    */ 
+/*    */   private static native void nglBlendEquationSeparateEXT(int paramInt1, int paramInt2, long paramLong);
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/lwjgl.jar
+ * Qualified Name:     org.lwjgl.opengl.EXTBlendEquationSeparate
+ * JD-Core Version:    0.6.0
+ */

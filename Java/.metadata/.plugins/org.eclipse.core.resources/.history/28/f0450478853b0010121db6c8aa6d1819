@@ -1,0 +1,154 @@
+/*     */ import java.io.PrintStream;
+/*     */ import java.util.Random;
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ 
+/*     */ public class bz extends eu
+/*     */ {
+/*     */   public pg a;
+/*     */   protected Minecraft b;
+/*  25 */   public int c = 20;
+/*  26 */   private boolean bF = false;
+/*     */   public float d;
+/*     */   public float e;
+/*     */ 
+/*     */   public bz(Minecraft paramMinecraft, dn paramdn, es parames, int paramInt)
+/*     */   {
+/*  30 */     super(paramdn);
+/*  31 */     this.b = paramMinecraft;
+/*  32 */     this.p = paramInt;
+/*     */ 
+/*  34 */     if ((parames != null) && (parames.b != null) && (parames.b.length() > 0)) {
+/*  35 */       this.bu = ("http://s3.amazonaws.com/MinecraftSkins/" + parames.b + ".png");
+/*  36 */       System.out.println("Loading texture " + this.bu);
+/*     */     }
+/*  38 */     this.o = parames.b;
+/*     */   }
+/*     */ 
+/*     */   public void d_() {
+/*  42 */     super.d_();
+/*  43 */     this.aq = this.a.a;
+/*  44 */     this.ar = this.a.b;
+/*  45 */     this.at = this.a.d;
+/*     */   }
+/*     */ 
+/*     */   public void m() {
+/*  49 */     this.e = this.d;
+/*  50 */     if (this.bF) {
+/*  51 */       if (this.d == 0.0F) {
+/*  52 */         this.b.A.a("portal.trigger", 1.0F, this.bm.nextFloat() * 0.4F + 0.8F);
+/*     */       }
+/*  54 */       this.d += 0.0125F;
+/*  55 */       if (this.d >= 1.0F) {
+/*  56 */         this.d = 1.0F;
+/*  57 */         this.c = 10;
+/*  58 */         this.b.A.a("portal.travel", 1.0F, this.bm.nextFloat() * 0.4F + 0.8F);
+/*  59 */         this.b.k();
+/*     */       }
+/*  61 */       this.bF = false;
+/*     */     } else {
+/*  63 */       if (this.d > 0.0F) this.d -= 0.05F;
+/*  64 */       if (this.d < 0.0F) this.d = 0.0F;
+/*     */     }
+/*     */ 
+/*  67 */     if (this.c > 0) this.c -= 1;
+/*  68 */     this.a.a(this);
+/*     */ 
+/*  70 */     if ((this.a.e) && 
+/*  71 */       (this.bh < 0.2F)) this.bh = 0.2F;
+/*     */ 
+/*  73 */     super.m();
+/*     */   }
+/*     */ 
+/*     */   public void n_() {
+/*  77 */     this.a.a();
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt, boolean paramBoolean) {
+/*  81 */     this.a.a(paramInt, paramBoolean);
+/*     */   }
+/*     */ 
+/*     */   public void a(jw paramjw) {
+/*  85 */     super.a(paramjw);
+/*  86 */     paramjw.a("Score", this.j);
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw) {
+/*  90 */     super.b(paramjw);
+/*  91 */     this.j = paramjw.e("Score");
+/*     */   }
+/*     */ 
+/*     */   public void p() {
+/*  95 */     super.p();
+/*  96 */     this.b.a(null);
+/*     */   }
+/*     */ 
+/*     */   public void a(sc paramsc) {
+/* 100 */     this.b.a(new rv(paramsc));
+/*     */   }
+/*     */ 
+/*     */   public void a(ij paramij) {
+/* 104 */     this.b.a(new fk(this.f, paramij));
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, int paramInt3) {
+/* 108 */     this.b.a(new ki(this.f, this.aB, paramInt1, paramInt2, paramInt3));
+/*     */   }
+/*     */ 
+/*     */   public void a(ni paramni) {
+/* 112 */     this.b.a(new kq(this.f, paramni));
+/*     */   }
+/*     */ 
+/*     */   public void a(ak paramak)
+/*     */   {
+/* 117 */     this.b.a(new et(this.f, paramak));
+/*     */   }
+/*     */ 
+/*     */   public void b(nl paramnl, int paramInt) {
+/* 121 */     this.b.h.a(new cz(this.b.e, paramnl, this, -0.5F));
+/*     */   }
+/*     */ 
+/*     */   public int q() {
+/* 125 */     return this.f.f();
+/*     */   }
+/*     */ 
+/*     */   public void a(String paramString) {
+/*     */   }
+/*     */ 
+/*     */   public void r() {
+/*     */   }
+/*     */ 
+/*     */   public boolean s() {
+/* 135 */     return this.a.e;
+/*     */   }
+/*     */ 
+/*     */   public void t() {
+/* 139 */     if (this.c > 0) {
+/* 140 */       this.c = 10;
+/* 141 */       return;
+/*     */     }
+/*     */ 
+/* 144 */     this.bF = true;
+/*     */   }
+/*     */ 
+/*     */   public void a_(int paramInt) {
+/* 148 */     int i = this.S - paramInt;
+/* 149 */     if (i <= 0) {
+/* 150 */       this.S = paramInt;
+/*     */     } else {
+/* 152 */       this.ao = i;
+/* 153 */       this.T = this.S;
+/* 154 */       this.bs = this.y;
+/* 155 */       b(i);
+/* 156 */       this.U = (this.V = 10);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void u() {
+/* 161 */     this.b.q();
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     bz
+ * JD-Core Version:    0.6.0
+ */

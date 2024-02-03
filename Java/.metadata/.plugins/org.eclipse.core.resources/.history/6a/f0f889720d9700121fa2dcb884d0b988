@@ -1,0 +1,46 @@
+package library;
+
+public class Book extends Media{
+
+    private String title;
+    private String author;
+
+    public Book(){
+	title = null;
+	author = null;
+    }
+ 
+    public Book(String initTitle, String  initAuthor){
+	title = initTitle;
+	author = initAuthor;
+    }
+    
+    public Book(Book b){
+	title = b.title;
+	author = b.author;
+    }
+    
+    public void setTitle(String t){
+	title = t;
+    }
+    
+    public void setAuthor(String a){
+	author = a;
+    }
+    
+    public String getTitle(){
+	return title;
+    }
+    
+    public String getAuthor(){
+	return author;
+    }
+
+    public String toString(){
+	String str = "The specs of the Book are";
+	str += "\n\t Title: " + title;
+	str += "\n\t Author: " + author;
+	return str;
+    }
+    
+}

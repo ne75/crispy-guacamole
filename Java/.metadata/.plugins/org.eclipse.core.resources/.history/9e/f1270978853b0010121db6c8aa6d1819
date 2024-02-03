@@ -1,0 +1,18 @@
+/*    */ import java.awt.image.BufferedImage;
+/*    */ 
+/*    */ public class cy
+/*    */ {
+/*    */   public BufferedImage a;
+/* 11 */   public int b = 1;
+/* 12 */   public int c = -1;
+/* 13 */   public boolean d = false;
+/*    */ 
+/*    */   public cy(String paramString, jj paramjj) {
+/* 16 */     new oe(this, paramString, paramjj).start();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     cy
+ * JD-Core Version:    0.6.0
+ */

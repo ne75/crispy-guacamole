@@ -1,0 +1,290 @@
+/*     */ import java.io.PrintStream;
+/*     */ import java.nio.ByteBuffer;
+/*     */ import java.nio.ByteOrder;
+/*     */ import java.nio.FloatBuffer;
+/*     */ import java.nio.IntBuffer;
+/*     */ import org.lwjgl.opengl.ARBVertexBufferObject;
+/*     */ import org.lwjgl.opengl.ContextCapabilities;
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ import org.lwjgl.opengl.GLContext;
+/*     */ 
+/*     */ public class jy
+/*     */ {
+/*  32 */   private static boolean b = true;
+/*  33 */   private static boolean c = false;
+/*     */   private ByteBuffer d;
+/*     */   private IntBuffer e;
+/*     */   private FloatBuffer f;
+/*     */   private int[] g;
+/*  43 */   private int h = 0;
+/*     */   private double i;
+/*     */   private double j;
+/*     */   private int k;
+/*  46 */   private boolean l = false;
+/*  47 */   private boolean m = false;
+/*  48 */   private boolean n = false;
+/*  49 */   private int o = 0;
+/*  50 */   private int p = 0;
+/*  51 */   private boolean q = false;
+/*     */   private int r;
+/*     */   private double s;
+/*     */   private double t;
+/*     */   private double u;
+/*     */   private int v;
+/*  56 */   public static final jy a = new jy(2097152);
+/*     */ 
+/*  58 */   private boolean w = false;
+/*     */ 
+/*  61 */   private boolean x = false;
+/*     */   private IntBuffer y;
+/*  63 */   private int z = 0;
+/*  64 */   private int A = 10;
+/*     */   private int B;
+/*     */ 
+/*     */   private jy(int paramInt)
+/*     */   {
+/*  68 */     this.B = paramInt;
+/*     */ 
+/*  70 */     this.d = ej.b(paramInt * 4);
+/*  71 */     this.e = this.d.asIntBuffer();
+/*  72 */     this.f = this.d.asFloatBuffer();
+/*  73 */     this.g = new int[paramInt];
+/*     */ 
+/*  75 */     this.x = ((c) && (GLContext.getCapabilities().GL_ARB_vertex_buffer_object));
+/*  76 */     if (this.x) {
+/*  77 */       this.y = ej.c(this.A);
+/*  78 */       ARBVertexBufferObject.glGenBuffersARB(this.y);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a()
+/*     */   {
+/*  87 */     if (!this.w) throw new IllegalStateException("Not tesselating!");
+/*  88 */     this.w = false;
+/*  89 */     if (this.h > 0) {
+/*  90 */       this.e.clear();
+/*  91 */       this.e.put(this.g, 0, this.o);
+/*     */ 
+/*  93 */       this.d.position(0);
+/*  94 */       this.d.limit(this.o * 4);
+/*     */ 
+/*  96 */       if (this.x) {
+/*  97 */         this.z = ((this.z + 1) % this.A);
+/*  98 */         ARBVertexBufferObject.glBindBufferARB(34962, this.y.get(this.z));
+/*     */ 
+/* 100 */         ARBVertexBufferObject.glBufferDataARB(34962, this.d, 35040);
+/*     */       }
+/*     */ 
+/* 113 */       if (this.m) {
+/* 114 */         if (this.x) {
+/* 115 */           GL11.glTexCoordPointer(2, 5126, 32, 12L);
+/*     */         } else {
+/* 117 */           this.f.position(3);
+/* 118 */           GL11.glTexCoordPointer(2, 32, this.f);
+/*     */         }
+/* 120 */         GL11.glEnableClientState(32888);
+/*     */       }
+/* 122 */       if (this.l) {
+/* 123 */         if (this.x) {
+/* 124 */           GL11.glColorPointer(4, 5121, 32, 20L);
+/*     */         } else {
+/* 126 */           this.d.position(20);
+/* 127 */           GL11.glColorPointer(4, true, 32, this.d);
+/*     */         }
+/* 129 */         GL11.glEnableClientState(32886);
+/*     */       }
+/* 131 */       if (this.n) {
+/* 132 */         if (this.x) {
+/* 133 */           GL11.glNormalPointer(5120, 32, 24L);
+/*     */         } else {
+/* 135 */           this.d.position(24);
+/* 136 */           GL11.glNormalPointer(32, this.d);
+/*     */         }
+/* 138 */         GL11.glEnableClientState(32885);
+/*     */       }
+/* 140 */       if (this.x) {
+/* 141 */         GL11.glVertexPointer(3, 5126, 32, 0L);
+/*     */       } else {
+/* 143 */         this.f.position(0);
+/* 144 */         GL11.glVertexPointer(3, 32, this.f);
+/*     */       }
+/* 146 */       GL11.glEnableClientState(32884);
+/* 147 */       if ((this.r == 7) && (b))
+/* 148 */         GL11.glDrawArrays(4, 0, this.h);
+/*     */       else {
+/* 150 */         GL11.glDrawArrays(this.r, 0, this.h);
+/*     */       }
+/*     */ 
+/* 153 */       GL11.glDisableClientState(32884);
+/* 154 */       if (this.m) GL11.glDisableClientState(32888);
+/* 155 */       if (this.l) GL11.glDisableClientState(32886);
+/* 156 */       if (this.n) GL11.glDisableClientState(32885);
+/*     */     }
+/*     */ 
+/* 159 */     d();
+/*     */   }
+/*     */ 
+/*     */   private void d() {
+/* 163 */     this.h = 0;
+/*     */ 
+/* 165 */     this.d.clear();
+/* 166 */     this.o = 0;
+/* 167 */     this.p = 0;
+/*     */   }
+/*     */ 
+/*     */   public void b()
+/*     */   {
+/* 172 */     a(7);
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt)
+/*     */   {
+/* 177 */     if (this.w) {
+/* 178 */       throw new IllegalStateException("Already tesselating!");
+/*     */     }
+/* 180 */     this.w = true;
+/*     */ 
+/* 182 */     d();
+/* 183 */     this.r = paramInt;
+/* 184 */     this.n = false;
+/* 185 */     this.l = false;
+/* 186 */     this.m = false;
+/* 187 */     this.q = false;
+/*     */   }
+/*     */ 
+/*     */   public void a(double paramDouble1, double paramDouble2) {
+/* 191 */     this.m = true;
+/* 192 */     this.i = paramDouble1;
+/* 193 */     this.j = paramDouble2;
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat1, float paramFloat2, float paramFloat3) {
+/* 197 */     a((int)(paramFloat1 * 255.0F), (int)(paramFloat2 * 255.0F), (int)(paramFloat3 * 255.0F));
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4)
+/*     */   {
+/* 202 */     a((int)(paramFloat1 * 255.0F), (int)(paramFloat2 * 255.0F), (int)(paramFloat3 * 255.0F), (int)(paramFloat4 * 255.0F));
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, int paramInt3) {
+/* 206 */     a(paramInt1, paramInt2, paramInt3, 255);
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 210 */     if (this.q) return;
+/*     */ 
+/* 212 */     if (paramInt1 > 255) paramInt1 = 255;
+/* 213 */     if (paramInt2 > 255) paramInt2 = 255;
+/* 214 */     if (paramInt3 > 255) paramInt3 = 255;
+/* 215 */     if (paramInt4 > 255) paramInt4 = 255;
+/* 216 */     if (paramInt1 < 0) paramInt1 = 0;
+/* 217 */     if (paramInt2 < 0) paramInt2 = 0;
+/* 218 */     if (paramInt3 < 0) paramInt3 = 0;
+/* 219 */     if (paramInt4 < 0) paramInt4 = 0;
+/*     */ 
+/* 221 */     this.l = true;
+/* 222 */     if (ByteOrder.nativeOrder() == ByteOrder.LITTLE_ENDIAN)
+/* 223 */       this.k = (paramInt4 << 24 | paramInt3 << 16 | paramInt2 << 8 | paramInt1);
+/*     */     else
+/* 225 */       this.k = (paramInt1 << 24 | paramInt2 << 16 | paramInt3 << 8 | paramInt4);
+/*     */   }
+/*     */ 
+/*     */   public void a(double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5)
+/*     */   {
+/* 234 */     a(paramDouble4, paramDouble5);
+/* 235 */     a(paramDouble1, paramDouble2, paramDouble3);
+/*     */   }
+/*     */ 
+/*     */   public void a(double paramDouble1, double paramDouble2, double paramDouble3) {
+/* 239 */     this.p += 1;
+/*     */ 
+/* 242 */     if ((this.r == 7) && (b) && (this.p % 4 == 0)) {
+/* 243 */       for (int i1 = 0; i1 < 2; i1++) {
+/* 244 */         int i2 = 8 * (3 - i1);
+/* 245 */         if (this.m) {
+/* 246 */           this.g[(this.o + 3)] = this.g[(this.o - i2 + 3)];
+/* 247 */           this.g[(this.o + 4)] = this.g[(this.o - i2 + 4)];
+/*     */         }
+/* 249 */         if (this.l) {
+/* 250 */           this.g[(this.o + 5)] = this.g[(this.o - i2 + 5)];
+/*     */         }
+/*     */ 
+/* 253 */         this.g[(this.o + 0)] = this.g[(this.o - i2 + 0)];
+/* 254 */         this.g[(this.o + 1)] = this.g[(this.o - i2 + 1)];
+/* 255 */         this.g[(this.o + 2)] = this.g[(this.o - i2 + 2)];
+/*     */ 
+/* 257 */         this.h += 1;
+/* 258 */         this.o += 8;
+/*     */       }
+/*     */     }
+/*     */ 
+/* 262 */     if (this.m) {
+/* 263 */       this.g[(this.o + 3)] = Float.floatToRawIntBits((float)this.i);
+/* 264 */       this.g[(this.o + 4)] = Float.floatToRawIntBits((float)this.j);
+/*     */     }
+/* 266 */     if (this.l) {
+/* 267 */       this.g[(this.o + 5)] = this.k;
+/*     */     }
+/* 269 */     if (this.n) {
+/* 270 */       this.g[(this.o + 6)] = this.v;
+/*     */     }
+/*     */ 
+/* 274 */     this.g[(this.o + 0)] = Float.floatToRawIntBits((float)(paramDouble1 + this.s));
+/* 275 */     this.g[(this.o + 1)] = Float.floatToRawIntBits((float)(paramDouble2 + this.t));
+/* 276 */     this.g[(this.o + 2)] = Float.floatToRawIntBits((float)(paramDouble3 + this.u));
+/*     */ 
+/* 278 */     this.o += 8;
+/*     */ 
+/* 280 */     this.h += 1;
+/* 281 */     if ((this.h % 4 == 0) && (this.o >= this.B - 32)) {
+/* 282 */       a();
+/* 283 */       this.w = true;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void b(int paramInt) {
+/* 288 */     int i1 = paramInt >> 16 & 0xFF;
+/* 289 */     int i2 = paramInt >> 8 & 0xFF;
+/* 290 */     int i3 = paramInt & 0xFF;
+/* 291 */     a(i1, i2, i3);
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2) {
+/* 295 */     int i1 = paramInt1 >> 16 & 0xFF;
+/* 296 */     int i2 = paramInt1 >> 8 & 0xFF;
+/* 297 */     int i3 = paramInt1 & 0xFF;
+/* 298 */     a(i1, i2, i3, paramInt2);
+/*     */   }
+/*     */ 
+/*     */   public void c() {
+/* 302 */     this.q = true;
+/*     */   }
+/*     */ 
+/*     */   public void b(float paramFloat1, float paramFloat2, float paramFloat3) {
+/* 306 */     if (!this.w) System.out.println("But..");
+/* 307 */     this.n = true;
+/* 308 */     int i1 = (byte)(int)(paramFloat1 * 128.0F);
+/* 309 */     int i2 = (byte)(int)(paramFloat2 * 127.0F);
+/* 310 */     int i3 = (byte)(int)(paramFloat3 * 127.0F);
+/*     */ 
+/* 312 */     this.v = (i1 | i2 << 8 | i3 << 16);
+/*     */   }
+/*     */ 
+/*     */   public void b(double paramDouble1, double paramDouble2, double paramDouble3) {
+/* 316 */     this.s = paramDouble1;
+/* 317 */     this.t = paramDouble2;
+/* 318 */     this.u = paramDouble3;
+/*     */   }
+/*     */ 
+/*     */   public void c(float paramFloat1, float paramFloat2, float paramFloat3) {
+/* 322 */     this.s += paramFloat1;
+/* 323 */     this.t += paramFloat2;
+/* 324 */     this.u += paramFloat3;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     jy
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,28 @@
+/*    */ package net.minecraft.isom;
+/*    */ 
+/*    */ import an;
+/*    */ import java.applet.Applet;
+/*    */ import java.awt.BorderLayout;
+/*    */ 
+/*    */ public class IsomPreviewApplet extends Applet
+/*    */ {
+/*  9 */   private an a = new an();
+/*    */ 
+/*    */   public IsomPreviewApplet() {
+/* 12 */     setLayout(new BorderLayout());
+/* 13 */     add(this.a, "Center");
+/*    */   }
+/*    */ 
+/*    */   public void start() {
+/* 17 */     this.a.b();
+/*    */   }
+/*    */ 
+/*    */   public void stop() {
+/* 21 */     this.a.c();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     net.minecraft.isom.IsomPreviewApplet
+ * JD-Core Version:    0.6.0
+ */

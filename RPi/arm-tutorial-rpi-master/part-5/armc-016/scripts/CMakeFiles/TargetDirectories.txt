@@ -1,0 +1,3 @@
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-5/armc-016/scripts/CMakeFiles/edit_cache.dir
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-5/armc-016/scripts/CMakeFiles/rebuild_cache.dir
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-5/armc-016/scripts/CMakeFiles/armc-016.dir

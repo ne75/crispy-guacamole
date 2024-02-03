@@ -1,0 +1,45 @@
+/*     */ import java.io.DataInputStream;
+/*     */ import java.io.DataOutputStream;
+/*     */ 
+/*     */ public class fw extends hj
+/*     */ {
+/*     */   public double a;
+/*     */   public double b;
+/*     */   public double c;
+/*     */   public double d;
+/*     */   public float e;
+/*     */   public float f;
+/*     */   public boolean g;
+/*     */   public boolean h;
+/*     */   public boolean i;
+/*     */ 
+/*     */   public fw()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public fw(boolean paramBoolean)
+/*     */   {
+/* 122 */     this.g = paramBoolean;
+/*     */   }
+/*     */ 
+/*     */   public void a(od paramod) {
+/* 126 */     paramod.a(this);
+/*     */   }
+/*     */ 
+/*     */   public void a(DataInputStream paramDataInputStream) {
+/* 130 */     this.g = (paramDataInputStream.read() != 0);
+/*     */   }
+/*     */ 
+/*     */   public void a(DataOutputStream paramDataOutputStream) {
+/* 134 */     paramDataOutputStream.write(this.g ? 1 : 0);
+/*     */   }
+/*     */ 
+/*     */   public int a() {
+/* 138 */     return 1;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fw
+ * JD-Core Version:    0.6.0
+ */

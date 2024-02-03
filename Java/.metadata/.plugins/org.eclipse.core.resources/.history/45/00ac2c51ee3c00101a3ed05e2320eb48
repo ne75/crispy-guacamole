@@ -1,0 +1,151 @@
+/*     */ package net.minecraft;
+/*     */ 
+/*     */ import java.awt.BorderLayout;
+/*     */ import java.awt.Color;
+/*     */ import java.awt.Dimension;
+/*     */ import java.awt.Frame;
+/*     */ import java.awt.event.WindowAdapter;
+/*     */ import java.awt.event.WindowEvent;
+/*     */ import java.io.IOException;
+/*     */ import java.io.PrintStream;
+/*     */ import java.net.URLEncoder;
+/*     */ import java.util.Map;
+/*     */ import javax.imageio.ImageIO;
+/*     */ 
+/*     */ public class LauncherFrame extends Frame
+/*     */ {
+/*     */   public static final int VERSION = 12;
+/*     */   private static final long serialVersionUID = 1L;
+/*     */   private Launcher launcher;
+/*     */   private LoginForm loginForm;
+/*     */ 
+/*     */   public LauncherFrame()
+/*     */   {
+/*  17 */     super("Minecraft Launcher");
+/*     */ 
+/*  19 */     setBackground(Color.BLACK);
+/*  20 */     this.loginForm = new LoginForm(this);
+/*  21 */     setLayout(new BorderLayout());
+/*  22 */     add(this.loginForm, "Center");
+/*     */ 
+/*  24 */     this.loginForm.setPreferredSize(new Dimension(854, 480));
+/*  25 */     pack();
+/*  26 */     setLocationRelativeTo(null);
+/*     */     try
+/*     */     {
+/*  29 */       setIconImage(ImageIO.read(LauncherFrame.class.getResource("favicon.png")));
+/*     */     } catch (IOException e1) {
+/*  31 */       e1.printStackTrace();
+/*     */     }
+/*     */ 
+/*  34 */     addWindowListener(new WindowAdapter() {
+/*     */       public void windowClosing(WindowEvent arg0) {
+/*  36 */         new Thread() {
+/*     */           public void run() {
+/*     */             try {
+/*  39 */               Thread.sleep(30000L);
+/*     */             } catch (InterruptedException e) {
+/*  41 */               e.printStackTrace();
+/*     */             }
+/*  43 */             System.out.println("FORCING EXIT!");
+/*  44 */             System.exit(0);
+/*     */           }
+/*     */         }
+/*  47 */         .start();
+/*  48 */         if (LauncherFrame.this.launcher != null) {
+/*  49 */           LauncherFrame.this.launcher.stop();
+/*  50 */           LauncherFrame.this.launcher.destroy();
+/*     */         }
+/*  52 */         System.exit(0);
+/*     */       } } );
+/*     */   }
+/*     */ 
+/*     */   public void playCached(String userName) {
+/*     */     try {
+/*  59 */       if ((userName == null) || (userName.length() <= 0)) {
+/*  60 */         userName = "Player";
+/*     */       }
+/*  62 */       this.launcher = new Launcher();
+/*  63 */       this.launcher.customParameters.put("userName", userName);
+/*  64 */       this.launcher.init();
+/*  65 */       removeAll();
+/*  66 */       add(this.launcher, "Center");
+/*  67 */       validate();
+/*  68 */       this.launcher.start();
+/*  69 */       this.loginForm = null;
+/*  70 */       setTitle("Minecraft");
+/*     */     } catch (Exception e) {
+/*  72 */       e.printStackTrace();
+/*  73 */       showError(e.toString());
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void login(String userName, String password) {
+/*     */     try {
+/*  79 */       String parameters = "user=" + URLEncoder.encode(userName, "UTF-8") + "&password=" + URLEncoder.encode(password, "UTF-8") + "&version=" + 12;
+/*  80 */       String result = Util.excutePost("http://www.minecraft.net/game/getversion.jsp", parameters);
+/*  81 */       if (result == null) {
+/*  82 */         showError("Can't connect to minecraft.net");
+/*  83 */         this.loginForm.setNoNetwork();
+/*  84 */         return;
+/*     */       }
+/*  86 */       if (!result.contains(":")) {
+/*  87 */         if (result.trim().equals("Bad login")) {
+/*  88 */           showError("Login failed");
+/*  89 */         } else if (result.trim().equals("Old version")) {
+/*  90 */           this.loginForm.setOutdated();
+/*  91 */           showError("Outdated launcher");
+/*     */         } else {
+/*  93 */           showError(result);
+/*     */         }
+/*  95 */         this.loginForm.setNoNetwork();
+/*  96 */         return;
+/*     */       }
+/*  98 */       String[] values = result.split(":");
+/*     */ 
+/* 100 */       System.out.println("Username is '" + values[2] + "'");
+/*     */ 
+/* 102 */       this.launcher = new Launcher();
+/* 103 */       this.launcher.customParameters.put("userName", values[2].trim());
+/* 104 */       this.launcher.customParameters.put("latestVersion", values[0].trim());
+/* 105 */       this.launcher.customParameters.put("downloadTicket", values[1].trim());
+/* 106 */       this.launcher.customParameters.put("sessionId", values[3].trim());
+/* 107 */       this.launcher.init();
+/*     */ 
+/* 109 */       removeAll();
+/* 110 */       add(this.launcher, "Center");
+/* 111 */       validate();
+/* 112 */       this.launcher.start();
+/* 113 */       this.loginForm.loginOk();
+/* 114 */       this.loginForm = null;
+/* 115 */       setTitle("Minecraft");
+/*     */     } catch (Exception e) {
+/* 117 */       e.printStackTrace();
+/* 118 */       showError(e.toString());
+/* 119 */       this.loginForm.setNoNetwork();
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private void showError(String error) {
+/* 124 */     removeAll();
+/* 125 */     add(this.loginForm);
+/* 126 */     this.loginForm.setError(error);
+/* 127 */     validate();
+/*     */   }
+/*     */ 
+/*     */   public boolean canPlayOffline(String userName) {
+/* 131 */     Launcher launcher = new Launcher();
+/* 132 */     launcher.init(userName, null, null, null);
+/* 133 */     return launcher.canPlayOffline();
+/*     */   }
+/*     */ 
+/*     */   public static void main(String[] args) {
+/* 137 */     LauncherFrame launcherFrame = new LauncherFrame();
+/* 138 */     launcherFrame.setVisible(true);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Documents/Programming/Java/minecraft/Contents/Resources/Java/MinecraftLauncher.jar
+ * Qualified Name:     net.minecraft.LauncherFrame
+ * JD-Core Version:    0.6.0
+ */

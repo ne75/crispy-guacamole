@@ -1,0 +1,14 @@
+/*    */ public class kc
+/*    */ {
+/*    */   public void a(fg paramfg)
+/*    */   {
+/*  9 */     paramfg.a(new gm(eo.D), new Object[] { "Y", "X", "#", Character.valueOf('X'), pj.af, Character.valueOf('Y'), pj.ag, Character.valueOf('#'), eo.C });
+/*    */ 
+/* 18 */     paramfg.a(new gm(eo.D), new Object[] { "Y", "X", "#", Character.valueOf('X'), pj.ag, Character.valueOf('Y'), pj.af, Character.valueOf('#'), eo.C });
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     kc
+ * JD-Core Version:    0.6.0
+ */

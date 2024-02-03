@@ -1,0 +1,40 @@
+/*    */ import java.util.List;
+/*    */ 
+/*    */ public class lx extends by
+/*    */ {
+/*    */   private by a;
+/*    */   private String h;
+/*    */   private String i;
+/*    */   private int k;
+/*    */ 
+/*    */   public lx(by paramby, String paramString1, String paramString2, int paramInt)
+/*    */   {
+/* 10 */     this.a = paramby;
+/* 11 */     this.h = paramString1;
+/* 12 */     this.i = paramString2;
+/* 13 */     this.k = paramInt;
+/*    */   }
+/*    */ 
+/*    */   public void a() {
+/* 17 */     this.e.add(new u(0, this.c / 2 - 155 + 0, this.d / 6 + 96, "Yes"));
+/* 18 */     this.e.add(new u(1, this.c / 2 - 155 + 160, this.d / 6 + 96, "No"));
+/*    */   }
+/*    */ 
+/*    */   protected void a(hg paramhg) {
+/* 22 */     this.a.a(paramhg.f == 0, this.k);
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt1, int paramInt2, float paramFloat) {
+/* 26 */     i();
+/*    */ 
+/* 28 */     a(this.g, this.h, this.c / 2, 70, 16777215);
+/* 29 */     a(this.g, this.i, this.c / 2, 90, 16777215);
+/*    */ 
+/* 31 */     super.a(paramInt1, paramInt2, paramFloat);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     lx
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,22 @@
+/*    */ import java.util.Comparator;
+/*    */ 
+/*    */ public class gv
+/*    */   implements Comparator
+/*    */ {
+/*    */   private nl a;
+/*    */ 
+/*    */   public gv(nl paramnl)
+/*    */   {
+/* 14 */     this.a = paramnl;
+/*    */   }
+/*    */ 
+/*    */   public int a(cg paramcg1, cg paramcg2)
+/*    */   {
+/* 19 */     return paramcg1.a(this.a) < paramcg2.a(this.a) ? -1 : 1;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gv
+ * JD-Core Version:    0.6.0
+ */

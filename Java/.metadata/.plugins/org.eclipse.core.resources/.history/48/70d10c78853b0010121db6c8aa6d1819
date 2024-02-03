@@ -1,0 +1,167 @@
+/*     */ public class ed
+/*     */ {
+/*     */   private ri a;
+/*  12 */   private hw b = new hw();
+/*  13 */   private hc c = new hc();
+/*     */ 
+/*  15 */   private b[] d = new b[32];
+/*     */ 
+/*     */   public ed(ri paramri) {
+/*  18 */     this.a = paramri;
+/*     */   }
+/*     */ 
+/*     */   public cc a(nl paramnl1, nl paramnl2, float paramFloat) {
+/*  22 */     return a(paramnl1, paramnl2.aF, paramnl2.aP.b, paramnl2.aH, paramFloat);
+/*     */   }
+/*     */ 
+/*     */   public cc a(nl paramnl, int paramInt1, int paramInt2, int paramInt3, float paramFloat) {
+/*  26 */     return a(paramnl, paramInt1 + 0.5F, paramInt2 + 0.5F, paramInt3 + 0.5F, paramFloat);
+/*     */   }
+/*     */ 
+/*     */   private cc a(nl paramnl, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat) {
+/*  30 */     this.b.a();
+/*  31 */     this.c.a();
+/*     */ 
+/*  33 */     b localb1 = a(gd.b(paramnl.aP.a), gd.b(paramnl.aP.b), gd.b(paramnl.aP.c));
+/*  34 */     b localb2 = a(gd.b(paramDouble1 - paramnl.aY / 2.0F), gd.b(paramDouble2), gd.b(paramDouble3 - paramnl.aY / 2.0F));
+/*     */ 
+/*  36 */     b localb3 = new b(gd.d(paramnl.aY + 1.0F), gd.d(paramnl.aZ + 1.0F), gd.d(paramnl.aY + 1.0F));
+/*  37 */     cc localcc = a(paramnl, localb1, localb2, localb3, paramFloat);
+/*  38 */     return localcc;
+/*     */   }
+/*     */ 
+/*     */   private cc a(nl paramnl, b paramb1, b paramb2, b paramb3, float paramFloat)
+/*     */   {
+/*  43 */     paramb1.f = 0.0F;
+/*  44 */     paramb1.g = paramb1.a(paramb2);
+/*  45 */     paramb1.h = paramb1.g;
+/*     */ 
+/*  47 */     this.b.a();
+/*  48 */     this.b.a(paramb1);
+/*     */ 
+/*  50 */     Object localObject = paramb1;
+/*     */ 
+/*  52 */     while (!this.b.c()) {
+/*  53 */       b localb1 = this.b.b();
+/*     */ 
+/*  55 */       if (localb1.d == paramb2.d) {
+/*  56 */         return a(paramb1, paramb2);
+/*     */       }
+/*     */ 
+/*  59 */       if (localb1.a(paramb2) < ((b)localObject).a(paramb2)) {
+/*  60 */         localObject = localb1;
+/*     */       }
+/*  62 */       localb1.j = true;
+/*     */ 
+/*  64 */       int i = b(paramnl, localb1, paramb3, paramb2, paramFloat);
+/*  65 */       for (int j = 0; j < i; j++) {
+/*  66 */         b localb2 = this.d[j];
+/*     */ 
+/*  68 */         float f = localb1.f + localb1.a(localb2);
+/*  69 */         if ((!localb2.a()) || (f < localb2.f)) {
+/*  70 */           localb2.i = localb1;
+/*  71 */           localb2.f = f;
+/*  72 */           localb2.g = localb2.a(paramb2);
+/*  73 */           if (localb2.a()) {
+/*  74 */             this.b.a(localb2, localb2.f + localb2.g);
+/*     */           } else {
+/*  76 */             localb2.h = (localb2.f + localb2.g);
+/*  77 */             this.b.a(localb2);
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     }
+/*     */ 
+/*  83 */     if (localObject == paramb1) return null;
+/*  84 */     return (cc)a(paramb1, (b)localObject);
+/*     */   }
+/*     */ 
+/*     */   private int b(nl paramnl, b paramb1, b paramb2, b paramb3, float paramFloat) {
+/*  88 */     int i = 0;
+/*     */ 
+/*  90 */     int j = 0;
+/*  91 */     if (a(paramnl, paramb1.a, paramb1.b + 1, paramb1.c, paramb2) > 0) j = 1;
+/*     */ 
+/*  93 */     b localb1 = a(paramnl, paramb1.a, paramb1.b, paramb1.c + 1, paramb2, j);
+/*  94 */     b localb2 = a(paramnl, paramb1.a - 1, paramb1.b, paramb1.c, paramb2, j);
+/*  95 */     b localb3 = a(paramnl, paramb1.a + 1, paramb1.b, paramb1.c, paramb2, j);
+/*  96 */     b localb4 = a(paramnl, paramb1.a, paramb1.b, paramb1.c - 1, paramb2, j);
+/*     */ 
+/*  98 */     if ((localb1 != null) && (!localb1.j) && (localb1.a(paramb3) < paramFloat)) this.d[(i++)] = localb1;
+/*  99 */     if ((localb2 != null) && (!localb2.j) && (localb2.a(paramb3) < paramFloat)) this.d[(i++)] = localb2;
+/* 100 */     if ((localb3 != null) && (!localb3.j) && (localb3.a(paramb3) < paramFloat)) this.d[(i++)] = localb3;
+/* 101 */     if ((localb4 != null) && (!localb4.j) && (localb4.a(paramb3) < paramFloat)) this.d[(i++)] = localb4;
+/*     */ 
+/* 115 */     return i;
+/*     */   }
+/*     */ 
+/*     */   private b a(nl paramnl, int paramInt1, int paramInt2, int paramInt3, b paramb, int paramInt4) {
+/* 119 */     b localb = null;
+/* 120 */     if (a(paramnl, paramInt1, paramInt2, paramInt3, paramb) > 0) localb = a(paramInt1, paramInt2, paramInt3);
+/* 121 */     if ((localb == null) && (a(paramnl, paramInt1, paramInt2 + paramInt4, paramInt3, paramb) > 0)) {
+/* 122 */       localb = a(paramInt1, paramInt2 + paramInt4, paramInt3);
+/* 123 */       paramInt2 += paramInt4;
+/*     */     }
+/*     */ 
+/* 126 */     if (localb != null) {
+/* 127 */       int i = 0;
+/* 128 */       int j = 0;
+/* 129 */       while ((paramInt2 > 0) && ((j = a(paramnl, paramInt1, paramInt2 - 1, paramInt3, paramb)) > 0)) {
+/* 130 */         if (j < 0) return null;
+/* 131 */         i++; if (i >= 4) return null;
+/* 132 */         paramInt2--;
+/*     */       }
+/* 134 */       if (paramInt2 > 0) localb = a(paramInt1, paramInt2, paramInt3);
+/*     */ 
+/*     */     }
+/*     */ 
+/* 141 */     return localb;
+/*     */   }
+/*     */ 
+/*     */   private final b a(int paramInt1, int paramInt2, int paramInt3) {
+/* 145 */     int i = paramInt1 | paramInt2 << 10 | paramInt3 << 20;
+/* 146 */     b localb = (b)this.c.a(i);
+/* 147 */     if (localb == null) {
+/* 148 */       localb = new b(paramInt1, paramInt2, paramInt3);
+/* 149 */       this.c.a(i, localb);
+/*     */     }
+/* 151 */     return localb;
+/*     */   }
+/*     */ 
+/*     */   private int a(nl paramnl, int paramInt1, int paramInt2, int paramInt3, b paramb) {
+/* 155 */     for (int i = paramInt1; i < paramInt1 + paramb.a; i++) {
+/* 156 */       for (int j = paramInt2; j < paramInt2 + paramb.b; j++) {
+/* 157 */         for (int k = paramInt3; k < paramInt3 + paramb.c; k++) {
+/* 158 */           ic localic = this.a.f(paramInt1, paramInt2, paramInt3);
+/* 159 */           if (localic.c()) return 0;
+/* 160 */           if ((localic == ic.f) || (localic == ic.g)) return -1;
+/*     */         }
+/*     */       }
+/*     */     }
+/* 164 */     return 1;
+/*     */   }
+/*     */ 
+/*     */   private cc a(b paramb1, b paramb2)
+/*     */   {
+/* 169 */     int i = 1;
+/* 170 */     b localb = paramb2;
+/* 171 */     while (localb.i != null) {
+/* 172 */       i++;
+/* 173 */       localb = localb.i;
+/*     */     }
+/*     */ 
+/* 176 */     b[] arrayOfb = new b[i];
+/* 177 */     localb = paramb2;
+/* 178 */     i--; arrayOfb[i] = localb;
+/* 179 */     while (localb.i != null) {
+/* 180 */       localb = localb.i;
+/* 181 */       i--; arrayOfb[i] = localb;
+/*     */     }
+/* 183 */     return new cc(arrayOfb);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ed
+ * JD-Core Version:    0.6.0
+ */

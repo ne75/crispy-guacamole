@@ -1,0 +1,20 @@
+/*    */ package com.jcraft.jorbis;
+/*    */ 
+/*    */ class Residue2 extends Residue0
+/*    */ {
+/*    */   int inverse(Block paramBlock, Object paramObject, float[][] paramArrayOfFloat, int[] paramArrayOfInt, int paramInt)
+/*    */   {
+/* 32 */     int i = 0;
+/* 33 */     for (i = 0; (i < paramInt) && 
+/* 34 */       (paramArrayOfInt[i] == 0); i++);
+/* 36 */     if (i == paramInt) {
+/* 37 */       return 0;
+/*    */     }
+/* 39 */     return _2inverse(paramBlock, paramObject, paramArrayOfFloat, paramInt);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     com.jcraft.jorbis.Residue2
+ * JD-Core Version:    0.6.0
+ */

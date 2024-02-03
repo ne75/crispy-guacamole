@@ -1,0 +1,150 @@
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ 
+/*     */ public class li
+/*     */ {
+/*     */   private fs[] j;
+/*     */   private os[] k;
+/*     */   private int l;
+/*     */   private int m;
+/*     */   public float a;
+/*     */   public float b;
+/*     */   public float c;
+/*     */   public float d;
+/*     */   public float e;
+/*     */   public float f;
+/*  17 */   private boolean n = false;
+/*  18 */   private int o = 0;
+/*     */ 
+/*  20 */   public boolean g = false;
+/*  21 */   public boolean h = true;
+/*  22 */   public boolean i = false;
+/*     */ 
+/*     */   public li(int paramInt1, int paramInt2) {
+/*  25 */     this.l = paramInt1;
+/*  26 */     this.m = paramInt2;
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat1, float paramFloat2, float paramFloat3, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*  35 */     a(paramFloat1, paramFloat2, paramFloat3, paramInt1, paramInt2, paramInt3, 0.0F);
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat1, float paramFloat2, float paramFloat3, int paramInt1, int paramInt2, int paramInt3, float paramFloat4) {
+/*  39 */     this.j = new fs[8];
+/*  40 */     this.k = new os[6];
+/*     */ 
+/*  42 */     float f1 = paramFloat1 + paramInt1;
+/*  43 */     float f2 = paramFloat2 + paramInt2;
+/*  44 */     float f3 = paramFloat3 + paramInt3;
+/*     */ 
+/*  46 */     paramFloat1 -= paramFloat4;
+/*  47 */     paramFloat2 -= paramFloat4;
+/*  48 */     paramFloat3 -= paramFloat4;
+/*  49 */     f1 += paramFloat4;
+/*  50 */     f2 += paramFloat4;
+/*  51 */     f3 += paramFloat4;
+/*     */ 
+/*  53 */     if (this.g) {
+/*  54 */       float f4 = f1;
+/*  55 */       f1 = paramFloat1;
+/*  56 */       paramFloat1 = f4;
+/*     */     }
+/*     */ 
+/*  59 */     fs localfs1 = new fs(paramFloat1, paramFloat2, paramFloat3, 0.0F, 0.0F);
+/*  60 */     fs localfs2 = new fs(f1, paramFloat2, paramFloat3, 0.0F, 8.0F);
+/*  61 */     fs localfs3 = new fs(f1, f2, paramFloat3, 8.0F, 8.0F);
+/*  62 */     fs localfs4 = new fs(paramFloat1, f2, paramFloat3, 8.0F, 0.0F);
+/*     */ 
+/*  64 */     fs localfs5 = new fs(paramFloat1, paramFloat2, f3, 0.0F, 0.0F);
+/*  65 */     fs localfs6 = new fs(f1, paramFloat2, f3, 0.0F, 8.0F);
+/*  66 */     fs localfs7 = new fs(f1, f2, f3, 8.0F, 8.0F);
+/*  67 */     fs localfs8 = new fs(paramFloat1, f2, f3, 8.0F, 0.0F);
+/*     */ 
+/*  69 */     this.j[0] = localfs1;
+/*  70 */     this.j[1] = localfs2;
+/*  71 */     this.j[2] = localfs3;
+/*  72 */     this.j[3] = localfs4;
+/*  73 */     this.j[4] = localfs5;
+/*  74 */     this.j[5] = localfs6;
+/*  75 */     this.j[6] = localfs7;
+/*  76 */     this.j[7] = localfs8;
+/*     */ 
+/*  78 */     this.k[0] = new os(new fs[] { localfs6, localfs2, localfs3, localfs7 }, this.l + paramInt3 + paramInt1, this.m + paramInt3, this.l + paramInt3 + paramInt1 + paramInt3, this.m + paramInt3 + paramInt2);
+/*  79 */     this.k[1] = new os(new fs[] { localfs1, localfs5, localfs8, localfs4 }, this.l + 0, this.m + paramInt3, this.l + paramInt3, this.m + paramInt3 + paramInt2);
+/*     */ 
+/*  82 */     this.k[2] = new os(new fs[] { localfs6, localfs5, localfs1, localfs2 }, this.l + paramInt3, this.m + 0, this.l + paramInt3 + paramInt1, this.m + paramInt3);
+/*  83 */     this.k[3] = new os(new fs[] { localfs3, localfs4, localfs8, localfs7 }, this.l + paramInt3 + paramInt1, this.m + 0, this.l + paramInt3 + paramInt1 + paramInt1, this.m + paramInt3);
+/*     */ 
+/*  85 */     this.k[4] = new os(new fs[] { localfs2, localfs1, localfs4, localfs3 }, this.l + paramInt3, this.m + paramInt3, this.l + paramInt3 + paramInt1, this.m + paramInt3 + paramInt2);
+/*  86 */     this.k[5] = new os(new fs[] { localfs5, localfs6, localfs7, localfs8 }, this.l + paramInt3 + paramInt1 + paramInt3, this.m + paramInt3, this.l + paramInt3 + paramInt1 + paramInt3 + paramInt1, this.m + paramInt3 + paramInt2);
+/*     */ 
+/*  88 */     if (this.g)
+/*  89 */       for (int i1 = 0; i1 < this.k.length; i1++)
+/*  90 */         this.k[i1].a();
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat1, float paramFloat2, float paramFloat3)
+/*     */   {
+/* 141 */     this.a = paramFloat1;
+/* 142 */     this.b = paramFloat2;
+/* 143 */     this.c = paramFloat3;
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat)
+/*     */   {
+/* 149 */     if (this.i) return;
+/* 150 */     if (!this.h) return;
+/* 151 */     if (!this.n) c(paramFloat);
+/*     */ 
+/* 153 */     if ((this.d != 0.0F) || (this.e != 0.0F) || (this.f != 0.0F)) {
+/* 154 */       GL11.glPushMatrix();
+/* 155 */       GL11.glTranslatef(this.a * paramFloat, this.b * paramFloat, this.c * paramFloat);
+/* 156 */       if (this.f != 0.0F) GL11.glRotatef(this.f * 57.295776F, 0.0F, 0.0F, 1.0F);
+/* 157 */       if (this.e != 0.0F) GL11.glRotatef(this.e * 57.295776F, 0.0F, 1.0F, 0.0F);
+/* 158 */       if (this.d != 0.0F) GL11.glRotatef(this.d * 57.295776F, 1.0F, 0.0F, 0.0F);
+/* 159 */       GL11.glCallList(this.o);
+/* 160 */       GL11.glPopMatrix();
+/* 161 */     } else if ((this.a != 0.0F) || (this.b != 0.0F) || (this.c != 0.0F)) {
+/* 162 */       GL11.glTranslatef(this.a * paramFloat, this.b * paramFloat, this.c * paramFloat);
+/* 163 */       GL11.glCallList(this.o);
+/* 164 */       GL11.glTranslatef(-this.a * paramFloat, -this.b * paramFloat, -this.c * paramFloat);
+/*     */     } else {
+/* 166 */       GL11.glCallList(this.o);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void b(float paramFloat) {
+/* 171 */     if (this.i) return;
+/* 172 */     if (!this.h) return;
+/* 173 */     if (!this.n) c(paramFloat);
+/*     */ 
+/* 175 */     if ((this.d != 0.0F) || (this.e != 0.0F) || (this.f != 0.0F)) {
+/* 176 */       GL11.glTranslatef(this.a * paramFloat, this.b * paramFloat, this.c * paramFloat);
+/* 177 */       if (this.f != 0.0F) GL11.glRotatef(this.f * 57.295776F, 0.0F, 0.0F, 1.0F);
+/* 178 */       if (this.e != 0.0F) GL11.glRotatef(this.e * 57.295776F, 0.0F, 1.0F, 0.0F);
+/* 179 */       if (this.d != 0.0F) GL11.glRotatef(this.d * 57.295776F, 1.0F, 0.0F, 0.0F); 
+/*     */     }
+/* 180 */     else if ((this.a != 0.0F) || (this.b != 0.0F) || (this.c != 0.0F)) {
+/* 181 */       GL11.glTranslatef(this.a * paramFloat, this.b * paramFloat, this.c * paramFloat);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private void c(float paramFloat)
+/*     */   {
+/* 187 */     this.o = ej.a(1);
+/*     */ 
+/* 191 */     GL11.glNewList(this.o, 4864);
+/* 192 */     jy localjy = jy.a;
+/* 193 */     for (int i1 = 0; i1 < this.k.length; i1++) {
+/* 194 */       this.k[i1].a(localjy, paramFloat);
+/*     */     }
+/* 196 */     GL11.glEndList();
+/*     */ 
+/* 198 */     this.n = true;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     li
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,327 @@
+/*     */ import java.awt.Canvas;
+/*     */ import java.awt.Color;
+/*     */ import java.awt.FontMetrics;
+/*     */ import java.awt.Graphics;
+/*     */ import java.awt.Graphics2D;
+/*     */ import java.awt.Rectangle;
+/*     */ import java.awt.RenderingHints;
+/*     */ import java.awt.event.KeyEvent;
+/*     */ import java.awt.event.KeyListener;
+/*     */ import java.awt.event.MouseEvent;
+/*     */ import java.awt.event.MouseListener;
+/*     */ import java.awt.event.MouseMotionListener;
+/*     */ import java.awt.geom.AffineTransform;
+/*     */ import java.awt.image.BufferStrategy;
+/*     */ import java.io.File;
+/*     */ import java.util.Collections;
+/*     */ import java.util.LinkedList;
+/*     */ import java.util.List;
+/*     */ 
+/*     */ public class an extends Canvas
+/*     */   implements KeyListener, MouseListener, MouseMotionListener, Runnable
+/*     */ {
+/*  25 */   private int a = 0;
+/*  26 */   private int b = 2;
+/*  27 */   private boolean c = true;
+/*     */   private dn d;
+/*     */   private File e;
+/*  32 */   private boolean f = true;
+/*     */ 
+/*  34 */   private List g = Collections.synchronizedList(new LinkedList());
+/*  35 */   private mj[][] h = new mj[64][64];
+/*     */   private int i;
+/*     */   private int j;
+/*     */   private int k;
+/*     */   private int l;
+/*     */ 
+/*     */   public File a()
+/*     */   {
+/*  39 */     if (this.e == null) this.e = a("minecraft");
+/*  40 */     return this.e;
+/*     */   }
+/*     */ 
+/*     */   public File a(String paramString) {
+/*  44 */     String str1 = System.getProperty("user.home", ".");
+/*     */     File localFile;
+/*  46 */     switch (ou.a[e().ordinal()]) {
+/*     */     case 1:
+/*     */     case 2:
+/*  49 */       localFile = new File(str1, '.' + paramString + '/');
+/*  50 */       break;
+/*     */     case 3:
+/*  52 */       String str2 = System.getenv("APPDATA");
+/*  53 */       if (str2 != null) localFile = new File(str2, "." + paramString + '/'); else
+/*  54 */         localFile = new File(str1, '.' + paramString + '/');
+/*  55 */       break;
+/*     */     case 4:
+/*  57 */       localFile = new File(str1, "Library/Application Support/" + paramString);
+/*  58 */       break;
+/*     */     default:
+/*  60 */       localFile = new File(str1, paramString + '/');
+/*     */     }
+/*  62 */     if ((!localFile.exists()) && (!localFile.mkdirs())) throw new RuntimeException("The working directory could not be created: " + localFile);
+/*  63 */     return localFile;
+/*     */   }
+/*     */ 
+/*     */   private static gu e() {
+/*  67 */     String str = System.getProperty("os.name").toLowerCase();
+/*  68 */     if (str.contains("win")) return gu.c;
+/*  69 */     if (str.contains("mac")) return gu.d;
+/*  70 */     if (str.contains("solaris")) return gu.b;
+/*  71 */     if (str.contains("sunos")) return gu.b;
+/*  72 */     if (str.contains("linux")) return gu.a;
+/*  73 */     if (str.contains("unix")) return gu.a;
+/*  74 */     return gu.e;
+/*     */   }
+/*     */ 
+/*     */   public an() {
+/*  78 */     this.e = a();
+/*     */ 
+/*  80 */     for (int m = 0; m < 64; m++) {
+/*  81 */       for (int n = 0; n < 64; n++) {
+/*  82 */         this.h[m][n] = new mj(null, m, n);
+/*     */       }
+/*     */     }
+/*  85 */     addMouseListener(this);
+/*  86 */     addMouseMotionListener(this);
+/*  87 */     addKeyListener(this);
+/*  88 */     setFocusable(true);
+/*  89 */     requestFocus();
+/*  90 */     setBackground(Color.red);
+/*     */   }
+/*     */ 
+/*     */   public void b(String paramString) {
+/*  94 */     this.i = (this.j = 0);
+/*  95 */     this.d = new oq(this, new File(this.e, "saves"), paramString);
+/*     */ 
+/* 102 */     this.d.f = 0;
+/*     */ 
+/* 104 */     synchronized (this.g) {
+/* 105 */       this.g.clear();
+/*     */ 
+/* 107 */       for (int m = 0; m < 64; m++)
+/* 108 */         for (int n = 0; n < 64; n++)
+/* 109 */           this.h[m][n].a(this.d, m, n);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private void a(int paramInt)
+/*     */   {
+/* 116 */     synchronized (this.g) {
+/* 117 */       this.d.f = paramInt;
+/* 118 */       this.g.clear();
+/*     */ 
+/* 120 */       for (int m = 0; m < 64; m++)
+/* 121 */         for (int n = 0; n < 64; n++)
+/* 122 */           this.h[m][n].a(this.d, m, n);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void b()
+/*     */   {
+/* 128 */     new op(this).start();
+/*     */ 
+/* 140 */     for (int m = 0; m < 8; m++)
+/* 141 */       new Thread(this).start();
+/*     */   }
+/*     */ 
+/*     */   public void c()
+/*     */   {
+/* 146 */     this.f = false;
+/*     */   }
+/*     */ 
+/*     */   private mj a(int paramInt1, int paramInt2) {
+/* 150 */     int m = paramInt1 & 0x3F;
+/* 151 */     int n = paramInt2 & 0x3F;
+/* 152 */     mj localmj = this.h[m][n];
+/* 153 */     if ((localmj.c == paramInt1) && (localmj.d == paramInt2)) {
+/* 154 */       return localmj;
+/*     */     }
+/* 156 */     synchronized (this.g) {
+/* 157 */       this.g.remove(localmj);
+/*     */     }
+/* 159 */     localmj.a(paramInt1, paramInt2);
+/* 160 */     return localmj;
+/*     */   }
+/*     */ 
+/*     */   public void run()
+/*     */   {
+/* 165 */     pd localpd = new pd();
+/*     */ 
+/* 167 */     while (this.f) {
+/* 168 */       mj localmj = null;
+/* 169 */       synchronized (this.g) {
+/* 170 */         if (this.g.size() > 0) {
+/* 171 */           localmj = (mj)this.g.remove(0);
+/*     */         }
+/*     */       }
+/*     */ 
+/* 175 */       if (localmj != null)
+/* 176 */         if (this.a - localmj.g < 2) {
+/* 177 */           localpd.a(localmj);
+/* 178 */           repaint();
+/*     */         } else {
+/* 180 */           localmj.h = false;
+/*     */         }
+/*     */       try
+/*     */       {
+/* 184 */         Thread.sleep(2L);
+/*     */       } catch (InterruptedException localInterruptedException) {
+/* 186 */         localInterruptedException.printStackTrace();
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void update(Graphics paramGraphics) {
+/*     */   }
+/*     */ 
+/*     */   public void paint(Graphics paramGraphics) {
+/*     */   }
+/*     */ 
+/*     */   public void d() {
+/* 198 */     BufferStrategy localBufferStrategy = getBufferStrategy();
+/* 199 */     if (localBufferStrategy == null) {
+/* 200 */       createBufferStrategy(2);
+/* 201 */       return;
+/*     */     }
+/* 203 */     a((Graphics2D)localBufferStrategy.getDrawGraphics());
+/* 204 */     localBufferStrategy.show();
+/*     */   }
+/*     */ 
+/*     */   public void a(Graphics2D paramGraphics2D) {
+/* 208 */     this.a += 1;
+/*     */ 
+/* 210 */     AffineTransform localAffineTransform = paramGraphics2D.getTransform();
+/* 211 */     paramGraphics2D.setClip(0, 0, getWidth(), getHeight());
+/* 212 */     paramGraphics2D.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
+/*     */ 
+/* 214 */     paramGraphics2D.translate(getWidth() / 2, getHeight() / 2);
+/* 215 */     paramGraphics2D.scale(this.b, this.b);
+/* 216 */     paramGraphics2D.translate(this.i, this.j);
+/* 217 */     if (this.d != null) {
+/* 218 */       paramGraphics2D.translate(-(this.d.m + this.d.o), -(-this.d.m + this.d.o) + 64);
+/*     */     }
+/* 220 */     Rectangle localRectangle = paramGraphics2D.getClipBounds();
+/* 221 */     paramGraphics2D.setColor(new Color(-15724512));
+/* 222 */     paramGraphics2D.fillRect(localRectangle.x, localRectangle.y, localRectangle.width, localRectangle.height);
+/*     */ 
+/* 224 */     int m = 16;
+/*     */ 
+/* 226 */     int n = 3;
+/* 227 */     int i1 = localRectangle.x / m / 2 - 2 - n;
+/* 228 */     int i2 = (localRectangle.x + localRectangle.width) / m / 2 + 1 + n;
+/* 229 */     int i3 = localRectangle.y / m - 1 - n * 2;
+/* 230 */     int i4 = (localRectangle.y + localRectangle.height + 16 + 128) / m + 1 + n * 2;
+/*     */ 
+/* 232 */     for (int i5 = i3; i5 <= i4; i5++) {
+/* 233 */       for (int i6 = i1; i6 <= i2; i6++) {
+/* 234 */         int i7 = i6 - (i5 >> 1);
+/* 235 */         int i8 = i6 + (i5 + 1 >> 1);
+/* 236 */         mj localmj = a(i7, i8);
+/* 237 */         localmj.g = this.a;
+/* 238 */         if (!localmj.e) {
+/* 239 */           if (!localmj.h) {
+/* 240 */             localmj.h = true;
+/* 241 */             this.g.add(localmj);
+/*     */           }
+/*     */         } else {
+/* 244 */           localmj.h = false;
+/* 245 */           if (!localmj.f) {
+/* 246 */             int i9 = i6 * m * 2 + (i5 & 0x1) * m;
+/* 247 */             int i10 = i5 * m - 128 - 16;
+/*     */ 
+/* 249 */             paramGraphics2D.drawImage(localmj.a, i9, i10, null);
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     }
+/*     */ 
+/* 255 */     if (this.c) {
+/* 256 */       paramGraphics2D.setTransform(localAffineTransform);
+/* 257 */       i5 = getHeight() - 32 - 4;
+/* 258 */       paramGraphics2D.setColor(new Color(-2147483648, true));
+/*     */ 
+/* 261 */       paramGraphics2D.fillRect(4, getHeight() - 32 - 4, getWidth() - 8, 32);
+/*     */ 
+/* 263 */       paramGraphics2D.setColor(Color.WHITE);
+/*     */ 
+/* 271 */       String str = "F1 - F5: load levels   |   0-9: Set time of day   |   Space: return to spawn   |   Double click: zoom   |   Escape: hide this text";
+/* 272 */       paramGraphics2D.drawString(str, getWidth() / 2 - paramGraphics2D.getFontMetrics().stringWidth(str) / 2, i5 + 20);
+/*     */     }
+/*     */ 
+/* 275 */     paramGraphics2D.dispose();
+/*     */   }
+/*     */ 
+/*     */   public void mouseDragged(MouseEvent paramMouseEvent)
+/*     */   {
+/* 295 */     int m = paramMouseEvent.getX() / this.b;
+/* 296 */     int n = paramMouseEvent.getY() / this.b;
+/* 297 */     this.i += m - this.k;
+/* 298 */     this.j += n - this.l;
+/* 299 */     this.k = m;
+/* 300 */     this.l = n;
+/* 301 */     repaint();
+/*     */   }
+/*     */ 
+/*     */   public void mouseMoved(MouseEvent paramMouseEvent) {
+/*     */   }
+/*     */ 
+/*     */   public void mouseClicked(MouseEvent paramMouseEvent) {
+/* 308 */     if (paramMouseEvent.getClickCount() == 2) {
+/* 309 */       this.b = (3 - this.b);
+/* 310 */       repaint();
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void mouseEntered(MouseEvent paramMouseEvent) {
+/*     */   }
+/*     */ 
+/*     */   public void mouseExited(MouseEvent paramMouseEvent) {
+/*     */   }
+/*     */ 
+/*     */   public void mousePressed(MouseEvent paramMouseEvent) {
+/* 321 */     int m = paramMouseEvent.getX() / this.b;
+/* 322 */     int n = paramMouseEvent.getY() / this.b;
+/* 323 */     this.k = m;
+/* 324 */     this.l = n;
+/*     */   }
+/*     */ 
+/*     */   public void mouseReleased(MouseEvent paramMouseEvent) {
+/*     */   }
+/*     */ 
+/*     */   public void keyPressed(KeyEvent paramKeyEvent) {
+/* 331 */     if (paramKeyEvent.getKeyCode() == 48) a(11);
+/* 332 */     if (paramKeyEvent.getKeyCode() == 49) a(10);
+/* 333 */     if (paramKeyEvent.getKeyCode() == 50) a(9);
+/* 334 */     if (paramKeyEvent.getKeyCode() == 51) a(7);
+/* 335 */     if (paramKeyEvent.getKeyCode() == 52) a(6);
+/* 336 */     if (paramKeyEvent.getKeyCode() == 53) a(5);
+/* 337 */     if (paramKeyEvent.getKeyCode() == 54) a(3);
+/* 338 */     if (paramKeyEvent.getKeyCode() == 55) a(2);
+/* 339 */     if (paramKeyEvent.getKeyCode() == 56) a(1);
+/* 340 */     if (paramKeyEvent.getKeyCode() == 57) a(0);
+/*     */ 
+/* 342 */     if (paramKeyEvent.getKeyCode() == 112) b("World1");
+/* 343 */     if (paramKeyEvent.getKeyCode() == 113) b("World2");
+/* 344 */     if (paramKeyEvent.getKeyCode() == 114) b("World3");
+/* 345 */     if (paramKeyEvent.getKeyCode() == 115) b("World4");
+/* 346 */     if (paramKeyEvent.getKeyCode() == 116) b("World5");
+/*     */ 
+/* 348 */     if (paramKeyEvent.getKeyCode() == 32) this.i = (this.j = 0);
+/* 349 */     if (paramKeyEvent.getKeyCode() == 27) this.c = (!this.c);
+/* 350 */     repaint();
+/*     */   }
+/*     */ 
+/*     */   public void keyReleased(KeyEvent paramKeyEvent)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void keyTyped(KeyEvent paramKeyEvent)
+/*     */   {
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     an
+ * JD-Core Version:    0.6.0
+ */

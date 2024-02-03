@@ -1,0 +1,73 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ import java.io.IOException;
+/*    */ import java.util.zip.DataFormatException;
+/*    */ import java.util.zip.Inflater;
+/*    */ 
+/*    */ public class cv extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public int b;
+/*    */   public int c;
+/*    */   public int d;
+/*    */   public int e;
+/*    */   public int f;
+/*    */   public byte[] g;
+/*    */   private int h;
+/*    */ 
+/*    */   public cv()
+/*    */   {
+/* 15 */     this.k = true;
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream)
+/*    */   {
+/* 40 */     this.a = paramDataInputStream.readInt();
+/* 41 */     this.b = paramDataInputStream.readShort();
+/* 42 */     this.c = paramDataInputStream.readInt();
+/* 43 */     this.d = (paramDataInputStream.read() + 1);
+/* 44 */     this.e = (paramDataInputStream.read() + 1);
+/* 45 */     this.f = (paramDataInputStream.read() + 1);
+/*    */ 
+/* 47 */     int i = paramDataInputStream.readInt();
+/* 48 */     byte[] arrayOfByte = new byte[i];
+/* 49 */     paramDataInputStream.readFully(arrayOfByte);
+/*    */ 
+/* 51 */     this.g = new byte[this.d * this.e * this.f * 5 / 2];
+/*    */ 
+/* 53 */     Inflater localInflater = new Inflater();
+/* 54 */     localInflater.setInput(arrayOfByte);
+/*    */     try {
+/* 56 */       localInflater.inflate(this.g);
+/*    */     } catch (DataFormatException localDataFormatException) {
+/* 58 */       throw new IOException("Bad compressed data format");
+/*    */     } finally {
+/* 60 */       localInflater.end();
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 65 */     paramDataOutputStream.writeInt(this.a);
+/* 66 */     paramDataOutputStream.writeShort(this.b);
+/* 67 */     paramDataOutputStream.writeInt(this.c);
+/* 68 */     paramDataOutputStream.write(this.d - 1);
+/* 69 */     paramDataOutputStream.write(this.e - 1);
+/* 70 */     paramDataOutputStream.write(this.f - 1);
+/*    */ 
+/* 72 */     paramDataOutputStream.writeInt(this.h);
+/* 73 */     paramDataOutputStream.write(this.g, 0, this.h);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 77 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 81 */     return 17 + this.h;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     cv
+ * JD-Core Version:    0.6.0
+ */

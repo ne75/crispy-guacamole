@@ -1,0 +1,18 @@
+/*    */ public class hd
+/*    */ {
+/*    */   public void a(fg paramfg)
+/*    */   {
+/*  8 */     paramfg.a(new gm(pj.au), new Object[] { "###", "# #", "###", Character.valueOf('#'), pj.x });
+/*    */ 
+/* 15 */     paramfg.a(new gm(pj.aB), new Object[] { "###", "# #", "###", Character.valueOf('#'), pj.w });
+/*    */ 
+/* 22 */     paramfg.a(new gm(pj.ay), new Object[] { "##", "##", Character.valueOf('#'), pj.x });
+/*    */ 
+/* 28 */     paramfg.a(new gm(pj.Q), new Object[] { "##", "##", Character.valueOf('#'), pj.E });
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hd
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,25 @@
+/*    */ import java.awt.Canvas;
+/*    */ import net.minecraft.client.MinecraftApplet;
+/*    */ 
+/*    */ public class l extends Canvas
+/*    */ {
+/*    */   public l(MinecraftApplet paramMinecraftApplet)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public synchronized void addNotify()
+/*    */   {
+/* 26 */     super.addNotify();
+/* 27 */     this.a.a();
+/*    */   }
+/*    */ 
+/*    */   public synchronized void removeNotify() {
+/* 31 */     this.a.b();
+/* 32 */     super.removeNotify();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     l
+ * JD-Core Version:    0.6.0
+ */

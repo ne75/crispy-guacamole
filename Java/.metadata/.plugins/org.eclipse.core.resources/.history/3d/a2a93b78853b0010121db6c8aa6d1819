@@ -1,0 +1,26 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class rr extends ev
+/*    */ {
+/*    */   public rr(hl paramhl1, hl paramhl2, float paramFloat)
+/*    */   {
+/*  9 */     super(paramhl1, paramFloat);
+/* 10 */     a(paramhl2);
+/*    */   }
+/*    */ 
+/*    */   protected boolean a(ch paramch, int paramInt, float paramFloat) {
+/* 14 */     if ((paramInt == 0) && (!paramch.p())) {
+/* 15 */       a("/mob/sheep_fur.png");
+/* 16 */       float f = paramch.a(paramFloat);
+/* 17 */       int i = paramch.p_();
+/* 18 */       GL11.glColor3f(f * ch.a[i][0], f * ch.a[i][1], f * ch.a[i][2]);
+/* 19 */       return true;
+/*    */     }
+/* 21 */     return false;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     rr
+ * JD-Core Version:    0.6.0
+ */

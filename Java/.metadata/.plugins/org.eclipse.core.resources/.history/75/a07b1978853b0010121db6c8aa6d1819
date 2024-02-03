@@ -1,0 +1,60 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class en extends pj
+/*    */ {
+/* 10 */   public static boolean a = false;
+/*    */ 
+/*    */   public en(int paramInt1, int paramInt2) {
+/* 13 */     super(paramInt1, paramInt2, ic.m);
+/*    */   }
+/*    */ 
+/*    */   public void e(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 17 */     paramdn.i(paramInt1, paramInt2, paramInt3, this.bi);
+/*    */   }
+/*    */ 
+/*    */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 21 */     paramdn.i(paramInt1, paramInt2, paramInt3, this.bi);
+/*    */   }
+/*    */ 
+/*    */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, Random paramRandom) {
+/* 25 */     h(paramdn, paramInt1, paramInt2, paramInt3);
+/*    */   }
+/*    */ 
+/*    */   private void h(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 29 */     int i = paramInt1;
+/* 30 */     int j = paramInt2;
+/* 31 */     int k = paramInt3;
+/* 32 */     if ((b_(paramdn, i, j - 1, k)) && (j >= 0)) {
+/* 33 */       int m = 32;
+/* 34 */       if ((a) || (!paramdn.a(paramInt1 - m, paramInt2 - m, paramInt3 - m, paramInt1 + m, paramInt2 + m, paramInt3 + m))) {
+/* 35 */         paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/* 36 */         while ((b_(paramdn, paramInt1, paramInt2 - 1, paramInt3)) && (paramInt2 > 0))
+/* 37 */           paramInt2--;
+/* 38 */         if (paramInt2 > 0)
+/* 39 */           paramdn.e(paramInt1, paramInt2, paramInt3, this.bi);
+/*    */       }
+/*    */       else {
+/* 42 */         gz localgz = new gz(paramdn, paramInt1 + 0.5F, paramInt2 + 0.5F, paramInt3 + 0.5F, this.bi);
+/* 43 */         paramdn.a(localgz);
+/*    */       }
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public int d() {
+/* 49 */     return 3;
+/*    */   }
+/*    */ 
+/*    */   public static boolean b_(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 53 */     int i = paramdn.a(paramInt1, paramInt2, paramInt3);
+/* 54 */     if (i == 0) return true;
+/* 55 */     if (i == pj.ar.bi) return true;
+/* 56 */     ic localic = pj.m[i].bt;
+/* 57 */     if (localic == ic.f) return true;
+/* 58 */     return localic == ic.g;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     en
+ * JD-Core Version:    0.6.0
+ */

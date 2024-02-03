@@ -1,0 +1,51 @@
+/*    */ public class ls extends rp
+/*    */ {
+/*    */   private pj a;
+/*    */ 
+/*    */   public ls(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6, pj parampj)
+/*    */   {
+/* 12 */     super(paramdn, paramDouble1, paramDouble2, paramDouble3, paramDouble4, paramDouble5, paramDouble6);
+/* 13 */     this.a = parampj;
+/* 14 */     this.b = parampj.bh;
+/* 15 */     this.h = parampj.bs;
+/* 16 */     this.i = (this.j = this.k = 0.6F);
+/* 17 */     this.g /= 2.0F;
+/*    */   }
+/*    */ 
+/*    */   public ls a(int paramInt1, int paramInt2, int paramInt3) {
+/* 21 */     if (this.a == pj.u) return this;
+/* 22 */     int i = this.a.b(this.aB, paramInt1, paramInt2, paramInt3);
+/* 23 */     this.i *= (i >> 16 & 0xFF) / 255.0F;
+/* 24 */     this.j *= (i >> 8 & 0xFF) / 255.0F;
+/* 25 */     this.k *= (i & 0xFF) / 255.0F;
+/* 26 */     return this;
+/*    */   }
+/*    */ 
+/*    */   public int b_() {
+/* 30 */     return 1;
+/*    */   }
+/*    */ 
+/*    */   public void a(jy paramjy, float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6) {
+/* 34 */     float f1 = (this.b % 16 + this.c / 4.0F) / 16.0F;
+/* 35 */     float f2 = f1 + 0.01560938F;
+/* 36 */     float f3 = (this.b / 16 + this.d / 4.0F) / 16.0F;
+/* 37 */     float f4 = f3 + 0.01560938F;
+/* 38 */     float f5 = 0.1F * this.g;
+/*    */ 
+/* 40 */     float f6 = (float)(this.aC + (this.aF - this.aC) * paramFloat1 - l);
+/* 41 */     float f7 = (float)(this.aD + (this.aG - this.aD) * paramFloat1 - m);
+/* 42 */     float f8 = (float)(this.aE + (this.aH - this.aE) * paramFloat1 - n);
+/* 43 */     float f9 = a(paramFloat1);
+/* 44 */     paramjy.a(f9 * this.i, f9 * this.j, f9 * this.k);
+/*    */ 
+/* 46 */     paramjy.a(f6 - paramFloat2 * f5 - paramFloat5 * f5, f7 - paramFloat3 * f5, f8 - paramFloat4 * f5 - paramFloat6 * f5, f1, f4);
+/* 47 */     paramjy.a(f6 - paramFloat2 * f5 + paramFloat5 * f5, f7 + paramFloat3 * f5, f8 - paramFloat4 * f5 + paramFloat6 * f5, f1, f3);
+/* 48 */     paramjy.a(f6 + paramFloat2 * f5 + paramFloat5 * f5, f7 + paramFloat3 * f5, f8 + paramFloat4 * f5 + paramFloat6 * f5, f2, f3);
+/* 49 */     paramjy.a(f6 + paramFloat2 * f5 - paramFloat5 * f5, f7 - paramFloat3 * f5, f8 + paramFloat4 * f5 - paramFloat6 * f5, f2, f4);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ls
+ * JD-Core Version:    0.6.0
+ */

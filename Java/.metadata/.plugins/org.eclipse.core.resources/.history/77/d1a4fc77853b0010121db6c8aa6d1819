@@ -1,0 +1,30 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class ah
+/*    */ {
+/* 10 */   public byte[] a = new byte[1024];
+/*    */   public int b;
+/* 12 */   public boolean c = false;
+/* 13 */   public int d = 0;
+/* 14 */   public int e = 1;
+/* 15 */   public int f = 0;
+/*    */ 
+/*    */   public ah(int paramInt) {
+/* 18 */     this.b = paramInt;
+/*    */   }
+/*    */ 
+/*    */   public void a() {
+/*    */   }
+/*    */ 
+/*    */   public void a(gs paramgs) {
+/* 25 */     if (this.f == 0)
+/* 26 */       GL11.glBindTexture(3553, paramgs.a("/terrain.png"));
+/* 27 */     else if (this.f == 1)
+/* 28 */       GL11.glBindTexture(3553, paramgs.a("/gui/items.png"));
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ah
+ * JD-Core Version:    0.6.0
+ */

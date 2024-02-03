@@ -1,0 +1,87 @@
+/*    */ public class mb extends nl
+/*    */ {
+/* 11 */   public int a = 0;
+/*    */ 
+/*    */   public mb(dn paramdn) {
+/* 14 */     super(paramdn);
+/* 15 */     this.ay = true;
+/* 16 */     a(0.98F, 0.98F);
+/* 17 */     this.aX = (this.aZ / 2.0F);
+/*    */   }
+/*    */ 
+/*    */   public mb(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3) {
+/* 21 */     this(paramdn);
+/*    */ 
+/* 23 */     b(paramDouble1, paramDouble2, paramDouble3);
+/*    */ 
+/* 25 */     float f = (float)(Math.random() * 3.141592741012573D * 2.0D);
+/* 26 */     this.aI = (-gd.a(f * 3.141593F / 180.0F) * 0.02F);
+/* 27 */     this.aJ = 0.2000000029802322D;
+/* 28 */     this.aK = (-gd.b(f * 3.141593F / 180.0F) * 0.02F);
+/*    */ 
+/* 30 */     this.bc = false;
+/* 31 */     this.a = 80;
+/*    */ 
+/* 33 */     this.aC = paramDouble1;
+/* 34 */     this.aD = paramDouble2;
+/* 35 */     this.aE = paramDouble3;
+/*    */   }
+/*    */ 
+/*    */   protected void b()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public boolean f_()
+/*    */   {
+/* 44 */     return !this.aW;
+/*    */   }
+/*    */ 
+/*    */   public void q_() {
+/* 48 */     this.aC = this.aF;
+/* 49 */     this.aD = this.aG;
+/* 50 */     this.aE = this.aH;
+/*    */ 
+/* 52 */     this.aJ -= 0.03999999910593033D;
+/* 53 */     d(this.aI, this.aJ, this.aK);
+/* 54 */     this.aI *= 0.9800000190734863D;
+/* 55 */     this.aJ *= 0.9800000190734863D;
+/* 56 */     this.aK *= 0.9800000190734863D;
+/*    */ 
+/* 58 */     if (this.aQ) {
+/* 59 */       this.aI *= 0.699999988079071D;
+/* 60 */       this.aK *= 0.699999988079071D;
+/* 61 */       this.aJ *= -0.5D;
+/*    */     }
+/*    */ 
+/* 64 */     if (this.a-- <= 0) {
+/* 65 */       F();
+/* 66 */       k();
+/*    */     } else {
+/* 68 */       this.aB.a("smoke", this.aF, this.aG + 0.5D, this.aH, 0.0D, 0.0D, 0.0D);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   private void k()
+/*    */   {
+/* 74 */     float f = 4.0F;
+/* 75 */     this.aB.a(null, this.aF, this.aG, this.aH, f);
+/*    */   }
+/*    */ 
+/*    */   protected void a(jw paramjw)
+/*    */   {
+/* 88 */     paramjw.a("Fuse", (byte)this.a);
+/*    */   }
+/*    */ 
+/*    */   protected void b(jw paramjw) {
+/* 92 */     this.a = paramjw.c("Fuse");
+/*    */   }
+/*    */ 
+/*    */   public float k_() {
+/* 96 */     return 0.0F;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mb
+ * JD-Core Version:    0.6.0
+ */

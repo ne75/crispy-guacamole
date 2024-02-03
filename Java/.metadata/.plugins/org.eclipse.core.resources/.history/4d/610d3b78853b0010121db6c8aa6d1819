@@ -1,0 +1,25 @@
+/*    */ class rf extends Thread
+/*    */ {
+/*    */   rf(kx paramkx, String paramString)
+/*    */   {
+/* 78 */     super(paramString);
+/*    */   }
+/* 80 */   public void run() { synchronized (kx.a) {
+/* 81 */       kx.c += 1;
+/*    */     }
+/*    */     try {
+/* 84 */       while (kx.a(this.a))
+/* 85 */         kx.d(this.a);
+/*    */     }
+/*    */     finally {
+/* 88 */       synchronized (kx.a) {
+/* 89 */         kx.c -= 1;
+/*    */       }
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     rf
+ * JD-Core Version:    0.6.0
+ */

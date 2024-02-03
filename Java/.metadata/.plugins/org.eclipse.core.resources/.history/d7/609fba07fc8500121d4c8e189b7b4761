@@ -1,0 +1,33 @@
+package main;
+
+import java.io.*;
+import java.util.*;
+
+public class HouseholdIncomeReport {
+    public static void main(String[] args) throws FileNotFoundException {
+	File f = new File("survey.dat");
+	
+	Scanner s = new Scanner(f);
+	int households = 0;
+	int[] id = new int[25];
+	int[] income = new int[25];
+	int[] members = new int[25];
+	
+	System.out.println("ID        Income     Members");
+	
+	while (s.hasNext()){
+	    id[households] = s.nextInt();
+	    income[households] = s.nextInt();
+	    members[households] = s.nextInt();
+	    System.out.println(padRight("" + id[households], 10) + 
+		    		padRight("$" + income[households], 10) + members[households]);
+	    households++;
+	}
+
+    }
+    
+    public static String padRight(String d, int n) {			
+	    return String.format("%1$-" + n + "s", d);				
+    }
+
+}

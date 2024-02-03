@@ -1,0 +1,60 @@
+/*    */ import java.util.List;
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ 
+/*    */ public class bo extends by
+/*    */ {
+/*    */   private by h;
+/*  9 */   protected String a = "Options";
+/*    */   private hq i;
+/*    */ 
+/*    */   public bo(by paramby, hq paramhq)
+/*    */   {
+/* 13 */     this.h = paramby;
+/* 14 */     this.i = paramhq;
+/*    */   }
+/*    */ 
+/*    */   public void a()
+/*    */   {
+/* 19 */     n localn = n.a();
+/* 20 */     this.a = localn.a("options.title");
+/*    */ 
+/* 22 */     for (fo localfo : fo.values()) {
+/* 23 */       int m = localfo.c();
+/* 24 */       if (!localfo.a())
+/* 25 */         this.e.add(new u(localfo.c(), this.c / 2 - 155 + m % 2 * 160, this.d / 6 + 24 * (m >> 1), localfo, this.i.c(localfo)));
+/*    */       else {
+/* 27 */         this.e.add(new qd(localfo.c(), this.c / 2 - 155 + m % 2 * 160, this.d / 6 + 24 * (m >> 1), localfo, this.i.c(localfo), this.i.a(localfo)));
+/*    */       }
+/*    */     }
+/*    */ 
+/* 31 */     this.e.add(new hg(100, this.c / 2 - 100, this.d / 6 + 120 + 12, localn.a("options.controls")));
+/* 32 */     this.e.add(new hg(200, this.c / 2 - 100, this.d / 6 + 168, localn.a("gui.done")));
+/*    */   }
+/*    */ 
+/*    */   protected void a(hg paramhg) {
+/* 36 */     if (!paramhg.g) return;
+/* 37 */     if ((paramhg.f < 100) && ((paramhg instanceof u))) {
+/* 38 */       this.i.a(((u)paramhg).a(), 1);
+/* 39 */       paramhg.e = this.i.c(fo.a(paramhg.f));
+/*    */     }
+/* 41 */     if (paramhg.f == 100) {
+/* 42 */       this.b.y.b();
+/* 43 */       this.b.a(new pf(this, this.i));
+/*    */     }
+/* 45 */     if (paramhg.f == 200) {
+/* 46 */       this.b.y.b();
+/* 47 */       this.b.a(this.h);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt1, int paramInt2, float paramFloat) {
+/* 52 */     i();
+/* 53 */     a(this.g, this.a, this.c / 2, 20, 16777215);
+/* 54 */     super.a(paramInt1, paramInt2, paramFloat);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     bo
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,133 @@
+package main;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ * Arun Ganesh - Chapel Hill High School - AP Computer Science A - 1/31/13
+ * Description: These are methods to do basic functions like logs, find factors, 
+ * for the Mathey group project
+ */
+
+public class Mathey {
+    /** This method finds the log of the first value 
+     *  in the base of the second value, accurate to a number of decimals 
+     *  places specified in the third value
+     *  (e.g., log(9,3) will return 2, since 3^2 = 9
+     *  pre: Two doubles, both positive, as the arguments, and a third int
+     *  which is to how many decimals the logarithm will be precise
+     *  post: The power to which the second double must be raised to 
+     *  get the first double
+     */
+   public static double log(double value, double base, int precision) {
+       int power = 0;
+       int t = (int)Math.pow(10, precision);
+       while (Math.pow(base,power*(1.0/t))<value) {
+           power += 1;
+       }
+       return power/(1.0*t);
+   }
+   /**This method creates an array of integers containing all factors of 
+    * the inputted integer. So, factors(6) will return {1,2,3,6}
+    * pre: A positive integer
+    * post: An array of all the factors of the integer, in order
+    */
+   public static int[] factors(int i) {
+       int f = 0;
+       //Counts the number of factors before creating the array
+       for(int count = 1;count<=i;count++) {
+           if ((i/count)*count==i)
+           f++;
+        }
+        int[] factors = new int[f];
+       f = 0;
+       //Repeats above loop, but instead of counting stores the factors
+       for(int count = 1;count<=i;count++) {
+           if ((i/count)*count==i) {
+               factors[f] = count;
+               f++;
+           }
+        }
+       return factors;
+    }
+    /**This method takes an integer array and orders it from greatest to least
+     * pre: None
+     * post: The original array of integers, but rearranged
+     */
+    public static int[] order(int[] list) {
+        int n = list.length;
+        int[] order = new int[n];
+        int[] output = new int[n];
+        //Sets values to order so that order is an array with cardinal values
+        //corresponding to list's mathematical order
+        for (int c=0; c<n; c++) {
+            int g = 0;
+            for (int d=0;d<n;d++) {
+                if (list[c]>list[d]&&c!=d)
+                g++;
+            }
+            order[c]=g;
+        }
+        int nextelement=0;
+        //Constructs the output by using the order array to rearrange 
+        //the input values
+        for (int c=0;c<n;c++) {
+                for (int d=0;d<n;d++) {
+                    if (order[d]==c)
+                    nextelement = list[d];
+                }
+            output[c]=nextelement;
+        }
+        return output;
+    }
+    /**This method takes an integer and determines if it is prime, and returns
+     * the corresponding boolean. It is not a new or difficult method,
+     * but it simplifies the next method, prime factorization
+     * pre: positive integer above 1
+     * post: true if integer prime, else false
+     */
+    public static boolean isPrime (int p) {
+        for (int count = 2;count<p;count++) {
+            if ((p/count)*count==p)
+            return false;
+        }
+        return true;
+    }
+    /**This method takes the inputted integer and returns its prime 
+     * factorization as a string. If it is already prime, it just returns the number 
+     * to the first power as the factorization.
+     * pre: integer greater than 1
+     * post: A string containing the prime factorization of the integer, in the
+     * form "a^b*c^d*e^f..."
+     */
+    public static String primeFactorization(int p) {
+        if (isPrime(p)) return (p)+"^1";
+        String output = "";
+        boolean inff = false;
+        for (int count = 2;count<p;count++) {
+            int q = p;
+            int power = 0;
+            while ((q/count)*count==q) {
+                power++;
+                q=q/count;
+            }
+            if (!isPrime(count)) power = 0;
+            
+            if (power > 0) {
+                if (inff){output+="*";}
+                output+=count+"^"+power;
+                inff = true;
+            }
+        }
+        return output;
+    }
+    
+    public int factorial(int n) {
+	if (n == 1){
+	    return 1;
+	} else {
+	    return factorial(n - 1);
+	}
+    }
+    
+}

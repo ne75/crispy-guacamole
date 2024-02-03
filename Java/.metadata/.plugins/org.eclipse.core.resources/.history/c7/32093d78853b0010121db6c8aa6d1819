@@ -1,0 +1,62 @@
+/*    */ public class t extends cp
+/*    */ {
+/* 12 */   public jb a = new jb(this, 2, 2);
+/* 13 */   public ij b = new qm();
+/* 14 */   public boolean c = false;
+/*    */ 
+/*    */   public t(gl paramgl) {
+/* 17 */     this(paramgl, true);
+/*    */   }
+/*    */ 
+/*    */   public t(gl paramgl, boolean paramBoolean) {
+/* 21 */     this.c = paramBoolean;
+/* 22 */     a(new sk(this.a, this.b, 0, 144, 36));
+/*    */     int j;
+/* 24 */     for (int i = 0; i < 2; i++) {
+/* 25 */       for (j = 0; j < 2; j++) {
+/* 26 */         a(new eq(this.a, j + i * 2, 88 + j * 18, 26 + i * 18));
+/*    */       }
+/*    */     }
+/*    */ 
+/* 30 */     for (i = 0; i < 4; i++) {
+/* 31 */       j = i;
+/* 32 */       a(new lj(this, paramgl, paramgl.a() - 1 - i, 8, 8 + i * 18, j));
+/*    */     }
+/*    */ 
+/* 48 */     for (i = 0; i < 3; i++) {
+/* 49 */       for (j = 0; j < 9; j++) {
+/* 50 */         a(new eq(paramgl, j + (i + 1) * 9, 8 + j * 18, 84 + i * 18));
+/*    */       }
+/*    */     }
+/* 53 */     for (i = 0; i < 9; i++) {
+/* 54 */       a(new eq(paramgl, i, 8 + i * 18, 142));
+/*    */     }
+/*    */ 
+/* 57 */     a(this.a);
+/*    */   }
+/*    */ 
+/*    */   public void a(ij paramij)
+/*    */   {
+/* 73 */     this.b.a(0, fg.a().a(this.a));
+/*    */   }
+/*    */ 
+/*    */   public void a(eu parameu) {
+/* 77 */     super.a(parameu);
+/* 78 */     for (int i = 0; i < 4; i++) {
+/* 79 */       gm localgm = this.a.c_(i);
+/* 80 */       if (localgm != null) {
+/* 81 */         parameu.a(localgm);
+/* 82 */         this.a.a(i, null);
+/*    */       }
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public boolean b(eu parameu) {
+/* 88 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     t
+ * JD-Core Version:    0.6.0
+ */

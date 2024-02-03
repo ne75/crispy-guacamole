@@ -1,0 +1,82 @@
+/*    */ public class gy extends kp
+/*    */   implements ij
+/*    */ {
+/* 10 */   private gm[] a = new gm[36];
+/*    */ 
+/*    */   public int a() {
+/* 13 */     return 27;
+/*    */   }
+/*    */ 
+/*    */   public gm c_(int paramInt) {
+/* 17 */     return this.a[paramInt];
+/*    */   }
+/*    */ 
+/*    */   public gm a(int paramInt1, int paramInt2) {
+/* 21 */     if (this.a[paramInt1] != null) {
+/* 22 */       if (this.a[paramInt1].a <= paramInt2) {
+/* 23 */         localgm = this.a[paramInt1];
+/* 24 */         this.a[paramInt1] = null;
+/* 25 */         r_();
+/* 26 */         return localgm;
+/*    */       }
+/* 28 */       gm localgm = this.a[paramInt1].a(paramInt2);
+/* 29 */       if (this.a[paramInt1].a == 0) this.a[paramInt1] = null;
+/* 30 */       r_();
+/* 31 */       return localgm;
+/*    */     }
+/*    */ 
+/* 34 */     return null;
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt, gm paramgm) {
+/* 38 */     this.a[paramInt] = paramgm;
+/* 39 */     if ((paramgm != null) && (paramgm.a > d())) paramgm.a = d();
+/* 40 */     r_();
+/*    */   }
+/*    */ 
+/*    */   public String c() {
+/* 44 */     return "Chest";
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw)
+/*    */   {
+/* 49 */     super.a(paramjw);
+/* 50 */     nn localnn = paramjw.l("Items");
+/* 51 */     this.a = new gm[a()];
+/* 52 */     for (int i = 0; i < localnn.c(); i++) {
+/* 53 */       jw localjw = (jw)localnn.a(i);
+/* 54 */       int j = localjw.c("Slot") & 0xFF;
+/* 55 */       if ((j < 0) || (j >= this.a.length)) continue; this.a[j] = new gm(localjw);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 60 */     super.b(paramjw);
+/* 61 */     nn localnn = new nn();
+/*    */ 
+/* 63 */     for (int i = 0; i < this.a.length; i++) {
+/* 64 */       if (this.a[i] != null) {
+/* 65 */         jw localjw = new jw();
+/* 66 */         localjw.a("Slot", (byte)i);
+/* 67 */         this.a[i].a(localjw);
+/* 68 */         localnn.a(localjw);
+/*    */       }
+/*    */     }
+/* 71 */     paramjw.a("Items", localnn);
+/*    */   }
+/*    */ 
+/*    */   public int d()
+/*    */   {
+/* 78 */     return 64;
+/*    */   }
+/*    */ 
+/*    */   public boolean a_(eu parameu) {
+/* 82 */     if (this.d.b(this.e, this.f, this.g) != this) return false;
+/* 83 */     return parameu.e(this.e + 0.5D, this.f + 0.5D, this.g + 0.5D) <= 64.0D;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gy
+ * JD-Core Version:    0.6.0
+ */

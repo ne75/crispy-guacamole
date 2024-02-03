@@ -1,0 +1,72 @@
+/*    */ import java.util.List;
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ 
+/*    */ public class pf extends by
+/*    */ {
+/*    */   private by h;
+/*  9 */   protected String a = "Controls";
+/*    */   private hq i;
+/* 11 */   private int k = -1;
+/*    */ 
+/*    */   public pf(by paramby, hq paramhq)
+/*    */   {
+/* 17 */     this.h = paramby;
+/* 18 */     this.i = paramhq;
+/*    */   }
+/*    */ 
+/*    */   private int j() {
+/* 22 */     return this.c / 2 - 155;
+/*    */   }
+/*    */ 
+/*    */   public void a()
+/*    */   {
+/* 27 */     n localn = n.a();
+/*    */ 
+/* 29 */     int j = j();
+/* 30 */     for (int m = 0; m < this.i.u.length; m++) {
+/* 31 */       this.e.add(new u(m, j + m % 2 * 160, this.d / 6 + 24 * (m >> 1), 70, 20, this.i.b(m)));
+/*    */     }
+/*    */ 
+/* 34 */     this.e.add(new hg(200, this.c / 2 - 100, this.d / 6 + 168, localn.a("gui.done")));
+/* 35 */     this.a = localn.a("controls.title");
+/*    */   }
+/*    */ 
+/*    */   protected void a(hg paramhg) {
+/* 39 */     for (int j = 0; j < this.i.u.length; j++) {
+/* 40 */       ((hg)this.e.get(j)).e = this.i.b(j);
+/*    */     }
+/* 42 */     if (paramhg.f == 200) {
+/* 43 */       this.b.a(this.h);
+/*    */     } else {
+/* 45 */       this.k = paramhg.f;
+/* 46 */       paramhg.e = ("> " + this.i.b(paramhg.f) + " <");
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   protected void a(char paramChar, int paramInt) {
+/* 51 */     if (this.k >= 0) {
+/* 52 */       this.i.a(this.k, paramInt);
+/* 53 */       ((hg)this.e.get(this.k)).e = this.i.b(this.k);
+/* 54 */       this.k = -1;
+/*    */     } else {
+/* 56 */       super.a(paramChar, paramInt);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt1, int paramInt2, float paramFloat) {
+/* 61 */     i();
+/* 62 */     a(this.g, this.a, this.c / 2, 20, 16777215);
+/*    */ 
+/* 64 */     int j = j();
+/* 65 */     for (int m = 0; m < this.i.u.length; m++) {
+/* 66 */       b(this.g, this.i.a(m), j + m % 2 * 160 + 70 + 6, this.d / 6 + 24 * (m >> 1) + 7, -1);
+/*    */     }
+/*    */ 
+/* 69 */     super.a(paramInt1, paramInt2, paramFloat);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     pf
+ * JD-Core Version:    0.6.0
+ */

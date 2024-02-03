@@ -1,0 +1,107 @@
+/*     */ import java.io.PrintStream;
+/*     */ 
+/*     */ public class rs extends eu
+/*     */ {
+/*     */   private int b;
+/*     */   private double c;
+/*     */   private double d;
+/*     */   private double e;
+/*     */   private double bF;
+/*     */   private double bG;
+/*  47 */   float a = 0.0F;
+/*     */ 
+/*     */   public rs(dn paramdn, String paramString)
+/*     */   {
+/*  14 */     super(paramdn);
+/*  15 */     this.o = paramString;
+/*     */ 
+/*  17 */     this.aX = 0.0F;
+/*  18 */     this.bi = 0.0F;
+/*  19 */     if ((paramString != null) && (paramString.length() > 0)) {
+/*  20 */       this.bu = ("http://s3.amazonaws.com/MinecraftSkins/" + paramString + ".png");
+/*  21 */       System.out.println("Loading texture " + this.bu);
+/*     */     }
+/*  23 */     this.bj = true;
+/*     */ 
+/*  25 */     this.ax = 10.0D;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(nl paramnl, int paramInt) {
+/*  29 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public void a(double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2, int paramInt)
+/*     */   {
+/*  37 */     this.aX = 0.0F;
+/*  38 */     this.c = paramDouble1;
+/*  39 */     this.d = paramDouble2;
+/*  40 */     this.e = paramDouble3;
+/*  41 */     this.bF = paramFloat1;
+/*  42 */     this.bG = paramFloat2;
+/*     */ 
+/*  44 */     this.b = paramInt;
+/*     */   }
+/*     */ 
+/*     */   public void q_()
+/*     */   {
+/*  50 */     super.q_();
+/*     */ 
+/*  52 */     this.ae = this.af;
+/*  53 */     double d1 = this.aF - this.aC;
+/*  54 */     double d2 = this.aH - this.aE;
+/*  55 */     float f = gd.a(d1 * d1 + d2 * d2) * 4.0F;
+/*  56 */     if (f > 1.0F) f = 1.0F;
+/*  57 */     this.af += (f - this.af) * 0.4F;
+/*  58 */     this.ag += this.af;
+/*     */   }
+/*     */ 
+/*     */   public float k_() {
+/*  62 */     return 0.0F;
+/*     */   }
+/*     */ 
+/*     */   public void m() {
+/*  66 */     super.d_();
+/*  67 */     if (this.b > 0) {
+/*  68 */       double d1 = this.aF + (this.c - this.aF) / this.b;
+/*  69 */       double d2 = this.aG + (this.d - this.aG) / this.b;
+/*  70 */       double d3 = this.aH + (this.e - this.aH) / this.b;
+/*     */ 
+/*  72 */       double d4 = this.bF - this.aL;
+/*  73 */       while (d4 < -180.0D)
+/*  74 */         d4 += 360.0D;
+/*  75 */       while (d4 >= 180.0D) {
+/*  76 */         d4 -= 360.0D;
+/*     */       }
+/*  78 */       this.aL = (float)(this.aL + d4 / this.b);
+/*  79 */       this.aM = (float)(this.aM + (this.bG - this.aM) / this.b);
+/*     */ 
+/*  81 */       this.b -= 1;
+/*  82 */       b(d1, d2, d3);
+/*  83 */       c(this.aL, this.aM);
+/*     */     }
+/*  85 */     this.k = this.l;
+/*     */ 
+/*  87 */     float f1 = gd.a(this.aI * this.aI + this.aK * this.aK);
+/*  88 */     float f2 = (float)Math.atan(-this.aJ * 0.2000000029802322D) * 15.0F;
+/*  89 */     if (f1 > 0.1F) f1 = 0.1F;
+/*  90 */     if ((!this.aQ) || (this.S <= 0)) f1 = 0.0F;
+/*  91 */     if ((this.aQ) || (this.S <= 0)) f2 = 0.0F;
+/*  92 */     this.l += (f1 - this.l) * 0.4F;
+/*  93 */     this.aa += (f2 - this.aa) * 0.8F;
+/*     */   }
+/*     */ 
+/*     */   public void b(int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*  98 */     gm localgm = null;
+/*  99 */     if (paramInt2 >= 0) localgm = new gm(paramInt2, 1, paramInt3);
+/* 100 */     if (paramInt1 == 0)
+/* 101 */       this.f.a[this.f.c] = localgm;
+/*     */     else
+/* 103 */       this.f.b[(paramInt1 - 1)] = localgm;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     rs
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,58 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class ml extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public int b;
+/*    */   public int c;
+/*    */   public int d;
+/*    */   public byte e;
+/*    */   public byte f;
+/*    */ 
+/*    */   public ml()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public ml(nl paramnl)
+/*    */   {
+/* 18 */     this.a = paramnl.aw;
+/* 19 */     this.b = gd.b(paramnl.aF * 32.0D);
+/* 20 */     this.c = gd.b(paramnl.aG * 32.0D);
+/* 21 */     this.d = gd.b(paramnl.aH * 32.0D);
+/* 22 */     this.e = (byte)(int)(paramnl.aL * 256.0F / 360.0F);
+/* 23 */     this.f = (byte)(int)(paramnl.aM * 256.0F / 360.0F);
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream)
+/*    */   {
+/* 36 */     this.a = paramDataInputStream.readInt();
+/* 37 */     this.b = paramDataInputStream.readInt();
+/* 38 */     this.c = paramDataInputStream.readInt();
+/* 39 */     this.d = paramDataInputStream.readInt();
+/* 40 */     this.e = (byte)paramDataInputStream.read();
+/* 41 */     this.f = (byte)paramDataInputStream.read();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 45 */     paramDataOutputStream.writeInt(this.a);
+/* 46 */     paramDataOutputStream.writeInt(this.b);
+/* 47 */     paramDataOutputStream.writeInt(this.c);
+/* 48 */     paramDataOutputStream.writeInt(this.d);
+/* 49 */     paramDataOutputStream.write(this.e);
+/* 50 */     paramDataOutputStream.write(this.f);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 54 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 58 */     return 34;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ml
+ * JD-Core Version:    0.6.0
+ */

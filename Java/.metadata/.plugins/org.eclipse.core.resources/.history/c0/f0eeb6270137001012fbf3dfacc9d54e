@@ -1,0 +1,18 @@
+public class deckOfCards {
+	public static void main(String[] args) {
+		
+	int[] faceNumber;
+	char[] suitNumber;
+	int count = 0;
+	char face_high = 0;
+	
+	faceNumber = new int[13];
+	suitNumber = new char[4];
+	
+	for (count = 1; count < 14; count++){
+		faceNumber[count] = count;
+		System.out.println(faceNumber[count]);
+	}
+	}
+
+}

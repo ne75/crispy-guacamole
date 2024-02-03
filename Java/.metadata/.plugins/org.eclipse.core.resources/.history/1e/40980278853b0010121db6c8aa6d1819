@@ -1,0 +1,251 @@
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ 
+/*     */ public abstract class ba
+/*     */ {
+/*     */   protected oc b;
+/*  34 */   private hl a = new dr();
+/*  35 */   private bt e = new bt();
+/*     */ 
+/*  37 */   protected float c = 0.0F;
+/*  38 */   protected float d = 1.0F;
+/*     */ 
+/*     */   public abstract void a(nl paramnl, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2);
+/*     */ 
+/*  43 */   protected void a(String paramString) { gs localgs = this.b.e;
+/*  44 */     localgs.b(localgs.a(paramString)); }
+/*     */ 
+/*     */   protected boolean a(String paramString1, String paramString2)
+/*     */   {
+/*  48 */     gs localgs = this.b.e;
+/*     */ 
+/*  50 */     int i = localgs.a(paramString1, paramString2);
+/*  51 */     if (i >= 0) {
+/*  52 */       localgs.b(i);
+/*  53 */       return true;
+/*     */     }
+/*  55 */     return false;
+/*     */   }
+/*     */ 
+/*     */   private void a(nl paramnl, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat)
+/*     */   {
+/*  60 */     GL11.glDisable(2896);
+/*  61 */     int i = pj.ar.bh;
+/*     */ 
+/*  63 */     int j = (i & 0xF) << 4;
+/*  64 */     int k = i & 0xF0;
+/*     */ 
+/*  66 */     float f1 = j / 256.0F;
+/*  67 */     float f2 = (j + 15.99F) / 256.0F;
+/*  68 */     float f3 = k / 256.0F;
+/*  69 */     float f4 = (k + 15.99F) / 256.0F;
+/*     */ 
+/*  71 */     GL11.glPushMatrix();
+/*  72 */     GL11.glTranslatef((float)paramDouble1, (float)paramDouble2, (float)paramDouble3);
+/*     */ 
+/*  74 */     float f5 = paramnl.aY * 1.4F;
+/*  75 */     GL11.glScalef(f5, f5, f5);
+/*  76 */     a("/terrain.png");
+/*  77 */     jy localjy = jy.a;
+/*     */ 
+/*  79 */     float f6 = 1.0F;
+/*  80 */     float f7 = 0.5F;
+/*  81 */     float f8 = 0.0F;
+/*     */ 
+/*  83 */     float f9 = paramnl.aZ / paramnl.aY;
+/*     */ 
+/*  85 */     GL11.glRotatef(-this.b.i, 0.0F, 1.0F, 0.0F);
+/*  86 */     GL11.glTranslatef(0.0F, 0.0F, -0.4F + (int)f9 * 0.02F);
+/*  87 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/*     */ 
+/*  89 */     localjy.b();
+/*  90 */     while (f9 > 0.0F) {
+/*  91 */       localjy.a(f6 - f7, 0.0F - f8, 0.0D, f2, f4);
+/*  92 */       localjy.a(0.0F - f7, 0.0F - f8, 0.0D, f1, f4);
+/*  93 */       localjy.a(0.0F - f7, 1.4F - f8, 0.0D, f1, f3);
+/*  94 */       localjy.a(f6 - f7, 1.4F - f8, 0.0D, f2, f3);
+/*  95 */       f9 -= 1.0F;
+/*  96 */       f8 -= 1.0F;
+/*  97 */       f6 *= 0.9F;
+/*  98 */       GL11.glTranslatef(0.0F, 0.0F, -0.04F);
+/*     */     }
+/* 100 */     localjy.a();
+/* 101 */     GL11.glPopMatrix();
+/* 102 */     GL11.glEnable(2896);
+/*     */   }
+/*     */ 
+/*     */   private void c(nl paramnl, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2) {
+/* 106 */     GL11.glEnable(3042);
+/* 107 */     GL11.glBlendFunc(770, 771);
+/*     */ 
+/* 109 */     gs localgs = this.b.e;
+/* 110 */     localgs.b(localgs.a("%clamp%/misc/shadow.png"));
+/*     */ 
+/* 112 */     dn localdn = b();
+/*     */ 
+/* 114 */     GL11.glDepthMask(false);
+/* 115 */     float f = this.c;
+/*     */ 
+/* 117 */     double d1 = paramnl.be + (paramnl.aF - paramnl.be) * paramFloat2;
+/* 118 */     double d2 = paramnl.bf + (paramnl.aG - paramnl.bf) * paramFloat2 + paramnl.k_();
+/* 119 */     double d3 = paramnl.bg + (paramnl.aH - paramnl.bg) * paramFloat2;
+/*     */ 
+/* 121 */     int i = gd.b(d1 - f);
+/* 122 */     int j = gd.b(d1 + f);
+/* 123 */     int k = gd.b(d2 - f);
+/* 124 */     int m = gd.b(d2);
+/* 125 */     int n = gd.b(d3 - f);
+/* 126 */     int i1 = gd.b(d3 + f);
+/*     */ 
+/* 128 */     double d4 = paramDouble1 - d1;
+/* 129 */     double d5 = paramDouble2 - d2;
+/* 130 */     double d6 = paramDouble3 - d3;
+/*     */ 
+/* 132 */     jy localjy = jy.a;
+/* 133 */     localjy.b();
+/* 134 */     for (int i2 = i; i2 <= j; i2++) {
+/* 135 */       for (int i3 = k; i3 <= m; i3++)
+/* 136 */         for (int i4 = n; i4 <= i1; i4++) {
+/* 137 */           int i5 = localdn.a(i2, i3 - 1, i4);
+/* 138 */           if ((i5 > 0) && (localdn.l(i2, i3, i4) > 3))
+/* 139 */             a(pj.m[i5], paramDouble1, paramDouble2 + paramnl.k_(), paramDouble3, i2, i3, i4, paramFloat1, f, d4, d5 + paramnl.k_(), d6);
+/*     */         }
+/*     */     }
+/* 142 */     localjy.a();
+/*     */ 
+/* 144 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 145 */     GL11.glDisable(3042);
+/* 146 */     GL11.glDepthMask(true);
+/*     */   }
+/*     */ 
+/*     */   private dn b() {
+/* 150 */     return this.b.g;
+/*     */   }
+/*     */ 
+/*     */   private void a(pj parampj, double paramDouble1, double paramDouble2, double paramDouble3, int paramInt1, int paramInt2, int paramInt3, float paramFloat1, float paramFloat2, double paramDouble4, double paramDouble5, double paramDouble6) {
+/* 154 */     jy localjy = jy.a;
+/* 155 */     if (!parampj.b()) return;
+/*     */ 
+/* 157 */     double d1 = (paramFloat1 - (paramDouble2 - (paramInt2 + paramDouble5)) / 2.0D) * 0.5D * b().c(paramInt1, paramInt2, paramInt3);
+/* 158 */     if (d1 < 0.0D) return;
+/* 159 */     if (d1 > 1.0D) d1 = 1.0D;
+/* 160 */     localjy.a(1.0F, 1.0F, 1.0F, (float)d1);
+/*     */ 
+/* 163 */     double d2 = paramInt1 + parampj.bl + paramDouble4;
+/* 164 */     double d3 = paramInt1 + parampj.bo + paramDouble4;
+/* 165 */     double d4 = paramInt2 + parampj.bm + paramDouble5 + 0.015625D;
+/* 166 */     double d5 = paramInt3 + parampj.bn + paramDouble6;
+/* 167 */     double d6 = paramInt3 + parampj.bq + paramDouble6;
+/*     */ 
+/* 169 */     float f1 = (float)((paramDouble1 - d2) / 2.0D / paramFloat2 + 0.5D);
+/* 170 */     float f2 = (float)((paramDouble1 - d3) / 2.0D / paramFloat2 + 0.5D);
+/* 171 */     float f3 = (float)((paramDouble3 - d5) / 2.0D / paramFloat2 + 0.5D);
+/* 172 */     float f4 = (float)((paramDouble3 - d6) / 2.0D / paramFloat2 + 0.5D);
+/*     */ 
+/* 179 */     localjy.a(d2, d4, d5, f1, f3);
+/* 180 */     localjy.a(d2, d4, d6, f1, f4);
+/* 181 */     localjy.a(d3, d4, d6, f2, f4);
+/* 182 */     localjy.a(d3, d4, d5, f2, f3);
+/*     */   }
+/*     */ 
+/*     */   public static void a(db paramdb, double paramDouble1, double paramDouble2, double paramDouble3) {
+/* 186 */     GL11.glDisable(3553);
+/* 187 */     jy localjy = jy.a;
+/* 188 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 189 */     localjy.b();
+/* 190 */     localjy.b(paramDouble1, paramDouble2, paramDouble3);
+/* 191 */     localjy.b(0.0F, 0.0F, -1.0F);
+/* 192 */     localjy.a(paramdb.a, paramdb.e, paramdb.c);
+/* 193 */     localjy.a(paramdb.d, paramdb.e, paramdb.c);
+/* 194 */     localjy.a(paramdb.d, paramdb.b, paramdb.c);
+/* 195 */     localjy.a(paramdb.a, paramdb.b, paramdb.c);
+/*     */ 
+/* 197 */     localjy.b(0.0F, 0.0F, 1.0F);
+/* 198 */     localjy.a(paramdb.a, paramdb.b, paramdb.f);
+/* 199 */     localjy.a(paramdb.d, paramdb.b, paramdb.f);
+/* 200 */     localjy.a(paramdb.d, paramdb.e, paramdb.f);
+/* 201 */     localjy.a(paramdb.a, paramdb.e, paramdb.f);
+/*     */ 
+/* 203 */     localjy.b(0.0F, -1.0F, 0.0F);
+/* 204 */     localjy.a(paramdb.a, paramdb.b, paramdb.c);
+/* 205 */     localjy.a(paramdb.d, paramdb.b, paramdb.c);
+/* 206 */     localjy.a(paramdb.d, paramdb.b, paramdb.f);
+/* 207 */     localjy.a(paramdb.a, paramdb.b, paramdb.f);
+/*     */ 
+/* 209 */     localjy.b(0.0F, 1.0F, 0.0F);
+/* 210 */     localjy.a(paramdb.a, paramdb.e, paramdb.f);
+/* 211 */     localjy.a(paramdb.d, paramdb.e, paramdb.f);
+/* 212 */     localjy.a(paramdb.d, paramdb.e, paramdb.c);
+/* 213 */     localjy.a(paramdb.a, paramdb.e, paramdb.c);
+/*     */ 
+/* 215 */     localjy.b(-1.0F, 0.0F, 0.0F);
+/* 216 */     localjy.a(paramdb.a, paramdb.b, paramdb.f);
+/* 217 */     localjy.a(paramdb.a, paramdb.e, paramdb.f);
+/* 218 */     localjy.a(paramdb.a, paramdb.e, paramdb.c);
+/* 219 */     localjy.a(paramdb.a, paramdb.b, paramdb.c);
+/*     */ 
+/* 221 */     localjy.b(1.0F, 0.0F, 0.0F);
+/* 222 */     localjy.a(paramdb.d, paramdb.b, paramdb.c);
+/* 223 */     localjy.a(paramdb.d, paramdb.e, paramdb.c);
+/* 224 */     localjy.a(paramdb.d, paramdb.e, paramdb.f);
+/* 225 */     localjy.a(paramdb.d, paramdb.b, paramdb.f);
+/* 226 */     localjy.b(0.0D, 0.0D, 0.0D);
+/* 227 */     localjy.a();
+/* 228 */     GL11.glEnable(3553);
+/*     */   }
+/*     */ 
+/*     */   public static void a(db paramdb)
+/*     */   {
+/* 233 */     jy localjy = jy.a;
+/* 234 */     localjy.b();
+/* 235 */     localjy.a(paramdb.a, paramdb.e, paramdb.c);
+/* 236 */     localjy.a(paramdb.d, paramdb.e, paramdb.c);
+/* 237 */     localjy.a(paramdb.d, paramdb.b, paramdb.c);
+/* 238 */     localjy.a(paramdb.a, paramdb.b, paramdb.c);
+/* 239 */     localjy.a(paramdb.a, paramdb.b, paramdb.f);
+/* 240 */     localjy.a(paramdb.d, paramdb.b, paramdb.f);
+/* 241 */     localjy.a(paramdb.d, paramdb.e, paramdb.f);
+/* 242 */     localjy.a(paramdb.a, paramdb.e, paramdb.f);
+/* 243 */     localjy.a(paramdb.a, paramdb.b, paramdb.c);
+/* 244 */     localjy.a(paramdb.d, paramdb.b, paramdb.c);
+/* 245 */     localjy.a(paramdb.d, paramdb.b, paramdb.f);
+/* 246 */     localjy.a(paramdb.a, paramdb.b, paramdb.f);
+/* 247 */     localjy.a(paramdb.a, paramdb.e, paramdb.f);
+/* 248 */     localjy.a(paramdb.d, paramdb.e, paramdb.f);
+/* 249 */     localjy.a(paramdb.d, paramdb.e, paramdb.c);
+/* 250 */     localjy.a(paramdb.a, paramdb.e, paramdb.c);
+/* 251 */     localjy.a(paramdb.a, paramdb.b, paramdb.f);
+/* 252 */     localjy.a(paramdb.a, paramdb.e, paramdb.f);
+/* 253 */     localjy.a(paramdb.a, paramdb.e, paramdb.c);
+/* 254 */     localjy.a(paramdb.a, paramdb.b, paramdb.c);
+/* 255 */     localjy.a(paramdb.d, paramdb.b, paramdb.c);
+/* 256 */     localjy.a(paramdb.d, paramdb.e, paramdb.c);
+/* 257 */     localjy.a(paramdb.d, paramdb.e, paramdb.f);
+/* 258 */     localjy.a(paramdb.d, paramdb.b, paramdb.f);
+/* 259 */     localjy.a();
+/*     */   }
+/*     */ 
+/*     */   public void a(oc paramoc) {
+/* 263 */     this.b = paramoc;
+/*     */   }
+/*     */ 
+/*     */   public void b(nl paramnl, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2) {
+/* 267 */     if ((this.b.k.i) && (this.c > 0.0F)) {
+/* 268 */       double d1 = this.b.a(paramnl.aF, paramnl.aG, paramnl.aH);
+/* 269 */       float f = (float)((1.0D - d1 / 256.0D) * this.d);
+/* 270 */       if (f > 0.0F) {
+/* 271 */         c(paramnl, paramDouble1, paramDouble2, paramDouble3, f, paramFloat2);
+/*     */       }
+/*     */     }
+/* 274 */     if (paramnl.U()) a(paramnl, paramDouble1, paramDouble2, paramDouble3, paramFloat2);
+/*     */   }
+/*     */ 
+/*     */   public nh a()
+/*     */   {
+/* 279 */     return this.b.a();
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ba
+ * JD-Core Version:    0.6.0
+ */

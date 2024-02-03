@@ -1,0 +1,55 @@
+/*    */ public class kd
+/*    */   implements ij
+/*    */ {
+/*    */   private String a;
+/*    */   private ij b;
+/*    */   private ij c;
+/*    */ 
+/*    */   public kd(String paramString, ij paramij1, ij paramij2)
+/*    */   {
+/* 11 */     this.a = paramString;
+/* 12 */     this.b = paramij1;
+/* 13 */     this.c = paramij2;
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 17 */     return this.b.a() + this.c.a();
+/*    */   }
+/*    */ 
+/*    */   public String c() {
+/* 21 */     return this.a;
+/*    */   }
+/*    */ 
+/*    */   public gm c_(int paramInt) {
+/* 25 */     if (paramInt >= this.b.a()) return this.c.c_(paramInt - this.b.a());
+/* 26 */     return this.b.c_(paramInt);
+/*    */   }
+/*    */ 
+/*    */   public gm a(int paramInt1, int paramInt2) {
+/* 30 */     if (paramInt1 >= this.b.a()) return this.c.a(paramInt1 - this.b.a(), paramInt2);
+/* 31 */     return this.b.a(paramInt1, paramInt2);
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt, gm paramgm) {
+/* 35 */     if (paramInt >= this.b.a()) this.c.a(paramInt - this.b.a(), paramgm); else
+/* 36 */       this.b.a(paramInt, paramgm);
+/*    */   }
+/*    */ 
+/*    */   public int d() {
+/* 40 */     return this.b.d();
+/*    */   }
+/*    */ 
+/*    */   public void r_() {
+/* 44 */     this.b.r_();
+/* 45 */     this.c.r_();
+/*    */   }
+/*    */ 
+/*    */   public boolean a_(eu parameu) {
+/* 49 */     return (this.b.a_(parameu)) && (this.c.a_(parameu));
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     kd
+ * JD-Core Version:    0.6.0
+ */

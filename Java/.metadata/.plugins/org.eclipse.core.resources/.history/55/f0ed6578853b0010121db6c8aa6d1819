@@ -1,0 +1,20 @@
+package org.lwjgl.opengl;
+
+import java.awt.Canvas;
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsDevice;
+import org.lwjgl.LWJGLException;
+
+abstract interface AWTCanvasImplementation
+{
+  public abstract PeerInfo createPeerInfo(Canvas paramCanvas, PixelFormat paramPixelFormat)
+    throws LWJGLException;
+
+  public abstract GraphicsConfiguration findConfiguration(GraphicsDevice paramGraphicsDevice, PixelFormat paramPixelFormat)
+    throws LWJGLException;
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/lwjgl.jar
+ * Qualified Name:     org.lwjgl.opengl.AWTCanvasImplementation
+ * JD-Core Version:    0.6.0
+ */

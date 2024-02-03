@@ -1,0 +1,28 @@
+/*    */ public class my extends eo
+/*    */ {
+/*    */   public my(int paramInt)
+/*    */   {
+/*  8 */     super(paramInt);
+/*  9 */     this.bb = 1;
+/* 10 */     this.bc = 64;
+/*    */   }
+/*    */ 
+/*    */   public void b(gm paramgm, ig paramig) {
+/* 14 */     if ((paramig instanceof qk)) {
+/* 15 */       qk localqk = (qk)paramig;
+/* 16 */       if (!localqk.q()) {
+/* 17 */         localqk.a(true);
+/* 18 */         paramgm.a -= 1;
+/*    */       }
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void a(gm paramgm, ig paramig) {
+/* 24 */     b(paramgm, paramig);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     my
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,181 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class fh extends nl
+/*     */ {
+/*     */   public gm a;
+/*     */   private int e;
+/*  18 */   public int b = 0;
+/*     */   public int c;
+/*  21 */   private int f = 5;
+/*     */ 
+/*  23 */   public float d = (float)(Math.random() * 3.141592653589793D * 2.0D);
+/*     */ 
+/*     */   public fh(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3, gm paramgm) {
+/*  26 */     super(paramdn);
+/*  27 */     a(0.25F, 0.25F);
+/*  28 */     this.aX = (this.aZ / 2.0F);
+/*  29 */     b(paramDouble1, paramDouble2, paramDouble3);
+/*  30 */     this.a = paramgm;
+/*     */ 
+/*  32 */     this.aL = (float)(Math.random() * 360.0D);
+/*     */ 
+/*  34 */     this.aI = (float)(Math.random() * 0.2000000029802322D - 0.1000000014901161D);
+/*  35 */     this.aJ = 0.2000000029802322D;
+/*  36 */     this.aK = (float)(Math.random() * 0.2000000029802322D - 0.1000000014901161D);
+/*  37 */     this.bc = false;
+/*     */   }
+/*     */ 
+/*     */   public fh(dn paramdn) {
+/*  41 */     super(paramdn);
+/*  42 */     a(0.25F, 0.25F);
+/*  43 */     this.aX = (this.aZ / 2.0F);
+/*     */   }
+/*     */ 
+/*     */   protected void b()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void q_()
+/*     */   {
+/*  52 */     super.q_();
+/*  53 */     if (this.c > 0) this.c -= 1;
+/*  54 */     this.aC = this.aF;
+/*  55 */     this.aD = this.aG;
+/*  56 */     this.aE = this.aH;
+/*     */ 
+/*  58 */     this.aJ -= 0.03999999910593033D;
+/*  59 */     if (this.aB.f(gd.b(this.aF), gd.b(this.aG), gd.b(this.aH)) == ic.g) {
+/*  60 */       this.aJ = 0.2000000029802322D;
+/*  61 */       this.aI = ((this.bm.nextFloat() - this.bm.nextFloat()) * 0.2F);
+/*  62 */       this.aK = ((this.bm.nextFloat() - this.bm.nextFloat()) * 0.2F);
+/*  63 */       this.aB.a(this, "random.fizz", 0.4F, 2.0F + this.bm.nextFloat() * 0.4F);
+/*     */     }
+/*  65 */     h(this.aF, this.aG, this.aH);
+/*  66 */     d(this.aI, this.aJ, this.aK);
+/*     */ 
+/*  69 */     float f1 = 0.98F;
+/*  70 */     if (this.aQ) {
+/*  71 */       f1 = 0.5880001F;
+/*  72 */       int i = this.aB.a(gd.b(this.aF), gd.b(this.aP.b) - 1, gd.b(this.aH));
+/*  73 */       if (i > 0) {
+/*  74 */         f1 = pj.m[i].bu * 0.98F;
+/*     */       }
+/*     */     }
+/*     */ 
+/*  78 */     this.aI *= f1;
+/*  79 */     this.aJ *= 0.9800000190734863D;
+/*  80 */     this.aK *= f1;
+/*     */ 
+/*  90 */     if (this.aQ) {
+/*  91 */       this.aJ *= -0.5D;
+/*     */     }
+/*     */ 
+/*  94 */     this.e += 1;
+/*  95 */     this.b += 1;
+/*  96 */     if (this.b >= 6000)
+/*  97 */       F();
+/*     */   }
+/*     */ 
+/*     */   public boolean j_()
+/*     */   {
+/* 102 */     return this.aB.a(this.aP, ic.f, this);
+/*     */   }
+/*     */ 
+/*     */   private boolean h(double paramDouble1, double paramDouble2, double paramDouble3) {
+/* 106 */     int i = gd.b(paramDouble1);
+/* 107 */     int j = gd.b(paramDouble2);
+/* 108 */     int k = gd.b(paramDouble3);
+/*     */ 
+/* 110 */     double d1 = paramDouble1 - i;
+/* 111 */     double d2 = paramDouble2 - j;
+/* 112 */     double d3 = paramDouble3 - k;
+/*     */ 
+/* 114 */     if (pj.o[this.aB.a(i, j, k)] != 0) {
+/* 115 */       int m = pj.o[this.aB.a(i - 1, j, k)] == 0 ? 1 : 0;
+/* 116 */       int n = pj.o[this.aB.a(i + 1, j, k)] == 0 ? 1 : 0;
+/* 117 */       int i1 = pj.o[this.aB.a(i, j - 1, k)] == 0 ? 1 : 0;
+/* 118 */       int i2 = pj.o[this.aB.a(i, j + 1, k)] == 0 ? 1 : 0;
+/* 119 */       int i3 = pj.o[this.aB.a(i, j, k - 1)] == 0 ? 1 : 0;
+/* 120 */       int i4 = pj.o[this.aB.a(i, j, k + 1)] == 0 ? 1 : 0;
+/*     */ 
+/* 122 */       int i5 = -1;
+/* 123 */       double d4 = 9999.0D;
+/* 124 */       if ((m != 0) && (d1 < d4)) {
+/* 125 */         d4 = d1;
+/* 126 */         i5 = 0;
+/*     */       }
+/* 128 */       if ((n != 0) && (1.0D - d1 < d4)) {
+/* 129 */         d4 = 1.0D - d1;
+/* 130 */         i5 = 1;
+/*     */       }
+/* 132 */       if ((i1 != 0) && (d2 < d4)) {
+/* 133 */         d4 = d2;
+/* 134 */         i5 = 2;
+/*     */       }
+/* 136 */       if ((i2 != 0) && (1.0D - d2 < d4)) {
+/* 137 */         d4 = 1.0D - d2;
+/* 138 */         i5 = 3;
+/*     */       }
+/* 140 */       if ((i3 != 0) && (d3 < d4)) {
+/* 141 */         d4 = d3;
+/* 142 */         i5 = 4;
+/*     */       }
+/* 144 */       if ((i4 != 0) && (1.0D - d3 < d4)) {
+/* 145 */         d4 = 1.0D - d3;
+/* 146 */         i5 = 5;
+/*     */       }
+/*     */ 
+/* 149 */       float f1 = this.bm.nextFloat() * 0.2F + 0.1F;
+/* 150 */       if (i5 == 0) this.aI = (-f1);
+/* 151 */       if (i5 == 1) this.aI = f1;
+/* 152 */       if (i5 == 2) this.aJ = (-f1);
+/* 153 */       if (i5 == 3) this.aJ = f1;
+/* 154 */       if (i5 == 4) this.aK = (-f1);
+/* 155 */       if (i5 == 5) this.aK = f1;
+/*     */     }
+/*     */ 
+/* 158 */     return false;
+/*     */   }
+/*     */ 
+/*     */   protected void a(int paramInt) {
+/* 162 */     a(null, paramInt);
+/*     */   }
+/*     */ 
+/*     */   public boolean a(nl paramnl, int paramInt) {
+/* 166 */     R();
+/* 167 */     this.f -= paramInt;
+/* 168 */     if (this.f <= 0) {
+/* 169 */       F();
+/*     */     }
+/* 171 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public void a(jw paramjw) {
+/* 175 */     paramjw.a("Health", (short)(byte)this.f);
+/* 176 */     paramjw.a("Age", (short)this.b);
+/* 177 */     paramjw.a("Item", this.a.a(new jw()));
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw) {
+/* 181 */     this.f = (paramjw.d("Health") & 0xFF);
+/* 182 */     this.b = paramjw.d("Age");
+/* 183 */     jw localjw = paramjw.k("Item");
+/* 184 */     this.a = new gm(localjw);
+/*     */   }
+/*     */ 
+/*     */   public void b(eu parameu) {
+/* 188 */     if (this.aB.z) return;
+/*     */ 
+/* 190 */     int i = this.a.a;
+/* 191 */     if ((this.c == 0) && (parameu.f.a(this.a))) {
+/* 192 */       this.aB.a(this, "random.pop", 0.2F, ((this.bm.nextFloat() - this.bm.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+/* 193 */       parameu.b(this, i);
+/* 194 */       F();
+/*     */     }
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fh
+ * JD-Core Version:    0.6.0
+ */

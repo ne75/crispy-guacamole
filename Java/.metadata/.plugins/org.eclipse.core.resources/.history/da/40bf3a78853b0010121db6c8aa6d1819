@@ -1,0 +1,39 @@
+/*    */ import java.io.DataInput;
+/*    */ import java.io.DataOutput;
+/*    */ 
+/*    */ public class qz extends fy
+/*    */ {
+/*    */   public String a;
+/*    */ 
+/*    */   public qz()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public qz(String paramString)
+/*    */   {
+/* 12 */     this.a = paramString;
+/* 13 */     if (paramString == null) throw new IllegalArgumentException("Empty string not allowed"); 
+/*    */   }
+/*    */ 
+/*    */   void a(DataOutput paramDataOutput)
+/*    */   {
+/* 17 */     paramDataOutput.writeUTF(this.a);
+/*    */   }
+/*    */ 
+/*    */   void a(DataInput paramDataInput) {
+/* 21 */     this.a = paramDataInput.readUTF();
+/*    */   }
+/*    */ 
+/*    */   public byte a() {
+/* 25 */     return 8;
+/*    */   }
+/*    */ 
+/*    */   public String toString() {
+/* 29 */     return "" + this.a;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qz
+ * JD-Core Version:    0.6.0
+ */

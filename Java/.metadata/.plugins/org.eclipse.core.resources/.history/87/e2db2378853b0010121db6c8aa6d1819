@@ -1,0 +1,27 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class im extends hj
+/*    */ {
+/*    */   public void a(od paramod)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public int a()
+/*    */   {
+/* 16 */     return 0;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     im
+ * JD-Core Version:    0.6.0
+ */

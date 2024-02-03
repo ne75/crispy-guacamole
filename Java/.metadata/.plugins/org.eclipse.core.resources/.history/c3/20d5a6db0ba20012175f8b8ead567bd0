@@ -1,0 +1,12 @@
+package main;
+
+import info.gridworld.grid.UnboundedGrid;
+import info.gridworld.grid.Location;
+
+public class MyUnboundedGrid<E> extends UnboundedGrid<E> {
+
+    public ArrayList<Location> getEmptyAdjacentLocations(Location l){
+	
+    }
+    
+}

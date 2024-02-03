@@ -1,0 +1,37 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class fj extends hj
+/*    */ {
+/*    */   public int a;
+/*    */ 
+/*    */   public fj()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public fj(int paramInt)
+/*    */   {
+/* 12 */     this.a = paramInt;
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream) {
+/* 16 */     this.a = paramDataInputStream.readShort();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 20 */     paramDataOutputStream.writeShort(this.a);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 24 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 28 */     return 2;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fj
+ * JD-Core Version:    0.6.0
+ */

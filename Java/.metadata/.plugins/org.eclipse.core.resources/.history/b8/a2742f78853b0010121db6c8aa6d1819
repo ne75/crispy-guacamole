@@ -1,0 +1,29 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class ns extends oy
+/*    */ {
+/*    */   public void a(DataInputStream paramDataInputStream)
+/*    */   {
+/* 56 */     super.a(paramDataInputStream);
+/* 57 */     this.b = paramDataInputStream.readByte();
+/* 58 */     this.c = paramDataInputStream.readByte();
+/* 59 */     this.d = paramDataInputStream.readByte();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 63 */     super.a(paramDataOutputStream);
+/* 64 */     paramDataOutputStream.writeByte(this.b);
+/* 65 */     paramDataOutputStream.writeByte(this.c);
+/* 66 */     paramDataOutputStream.writeByte(this.d);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 70 */     return 7;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ns
+ * JD-Core Version:    0.6.0
+ */

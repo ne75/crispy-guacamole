@@ -1,0 +1,105 @@
+/*     */ import java.io.DataInput;
+/*     */ import java.io.DataOutput;
+/*     */ 
+/*     */ public abstract class fy
+/*     */ {
+/*  18 */   private String a = null;
+/*     */ 
+/*     */   abstract void a(DataOutput paramDataOutput);
+/*     */ 
+/*     */   abstract void a(DataInput paramDataInput);
+/*     */ 
+/*     */   public abstract byte a();
+/*     */ 
+/*     */   public String b()
+/*     */   {
+/*  45 */     if (this.a == null) return "";
+/*  46 */     return this.a;
+/*     */   }
+/*     */ 
+/*     */   public fy a(String paramString) {
+/*  50 */     this.a = paramString;
+/*  51 */     return this;
+/*     */   }
+/*     */ 
+/*     */   public static fy b(DataInput paramDataInput) {
+/*  55 */     byte b = paramDataInput.readByte();
+/*  56 */     if (b == 0) return new hx();
+/*     */ 
+/*  58 */     fy localfy = a(b);
+/*     */ 
+/*  63 */     localfy.a = paramDataInput.readUTF();
+/*  64 */     localfy.a(paramDataInput);
+/*  65 */     return localfy;
+/*     */   }
+/*     */ 
+/*     */   public static void a(fy paramfy, DataOutput paramDataOutput) {
+/*  69 */     paramDataOutput.writeByte(paramfy.a());
+/*  70 */     if (paramfy.a() == 0) return;
+/*     */ 
+/*  75 */     paramDataOutput.writeUTF(paramfy.b());
+/*     */ 
+/*  77 */     paramfy.a(paramDataOutput);
+/*     */   }
+/*     */ 
+/*     */   public static fy a(byte paramByte) {
+/*  81 */     switch (paramByte) {
+/*     */     case 0:
+/*  83 */       return new hx();
+/*     */     case 1:
+/*  85 */       return new lv();
+/*     */     case 2:
+/*  87 */       return new pb();
+/*     */     case 3:
+/*  89 */       return new lf();
+/*     */     case 4:
+/*  91 */       return new is();
+/*     */     case 5:
+/*  93 */       return new j();
+/*     */     case 6:
+/*  95 */       return new nv();
+/*     */     case 7:
+/*  97 */       return new fi();
+/*     */     case 8:
+/*  99 */       return new qz();
+/*     */     case 9:
+/* 101 */       return new nn();
+/*     */     case 10:
+/* 103 */       return new jw();
+/*     */     }
+/* 105 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public static String b(byte paramByte) {
+/* 109 */     switch (paramByte) {
+/*     */     case 0:
+/* 111 */       return "TAG_End";
+/*     */     case 1:
+/* 113 */       return "TAG_Byte";
+/*     */     case 2:
+/* 115 */       return "TAG_Short";
+/*     */     case 3:
+/* 117 */       return "TAG_Int";
+/*     */     case 4:
+/* 119 */       return "TAG_Long";
+/*     */     case 5:
+/* 121 */       return "TAG_Float";
+/*     */     case 6:
+/* 123 */       return "TAG_Double";
+/*     */     case 7:
+/* 125 */       return "TAG_Byte_Array";
+/*     */     case 8:
+/* 127 */       return "TAG_String";
+/*     */     case 9:
+/* 129 */       return "TAG_List";
+/*     */     case 10:
+/* 131 */       return "TAG_Compound";
+/*     */     }
+/* 133 */     return "UNKNOWN";
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fy
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,54 @@
+/*    */ public class pq extends eo
+/*    */ {
+/*    */   public pq(int paramInt)
+/*    */   {
+/* 11 */     super(paramInt);
+/* 12 */     this.bb = 1;
+/*    */   }
+/*    */ 
+/*    */   public gm a(gm paramgm, dn paramdn, eu parameu)
+/*    */   {
+/* 17 */     float f1 = 1.0F;
+/*    */ 
+/* 19 */     float f2 = parameu.aO + (parameu.aM - parameu.aO) * f1;
+/* 20 */     float f3 = parameu.aN + (parameu.aL - parameu.aN) * f1;
+/*    */ 
+/* 22 */     double d1 = parameu.aC + (parameu.aF - parameu.aC) * f1;
+/* 23 */     double d2 = parameu.aD + (parameu.aG - parameu.aD) * f1 + 1.62D - parameu.aX;
+/* 24 */     double d3 = parameu.aE + (parameu.aH - parameu.aE) * f1;
+/*    */ 
+/* 26 */     ax localax1 = ax.b(d1, d2, d3);
+/*    */ 
+/* 28 */     float f4 = gd.b(-f3 * 0.01745329F - 3.141593F);
+/* 29 */     float f5 = gd.a(-f3 * 0.01745329F - 3.141593F);
+/* 30 */     float f6 = -gd.b(-f2 * 0.01745329F);
+/* 31 */     float f7 = gd.a(-f2 * 0.01745329F);
+/*    */ 
+/* 33 */     float f8 = f5 * f6;
+/* 34 */     float f9 = f7;
+/* 35 */     float f10 = f4 * f6;
+/*    */ 
+/* 37 */     double d4 = 5.0D;
+/* 38 */     ax localax2 = localax1.c(f8 * d4, f9 * d4, f10 * d4);
+/* 39 */     pr localpr = paramdn.a(localax1, localax2, true);
+/* 40 */     if (localpr == null) return paramgm;
+/*    */ 
+/* 42 */     if (localpr.a == gq.a) {
+/* 43 */       int i = localpr.b;
+/* 44 */       int j = localpr.c;
+/* 45 */       int k = localpr.d;
+/*    */ 
+/* 47 */       if (!paramdn.z) {
+/* 48 */         paramdn.a(new eg(paramdn, i + 0.5F, j + 1.5F, k + 0.5F));
+/*    */       }
+/* 50 */       paramgm.a -= 1;
+/*    */     }
+/*    */ 
+/* 53 */     return paramgm;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     pq
+ * JD-Core Version:    0.6.0
+ */

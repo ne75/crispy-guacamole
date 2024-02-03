@@ -1,0 +1,40 @@
+/*    */ import java.io.DataInput;
+/*    */ import java.io.DataOutput;
+/*    */ 
+/*    */ public class fi extends fy
+/*    */ {
+/*    */   public byte[] a;
+/*    */ 
+/*    */   public fi()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public fi(byte[] paramArrayOfByte)
+/*    */   {
+/* 11 */     this.a = paramArrayOfByte;
+/*    */   }
+/*    */ 
+/*    */   void a(DataOutput paramDataOutput) {
+/* 15 */     paramDataOutput.writeInt(this.a.length);
+/* 16 */     paramDataOutput.write(this.a);
+/*    */   }
+/*    */ 
+/*    */   void a(DataInput paramDataInput) {
+/* 20 */     int i = paramDataInput.readInt();
+/* 21 */     this.a = new byte[i];
+/* 22 */     paramDataInput.readFully(this.a);
+/*    */   }
+/*    */ 
+/*    */   public byte a() {
+/* 26 */     return 7;
+/*    */   }
+/*    */ 
+/*    */   public String toString() {
+/* 30 */     return "[" + this.a.length + " bytes]";
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fi
+ * JD-Core Version:    0.6.0
+ */

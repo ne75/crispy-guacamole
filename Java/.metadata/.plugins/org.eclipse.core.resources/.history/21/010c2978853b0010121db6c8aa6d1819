@@ -1,0 +1,67 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class le extends go
+/*    */ {
+/* 10 */   private mk b = new mk();
+/*    */ 
+/*    */   public void a(sc paramsc, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat)
+/*    */   {
+/* 14 */     pj localpj = paramsc.f();
+/*    */ 
+/* 17 */     GL11.glPushMatrix();
+/* 18 */     float f1 = 0.6666667F;
+/* 19 */     if (localpj == pj.aD) {
+/* 20 */       GL11.glTranslatef((float)paramDouble1 + 0.5F, (float)paramDouble2 + 0.75F * f1, (float)paramDouble3 + 0.5F);
+/* 21 */       float f2 = paramsc.e() * 360 / 16.0F;
+/* 22 */       GL11.glRotatef(-f2, 0.0F, 1.0F, 0.0F);
+/* 23 */       this.b.b.h = true;
+/*    */     } else {
+/* 25 */       int i = paramsc.e();
+/* 26 */       f3 = 0.0F;
+/*    */ 
+/* 28 */       if (i == 2) f3 = 180.0F;
+/* 29 */       if (i == 4) f3 = 90.0F;
+/* 30 */       if (i == 5) f3 = -90.0F;
+/*    */ 
+/* 32 */       GL11.glTranslatef((float)paramDouble1 + 0.5F, (float)paramDouble2 + 0.75F * f1, (float)paramDouble3 + 0.5F);
+/* 33 */       GL11.glRotatef(-f3, 0.0F, 1.0F, 0.0F);
+/* 34 */       GL11.glTranslatef(0.0F, -0.3125F, -0.4375F);
+/*    */ 
+/* 36 */       this.b.b.h = false;
+/*    */     }
+/*    */ 
+/* 39 */     a("/item/sign.png");
+/*    */ 
+/* 41 */     GL11.glPushMatrix();
+/*    */ 
+/* 43 */     GL11.glScalef(f1, -f1, -f1);
+/* 44 */     this.b.a();
+/* 45 */     GL11.glPopMatrix();
+/* 46 */     nh localnh = a();
+/*    */ 
+/* 48 */     float f3 = 0.01666667F * f1;
+/* 49 */     GL11.glTranslatef(0.0F, 0.5F * f1, 0.07F * f1);
+/* 50 */     GL11.glScalef(f3, -f3, f3);
+/* 51 */     GL11.glNormal3f(0.0F, 0.0F, -1.0F * f3);
+/* 52 */     GL11.glDepthMask(false);
+/*    */ 
+/* 54 */     int j = 0;
+/* 55 */     for (int k = 0; k < paramsc.a.length; k++) {
+/* 56 */       String str = paramsc.a[k];
+/* 57 */       if (k == paramsc.b) {
+/* 58 */         str = "> " + str + " <";
+/* 59 */         localnh.b(str, -localnh.a(str) / 2, k * 10 - paramsc.a.length * 5, j);
+/*    */       } else {
+/* 61 */         localnh.b(str, -localnh.a(str) / 2, k * 10 - paramsc.a.length * 5, j);
+/*    */       }
+/*    */     }
+/* 64 */     GL11.glDepthMask(true);
+/* 65 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 66 */     GL11.glPopMatrix();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     le
+ * JD-Core Version:    0.6.0
+ */

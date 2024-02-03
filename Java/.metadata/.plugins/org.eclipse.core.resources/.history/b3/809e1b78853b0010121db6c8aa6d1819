@@ -1,0 +1,45 @@
+/*    */ public enum fo
+/*    */ {
+/*    */   private final boolean k;
+/*    */   private final boolean l;
+/*    */   private final String m;
+/*    */ 
+/*    */   public static fo a(int paramInt)
+/*    */   {
+/* 36 */     for (fo localfo : values()) {
+/* 37 */       if (localfo.c() == paramInt) {
+/* 38 */         return localfo;
+/*    */       }
+/*    */     }
+/* 41 */     return null;
+/*    */   }
+/*    */ 
+/*    */   private fo(String paramBoolean2, boolean arg4, boolean arg5) {
+/* 45 */     this.m = paramBoolean2;
+/*    */     boolean bool1;
+/* 46 */     this.k = bool1;
+/*    */     boolean bool2;
+/* 47 */     this.l = bool2;
+/*    */   }
+/*    */ 
+/*    */   public boolean a() {
+/* 51 */     return this.k;
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/* 55 */     return this.l;
+/*    */   }
+/*    */ 
+/*    */   public int c() {
+/* 59 */     return ordinal();
+/*    */   }
+/*    */ 
+/*    */   public String d() {
+/* 63 */     return this.m;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fo
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,40 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class nc extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public int b;
+/*    */   public boolean c;
+/*    */ 
+/*    */   public nc()
+/*    */   {
+/* 10 */     this.k = false;
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream)
+/*    */   {
+/* 21 */     this.a = paramDataInputStream.readInt();
+/* 22 */     this.b = paramDataInputStream.readInt();
+/* 23 */     this.c = (paramDataInputStream.read() != 0);
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 27 */     paramDataOutputStream.writeInt(this.a);
+/* 28 */     paramDataOutputStream.writeInt(this.b);
+/* 29 */     paramDataOutputStream.write(this.c ? 1 : 0);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 33 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 37 */     return 9;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     nc
+ * JD-Core Version:    0.6.0
+ */

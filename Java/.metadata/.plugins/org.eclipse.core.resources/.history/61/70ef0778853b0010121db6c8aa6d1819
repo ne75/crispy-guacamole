@@ -1,0 +1,21 @@
+package com.jcraft.jorbis;
+
+class PsyLook
+{
+  int n;
+  PsyInfo vi;
+  float[][][] tonecurves;
+  float[][] peakatt;
+  float[][][] noisecurves;
+  float[] ath;
+  int[] octave;
+
+  void init(PsyInfo paramPsyInfo, int paramInt1, int paramInt2)
+  {
+  }
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     com.jcraft.jorbis.PsyLook
+ * JD-Core Version:    0.6.0
+ */

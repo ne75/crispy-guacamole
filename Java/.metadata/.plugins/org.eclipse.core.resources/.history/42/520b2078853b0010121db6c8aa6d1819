@@ -1,0 +1,18 @@
+/*   */ public abstract class hl
+/*   */ {
+/*   */   public float m;
+/* 6 */   public boolean n = false;
+/*   */ 
+/*   */   public void b(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6)
+/*   */   {
+/*   */   }
+/*   */ 
+/*   */   public void a(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6)
+/*   */   {
+/*   */   }
+/*   */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hl
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,60 @@
+/*    */ public class hm extends eo
+/*    */ {
+/* 14 */   public static final String[] a = { "black", "red", "green", "brown", "blue", "purple", "cyan", "silver", "gray", "pink", "lime", "yellow", "lightBlue", "magenta", "orange", "white" };
+/*    */ 
+/*    */   public hm(int paramInt)
+/*    */   {
+/* 36 */     super(paramInt);
+/*    */ 
+/* 38 */     a(true);
+/* 39 */     d(0);
+/*    */   }
+/*    */ 
+/*    */   public int a(gm paramgm)
+/*    */   {
+/* 44 */     int i = paramgm.i();
+/* 45 */     return this.bd + i % 8 * 16 + i / 8;
+/*    */   }
+/*    */ 
+/*    */   public String b(gm paramgm)
+/*    */   {
+/* 50 */     return super.a() + "." + a[paramgm.i()];
+/*    */   }
+/*    */ 
+/*    */   public boolean a(gm paramgm, eu parameu, dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*    */   {
+/* 56 */     if (paramgm.i() == 15)
+/*    */     {
+/* 59 */       int i = paramdn.a(paramInt1, paramInt2, paramInt3);
+/* 60 */       if (i == pj.y.bi) {
+/* 61 */         ((fc)pj.y).c(paramdn, paramInt1, paramInt2, paramInt3, paramdn.l);
+/* 62 */         paramgm.a -= 1;
+/* 63 */         return true;
+/* 64 */       }if (i == pj.az.bi) {
+/* 65 */         ((jm)pj.az).c_(paramdn, paramInt1, paramInt2, paramInt3);
+/* 66 */         paramgm.a -= 1;
+/* 67 */         return true;
+/*    */       }
+/*    */     }
+/*    */ 
+/* 71 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public void b(gm paramgm, ig paramig)
+/*    */   {
+/* 76 */     if ((paramig instanceof ch)) {
+/* 77 */       ch localch = (ch)paramig;
+/*    */ 
+/* 79 */       int i = cu.c(paramgm.i());
+/* 80 */       if ((!localch.p()) && (localch.p_() != i)) {
+/* 81 */         localch.b_(i);
+/* 82 */         paramgm.a -= 1;
+/*    */       }
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hm
+ * JD-Core Version:    0.6.0
+ */

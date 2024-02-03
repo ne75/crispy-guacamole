@@ -1,0 +1,232 @@
+/*     */ package net.minecraft;
+/*     */ 
+/*     */ import java.applet.Applet;
+/*     */ import java.applet.AppletStub;
+/*     */ import java.awt.BorderLayout;
+/*     */ import java.awt.Color;
+/*     */ import java.awt.Font;
+/*     */ import java.awt.FontMetrics;
+/*     */ import java.awt.Graphics;
+/*     */ import java.awt.Image;
+/*     */ import java.awt.image.BufferedImage;
+/*     */ import java.awt.image.VolatileImage;
+/*     */ import java.io.IOException;
+/*     */ import java.net.MalformedURLException;
+/*     */ import java.net.URL;
+/*     */ import java.util.HashMap;
+/*     */ import java.util.Map;
+/*     */ import javax.imageio.ImageIO;
+/*     */ 
+/*     */ public class Launcher extends Applet
+/*     */   implements Runnable, AppletStub
+/*     */ {
+/*     */   private static final long serialVersionUID = 1L;
+/*  14 */   public Map<String, String> customParameters = new HashMap();
+/*     */   private GameUpdater gameUpdater;
+/*  17 */   private boolean gameUpdaterStarted = false;
+/*     */   private Applet applet;
+/*     */   private Image bgImage;
+/*  20 */   private boolean active = false;
+/*  21 */   private int context = 0;
+/*     */   private VolatileImage img;
+/*     */ 
+/*     */   public boolean isActive()
+/*     */   {
+/*  27 */     if (this.context == 0) {
+/*  28 */       this.context = -1;
+/*     */       try {
+/*  30 */         if (getAppletContext() != null) this.context = 1; 
+/*     */       }
+/*     */       catch (Exception localException) {
+/*     */       }
+/*     */     }
+/*  34 */     if (this.context == -1) return this.active;
+/*  35 */     return super.isActive();
+/*     */   }
+/*     */ 
+/*     */   public void init(String userName, String latestVersion, String downloadTicket, String sessionId)
+/*     */   {
+/*     */     try {
+/*  41 */       this.bgImage = ImageIO.read(LoginForm.class.getResource("dirt.png")).getScaledInstance(32, 32, 16);
+/*     */     } catch (IOException e) {
+/*  43 */       e.printStackTrace();
+/*     */     }
+/*     */ 
+/*  46 */     this.customParameters.put("username", userName);
+/*  47 */     this.customParameters.put("sessionid", sessionId);
+/*     */ 
+/*  49 */     this.gameUpdater = new GameUpdater(latestVersion, "minecraft.jar?user=" + userName + "&ticket=" + downloadTicket);
+/*     */   }
+/*     */ 
+/*     */   public boolean canPlayOffline() {
+/*  53 */     return this.gameUpdater.canPlayOffline();
+/*     */   }
+/*     */ 
+/*     */   public void init() {
+/*  57 */     if (this.applet != null) {
+/*  58 */       this.applet.init();
+/*  59 */       return;
+/*     */     }
+/*  61 */     init(getParameter("userName"), getParameter("latestVersion"), getParameter("downloadTicket"), getParameter("sessionId"));
+/*     */   }
+/*     */ 
+/*     */   public void start() {
+/*  65 */     if (this.applet != null) {
+/*  66 */       this.applet.start();
+/*  67 */       return;
+/*     */     }
+/*  69 */     if (this.gameUpdaterStarted) return;
+/*     */ 
+/*  71 */     Thread t = new Thread() {
+/*     */       public void run() {
+/*  73 */         Launcher.this.gameUpdater.run();
+/*     */         try {
+/*  75 */           if (!Launcher.this.gameUpdater.fatalError)
+/*  76 */             Launcher.this.replace(Launcher.this.gameUpdater.createApplet());
+/*     */         }
+/*     */         catch (ClassNotFoundException e)
+/*     */         {
+/*  80 */           e.printStackTrace();
+/*     */         } catch (InstantiationException e) {
+/*  82 */           e.printStackTrace();
+/*     */         } catch (IllegalAccessException e) {
+/*  84 */           e.printStackTrace();
+/*     */         }
+/*     */       }
+/*     */     };
+/*  88 */     t.setDaemon(true);
+/*  89 */     t.start();
+/*     */ 
+/*  91 */     t = new Thread() {
+/*     */       public void run() {
+/*  93 */         while (Launcher.this.applet == null) {
+/*  94 */           Launcher.this.repaint();
+/*     */           try {
+/*  96 */             Thread.sleep(10L);
+/*     */           } catch (InterruptedException e) {
+/*  98 */             e.printStackTrace();
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     };
+/* 103 */     t.setDaemon(true);
+/* 104 */     t.start();
+/*     */ 
+/* 106 */     this.gameUpdaterStarted = true;
+/*     */   }
+/*     */ 
+/*     */   public void stop() {
+/* 110 */     if (this.applet != null) {
+/* 111 */       this.active = false;
+/* 112 */       this.applet.stop();
+/* 113 */       return;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void destroy() {
+/* 118 */     if (this.applet != null) {
+/* 119 */       this.applet.destroy();
+/* 120 */       return;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void replace(Applet applet) {
+/* 125 */     this.applet = applet;
+/* 126 */     applet.setStub(this);
+/* 127 */     applet.setSize(getWidth(), getHeight());
+/*     */ 
+/* 129 */     setLayout(new BorderLayout());
+/* 130 */     add(applet, "Center");
+/*     */ 
+/* 132 */     applet.init();
+/* 133 */     this.active = true;
+/* 134 */     applet.start();
+/* 135 */     validate();
+/*     */   }
+/*     */ 
+/*     */   public void update(Graphics g)
+/*     */   {
+/* 142 */     paint(g);
+/*     */   }
+/*     */ 
+/*     */   public void paint(Graphics g2) {
+/* 146 */     if (this.applet != null) return;
+/*     */ 
+/* 148 */     int w = getWidth() / 2;
+/* 149 */     int h = getHeight() / 2;
+/* 150 */     if ((this.img == null) || (this.img.getWidth() != w) || (this.img.getHeight() != h)) {
+/* 151 */       this.img = createVolatileImage(w, h);
+/*     */     }
+/*     */ 
+/* 154 */     Graphics g = this.img.getGraphics();
+/* 155 */     for (int x = 0; x <= w / 32; x++) {
+/* 156 */       for (int y = 0; y <= h / 32; y++)
+/* 157 */         g.drawImage(this.bgImage, x * 32, y * 32, null);
+/*     */     }
+/* 159 */     g.setColor(Color.LIGHT_GRAY);
+/*     */ 
+/* 163 */     String msg = "Updating Minecraft";
+/* 164 */     if (this.gameUpdater.fatalError) {
+/* 165 */       msg = "Failed to launch";
+/*     */     }
+/*     */ 
+/* 168 */     g.setFont(new Font(null, 1, 20));
+/* 169 */     FontMetrics fm = g.getFontMetrics();
+/* 170 */     g.drawString(msg, w / 2 - fm.stringWidth(msg) / 2, h / 2 - fm.getHeight() * 2);
+/*     */ 
+/* 172 */     g.setFont(new Font(null, 0, 12));
+/* 173 */     fm = g.getFontMetrics();
+/* 174 */     msg = this.gameUpdater.getDescriptionForState();
+/* 175 */     if (this.gameUpdater.fatalError) {
+/* 176 */       msg = this.gameUpdater.fatalErrorDescription;
+/*     */     }
+/*     */ 
+/* 179 */     g.drawString(msg, w / 2 - fm.stringWidth(msg) / 2, h / 2 + fm.getHeight() * 1);
+/* 180 */     msg = this.gameUpdater.subtaskMessage;
+/* 181 */     g.drawString(msg, w / 2 - fm.stringWidth(msg) / 2, h / 2 + fm.getHeight() * 2);
+/*     */ 
+/* 183 */     if (!this.gameUpdater.fatalError) {
+/* 184 */       g.setColor(Color.black);
+/* 185 */       g.fillRect(64, h - 64, w - 128 + 1, 5);
+/* 186 */       g.setColor(new Color(32768));
+/* 187 */       g.fillRect(64, h - 64, this.gameUpdater.percentage * (w - 128) / 100, 4);
+/* 188 */       g.setColor(new Color(2138144));
+/* 189 */       g.fillRect(65, h - 64 + 1, this.gameUpdater.percentage * (w - 128) / 100 - 2, 1);
+/*     */     }
+/*     */ 
+/* 192 */     g.dispose();
+/*     */ 
+/* 196 */     g2.drawImage(this.img, 0, 0, w * 2, h * 2, null);
+/*     */   }
+/*     */ 
+/*     */   public void run() {
+/*     */   }
+/*     */ 
+/*     */   public String getParameter(String name) {
+/* 203 */     String custom = (String)this.customParameters.get(name);
+/* 204 */     if (custom != null) return custom; try
+/*     */     {
+/* 206 */       return super.getParameter(name);
+/*     */     } catch (Exception e) {
+/* 208 */       this.customParameters.put(name, null);
+/* 209 */     }return null;
+/*     */   }
+/*     */ 
+/*     */   public void appletResize(int width, int height)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public URL getDocumentBase() {
+/*     */     try {
+/* 218 */       return new URL("http://www.minecraft.net/game/");
+/*     */     } catch (MalformedURLException e) {
+/* 220 */       e.printStackTrace();
+/*     */     }
+/* 222 */     return null;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Documents/Programming/Java/minecraft/Contents/Resources/Java/MinecraftLauncher.jar
+ * Qualified Name:     net.minecraft.Launcher
+ * JD-Core Version:    0.6.0
+ */

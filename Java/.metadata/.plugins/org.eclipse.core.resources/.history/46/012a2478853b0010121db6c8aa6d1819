@@ -1,0 +1,18 @@
+/*    */ public class ir extends ev
+/*    */ {
+/*    */   public ir(hl paramhl1, hl paramhl2, float paramFloat)
+/*    */   {
+/*  8 */     super(paramhl1, paramFloat);
+/*  9 */     a(paramhl2);
+/*    */   }
+/*    */ 
+/*    */   protected boolean a(qk paramqk, int paramInt, float paramFloat) {
+/* 13 */     a("/mob/saddle.png");
+/* 14 */     return (paramInt == 0) && (paramqk.q());
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ir
+ * JD-Core Version:    0.6.0
+ */

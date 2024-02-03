@@ -1,0 +1,82 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class nx extends ba
+/*    */ {
+/*    */   protected hl a;
+/*    */ 
+/*    */   public nx()
+/*    */   {
+/* 20 */     this.c = 0.5F;
+/* 21 */     this.a = new js();
+/*    */   }
+/*    */ 
+/*    */   public void a(sd paramsd, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2) {
+/* 25 */     GL11.glPushMatrix();
+/*    */ 
+/* 27 */     double d1 = paramsd.be + (paramsd.aF - paramsd.be) * paramFloat2;
+/* 28 */     double d2 = paramsd.bf + (paramsd.aG - paramsd.bf) * paramFloat2;
+/* 29 */     double d3 = paramsd.bg + (paramsd.aH - paramsd.bg) * paramFloat2;
+/*    */ 
+/* 31 */     double d4 = 0.300000011920929D;
+/*    */ 
+/* 33 */     ax localax1 = paramsd.h(d1, d2, d3);
+/*    */ 
+/* 35 */     float f1 = paramsd.aO + (paramsd.aM - paramsd.aO) * paramFloat2;
+/*    */ 
+/* 37 */     if (localax1 != null) {
+/* 38 */       ax localax2 = paramsd.a(d1, d2, d3, d4);
+/* 39 */       ax localax3 = paramsd.a(d1, d2, d3, -d4);
+/* 40 */       if (localax2 == null) localax2 = localax1;
+/* 41 */       if (localax3 == null) localax3 = localax1;
+/*    */ 
+/* 43 */       paramDouble1 += localax1.a - d1;
+/* 44 */       paramDouble2 += (localax2.b + localax3.b) / 2.0D - d2;
+/* 45 */       paramDouble3 += localax1.c - d3;
+/*    */ 
+/* 47 */       ax localax4 = localax3.c(-localax2.a, -localax2.b, -localax2.c);
+/* 48 */       if (localax4.c() != 0.0D)
+/*    */       {
+/* 50 */         localax4 = localax4.b();
+/* 51 */         paramFloat1 = (float)(Math.atan2(localax4.c, localax4.a) * 180.0D / 3.141592653589793D);
+/* 52 */         f1 = (float)(Math.atan(localax4.b) * 73.0D);
+/*    */       }
+/*    */     }
+/* 55 */     GL11.glTranslatef((float)paramDouble1, (float)paramDouble2, (float)paramDouble3);
+/*    */ 
+/* 57 */     GL11.glRotatef(180.0F - paramFloat1, 0.0F, 1.0F, 0.0F);
+/* 58 */     GL11.glRotatef(-f1, 0.0F, 0.0F, 1.0F);
+/* 59 */     float f2 = paramsd.b - paramFloat2;
+/* 60 */     float f3 = paramsd.a - paramFloat2;
+/* 61 */     if (f3 < 0.0F) f3 = 0.0F;
+/* 62 */     if (f2 > 0.0F) {
+/* 63 */       GL11.glRotatef(gd.a(f2) * f2 * f3 / 10.0F * paramsd.c, 1.0F, 0.0F, 0.0F);
+/*    */     }
+/*    */ 
+/* 66 */     if (paramsd.d != 0) {
+/* 67 */       a("/terrain.png");
+/* 68 */       float f4 = 0.75F;
+/* 69 */       GL11.glScalef(f4, f4, f4);
+/* 70 */       GL11.glTranslatef(0.0F, 0.3125F, 0.0F);
+/* 71 */       GL11.glRotatef(90.0F, 0.0F, 1.0F, 0.0F);
+/* 72 */       if (paramsd.d == 1)
+/* 73 */         new bt().a(pj.au, 0);
+/* 74 */       else if (paramsd.d == 2) {
+/* 75 */         new bt().a(pj.aB, 0);
+/*    */       }
+/* 77 */       GL11.glRotatef(-90.0F, 0.0F, 1.0F, 0.0F);
+/* 78 */       GL11.glTranslatef(0.0F, -0.3125F, 0.0F);
+/* 79 */       GL11.glScalef(1.0F / f4, 1.0F / f4, 1.0F / f4);
+/*    */     }
+/*    */ 
+/* 82 */     a("/item/cart.png");
+/* 83 */     GL11.glScalef(-1.0F, -1.0F, 1.0F);
+/*    */ 
+/* 86 */     this.a.b(0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+/* 87 */     GL11.glPopMatrix();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     nx
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,104 @@
+/*     */ import java.util.List;
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ import org.lwjgl.input.Keyboard;
+/*     */ 
+/*     */ public class ie extends by
+/*     */ {
+/*     */   private by a;
+/*  12 */   private int h = 0;
+/*  13 */   private String i = "";
+/*     */ 
+/*     */   public ie(by paramby) {
+/*  16 */     this.a = paramby;
+/*     */   }
+/*     */ 
+/*     */   public void g() {
+/*  20 */     this.h += 1;
+/*     */   }
+/*     */ 
+/*     */   public void a()
+/*     */   {
+/*  25 */     n localn = n.a();
+/*     */ 
+/*  27 */     Keyboard.enableRepeatEvents(true);
+/*  28 */     this.e.clear();
+/*  29 */     this.e.add(new hg(0, this.c / 2 - 100, this.d / 4 + 96 + 12, localn.a("multiplayer.connect")));
+/*  30 */     this.e.add(new hg(1, this.c / 2 - 100, this.d / 4 + 120 + 12, localn.a("gui.cancel")));
+/*  31 */     this.i = this.b.y.y.replaceAll("_", ":");
+/*  32 */     ((hg)this.e.get(0)).g = (this.i.length() > 0);
+/*     */   }
+/*     */ 
+/*     */   public void h() {
+/*  36 */     Keyboard.enableRepeatEvents(false);
+/*     */   }
+/*     */ 
+/*     */   protected void a(hg paramhg) {
+/*  40 */     if (!paramhg.g) return;
+/*  41 */     if (paramhg.f == 1) {
+/*  42 */       this.b.a(this.a);
+/*  43 */     } else if (paramhg.f == 0) {
+/*  44 */       this.b.y.y = this.i.replaceAll(":", "_");
+/*  45 */       this.b.y.b();
+/*     */ 
+/*  48 */       String[] arrayOfString = this.i.split(":");
+/*     */ 
+/*  51 */       this.b.a(new qc(this.b, arrayOfString[0], arrayOfString.length > 1 ? a(arrayOfString[1], 25565) : 25565));
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private int a(String paramString, int paramInt) {
+/*     */     try {
+/*  57 */       return Integer.parseInt(paramString.trim());
+/*     */     } catch (Exception localException) {
+/*     */     }
+/*  60 */     return paramInt;
+/*     */   }
+/*     */ 
+/*     */   protected void a(char paramChar, int paramInt) {
+/*  64 */     if (paramChar == '\026') {
+/*  65 */       String str = by.c();
+/*  66 */       if (str == null) str = "";
+/*  67 */       int j = 32 - this.i.length();
+/*  68 */       if (j > str.length()) j = str.length();
+/*  69 */       if (j > 0) {
+/*  70 */         this.i += str.substring(0, j);
+/*     */       }
+/*     */     }
+/*  73 */     if (paramChar == '\r') {
+/*  74 */       a((hg)this.e.get(0));
+/*     */     }
+/*     */ 
+/*  77 */     if ((paramInt == 14) && (this.i.length() > 0)) this.i = this.i.substring(0, this.i.length() - 1);
+/*  78 */     if ((dw.a.indexOf(paramChar) >= 0) && (this.i.length() < 32)) {
+/*  79 */       this.i += paramChar;
+/*     */     }
+/*  81 */     ((hg)this.e.get(0)).g = (this.i.length() > 0);
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, float paramFloat)
+/*     */   {
+/*  86 */     n localn = n.a();
+/*     */ 
+/*  89 */     i();
+/*     */ 
+/*  91 */     a(this.g, localn.a("multiplayer.title"), this.c / 2, this.d / 4 - 60 + 20, 16777215);
+/*  92 */     b(this.g, localn.a("multiplayer.info1"), this.c / 2 - 140, this.d / 4 - 60 + 60 + 0, 10526880);
+/*  93 */     b(this.g, localn.a("multiplayer.info2"), this.c / 2 - 140, this.d / 4 - 60 + 60 + 9, 10526880);
+/*  94 */     b(this.g, localn.a("multiplayer.ipinfo"), this.c / 2 - 140, this.d / 4 - 60 + 60 + 36, 10526880);
+/*     */ 
+/*  97 */     int j = this.c / 2 - 100;
+/*  98 */     int k = this.d / 4 - 10 + 50 + 18;
+/*  99 */     int m = 200;
+/* 100 */     int n = 20;
+/* 101 */     a(j - 1, k - 1, j + m + 1, k + n + 1, -6250336);
+/* 102 */     a(j, k, j + m, k + n, -16777216);
+/* 103 */     b(this.g, this.i + (this.h / 6 % 2 == 0 ? "_" : ""), j + 4, k + (n - 8) / 2, 14737632);
+/*     */ 
+/* 105 */     super.a(paramInt1, paramInt2, paramFloat);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ie
+ * JD-Core Version:    0.6.0
+ */

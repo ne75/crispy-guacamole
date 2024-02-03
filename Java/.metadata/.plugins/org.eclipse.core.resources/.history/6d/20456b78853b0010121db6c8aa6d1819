@@ -1,0 +1,11 @@
+package org.lwjgl.opengl;
+
+public final class IBMRasterposClip
+{
+  public static final int GL_RASTER_POSITION_UNCLIPPED_IBM = 103010;
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/lwjgl.jar
+ * Qualified Name:     org.lwjgl.opengl.IBMRasterposClip
+ * JD-Core Version:    0.6.0
+ */

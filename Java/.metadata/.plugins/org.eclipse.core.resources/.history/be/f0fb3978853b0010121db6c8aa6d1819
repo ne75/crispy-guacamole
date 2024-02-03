@@ -1,0 +1,64 @@
+/*    */ public class qk extends aq
+/*    */ {
+/*    */   public qk(dn paramdn)
+/*    */   {
+/* 14 */     super(paramdn);
+/* 15 */     this.I = "/mob/pig.png";
+/* 16 */     a(0.9F, 0.9F);
+/*    */   }
+/*    */ 
+/*    */   protected void b()
+/*    */   {
+/* 21 */     this.bx.a(16, Byte.valueOf(0));
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw) {
+/* 25 */     super.a(paramjw);
+/* 26 */     paramjw.a("Saddle", q());
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 30 */     super.b(paramjw);
+/* 31 */     a(paramjw.m("Saddle"));
+/*    */   }
+/*    */ 
+/*    */   protected String f() {
+/* 35 */     return "mob.pig";
+/*    */   }
+/*    */ 
+/*    */   protected String g() {
+/* 39 */     return "mob.pig";
+/*    */   }
+/*    */ 
+/*    */   protected String h_() {
+/* 43 */     return "mob.pigdeath";
+/*    */   }
+/*    */ 
+/*    */   public boolean a(eu parameu) {
+/* 47 */     if ((q()) && (!this.aB.z) && ((this.az == null) || (this.az == parameu))) {
+/* 48 */       parameu.i(this);
+/* 49 */       return true;
+/*    */     }
+/* 51 */     return false;
+/*    */   }
+/*    */ 
+/*    */   protected int i() {
+/* 55 */     return eo.ao.ba;
+/*    */   }
+/*    */ 
+/*    */   public boolean q() {
+/* 59 */     return (this.bx.a(16) & 0x1) != 0;
+/*    */   }
+/*    */ 
+/*    */   public void a(boolean paramBoolean) {
+/* 63 */     if (paramBoolean)
+/* 64 */       this.bx.b(16, Byte.valueOf(1));
+/*    */     else
+/* 66 */       this.bx.b(16, Byte.valueOf(0));
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qk
+ * JD-Core Version:    0.6.0
+ */

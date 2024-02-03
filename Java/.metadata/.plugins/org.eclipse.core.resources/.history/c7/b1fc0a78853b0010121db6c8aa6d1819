@@ -1,0 +1,40 @@
+/*    */ import java.io.InputStream;
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ 
+/*    */ public abstract class e
+/*    */ {
+/*    */   public String a;
+/*    */   public String b;
+/*    */   public String c;
+/*    */   public String d;
+/*    */ 
+/*    */   public void a()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void b()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void a(Minecraft paramMinecraft)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void b(Minecraft paramMinecraft)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void c(Minecraft paramMinecraft)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public InputStream a(String paramString)
+/*    */   {
+/* 28 */     return e.class.getResourceAsStream(paramString);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     e
+ * JD-Core Version:    0.6.0
+ */

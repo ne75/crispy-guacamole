@@ -1,0 +1,24 @@
+/*    */ public class s
+/*    */ {
+/*  7 */   private String[][] a = { { "XXX", "X X" }, { "X X", "XXX", "XXX" }, { "XXX", "X X", "X X" }, { "X X", "X X" } };
+/*    */ 
+/* 23 */   private Object[][] b = { { eo.aD, pj.ar, eo.m, eo.l, eo.n }, { eo.T, eo.X, eo.ab, eo.af, eo.aj }, { eo.U, eo.Y, eo.ac, eo.ag, eo.ak }, { eo.V, eo.Z, eo.ad, eo.ah, eo.al }, { eo.W, eo.aa, eo.ae, eo.ai, eo.am } };
+/*    */ 
+/*    */   public void a(fg paramfg)
+/*    */   {
+/* 32 */     for (int i = 0; i < this.b[0].length; i++) {
+/* 33 */       Object localObject = this.b[0][i];
+/*    */ 
+/* 35 */       for (int j = 0; j < this.b.length - 1; j++) {
+/* 36 */         eo localeo = (eo)this.b[(j + 1)][i];
+/*    */ 
+/* 38 */         paramfg.a(new gm(localeo), new Object[] { this.a[j], Character.valueOf('X'), localObject });
+/*    */       }
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     s
+ * JD-Core Version:    0.6.0
+ */

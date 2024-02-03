@@ -1,0 +1,33 @@
+/*    */ public class se extends eo
+/*    */ {
+/*    */   public se(int paramInt)
+/*    */   {
+/*  9 */     super(paramInt);
+/* 10 */     this.bc = 64;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(gm paramgm, eu parameu, dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*    */   {
+/* 15 */     if (paramInt4 == 0) return false;
+/* 16 */     if (paramInt4 == 1) return false;
+/*    */ 
+/* 19 */     int i = 0;
+/* 20 */     if (paramInt4 == 4) i = 1;
+/* 21 */     if (paramInt4 == 3) i = 2;
+/* 22 */     if (paramInt4 == 5) i = 3;
+/*    */ 
+/* 24 */     ma localma = new ma(paramdn, paramInt1, paramInt2, paramInt3, i);
+/* 25 */     if (localma.k()) {
+/* 26 */       if (!paramdn.z) {
+/* 27 */         paramdn.a(localma);
+/*    */       }
+/* 29 */       paramgm.a -= 1;
+/*    */     }
+/* 31 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     se
+ * JD-Core Version:    0.6.0
+ */

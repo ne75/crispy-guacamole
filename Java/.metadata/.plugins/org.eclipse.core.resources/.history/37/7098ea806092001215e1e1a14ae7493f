@@ -1,0 +1,77 @@
+package main;
+
+
+
+import java.io.*;
+import java.util.*;
+
+public class BinarySearch {
+    public static void main(String[] args) throws FileNotFoundException {
+
+	File f = new File("sort.dat");
+	Scanner s =  new Scanner(f);
+	Scanner in = new Scanner(System.in);
+
+	int count = 0;
+	int[] list;
+	boolean sorted = false;
+	boolean exist = false;
+	int testNumber;
+	int first;
+	int last;
+	int mid;
+
+	while (s.hasNext()){
+	    count++;
+	    s.next();
+	}
+
+	s.close();
+	s = new Scanner(f);
+
+	list = new int[count];
+
+	for (int i = 0; i < count; i++) {
+	    list[i] = s.nextInt();
+	}
+
+	do {
+
+	    System.out.print("Enter a number: ");
+	    testNumber = in.nextInt();
+
+	    mid = count / 2;
+	    first = 0;
+	    last = count - 1;
+
+	    for (int i = 0; i < count; i++){
+		if (list[i] == testNumber || exist == true){
+		    exist = true;
+		    continue;
+		} else {
+		    exist = false;
+		}
+	    }
+
+	    if (exist){
+		while (first < last){
+		    mid = (first + upto) / 2;  // Compute mid point.
+		    if (key < sorted[mid]) {
+			upto = mid;     // repeat search in bottom half.
+		    } else if (key > sorted[mid]) {
+			first = mid + 1;  // Repeat search in top half.
+		    } else {
+			return mid;     // Found it. return position
+		    }
+		};
+
+		System.out.println("Number is at " + idx);
+	    } else {
+		System.out.println("Number doesn't exist");
+	    }
+
+	} while (true);
+
+    }
+
+}

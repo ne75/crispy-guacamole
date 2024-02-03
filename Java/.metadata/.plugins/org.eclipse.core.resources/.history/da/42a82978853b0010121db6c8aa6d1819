@@ -1,0 +1,38 @@
+/*    */ public class lq extends eo
+/*    */ {
+/*    */   private int a;
+/*    */ 
+/*    */   public lq(int paramInt, ay paramay)
+/*    */   {
+/* 11 */     super(paramInt);
+/* 12 */     this.bb = 1;
+/* 13 */     this.bc = paramay.a();
+/*    */ 
+/* 15 */     this.a = (4 + paramay.c() * 2);
+/*    */   }
+/*    */ 
+/*    */   public float a(gm paramgm, pj parampj) {
+/* 19 */     return 1.5F;
+/*    */   }
+/*    */ 
+/*    */   public void a(gm paramgm, ig paramig) {
+/* 23 */     paramgm.b(1);
+/*    */   }
+/*    */ 
+/*    */   public void a(gm paramgm, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 27 */     paramgm.b(2);
+/*    */   }
+/*    */ 
+/*    */   public int a(nl paramnl) {
+/* 31 */     return this.a;
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/* 35 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     lq
+ * JD-Core Version:    0.6.0
+ */

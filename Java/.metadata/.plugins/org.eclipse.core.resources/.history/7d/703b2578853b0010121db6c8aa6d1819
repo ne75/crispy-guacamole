@@ -1,0 +1,200 @@
+/*     */ import java.io.File;
+/*     */ import java.util.HashSet;
+/*     */ import java.util.Iterator;
+/*     */ import java.util.LinkedList;
+/*     */ import java.util.List;
+/*     */ import java.util.Set;
+/*     */ 
+/*     */ public class ix extends dn
+/*     */ {
+/*  29 */   private LinkedList A = new LinkedList();
+/*     */   private jg B;
+/*     */   private pk C;
+/* 114 */   private hc D = new hc();
+/* 115 */   private Set E = new HashSet();
+/* 116 */   private Set F = new HashSet();
+/*     */ 
+/*     */   public ix(jg paramjg, long paramLong, int paramInt)
+/*     */   {
+/*  34 */     super("MpServer", qx.a(paramInt), paramLong);
+/*     */ 
+/*  36 */     this.B = paramjg;
+/*  37 */     this.m = 8;
+/*  38 */     this.n = 64;
+/*  39 */     this.o = 8;
+/*     */   }
+/*     */ 
+/*     */   public void j() {
+/*  43 */     this.e += 1L;
+/*  44 */     int i = a(1.0F);
+/*  45 */     if (i != this.f) {
+/*  46 */       this.f = i;
+/*  47 */       for (j = 0; j < this.r.size(); j++)
+/*  48 */         ((lc)this.r.get(j)).e();
+/*     */     }
+/*     */     Object localObject;
+/*  52 */     for (int j = 0; (j < 10) && (!this.F.isEmpty()); j++) {
+/*  53 */       localObject = (nl)this.F.iterator().next();
+/*  54 */       if (this.b.contains(localObject)) continue; a((nl)localObject);
+/*     */     }
+/*     */ 
+/*  57 */     this.B.a();
+/*  58 */     for (j = 0; j < this.A.size(); j++) {
+/*  59 */       localObject = (oh)this.A.get(j);
+/*  60 */       if (--localObject.d == 0) {
+/*  61 */         super.a(((oh)localObject).a, ((oh)localObject).b, ((oh)localObject).c, ((oh)localObject).e, ((oh)localObject).f);
+/*  62 */         super.i(((oh)localObject).a, ((oh)localObject).b, ((oh)localObject).c);
+/*  63 */         this.A.remove(j--);
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void c(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6)
+/*     */   {
+/*  70 */     for (int i = 0; i < this.A.size(); i++) {
+/*  71 */       oh localoh = (oh)this.A.get(i);
+/*  72 */       if ((localoh.a >= paramInt1) && (localoh.b >= paramInt2) && (localoh.c >= paramInt3) && (localoh.a <= paramInt4) && (localoh.b <= paramInt5) && (localoh.c <= paramInt6))
+/*  73 */         this.A.remove(i--);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   protected bm a(File paramFile)
+/*     */   {
+/*  80 */     this.C = new pk(this);
+/*  81 */     return this.C;
+/*     */   }
+/*     */ 
+/*     */   public void b() {
+/*  85 */     this.m = 8;
+/*  86 */     this.n = 64;
+/*  87 */     this.o = 8;
+/*     */   }
+/*     */ 
+/*     */   protected void k()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void i(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public boolean a(boolean paramBoolean)
+/*     */   {
+/* 103 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, boolean paramBoolean) {
+/* 107 */     if (paramBoolean) this.C.d(paramInt1, paramInt2); else
+/* 108 */       this.C.c(paramInt1, paramInt2);
+/* 109 */     if (!paramBoolean)
+/* 110 */       b(paramInt1 * 16, 0, paramInt2 * 16, paramInt1 * 16 + 15, 128, paramInt2 * 16 + 15);
+/*     */   }
+/*     */ 
+/*     */   public boolean a(nl paramnl)
+/*     */   {
+/* 119 */     boolean bool = super.a(paramnl);
+/* 120 */     this.E.add(paramnl);
+/*     */ 
+/* 122 */     if (!bool) {
+/* 123 */       this.F.add(paramnl);
+/*     */     }
+/*     */ 
+/* 126 */     return bool;
+/*     */   }
+/*     */ 
+/*     */   public void d(nl paramnl) {
+/* 130 */     super.d(paramnl);
+/* 131 */     this.E.remove(paramnl);
+/*     */   }
+/*     */ 
+/*     */   protected void b(nl paramnl) {
+/* 135 */     super.b(paramnl);
+/* 136 */     if (this.F.contains(paramnl))
+/* 137 */       this.F.remove(paramnl);
+/*     */   }
+/*     */ 
+/*     */   protected void c(nl paramnl)
+/*     */   {
+/* 142 */     super.c(paramnl);
+/* 143 */     if (this.E.contains(paramnl))
+/* 144 */       this.F.add(paramnl);
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt, nl paramnl)
+/*     */   {
+/* 149 */     nl localnl = b(paramInt);
+/* 150 */     if (localnl != null) {
+/* 151 */       d(localnl);
+/*     */     }
+/*     */ 
+/* 154 */     this.E.add(paramnl);
+/* 155 */     paramnl.aw = paramInt;
+/* 156 */     if (!a(paramnl)) {
+/* 157 */       this.F.add(paramnl);
+/*     */     }
+/* 159 */     this.D.a(paramInt, paramnl);
+/*     */   }
+/*     */ 
+/*     */   public nl b(int paramInt) {
+/* 163 */     return (nl)this.D.a(paramInt);
+/*     */   }
+/*     */ 
+/*     */   public nl c(int paramInt) {
+/* 167 */     nl localnl = (nl)this.D.b(paramInt);
+/* 168 */     if (localnl != null) {
+/* 169 */       this.E.remove(localnl);
+/* 170 */       d(localnl);
+/*     */     }
+/* 172 */     return localnl;
+/*     */   }
+/*     */ 
+/*     */   public boolean d(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 176 */     int i = a(paramInt1, paramInt2, paramInt3);
+/* 177 */     int j = e(paramInt1, paramInt2, paramInt3);
+/* 178 */     if (super.d(paramInt1, paramInt2, paramInt3, paramInt4)) {
+/* 179 */       this.A.add(new oh(this, paramInt1, paramInt2, paramInt3, i, j));
+/* 180 */       return true;
+/*     */     }
+/* 182 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5) {
+/* 186 */     int i = a(paramInt1, paramInt2, paramInt3);
+/* 187 */     int j = e(paramInt1, paramInt2, paramInt3);
+/* 188 */     if (super.a(paramInt1, paramInt2, paramInt3, paramInt4, paramInt5)) {
+/* 189 */       this.A.add(new oh(this, paramInt1, paramInt2, paramInt3, i, j));
+/* 190 */       return true;
+/*     */     }
+/* 192 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean b(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 196 */     int i = a(paramInt1, paramInt2, paramInt3);
+/* 197 */     int j = e(paramInt1, paramInt2, paramInt3);
+/* 198 */     if (super.b(paramInt1, paramInt2, paramInt3, paramInt4)) {
+/* 199 */       this.A.add(new oh(this, paramInt1, paramInt2, paramInt3, i, j));
+/* 200 */       return true;
+/*     */     }
+/* 202 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean d(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5) {
+/* 206 */     c(paramInt1, paramInt2, paramInt3, paramInt1, paramInt2, paramInt3);
+/* 207 */     if (super.a(paramInt1, paramInt2, paramInt3, paramInt4, paramInt5))
+/*     */     {
+/* 210 */       f(paramInt1, paramInt2, paramInt3, paramInt4);
+/* 211 */       return true;
+/*     */     }
+/* 213 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public void n()
+/*     */   {
+/* 223 */     this.B.a(new si("Quitting"));
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ix
+ * JD-Core Version:    0.6.0
+ */

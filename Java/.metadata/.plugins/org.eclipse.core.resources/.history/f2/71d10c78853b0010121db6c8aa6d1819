@@ -1,0 +1,28 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class ee extends kz
+/*    */ {
+/*    */   public boolean a(dn paramdn, Random paramRandom, int paramInt1, int paramInt2, int paramInt3)
+/*    */   {
+/* 10 */     for (int i = 0; i < 10; i++) {
+/* 11 */       int j = paramInt1 + paramRandom.nextInt(8) - paramRandom.nextInt(8);
+/* 12 */       int k = paramInt2 + paramRandom.nextInt(4) - paramRandom.nextInt(4);
+/* 13 */       int m = paramInt3 + paramRandom.nextInt(8) - paramRandom.nextInt(8);
+/* 14 */       if (paramdn.d(j, k, m)) {
+/* 15 */         int n = 1 + paramRandom.nextInt(paramRandom.nextInt(3) + 1);
+/* 16 */         for (int i1 = 0; i1 < n; i1++) {
+/* 17 */           if (pj.aV.g(paramdn, j, k + i1, m)) {
+/* 18 */             paramdn.b(j, k + i1, m, pj.aV.bi);
+/*    */           }
+/*    */         }
+/*    */       }
+/*    */     }
+/*    */ 
+/* 24 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ee
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/armc-012-cstartup.c
+
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/armc-012-cstubs.c
+errno.h
+-
+sys/stat.h
+-
+sys/times.h
+-
+
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/armc-012.c
+string.h
+-
+stdlib.h
+-
+rpi-gpio.h
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/rpi-gpio.h
+rpi-systimer.h
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/rpi-systimer.h
+
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/rpi-base.h
+stdint.h
+-
+
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/rpi-gpio.h
+
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/rpi-systimer.c
+stdint.h
+-
+rpi-systimer.h
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/rpi-systimer.h
+
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/rpi-systimer.h
+stdint.h
+-
+rpi-base.h
+/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-3/arm012/rpi-base.h
+

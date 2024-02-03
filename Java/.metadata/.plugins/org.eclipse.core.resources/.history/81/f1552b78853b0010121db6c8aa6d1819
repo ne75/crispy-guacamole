@@ -1,0 +1,38 @@
+/*    */ import java.awt.image.BufferedImage;
+/*    */ 
+/*    */ public class mj
+/*    */ {
+/*    */   public BufferedImage a;
+/*    */   public dn b;
+/*    */   public int c;
+/*    */   public int d;
+/* 14 */   public boolean e = false;
+/* 15 */   public boolean f = false;
+/*    */ 
+/* 17 */   public int g = 0;
+/*    */ 
+/* 19 */   public boolean h = false;
+/*    */ 
+/*    */   public mj(dn paramdn, int paramInt1, int paramInt2) {
+/* 22 */     this.b = paramdn;
+/* 23 */     a(paramInt1, paramInt2);
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt1, int paramInt2) {
+/* 27 */     this.e = false;
+/* 28 */     this.c = paramInt1;
+/* 29 */     this.d = paramInt2;
+/* 30 */     this.g = 0;
+/* 31 */     this.h = false;
+/*    */   }
+/*    */ 
+/*    */   public void a(dn paramdn, int paramInt1, int paramInt2) {
+/* 35 */     this.b = paramdn;
+/* 36 */     a(paramInt1, paramInt2);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mj
+ * JD-Core Version:    0.6.0
+ */

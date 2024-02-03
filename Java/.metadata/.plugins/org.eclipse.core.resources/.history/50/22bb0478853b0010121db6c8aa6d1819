@@ -1,0 +1,99 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class ch extends aq
+/*     */ {
+/*  22 */   public static final float[][] a = { { 1.0F, 1.0F, 1.0F }, { 0.95F, 0.7F, 0.2F }, { 0.9F, 0.5F, 0.85F }, { 0.6F, 0.7F, 0.95F }, { 0.9F, 0.9F, 0.2F }, { 0.5F, 0.8F, 0.1F }, { 0.95F, 0.7F, 0.8F }, { 0.3F, 0.3F, 0.3F }, { 0.6F, 0.6F, 0.6F }, { 0.3F, 0.6F, 0.7F }, { 0.7F, 0.4F, 0.9F }, { 0.2F, 0.4F, 0.8F }, { 0.5F, 0.4F, 0.3F }, { 0.4F, 0.5F, 0.2F }, { 0.8F, 0.3F, 0.3F }, { 0.1F, 0.1F, 0.1F } };
+/*     */ 
+/*     */   public ch(dn paramdn)
+/*     */   {
+/*  45 */     super(paramdn);
+/*  46 */     this.I = "/mob/sheep.png";
+/*  47 */     a(0.9F, 1.3F);
+/*     */   }
+/*     */ 
+/*     */   protected void b()
+/*     */   {
+/*  52 */     super.b();
+/*     */ 
+/*  55 */     this.bx.a(16, new Byte(0));
+/*     */   }
+/*     */ 
+/*     */   public boolean a(nl paramnl, int paramInt) {
+/*  59 */     if ((!this.aB.z) && (!p()) && ((paramnl instanceof ig))) {
+/*  60 */       a(true);
+/*  61 */       int i = 1 + this.bm.nextInt(3);
+/*  62 */       for (int j = 0; j < i; j++) {
+/*  63 */         fh localfh = a(new gm(pj.ab.bi, 1, p_()), 1.0F);
+/*  64 */         localfh.aJ += this.bm.nextFloat() * 0.05F;
+/*  65 */         localfh.aI += (this.bm.nextFloat() - this.bm.nextFloat()) * 0.1F;
+/*  66 */         localfh.aK += (this.bm.nextFloat() - this.bm.nextFloat()) * 0.1F;
+/*     */       }
+/*     */     }
+/*  69 */     return super.a(paramnl, paramInt);
+/*     */   }
+/*     */ 
+/*     */   public void a(jw paramjw) {
+/*  73 */     super.a(paramjw);
+/*  74 */     paramjw.a("Sheared", p());
+/*  75 */     paramjw.a("Color", (byte)p_());
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw) {
+/*  79 */     super.b(paramjw);
+/*  80 */     a(paramjw.m("Sheared"));
+/*  81 */     b_(paramjw.c("Color"));
+/*     */   }
+/*     */ 
+/*     */   protected String f() {
+/*  85 */     return "mob.sheep";
+/*     */   }
+/*     */ 
+/*     */   protected String g() {
+/*  89 */     return "mob.sheep";
+/*     */   }
+/*     */ 
+/*     */   protected String h_() {
+/*  93 */     return "mob.sheep";
+/*     */   }
+/*     */ 
+/*     */   public int p_() {
+/*  97 */     return this.bx.a(16) & 0xF;
+/*     */   }
+/*     */ 
+/*     */   public void b_(int paramInt) {
+/* 101 */     int i = this.bx.a(16);
+/* 102 */     this.bx.b(16, Byte.valueOf((byte)(i & 0xF0 | paramInt & 0xF)));
+/*     */   }
+/*     */ 
+/*     */   public boolean p() {
+/* 106 */     return (this.bx.a(16) & 0x10) != 0;
+/*     */   }
+/*     */ 
+/*     */   public void a(boolean paramBoolean) {
+/* 110 */     int i = this.bx.a(16);
+/* 111 */     if (paramBoolean)
+/* 112 */       this.bx.b(16, Byte.valueOf((byte)(i | 0x10)));
+/*     */     else
+/* 114 */       this.bx.b(16, Byte.valueOf((byte)(i & 0xFFFFFFEF)));
+/*     */   }
+/*     */ 
+/*     */   public static int a(Random paramRandom)
+/*     */   {
+/* 119 */     int i = paramRandom.nextInt(100);
+/* 120 */     if (i < 5) {
+/* 121 */       return 15;
+/*     */     }
+/* 123 */     if (i < 10) {
+/* 124 */       return 7;
+/*     */     }
+/* 126 */     if (i < 15) {
+/* 127 */       return 8;
+/*     */     }
+/* 129 */     return 0;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ch
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,88 @@
+/*     */ import java.util.HashMap;
+/*     */ import java.util.Map;
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ 
+/*     */ public class ia
+/*     */ {
+/*  14 */   private Map m = new HashMap();
+/*     */ 
+/*  16 */   public static ia a = new ia();
+/*     */   private nh n;
+/*     */   public static double b;
+/*     */   public static double c;
+/*     */   public static double d;
+/*     */   public gs e;
+/*     */   public dn f;
+/*     */   public eu g;
+/*     */   public float h;
+/*     */   public float i;
+/*     */   public double j;
+/*     */   public double k;
+/*     */   public double l;
+/*     */ 
+/*     */   private ia()
+/*     */   {
+/*  30 */     this.m.put(sc.class, new le());
+/*  31 */     this.m.put(bu.class, new y());
+/*     */ 
+/*  38 */     for (go localgo : this.m.values())
+/*  39 */       localgo.a(this);
+/*     */   }
+/*     */ 
+/*     */   public go a(Class paramClass)
+/*     */   {
+/*  45 */     go localgo = (go)this.m.get(paramClass);
+/*  46 */     if ((localgo == null) && (paramClass != kp.class)) {
+/*  47 */       localgo = a(paramClass.getSuperclass());
+/*  48 */       this.m.put(paramClass, localgo);
+/*     */     }
+/*  50 */     return localgo;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(kp paramkp) {
+/*  54 */     return b(paramkp) != null;
+/*     */   }
+/*     */ 
+/*     */   public go b(kp paramkp) {
+/*  58 */     if (paramkp == null) return null;
+/*  59 */     return a(paramkp.getClass());
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, gs paramgs, nh paramnh, eu parameu, float paramFloat) {
+/*  63 */     this.f = paramdn;
+/*  64 */     this.e = paramgs;
+/*  65 */     this.g = parameu;
+/*  66 */     this.n = paramnh;
+/*     */ 
+/*  68 */     this.h = (parameu.aN + (parameu.aL - parameu.aN) * paramFloat);
+/*  69 */     this.i = (parameu.aO + (parameu.aM - parameu.aO) * paramFloat);
+/*     */ 
+/*  71 */     this.j = (parameu.be + (parameu.aF - parameu.be) * paramFloat);
+/*  72 */     this.k = (parameu.bf + (parameu.aG - parameu.bf) * paramFloat);
+/*  73 */     this.l = (parameu.bg + (parameu.aH - parameu.bg) * paramFloat);
+/*     */   }
+/*     */ 
+/*     */   public void a(kp paramkp, float paramFloat) {
+/*  77 */     if (paramkp.a(this.j, this.k, this.l) < 4096.0D) {
+/*  78 */       float f1 = this.f.c(paramkp.e, paramkp.f, paramkp.g);
+/*  79 */       GL11.glColor3f(f1, f1, f1);
+/*  80 */       a(paramkp, paramkp.e - b, paramkp.f - c, paramkp.g - d, paramFloat);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a(kp paramkp, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat) {
+/*  85 */     go localgo = b(paramkp);
+/*  86 */     if (localgo != null)
+/*  87 */       localgo.a(paramkp, paramDouble1, paramDouble2, paramDouble3, paramFloat);
+/*     */   }
+/*     */ 
+/*     */   public nh a()
+/*     */   {
+/* 103 */     return this.n;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ia
+ * JD-Core Version:    0.6.0
+ */

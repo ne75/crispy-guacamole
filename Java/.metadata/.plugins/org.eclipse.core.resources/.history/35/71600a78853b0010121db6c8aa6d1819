@@ -1,0 +1,59 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class dq extends rp
+/*    */ {
+/*    */   private float a;
+/*    */ 
+/*    */   public dq(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3)
+/*    */   {
+/* 11 */     super(paramdn, paramDouble1, paramDouble2, paramDouble3, 0.0D, 0.0D, 0.0D);
+/* 12 */     this.aI *= 0.800000011920929D;
+/* 13 */     this.aJ *= 0.800000011920929D;
+/* 14 */     this.aK *= 0.800000011920929D;
+/* 15 */     this.aJ = (this.bm.nextFloat() * 0.4F + 0.05F);
+/*    */ 
+/* 17 */     this.i = (this.j = this.k = 1.0F);
+/* 18 */     this.g *= (this.bm.nextFloat() * 2.0F + 0.2F);
+/* 19 */     this.a = this.g;
+/*    */ 
+/* 21 */     this.f = (int)(16.0D / (Math.random() * 0.8D + 0.2D));
+/* 22 */     this.bj = false;
+/* 23 */     this.b = 49;
+/*    */   }
+/*    */ 
+/*    */   public float a(float paramFloat) {
+/* 27 */     return 1.0F;
+/*    */   }
+/*    */ 
+/*    */   public void a(jy paramjy, float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6) {
+/* 31 */     float f = (this.e + paramFloat1) / this.f;
+/* 32 */     this.g = (this.a * (1.0F - f * f));
+/* 33 */     super.a(paramjy, paramFloat1, paramFloat2, paramFloat3, paramFloat4, paramFloat5, paramFloat6);
+/*    */   }
+/*    */ 
+/*    */   public void q_() {
+/* 37 */     this.aC = this.aF;
+/* 38 */     this.aD = this.aG;
+/* 39 */     this.aE = this.aH;
+/*    */ 
+/* 41 */     if (this.e++ >= this.f) F();
+/* 42 */     float f = this.e / this.f;
+/* 43 */     if (this.bm.nextFloat() > f) this.aB.a("smoke", this.aF, this.aG, this.aH, this.aI, this.aJ, this.aK);
+/*    */ 
+/* 45 */     this.aJ -= 0.03D;
+/* 46 */     d(this.aI, this.aJ, this.aK);
+/* 47 */     this.aI *= 0.9990000128746033D;
+/* 48 */     this.aJ *= 0.9990000128746033D;
+/* 49 */     this.aK *= 0.9990000128746033D;
+/*    */ 
+/* 51 */     if (this.aQ) {
+/* 52 */       this.aI *= 0.699999988079071D;
+/* 53 */       this.aK *= 0.699999988079071D;
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     dq
+ * JD-Core Version:    0.6.0
+ */

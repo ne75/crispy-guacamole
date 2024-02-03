@@ -1,0 +1,39 @@
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class kq extends ft
+/*    */ {
+/*    */   private ni k;
+/*    */ 
+/*    */   public kq(gl paramgl, ni paramni)
+/*    */   {
+/* 12 */     super(new au(paramgl, paramni));
+/* 13 */     this.k = paramni;
+/*    */   }
+/*    */ 
+/*    */   protected void j() {
+/* 17 */     this.g.b("Furnace", 60, 6, 4210752);
+/* 18 */     this.g.b("Inventory", 8, this.h - 96 + 2, 4210752);
+/*    */   }
+/*    */ 
+/*    */   protected void a(float paramFloat) {
+/* 22 */     int i = this.b.n.a("/gui/furnace.png");
+/* 23 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 24 */     this.b.n.b(i);
+/* 25 */     int j = (this.c - this.a) / 2;
+/* 26 */     int m = (this.d - this.h) / 2;
+/* 27 */     b(j, m, 0, 0, this.a, this.h);
+/* 28 */     if (this.k.b()) {
+/* 29 */       n = this.k.c(12);
+/* 30 */       b(j + 56, m + 36 + 12 - n, 176, 12 - n, 14, n + 2);
+/*    */     }
+/*    */ 
+/* 33 */     int n = this.k.b(24);
+/* 34 */     b(j + 79, m + 34, 176, 14, n + 1, 16);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     kq
+ * JD-Core Version:    0.6.0
+ */

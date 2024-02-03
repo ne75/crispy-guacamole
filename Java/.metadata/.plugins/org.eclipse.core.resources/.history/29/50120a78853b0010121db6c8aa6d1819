@@ -1,0 +1,22 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class dl extends da
+/*    */ {
+/*    */   public dl(int paramInt1, int paramInt2)
+/*    */   {
+/*  7 */     super(paramInt1, paramInt2);
+/*    */   }
+/*    */ 
+/*    */   public int a(Random paramRandom) {
+/* 11 */     return 1;
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt, Random paramRandom) {
+/* 15 */     return pj.ap.bi;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     dl
+ * JD-Core Version:    0.6.0
+ */

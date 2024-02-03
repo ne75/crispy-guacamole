@@ -1,0 +1,37 @@
+/*    */ import java.io.File;
+/*    */ import java.util.List;
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ 
+/*    */ public class ko extends mr
+/*    */ {
+/*    */   public ko(by paramby)
+/*    */   {
+/* 10 */     super(paramby);
+/* 11 */     this.h = "Delete world";
+/*    */   }
+/*    */ 
+/*    */   public void j() {
+/* 15 */     this.e.add(new hg(6, this.c / 2 - 100, this.d / 6 + 168, "Cancel"));
+/*    */   }
+/*    */ 
+/*    */   public void c(int paramInt) {
+/* 19 */     String str = d(paramInt);
+/* 20 */     if (str != null)
+/*    */     {
+/* 22 */       this.b.a(new lx(this, "Are you sure you want to delete this world?", "'" + str + "' will be lost forever!", paramInt));
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void a(boolean paramBoolean, int paramInt) {
+/* 27 */     if (paramBoolean) {
+/* 28 */       File localFile = Minecraft.b();
+/* 29 */       dn.b(localFile, d(paramInt));
+/*    */     }
+/* 31 */     this.b.a(this.a);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ko
+ * JD-Core Version:    0.6.0
+ */

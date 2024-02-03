@@ -1,0 +1,118 @@
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ 
+/*     */ public class kn extends kb
+/*     */ {
+/*  11 */   private int c = -1;
+/*  12 */   private int d = -1;
+/*  13 */   private int e = -1;
+/*  14 */   private float f = 0.0F;
+/*  15 */   private float g = 0.0F;
+/*  16 */   private float h = 0.0F;
+/*  17 */   private int i = 0;
+/*     */ 
+/*     */   public kn(Minecraft paramMinecraft) {
+/*  20 */     super(paramMinecraft);
+/*     */   }
+/*     */ 
+/*     */   public void a(eu parameu) {
+/*  24 */     parameu.aL = -180.0F;
+/*     */   }
+/*     */ 
+/*     */   public boolean b(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/*  31 */     int j = this.a.e.a(paramInt1, paramInt2, paramInt3);
+/*  32 */     int k = this.a.e.e(paramInt1, paramInt2, paramInt3);
+/*  33 */     boolean bool1 = super.b(paramInt1, paramInt2, paramInt3, paramInt4);
+/*     */ 
+/*  35 */     gm localgm = this.a.g.B();
+/*  36 */     boolean bool2 = this.a.g.b(pj.m[j]);
+/*  37 */     if (localgm != null) {
+/*  38 */       localgm.a(j, paramInt1, paramInt2, paramInt3);
+/*  39 */       if (localgm.a == 0) {
+/*  40 */         localgm.a(this.a.g);
+/*  41 */         this.a.g.C();
+/*     */       }
+/*     */     }
+/*  44 */     if ((bool1) && (bool2)) pj.m[j].a_(this.a.e, paramInt1, paramInt2, paramInt3, k);
+/*  45 */     return bool1;
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/*  55 */     int j = this.a.e.a(paramInt1, paramInt2, paramInt3);
+/*  56 */     if ((j > 0) && (this.f == 0.0F)) pj.m[j].b(this.a.e, paramInt1, paramInt2, paramInt3, this.a.g);
+/*  57 */     if ((j > 0) && (pj.m[j].a(this.a.g) >= 1.0F))
+/*  58 */       b(paramInt1, paramInt2, paramInt3, paramInt4);
+/*     */   }
+/*     */ 
+/*     */   public void a()
+/*     */   {
+/*  63 */     this.f = 0.0F;
+/*  64 */     this.i = 0;
+/*     */   }
+/*     */ 
+/*     */   public void c(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  68 */     if (this.i > 0) {
+/*  69 */       this.i -= 1;
+/*  70 */       return;
+/*     */     }
+/*  72 */     if ((paramInt1 == this.c) && (paramInt2 == this.d) && (paramInt3 == this.e)) {
+/*  73 */       int j = this.a.e.a(paramInt1, paramInt2, paramInt3);
+/*  74 */       if (j == 0) return;
+/*  75 */       pj localpj = pj.m[j];
+/*     */ 
+/*  77 */       this.f += localpj.a(this.a.g);
+/*     */ 
+/*  79 */       if ((this.h % 4.0F == 0.0F) && 
+/*  80 */         (localpj != null)) {
+/*  81 */         this.a.A.b(localpj.br.d(), paramInt1 + 0.5F, paramInt2 + 0.5F, paramInt3 + 0.5F, (localpj.br.b() + 1.0F) / 8.0F, localpj.br.c() * 0.5F);
+/*     */       }
+/*     */ 
+/*  85 */       this.h += 1.0F;
+/*     */ 
+/*  87 */       if (this.f >= 1.0F) {
+/*  88 */         b(paramInt1, paramInt2, paramInt3, paramInt4);
+/*  89 */         this.f = 0.0F;
+/*  90 */         this.g = 0.0F;
+/*  91 */         this.h = 0.0F;
+/*  92 */         this.i = 5;
+/*     */       }
+/*     */     } else {
+/*  95 */       this.f = 0.0F;
+/*  96 */       this.g = 0.0F;
+/*  97 */       this.h = 0.0F;
+/*  98 */       this.c = paramInt1;
+/*  99 */       this.d = paramInt2;
+/* 100 */       this.e = paramInt3;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat) {
+/* 105 */     if (this.f <= 0.0F) {
+/* 106 */       this.a.u.b = 0.0F;
+/* 107 */       this.a.f.i = 0.0F;
+/*     */     } else {
+/* 109 */       float f1 = this.g + (this.f - this.g) * paramFloat;
+/* 110 */       this.a.u.b = f1;
+/* 111 */       this.a.f.i = f1;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public float b() {
+/* 116 */     return 4.0F;
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn) {
+/* 120 */     super.a(paramdn);
+/*     */   }
+/*     */ 
+/*     */   public void c() {
+/* 124 */     this.g = this.f;
+/* 125 */     this.a.A.c();
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     kn
+ * JD-Core Version:    0.6.0
+ */

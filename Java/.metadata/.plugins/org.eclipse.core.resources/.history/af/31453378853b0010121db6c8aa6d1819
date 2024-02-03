@@ -1,0 +1,35 @@
+/*     */ import java.io.DataInputStream;
+/*     */ import java.io.DataOutputStream;
+/*     */ 
+/*     */ public class oy extends hj
+/*     */ {
+/*     */   public int a;
+/*     */   public byte b;
+/*     */   public byte c;
+/*     */   public byte d;
+/*     */   public byte e;
+/*     */   public byte f;
+/* 105 */   public boolean g = false;
+/*     */ 
+/*     */   public void a(DataInputStream paramDataInputStream)
+/*     */   {
+/* 115 */     this.a = paramDataInputStream.readInt();
+/*     */   }
+/*     */ 
+/*     */   public void a(DataOutputStream paramDataOutputStream) {
+/* 119 */     paramDataOutputStream.writeInt(this.a);
+/*     */   }
+/*     */ 
+/*     */   public void a(od paramod) {
+/* 123 */     paramod.a(this);
+/*     */   }
+/*     */ 
+/*     */   public int a() {
+/* 127 */     return 4;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     oy
+ * JD-Core Version:    0.6.0
+ */

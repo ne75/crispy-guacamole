@@ -1,0 +1,13 @@
+package main;
+
+public class Factorial {
+    
+    public int factorial(int i){
+	if (i == 1){
+	    return 1;
+	} else {
+	    return factorial(n - 1);
+	}
+    }
+
+}

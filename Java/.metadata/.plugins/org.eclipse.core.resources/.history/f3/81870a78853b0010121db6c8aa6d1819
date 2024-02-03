@@ -1,0 +1,18 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class dt extends gw
+/*    */ {
+/*    */   public dt(int paramInt1, int paramInt2, ic paramic, boolean paramBoolean)
+/*    */   {
+/* 10 */     super(paramInt1, paramInt2, paramic, paramBoolean);
+/*    */   }
+/*    */ 
+/*    */   public int a(Random paramRandom) {
+/* 14 */     return 0;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     dt
+ * JD-Core Version:    0.6.0
+ */

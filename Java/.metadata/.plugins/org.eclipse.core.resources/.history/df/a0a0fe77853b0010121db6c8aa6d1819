@@ -1,0 +1,162 @@
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.List;
+/*     */ 
+/*     */ public class ax
+/*     */ {
+/*   8 */   private static List d = new ArrayList();
+/*   9 */   private static int e = 0;
+/*     */   public double a;
+/*     */   public double b;
+/*     */   public double c;
+/*     */ 
+/*     */   public static ax a(double paramDouble1, double paramDouble2, double paramDouble3)
+/*     */   {
+/*  12 */     return new ax(paramDouble1, paramDouble2, paramDouble3);
+/*     */   }
+/*     */ 
+/*     */   public static void a() {
+/*  16 */     e = 0;
+/*     */   }
+/*     */ 
+/*     */   public static ax b(double paramDouble1, double paramDouble2, double paramDouble3) {
+/*  20 */     if (e >= d.size()) {
+/*  21 */       d.add(a(0.0D, 0.0D, 0.0D));
+/*     */     }
+/*  23 */     return ((ax)d.get(e++)).e(paramDouble1, paramDouble2, paramDouble3);
+/*     */   }
+/*     */ 
+/*     */   private ax(double paramDouble1, double paramDouble2, double paramDouble3)
+/*     */   {
+/*  29 */     if (paramDouble1 == -0.0D) paramDouble1 = 0.0D;
+/*  30 */     if (paramDouble2 == -0.0D) paramDouble2 = 0.0D;
+/*  31 */     if (paramDouble3 == -0.0D) paramDouble3 = 0.0D;
+/*  32 */     this.a = paramDouble1;
+/*  33 */     this.b = paramDouble2;
+/*  34 */     this.c = paramDouble3;
+/*     */   }
+/*     */ 
+/*     */   private ax e(double paramDouble1, double paramDouble2, double paramDouble3) {
+/*  38 */     this.a = paramDouble1;
+/*  39 */     this.b = paramDouble2;
+/*  40 */     this.c = paramDouble3;
+/*  41 */     return this;
+/*     */   }
+/*     */ 
+/*     */   public ax a(ax paramax)
+/*     */   {
+/*  58 */     return b(paramax.a - this.a, paramax.b - this.b, paramax.c - this.c);
+/*     */   }
+/*     */ 
+/*     */   public ax b() {
+/*  62 */     double d1 = gd.a(this.a * this.a + this.b * this.b + this.c * this.c);
+/*  63 */     if (d1 < 0.0001D) return b(0.0D, 0.0D, 0.0D);
+/*  64 */     return b(this.a / d1, this.b / d1, this.c / d1);
+/*     */   }
+/*     */ 
+/*     */   public ax b(ax paramax)
+/*     */   {
+/*  72 */     return b(this.b * paramax.c - this.c * paramax.b, this.c * paramax.a - this.a * paramax.c, this.a * paramax.b - this.b * paramax.a);
+/*     */   }
+/*     */ 
+/*     */   public ax c(double paramDouble1, double paramDouble2, double paramDouble3) {
+/*  76 */     return b(this.a + paramDouble1, this.b + paramDouble2, this.c + paramDouble3);
+/*     */   }
+/*     */ 
+/*     */   public double c(ax paramax) {
+/*  80 */     double d1 = paramax.a - this.a;
+/*  81 */     double d2 = paramax.b - this.b;
+/*  82 */     double d3 = paramax.c - this.c;
+/*  83 */     return gd.a(d1 * d1 + d2 * d2 + d3 * d3);
+/*     */   }
+/*     */ 
+/*     */   public double d(ax paramax) {
+/*  87 */     double d1 = paramax.a - this.a;
+/*  88 */     double d2 = paramax.b - this.b;
+/*  89 */     double d3 = paramax.c - this.c;
+/*  90 */     return d1 * d1 + d2 * d2 + d3 * d3;
+/*     */   }
+/*     */ 
+/*     */   public double d(double paramDouble1, double paramDouble2, double paramDouble3) {
+/*  94 */     double d1 = paramDouble1 - this.a;
+/*  95 */     double d2 = paramDouble2 - this.b;
+/*  96 */     double d3 = paramDouble3 - this.c;
+/*  97 */     return d1 * d1 + d2 * d2 + d3 * d3;
+/*     */   }
+/*     */ 
+/*     */   public double c()
+/*     */   {
+/* 105 */     return gd.a(this.a * this.a + this.b * this.b + this.c * this.c);
+/*     */   }
+/*     */ 
+/*     */   public ax a(ax paramax, double paramDouble) {
+/* 109 */     double d1 = paramax.a - this.a;
+/* 110 */     double d2 = paramax.b - this.b;
+/* 111 */     double d3 = paramax.c - this.c;
+/*     */ 
+/* 113 */     if (d1 * d1 < 1.000000011686097E-07D) return null;
+/*     */ 
+/* 115 */     double d4 = (paramDouble - this.a) / d1;
+/* 116 */     if ((d4 < 0.0D) || (d4 > 1.0D)) return null;
+/* 117 */     return b(this.a + d1 * d4, this.b + d2 * d4, this.c + d3 * d4);
+/*     */   }
+/*     */ 
+/*     */   public ax b(ax paramax, double paramDouble) {
+/* 121 */     double d1 = paramax.a - this.a;
+/* 122 */     double d2 = paramax.b - this.b;
+/* 123 */     double d3 = paramax.c - this.c;
+/*     */ 
+/* 125 */     if (d2 * d2 < 1.000000011686097E-07D) return null;
+/*     */ 
+/* 127 */     double d4 = (paramDouble - this.b) / d2;
+/* 128 */     if ((d4 < 0.0D) || (d4 > 1.0D)) return null;
+/* 129 */     return b(this.a + d1 * d4, this.b + d2 * d4, this.c + d3 * d4);
+/*     */   }
+/*     */ 
+/*     */   public ax c(ax paramax, double paramDouble) {
+/* 133 */     double d1 = paramax.a - this.a;
+/* 134 */     double d2 = paramax.b - this.b;
+/* 135 */     double d3 = paramax.c - this.c;
+/*     */ 
+/* 137 */     if (d3 * d3 < 1.000000011686097E-07D) return null;
+/*     */ 
+/* 139 */     double d4 = (paramDouble - this.c) / d3;
+/* 140 */     if ((d4 < 0.0D) || (d4 > 1.0D)) return null;
+/* 141 */     return b(this.a + d1 * d4, this.b + d2 * d4, this.c + d3 * d4);
+/*     */   }
+/*     */ 
+/*     */   public String toString() {
+/* 145 */     return "(" + this.a + ", " + this.b + ", " + this.c + ")";
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat)
+/*     */   {
+/* 153 */     float f1 = gd.b(paramFloat);
+/* 154 */     float f2 = gd.a(paramFloat);
+/*     */ 
+/* 156 */     double d1 = this.a;
+/* 157 */     double d2 = this.b * f1 + this.c * f2;
+/* 158 */     double d3 = this.c * f1 - this.b * f2;
+/*     */ 
+/* 160 */     this.a = d1;
+/* 161 */     this.b = d2;
+/* 162 */     this.c = d3;
+/*     */   }
+/*     */ 
+/*     */   public void b(float paramFloat) {
+/* 166 */     float f1 = gd.b(paramFloat);
+/* 167 */     float f2 = gd.a(paramFloat);
+/*     */ 
+/* 169 */     double d1 = this.a * f1 + this.c * f2;
+/* 170 */     double d2 = this.b;
+/* 171 */     double d3 = this.c * f1 - this.a * f2;
+/*     */ 
+/* 173 */     this.a = d1;
+/* 174 */     this.b = d2;
+/* 175 */     this.c = d3;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ax
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,38 @@
+/*    */ public enum hz
+/*    */ {
+/*    */   private final Class d;
+/*    */   private final int e;
+/*    */   private final ic f;
+/*    */   private final boolean g;
+/*    */ 
+/*    */   private hz(Class paramic, int paramBoolean, ic arg5, boolean arg6)
+/*    */   {
+/* 22 */     this.d = paramic;
+/* 23 */     this.e = paramBoolean;
+/*    */     Object localObject;
+/* 24 */     this.f = localObject;
+/*    */     boolean bool;
+/* 25 */     this.g = bool;
+/*    */   }
+/*    */ 
+/*    */   public Class a() {
+/* 29 */     return this.d;
+/*    */   }
+/*    */ 
+/*    */   public int b() {
+/* 33 */     return this.e;
+/*    */   }
+/*    */ 
+/*    */   public ic c() {
+/* 37 */     return this.f;
+/*    */   }
+/*    */ 
+/*    */   public boolean d() {
+/* 41 */     return this.g;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hz
+ * JD-Core Version:    0.6.0
+ */

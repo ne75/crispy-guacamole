@@ -1,0 +1,100 @@
+/*     */ public class gz extends nl
+/*     */ {
+/*     */   public int a;
+/*  12 */   public int b = 0;
+/*     */ 
+/*     */   public gz(dn paramdn) {
+/*  15 */     super(paramdn);
+/*     */   }
+/*     */ 
+/*     */   public gz(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3, int paramInt) {
+/*  19 */     super(paramdn);
+/*  20 */     this.a = paramInt;
+/*  21 */     this.ay = true;
+/*  22 */     a(0.98F, 0.98F);
+/*  23 */     this.aX = (this.aZ / 2.0F);
+/*  24 */     b(paramDouble1, paramDouble2, paramDouble3);
+/*     */ 
+/*  26 */     this.aI = 0.0D;
+/*  27 */     this.aJ = 0.0D;
+/*  28 */     this.aK = 0.0D;
+/*     */ 
+/*  30 */     this.bc = false;
+/*     */ 
+/*  32 */     this.aC = paramDouble1;
+/*  33 */     this.aD = paramDouble2;
+/*  34 */     this.aE = paramDouble3;
+/*     */   }
+/*     */ 
+/*     */   protected void b()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public boolean f_()
+/*     */   {
+/*  43 */     return !this.aW;
+/*     */   }
+/*     */ 
+/*     */   public void q_() {
+/*  47 */     if (this.a == 0) {
+/*  48 */       F();
+/*  49 */       return;
+/*     */     }
+/*     */ 
+/*  52 */     this.aC = this.aF;
+/*  53 */     this.aD = this.aG;
+/*  54 */     this.aE = this.aH;
+/*  55 */     this.b += 1;
+/*     */ 
+/*  57 */     this.aJ -= 0.03999999910593033D;
+/*  58 */     d(this.aI, this.aJ, this.aK);
+/*  59 */     this.aI *= 0.9800000190734863D;
+/*  60 */     this.aJ *= 0.9800000190734863D;
+/*  61 */     this.aK *= 0.9800000190734863D;
+/*     */ 
+/*  63 */     int i = gd.b(this.aF);
+/*  64 */     int j = gd.b(this.aG);
+/*  65 */     int k = gd.b(this.aH);
+/*  66 */     if (this.aB.a(i, j, k) == this.a) {
+/*  67 */       this.aB.e(i, j, k, 0);
+/*     */     }
+/*     */ 
+/*  70 */     if (this.aQ) {
+/*  71 */       this.aI *= 0.699999988079071D;
+/*  72 */       this.aK *= 0.699999988079071D;
+/*  73 */       this.aJ *= -0.5D;
+/*     */ 
+/*  75 */       F();
+/*     */ 
+/*  77 */       if (((!this.aB.a(this.a, i, j, k, true)) || (!this.aB.e(i, j, k, this.a))) && 
+/*  78 */         (!this.aB.z))
+/*  79 */         b(this.a, 1);
+/*     */     }
+/*  81 */     else if ((this.b > 100) && (!this.aB.z)) {
+/*  82 */       b(this.a, 1);
+/*  83 */       F();
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   protected void a(jw paramjw)
+/*     */   {
+/*  89 */     paramjw.a("Tile", (byte)this.a);
+/*     */   }
+/*     */ 
+/*     */   protected void b(jw paramjw) {
+/*  93 */     this.a = (paramjw.c("Tile") & 0xFF);
+/*     */   }
+/*     */ 
+/*     */   public float k_() {
+/*  97 */     return 0.0F;
+/*     */   }
+/*     */ 
+/*     */   public dn k() {
+/* 101 */     return this.aB;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gz
+ * JD-Core Version:    0.6.0
+ */

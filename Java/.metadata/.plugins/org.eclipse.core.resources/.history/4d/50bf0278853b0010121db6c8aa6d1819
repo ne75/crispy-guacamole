@@ -1,0 +1,17 @@
+/*    */ public class bd extends sl
+/*    */ {
+/*    */   public bd(int paramInt1, int paramInt2)
+/*    */   {
+/*  8 */     super(paramInt1, paramInt2);
+/*    */   }
+/*    */ 
+/*    */   public gm a(gm paramgm, dn paramdn, eu parameu) {
+/* 12 */     super.a(paramgm, paramdn, parameu);
+/* 13 */     return new gm(eo.C);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     bd
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,37 @@
+/*    */ import java.util.HashMap;
+/*    */ import java.util.Map;
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class y extends go
+/*    */ {
+/* 18 */   private Map b = new HashMap();
+/*    */ 
+/*    */   public void a(bu parambu, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat)
+/*    */   {
+/* 22 */     GL11.glPushMatrix();
+/* 23 */     GL11.glTranslatef((float)paramDouble1 + 0.5F, (float)paramDouble2, (float)paramDouble3 + 0.5F);
+/*    */ 
+/* 25 */     nl localnl = (nl)this.b.get(parambu.a());
+/* 26 */     if (localnl == null) {
+/* 27 */       localnl = gn.a(parambu.a(), null);
+/* 28 */       this.b.put(parambu.a(), localnl);
+/*    */     }
+/* 30 */     if (localnl != null) {
+/* 31 */       localnl.a(parambu.d);
+/* 32 */       float f = 0.4375F;
+/* 33 */       GL11.glTranslatef(0.0F, 0.4F, 0.0F);
+/* 34 */       GL11.glRotatef((float)(parambu.c + (parambu.b - parambu.c) * paramFloat) * 10.0F, 0.0F, 1.0F, 0.0F);
+/* 35 */       GL11.glRotatef(-30.0F, 1.0F, 0.0F, 0.0F);
+/* 36 */       GL11.glTranslatef(0.0F, -0.4F, 0.0F);
+/* 37 */       GL11.glScalef(f, f, f);
+/* 38 */       localnl.c(paramDouble1, paramDouble2, paramDouble3, 0.0F, 0.0F);
+/* 39 */       oc.a.a(localnl, 0.0D, 0.0D, 0.0D, 0.0F, paramFloat);
+/*    */     }
+/* 41 */     GL11.glPopMatrix();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     y
+ * JD-Core Version:    0.6.0
+ */

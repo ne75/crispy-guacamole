@@ -1,0 +1,11 @@
+/*    */ package org.lwjgl.opengl;
+/*    */ 
+/*    */ final class GlobalLock
+/*    */ {
+/* 39 */   static final Object lock = new Object();
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/lwjgl.jar
+ * Qualified Name:     org.lwjgl.opengl.GlobalLock
+ * JD-Core Version:    0.6.0
+ */

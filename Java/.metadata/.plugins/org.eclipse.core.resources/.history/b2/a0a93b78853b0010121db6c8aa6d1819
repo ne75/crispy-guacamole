@@ -1,0 +1,120 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class rp extends nl
+/*     */ {
+/*     */   protected int b;
+/*     */   protected float c;
+/*     */   protected float d;
+/*  13 */   protected int e = 0;
+/*  14 */   protected int f = 0;
+/*     */   protected float g;
+/*     */   protected float h;
+/*     */   protected float i;
+/*     */   protected float j;
+/*     */   protected float k;
+/*     */   public static double l;
+/*     */   public static double m;
+/*     */   public static double n;
+/*     */ 
+/*     */   public rp(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6)
+/*     */   {
+/*  22 */     super(paramdn);
+/*  23 */     a(0.2F, 0.2F);
+/*  24 */     this.aX = (this.aZ / 2.0F);
+/*  25 */     b(paramDouble1, paramDouble2, paramDouble3);
+/*  26 */     this.i = (this.j = this.k = 1.0F);
+/*     */ 
+/*  28 */     this.aI = (paramDouble4 + (float)(Math.random() * 2.0D - 1.0D) * 0.4F);
+/*  29 */     this.aJ = (paramDouble5 + (float)(Math.random() * 2.0D - 1.0D) * 0.4F);
+/*  30 */     this.aK = (paramDouble6 + (float)(Math.random() * 2.0D - 1.0D) * 0.4F);
+/*  31 */     float f1 = (float)(Math.random() + Math.random() + 1.0D) * 0.15F;
+/*     */ 
+/*  33 */     float f2 = gd.a(this.aI * this.aI + this.aJ * this.aJ + this.aK * this.aK);
+/*  34 */     this.aI = (this.aI / f2 * f1 * 0.4000000059604645D);
+/*  35 */     this.aJ = (this.aJ / f2 * f1 * 0.4000000059604645D + 0.1000000014901161D);
+/*  36 */     this.aK = (this.aK / f2 * f1 * 0.4000000059604645D);
+/*     */ 
+/*  39 */     this.c = (this.bm.nextFloat() * 3.0F);
+/*  40 */     this.d = (this.bm.nextFloat() * 3.0F);
+/*     */ 
+/*  42 */     this.g = ((this.bm.nextFloat() * 0.5F + 0.5F) * 2.0F);
+/*     */ 
+/*  44 */     this.f = (int)(4.0F / (this.bm.nextFloat() * 0.9F + 0.1F));
+/*  45 */     this.e = 0;
+/*  46 */     this.bc = false;
+/*     */   }
+/*     */ 
+/*     */   public rp b(float paramFloat) {
+/*  50 */     this.aI *= paramFloat;
+/*  51 */     this.aJ = ((this.aJ - 0.1000000014901161D) * paramFloat + 0.1000000014901161D);
+/*  52 */     this.aK *= paramFloat;
+/*  53 */     return this;
+/*     */   }
+/*     */ 
+/*     */   public rp d(float paramFloat) {
+/*  57 */     a(0.2F * paramFloat, 0.2F * paramFloat);
+/*  58 */     this.g *= paramFloat;
+/*  59 */     return this;
+/*     */   }
+/*     */ 
+/*     */   protected void b()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void q_()
+/*     */   {
+/*  68 */     this.aC = this.aF;
+/*  69 */     this.aD = this.aG;
+/*  70 */     this.aE = this.aH;
+/*     */ 
+/*  72 */     if (this.e++ >= this.f) F();
+/*     */ 
+/*  74 */     this.aJ -= 0.04D * this.h;
+/*  75 */     d(this.aI, this.aJ, this.aK);
+/*  76 */     this.aI *= 0.9800000190734863D;
+/*  77 */     this.aJ *= 0.9800000190734863D;
+/*  78 */     this.aK *= 0.9800000190734863D;
+/*     */ 
+/*  80 */     if (this.aQ) {
+/*  81 */       this.aI *= 0.699999988079071D;
+/*  82 */       this.aK *= 0.699999988079071D;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a(jy paramjy, float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6) {
+/*  87 */     float f1 = this.b % 16 / 16.0F;
+/*  88 */     float f2 = f1 + 0.0624375F;
+/*  89 */     float f3 = this.b / 16 / 16.0F;
+/*  90 */     float f4 = f3 + 0.0624375F;
+/*  91 */     float f5 = 0.1F * this.g;
+/*     */ 
+/*  93 */     float f6 = (float)(this.aC + (this.aF - this.aC) * paramFloat1 - l);
+/*  94 */     float f7 = (float)(this.aD + (this.aG - this.aD) * paramFloat1 - m);
+/*  95 */     float f8 = (float)(this.aE + (this.aH - this.aE) * paramFloat1 - n);
+/*     */ 
+/*  97 */     float f9 = a(paramFloat1);
+/*  98 */     paramjy.a(this.i * f9, this.j * f9, this.k * f9);
+/*     */ 
+/* 100 */     paramjy.a(f6 - paramFloat2 * f5 - paramFloat5 * f5, f7 - paramFloat3 * f5, f8 - paramFloat4 * f5 - paramFloat6 * f5, f2, f4);
+/* 101 */     paramjy.a(f6 - paramFloat2 * f5 + paramFloat5 * f5, f7 + paramFloat3 * f5, f8 - paramFloat4 * f5 + paramFloat6 * f5, f2, f3);
+/* 102 */     paramjy.a(f6 + paramFloat2 * f5 + paramFloat5 * f5, f7 + paramFloat3 * f5, f8 + paramFloat4 * f5 + paramFloat6 * f5, f1, f3);
+/* 103 */     paramjy.a(f6 + paramFloat2 * f5 - paramFloat5 * f5, f7 - paramFloat3 * f5, f8 + paramFloat4 * f5 - paramFloat6 * f5, f1, f4);
+/*     */   }
+/*     */ 
+/*     */   public int b_() {
+/* 107 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public void a(jw paramjw)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw)
+/*     */   {
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     rp
+ * JD-Core Version:    0.6.0
+ */

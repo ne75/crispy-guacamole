@@ -1,0 +1,30 @@
+/*    */ public class mo extends eo
+/*    */ {
+/*    */   public int a;
+/*    */ 
+/*    */   public mo(int paramInt1, int paramInt2)
+/*    */   {
+/* 12 */     super(paramInt1);
+/* 13 */     this.bb = 1;
+/* 14 */     this.a = paramInt2;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(gm paramgm, eu parameu, dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*    */   {
+/* 20 */     int i = paramdn.a(paramInt1, paramInt2, paramInt3);
+/*    */ 
+/* 22 */     if (i == pj.aG.bi) {
+/* 23 */       if (!paramdn.z) {
+/* 24 */         paramdn.a(new sd(paramdn, paramInt1 + 0.5F, paramInt2 + 0.5F, paramInt3 + 0.5F, this.a));
+/*    */       }
+/* 26 */       paramgm.a -= 1;
+/* 27 */       return true;
+/*    */     }
+/* 29 */     return false;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mo
+ * JD-Core Version:    0.6.0
+ */

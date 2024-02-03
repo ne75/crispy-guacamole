@@ -1,0 +1,202 @@
+package main;
+
+/**
+ * This program figures out the distance, speed, or time based on the user
+ * input. It works only with kilometers, meters, and miles, seconds, minutes,
+ * and hours.
+ *
+ * @author Daniel Flynt
+ *
+ * @Date Jan 28, 2013
+ */
+import java.util.*;
+
+public class Velocity_Displacement {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("    ***************************"); //Menu
+        System.out.println(" *** Distance || Speed || Time ***");
+        System.out.println("    ***************************\n");
+
+        System.out.println("A. Calculate the Distance");
+        System.out.println("B. Calculate the Speed");
+        System.out.println("C. Calculate the Time");
+        
+        String choice = scan.next();
+
+        if (choice.equalsIgnoreCase("A")) {
+            distance();
+        } else if (choice.equalsIgnoreCase("B")) {
+            speed();
+        } else if (choice.equalsIgnoreCase("C")) {
+            time();
+        } else {
+            System.out.print("Please enter a vaid choice\n");
+            main(args);
+        }
+
+    }
+
+    public static void distance() {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter the time and any basic unit of time (Ex: 35 minutes/seconds/hours) ");
+        double numtime = scan.nextDouble();
+        String timeunits = scan.next();
+
+        System.out.print("Enter the speed and any unit of speed (Ex: 3.50 km/h)");
+        double speed = scan.nextDouble();
+        String speedunits = scan.next();
+        String[] splitspeedunits = speedunits.split("[/]");
+        String res = splitspeedunits[0];
+
+        //if the timeunits variable contains minutes
+        if (timeunits.contains("minutes") || timeunits.contains("minute") && speedunits.contains("/m")) {
+            double answer = numtime * speed;
+            System.out.print("You would have covered " + answer + " " + res + " in " + numtime + " minutes");
+
+        } else if (timeunits.contains("minutes") || timeunits.contains("minute") && speedunits.contains("/h")) {
+            double convertedtime = numtime / 60;
+            double answer = convertedtime * speed;
+            System.out.println("You would have covered " + answer + " " + res + " in " + numtime + " minutes");
+
+        } else if (timeunits.contains("minutes") || timeunits.contains("minute") && speedunits.contains("/s")) {
+
+            double convertedtime = numtime * 60;
+            double answer = convertedtime * speed;
+            System.out.println("\nYou would have covered " + answer + " " + res + " in " + numtime + " minutes");
+        } //if the timeunits variable contains seconds
+        else if (timeunits.contains("seconds") || timeunits.contains("second") && speedunits.contains("/m")) {
+
+            double convertedtime = numtime / 60;
+            double answer = convertedtime * speed;
+            System.out.println("\nYou would have covered " + answer + " " + res + " in " + numtime + " minutes");
+        } else if (timeunits.contains("seconds") || timeunits.contains("second") && speedunits.contains("/h")) {
+            double convertedtime = numtime / 60 / 60;
+            double answer = convertedtime * speed;
+            System.out.println("\nYou would have covered " + answer + " " + res + " in " + numtime + " hours");
+        } else if (timeunits.contains("seconds") || timeunits.contains("second") && speedunits.contains("/s")) {
+            double answer = numtime * speed;
+            System.out.println("You would have covered " + answer + " " + res + " in " + numtime + " seconds");
+            //if the timeunits variable contains hours
+
+        } else if (timeunits.contains("hours") || timeunits.contains("hour") && speedunits.contains("/m")) {
+            double convertedtime = numtime * 60;
+            double answer = convertedtime * speed;
+            System.out.println("\nYou would have covered " + answer + " " + res + " in " + numtime + " minutes");
+        } else if (timeunits.contains("hours") || timeunits.contains("hour") && speedunits.contains("/h")) {
+            double answer = numtime * speed;
+            System.out.println("\nYou would have covered " + answer + " " + res + " in " + numtime + " minutes");
+        } else if (timeunits.contains("hours") || timeunits.contains("hour") && speedunits.contains("/s")) {
+            double convertedtime = numtime * 60 * 60;
+            double answer = convertedtime * speed;
+            System.out.println("\nYou would have covered " + answer + " " + res + " in " + numtime + " seconds");
+        }
+    }
+
+    public static void speed() {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter the distance covered and any basic unit of distance (Ex: 35 kilometers, miles, meters) ");
+        double distance = scan.nextDouble();
+        String distanceunits = scan.next();
+
+        System.out.print("Enter the time it took you to travel that distance (Ex: 3.50 hours/minutes/seconds) ");
+        double time = scan.nextDouble();
+        String timeunits = scan.next();
+
+        //if the distanceunits variable is in kilometers
+        
+        if (distanceunits.contains("kilometers") && timeunits.contains("minutes") || timeunits.contains("minute")) {
+            double answer = distance / time;
+            System.out.println("\nYou were traveling at " + answer + " km/m. ");
+        } else if (distanceunits.contains("kilometers") || distanceunits.contains("kilometer") && timeunits.contains("hours") || timeunits.contains("hour")) {
+            double answer = distance / time;
+            System.out.println("\nYou were traveling at " + answer + " km/h. ");
+        } else if (distanceunits.contains("kilometers") || distanceunits.contains("kilometer") && timeunits.contains("seconds") || timeunits.contains("second")) {
+            double answer = distance / time;
+            System.out.println("\nYou were traveling at " + answer + " km/s. ");
+            
+        } //if the distanceunits variable is in miles
+        
+        else if (distanceunits.contains("miles") || distanceunits.contains("mile") && timeunits.contains("minutes") || timeunits.contains("minute")) {
+            double answer = distance / time;
+            System.out.println("\nYou were traveling at " + answer + "miles/minute.");
+        } else if (distanceunits.contains("miles") || distanceunits.contains("mile") && timeunits.contains("hours") || timeunits.contains("hour")) {
+            double answer = distance / time;
+            System.out.println("\nYou were traveling at " + answer + "miles/hour");
+        } else if (distanceunits.contains("miles") || distanceunits.contains("mile") && timeunits.contains("seconds") || timeunits.contains("second")) {
+            double answer = distance / time;
+            System.out.println("\nYou were traveling at " + answer + "miles/s");
+            
+            //if the distanceunits variable is in meters
+            
+        } else if (distanceunits.contains("meters") || distanceunits.contains("meter") && timeunits.contains("minutes") || timeunits.contains("minute")) {
+            double answer = distance / time;
+            System.out.println("\nYou were traveling at " + answer + "m/m");
+        } else if (distanceunits.contains("meters") || distanceunits.contains("meter") && timeunits.contains("hours") || timeunits.contains("hour")) {
+            double answer = distance / time;
+            System.out.println("\nYou were traveling at " + answer + "m/h");
+        } else if (distanceunits.contains("meters") || distanceunits.contains("meter") && timeunits.contains("seconds") || timeunits.contains("second")) {
+            double answer = distance / time;
+            System.out.println("\nYou were traveling at " + answer + "m/s");
+        }
+    }
+        
+        public static void time()
+        {
+            Scanner scan = new Scanner(System.in);
+            
+            System.out.print("Enter the distance covered and any basic unit of distance (Ex: 35 kilometers, miles, meters) ");
+            double distance = scan.nextDouble();
+            String distanceunits = scan.next();
+
+            System.out.print("Enter the speed achieved and any basic unit of speed (Ex: 3.50 km/h m/s miles/h) ");
+            double speed = scan.nextDouble();
+            String speedunits = scan.next();
+            
+            //if the distanceunits variable contains kilometers
+            if (distanceunits.contains("kilometers") && speedunits.contains("km/m") || speedunits.contains("minutes")|| speedunits.contains("minute")) {
+            double answer = distance / speed;
+            System.out.println("\nYou were traveling for "+ answer + " minutes");
+        }
+            else if(distanceunits.contains("kilometers") && speedunits.contains("km/h") || speedunits.contains("hours")|| speedunits.contains("hour")){
+            double answer = distance / speed;
+            System.out.println("\nYou were traveling for "+ answer + " hours");
+            }
+                     else if(distanceunits.contains("kilometers") && speedunits.contains("km/s") || speedunits.contains("seconds")|| speedunits.contains("second")){
+            double answer = distance / speed;
+            System.out.println("\nYou were traveling for "+ answer + " seconds");
+            }
+                     
+                     //if the distanceunits variable contains miles
+                     else if(distanceunits.contains("miles") && speedunits.contains("miles/m") || speedunits.contains("minutes")|| speedunits.contains("minutes")){
+            double answer = distance / speed;
+            System.out.println("\nYou were traveling for "+ answer + " minutes");
+            }         else if(distanceunits.contains("miles") && speedunits.contains("miles/h") || speedunits.contains("hours")|| speedunits.contains("hour")){
+            double answer = distance / speed;
+            System.out.println("\nYou were traveling for "+ answer + " hours");
+            }
+                     else if(distanceunits.contains("miles") && speedunits.contains("miles/s") || speedunits.contains("secondss")|| speedunits.contains("second")){
+            double answer = distance / speed;
+            System.out.println("\nYou were traveling for "+ answer + " seconds");
+            }
+                     
+                     //if the distanceunits variable contains meters
+                     else if(distanceunits.contains("meters") && speedunits.contains("m/m") || speedunits.contains("minutes")|| speedunits.contains("minute")){
+            double answer = distance / speed;
+            System.out.println("\nYou were traveling for "+ answer + " minutes");
+            }         else if(distanceunits.contains("meters") && speedunits.contains("m/h") || speedunits.contains("hours")|| speedunits.contains("hour")){
+            double answer = distance / speed;
+            System.out.println("\nYou were traveling for "+ answer + " hours");
+            }         else if(distanceunits.contains("meters") && speedunits.contains("m/s") || speedunits.contains("secondss")|| speedunits.contains("second")){
+            double answer = distance / speed;
+            System.out.println("\nYou were traveling for "+ answer + " seconds");
+            }
+        }
+    }
+

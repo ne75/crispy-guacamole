@@ -1,0 +1,11 @@
+public abstract interface ct
+{
+  public abstract void a(cp paramcp, int paramInt, gm paramgm);
+
+  public abstract void a(cp paramcp, int paramInt1, int paramInt2);
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ct
+ * JD-Core Version:    0.6.0
+ */

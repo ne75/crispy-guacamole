@@ -1,0 +1,103 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class ak extends kp
+/*     */   implements ij
+/*     */ {
+/*  13 */   private gm[] a = new gm[9];
+/*  14 */   private Random b = new Random();
+/*     */ 
+/*     */   public int a() {
+/*  17 */     return 9;
+/*     */   }
+/*     */ 
+/*     */   public gm c_(int paramInt) {
+/*  21 */     return this.a[paramInt];
+/*     */   }
+/*     */ 
+/*     */   public gm a(int paramInt1, int paramInt2) {
+/*  25 */     if (this.a[paramInt1] != null) {
+/*  26 */       if (this.a[paramInt1].a <= paramInt2) {
+/*  27 */         localgm = this.a[paramInt1];
+/*  28 */         this.a[paramInt1] = null;
+/*  29 */         r_();
+/*  30 */         return localgm;
+/*     */       }
+/*  32 */       gm localgm = this.a[paramInt1].a(paramInt2);
+/*  33 */       if (this.a[paramInt1].a == 0) this.a[paramInt1] = null;
+/*  34 */       r_();
+/*  35 */       return localgm;
+/*     */     }
+/*     */ 
+/*  38 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public gm b()
+/*     */   {
+/*  58 */     int i = -1;
+/*  59 */     int j = 1;
+/*  60 */     for (int k = 0; k < this.a.length; k++) {
+/*  61 */       if ((this.a[k] != null) && (this.b.nextInt(j) == 0)) {
+/*  62 */         i = k;
+/*     */ 
+/*  65 */         j++;
+/*     */       }
+/*     */     }
+/*     */ 
+/*  69 */     if (i >= 0) {
+/*  70 */       return a(i, 1);
+/*     */     }
+/*  72 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt, gm paramgm) {
+/*  76 */     this.a[paramInt] = paramgm;
+/*  77 */     if ((paramgm != null) && (paramgm.a > d())) paramgm.a = d();
+/*  78 */     r_();
+/*     */   }
+/*     */ 
+/*     */   public String c() {
+/*  82 */     return "Trap";
+/*     */   }
+/*     */ 
+/*     */   public void a(jw paramjw)
+/*     */   {
+/*  87 */     super.a(paramjw);
+/*  88 */     nn localnn = paramjw.l("Items");
+/*  89 */     this.a = new gm[a()];
+/*  90 */     for (int i = 0; i < localnn.c(); i++) {
+/*  91 */       jw localjw = (jw)localnn.a(i);
+/*  92 */       int j = localjw.c("Slot") & 0xFF;
+/*  93 */       if ((j < 0) || (j >= this.a.length)) continue; this.a[j] = new gm(localjw);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw) {
+/*  98 */     super.b(paramjw);
+/*  99 */     nn localnn = new nn();
+/*     */ 
+/* 101 */     for (int i = 0; i < this.a.length; i++) {
+/* 102 */       if (this.a[i] != null) {
+/* 103 */         jw localjw = new jw();
+/* 104 */         localjw.a("Slot", (byte)i);
+/* 105 */         this.a[i].a(localjw);
+/* 106 */         localnn.a(localjw);
+/*     */       }
+/*     */     }
+/* 109 */     paramjw.a("Items", localnn);
+/*     */   }
+/*     */ 
+/*     */   public int d()
+/*     */   {
+/* 116 */     return 64;
+/*     */   }
+/*     */ 
+/*     */   public boolean a_(eu parameu) {
+/* 120 */     if (this.d.b(this.e, this.f, this.g) != this) return false;
+/* 121 */     return parameu.e(this.e + 0.5D, this.f + 0.5D, this.g + 0.5D) <= 64.0D;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ak
+ * JD-Core Version:    0.6.0
+ */

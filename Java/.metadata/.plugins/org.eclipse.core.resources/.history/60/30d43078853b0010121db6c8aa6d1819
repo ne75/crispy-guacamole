@@ -1,0 +1,55 @@
+/*    */ import java.util.ArrayList;
+/*    */ import java.util.List;
+/*    */ 
+/*    */ public class om
+/*    */   implements cn
+/*    */ {
+/*    */   private final gm a;
+/*    */   private final List b;
+/*    */ 
+/*    */   public om(gm paramgm, List paramList)
+/*    */   {
+/* 15 */     this.a = paramgm;
+/* 16 */     this.b = paramList;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(jb paramjb)
+/*    */   {
+/* 21 */     ArrayList localArrayList = new ArrayList(this.b);
+/*    */ 
+/* 23 */     for (int i = 0; i < 3; i++) {
+/* 24 */       for (int j = 0; j < 3; j++) {
+/* 25 */         gm localgm1 = paramjb.b(j, i);
+/*    */ 
+/* 27 */         if (localgm1 != null) {
+/* 28 */           int k = 0;
+/* 29 */           for (gm localgm2 : localArrayList) {
+/* 30 */             if ((localgm1.c == localgm2.c) && ((localgm2.i() == -1) || (localgm1.i() == localgm2.i()))) {
+/* 31 */               k = 1;
+/* 32 */               localArrayList.remove(localgm2);
+/* 33 */               break;
+/*    */             }
+/*    */           }
+/* 36 */           if (k == 0) {
+/* 37 */             return false;
+/*    */           }
+/*    */         }
+/*    */       }
+/*    */     }
+/*    */ 
+/* 43 */     return localArrayList.isEmpty();
+/*    */   }
+/*    */ 
+/*    */   public gm b(jb paramjb) {
+/* 47 */     return this.a.k();
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 51 */     return this.b.size();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     om
+ * JD-Core Version:    0.6.0
+ */

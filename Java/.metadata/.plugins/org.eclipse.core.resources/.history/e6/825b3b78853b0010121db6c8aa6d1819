@@ -1,0 +1,23 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class rl extends kz
+/*    */ {
+/*    */   public boolean a(dn paramdn, Random paramRandom, int paramInt1, int paramInt2, int paramInt3)
+/*    */   {
+/* 10 */     for (int i = 0; i < 64; i++) {
+/* 11 */       int j = paramInt1 + paramRandom.nextInt(8) - paramRandom.nextInt(8);
+/* 12 */       int k = paramInt2 + paramRandom.nextInt(4) - paramRandom.nextInt(4);
+/* 13 */       int m = paramInt3 + paramRandom.nextInt(8) - paramRandom.nextInt(8);
+/* 14 */       if ((!paramdn.d(j, k, m)) || 
+/* 15 */         (paramdn.a(j, k - 1, m) != pj.bb.bi)) continue;
+/* 16 */       paramdn.e(j, k, m, pj.ar.bi);
+/*    */     }
+/*    */ 
+/* 19 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     rl
+ * JD-Core Version:    0.6.0
+ */

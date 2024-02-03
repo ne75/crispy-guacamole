@@ -1,0 +1,13 @@
+package main;
+
+public class Polynomial {
+    
+    public int[] parseString(String str, int degree){
+	int[] a = new int[degree];
+	
+	return a;
+    }
+    
+    public int
+    
+}

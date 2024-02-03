@@ -1,0 +1,190 @@
+/*     */ import java.io.IOException;
+/*     */ 
+/*     */ public class hr
+/*     */   implements bm
+/*     */ {
+/*     */   private ib c;
+/*     */   private bm d;
+/*     */   private ao e;
+/*  15 */   private ib[] f = new ib[1024];
+/*     */   private dn g;
+/*  26 */   int a = -999999999;
+/*  27 */   int b = -999999999;
+/*     */   private ib h;
+/*     */   private int i;
+/*     */   private int j;
+/*     */ 
+/*     */   public hr(dn paramdn, ao paramao, bm parambm)
+/*     */   {
+/*  19 */     this.c = new hy(paramdn, new byte[32768], 0, 0);
+/*     */ 
+/*  21 */     this.g = paramdn;
+/*  22 */     this.e = paramao;
+/*  23 */     this.d = parambm;
+/*     */   }
+/*     */ 
+/*     */   public void c(int paramInt1, int paramInt2)
+/*     */   {
+/*  33 */     this.i = paramInt1;
+/*  34 */     this.j = paramInt2;
+/*     */   }
+/*     */ 
+/*     */   public boolean d(int paramInt1, int paramInt2) {
+/*  38 */     int k = 15;
+/*  39 */     return (paramInt1 >= this.i - k) && (paramInt2 >= this.j - k) && (paramInt1 <= this.i + k) && (paramInt2 <= this.j + k);
+/*     */   }
+/*     */ 
+/*     */   public boolean a(int paramInt1, int paramInt2) {
+/*  43 */     if (!d(paramInt1, paramInt2)) return false;
+/*     */ 
+/*  45 */     if ((paramInt1 == this.a) && (paramInt2 == this.b) && (this.h != null)) {
+/*  46 */       return true;
+/*     */     }
+/*  48 */     int k = paramInt1 & 0x1F;
+/*  49 */     int m = paramInt2 & 0x1F;
+/*  50 */     int n = k + m * 32;
+/*  51 */     return (this.f[n] != null) && ((this.f[n] == this.c) || (this.f[n].a(paramInt1, paramInt2)));
+/*     */   }
+/*     */ 
+/*     */   public ib b(int paramInt1, int paramInt2)
+/*     */   {
+/*  56 */     if ((paramInt1 == this.a) && (paramInt2 == this.b) && (this.h != null)) {
+/*  57 */       return this.h;
+/*     */     }
+/*  59 */     if ((!this.g.x) && (!d(paramInt1, paramInt2))) return this.c;
+/*  60 */     int k = paramInt1 & 0x1F;
+/*  61 */     int m = paramInt2 & 0x1F;
+/*  62 */     int n = k + m * 32;
+/*  63 */     if (!a(paramInt1, paramInt2)) {
+/*  64 */       if (this.f[n] != null) {
+/*  65 */         this.f[n].f();
+/*  66 */         b(this.f[n]);
+/*  67 */         a(this.f[n]);
+/*     */       }
+/*     */ 
+/*  70 */       ib localib = e(paramInt1, paramInt2);
+/*  71 */       if (localib == null) {
+/*  72 */         if (this.d == null)
+/*  73 */           localib = this.c;
+/*     */         else {
+/*  75 */           localib = this.d.b(paramInt1, paramInt2);
+/*     */         }
+/*     */       }
+/*     */ 
+/*  79 */       this.f[n] = localib;
+/*  80 */       localib.d();
+/*     */ 
+/*  82 */       if (this.f[n] != null) {
+/*  83 */         this.f[n].e();
+/*     */       }
+/*     */ 
+/*  86 */       if ((!this.f[n].n) && (a(paramInt1 + 1, paramInt2 + 1)) && (a(paramInt1, paramInt2 + 1)) && (a(paramInt1 + 1, paramInt2))) a(this, paramInt1, paramInt2);
+/*  87 */       if ((a(paramInt1 - 1, paramInt2)) && (!b(paramInt1 - 1, paramInt2).n) && (a(paramInt1 - 1, paramInt2 + 1)) && (a(paramInt1, paramInt2 + 1)) && (a(paramInt1 - 1, paramInt2))) a(this, paramInt1 - 1, paramInt2);
+/*  88 */       if ((a(paramInt1, paramInt2 - 1)) && (!b(paramInt1, paramInt2 - 1).n) && (a(paramInt1 + 1, paramInt2 - 1)) && (a(paramInt1, paramInt2 - 1)) && (a(paramInt1 + 1, paramInt2))) a(this, paramInt1, paramInt2 - 1);
+/*  89 */       if ((a(paramInt1 - 1, paramInt2 - 1)) && (!b(paramInt1 - 1, paramInt2 - 1).n) && (a(paramInt1 - 1, paramInt2 - 1)) && (a(paramInt1, paramInt2 - 1)) && (a(paramInt1 - 1, paramInt2))) a(this, paramInt1 - 1, paramInt2 - 1);
+/*     */ 
+/*     */     }
+/*     */ 
+/*  94 */     this.a = paramInt1;
+/*  95 */     this.b = paramInt2;
+/*  96 */     this.h = this.f[n];
+/*  97 */     return this.f[n];
+/*     */   }
+/*     */ 
+/*     */   private ib e(int paramInt1, int paramInt2) {
+/* 101 */     if (this.e == null) return this.c; try
+/*     */     {
+/* 103 */       ib localib = this.e.a(this.g, paramInt1, paramInt2);
+/* 104 */       if (localib != null) {
+/* 105 */         localib.r = this.g.e;
+/*     */       }
+/* 107 */       return localib;
+/*     */     } catch (Exception localException) {
+/* 109 */       localException.printStackTrace();
+/* 110 */     }return this.c;
+/*     */   }
+/*     */ 
+/*     */   private void a(ib paramib)
+/*     */   {
+/* 115 */     if (this.e == null) return; try
+/*     */     {
+/* 117 */       this.e.b(this.g, paramib);
+/*     */     } catch (Exception localException) {
+/* 119 */       localException.printStackTrace();
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private void b(ib paramib) {
+/* 124 */     if (this.e == null) return; try
+/*     */     {
+/* 126 */       paramib.r = this.g.e;
+/* 127 */       this.e.a(this.g, paramib);
+/*     */     } catch (IOException localIOException) {
+/* 129 */       localIOException.printStackTrace();
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a(bm parambm, int paramInt1, int paramInt2) {
+/* 134 */     ib localib = b(paramInt1, paramInt2);
+/* 135 */     if (!localib.n) {
+/* 136 */       localib.n = true;
+/* 137 */       if (this.d != null) {
+/* 138 */         this.d.a(parambm, paramInt1, paramInt2);
+/* 139 */         localib.g();
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public boolean a(boolean paramBoolean, ru paramru)
+/*     */   {
+/* 147 */     int k = 0;
+/* 148 */     int m = 0;
+/* 149 */     if (paramru != null) {
+/* 150 */       for (n = 0; n < this.f.length; n++) {
+/* 151 */         if ((this.f[n] != null) && (this.f[n].a(paramBoolean))) {
+/* 152 */           m++;
+/*     */         }
+/*     */       }
+/*     */     }
+/* 156 */     int n = 0;
+/* 157 */     for (int i1 = 0; i1 < this.f.length; i1++) {
+/* 158 */       if (this.f[i1] != null) {
+/* 159 */         if ((paramBoolean) && (!this.f[i1].p)) a(this.f[i1]);
+/* 160 */         if (this.f[i1].a(paramBoolean)) {
+/* 161 */           b(this.f[i1]);
+/* 162 */           this.f[i1].o = false;
+/* 163 */           k++; if ((k == 2) && (!paramBoolean)) return false;
+/* 164 */           if (paramru != null) {
+/* 165 */             n++; if (n % 10 == 0) {
+/* 166 */               paramru.a(n * 100 / m);
+/*     */             }
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     }
+/*     */ 
+/* 173 */     if (paramBoolean) {
+/* 174 */       if (this.e == null) return true;
+/* 175 */       this.e.b();
+/*     */     }
+/* 177 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public boolean a() {
+/* 181 */     if (this.e != null) this.e.a();
+/* 182 */     return this.d.a();
+/*     */   }
+/*     */ 
+/*     */   public boolean b() {
+/* 186 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public String c() {
+/* 190 */     return "ChunkCache: " + this.f.length;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hr
+ * JD-Core Version:    0.6.0
+ */

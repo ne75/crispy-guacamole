@@ -1,0 +1,97 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class dy extends ey
+/*    */ {
+/* 95 */   private static final gm a = new gm(eo.i, 1);
+/*    */ 
+/*    */   public dy(dn paramdn)
+/*    */   {
+/* 14 */     super(paramdn);
+/* 15 */     this.I = "/mob/skeleton.png";
+/*    */   }
+/*    */ 
+/*    */   protected String f()
+/*    */   {
+/* 20 */     return "mob.skeleton";
+/*    */   }
+/*    */ 
+/*    */   protected String g() {
+/* 24 */     return "mob.skeletonhurt";
+/*    */   }
+/*    */ 
+/*    */   protected String h_() {
+/* 28 */     return "mob.skeletonhurt";
+/*    */   }
+/*    */ 
+/*    */   public void m()
+/*    */   {
+/* 33 */     if (this.aB.d()) {
+/* 34 */       float f = a(1.0F);
+/* 35 */       if ((f > 0.5F) && 
+/* 36 */         (this.aB.k(gd.b(this.aF), gd.b(this.aG), gd.b(this.aH))) && (this.bm.nextFloat() * 30.0F < (f - 0.4F) * 2.0F)) {
+/* 37 */         this.bp = 300;
+/*    */       }
+/*    */ 
+/*    */     }
+/*    */ 
+/* 42 */     super.m();
+/*    */   }
+/*    */ 
+/*    */   protected void a(nl paramnl, float paramFloat) {
+/* 46 */     if (paramFloat < 10.0F) {
+/* 47 */       double d1 = paramnl.aF - this.aF;
+/* 48 */       double d2 = paramnl.aH - this.aH;
+/*    */ 
+/* 50 */       if (this.Y == 0) {
+/* 51 */         nj localnj = new nj(this.aB, this);
+/* 52 */         localnj.aG += 1.399999976158142D;
+/*    */ 
+/* 54 */         double d3 = paramnl.aG - 0.2000000029802322D - localnj.aG;
+/*    */ 
+/* 56 */         float f = gd.a(d1 * d1 + d2 * d2) * 0.2F;
+/*    */ 
+/* 58 */         this.aB.a(this, "random.bow", 1.0F, 1.0F / (this.bm.nextFloat() * 0.4F + 0.8F));
+/* 59 */         this.aB.a(localnj);
+/* 60 */         localnj.a(d1, d3 + f, d2, 0.6F, 12.0F);
+/* 61 */         this.Y = 30;
+/*    */       }
+/* 63 */       this.aL = ((float)(Math.atan2(d2, d1) * 180.0D / 3.141592741012573D) - 90.0F);
+/*    */ 
+/* 65 */       this.e = true;
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw) {
+/* 70 */     super.a(paramjw);
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 74 */     super.b(paramjw);
+/*    */   }
+/*    */ 
+/*    */   protected int i() {
+/* 78 */     return eo.j.ba;
+/*    */   }
+/*    */ 
+/*    */   protected void o()
+/*    */   {
+/* 84 */     int i = this.bm.nextInt(3);
+/* 85 */     for (int j = 0; j < i; j++) {
+/* 86 */       b(eo.j.ba, 1);
+/*    */     }
+/*    */ 
+/* 89 */     i = this.bm.nextInt(3);
+/* 90 */     for (j = 0; j < i; j++)
+/* 91 */       b(eo.aV.ba, 1);
+/*    */   }
+/*    */ 
+/*    */   public gm o_()
+/*    */   {
+/* 98 */     return a;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     dy
+ * JD-Core Version:    0.6.0
+ */

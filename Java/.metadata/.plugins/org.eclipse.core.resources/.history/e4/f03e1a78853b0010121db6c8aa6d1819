@@ -1,0 +1,29 @@
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class et extends ft
+/*    */ {
+/*    */   public et(gl paramgl, ak paramak)
+/*    */   {
+/* 11 */     super(new nf(paramgl, paramak));
+/*    */   }
+/*    */ 
+/*    */   protected void j() {
+/* 15 */     this.g.b("Dispenser", 60, 6, 4210752);
+/* 16 */     this.g.b("Inventory", 8, this.h - 96 + 2, 4210752);
+/*    */   }
+/*    */ 
+/*    */   protected void a(float paramFloat) {
+/* 20 */     int i = this.b.n.a("/gui/trap.png");
+/* 21 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 22 */     this.b.n.b(i);
+/* 23 */     int j = (this.c - this.a) / 2;
+/* 24 */     int k = (this.d - this.h) / 2;
+/* 25 */     b(j, k, 0, 0, this.a, this.h);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     et
+ * JD-Core Version:    0.6.0
+ */

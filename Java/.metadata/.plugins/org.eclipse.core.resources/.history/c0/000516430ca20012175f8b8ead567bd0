@@ -1,0 +1,15 @@
+package main;
+
+import java.util.ArrayList;
+import info.gridworld.grid.UnboundedGrid;
+import info.gridworld.grid.Location;
+
+public class MyUnboundedGrid<E> extends UnboundedGrid<E> {
+
+    public ArrayList<Location> getEmptyAdjacentLocations(Location l){
+	ArrayList<Location> empty = new ArrayList<Location>();
+	
+	return empty;
+    }
+    
+}

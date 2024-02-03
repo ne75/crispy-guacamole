@@ -1,0 +1,23 @@
+/*    */ public class mi extends pj
+/*    */ {
+/*    */   public mi(int paramInt)
+/*    */   {
+/*  9 */     super(paramInt, 192, ic.d);
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt)
+/*    */   {
+/* 14 */     if (paramInt == 1) {
+/* 15 */       return this.bh - 16;
+/*    */     }
+/* 17 */     if (paramInt == 0) {
+/* 18 */       return this.bh + 16;
+/*    */     }
+/* 20 */     return this.bh;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mi
+ * JD-Core Version:    0.6.0
+ */

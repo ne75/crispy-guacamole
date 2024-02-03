@@ -1,0 +1,19 @@
+package main;
+
+/*
+ * Program 54c (Circles)
+ * Nikita Ermoshkin
+ * 09-18-12
+ * JDK 7, Mac OS 10.8
+ * 
+ * 
+ */
+
+import java.io.*;
+
+public class Cirlces {
+	public static void main(String[] args){
+		
+	}
+
+}

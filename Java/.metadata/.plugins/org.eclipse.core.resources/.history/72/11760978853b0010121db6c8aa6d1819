@@ -1,0 +1,116 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class dc extends kz
+/*     */ {
+/*     */   public boolean a(dn paramdn, Random paramRandom, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*  18 */     int i = 3;
+/*  19 */     int j = paramRandom.nextInt(2) + 2;
+/*  20 */     int k = paramRandom.nextInt(2) + 2;
+/*     */ 
+/*  22 */     int m = 0;
+/*     */     int i1;
+/*     */     int i2;
+/*  23 */     for (int n = paramInt1 - j - 1; n <= paramInt1 + j + 1; n++) {
+/*  24 */       for (i1 = paramInt2 - 1; i1 <= paramInt2 + i + 1; i1++) {
+/*  25 */         for (i2 = paramInt3 - k - 1; i2 <= paramInt3 + k + 1; i2++) {
+/*  26 */           ic localic = paramdn.f(n, i1, i2);
+/*  27 */           if ((i1 == paramInt2 - 1) && (!localic.a())) return false;
+/*  28 */           if ((i1 == paramInt2 + i + 1) && (!localic.a())) return false;
+/*     */ 
+/*  30 */           if (((n != paramInt1 - j - 1) && (n != paramInt1 + j + 1) && (i2 != paramInt3 - k - 1) && (i2 != paramInt3 + k + 1)) || 
+/*  31 */             (i1 != paramInt2) || (!paramdn.d(n, i1, i2)) || (!paramdn.d(n, i1 + 1, i2))) continue;
+/*  32 */           m++;
+/*     */         }
+/*     */ 
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/*  40 */     if ((m < 1) || (m > 5)) return false;
+/*     */ 
+/*  42 */     for (n = paramInt1 - j - 1; n <= paramInt1 + j + 1; n++) {
+/*  43 */       for (i1 = paramInt2 + i; i1 >= paramInt2 - 1; i1--) {
+/*  44 */         for (i2 = paramInt3 - k - 1; i2 <= paramInt3 + k + 1; i2++)
+/*     */         {
+/*  46 */           if ((n == paramInt1 - j - 1) || (i1 == paramInt2 - 1) || (i2 == paramInt3 - k - 1) || (n == paramInt1 + j + 1) || (i1 == paramInt2 + i + 1) || (i2 == paramInt3 + k + 1)) {
+/*  47 */             if ((i1 >= 0) && (!paramdn.f(n, i1 - 1, i2).a()))
+/*  48 */               paramdn.e(n, i1, i2, 0);
+/*  49 */             else if (paramdn.f(n, i1, i2).a()) {
+/*  50 */               if ((i1 == paramInt2 - 1) && (paramRandom.nextInt(4) != 0))
+/*  51 */                 paramdn.e(n, i1, i2, pj.ao.bi);
+/*     */               else
+/*  53 */                 paramdn.e(n, i1, i2, pj.w.bi);
+/*     */             }
+/*     */           }
+/*     */           else {
+/*  57 */             paramdn.e(n, i1, i2, 0);
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     }
+/*     */ 
+/*  63 */     for (n = 0; n < 2; n++) {
+/*  64 */       for (i1 = 0; i1 < 3; i1++) {
+/*  65 */         i2 = paramInt1 + paramRandom.nextInt(j * 2 + 1) - j;
+/*  66 */         int i3 = paramInt2;
+/*  67 */         int i4 = paramInt3 + paramRandom.nextInt(k * 2 + 1) - k;
+/*  68 */         if (!paramdn.d(i2, i3, i4))
+/*     */           continue;
+/*  70 */         int i5 = 0;
+/*  71 */         if (paramdn.f(i2 - 1, i3, i4).a()) i5++;
+/*  72 */         if (paramdn.f(i2 + 1, i3, i4).a()) i5++;
+/*  73 */         if (paramdn.f(i2, i3, i4 - 1).a()) i5++;
+/*  74 */         if (paramdn.f(i2, i3, i4 + 1).a()) i5++;
+/*     */ 
+/*  76 */         if (i5 != 1)
+/*     */           continue;
+/*  78 */         paramdn.e(i2, i3, i4, pj.au.bi);
+/*  79 */         gy localgy = (gy)paramdn.b(i2, i3, i4);
+/*  80 */         for (int i6 = 0; i6 < 8; i6++) {
+/*  81 */           gm localgm = a(paramRandom);
+/*  82 */           if (localgm == null) continue; localgy.a(paramRandom.nextInt(localgy.a()), localgm);
+/*     */         }
+/*     */ 
+/*  85 */         break;
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/*  90 */     paramdn.e(paramInt1, paramInt2, paramInt3, pj.as.bi);
+/*  91 */     bu localbu = (bu)paramdn.b(paramInt1, paramInt2, paramInt3);
+/*  92 */     localbu.a(b(paramRandom));
+/*     */ 
+/*  95 */     return true;
+/*     */   }
+/*     */ 
+/*     */   private gm a(Random paramRandom) {
+/*  99 */     int i = paramRandom.nextInt(11);
+/* 100 */     if (i == 0) return new gm(eo.ay);
+/* 101 */     if (i == 1) return new gm(eo.m, paramRandom.nextInt(4) + 1);
+/* 102 */     if (i == 2) return new gm(eo.S);
+/* 103 */     if (i == 3) return new gm(eo.R, paramRandom.nextInt(4) + 1);
+/* 104 */     if (i == 4) return new gm(eo.K, paramRandom.nextInt(4) + 1);
+/* 105 */     if (i == 5) return new gm(eo.I, paramRandom.nextInt(4) + 1);
+/* 106 */     if (i == 6) return new gm(eo.au);
+/* 107 */     if ((i == 7) && (paramRandom.nextInt(100) == 0)) return new gm(eo.ar);
+/* 108 */     if ((i == 8) && (paramRandom.nextInt(2) == 0)) return new gm(eo.aA, paramRandom.nextInt(4) + 1);
+/* 109 */     if ((i == 9) && (paramRandom.nextInt(10) == 0)) return new gm(eo.c[(eo.aY.ba + paramRandom.nextInt(2))]);
+/*     */ 
+/* 111 */     return null;
+/*     */   }
+/*     */ 
+/*     */   private String b(Random paramRandom) {
+/* 115 */     int i = paramRandom.nextInt(4);
+/* 116 */     if (i == 0) return "Skeleton";
+/* 117 */     if (i == 1) return "Zombie";
+/* 118 */     if (i == 2) return "Zombie";
+/* 119 */     if (i == 3) return "Spider";
+/* 120 */     return "";
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     dc
+ * JD-Core Version:    0.6.0
+ */

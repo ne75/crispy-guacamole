@@ -1,0 +1,78 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class ey extends fz
+/*    */   implements do
+/*    */ {
+/* 12 */   protected int c = 2;
+/*    */ 
+/*    */   public ey(dn paramdn) {
+/* 15 */     super(paramdn);
+/* 16 */     this.S = 20;
+/*    */   }
+/*    */ 
+/*    */   public void m() {
+/* 20 */     float f = a(1.0F);
+/* 21 */     if (f > 0.5F) {
+/* 22 */       this.ap += 2;
+/*    */     }
+/* 24 */     super.m();
+/*    */   }
+/*    */ 
+/*    */   public void q_() {
+/* 28 */     super.q_();
+/* 29 */     if (this.aB.k == 0) F(); 
+/*    */   }
+/*    */ 
+/*    */   protected nl e_()
+/*    */   {
+/* 33 */     eu localeu = this.aB.a(this, 16.0D);
+/* 34 */     if ((localeu != null) && (e(localeu))) return localeu;
+/* 35 */     return null;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(nl paramnl, int paramInt) {
+/* 39 */     if (super.a(paramnl, paramInt)) {
+/* 40 */       if ((this.az == paramnl) || (this.aA == paramnl)) return true;
+/*    */ 
+/* 42 */       if (paramnl != this) {
+/* 43 */         this.d = paramnl;
+/*    */       }
+/* 45 */       return true;
+/*    */     }
+/* 47 */     return false;
+/*    */   }
+/*    */ 
+/*    */   protected void a(nl paramnl, float paramFloat) {
+/* 51 */     if ((paramFloat < 2.5D) && (paramnl.aP.e > this.aP.b) && (paramnl.aP.b < this.aP.e)) {
+/* 52 */       this.Y = 20;
+/* 53 */       paramnl.a(this, this.c);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   protected float a(int paramInt1, int paramInt2, int paramInt3) {
+/* 58 */     return 0.5F - this.aB.c(paramInt1, paramInt2, paramInt3);
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw) {
+/* 62 */     super.a(paramjw);
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 66 */     super.b(paramjw);
+/*    */   }
+/*    */ 
+/*    */   public boolean c() {
+/* 70 */     int i = gd.b(this.aF);
+/* 71 */     int j = gd.b(this.aP.b);
+/* 72 */     int k = gd.b(this.aH);
+/* 73 */     if (this.aB.a(cs.a, i, j, k) > this.bm.nextInt(32)) return false;
+/* 74 */     int m = this.aB.l(i, j, k);
+/*    */ 
+/* 76 */     return (m <= this.bm.nextInt(8)) && (super.c());
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ey
+ * JD-Core Version:    0.6.0
+ */

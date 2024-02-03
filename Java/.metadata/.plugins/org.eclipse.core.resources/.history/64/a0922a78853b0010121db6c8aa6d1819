@@ -1,0 +1,23 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class me extends eo
+/*    */ {
+/*    */   public me(int paramInt)
+/*    */   {
+/*  9 */     super(paramInt);
+/* 10 */     this.bb = 1;
+/*    */   }
+/*    */ 
+/*    */   public gm a(gm paramgm, dn paramdn, eu parameu) {
+/* 14 */     if (parameu.f.c(eo.j.ba)) {
+/* 15 */       paramdn.a(parameu, "random.bow", 1.0F, 1.0F / (b.nextFloat() * 0.4F + 0.8F));
+/* 16 */       if (!paramdn.z) paramdn.a(new nj(paramdn, parameu));
+/*    */     }
+/* 18 */     return paramgm;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     me
+ * JD-Core Version:    0.6.0
+ */

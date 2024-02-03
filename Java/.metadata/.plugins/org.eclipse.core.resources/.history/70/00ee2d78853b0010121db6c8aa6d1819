@@ -1,0 +1,41 @@
+/*    */ import java.io.IOException;
+/*    */ import java.util.Properties;
+/*    */ 
+/*    */ public class n
+/*    */ {
+/*  8 */   private static n a = new n();
+/*    */   private Properties b;
+/*    */ 
+/*    */   private n()
+/*    */   {
+/* 15 */     this.b = new Properties();
+/*    */     try {
+/* 17 */       this.b.load(n.class.getResourceAsStream("/lang/en_US.lang"));
+/*    */     } catch (IOException localIOException) {
+/* 19 */       localIOException.printStackTrace();
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public static n a()
+/*    */   {
+/* 25 */     return a;
+/*    */   }
+/*    */ 
+/*    */   public String a(String paramString) {
+/* 29 */     return this.b.getProperty(paramString, paramString);
+/*    */   }
+/*    */ 
+/*    */   public String a(String paramString, Object[] paramArrayOfObject) {
+/* 33 */     String str = this.b.getProperty(paramString, paramString);
+/* 34 */     return String.format(str, paramArrayOfObject);
+/*    */   }
+/*    */ 
+/*    */   public String b(String paramString) {
+/* 38 */     return this.b.getProperty(paramString + ".name", "");
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     n
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,153 @@
+/*     */ import java.util.List;
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class az extends pj
+/*     */ {
+/*     */   private mt a;
+/*     */ 
+/*     */   protected az(int paramInt1, int paramInt2, mt parammt)
+/*     */   {
+/*  19 */     super(paramInt1, paramInt2, ic.d);
+/*  20 */     this.a = parammt;
+/*  21 */     b(true);
+/*     */ 
+/*  23 */     float f = 0.0625F;
+/*  24 */     a(f, 0.0F, f, 1.0F - f, 0.03125F, 1.0F - f);
+/*     */   }
+/*     */ 
+/*     */   public int d()
+/*     */   {
+/*  29 */     return 20;
+/*     */   }
+/*     */ 
+/*     */   public db d(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  33 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public boolean a() {
+/*  37 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean b()
+/*     */   {
+/*  45 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  49 */     return paramdn.g(paramInt1, paramInt2 - 1, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   public void e(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  56 */     int i = 0;
+/*     */ 
+/*  58 */     if (!paramdn.g(paramInt1, paramInt2 - 1, paramInt3)) i = 1;
+/*     */ 
+/*  60 */     if (i != 0) {
+/*  61 */       b_(paramdn, paramInt1, paramInt2, paramInt3, paramdn.e(paramInt1, paramInt2, paramInt3));
+/*  62 */       paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, Random paramRandom) {
+/*  67 */     if (paramdn.z) return;
+/*  68 */     if (paramdn.e(paramInt1, paramInt2, paramInt3) == 0) {
+/*  69 */       return;
+/*     */     }
+/*     */ 
+/*  72 */     h(paramdn, paramInt1, paramInt2, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, nl paramnl) {
+/*  76 */     if (paramdn.z) return;
+/*     */ 
+/*  78 */     if (paramdn.e(paramInt1, paramInt2, paramInt3) == 1) {
+/*  79 */       return;
+/*     */     }
+/*     */ 
+/*  82 */     h(paramdn, paramInt1, paramInt2, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   private void h(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  86 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3) == 1 ? 1 : 0;
+/*  87 */     int j = 0;
+/*     */ 
+/*  89 */     float f = 0.125F;
+/*  90 */     List localList = null;
+/*  91 */     if (this.a == mt.a) localList = paramdn.b(null, db.b(paramInt1 + f, paramInt2, paramInt3 + f, paramInt1 + 1 - f, paramInt2 + 0.25D, paramInt3 + 1 - f));
+/*  92 */     if (this.a == mt.b) localList = paramdn.a(ig.class, db.b(paramInt1 + f, paramInt2, paramInt3 + f, paramInt1 + 1 - f, paramInt2 + 0.25D, paramInt3 + 1 - f));
+/*  93 */     if (this.a == mt.c) localList = paramdn.a(eu.class, db.b(paramInt1 + f, paramInt2, paramInt3 + f, paramInt1 + 1 - f, paramInt2 + 0.25D, paramInt3 + 1 - f));
+/*  94 */     if (localList.size() > 0) {
+/*  95 */       j = 1;
+/*     */     }
+/*     */ 
+/*  98 */     if ((j != 0) && (i == 0)) {
+/*  99 */       paramdn.c(paramInt1, paramInt2, paramInt3, 1);
+/* 100 */       paramdn.h(paramInt1, paramInt2, paramInt3, this.bi);
+/* 101 */       paramdn.h(paramInt1, paramInt2 - 1, paramInt3, this.bi);
+/* 102 */       paramdn.b(paramInt1, paramInt2, paramInt3, paramInt1, paramInt2, paramInt3);
+/*     */ 
+/* 104 */       paramdn.a(paramInt1 + 0.5D, paramInt2 + 0.1D, paramInt3 + 0.5D, "random.click", 0.3F, 0.6F);
+/*     */     }
+/* 106 */     if ((j == 0) && (i != 0)) {
+/* 107 */       paramdn.c(paramInt1, paramInt2, paramInt3, 0);
+/* 108 */       paramdn.h(paramInt1, paramInt2, paramInt3, this.bi);
+/* 109 */       paramdn.h(paramInt1, paramInt2 - 1, paramInt3, this.bi);
+/* 110 */       paramdn.b(paramInt1, paramInt2, paramInt3, paramInt1, paramInt2, paramInt3);
+/*     */ 
+/* 112 */       paramdn.a(paramInt1 + 0.5D, paramInt2 + 0.1D, paramInt3 + 0.5D, "random.click", 0.3F, 0.5F);
+/*     */     }
+/*     */ 
+/* 115 */     if (j != 0)
+/* 116 */       paramdn.i(paramInt1, paramInt2, paramInt3, this.bi);
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/* 121 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/* 122 */     if (i > 0) {
+/* 123 */       paramdn.h(paramInt1, paramInt2, paramInt3, this.bi);
+/* 124 */       paramdn.h(paramInt1, paramInt2 - 1, paramInt3, this.bi);
+/*     */     }
+/* 126 */     super.b(paramdn, paramInt1, paramInt2, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   public void a(ri paramri, int paramInt1, int paramInt2, int paramInt3) {
+/* 130 */     int i = paramri.e(paramInt1, paramInt2, paramInt3) == 1 ? 1 : 0;
+/*     */ 
+/* 132 */     float f = 0.0625F;
+/* 133 */     if (i != 0)
+/* 134 */       a(f, 0.0F, f, 1.0F - f, 0.03125F, 1.0F - f);
+/*     */     else
+/* 136 */       a(f, 0.0F, f, 1.0F - f, 0.0625F, 1.0F - f);
+/*     */   }
+/*     */ 
+/*     */   public boolean c(ri paramri, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/* 141 */     return paramri.e(paramInt1, paramInt2, paramInt3) > 0;
+/*     */   }
+/*     */ 
+/*     */   public boolean c(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/* 146 */     if (paramdn.e(paramInt1, paramInt2, paramInt3) == 0) return false;
+/* 147 */     return paramInt4 == 1;
+/*     */   }
+/*     */ 
+/*     */   public boolean e() {
+/* 151 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public void f() {
+/* 155 */     float f1 = 0.5F;
+/* 156 */     float f2 = 0.125F;
+/* 157 */     float f3 = 0.5F;
+/* 158 */     a(0.5F - f1, 0.5F - f2, 0.5F - f3, 0.5F + f1, 0.5F + f2, 0.5F + f3);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     az
+ * JD-Core Version:    0.6.0
+ */

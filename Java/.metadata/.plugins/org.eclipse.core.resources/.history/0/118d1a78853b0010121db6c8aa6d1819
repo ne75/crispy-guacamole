@@ -1,0 +1,23 @@
+/*    */ public class ez
+/*    */ {
+/*  7 */   private String[][] a = { { "XXX", " # ", " # " }, { "X", "#", "#" }, { "XX", "X#", " #" }, { "XX", " #", " #" } };
+/*    */ 
+/* 25 */   private Object[][] b = { { pj.x, pj.w, eo.m, eo.l, eo.n }, { eo.r, eo.v, eo.e, eo.z, eo.G }, { eo.q, eo.u, eo.d, eo.y, eo.F }, { eo.s, eo.w, eo.f, eo.A, eo.H }, { eo.L, eo.M, eo.N, eo.O, eo.P } };
+/*    */ 
+/*    */   public void a(fg paramfg)
+/*    */   {
+/* 34 */     for (int i = 0; i < this.b[0].length; i++) {
+/* 35 */       Object localObject = this.b[0][i];
+/*    */ 
+/* 37 */       for (int j = 0; j < this.b.length - 1; j++) {
+/* 38 */         eo localeo = (eo)this.b[(j + 1)][i];
+/* 39 */         paramfg.a(new gm(localeo), new Object[] { this.a[j], Character.valueOf('#'), eo.B, Character.valueOf('X'), localObject });
+/*    */       }
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ez
+ * JD-Core Version:    0.6.0
+ */

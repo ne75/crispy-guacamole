@@ -1,0 +1,11 @@
+package main;
+
+public class PolyTest {
+    public static void main(String[] args) {
+	String str = "5x^2 + 4x - 3";
+	
+	PolyParse p = new PolyParse();
+
+    }
+
+}

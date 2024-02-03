@@ -1,0 +1,27 @@
+/*    */ import java.io.DataInput;
+/*    */ import java.io.DataOutput;
+/*    */ 
+/*    */ public class hx extends fy
+/*    */ {
+/*    */   void a(DataInput paramDataInput)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   void a(DataOutput paramDataOutput)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public byte a()
+/*    */   {
+/* 14 */     return 0;
+/*    */   }
+/*    */ 
+/*    */   public String toString() {
+/* 18 */     return "END";
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hx
+ * JD-Core Version:    0.6.0
+ */

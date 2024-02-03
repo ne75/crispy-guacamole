@@ -1,0 +1,26 @@
+/*      */ import java.awt.event.WindowAdapter;
+/*      */ import java.awt.event.WindowEvent;
+/*      */ import net.minecraft.client.Minecraft;
+/*      */ 
+/*      */ public final class hn extends WindowAdapter
+/*      */ {
+/*      */   public hn(Minecraft paramMinecraft, Thread paramThread)
+/*      */   {
+/*      */   }
+/*      */ 
+/*      */   public void windowClosing(WindowEvent paramWindowEvent)
+/*      */   {
+/* 1601 */     this.a.d();
+/*      */     try {
+/* 1603 */       this.b.join();
+/*      */     } catch (InterruptedException localInterruptedException) {
+/* 1605 */       localInterruptedException.printStackTrace();
+/*      */     }
+/* 1607 */     System.exit(0);
+/*      */   }
+/*      */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hn
+ * JD-Core Version:    0.6.0
+ */

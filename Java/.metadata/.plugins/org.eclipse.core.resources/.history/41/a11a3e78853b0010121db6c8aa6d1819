@@ -1,0 +1,68 @@
+/*    */ public class w extends rp
+/*    */ {
+/*    */   float a;
+/*    */ 
+/*    */   public w(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6)
+/*    */   {
+/* 10 */     this(paramdn, paramDouble1, paramDouble2, paramDouble3, paramDouble4, paramDouble5, paramDouble6, 2.0F);
+/*    */   }
+/*    */ 
+/*    */   public w(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6, float paramFloat)
+/*    */   {
+/* 16 */     super(paramdn, paramDouble1, paramDouble2, paramDouble3, 0.0D, 0.0D, 0.0D);
+/* 17 */     this.aI *= 0.009999999776482582D;
+/* 18 */     this.aJ *= 0.009999999776482582D;
+/* 19 */     this.aK *= 0.009999999776482582D;
+/* 20 */     this.aJ += 0.2D;
+/*    */ 
+/* 22 */     this.i = (gd.a(((float)paramDouble4 + 0.0F) * 3.141593F * 2.0F) * 0.65F + 0.35F);
+/* 23 */     this.j = (gd.a(((float)paramDouble4 + 0.3333333F) * 3.141593F * 2.0F) * 0.65F + 0.35F);
+/* 24 */     this.k = (gd.a(((float)paramDouble4 + 0.6666667F) * 3.141593F * 2.0F) * 0.65F + 0.35F);
+/*    */ 
+/* 26 */     this.g *= 0.75F;
+/* 27 */     this.g *= paramFloat;
+/* 28 */     this.a = this.g;
+/*    */ 
+/* 30 */     this.f = 6;
+/* 31 */     this.bj = false;
+/*    */ 
+/* 34 */     this.b = 64;
+/*    */   }
+/*    */ 
+/*    */   public void a(jy paramjy, float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6)
+/*    */   {
+/* 39 */     float f = (this.e + paramFloat1) / this.f * 32.0F;
+/* 40 */     if (f < 0.0F) f = 0.0F;
+/* 41 */     if (f > 1.0F) f = 1.0F;
+/*    */ 
+/* 43 */     this.g = (this.a * f);
+/* 44 */     super.a(paramjy, paramFloat1, paramFloat2, paramFloat3, paramFloat4, paramFloat5, paramFloat6);
+/*    */   }
+/*    */ 
+/*    */   public void q_() {
+/* 48 */     this.aC = this.aF;
+/* 49 */     this.aD = this.aG;
+/* 50 */     this.aE = this.aH;
+/*    */ 
+/* 52 */     if (this.e++ >= this.f) F();
+/*    */ 
+/* 55 */     d(this.aI, this.aJ, this.aK);
+/* 56 */     if (this.aG == this.aD) {
+/* 57 */       this.aI *= 1.1D;
+/* 58 */       this.aK *= 1.1D;
+/*    */     }
+/* 60 */     this.aI *= 0.660000026226044D;
+/* 61 */     this.aJ *= 0.660000026226044D;
+/* 62 */     this.aK *= 0.660000026226044D;
+/*    */ 
+/* 64 */     if (this.aQ) {
+/* 65 */       this.aI *= 0.699999988079071D;
+/* 66 */       this.aK *= 0.699999988079071D;
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     w
+ * JD-Core Version:    0.6.0
+ */

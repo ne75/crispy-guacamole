@@ -1,0 +1,80 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class qs extends aq
+/*    */ {
+/*  9 */   public boolean a = false;
+/* 10 */   public float b = 0.0F;
+/* 11 */   public float c = 0.0F;
+/*    */   public float f;
+/*    */   public float g;
+/* 13 */   public float h = 1.0F;
+/*    */   public int i;
+/*    */ 
+/*    */   public qs(dn paramdn)
+/*    */   {
+/* 17 */     super(paramdn);
+/* 18 */     this.I = "/mob/chicken.png";
+/* 19 */     a(0.3F, 0.4F);
+/* 20 */     this.S = 4;
+/* 21 */     this.i = (this.bm.nextInt(6000) + 6000);
+/*    */   }
+/*    */ 
+/*    */   public void m() {
+/* 25 */     super.m();
+/*    */ 
+/* 27 */     this.g = this.b;
+/* 28 */     this.f = this.c;
+/*    */ 
+/* 30 */     this.c = (float)(this.c + (this.aQ ? -1 : 4) * 0.3D);
+/* 31 */     if (this.c < 0.0F) this.c = 0.0F;
+/* 32 */     if (this.c > 1.0F) this.c = 1.0F;
+/*    */ 
+/* 34 */     if ((!this.aQ) && (this.h < 1.0F)) this.h = 1.0F;
+/* 35 */     this.h = (float)(this.h * 0.9D);
+/*    */ 
+/* 37 */     if ((!this.aQ) && (this.aJ < 0.0D)) {
+/* 38 */       this.aJ *= 0.6D;
+/*    */     }
+/*    */ 
+/* 41 */     this.b += this.h * 2.0F;
+/*    */ 
+/* 43 */     if ((!this.aB.z) && (--this.i <= 0)) {
+/* 44 */       this.aB.a(this, "mob.chickenplop", 1.0F, (this.bm.nextFloat() - this.bm.nextFloat()) * 0.2F + 1.0F);
+/* 45 */       b(eo.aN.ba, 1);
+/* 46 */       this.i = (this.bm.nextInt(6000) + 6000);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   protected void c(float paramFloat)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw) {
+/* 55 */     super.a(paramjw);
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 59 */     super.b(paramjw);
+/*    */   }
+/*    */ 
+/*    */   protected String f() {
+/* 63 */     return "mob.chicken";
+/*    */   }
+/*    */ 
+/*    */   protected String g() {
+/* 67 */     return "mob.chickenhurt";
+/*    */   }
+/*    */ 
+/*    */   protected String h_() {
+/* 71 */     return "mob.chickenhurt";
+/*    */   }
+/*    */ 
+/*    */   protected int i() {
+/* 75 */     return eo.J.ba;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qs
+ * JD-Core Version:    0.6.0
+ */

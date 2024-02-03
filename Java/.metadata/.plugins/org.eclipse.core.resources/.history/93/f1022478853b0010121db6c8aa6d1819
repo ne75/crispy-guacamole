@@ -1,0 +1,41 @@
+/*     */ public class io
+/*     */ {
+/*     */   private final int a;
+/*     */   private final int b;
+/*     */   private Object c;
+/*     */   private boolean d;
+/*     */ 
+/*     */   public io(int paramInt1, int paramInt2, Object paramObject)
+/*     */   {
+/* 249 */     this.b = paramInt2;
+/* 250 */     this.c = paramObject;
+/* 251 */     this.a = paramInt1;
+/* 252 */     this.d = true;
+/*     */   }
+/*     */ 
+/*     */   public int a() {
+/* 256 */     return this.b;
+/*     */   }
+/*     */ 
+/*     */   public void a(Object paramObject) {
+/* 260 */     this.c = paramObject;
+/*     */   }
+/*     */ 
+/*     */   public Object b() {
+/* 264 */     return this.c;
+/*     */   }
+/*     */ 
+/*     */   public int c() {
+/* 268 */     return this.a;
+/*     */   }
+/*     */ 
+/*     */   public void a(boolean paramBoolean)
+/*     */   {
+/* 276 */     this.d = paramBoolean;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     io
+ * JD-Core Version:    0.6.0
+ */

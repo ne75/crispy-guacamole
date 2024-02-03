@@ -1,0 +1,167 @@
+/*     */ import java.awt.Toolkit;
+/*     */ import java.awt.datatransfer.Clipboard;
+/*     */ import java.awt.datatransfer.DataFlavor;
+/*     */ import java.awt.datatransfer.Transferable;
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.List;
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ import org.lwjgl.input.Keyboard;
+/*     */ import org.lwjgl.input.Mouse;
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ 
+/*     */ public class by extends or
+/*     */ {
+/*     */   protected Minecraft b;
+/*     */   public int c;
+/*     */   public int d;
+/*  21 */   protected List e = new ArrayList();
+/*  22 */   public boolean f = false;
+/*     */   protected nh g;
+/*  60 */   private hg a = null;
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, float paramFloat)
+/*     */   {
+/*  27 */     for (int i = 0; i < this.e.size(); i++) {
+/*  28 */       hg localhg = (hg)this.e.get(i);
+/*  29 */       localhg.a(this.b, paramInt1, paramInt2);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   protected void a(char paramChar, int paramInt) {
+/*  34 */     if (paramInt == 1) {
+/*  35 */       this.b.a(null);
+/*  36 */       this.b.e();
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public static String c() {
+/*     */     try {
+/*  42 */       Transferable localTransferable = Toolkit.getDefaultToolkit().getSystemClipboard().getContents(null);
+/*  43 */       if ((localTransferable != null) && (localTransferable.isDataFlavorSupported(DataFlavor.stringFlavor))) {
+/*  44 */         String str = (String)localTransferable.getTransferData(DataFlavor.stringFlavor);
+/*  45 */         return str;
+/*     */       }
+/*     */     } catch (Exception localException) {
+/*     */     }
+/*  49 */     return null;
+/*     */   }
+/*     */ 
+/*     */   protected void a(int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*  63 */     if (paramInt3 == 0)
+/*  64 */       for (int i = 0; i < this.e.size(); i++) {
+/*  65 */         hg localhg = (hg)this.e.get(i);
+/*  66 */         if (localhg.c(this.b, paramInt1, paramInt2)) {
+/*  67 */           this.a = localhg;
+/*  68 */           this.b.A.a("random.click", 1.0F, 1.0F);
+/*  69 */           a(localhg);
+/*     */         }
+/*     */       }
+/*     */   }
+/*     */ 
+/*     */   protected void b(int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*  76 */     if ((this.a != null) && (paramInt3 == 0)) {
+/*  77 */       this.a.a(paramInt1, paramInt2);
+/*  78 */       this.a = null;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   protected void a(hg paramhg) {
+/*     */   }
+/*     */ 
+/*     */   public void a(Minecraft paramMinecraft, int paramInt1, int paramInt2) {
+/*  86 */     this.b = paramMinecraft;
+/*  87 */     this.g = paramMinecraft.o;
+/*  88 */     this.c = paramInt1;
+/*  89 */     this.d = paramInt2;
+/*  90 */     this.e.clear();
+/*  91 */     a();
+/*     */   }
+/*     */ 
+/*     */   public void a()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void d()
+/*     */   {
+/* 103 */     while (Mouse.next()) {
+/* 104 */       e();
+/*     */     }
+/*     */ 
+/* 107 */     while (Keyboard.next())
+/* 108 */       f();
+/*     */   }
+/*     */ 
+/*     */   public void e()
+/*     */   {
+/*     */     int i;
+/*     */     int j;
+/* 113 */     if (Mouse.getEventButtonState()) {
+/* 114 */       i = Mouse.getEventX() * this.c / this.b.c;
+/* 115 */       j = this.d - Mouse.getEventY() * this.d / this.b.d - 1;
+/* 116 */       a(i, j, Mouse.getEventButton());
+/*     */     } else {
+/* 118 */       i = Mouse.getEventX() * this.c / this.b.c;
+/* 119 */       j = this.d - Mouse.getEventY() * this.d / this.b.d - 1;
+/* 120 */       b(i, j, Mouse.getEventButton());
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void f() {
+/* 125 */     if (Keyboard.getEventKeyState()) {
+/* 126 */       if (Keyboard.getEventKey() == 87) {
+/* 127 */         this.b.h();
+/* 128 */         return;
+/*     */       }
+/* 130 */       a(Keyboard.getEventCharacter(), Keyboard.getEventKey());
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void g() {
+/*     */   }
+/*     */ 
+/*     */   public void h() {
+/*     */   }
+/*     */ 
+/*     */   public void i() {
+/* 141 */     a(0);
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt) {
+/* 145 */     if (this.b.e != null)
+/* 146 */       a(0, 0, this.c, this.d, -1072689136, -804253680);
+/*     */     else
+/* 148 */       b(paramInt);
+/*     */   }
+/*     */ 
+/*     */   public void b(int paramInt)
+/*     */   {
+/* 153 */     GL11.glDisable(2896);
+/* 154 */     GL11.glDisable(2912);
+/* 155 */     jy localjy = jy.a;
+/* 156 */     GL11.glBindTexture(3553, this.b.n.a("/gui/background.png"));
+/* 157 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 158 */     float f1 = 32.0F;
+/* 159 */     localjy.b();
+/* 160 */     localjy.b(4210752);
+/* 161 */     localjy.a(0.0D, this.d, 0.0D, 0.0D, this.d / f1 + paramInt);
+/* 162 */     localjy.a(this.c, this.d, 0.0D, this.c / f1, this.d / f1 + paramInt);
+/* 163 */     localjy.a(this.c, 0.0D, 0.0D, this.c / f1, 0 + paramInt);
+/* 164 */     localjy.a(0.0D, 0.0D, 0.0D, 0.0D, 0 + paramInt);
+/* 165 */     localjy.a();
+/*     */   }
+/*     */ 
+/*     */   public boolean b() {
+/* 169 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public void a(boolean paramBoolean, int paramInt)
+/*     */   {
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     by
+ * JD-Core Version:    0.6.0
+ */

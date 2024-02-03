@@ -1,0 +1,32 @@
+/*    */ public class lw
+/*    */ {
+/*    */   private int b;
+/*    */   private int c;
+/*    */   public int a;
+/*    */ 
+/*    */   public lw(int paramInt1, int paramInt2)
+/*    */   {
+/* 12 */     this.b = paramInt1;
+/* 13 */     this.c = paramInt2;
+/* 14 */     this.a = 1;
+/*    */ 
+/* 16 */     while ((this.b / (this.a + 1) >= 320) && (this.c / (this.a + 1) >= 240)) {
+/* 17 */       this.a += 1;
+/*    */     }
+/* 19 */     this.b /= this.a;
+/* 20 */     this.c /= this.a;
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 24 */     return this.b;
+/*    */   }
+/*    */ 
+/*    */   public int b() {
+/* 28 */     return this.c;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     lw
+ * JD-Core Version:    0.6.0
+ */

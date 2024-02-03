@@ -1,0 +1,20 @@
+/*    */ public class ih extends ic
+/*    */ {
+/*    */   public boolean a()
+/*    */   {
+/*  5 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/*  9 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public boolean c() {
+/* 13 */     return false;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ih
+ * JD-Core Version:    0.6.0
+ */

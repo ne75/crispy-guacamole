@@ -1,0 +1,156 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class fz extends ig
+/*     */ {
+/*     */   private cc a;
+/*     */   protected nl d;
+/*  17 */   protected boolean e = false;
+/*     */ 
+/*     */   public fz(dn paramdn)
+/*     */   {
+/*  12 */     super(paramdn);
+/*     */   }
+/*     */ 
+/*     */   protected void d_()
+/*     */   {
+/*  20 */     this.e = false;
+/*  21 */     float f1 = 16.0F;
+/*     */ 
+/*  23 */     if (this.d == null) {
+/*  24 */       this.d = e_();
+/*  25 */       if (this.d != null) {
+/*  26 */         this.a = this.aB.a(this, this.d, f1);
+/*     */       }
+/*     */     }
+/*  29 */     else if (!this.d.J()) {
+/*  30 */       this.d = null;
+/*     */     } else {
+/*  32 */       float f2 = this.d.f(this);
+/*  33 */       if (e(this.d)) {
+/*  34 */         a(this.d, f2);
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/*  46 */     if ((!this.e) && (this.d != null) && ((this.a == null) || (this.bm.nextInt(20) == 0))) {
+/*  47 */       this.a = this.aB.a(this, this.d, f1);
+/*  48 */     } else if (((this.a == null) && (this.bm.nextInt(80) == 0)) || (this.bm.nextInt(80) == 0))
+/*     */     {
+/*  50 */       i = 0;
+/*  51 */       int j = -1;
+/*  52 */       int k = -1;
+/*  53 */       int m = -1;
+/*  54 */       float f3 = -99999.0F;
+/*  55 */       for (int n = 0; n < 10; n++) {
+/*  56 */         int i1 = gd.b(this.aF + this.bm.nextInt(13) - 6.0D);
+/*  57 */         int i2 = gd.b(this.aG + this.bm.nextInt(7) - 3.0D);
+/*  58 */         int i3 = gd.b(this.aH + this.bm.nextInt(13) - 6.0D);
+/*  59 */         float f4 = a(i1, i2, i3);
+/*  60 */         if (f4 > f3) {
+/*  61 */           f3 = f4;
+/*  62 */           j = i1;
+/*  63 */           k = i2;
+/*  64 */           m = i3;
+/*  65 */           i = 1;
+/*     */         }
+/*     */       }
+/*     */ 
+/*  69 */       if (i != 0) {
+/*  70 */         this.a = this.aB.a(this, j, k, m, 10.0F);
+/*     */       }
+/*     */     }
+/*     */ 
+/*  74 */     int i = gd.b(this.aP.b);
+/*     */ 
+/*  76 */     boolean bool1 = j_();
+/*  77 */     boolean bool2 = Q();
+/*  78 */     this.aM = 0.0F;
+/*  79 */     if ((this.a == null) || (this.bm.nextInt(100) == 0)) {
+/*  80 */       super.d_();
+/*  81 */       this.a = null;
+/*  82 */       return;
+/*     */     }
+/*     */ 
+/*  85 */     ax localax = this.a.a(this);
+/*  86 */     double d1 = this.aY * 2.0F;
+/*  87 */     while ((localax != null) && (localax.d(this.aF, localax.b, this.aH) < d1 * d1)) {
+/*  88 */       this.a.a();
+/*  89 */       if (this.a.b()) {
+/*  90 */         localax = null;
+/*  91 */         this.a = null; continue;
+/*  92 */       }localax = this.a.a(this);
+/*     */     }
+/*     */ 
+/*  95 */     this.at = false;
+/*  96 */     if (localax != null) {
+/*  97 */       double d2 = localax.a - this.aF;
+/*  98 */       double d3 = localax.c - this.aH;
+/*  99 */       double d4 = localax.b - i;
+/*     */ 
+/* 101 */       float f5 = (float)(Math.atan2(d3, d2) * 180.0D / 3.141592741012573D) - 90.0F;
+/* 102 */       float f6 = f5 - this.aL;
+/* 103 */       this.ar = this.av;
+/* 104 */       while (f6 < -180.0F)
+/* 105 */         f6 += 360.0F;
+/* 106 */       while (f6 >= 180.0F)
+/* 107 */         f6 -= 360.0F;
+/* 108 */       if (f6 > 30.0F) {
+/* 109 */         f6 = 30.0F;
+/*     */       }
+/*     */ 
+/* 112 */       if (f6 < -30.0F) {
+/* 113 */         f6 = -30.0F;
+/*     */       }
+/*     */ 
+/* 116 */       this.aL += f6;
+/*     */ 
+/* 118 */       if ((this.e) && 
+/* 119 */         (this.d != null)) {
+/* 120 */         double d5 = this.d.aF - this.aF;
+/* 121 */         double d6 = this.d.aH - this.aH;
+/*     */ 
+/* 123 */         float f7 = this.aL;
+/* 124 */         this.aL = ((float)(Math.atan2(d6, d5) * 180.0D / 3.141592741012573D) - 90.0F);
+/*     */ 
+/* 126 */         f6 = (f7 - this.aL + 90.0F) * 3.141593F / 180.0F;
+/* 127 */         this.aq = (-gd.a(f6) * this.ar * 1.0F);
+/* 128 */         this.ar = (gd.b(f6) * this.ar * 1.0F);
+/*     */       }
+/*     */ 
+/* 131 */       if (d4 > 0.0D) {
+/* 132 */         this.at = true;
+/*     */       }
+/*     */     }
+/*     */ 
+/* 136 */     if (this.d != null) {
+/* 137 */       b(this.d, 30.0F);
+/*     */     }
+/*     */ 
+/* 140 */     if (this.aR) this.at = true;
+/* 141 */     if ((this.bm.nextFloat() < 0.8F) && ((bool1) || (bool2))) this.at = true; 
+/*     */   }
+/*     */ 
+/*     */   protected void a(nl paramnl, float paramFloat)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   protected float a(int paramInt1, int paramInt2, int paramInt3) {
+/* 148 */     return 0.0F;
+/*     */   }
+/*     */ 
+/*     */   protected nl e_() {
+/* 152 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public boolean c() {
+/* 156 */     int i = gd.b(this.aF);
+/* 157 */     int j = gd.b(this.aP.b);
+/* 158 */     int k = gd.b(this.aH);
+/* 159 */     return (super.c()) && (a(i, j, k) >= 0.0F);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fz
+ * JD-Core Version:    0.6.0
+ */

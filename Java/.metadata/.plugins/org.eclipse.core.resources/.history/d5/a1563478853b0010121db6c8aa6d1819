@@ -1,0 +1,27 @@
+/*      */ package paulscode.sound;
+/*      */ 
+/*      */ class MidiChannel$FadeThread extends SimpleThread
+/*      */ {
+/*      */   private MidiChannel$FadeThread(MidiChannel paramMidiChannel)
+/*      */   {
+/*      */   }
+/*      */ 
+/*      */   public void run()
+/*      */   {
+/* 1504 */     while (!dying())
+/*      */     {
+/* 1507 */       if ((this.this$0.fadeOutGain == -1.0F) && (this.this$0.fadeInGain == 1.0F))
+/* 1508 */         snooze(3600000L);
+/* 1509 */       MidiChannel.access$100(this.this$0);
+/*      */ 
+/* 1511 */       snooze(50L);
+/*      */     }
+/*      */ 
+/* 1514 */     cleanup();
+/*      */   }
+/*      */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     paulscode.sound.MidiChannel.FadeThread
+ * JD-Core Version:    0.6.0
+ */

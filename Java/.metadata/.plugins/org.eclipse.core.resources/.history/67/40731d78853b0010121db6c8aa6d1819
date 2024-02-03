@@ -1,0 +1,187 @@
+/*     */ public final class gm
+/*     */ {
+/*  13 */   public int a = 0;
+/*     */   public int b;
+/*     */   public int c;
+/*     */   private int d;
+/*     */ 
+/*     */   public gm(pj parampj)
+/*     */   {
+/*  25 */     this(parampj, 1);
+/*     */   }
+/*     */ 
+/*     */   public gm(pj parampj, int paramInt) {
+/*  29 */     this(parampj.bi, paramInt, 0);
+/*     */   }
+/*     */ 
+/*     */   public gm(pj parampj, int paramInt1, int paramInt2) {
+/*  33 */     this(parampj.bi, paramInt1, paramInt2);
+/*     */   }
+/*     */ 
+/*     */   public gm(eo parameo) {
+/*  37 */     this(parameo.ba, 1, 0);
+/*     */   }
+/*     */ 
+/*     */   public gm(eo parameo, int paramInt) {
+/*  41 */     this(parameo.ba, paramInt, 0);
+/*     */   }
+/*     */ 
+/*     */   public gm(eo parameo, int paramInt1, int paramInt2) {
+/*  45 */     this(parameo.ba, paramInt1, paramInt2);
+/*     */   }
+/*     */ 
+/*     */   public gm(int paramInt1, int paramInt2, int paramInt3) {
+/*  49 */     this.c = paramInt1;
+/*  50 */     this.a = paramInt2;
+/*  51 */     this.d = paramInt3;
+/*     */   }
+/*     */ 
+/*     */   public gm(jw paramjw) {
+/*  55 */     b(paramjw);
+/*     */   }
+/*     */ 
+/*     */   public gm a(int paramInt) {
+/*  59 */     this.a -= paramInt;
+/*  60 */     return new gm(this.c, paramInt, this.d);
+/*     */   }
+/*     */ 
+/*     */   public eo a()
+/*     */   {
+/*  69 */     return eo.c[this.c];
+/*     */   }
+/*     */ 
+/*     */   public int b() {
+/*  73 */     return a().a(this);
+/*     */   }
+/*     */ 
+/*     */   public boolean a(eu parameu, dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  77 */     return a().a(this, parameu, paramdn, paramInt1, paramInt2, paramInt3, paramInt4);
+/*     */   }
+/*     */ 
+/*     */   public float a(pj parampj) {
+/*  81 */     return a().a(this, parampj);
+/*     */   }
+/*     */ 
+/*     */   public gm a(dn paramdn, eu parameu) {
+/*  85 */     return a().a(this, paramdn, parameu);
+/*     */   }
+/*     */ 
+/*     */   public jw a(jw paramjw) {
+/*  89 */     paramjw.a("id", (short)this.c);
+/*  90 */     paramjw.a("Count", (byte)this.a);
+/*  91 */     paramjw.a("Damage", (short)this.d);
+/*  92 */     return paramjw;
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw) {
+/*  96 */     this.c = paramjw.d("id");
+/*  97 */     this.a = paramjw.c("Count");
+/*  98 */     this.d = paramjw.d("Damage");
+/*     */   }
+/*     */ 
+/*     */   public int c() {
+/* 102 */     return a().d();
+/*     */   }
+/*     */ 
+/*     */   public boolean d() {
+/* 106 */     return (c() > 1) && ((!e()) || (!g()));
+/*     */   }
+/*     */ 
+/*     */   public boolean e() {
+/* 110 */     return eo.c[this.c].f() > 0;
+/*     */   }
+/*     */ 
+/*     */   public boolean f()
+/*     */   {
+/* 120 */     return eo.c[this.c].e();
+/*     */   }
+/*     */ 
+/*     */   public boolean g() {
+/* 124 */     return (e()) && (this.d > 0);
+/*     */   }
+/*     */ 
+/*     */   public int h() {
+/* 128 */     return this.d;
+/*     */   }
+/*     */ 
+/*     */   public int i() {
+/* 132 */     return this.d;
+/*     */   }
+/*     */ 
+/*     */   public int j() {
+/* 136 */     return eo.c[this.c].f();
+/*     */   }
+/*     */ 
+/*     */   public void b(int paramInt) {
+/* 140 */     if (!e()) {
+/* 141 */       return;
+/*     */     }
+/*     */ 
+/* 144 */     this.d += paramInt;
+/* 145 */     if (this.d > j()) {
+/* 146 */       this.a -= 1;
+/* 147 */       if (this.a < 0) this.a = 0;
+/* 148 */       this.d = 0;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a(ig paramig) {
+/* 153 */     eo.c[this.c].a(this, paramig);
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 157 */     eo.c[this.c].a(this, paramInt1, paramInt2, paramInt3, paramInt4);
+/*     */   }
+/*     */ 
+/*     */   public int a(nl paramnl) {
+/* 161 */     return eo.c[this.c].a(paramnl);
+/*     */   }
+/*     */ 
+/*     */   public boolean b(pj parampj) {
+/* 165 */     return eo.c[this.c].a(parampj);
+/*     */   }
+/*     */ 
+/*     */   public void a(eu parameu)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void b(ig paramig)
+/*     */   {
+/* 178 */     eo.c[this.c].b(this, paramig);
+/*     */   }
+/*     */ 
+/*     */   public gm k() {
+/* 182 */     return new gm(this.c, this.a, this.d);
+/*     */   }
+/*     */ 
+/*     */   public static boolean a(gm paramgm1, gm paramgm2) {
+/* 186 */     if ((paramgm1 == null) && (paramgm2 == null)) return true;
+/* 187 */     if ((paramgm1 == null) || (paramgm2 == null)) return false;
+/* 188 */     return paramgm1.b(paramgm2);
+/*     */   }
+/*     */ 
+/*     */   private boolean b(gm paramgm) {
+/* 192 */     if (this.a != paramgm.a) return false;
+/* 193 */     if (this.c != paramgm.c) return false;
+/* 194 */     return this.d == paramgm.d;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(gm paramgm)
+/*     */   {
+/* 206 */     return (this.c == paramgm.c) && (this.d == paramgm.d);
+/*     */   }
+/*     */ 
+/*     */   public String l() {
+/* 210 */     return eo.c[this.c].b(this);
+/*     */   }
+/*     */ 
+/*     */   public String toString()
+/*     */   {
+/* 222 */     return this.a + "x" + eo.c[this.c].a() + "@" + this.d;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gm
+ * JD-Core Version:    0.6.0
+ */

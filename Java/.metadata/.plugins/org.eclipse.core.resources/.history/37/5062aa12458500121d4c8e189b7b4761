@@ -1,0 +1,67 @@
+package main;
+
+import java.util.*;
+
+public class NumToWords {
+    public static void main(String[] args){
+	
+	Scanner s = new Scanner(System.in);
+	
+	double number;
+	int cents = 0;
+	int dollars = 0;
+	int[] digits = new int[6];
+	
+	String wordAmount = "";
+	
+	while (true) {	 
+	    System.out.print("Enter Dollar Amount: ");
+	    number = s.nextDouble();
+	    number = (int)(number * 100 + 0.5)/100.0;
+	    cents = (int)((number * 100) % 100);
+	    dollars = (int)number;
+	    digits = convertToArray(dollars);
+	    wordAmount = 
+	}
+    }
+    
+    static int[] convertToArray(int n){
+	int[] digits = new int[6];
+	if (n > 1000000){
+	    return null;
+	}
+	
+	int num = n;
+	int i = 0;
+	
+	while ((num * 10) / 10 > 0){
+	    digits[i++] = num % 10;
+	    num /= 10;
+	}
+	
+	return digits;
+	
+    }
+    
+    static String makeNumberString(int[] digits){
+	String s = "";
+	String nextWord;
+	
+	switch (digits[0]){
+	case 1: nextWord = "One"; break;
+	case 2: nextWord = "Two"; break;
+	case 3: nextWord = "Three"; break;
+	case 4: nextWord = "Four"; break;
+	case 5: nextWord = "Five"; break;
+	case 6: nextWord = "Six"; break;
+	case 7: nextWord = "Seven"; break;
+	case 8: nextWord = "Eight"; break;
+	case 9: nextWord = "Nine"; break;
+	case 0: nextWord = ""; break;
+	}
+	
+	s = nextWord + s;
+	
+	return s;
+    }
+}

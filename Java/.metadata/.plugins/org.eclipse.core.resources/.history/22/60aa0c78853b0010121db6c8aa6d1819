@@ -1,0 +1,30 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class ec
+/*    */ {
+/*  9 */   protected int a = 8;
+/* 10 */   protected Random b = new Random();
+/*    */ 
+/*    */   public void a(bm parambm, dn paramdn, int paramInt1, int paramInt2, byte[] paramArrayOfByte) {
+/* 13 */     int i = this.a;
+/*    */ 
+/* 15 */     this.b.setSeed(paramdn.u);
+/* 16 */     long l1 = this.b.nextLong() / 2L * 2L + 1L;
+/* 17 */     long l2 = this.b.nextLong() / 2L * 2L + 1L;
+/*    */ 
+/* 19 */     for (int j = paramInt1 - i; j <= paramInt1 + i; j++)
+/* 20 */       for (int k = paramInt2 - i; k <= paramInt2 + i; k++) {
+/* 21 */         this.b.setSeed(j * l1 + k * l2 ^ paramdn.u);
+/* 22 */         a(paramdn, j, k, paramInt1, paramInt2, paramArrayOfByte);
+/*    */       }
+/*    */   }
+/*    */ 
+/*    */   protected void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4, byte[] paramArrayOfByte)
+/*    */   {
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ec
+ * JD-Core Version:    0.6.0
+ */

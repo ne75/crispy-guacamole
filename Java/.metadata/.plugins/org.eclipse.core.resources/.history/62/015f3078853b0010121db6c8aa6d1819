@@ -1,0 +1,162 @@
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ 
+/*     */ public class of extends bz
+/*     */ {
+/*     */   public jg bF;
+/*  20 */   private int bG = 0;
+/*     */ 
+/*  22 */   private boolean bH = false;
+/*     */   private double bI;
+/*     */   private double bJ;
+/*     */   private double bK;
+/*     */   private double bL;
+/*     */   private float bM;
+/*     */   private float bN;
+/*  49 */   private boolean bO = false;
+/*  50 */   private boolean bP = false;
+/*  51 */   private int bQ = 0;
+/*     */ 
+/*     */   public of(Minecraft paramMinecraft, dn paramdn, es parames, jg paramjg)
+/*     */   {
+/*  25 */     super(paramMinecraft, paramdn, parames, 0);
+/*  26 */     this.bF = paramjg;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(nl paramnl, int paramInt)
+/*     */   {
+/*  33 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public void c(int paramInt) {
+/*     */   }
+/*     */ 
+/*     */   public void q_() {
+/*  40 */     if (!this.aB.h(gd.b(this.aF), 64, gd.b(this.aH))) return;
+/*  41 */     super.q_();
+/*  42 */     W();
+/*     */   }
+/*     */ 
+/*     */   public void r()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void W()
+/*     */   {
+/*  54 */     if (this.bG++ == 20) {
+/*  55 */       X();
+/*  56 */       this.bG = 0;
+/*     */     }
+/*     */ 
+/*  59 */     boolean bool = s();
+/*  60 */     if (bool != this.bP) {
+/*  61 */       if (bool) this.bF.a(new on(this, 1)); else {
+/*  62 */         this.bF.a(new on(this, 2));
+/*     */       }
+/*  64 */       this.bP = bool;
+/*     */     }
+/*     */ 
+/*  67 */     double d1 = this.aF - this.bI;
+/*  68 */     double d2 = this.aP.b - this.bJ;
+/*  69 */     double d3 = this.aG - this.bK;
+/*  70 */     double d4 = this.aH - this.bL;
+/*     */ 
+/*  72 */     double d5 = this.aL - this.bM;
+/*  73 */     double d6 = this.aM - this.bN;
+/*     */ 
+/*  75 */     int i = (d2 != 0.0D) || (d3 != 0.0D) || (d1 != 0.0D) || (d4 != 0.0D) ? 1 : 0;
+/*  76 */     int j = (d5 != 0.0D) || (d6 != 0.0D) ? 1 : 0;
+/*  77 */     if (this.aA != null) {
+/*  78 */       if (j != 0)
+/*  79 */         this.bF.a(new x(this.aI, -999.0D, -999.0D, this.aK, this.aQ));
+/*     */       else {
+/*  81 */         this.bF.a(new df(this.aI, -999.0D, -999.0D, this.aK, this.aL, this.aM, this.aQ));
+/*     */       }
+/*  83 */       i = 0;
+/*     */     }
+/*  86 */     else if ((i != 0) && (j != 0)) {
+/*  87 */       this.bF.a(new df(this.aF, this.aP.b, this.aG, this.aH, this.aL, this.aM, this.aQ));
+/*  88 */       this.bQ = 0;
+/*  89 */     } else if (i != 0) {
+/*  90 */       this.bF.a(new x(this.aF, this.aP.b, this.aG, this.aH, this.aQ));
+/*  91 */       this.bQ = 0;
+/*  92 */     } else if (j != 0) {
+/*  93 */       this.bF.a(new pt(this.aL, this.aM, this.aQ));
+/*  94 */       this.bQ = 0;
+/*     */     } else {
+/*  96 */       this.bF.a(new fw(this.aQ));
+/*  97 */       if ((this.bO != this.aQ) || (this.bQ > 20))
+/*  98 */         this.bQ = 0;
+/*     */       else {
+/* 100 */         this.bQ += 1;
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/* 105 */     this.bO = this.aQ;
+/*     */ 
+/* 107 */     if (i != 0) {
+/* 108 */       this.bI = this.aF;
+/* 109 */       this.bJ = this.aP.b;
+/* 110 */       this.bK = this.aG;
+/* 111 */       this.bL = this.aH;
+/*     */     }
+/* 113 */     if (j != 0) {
+/* 114 */       this.bM = this.aL;
+/* 115 */       this.bN = this.aM;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void z() {
+/* 120 */     this.bF.a(new ha(4, 0, 0, 0, 0));
+/*     */   }
+/*     */ 
+/*     */   private void X()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   protected void a(fh paramfh)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void a(String paramString)
+/*     */   {
+/* 136 */     this.bF.a(new ky(paramString));
+/*     */   }
+/*     */ 
+/*     */   public void E() {
+/* 140 */     super.E();
+/* 141 */     this.bF.a(new jo(this, 1));
+/*     */   }
+/*     */ 
+/*     */   public void u() {
+/* 145 */     X();
+/* 146 */     this.bF.a(new kr());
+/*     */   }
+/*     */ 
+/*     */   protected void b(int paramInt) {
+/* 150 */     this.S -= paramInt;
+/*     */   }
+/*     */ 
+/*     */   public void p() {
+/* 154 */     this.bF.a(new iy(this.h.f));
+/* 155 */     this.f.b(null);
+/* 156 */     super.p();
+/*     */   }
+/*     */ 
+/*     */   public void a_(int paramInt)
+/*     */   {
+/* 161 */     if (this.bH) {
+/* 162 */       super.a_(paramInt);
+/*     */     }
+/*     */     else
+/*     */     {
+/* 166 */       this.S = paramInt;
+/* 167 */       this.bH = true;
+/*     */     }
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     of
+ * JD-Core Version:    0.6.0
+ */

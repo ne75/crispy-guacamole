@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class card {
+	public static void main(String arg[]){
+	int a;
+		for(int count = 0; count < 5; count++){
+			a = (int)(9*Math.random());
+			System.out.println(a);
+			try {
+				Thread.sleep(250);
+				} catch(InterruptedException e) {
+				} 
+		}	
+	}
+}

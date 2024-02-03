@@ -1,0 +1,25 @@
+/*    */ public class qf extends eo
+/*    */ {
+/*  4 */   private static final int[] bj = { 3, 8, 6, 3 };
+/*  5 */   private static final int[] bk = { 11, 16, 15, 13 };
+/*    */   public final int a;
+/*    */   public final int bg;
+/*    */   public final int bh;
+/*    */   public final int bi;
+/*    */ 
+/*    */   public qf(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*    */   {
+/* 12 */     super(paramInt1);
+/* 13 */     this.a = paramInt2;
+/* 14 */     this.bg = paramInt4;
+/* 15 */     this.bi = paramInt3;
+/* 16 */     this.bh = bj[paramInt4];
+/* 17 */     this.bc = (bk[paramInt4] * 3 << paramInt2);
+/* 18 */     this.bb = 1;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qf
+ * JD-Core Version:    0.6.0
+ */

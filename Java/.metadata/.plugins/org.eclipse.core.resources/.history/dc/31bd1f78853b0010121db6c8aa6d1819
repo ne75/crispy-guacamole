@@ -1,0 +1,134 @@
+/*     */ import java.awt.Color;
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class hf
+/*     */ {
+/*  23 */   public static final hf a = new sb().b(588342).a("Rainforest").a(2094168);
+/*  24 */   public static final hf b = new oa().b(522674).a("Swampland").a(9154376);
+/*  25 */   public static final hf c = new hf().b(10215459).a("Seasonal Forest");
+/*  26 */   public static final hf d = new mg().b(353825).a("Forest").a(5159473);
+/*  27 */   public static final hf e = new eb().b(14278691).a("Savanna");
+/*  28 */   public static final hf f = new hf().b(10595616).a("Shrubland");
+/*  29 */   public static final hf g = new d().b(3060051).a("Taiga").b().a(8107825);
+/*  30 */   public static final hf h = new eb().b(16421912).a("Desert");
+/*  31 */   public static final hf i = new eb().b(16767248).a("Plains");
+/*  32 */   public static final hf j = new eb().b(16772499).a("Ice Desert").b().a(12899129);
+/*  33 */   public static final hf k = new hf().b(5762041).a("Tundra").b().a(12899129);
+/*     */ 
+/*  35 */   public static final hf l = new o().b(16711680).a("Hell");
+/*     */   public String m;
+/*     */   public int n;
+/*  39 */   public byte o = (byte)pj.u.bi;
+/*  40 */   public byte p = (byte)pj.v.bi;
+/*  41 */   public int q = 5169201;
+/*     */ 
+/*  43 */   protected Class[] r = { bn.class, pn.class, dy.class, eh.class };
+/*     */ 
+/*  47 */   protected Class[] s = { ch.class, qk.class, qs.class, bb.class };
+/*     */ 
+/*  51 */   protected Class[] t = { rm.class };
+/*     */ 
+/*  56 */   private static hf[] u = new hf[4096];
+/*     */ 
+/*     */   public static void a() {
+/*  59 */     for (int i1 = 0; i1 < 64; i1++) {
+/*  60 */       for (int i2 = 0; i2 < 64; i2++) {
+/*  61 */         u[(i1 + i2 * 64)] = a(i1 / 63.0F, i2 / 63.0F);
+/*     */       }
+/*     */     }
+/*     */ 
+/*  65 */     h.o = (h.p = (byte)pj.E.bi);
+/*  66 */     j.o = (j.p = (byte)pj.E.bi);
+/*     */   }
+/*     */ 
+/*     */   public kz a(Random paramRandom)
+/*     */   {
+/*  74 */     if (paramRandom.nextInt(10) == 0) {
+/*  75 */       return new fx();
+/*     */     }
+/*  77 */     return new rz();
+/*     */   }
+/*     */ 
+/*     */   protected hf b()
+/*     */   {
+/*  82 */     return this;
+/*     */   }
+/*     */ 
+/*     */   protected hf a(String paramString) {
+/*  86 */     this.m = paramString;
+/*  87 */     return this;
+/*     */   }
+/*     */ 
+/*     */   protected hf a(int paramInt) {
+/*  91 */     this.q = paramInt;
+/*  92 */     return this;
+/*     */   }
+/*     */ 
+/*     */   protected hf b(int paramInt) {
+/*  96 */     this.n = paramInt;
+/*  97 */     return this;
+/*     */   }
+/*     */ 
+/*     */   public static hf a(double paramDouble1, double paramDouble2) {
+/* 101 */     int i1 = (int)(paramDouble1 * 63.0D);
+/* 102 */     int i2 = (int)(paramDouble2 * 63.0D);
+/* 103 */     return u[(i1 + i2 * 64)];
+/*     */   }
+/*     */ 
+/*     */   public static hf a(float paramFloat1, float paramFloat2) {
+/* 107 */     paramFloat2 *= paramFloat1;
+/* 108 */     if (paramFloat1 < 0.1F)
+/* 109 */       return k;
+/* 110 */     if (paramFloat2 < 0.2F) {
+/* 111 */       if (paramFloat1 < 0.5F)
+/* 112 */         return k;
+/* 113 */       if (paramFloat1 < 0.95F) {
+/* 114 */         return e;
+/*     */       }
+/* 116 */       return h;
+/*     */     }
+/* 118 */     if ((paramFloat2 > 0.5F) && (paramFloat1 < 0.7F))
+/* 119 */       return b;
+/* 120 */     if (paramFloat1 < 0.5F)
+/* 121 */       return g;
+/* 122 */     if (paramFloat1 < 0.97F) {
+/* 123 */       if (paramFloat2 < 0.35F) {
+/* 124 */         return f;
+/*     */       }
+/* 126 */       return d;
+/*     */     }
+/*     */ 
+/* 129 */     if (paramFloat2 < 0.45F)
+/* 130 */       return i;
+/* 131 */     if (paramFloat2 < 0.9F) {
+/* 132 */       return c;
+/*     */     }
+/* 134 */     return a;
+/*     */   }
+/*     */ 
+/*     */   public int a(float paramFloat)
+/*     */   {
+/* 151 */     paramFloat /= 3.0F;
+/* 152 */     if (paramFloat < -1.0F) paramFloat = -1.0F;
+/* 153 */     if (paramFloat > 1.0F) paramFloat = 1.0F;
+/* 154 */     return Color.getHSBColor(0.6222222F - paramFloat * 0.05F, 0.5F + paramFloat * 0.1F, 1.0F).getRGB();
+/*     */   }
+/*     */ 
+/*     */   public Class[] a(hz paramhz)
+/*     */   {
+/* 159 */     if (paramhz == hz.a) return this.r;
+/* 160 */     if (paramhz == hz.b) return this.s;
+/* 161 */     if (paramhz == hz.c) return this.t;
+/* 162 */     return null;
+/*     */   }
+/*     */ 
+/*     */   static
+/*     */   {
+/*  70 */     a();
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hf
+ * JD-Core Version:    0.6.0
+ */

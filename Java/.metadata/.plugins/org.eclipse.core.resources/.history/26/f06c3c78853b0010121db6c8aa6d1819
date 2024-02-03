@@ -1,0 +1,17 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class sb extends hf
+/*    */ {
+/*    */   public kz a(Random paramRandom)
+/*    */   {
+/* 16 */     if (paramRandom.nextInt(3) == 0) {
+/* 17 */       return new fx();
+/*    */     }
+/* 19 */     return new rz();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     sb
+ * JD-Core Version:    0.6.0
+ */

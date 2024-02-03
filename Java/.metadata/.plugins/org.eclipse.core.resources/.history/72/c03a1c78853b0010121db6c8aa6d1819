@@ -1,0 +1,186 @@
+/*     */ import java.util.List;
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ 
+/*     */ public abstract class ft extends by
+/*     */ {
+/*  27 */   private static al k = new al();
+/*  28 */   protected int a = 176;
+/*  29 */   protected int h = 166;
+/*     */   public cp i;
+/*     */ 
+/*     */   public ft(cp paramcp)
+/*     */   {
+/*  33 */     this.i = paramcp;
+/*     */   }
+/*     */ 
+/*     */   public void a() {
+/*  37 */     super.a();
+/*  38 */     this.b.g.h = this.i;
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, float paramFloat) {
+/*  42 */     i();
+/*  43 */     int j = (this.c - this.a) / 2;
+/*  44 */     int m = (this.d - this.h) / 2;
+/*     */ 
+/*  46 */     a(paramFloat);
+/*     */ 
+/*  48 */     GL11.glPushMatrix();
+/*  49 */     GL11.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
+/*  50 */     p.b();
+/*  51 */     GL11.glPopMatrix();
+/*     */ 
+/*  53 */     GL11.glPushMatrix();
+/*  54 */     GL11.glTranslatef(j, m, 0.0F);
+/*     */ 
+/*  56 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/*  57 */     GL11.glEnable(32826);
+/*     */ 
+/*  59 */     Object localObject1 = null;
+/*     */     Object localObject2;
+/*     */     int i1;
+/*     */     int i2;
+/*  61 */     for (int n = 0; n < this.i.e.size(); n++) {
+/*  62 */       localObject2 = (eq)this.i.e.get(n);
+/*     */ 
+/*  64 */       a((eq)localObject2);
+/*     */ 
+/*  66 */       if (a((eq)localObject2, paramInt1, paramInt2)) {
+/*  67 */         localObject1 = localObject2;
+/*     */ 
+/*  69 */         GL11.glDisable(2896);
+/*  70 */         GL11.glDisable(2929);
+/*     */ 
+/*  72 */         i1 = ((eq)localObject2).b;
+/*  73 */         i2 = ((eq)localObject2).c;
+/*  74 */         a(i1, i2, i1 + 16, i2 + 16, -2130706433, -2130706433);
+/*  75 */         GL11.glEnable(2896);
+/*  76 */         GL11.glEnable(2929);
+/*     */       }
+/*     */     }
+/*     */ 
+/*  80 */     gl localgl = this.b.g.f;
+/*  81 */     if (localgl.i() != null) {
+/*  82 */       GL11.glTranslatef(0.0F, 0.0F, 32.0F);
+/*     */ 
+/*  85 */       k.a(this.g, this.b.n, localgl.i(), paramInt1 - j - 8, paramInt2 - m - 8);
+/*  86 */       k.b(this.g, this.b.n, localgl.i(), paramInt1 - j - 8, paramInt2 - m - 8);
+/*     */     }
+/*     */ 
+/*  89 */     GL11.glDisable(32826);
+/*  90 */     p.a();
+/*     */ 
+/*  92 */     GL11.glDisable(2896);
+/*  93 */     GL11.glDisable(2929);
+/*     */ 
+/*  95 */     j();
+/*     */ 
+/*  97 */     if ((localgl.i() == null) && (localObject1 != null) && (localObject1.c()))
+/*     */     {
+/*  99 */       localObject2 = ("" + n.a().b(localObject1.b().l())).trim();
+/*     */ 
+/* 101 */       if (((String)localObject2).length() > 0) {
+/* 102 */         i1 = paramInt1 - j + 12;
+/* 103 */         i2 = paramInt2 - m - 12;
+/* 104 */         int i3 = this.g.a((String)localObject2);
+/* 105 */         a(i1 - 3, i2 - 3, i1 + i3 + 3, i2 + 8 + 3, -1073741824, -1073741824);
+/*     */ 
+/* 107 */         this.g.a((String)localObject2, i1, i2, -1);
+/*     */       }
+/*     */     }
+/*     */ 
+/* 111 */     GL11.glEnable(2896);
+/* 112 */     GL11.glEnable(2929);
+/*     */ 
+/* 114 */     GL11.glPopMatrix();
+/*     */   }
+/*     */   protected void j() {
+/*     */   }
+/*     */ 
+/*     */   protected abstract void a(float paramFloat);
+/*     */ 
+/*     */   private void a(eq parameq) {
+/* 123 */     int j = parameq.b;
+/* 124 */     int m = parameq.c;
+/* 125 */     gm localgm = parameq.b();
+/*     */ 
+/* 127 */     if (localgm == null) {
+/* 128 */       int n = parameq.f();
+/* 129 */       if (n >= 0) {
+/* 130 */         GL11.glDisable(2896);
+/* 131 */         this.b.n.b(this.b.n.a("/gui/items.png"));
+/* 132 */         b(j, m, n % 16 * 16, n / 16 * 16, 16, 16);
+/* 133 */         GL11.glEnable(2896);
+/* 134 */         return;
+/*     */       }
+/*     */     }
+/*     */ 
+/* 138 */     k.a(this.g, this.b.n, localgm, j, m);
+/* 139 */     k.b(this.g, this.b.n, localgm, j, m);
+/*     */   }
+/*     */ 
+/*     */   private eq a(int paramInt1, int paramInt2) {
+/* 143 */     for (int j = 0; j < this.i.e.size(); j++) {
+/* 144 */       eq localeq = (eq)this.i.e.get(j);
+/* 145 */       if (a(localeq, paramInt1, paramInt2)) return localeq;
+/*     */     }
+/* 147 */     return null;
+/*     */   }
+/*     */ 
+/*     */   private boolean a(eq parameq, int paramInt1, int paramInt2) {
+/* 151 */     int j = (this.c - this.a) / 2;
+/* 152 */     int m = (this.d - this.h) / 2;
+/* 153 */     paramInt1 -= j;
+/* 154 */     paramInt2 -= m;
+/*     */ 
+/* 156 */     return (paramInt1 >= parameq.b - 1) && (paramInt1 < parameq.b + 16 + 1) && (paramInt2 >= parameq.c - 1) && (paramInt2 < parameq.c + 16 + 1);
+/*     */   }
+/*     */ 
+/*     */   protected void a(int paramInt1, int paramInt2, int paramInt3) {
+/* 160 */     if ((paramInt3 == 0) || (paramInt3 == 1)) {
+/* 161 */       eq localeq = a(paramInt1, paramInt2);
+/*     */ 
+/* 163 */       int j = (this.c - this.a) / 2;
+/* 164 */       int m = (this.d - this.h) / 2;
+/* 165 */       int n = (paramInt1 < j) || (paramInt2 < m) || (paramInt1 >= j + this.a) || (paramInt2 >= m + this.h) ? 1 : 0;
+/*     */ 
+/* 167 */       int i1 = -1;
+/* 168 */       if (localeq != null) i1 = localeq.a;
+/*     */ 
+/* 170 */       if (n != 0) {
+/* 171 */         i1 = -999;
+/*     */       }
+/*     */ 
+/* 174 */       if (i1 != -1)
+/* 175 */         this.b.b.a(this.i.f, i1, paramInt3, this.b.g);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   protected void b(int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/* 181 */     if (paramInt3 == 0);
+/*     */   }
+/*     */ 
+/*     */   protected void a(char paramChar, int paramInt) {
+/* 186 */     if ((paramInt == 1) || (paramInt == this.b.y.p.b))
+/* 187 */       this.b.g.p();
+/*     */   }
+/*     */ 
+/*     */   public void h()
+/*     */   {
+/* 192 */     if (this.b.g == null) return;
+/*     */ 
+/* 194 */     this.b.b.a(this.i.f, this.b.g);
+/*     */   }
+/*     */ 
+/*     */   public boolean b()
+/*     */   {
+/* 201 */     return false;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ft
+ * JD-Core Version:    0.6.0
+ */

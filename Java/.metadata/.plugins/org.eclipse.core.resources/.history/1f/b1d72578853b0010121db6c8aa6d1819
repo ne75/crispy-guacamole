@@ -1,0 +1,19 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class jh extends en
+/*    */ {
+/*    */   public jh(int paramInt1, int paramInt2)
+/*    */   {
+/*  9 */     super(paramInt1, paramInt2);
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt, Random paramRandom) {
+/* 13 */     if (paramRandom.nextInt(10) == 0) return eo.an.ba;
+/* 14 */     return this.bi;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     jh
+ * JD-Core Version:    0.6.0
+ */

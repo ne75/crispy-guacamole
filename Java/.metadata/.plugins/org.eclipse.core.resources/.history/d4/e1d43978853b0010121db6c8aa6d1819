@@ -1,0 +1,57 @@
+/*    */ import java.io.File;
+/*    */ 
+/*    */ public class qi extends qx
+/*    */ {
+/*    */   public void a()
+/*    */   {
+/* 15 */     this.b = new fb(hf.l, 1.0D, 0.0D);
+/* 16 */     this.c = true;
+/* 17 */     this.d = true;
+/* 18 */     this.e = true;
+/* 19 */     this.g = -1;
+/*    */   }
+/*    */ 
+/*    */   public ax a(float paramFloat1, float paramFloat2) {
+/* 23 */     return ax.b(0.2000000029802322D, 0.02999999932944775D, 0.02999999932944775D);
+/*    */   }
+/*    */ 
+/*    */   protected void b() {
+/* 27 */     float f1 = 0.1F;
+/* 28 */     for (int i = 0; i <= 15; i++) {
+/* 29 */       float f2 = 1.0F - i / 15.0F;
+/* 30 */       this.f[i] = ((1.0F - f2) / (f2 * 3.0F + 1.0F) * (1.0F - f1) + f1);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public bm c() {
+/* 35 */     return new lt(this.a, this.a.u);
+/*    */   }
+/*    */ 
+/*    */   public ao a(File paramFile) {
+/* 39 */     File localFile = new File(paramFile, "DIM-1");
+/* 40 */     localFile.mkdirs();
+/* 41 */     return new oj(localFile, true);
+/*    */   }
+/*    */ 
+/*    */   public boolean a(int paramInt1, int paramInt2) {
+/* 45 */     int i = this.a.a(paramInt1, paramInt2);
+/*    */ 
+/* 47 */     if (i == pj.z.bi) return false;
+/* 48 */     if (i == 0) return false;
+/* 49 */     return pj.o[i] != 0;
+/*    */   }
+/*    */ 
+/*    */   public float a(long paramLong, float paramFloat)
+/*    */   {
+/* 55 */     return 0.5F;
+/*    */   }
+/*    */ 
+/*    */   public boolean d() {
+/* 59 */     return false;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qi
+ * JD-Core Version:    0.6.0
+ */

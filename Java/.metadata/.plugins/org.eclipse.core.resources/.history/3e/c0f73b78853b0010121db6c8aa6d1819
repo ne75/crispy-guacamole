@@ -1,0 +1,13 @@
+public abstract interface ru
+{
+  public abstract void b(String paramString);
+
+  public abstract void d(String paramString);
+
+  public abstract void a(int paramInt);
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ru
+ * JD-Core Version:    0.6.0
+ */

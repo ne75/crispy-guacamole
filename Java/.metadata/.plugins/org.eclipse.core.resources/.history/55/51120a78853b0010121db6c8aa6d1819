@@ -1,0 +1,53 @@
+/*    */ public class dm extends pj
+/*    */ {
+/*    */   private boolean a;
+/*    */ 
+/*    */   protected dm(int paramInt1, int paramInt2, boolean paramBoolean)
+/*    */   {
+/* 12 */     super(paramInt1, ic.w);
+/* 13 */     this.bh = paramInt2;
+/* 14 */     b(true);
+/* 15 */     this.a = paramBoolean;
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt1, int paramInt2) {
+/* 19 */     if (paramInt1 == 1) return this.bh;
+/* 20 */     if (paramInt1 == 0) return this.bh;
+/*    */ 
+/* 22 */     int i = this.bh + 1 + 16;
+/* 23 */     if (this.a) i++;
+/*    */ 
+/* 25 */     if ((paramInt2 == 0) && (paramInt1 == 2)) return i;
+/* 26 */     if ((paramInt2 == 1) && (paramInt1 == 5)) return i;
+/* 27 */     if ((paramInt2 == 2) && (paramInt1 == 3)) return i;
+/* 28 */     if ((paramInt2 == 3) && (paramInt1 == 4)) return i;
+/*    */ 
+/* 30 */     return this.bh + 16;
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt) {
+/* 34 */     if (paramInt == 1) return this.bh;
+/* 35 */     if (paramInt == 0) return this.bh;
+/* 36 */     if (paramInt == 3) return this.bh + 1 + 16;
+/* 37 */     return this.bh + 16;
+/*    */   }
+/*    */ 
+/*    */   public void e(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 41 */     super.e(paramdn, paramInt1, paramInt2, paramInt3);
+/*    */   }
+/*    */ 
+/*    */   public boolean a(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 45 */     int i = paramdn.a(paramInt1, paramInt2, paramInt3);
+/* 46 */     return ((i == 0) || (pj.m[i].bt.d())) && (paramdn.g(paramInt1, paramInt2 - 1, paramInt3));
+/*    */   }
+/*    */ 
+/*    */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, ig paramig) {
+/* 50 */     int i = gd.b(paramig.aL * 4.0F / 360.0F + 0.5D) & 0x3;
+/* 51 */     paramdn.c(paramInt1, paramInt2, paramInt3, i);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     dm
+ * JD-Core Version:    0.6.0
+ */

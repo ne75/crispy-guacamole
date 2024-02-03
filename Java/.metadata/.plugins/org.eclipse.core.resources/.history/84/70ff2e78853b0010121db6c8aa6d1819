@@ -1,0 +1,183 @@
+/*     */ public class ni extends kp
+/*     */   implements ij
+/*     */ {
+/*  18 */   private gm[] h = new gm[3];
+/*  19 */   public int a = 0;
+/*  20 */   public int b = 0;
+/*  21 */   public int c = 0;
+/*     */ 
+/*     */   public int a() {
+/*  24 */     return this.h.length;
+/*     */   }
+/*     */ 
+/*     */   public gm c_(int paramInt) {
+/*  28 */     return this.h[paramInt];
+/*     */   }
+/*     */ 
+/*     */   public gm a(int paramInt1, int paramInt2) {
+/*  32 */     if (this.h[paramInt1] != null) {
+/*  33 */       if (this.h[paramInt1].a <= paramInt2) {
+/*  34 */         localgm = this.h[paramInt1];
+/*  35 */         this.h[paramInt1] = null;
+/*  36 */         return localgm;
+/*     */       }
+/*  38 */       gm localgm = this.h[paramInt1].a(paramInt2);
+/*  39 */       if (this.h[paramInt1].a == 0) this.h[paramInt1] = null;
+/*  40 */       return localgm;
+/*     */     }
+/*     */ 
+/*  43 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt, gm paramgm) {
+/*  47 */     this.h[paramInt] = paramgm;
+/*  48 */     if ((paramgm != null) && (paramgm.a > d())) paramgm.a = d(); 
+/*     */   }
+/*     */ 
+/*     */   public String c()
+/*     */   {
+/*  52 */     return "Furnace";
+/*     */   }
+/*     */ 
+/*     */   public void a(jw paramjw)
+/*     */   {
+/*  57 */     super.a(paramjw);
+/*  58 */     nn localnn = paramjw.l("Items");
+/*  59 */     this.h = new gm[a()];
+/*  60 */     for (int i = 0; i < localnn.c(); i++) {
+/*  61 */       jw localjw = (jw)localnn.a(i);
+/*  62 */       int j = localjw.c("Slot");
+/*  63 */       if ((j < 0) || (j >= this.h.length)) continue; this.h[j] = new gm(localjw);
+/*     */     }
+/*     */ 
+/*  66 */     this.a = paramjw.d("BurnTime");
+/*  67 */     this.c = paramjw.d("CookTime");
+/*  68 */     this.b = a(this.h[1]);
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw) {
+/*  72 */     super.b(paramjw);
+/*  73 */     paramjw.a("BurnTime", (short)this.a);
+/*  74 */     paramjw.a("CookTime", (short)this.c);
+/*  75 */     nn localnn = new nn();
+/*     */ 
+/*  77 */     for (int i = 0; i < this.h.length; i++) {
+/*  78 */       if (this.h[i] != null) {
+/*  79 */         jw localjw = new jw();
+/*  80 */         localjw.a("Slot", (byte)i);
+/*  81 */         this.h[i].a(localjw);
+/*  82 */         localnn.a(localjw);
+/*     */       }
+/*     */     }
+/*  85 */     paramjw.a("Items", localnn);
+/*     */   }
+/*     */ 
+/*     */   public int d() {
+/*  89 */     return 64;
+/*     */   }
+/*     */ 
+/*     */   public int b(int paramInt) {
+/*  93 */     return this.c * paramInt / 200;
+/*     */   }
+/*     */ 
+/*     */   public int c(int paramInt) {
+/*  97 */     if (this.b == 0) this.b = 200;
+/*  98 */     return this.a * paramInt / this.b;
+/*     */   }
+/*     */ 
+/*     */   public boolean b() {
+/* 102 */     return this.a > 0;
+/*     */   }
+/*     */ 
+/*     */   public void m_() {
+/* 106 */     int i = this.a > 0 ? 1 : 0;
+/* 107 */     int j = 0;
+/* 108 */     if (this.a > 0) {
+/* 109 */       this.a -= 1;
+/*     */     }
+/*     */ 
+/* 114 */     if (!this.d.z) {
+/* 115 */       if ((this.a == 0) && (i())) {
+/* 116 */         this.b = (this.a = a(this.h[1]));
+/* 117 */         if (this.a > 0) {
+/* 118 */           j = 1;
+/* 119 */           if (this.h[1] != null) {
+/* 120 */             this.h[1].a -= 1;
+/* 121 */             if (this.h[1].a == 0) this.h[1] = null;
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */ 
+/* 126 */       if ((b()) && (i())) {
+/* 127 */         this.c += 1;
+/* 128 */         if (this.c == 200) {
+/* 129 */           this.c = 0;
+/* 130 */           g();
+/* 131 */           j = 1;
+/*     */         }
+/*     */       } else {
+/* 134 */         this.c = 0;
+/*     */       }
+/*     */ 
+/* 137 */       if (i != (this.a > 0 ? 1 : 0)) {
+/* 138 */         j = 1;
+/* 139 */         ny.a(this.a > 0, this.d, this.e, this.f, this.g);
+/*     */       }
+/*     */     }
+/*     */ 
+/* 143 */     if (j != 0) r_(); 
+/*     */   }
+/*     */ 
+/*     */   private boolean i()
+/*     */   {
+/* 147 */     if (this.h[0] == null) return false;
+/* 148 */     gm localgm = dj.a().a(this.h[0].a().ba);
+/* 149 */     if (localgm == null) return false;
+/* 150 */     if (this.h[2] == null) return true;
+/* 151 */     if (!this.h[2].a(localgm)) return false;
+/* 152 */     if ((this.h[2].a < d()) && (this.h[2].a < this.h[2].c())) return true;
+/* 153 */     return this.h[2].a < localgm.c();
+/*     */   }
+/*     */ 
+/*     */   public void g()
+/*     */   {
+/* 158 */     if (!i()) return;
+/*     */ 
+/* 160 */     gm localgm = dj.a().a(this.h[0].a().ba);
+/* 161 */     if (this.h[2] == null) this.h[2] = localgm.k();
+/* 162 */     else if (this.h[2].c == localgm.c) this.h[2].a += 1;
+/*     */ 
+/* 164 */     this.h[0].a -= 1;
+/* 165 */     if (this.h[0].a <= 0) this.h[0] = null; 
+/*     */   }
+/*     */ 
+/*     */   private int a(gm paramgm)
+/*     */   {
+/* 169 */     if (paramgm == null) return 0;
+/* 170 */     int i = paramgm.a().ba;
+/*     */ 
+/* 172 */     if ((i < 256) && (pj.m[i].bt == ic.c)) {
+/* 173 */       return 300;
+/*     */     }
+/*     */ 
+/* 176 */     if (i == eo.B.ba) {
+/* 177 */       return 100;
+/*     */     }
+/*     */ 
+/* 180 */     if (i == eo.k.ba) return 1600;
+/*     */ 
+/* 182 */     if (i == eo.aw.ba) return 20000;
+/*     */ 
+/* 184 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public boolean a_(eu parameu) {
+/* 188 */     if (this.d.b(this.e, this.f, this.g) != this) return false;
+/* 189 */     return parameu.e(this.e + 0.5D, this.f + 0.5D, this.g + 0.5D) <= 64.0D;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ni
+ * JD-Core Version:    0.6.0
+ */

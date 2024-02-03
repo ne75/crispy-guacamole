@@ -1,0 +1,9 @@
+package main;
+
+public class Factorial {
+    
+    public int factorial(int i){
+	
+    }
+
+}

@@ -1,0 +1,19 @@
+package main;
+
+import java.util.*;
+
+public class NumToWords {
+    public static void main(String[] args){
+	
+	Scanner s = new Scanner(System.in);
+	
+	double number;
+	int cents = 0;
+	int dollars = 0;
+	
+	while (true) {	 
+	    System.out.println("Enter Dollar Amount");
+	}
+	
+    }
+}

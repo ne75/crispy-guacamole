@@ -1,0 +1,73 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class ji extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public int b;
+/*    */   public int c;
+/*    */   public int d;
+/*    */   public byte e;
+/*    */   public byte f;
+/*    */   public byte g;
+/*    */   public int h;
+/*    */   public int i;
+/*    */   public int l;
+/*    */ 
+/*    */   public ji()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public ji(fh paramfh)
+/*    */   {
+/* 23 */     this.a = paramfh.aw;
+/* 24 */     this.h = paramfh.a.c;
+/* 25 */     this.i = paramfh.a.a;
+/* 26 */     this.l = paramfh.a.i();
+/* 27 */     this.b = gd.b(paramfh.aF * 32.0D);
+/* 28 */     this.c = gd.b(paramfh.aG * 32.0D);
+/* 29 */     this.d = gd.b(paramfh.aH * 32.0D);
+/* 30 */     this.e = (byte)(int)(paramfh.aI * 128.0D);
+/* 31 */     this.f = (byte)(int)(paramfh.aJ * 128.0D);
+/* 32 */     this.g = (byte)(int)(paramfh.aK * 128.0D);
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream) {
+/* 36 */     this.a = paramDataInputStream.readInt();
+/* 37 */     this.h = paramDataInputStream.readShort();
+/* 38 */     this.i = paramDataInputStream.readByte();
+/* 39 */     this.l = paramDataInputStream.readShort();
+/* 40 */     this.b = paramDataInputStream.readInt();
+/* 41 */     this.c = paramDataInputStream.readInt();
+/* 42 */     this.d = paramDataInputStream.readInt();
+/* 43 */     this.e = paramDataInputStream.readByte();
+/* 44 */     this.f = paramDataInputStream.readByte();
+/* 45 */     this.g = paramDataInputStream.readByte();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 49 */     paramDataOutputStream.writeInt(this.a);
+/* 50 */     paramDataOutputStream.writeShort(this.h);
+/* 51 */     paramDataOutputStream.writeByte(this.i);
+/* 52 */     paramDataOutputStream.writeShort(this.l);
+/* 53 */     paramDataOutputStream.writeInt(this.b);
+/* 54 */     paramDataOutputStream.writeInt(this.c);
+/* 55 */     paramDataOutputStream.writeInt(this.d);
+/* 56 */     paramDataOutputStream.writeByte(this.e);
+/* 57 */     paramDataOutputStream.writeByte(this.f);
+/* 58 */     paramDataOutputStream.writeByte(this.g);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 62 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 66 */     return 24;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ji
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,16 @@
+/*   */ import org.lwjgl.opengl.ContextCapabilities;
+/*   */ import org.lwjgl.opengl.GLContext;
+/*   */ 
+/*   */ public class bv
+/*   */ {
+/* 6 */   private static boolean a = false;
+/*   */ 
+/*   */   public boolean a() {
+/* 9 */     return (a) && (GLContext.getCapabilities().GL_ARB_occlusion_query);
+/*   */   }
+/*   */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     bv
+ * JD-Core Version:    0.6.0
+ */

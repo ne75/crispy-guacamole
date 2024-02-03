@@ -1,0 +1,37 @@
+/*    */ import java.io.DataInput;
+/*    */ import java.io.DataOutput;
+/*    */ 
+/*    */ public class j extends fy
+/*    */ {
+/*    */   public float a;
+/*    */ 
+/*    */   public j()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public j(float paramFloat)
+/*    */   {
+/* 12 */     this.a = paramFloat;
+/*    */   }
+/*    */ 
+/*    */   void a(DataOutput paramDataOutput) {
+/* 16 */     paramDataOutput.writeFloat(this.a);
+/*    */   }
+/*    */ 
+/*    */   void a(DataInput paramDataInput) {
+/* 20 */     this.a = paramDataInput.readFloat();
+/*    */   }
+/*    */ 
+/*    */   public byte a() {
+/* 24 */     return 5;
+/*    */   }
+/*    */ 
+/*    */   public String toString() {
+/* 28 */     return "" + this.a;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     j
+ * JD-Core Version:    0.6.0
+ */

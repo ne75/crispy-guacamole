@@ -1,0 +1,27 @@
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ 
+/*     */ public class hh extends Thread
+/*     */ {
+/*     */   public hh(Minecraft paramMinecraft, String paramString)
+/*     */   {
+/* 151 */     super(paramString);
+/*     */ 
+/* 154 */     setDaemon(true);
+/* 155 */     start();
+/*     */   }
+/*     */ 
+/*     */   public void run() {
+/* 159 */     while (this.a.H)
+/*     */       try {
+/* 161 */         Thread.sleep(2147483647L);
+/*     */       }
+/*     */       catch (InterruptedException localInterruptedException)
+/*     */       {
+/*     */       }
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hh
+ * JD-Core Version:    0.6.0
+ */

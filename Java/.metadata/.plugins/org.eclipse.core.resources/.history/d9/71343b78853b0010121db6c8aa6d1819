@@ -1,0 +1,21 @@
+public abstract interface ri
+{
+  public abstract int a(int paramInt1, int paramInt2, int paramInt3);
+
+  public abstract kp b(int paramInt1, int paramInt2, int paramInt3);
+
+  public abstract float c(int paramInt1, int paramInt2, int paramInt3);
+
+  public abstract int e(int paramInt1, int paramInt2, int paramInt3);
+
+  public abstract ic f(int paramInt1, int paramInt2, int paramInt3);
+
+  public abstract boolean g(int paramInt1, int paramInt2, int paramInt3);
+
+  public abstract ro a();
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ri
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,48 @@
+/*    */ public class md
+/*    */   implements Comparable
+/*    */ {
+/*  4 */   private static long f = 0L;
+/*    */   public int a;
+/*    */   public int b;
+/*    */   public int c;
+/*    */   public int d;
+/*    */   public long e;
+/*  7 */   private long g = f++;
+/*    */ 
+/*    */   public md(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 10 */     this.a = paramInt1;
+/* 11 */     this.b = paramInt2;
+/* 12 */     this.c = paramInt3;
+/* 13 */     this.d = paramInt4;
+/*    */   }
+/*    */ 
+/*    */   public boolean equals(Object paramObject) {
+/* 17 */     if ((paramObject instanceof md)) {
+/* 18 */       md localmd = (md)paramObject;
+/* 19 */       return (this.a == localmd.a) && (this.b == localmd.b) && (this.c == localmd.c) && (this.d == localmd.d);
+/*    */     }
+/* 21 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public int hashCode() {
+/* 25 */     return (this.a * 128 * 1024 + this.c * 128 + this.b) * 256 + this.d;
+/*    */   }
+/*    */ 
+/*    */   public md a(long paramLong) {
+/* 29 */     this.e = paramLong;
+/* 30 */     return this;
+/*    */   }
+/*    */ 
+/*    */   public int a(md parammd) {
+/* 34 */     if (this.e < parammd.e) return -1;
+/* 35 */     if (this.e > parammd.e) return 1;
+/* 36 */     if (this.g < parammd.g) return -1;
+/* 37 */     if (this.g > parammd.g) return 1;
+/* 38 */     return 0;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     md
+ * JD-Core Version:    0.6.0
+ */

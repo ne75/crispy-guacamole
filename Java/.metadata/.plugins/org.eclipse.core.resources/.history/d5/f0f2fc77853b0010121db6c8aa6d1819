@@ -1,0 +1,96 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class am extends eo
+/*     */ {
+/*     */   private int a;
+/*     */ 
+/*     */   public am(int paramInt1, int paramInt2)
+/*     */   {
+/*  16 */     super(paramInt1);
+/*  17 */     this.bb = 1;
+/*  18 */     this.bc = 64;
+/*  19 */     this.a = paramInt2;
+/*     */   }
+/*     */ 
+/*     */   public gm a(gm paramgm, dn paramdn, eu parameu) {
+/*  23 */     float f1 = 1.0F;
+/*     */ 
+/*  25 */     float f2 = parameu.aO + (parameu.aM - parameu.aO) * f1;
+/*  26 */     float f3 = parameu.aN + (parameu.aL - parameu.aN) * f1;
+/*     */ 
+/*  30 */     double d1 = parameu.aC + (parameu.aF - parameu.aC) * f1;
+/*  31 */     double d2 = parameu.aD + (parameu.aG - parameu.aD) * f1 + 1.62D - parameu.aX;
+/*  32 */     double d3 = parameu.aE + (parameu.aH - parameu.aE) * f1;
+/*     */ 
+/*  34 */     ax localax1 = ax.b(d1, d2, d3);
+/*     */ 
+/*  36 */     float f4 = gd.b(-f3 * 0.01745329F - 3.141593F);
+/*  37 */     float f5 = gd.a(-f3 * 0.01745329F - 3.141593F);
+/*  38 */     float f6 = -gd.b(-f2 * 0.01745329F);
+/*  39 */     float f7 = gd.a(-f2 * 0.01745329F);
+/*     */ 
+/*  41 */     float f8 = f5 * f6;
+/*  42 */     float f9 = f7;
+/*  43 */     float f10 = f4 * f6;
+/*     */ 
+/*  45 */     double d4 = 5.0D;
+/*  46 */     ax localax2 = localax1.c(f8 * d4, f9 * d4, f10 * d4);
+/*  47 */     pr localpr = paramdn.a(localax1, localax2, this.a == 0);
+/*  48 */     if (localpr == null) return paramgm;
+/*     */ 
+/*  50 */     if (localpr.a == gq.a) {
+/*  51 */       int i = localpr.b;
+/*  52 */       int j = localpr.c;
+/*  53 */       int k = localpr.d;
+/*     */ 
+/*  55 */       if (!paramdn.a(parameu, i, j, k)) {
+/*  56 */         return paramgm;
+/*     */       }
+/*     */ 
+/*  59 */       if (this.a == 0) {
+/*  60 */         if ((paramdn.f(i, j, k) == ic.f) && (paramdn.e(i, j, k) == 0)) {
+/*  61 */           paramdn.e(i, j, k, 0);
+/*  62 */           return new gm(eo.av);
+/*     */         }
+/*  64 */         if ((paramdn.f(i, j, k) == ic.g) && (paramdn.e(i, j, k) == 0)) {
+/*  65 */           paramdn.e(i, j, k, 0);
+/*  66 */           return new gm(eo.aw);
+/*     */         }
+/*     */       } else {
+/*  68 */         if (this.a < 0) {
+/*  69 */           return new gm(eo.au);
+/*     */         }
+/*  71 */         if (localpr.e == 0) j--;
+/*  72 */         if (localpr.e == 1) j++;
+/*  73 */         if (localpr.e == 2) k--;
+/*  74 */         if (localpr.e == 3) k++;
+/*  75 */         if (localpr.e == 4) i--;
+/*  76 */         if (localpr.e == 5) i++;
+/*     */ 
+/*  79 */         if ((paramdn.d(i, j, k)) || (!paramdn.f(i, j, k).a())) {
+/*  80 */           if ((paramdn.q.d) && (this.a == pj.A.bi)) {
+/*  81 */             paramdn.a(d1 + 0.5D, d2 + 0.5D, d3 + 0.5D, "random.fizz", 0.5F, 2.6F + (paramdn.l.nextFloat() - paramdn.l.nextFloat()) * 0.8F);
+/*  82 */             for (int m = 0; m < 8; m++)
+/*  83 */               paramdn.a("largesmoke", i + Math.random(), j + Math.random(), k + Math.random(), 0.0D, 0.0D, 0.0D);
+/*     */           }
+/*     */           else {
+/*  86 */             paramdn.b(i, j, k, this.a, 0);
+/*     */           }
+/*  88 */           return new gm(eo.au);
+/*     */         }
+/*     */       }
+/*     */ 
+/*     */     }
+/*  93 */     else if ((this.a == 0) && 
+/*  94 */       ((localpr.g instanceof bb))) {
+/*  95 */       return new gm(eo.aE);
+/*     */     }
+/*     */ 
+/* 100 */     return paramgm;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     am
+ * JD-Core Version:    0.6.0
+ */

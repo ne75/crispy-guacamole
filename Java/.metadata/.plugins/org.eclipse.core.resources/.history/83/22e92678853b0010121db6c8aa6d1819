@@ -1,0 +1,52 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class ka extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public String b;
+/*    */   public String c;
+/*    */   public long d;
+/*    */   public byte e;
+/*    */ 
+/*    */   public ka()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public ka(String paramString1, String paramString2, int paramInt)
+/*    */   {
+/* 16 */     this.b = paramString1;
+/* 17 */     this.c = paramString2;
+/* 18 */     this.a = paramInt;
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream)
+/*    */   {
+/* 30 */     this.a = paramDataInputStream.readInt();
+/* 31 */     this.b = paramDataInputStream.readUTF();
+/* 32 */     this.c = paramDataInputStream.readUTF();
+/* 33 */     this.d = paramDataInputStream.readLong();
+/* 34 */     this.e = paramDataInputStream.readByte();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 38 */     paramDataOutputStream.writeInt(this.a);
+/* 39 */     paramDataOutputStream.writeUTF(this.b);
+/* 40 */     paramDataOutputStream.writeUTF(this.c);
+/* 41 */     paramDataOutputStream.writeLong(this.d);
+/* 42 */     paramDataOutputStream.writeByte(this.e);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 46 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 50 */     return 4 + this.b.length() + this.c.length() + 4 + 5;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ka
+ * JD-Core Version:    0.6.0
+ */

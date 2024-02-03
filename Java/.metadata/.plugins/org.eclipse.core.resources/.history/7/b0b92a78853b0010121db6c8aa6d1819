@@ -1,0 +1,20 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class mg extends hf
+/*    */ {
+/*    */   public kz a(Random paramRandom)
+/*    */   {
+/* 17 */     if (paramRandom.nextInt(5) == 0) {
+/* 18 */       return new f();
+/*    */     }
+/* 20 */     if (paramRandom.nextInt(3) == 0) {
+/* 21 */       return new fx();
+/*    */     }
+/* 23 */     return new rz();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mg
+ * JD-Core Version:    0.6.0
+ */

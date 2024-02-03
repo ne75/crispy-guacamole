@@ -1,0 +1,269 @@
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ 
+/*     */ public class co extends ev
+/*     */ {
+/*     */   private dr a;
+/*     */   private dr g;
+/*     */   private dr h;
+/*  45 */   private static final String[] i = { "cloth", "chain", "iron", "diamond", "gold" };
+/*     */ 
+/*     */   public co()
+/*     */   {
+/*  37 */     super(new dr(0.0F), 0.5F);
+/*     */ 
+/*  39 */     this.a = ((dr)this.e);
+/*     */ 
+/*  41 */     this.g = new dr(1.0F);
+/*  42 */     this.h = new dr(0.5F);
+/*     */   }
+/*     */ 
+/*     */   protected boolean a(eu parameu, int paramInt, float paramFloat)
+/*     */   {
+/*  50 */     gm localgm = parameu.f.d(3 - paramInt);
+/*  51 */     if (localgm != null) {
+/*  52 */       eo localeo = localgm.a();
+/*  53 */       if ((localeo instanceof qf)) {
+/*  54 */         qf localqf = (qf)localeo;
+/*  55 */         a("/armor/" + i[localqf.bi] + "_" + (paramInt == 2 ? 2 : 1) + ".png");
+/*     */ 
+/*  57 */         dr localdr = paramInt == 2 ? this.h : this.g;
+/*     */ 
+/*  59 */         localdr.a.h = (paramInt == 0);
+/*  60 */         localdr.b.h = (paramInt == 0);
+/*  61 */         localdr.c.h = ((paramInt == 1) || (paramInt == 2));
+/*  62 */         localdr.d.h = (paramInt == 1);
+/*  63 */         localdr.e.h = (paramInt == 1);
+/*  64 */         localdr.f.h = ((paramInt == 2) || (paramInt == 3));
+/*  65 */         localdr.g.h = ((paramInt == 2) || (paramInt == 3));
+/*     */ 
+/*  67 */         a(localdr);
+/*  68 */         return true;
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/*  82 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public void a(eu parameu, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2)
+/*     */   {
+/*  87 */     gm localgm = parameu.f.b();
+/*  88 */     this.g.k = (this.h.k = this.a.k = localgm != null ? 1 : 0);
+/*  89 */     this.g.l = (this.h.l = this.a.l = parameu.s());
+/*     */ 
+/*  91 */     double d = paramDouble2 - parameu.aX;
+/*  92 */     if (parameu.s()) {
+/*  93 */       d -= 0.125D;
+/*     */     }
+/*  95 */     super.a(parameu, paramDouble1, d, paramDouble3, paramFloat1, paramFloat2);
+/*  96 */     this.g.l = (this.h.l = this.a.l = 0);
+/*  97 */     this.g.k = (this.h.k = this.a.k = 0);
+/*     */ 
+/* 100 */     float f1 = 1.6F;
+/* 101 */     float f2 = 0.01666667F * f1;
+/* 102 */     float f3 = parameu.f(this.b.h);
+/*     */ 
+/* 104 */     float f4 = parameu.s() ? 32.0F : 64.0F;
+/*     */ 
+/* 106 */     if (f3 < f4) {
+/* 107 */       f2 = (float)(f2 * (Math.sqrt(f3) / 2.0D));
+/*     */ 
+/* 109 */       nh localnh = a();
+/* 110 */       GL11.glPushMatrix();
+/* 111 */       GL11.glTranslatef((float)paramDouble1 + 0.0F, (float)paramDouble2 + 2.3F, (float)paramDouble3);
+/* 112 */       GL11.glNormal3f(0.0F, 1.0F, 0.0F);
+/*     */ 
+/* 114 */       GL11.glRotatef(-this.b.i, 0.0F, 1.0F, 0.0F);
+/* 115 */       GL11.glRotatef(this.b.j, 1.0F, 0.0F, 0.0F);
+/*     */ 
+/* 117 */       GL11.glScalef(-f2, -f2, f2);
+/* 118 */       String str = parameu.o;
+/* 119 */       GL11.glDisable(2896);
+/*     */       jy localjy;
+/*     */       int j;
+/* 121 */       if (!parameu.s()) {
+/* 122 */         GL11.glDepthMask(false);
+/* 123 */         GL11.glDisable(2929);
+/* 124 */         GL11.glEnable(3042);
+/* 125 */         GL11.glBlendFunc(770, 771);
+/* 126 */         localjy = jy.a;
+/*     */ 
+/* 128 */         j = 0;
+/* 129 */         if (parameu.o.equals("deadmau5")) j = -10;
+/*     */ 
+/* 131 */         GL11.glDisable(3553);
+/* 132 */         localjy.b();
+/* 133 */         int k = localnh.a(str) / 2;
+/* 134 */         localjy.a(0.0F, 0.0F, 0.0F, 0.25F);
+/* 135 */         localjy.a(-k - 1, -1 + j, 0.0D);
+/* 136 */         localjy.a(-k - 1, 8 + j, 0.0D);
+/* 137 */         localjy.a(k + 1, 8 + j, 0.0D);
+/* 138 */         localjy.a(k + 1, -1 + j, 0.0D);
+/* 139 */         localjy.a();
+/* 140 */         GL11.glEnable(3553);
+/* 141 */         localnh.b(str, -localnh.a(str) / 2, j, 553648127);
+/* 142 */         GL11.glEnable(2929);
+/*     */ 
+/* 144 */         GL11.glDepthMask(true);
+/* 145 */         localnh.b(str, -localnh.a(str) / 2, j, -1);
+/* 146 */         GL11.glEnable(2896);
+/* 147 */         GL11.glDisable(3042);
+/* 148 */         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 149 */         GL11.glPopMatrix();
+/*     */       } else {
+/* 151 */         GL11.glTranslatef(0.0F, 0.25F / f2, 0.0F);
+/* 152 */         GL11.glDepthMask(false);
+/* 153 */         GL11.glEnable(3042);
+/* 154 */         GL11.glBlendFunc(770, 771);
+/* 155 */         localjy = jy.a;
+/*     */ 
+/* 157 */         GL11.glDisable(3553);
+/* 158 */         localjy.b();
+/* 159 */         j = localnh.a(str) / 2;
+/* 160 */         localjy.a(0.0F, 0.0F, 0.0F, 0.25F);
+/* 161 */         localjy.a(-j - 1, -1.0D, 0.0D);
+/* 162 */         localjy.a(-j - 1, 8.0D, 0.0D);
+/* 163 */         localjy.a(j + 1, 8.0D, 0.0D);
+/* 164 */         localjy.a(j + 1, -1.0D, 0.0D);
+/* 165 */         localjy.a();
+/* 166 */         GL11.glEnable(3553);
+/* 167 */         GL11.glDepthMask(true);
+/* 168 */         localnh.b(str, -localnh.a(str) / 2, 0, 553648127);
+/* 169 */         GL11.glEnable(2896);
+/* 170 */         GL11.glDisable(3042);
+/* 171 */         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 172 */         GL11.glPopMatrix();
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   protected void a(eu parameu, float paramFloat)
+/*     */   {
+/* 180 */     gm localgm1 = parameu.f.d(3);
+/* 181 */     if ((localgm1 != null) && (localgm1.a().ba < 256)) {
+/* 182 */       GL11.glPushMatrix();
+/* 183 */       this.a.a.b(0.0625F);
+/*     */ 
+/* 185 */       if (bt.a(pj.m[localgm1.c].g())) {
+/* 186 */         float f1 = 0.625F;
+/* 187 */         GL11.glTranslatef(0.0F, -0.25F, 0.0F);
+/* 188 */         GL11.glRotatef(180.0F, 0.0F, 1.0F, 0.0F);
+/* 189 */         GL11.glScalef(f1, -f1, f1);
+/*     */       }
+/*     */ 
+/* 192 */       this.b.f.a(localgm1);
+/*     */ 
+/* 194 */       GL11.glPopMatrix();
+/*     */     }
+/*     */     float f2;
+/* 197 */     if ((parameu.o.equals("deadmau5")) && (a(parameu.bu, null))) {
+/* 198 */       for (int j = 0; j < 2; j++) {
+/* 199 */         f2 = parameu.aN + (parameu.aL - parameu.aN) * paramFloat - (parameu.C + (parameu.B - parameu.C) * paramFloat);
+/* 200 */         float f3 = parameu.aO + (parameu.aM - parameu.aO) * paramFloat;
+/* 201 */         GL11.glPushMatrix();
+/* 202 */         GL11.glRotatef(f2, 0.0F, 1.0F, 0.0F);
+/* 203 */         GL11.glRotatef(f3, 1.0F, 0.0F, 0.0F);
+/* 204 */         GL11.glTranslatef(0.375F * (j * 2 - 1), 0.0F, 0.0F);
+/* 205 */         GL11.glTranslatef(0.0F, -0.375F, 0.0F);
+/* 206 */         GL11.glRotatef(-f3, 1.0F, 0.0F, 0.0F);
+/* 207 */         GL11.glRotatef(-f2, 0.0F, 1.0F, 0.0F);
+/*     */ 
+/* 209 */         float f4 = 1.333333F;
+/* 210 */         GL11.glScalef(f4, f4, f4);
+/* 211 */         this.a.a(0.0625F);
+/* 212 */         GL11.glPopMatrix();
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/* 217 */     if (a(parameu.q, null)) {
+/* 218 */       GL11.glPushMatrix();
+/* 219 */       GL11.glTranslatef(0.0F, 0.0F, 0.125F);
+/*     */ 
+/* 221 */       double d1 = parameu.r + (parameu.u - parameu.r) * paramFloat - (parameu.aC + (parameu.aF - parameu.aC) * paramFloat);
+/* 222 */       double d2 = parameu.s + (parameu.v - parameu.s) * paramFloat - (parameu.aD + (parameu.aG - parameu.aD) * paramFloat);
+/* 223 */       double d3 = parameu.t + (parameu.w - parameu.t) * paramFloat - (parameu.aE + (parameu.aH - parameu.aE) * paramFloat);
+/*     */ 
+/* 225 */       float f5 = parameu.C + (parameu.B - parameu.C) * paramFloat;
+/*     */ 
+/* 227 */       double d4 = gd.a(f5 * 3.141593F / 180.0F);
+/* 228 */       double d5 = -gd.b(f5 * 3.141593F / 180.0F);
+/*     */ 
+/* 230 */       float f6 = (float)d2 * 10.0F;
+/* 231 */       if (f6 < -6.0F) f6 = -6.0F;
+/* 232 */       if (f6 > 32.0F) f6 = 32.0F;
+/* 233 */       float f7 = (float)(d1 * d4 + d3 * d5) * 100.0F;
+/* 234 */       float f8 = (float)(d1 * d5 - d3 * d4) * 100.0F;
+/* 235 */       if (f7 < 0.0F) f7 = 0.0F;
+/*     */ 
+/* 237 */       float f9 = parameu.k + (parameu.l - parameu.k) * paramFloat;
+/*     */ 
+/* 239 */       f6 += gd.a((parameu.ba + (parameu.bb - parameu.ba) * paramFloat) * 6.0F) * 32.0F * f9;
+/*     */ 
+/* 241 */       GL11.glRotatef(6.0F + f7 / 2.0F + f6, 1.0F, 0.0F, 0.0F);
+/* 242 */       GL11.glRotatef(f8 / 2.0F, 0.0F, 0.0F, 1.0F);
+/* 243 */       GL11.glRotatef(-f8 / 2.0F, 0.0F, 1.0F, 0.0F);
+/* 244 */       GL11.glRotatef(180.0F, 0.0F, 1.0F, 0.0F);
+/* 245 */       this.a.b(0.0625F);
+/* 246 */       GL11.glPopMatrix();
+/*     */     }
+/*     */ 
+/* 249 */     gm localgm2 = parameu.f.b();
+/*     */ 
+/* 251 */     if (localgm2 != null) {
+/* 252 */       GL11.glPushMatrix();
+/* 253 */       this.a.d.b(0.0625F);
+/* 254 */       GL11.glTranslatef(-0.0625F, 0.4375F, 0.0625F);
+/*     */ 
+/* 256 */       if (parameu.x != null) {
+/* 257 */         localgm2 = new gm(eo.B);
+/*     */       }
+/*     */ 
+/* 260 */       if ((localgm2.c < 256) && (bt.a(pj.m[localgm2.c].g()))) {
+/* 261 */         f2 = 0.5F;
+/* 262 */         GL11.glTranslatef(0.0F, 0.1875F, -0.3125F);
+/* 263 */         f2 *= 0.75F;
+/* 264 */         GL11.glRotatef(20.0F, 1.0F, 0.0F, 0.0F);
+/* 265 */         GL11.glRotatef(45.0F, 0.0F, 1.0F, 0.0F);
+/* 266 */         GL11.glScalef(f2, -f2, f2);
+/* 267 */       } else if (eo.c[localgm2.c].b()) {
+/* 268 */         f2 = 0.625F;
+/* 269 */         if (eo.c[localgm2.c].c()) {
+/* 270 */           GL11.glRotatef(180.0F, 0.0F, 0.0F, 1.0F);
+/* 271 */           GL11.glTranslatef(0.0F, -0.125F, 0.0F);
+/*     */         }
+/* 273 */         GL11.glTranslatef(0.0F, 0.1875F, 0.0F);
+/* 274 */         GL11.glScalef(f2, -f2, f2);
+/* 275 */         GL11.glRotatef(-100.0F, 1.0F, 0.0F, 0.0F);
+/* 276 */         GL11.glRotatef(45.0F, 0.0F, 1.0F, 0.0F);
+/*     */       } else {
+/* 278 */         f2 = 0.375F;
+/* 279 */         GL11.glTranslatef(0.25F, 0.1875F, -0.1875F);
+/* 280 */         GL11.glScalef(f2, f2, f2);
+/* 281 */         GL11.glRotatef(60.0F, 0.0F, 0.0F, 1.0F);
+/* 282 */         GL11.glRotatef(-90.0F, 1.0F, 0.0F, 0.0F);
+/* 283 */         GL11.glRotatef(20.0F, 0.0F, 0.0F, 1.0F);
+/*     */       }
+/*     */ 
+/* 287 */       this.b.f.a(localgm2);
+/* 288 */       GL11.glPopMatrix();
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   protected void b(eu parameu, float paramFloat) {
+/* 293 */     float f = 0.9375F;
+/* 294 */     GL11.glScalef(f, f, f);
+/*     */   }
+/*     */ 
+/*     */   public void b()
+/*     */   {
+/* 299 */     this.a.m = 0.0F;
+/* 300 */     this.a.a(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+/* 301 */     this.a.d.a(0.0625F);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     co
+ * JD-Core Version:    0.6.0
+ */

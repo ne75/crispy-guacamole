@@ -1,0 +1,14 @@
+/*    */ public class nw extends cl
+/*    */ {
+/*  6 */   private static pj[] bg = { pj.x, pj.an, pj.J, pj.au };
+/*    */ 
+/*    */   protected nw(int paramInt, ay paramay)
+/*    */   {
+/* 11 */     super(paramInt, 3, paramay, bg);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     nw
+ * JD-Core Version:    0.6.0
+ */

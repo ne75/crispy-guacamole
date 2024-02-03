@@ -1,0 +1,29 @@
+/*    */ final class jl
+/*    */ {
+/*    */   public final int a;
+/*    */   public final int b;
+/*    */ 
+/*    */   public jl(int paramInt1, int paramInt2)
+/*    */   {
+/* 20 */     this.a = paramInt1;
+/* 21 */     this.b = paramInt2;
+/*    */   }
+/*    */ 
+/*    */   public boolean equals(Object paramObject) {
+/* 25 */     if ((paramObject instanceof jl)) {
+/* 26 */       jl localjl = (jl)paramObject;
+/* 27 */       return (this.a == localjl.a) && (this.b == localjl.b);
+/*    */     }
+/* 29 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public int hashCode()
+/*    */   {
+/* 34 */     return this.a << 16 ^ this.b;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     jl
+ * JD-Core Version:    0.6.0
+ */

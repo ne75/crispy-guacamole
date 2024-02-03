@@ -1,0 +1,22 @@
+/*    */ public class sl extends eo
+/*    */ {
+/*    */   private int a;
+/*    */ 
+/*    */   public sl(int paramInt1, int paramInt2)
+/*    */   {
+/* 10 */     super(paramInt1);
+/* 11 */     this.a = paramInt2;
+/* 12 */     this.bb = 1;
+/*    */   }
+/*    */ 
+/*    */   public gm a(gm paramgm, dn paramdn, eu parameu) {
+/* 16 */     paramgm.a -= 1;
+/* 17 */     parameu.c(this.a);
+/* 18 */     return paramgm;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     sl
+ * JD-Core Version:    0.6.0
+ */

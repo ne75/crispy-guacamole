@@ -1,0 +1,16 @@
+/*    */ import java.io.InputStream;
+/*    */ import java.net.URLConnection;
+/*    */ import paulscode.sound.codecs.CodecJOrbis;
+/*    */ 
+/*    */ public class ge extends CodecJOrbis
+/*    */ {
+/*    */   protected InputStream openInputStream()
+/*    */   {
+/* 40 */     return new jt(this, this.url, this.urlConnection.getInputStream());
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ge
+ * JD-Core Version:    0.6.0
+ */

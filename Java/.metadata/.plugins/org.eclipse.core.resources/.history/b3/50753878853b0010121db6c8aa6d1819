@@ -1,0 +1,85 @@
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.Arrays;
+/*     */ import java.util.HashMap;
+/*     */ import java.util.List;
+/*     */ import java.util.Map;
+/*     */ 
+/*     */ public class pk
+/*     */   implements bm
+/*     */ {
+/*     */   private ib a;
+/*  40 */   private Map b = new HashMap();
+/*  41 */   private List c = new ArrayList();
+/*     */   private dn d;
+/*     */ 
+/*     */   public pk(dn paramdn)
+/*     */   {
+/*  45 */     this.a = new hy(paramdn, new byte[32768], 0, 0);
+/*     */ 
+/*  47 */     this.d = paramdn;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(int paramInt1, int paramInt2) {
+/*  51 */     jl localjl = new jl(paramInt1, paramInt2);
+/*  52 */     return this.b.containsKey(localjl);
+/*     */   }
+/*     */ 
+/*     */   public void c(int paramInt1, int paramInt2) {
+/*  56 */     ib localib = b(paramInt1, paramInt2);
+/*  57 */     if (!localib.h()) {
+/*  58 */       localib.f();
+/*     */     }
+/*     */ 
+/*  61 */     this.b.remove(new jl(paramInt1, paramInt2));
+/*  62 */     this.c.remove(localib);
+/*     */   }
+/*     */ 
+/*     */   public ib d(int paramInt1, int paramInt2) {
+/*  66 */     jl localjl = new jl(paramInt1, paramInt2);
+/*     */ 
+/*  68 */     byte[] arrayOfByte = new byte[32768];
+/*     */ 
+/*  70 */     ib localib = new ib(this.d, arrayOfByte, paramInt1, paramInt2);
+/*  71 */     Arrays.fill(localib.f.a, -1);
+/*  72 */     this.b.put(localjl, localib);
+/*  73 */     localib.c = true;
+/*     */ 
+/*  75 */     return localib;
+/*     */   }
+/*     */ 
+/*     */   public ib b(int paramInt1, int paramInt2)
+/*     */   {
+/*  80 */     jl localjl = new jl(paramInt1, paramInt2);
+/*     */ 
+/*  82 */     ib localib = (ib)this.b.get(localjl);
+/*  83 */     if (localib == null) {
+/*  84 */       return this.a;
+/*     */     }
+/*     */ 
+/*  87 */     return localib;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(boolean paramBoolean, ru paramru) {
+/*  91 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public boolean a() {
+/*  95 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean b() {
+/*  99 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public void a(bm parambm, int paramInt1, int paramInt2) {
+/*     */   }
+/*     */ 
+/*     */   public String c() {
+/* 106 */     return "MultiplayerChunkCache: " + this.b.size();
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     pk
+ * JD-Core Version:    0.6.0
+ */

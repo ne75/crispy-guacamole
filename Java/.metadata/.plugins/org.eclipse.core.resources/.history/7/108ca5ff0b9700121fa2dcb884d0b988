@@ -1,0 +1,10 @@
+package library;
+
+import java.util.*;
+
+public class Media {
+
+    private String title;
+    private Calendar checkOut;
+    
+}

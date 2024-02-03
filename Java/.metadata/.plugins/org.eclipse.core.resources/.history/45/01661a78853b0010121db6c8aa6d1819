@@ -1,0 +1,50 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class ex extends rp
+/*    */ {
+/*    */   public ex(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6)
+/*    */   {
+/* 11 */     super(paramdn, paramDouble1, paramDouble2, paramDouble3, paramDouble4, paramDouble5, paramDouble6);
+/* 12 */     this.aI = (paramDouble4 + (float)(Math.random() * 2.0D - 1.0D) * 0.05F);
+/* 13 */     this.aJ = (paramDouble5 + (float)(Math.random() * 2.0D - 1.0D) * 0.05F);
+/* 14 */     this.aK = (paramDouble6 + (float)(Math.random() * 2.0D - 1.0D) * 0.05F);
+/*    */ 
+/* 16 */     this.i = (this.j = this.k = this.bm.nextFloat() * 0.3F + 0.7F);
+/* 17 */     this.g = (this.bm.nextFloat() * this.bm.nextFloat() * 6.0F + 1.0F);
+/*    */ 
+/* 19 */     this.f = ((int)(16.0D / (this.bm.nextFloat() * 0.8D + 0.2D)) + 2);
+/*    */   }
+/*    */ 
+/*    */   public void a(jy paramjy, float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6)
+/*    */   {
+/* 32 */     super.a(paramjy, paramFloat1, paramFloat2, paramFloat3, paramFloat4, paramFloat5, paramFloat6);
+/*    */   }
+/*    */ 
+/*    */   public void q_()
+/*    */   {
+/* 37 */     this.aC = this.aF;
+/* 38 */     this.aD = this.aG;
+/* 39 */     this.aE = this.aH;
+/*    */ 
+/* 41 */     if (this.e++ >= this.f) F();
+/*    */ 
+/* 43 */     this.b = (7 - this.e * 8 / this.f);
+/*    */ 
+/* 45 */     this.aJ += 0.004D;
+/* 46 */     d(this.aI, this.aJ, this.aK);
+/* 47 */     this.aI *= 0.8999999761581421D;
+/* 48 */     this.aJ *= 0.8999999761581421D;
+/* 49 */     this.aK *= 0.8999999761581421D;
+/*    */ 
+/* 51 */     if (this.aQ)
+/*    */     {
+/* 53 */       this.aI *= 0.699999988079071D;
+/* 54 */       this.aK *= 0.699999988079071D;
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ex
+ * JD-Core Version:    0.6.0
+ */

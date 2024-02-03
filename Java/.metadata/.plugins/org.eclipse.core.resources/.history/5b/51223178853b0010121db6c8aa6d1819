@@ -1,0 +1,167 @@
+/*     */ import java.io.DataInputStream;
+/*     */ import java.io.DataOutputStream;
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.HashMap;
+/*     */ import java.util.List;
+/*     */ import java.util.Map;
+/*     */ 
+/*     */ public class ot
+/*     */ {
+/*  25 */   private static final HashMap a = new HashMap();
+/*     */ 
+/*  42 */   private final Map b = new HashMap();
+/*     */   private boolean c;
+/*     */ 
+/*     */   public void a(int paramInt, Object paramObject)
+/*     */   {
+/*  50 */     Integer localInteger = (Integer)a.get(paramObject.getClass());
+/*  51 */     if (localInteger == null) {
+/*  52 */       throw new IllegalArgumentException("Unknown data type: " + paramObject.getClass());
+/*     */     }
+/*  54 */     if (paramInt > 31) {
+/*  55 */       throw new IllegalArgumentException("Data value id is too big with " + paramInt + "! (Max is " + 31 + ")");
+/*     */     }
+/*  57 */     if (this.b.containsKey(Integer.valueOf(paramInt))) {
+/*  58 */       throw new IllegalArgumentException("Duplicate id value for " + paramInt + "!");
+/*     */     }
+/*     */ 
+/*  61 */     io localio = new io(localInteger.intValue(), paramInt, paramObject);
+/*  62 */     this.b.put(Integer.valueOf(paramInt), localio);
+/*     */   }
+/*     */ 
+/*     */   public byte a(int paramInt) {
+/*  66 */     return ((Byte)((io)this.b.get(Integer.valueOf(paramInt))).b()).byteValue();
+/*     */   }
+/*     */ 
+/*     */   public void b(int paramInt, Object paramObject)
+/*     */   {
+/*  90 */     io localio = (io)this.b.get(Integer.valueOf(paramInt));
+/*     */ 
+/*  93 */     if (!paramObject.equals(localio.b())) {
+/*  94 */       localio.a(paramObject);
+/*  95 */       localio.a(true);
+/*  96 */       this.c = true;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public static void a(List paramList, DataOutputStream paramDataOutputStream)
+/*     */   {
+/* 106 */     if (paramList != null) {
+/* 107 */       for (io localio : paramList) {
+/* 108 */         a(paramDataOutputStream, localio);
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/* 113 */     paramDataOutputStream.writeByte(127);
+/*     */   }
+/*     */ 
+/*     */   public void a(DataOutputStream paramDataOutputStream)
+/*     */   {
+/* 138 */     for (io localio : this.b.values()) {
+/* 139 */       a(paramDataOutputStream, localio);
+/*     */     }
+/*     */ 
+/* 143 */     paramDataOutputStream.writeByte(127);
+/*     */   }
+/*     */ 
+/*     */   private static void a(DataOutputStream paramDataOutputStream, io paramio)
+/*     */   {
+/* 148 */     int i = (paramio.c() << 5 | paramio.a() & 0x1F) & 0xFF;
+/* 149 */     paramDataOutputStream.writeByte(i);
+/*     */ 
+/* 152 */     switch (paramio.c()) {
+/*     */     case 0:
+/* 154 */       paramDataOutputStream.writeByte(((Byte)paramio.b()).byteValue());
+/* 155 */       break;
+/*     */     case 1:
+/* 157 */       paramDataOutputStream.writeShort(((Short)paramio.b()).shortValue());
+/* 158 */       break;
+/*     */     case 2:
+/* 160 */       paramDataOutputStream.writeInt(((Integer)paramio.b()).intValue());
+/* 161 */       break;
+/*     */     case 3:
+/* 163 */       paramDataOutputStream.writeFloat(((Float)paramio.b()).floatValue());
+/* 164 */       break;
+/*     */     case 4:
+/* 166 */       paramDataOutputStream.writeUTF((String)paramio.b());
+/* 167 */       break;
+/*     */     case 5:
+/* 169 */       gm localgm = (gm)paramio.b();
+/* 170 */       paramDataOutputStream.writeShort(localgm.a().ba);
+/* 171 */       paramDataOutputStream.writeByte(localgm.a);
+/* 172 */       paramDataOutputStream.writeShort(localgm.i());
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public static List a(DataInputStream paramDataInputStream)
+/*     */   {
+/* 180 */     ArrayList localArrayList = null;
+/*     */ 
+/* 182 */     int i = paramDataInputStream.readByte();
+/*     */ 
+/* 184 */     while (i != 127)
+/*     */     {
+/* 186 */       if (localArrayList == null) {
+/* 187 */         localArrayList = new ArrayList();
+/*     */       }
+/*     */ 
+/* 191 */       int j = (i & 0xE0) >> 5;
+/* 192 */       int k = i & 0x1F;
+/*     */ 
+/* 194 */       io localio = null;
+/* 195 */       switch (j) {
+/*     */       case 0:
+/* 197 */         localio = new io(j, k, Byte.valueOf(paramDataInputStream.readByte()));
+/* 198 */         break;
+/*     */       case 1:
+/* 200 */         localio = new io(j, k, Short.valueOf(paramDataInputStream.readShort()));
+/* 201 */         break;
+/*     */       case 2:
+/* 203 */         localio = new io(j, k, Integer.valueOf(paramDataInputStream.readInt()));
+/* 204 */         break;
+/*     */       case 3:
+/* 206 */         localio = new io(j, k, Float.valueOf(paramDataInputStream.readFloat()));
+/* 207 */         break;
+/*     */       case 4:
+/* 209 */         localio = new io(j, k, paramDataInputStream.readUTF());
+/* 210 */         break;
+/*     */       case 5:
+/* 212 */         int m = paramDataInputStream.readShort();
+/* 213 */         int n = paramDataInputStream.readByte();
+/* 214 */         int i1 = paramDataInputStream.readShort();
+/* 215 */         localio = new io(j, k, new gm(m, n, i1));
+/*     */       }
+/*     */ 
+/* 219 */       localArrayList.add(localio);
+/*     */ 
+/* 221 */       i = paramDataInputStream.readByte();
+/*     */     }
+/*     */ 
+/* 224 */     return localArrayList;
+/*     */   }
+/*     */ 
+/*     */   public void a(List paramList)
+/*     */   {
+/* 234 */     for (io localio1 : paramList) {
+/* 235 */       io localio2 = (io)this.b.get(Integer.valueOf(localio1.a()));
+/* 236 */       if (localio2 != null)
+/* 237 */         localio2.a(localio1.b());
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   static
+/*     */   {
+/*  27 */     a.put(Byte.class, Integer.valueOf(0));
+/*  28 */     a.put(Short.class, Integer.valueOf(1));
+/*  29 */     a.put(Integer.class, Integer.valueOf(2));
+/*  30 */     a.put(Float.class, Integer.valueOf(3));
+/*  31 */     a.put(String.class, Integer.valueOf(4));
+/*  32 */     a.put(gm.class, Integer.valueOf(5));
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ot
+ * JD-Core Version:    0.6.0
+ */

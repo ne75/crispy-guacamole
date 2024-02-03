@@ -1,0 +1,16 @@
+/*    */ public class lo
+/*    */ {
+/*    */   public String a;
+/*    */   public int b;
+/*    */ 
+/*    */   public lo(String paramString, int paramInt)
+/*    */   {
+/* 10 */     this.a = paramString;
+/* 11 */     this.b = paramInt;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     lo
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,21 @@
+package main;
+
+import java.util.*;
+
+public class Polynomial {
+    
+    private int[] a;
+    private int degree;
+    
+    public int[] Polynomial(String str){
+	
+	
+	
+	int[] a = new int[degree];
+	
+	return a;
+    }
+    
+    public int
+    
+}

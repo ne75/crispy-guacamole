@@ -1,0 +1,20 @@
+package randomPackage;
+
+
+public class test {
+    public static void main(String[] args) {
+	
+	
+	
+    }
+
+    
+    public boolean prefixAgain(String s, int n) {
+	String prefix = s.substring(0, n);
+	
+	for (int i = n; i < s.length(); i += n) {
+	    
+	}
+    }
+
+}

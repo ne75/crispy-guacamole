@@ -1,0 +1,71 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class kk extends rp
+/*    */ {
+/*    */   private float a;
+/*    */   private double o;
+/*    */   private double p;
+/*    */   private double q;
+/*    */ 
+/*    */   public kk(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6)
+/*    */   {
+/* 12 */     super(paramdn, paramDouble1, paramDouble2, paramDouble3, paramDouble4, paramDouble5, paramDouble6);
+/*    */ 
+/* 14 */     this.aI = paramDouble4;
+/* 15 */     this.aJ = paramDouble5;
+/* 16 */     this.aK = paramDouble6;
+/* 17 */     this.o = (this.aF = paramDouble1);
+/* 18 */     this.p = (this.aG = paramDouble2);
+/* 19 */     this.q = (this.aH = paramDouble3);
+/*    */ 
+/* 21 */     float f = this.bm.nextFloat() * 0.6F + 0.4F;
+/* 22 */     this.a = (this.g = this.bm.nextFloat() * 0.2F + 0.5F);
+/* 23 */     this.i = (this.j = this.k = 1.0F * f);
+/* 24 */     this.j *= 0.3F;
+/* 25 */     this.i *= 0.9F;
+/*    */ 
+/* 27 */     this.f = ((int)(Math.random() * 10.0D) + 40);
+/* 28 */     this.bj = true;
+/* 29 */     this.b = (int)(Math.random() * 8.0D);
+/*    */   }
+/*    */ 
+/*    */   public void a(jy paramjy, float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6) {
+/* 33 */     float f = (this.e + paramFloat1) / this.f;
+/* 34 */     f = 1.0F - f;
+/* 35 */     f *= f;
+/* 36 */     f = 1.0F - f;
+/* 37 */     this.g = (this.a * f);
+/* 38 */     super.a(paramjy, paramFloat1, paramFloat2, paramFloat3, paramFloat4, paramFloat5, paramFloat6);
+/*    */   }
+/*    */ 
+/*    */   public float a(float paramFloat) {
+/* 42 */     float f1 = super.a(paramFloat);
+/* 43 */     float f2 = this.e / this.f;
+/* 44 */     f2 *= f2;
+/* 45 */     f2 *= f2;
+/* 46 */     return f1 * (1.0F - f2) + f2;
+/*    */   }
+/*    */ 
+/*    */   public void q_() {
+/* 50 */     this.aC = this.aF;
+/* 51 */     this.aD = this.aG;
+/* 52 */     this.aE = this.aH;
+/*    */ 
+/* 54 */     float f1 = this.e / this.f;
+/* 55 */     float f2 = f1;
+/* 56 */     f1 = -f1 + f1 * f1 * 2.0F;
+/*    */ 
+/* 59 */     f1 = 1.0F - f1;
+/*    */ 
+/* 61 */     this.aF = (this.o + this.aI * f1);
+/* 62 */     this.aG = (this.p + this.aJ * f1 + (1.0F - f2));
+/* 63 */     this.aH = (this.q + this.aK * f1);
+/*    */ 
+/* 68 */     if (this.e++ >= this.f) F();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     kk
+ * JD-Core Version:    0.6.0
+ */

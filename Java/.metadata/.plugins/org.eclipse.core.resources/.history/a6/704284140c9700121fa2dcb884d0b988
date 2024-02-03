@@ -1,0 +1,15 @@
+package library;
+
+import java.util.Calendar;
+
+public class Media {
+
+    private String title;
+    private Calendar checkout;
+    
+    public Media(){
+	title = null;
+	checkout = Calendar.getInstance();
+    }
+    
+}

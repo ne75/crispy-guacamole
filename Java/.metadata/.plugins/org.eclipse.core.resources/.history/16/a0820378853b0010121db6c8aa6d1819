@@ -1,0 +1,142 @@
+/*     */ import java.lang.reflect.Constructor;
+/*     */ import java.util.HashSet;
+/*     */ import java.util.List;
+/*     */ import java.util.Random;
+/*     */ import java.util.Set;
+/*     */ 
+/*     */ public final class bp
+/*     */ {
+/*  43 */   private static Set a = new HashSet();
+/*     */ 
+/*     */   protected static qj a(dn paramdn, int paramInt1, int paramInt2)
+/*     */   {
+/*  36 */     int i = paramInt1 + paramdn.l.nextInt(16);
+/*  37 */     int j = paramdn.l.nextInt(128);
+/*  38 */     int k = paramInt2 + paramdn.l.nextInt(16);
+/*     */ 
+/*  40 */     return new qj(i, j, k);
+/*     */   }
+/*     */ 
+/*     */   public static final int a(dn paramdn, boolean paramBoolean1, boolean paramBoolean2)
+/*     */   {
+/*  47 */     if ((!paramBoolean1) && (!paramBoolean2)) {
+/*  48 */       return 0;
+/*     */     }
+/*     */ 
+/*  51 */     a.clear();
+/*     */     Object localObject;
+/*     */     int j;
+/*     */     int k;
+/*  53 */     for (int i = 0; i < paramdn.d.size(); i++) {
+/*  54 */       localObject = (eu)paramdn.d.get(i);
+/*  55 */       j = gd.b(((eu)localObject).aF / 16.0D);
+/*  56 */       k = gd.b(((eu)localObject).aH / 16.0D);
+/*     */ 
+/*  58 */       int m = 8;
+/*  59 */       for (int n = -m; n <= m; n++) {
+/*  60 */         for (int i1 = -m; i1 <= m; i1++) {
+/*  61 */           a.add(new sn(n + j, i1 + k));
+/*     */         }
+/*     */       }
+/*     */     }
+/*  65 */     i = 0;
+/*     */     hz localhz;
+/*  67 */     label744: label750: for (localhz : hz.values())
+/*     */     {
+/*  69 */       if (((localhz.d()) && (!paramBoolean2)) || ((!localhz.d()) && (!paramBoolean1)))
+/*     */       {
+/*     */         continue;
+/*     */       }
+/*  73 */       if (paramdn.b(localhz.a()) > localhz.b() * a.size() / 256)
+/*     */       {
+/*     */         continue;
+/*     */       }
+/*  77 */       for (sn localsn : a)
+/*     */       {
+/*  79 */         hf localhf = paramdn.a().a(localsn);
+/*  80 */         Class[] arrayOfClass = localhf.a(localhz);
+/*  81 */         if ((arrayOfClass == null) || (arrayOfClass.length == 0))
+/*     */           continue;
+/*  83 */         int i2 = paramdn.l.nextInt(arrayOfClass.length);
+/*     */ 
+/*  85 */         qj localqj = a(paramdn, localsn.a * 16, localsn.b * 16);
+/*  86 */         int i3 = localqj.a;
+/*  87 */         int i4 = localqj.b;
+/*  88 */         int i5 = localqj.c;
+/*     */ 
+/*  90 */         if ((paramdn.g(i3, i4, i5)) || 
+/*  91 */           (paramdn.f(i3, i4, i5) != localhz.c())) continue;
+/*  92 */         int i6 = 0;
+/*     */ 
+/*  94 */         for (int i7 = 0; ; i7++) { if (i7 >= 3) break label750; int i8 = i3;
+/*  96 */           int i9 = i4;
+/*  97 */           int i10 = i5;
+/*  98 */           int i11 = 6;
+/*  99 */           for (int i12 = 0; ; i12++) { if (i12 >= 4) break label744; i8 += paramdn.l.nextInt(i11) - paramdn.l.nextInt(i11);
+/* 101 */             i9 += paramdn.l.nextInt(1) - paramdn.l.nextInt(1);
+/* 102 */             i10 += paramdn.l.nextInt(i11) - paramdn.l.nextInt(i11);
+/*     */ 
+/* 105 */             if (a(localhz, paramdn, i8, i9, i10)) {
+/* 106 */               float f1 = i8 + 0.5F;
+/* 107 */               float f2 = i9;
+/* 108 */               float f3 = i10 + 0.5F;
+/* 109 */               if (paramdn.a(f1, f2, f3, 24.0D) != null) {
+/*     */                 continue;
+/*     */               }
+/* 112 */               float f4 = f1 - paramdn.m;
+/* 113 */               float f5 = f2 - paramdn.n;
+/* 114 */               float f6 = f3 - paramdn.o;
+/* 115 */               float f7 = f4 * f4 + f5 * f5 + f6 * f6;
+/* 116 */               if (f7 < 576.0F) {
+/*     */                 continue;
+/*     */               }
+/*     */               ig localig;
+/*     */               try
+/*     */               {
+/* 123 */                 localig = (ig)arrayOfClass[i2].getConstructor(new Class[] { dn.class }).newInstance(new Object[] { paramdn });
+/*     */               } catch (Exception localException) {
+/* 125 */                 localException.printStackTrace();
+/* 126 */                 return i;
+/*     */               }
+/*     */ 
+/* 129 */               localig.c(f1, f2, f3, paramdn.l.nextFloat() * 360.0F, 0.0F);
+/*     */ 
+/* 131 */               if (localig.c()) {
+/* 132 */                 i6++;
+/* 133 */                 paramdn.a(localig);
+/* 134 */                 a(localig, paramdn, f1, f2, f3);
+/* 135 */                 if (i6 >= localig.k()) break;
+/*     */               }
+/* 137 */               i += i6;
+/*     */             }
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     }
+/* 143 */     return i;
+/*     */   }
+/*     */ 
+/*     */   private static boolean a(hz paramhz, dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 147 */     if (paramhz.c() == ic.f) {
+/* 148 */       return (paramdn.f(paramInt1, paramInt2, paramInt3).d()) && (!paramdn.g(paramInt1, paramInt2 + 1, paramInt3));
+/*     */     }
+/* 150 */     return (paramdn.g(paramInt1, paramInt2 - 1, paramInt3)) && (!paramdn.g(paramInt1, paramInt2, paramInt3)) && (!paramdn.f(paramInt1, paramInt2, paramInt3).d()) && (!paramdn.g(paramInt1, paramInt2 + 1, paramInt3));
+/*     */   }
+/*     */ 
+/*     */   private static void a(ig paramig, dn paramdn, float paramFloat1, float paramFloat2, float paramFloat3)
+/*     */   {
+/* 155 */     if (((paramig instanceof bn)) && (paramdn.l.nextInt(100) == 0)) {
+/* 156 */       dy localdy = new dy(paramdn);
+/* 157 */       localdy.c(paramFloat1, paramFloat2, paramFloat3, paramig.aL, 0.0F);
+/* 158 */       paramdn.a(localdy);
+/* 159 */       localdy.i(paramig);
+/* 160 */     } else if ((paramig instanceof ch)) {
+/* 161 */       ((ch)paramig).b_(ch.a(paramdn.l));
+/*     */     }
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     bp
+ * JD-Core Version:    0.6.0
+ */

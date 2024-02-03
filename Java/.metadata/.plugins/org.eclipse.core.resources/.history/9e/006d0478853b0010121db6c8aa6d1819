@@ -1,0 +1,30 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class ca extends mv
+/*    */ {
+/*    */   protected ca(int paramInt1, int paramInt2)
+/*    */   {
+/* 10 */     super(paramInt1, paramInt2, ic.d);
+/*    */   }
+/*    */ 
+/*    */   protected kp a_() {
+/* 14 */     return new bu();
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt, Random paramRandom) {
+/* 18 */     return 0;
+/*    */   }
+/*    */ 
+/*    */   public int a(Random paramRandom) {
+/* 22 */     return 0;
+/*    */   }
+/*    */ 
+/*    */   public boolean a() {
+/* 26 */     return false;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ca
+ * JD-Core Version:    0.6.0
+ */

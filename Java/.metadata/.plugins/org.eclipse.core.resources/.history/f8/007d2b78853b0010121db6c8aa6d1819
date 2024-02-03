@@ -1,0 +1,25 @@
+/*    */ public class mk
+/*    */ {
+/*    */   public li a;
+/*    */   public li b;
+/*    */ 
+/*    */   public mk()
+/*    */   {
+/* 10 */     this.a = new li(0, 0);
+/* 11 */     this.a.a(-12.0F, -14.0F, -1.0F, 24, 12, 2, 0.0F);
+/*    */ 
+/* 13 */     this.b = new li(0, 14);
+/* 14 */     this.b.a(-1.0F, -2.0F, -1.0F, 2, 14, 2, 0.0F);
+/*    */   }
+/*    */ 
+/*    */   public void a()
+/*    */   {
+/* 19 */     this.a.a(0.0625F);
+/* 20 */     this.b.a(0.0625F);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mk
+ * JD-Core Version:    0.6.0
+ */

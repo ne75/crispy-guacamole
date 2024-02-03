@@ -1,0 +1,38 @@
+/*    */ import java.net.HttpURLConnection;
+/*    */ import java.net.URL;
+/*    */ import javax.imageio.ImageIO;
+/*    */ 
+/*    */ class oe extends Thread
+/*    */ {
+/*    */   oe(cy paramcy, String paramString, jj paramjj)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void run()
+/*    */   {
+/* 18 */     HttpURLConnection localHttpURLConnection = null;
+/*    */     try {
+/* 20 */       URL localURL = new URL(this.a);
+/* 21 */       localHttpURLConnection = (HttpURLConnection)localURL.openConnection();
+/* 22 */       localHttpURLConnection.setDoInput(true);
+/* 23 */       localHttpURLConnection.setDoOutput(false);
+/* 24 */       localHttpURLConnection.connect();
+/* 25 */       if (localHttpURLConnection.getResponseCode() / 100 == 4) {
+/*    */         return;
+/*    */       }
+/* 29 */       if (this.b == null)
+/* 30 */         this.c.a = ImageIO.read(localHttpURLConnection.getInputStream());
+/*    */       else
+/* 32 */         this.c.a = this.b.a(ImageIO.read(localHttpURLConnection.getInputStream()));
+/*    */     } catch (Exception localException) {
+/* 34 */       localException.printStackTrace();
+/*    */     } finally {
+/* 36 */       localHttpURLConnection.disconnect();
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     oe
+ * JD-Core Version:    0.6.0
+ */

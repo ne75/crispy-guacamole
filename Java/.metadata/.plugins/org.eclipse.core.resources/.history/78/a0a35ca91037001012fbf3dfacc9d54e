@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class card {
+	public static void main(String arg[]){
+	
+	String a;	
+		
+	Scanner in = new Scanner(System.in);
+	
+	a = in.nextLine();
+	System.out.println("Your Number is " + a);
+	}
+}

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="armc-013-tutorial"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="armc-013">
+				<Option output="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/armc-013" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DRPI2=1"/>
+					<Add directory="/usr/local/gcc-arm-none-eabi-4_7-2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/include"/>
+					<Add directory="/usr/local/gcc-arm-none-eabi-4_7-2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/include-fixed"/>
+					<Add directory="/usr/local/gcc-arm-none-eabi-4_7-2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 armc-013"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="armc-013/fast">
+				<Option output="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/armc-013" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DRPI2=1"/>
+					<Add directory="/usr/local/gcc-arm-none-eabi-4_7-2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/include"/>
+					<Add directory="/usr/local/gcc-arm-none-eabi-4_7-2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/include-fixed"/>
+					<Add directory="/usr/local/gcc-arm-none-eabi-4_7-2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 armc-013/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/scripts/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/armc-013-cstartup.c">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/armc-013-cstubs.c">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/armc-013-start.S">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/armc-013.c">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/rpi-armtimer.c">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/rpi-armtimer.h">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/rpi-base.h">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/rpi-gpio.c">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/rpi-gpio.h">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/rpi-interrupts.c">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/rpi-interrupts.h">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/rpi-systimer.c">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/rpi-systimer.h">
+			<Option target="armc-013"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/toolchain-arm-none-eabi-rpi2.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/Nikita/Desktop/arm-tutorial-rpi-master/part-4/armc-013/toolchain-arm-none-eabi-rpi2.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

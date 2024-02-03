@@ -1,0 +1,12 @@
+/*   */ public class km extends pj
+/*   */ {
+/*   */   protected km(int paramInt1, int paramInt2)
+/*   */   {
+/* 9 */     super(paramInt1, paramInt2, ic.b);
+/*   */   }
+/*   */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     km
+ * JD-Core Version:    0.6.0
+ */

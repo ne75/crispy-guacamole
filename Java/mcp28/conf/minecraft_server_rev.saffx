@@ -1,0 +1,2840 @@
+[OPTIONS]
+strip_package net/minecraft/src
+
+[CLASSES]
+net/minecraft/src/BlockRedstoneOre bt
+net/minecraft/src/ItemMinecart dw
+net/minecraft/src/Pathfinder gp
+net/minecraft/src/BlockOreBlock q
+net/minecraft/src/BlockChest d
+net/minecraft/src/BlockStationary aj
+net/minecraft/src/BlockTNT al
+net/minecraft/src/Packet21PickupSpawn r
+net/minecraft/src/NetworkAcceptThread ek
+net/minecraft/src/PlayerNBTManager dy
+net/minecraft/src/MinecartTrackLogic it
+net/minecraft/src/ThreadServerApplication cu
+net/minecraft/src/TileEntity bm
+net/minecraft/src/TileEntitySign lv
+net/minecraft/src/EntityAnimals bl
+net/minecraft/src/MapGenBase gn
+net/minecraft/src/NetHandler gi
+net/minecraft/src/ThreadSleepForever cw
+net/minecraft/src/BlockSign hi
+net/minecraft/src/PathEntity do
+net/minecraft/src/BlockSnowBlock af
+net/minecraft/src/ItemReed ml
+net/minecraft/src/WorldServer gc
+net/minecraft/src/ServerConfigurationManager ii
+net/minecraft/src/IInventory mn
+net/minecraft/src/Packet14BlockDig kf
+net/minecraft/src/Entity fe
+net/minecraft/src/Packet23VehicleSpawn fg
+net/minecraft/src/BlockGravel s
+net/minecraft/src/Packet1Login an
+net/minecraft/src/BlockLog ij
+net/minecraft/src/HashEntry2 da
+net/minecraft/src/NBTTagLong f
+net/minecraft/src/Packet40 hx
+net/minecraft/src/BlockStone ey
+net/minecraft/src/BlockDoor lt
+net/minecraft/src/BlockFurnace fr
+net/minecraft/src/ItemStack jl
+net/minecraft/src/ItemInWorldManager md
+net/minecraft/src/EntityList jn
+net/minecraft/src/GuiStatsListener mk
+net/minecraft/src/InventoryCrafting k
+net/minecraft/src/WorldGenHellLava cn
+net/minecraft/src/RecipesIngots gq
+net/minecraft/src/Material mh
+net/minecraft/src/ItemFishingRod cz
+net/minecraft/src/IWorldAccess ce
+net/minecraft/src/Packet kx
+net/minecraft/src/EnumArt jc
+net/minecraft/src/EntityPlayer hl
+net/minecraft/src/EnumCreatureType ma
+net/minecraft/src/StepSound cy
+net/minecraft/src/Packet29DestroyEntity eh
+net/minecraft/src/WorldGenMinable ge
+net/minecraft/src/BlockIce x
+net/minecraft/src/ChunkCoordIntPair mr
+net/minecraft/src/EntitySlime ht
+net/minecraft/src/ChunkCoordinates mi
+net/minecraft/src/NoiseGenerator2 cg
+net/minecraft/src/MCHashTable kh
+net/minecraft/src/WorldGenLightStone1 gz
+net/minecraft/src/WorldGenLightStone2 et
+net/minecraft/src/MapGenCavesHell cd
+net/minecraft/src/SpawnerAnimals cs
+net/minecraft/src/Packet3Chat bz
+net/minecraft/src/ItemDye ky
+net/minecraft/src/NBTTagCompound ah
+net/minecraft/src/RecipesDyes t
+net/minecraft/src/NBTTagByte cx
+net/minecraft/src/BlockFire mc
+net/minecraft/src/NoiseGeneratorOctaves2 hb
+net/minecraft/src/ItemSpade jm
+net/minecraft/src/MaterialTransparent mm
+net/minecraft/src/CraftingInventoryCB ei
+net/minecraft/src/BlockCake hn
+net/minecraft/src/EntityCow bx
+net/minecraft/src/WorldGenTaiga1 cl
+net/minecraft/src/BlockClay el
+net/minecraft/src/WorldGenLakes ds
+net/minecraft/src/WorldGenFlowers bk
+net/minecraft/src/BlockRedstoneWire fb
+net/minecraft/src/BlockOre m
+net/minecraft/src/ItemCoal ej
+net/minecraft/src/EntityFlying ka
+net/minecraft/src/ServerGUI id
+net/minecraft/src/EmptyChunk lz
+net/minecraft/src/BlockMinecartTrack bs
+net/minecraft/src/Packet15Place hp
+net/minecraft/src/StepSoundStone ar
+net/minecraft/src/BlockPortal as
+net/minecraft/src/IAnimals ap
+net/minecraft/src/ItemCloth bn
+net/minecraft/src/Packet20NamedEntitySpawn e
+net/minecraft/src/Packet19 gv
+net/minecraft/src/AxisAlignedBB fa
+net/minecraft/src/PlayerManager kj
+net/minecraft/src/WorldGenTrees lq
+net/minecraft/src/Packet31RelEntityMove fn
+net/minecraft/src/ItemSign if
+net/minecraft/src/EntityPig js
+net/minecraft/src/WorldChunkManager lg
+net/minecraft/src/ItemSword co
+net/minecraft/src/WorldGenDungeons fd
+net/minecraft/src/TileEntityChest kc
+net/minecraft/src/Path lu
+net/minecraft/src/EntitySpider cr
+net/minecraft/src/NetLoginHandler hc
+net/minecraft/src/TileEntityMobSpawner db
+net/minecraft/src/EntitySkeleton gj
+net/minecraft/src/ItemSoup cc
+net/minecraft/src/MobSpawnerHell y
+net/minecraft/src/Chunk me
+net/minecraft/src/EntityZombie ia
+net/minecraft/src/Packet34EntityTeleport dp
+net/minecraft/src/MovingObjectPosition ih
+net/minecraft/src/MobSpawnerForest dk
+net/minecraft/src/EntityPigZombie lh
+net/minecraft/src/EntityItem ic
+net/minecraft/src/IMobs fx
+net/minecraft/src/ItemBlock cp
+net/minecraft/src/ItemArmor jj
+net/minecraft/src/ItemHoe lo
+net/minecraft/src/BlockBreakable jy
+net/minecraft/src/ICommandListener gd
+net/minecraft/src/WorldGenPumpkin km
+net/minecraft/src/Packet54 jd
+net/minecraft/src/Block hr
+net/minecraft/src/GuiLogOutputHandler eb
+net/minecraft/src/Packet51MapChunk er
+net/minecraft/src/EntitySheep dv
+net/minecraft/src/NBTTagByteArray ie
+net/minecraft/src/BlockFluids dz
+net/minecraft/src/ItemLog hk
+net/minecraft/src/RecipesArmor ac
+net/minecraft/src/ItemPainting mb
+net/minecraft/src/BlockLeavesBase aa
+net/minecraft/src/EntityZombieSimple ad
+net/minecraft/src/NBTBase ix
+net/minecraft/src/IUpdatePlayerListBox fs
+net/minecraft/src/ItemSnowball dt
+net/minecraft/src/ShapedRecipes jf
+net/minecraft/src/BlockPumpkin ft
+net/minecraft/src/NetworkManager ca
+net/minecraft/src/MaterialLogic aw
+net/minecraft/src/ItemEgg i
+net/minecraft/src/HashEntry jw
+net/minecraft/src/WorldChunkManagerHell hv
+net/minecraft/src/WatchableObject b
+net/minecraft/src/ItemRedstone iu
+net/minecraft/src/EntityChicken kk
+net/minecraft/src/ThreadLoginVerifier ex
+net/minecraft/src/Packet53BlockChange gw
+net/minecraft/src/EntityCreature iw
+net/minecraft/src/EntityTracker im
+net/minecraft/src/EntityEgg jb
+net/minecraft/src/MCHashTable2 gm
+net/minecraft/src/ItemDoor iq
+net/minecraft/src/RedstoneUpdateInfo lf
+net/minecraft/src/BlockObsidian fu
+net/minecraft/src/EntityLiving mj
+net/minecraft/src/NBTTagString kq
+net/minecraft/src/IBlockAccess la
+net/minecraft/src/ItemBow dj
+net/minecraft/src/BlockJukeBox gf
+net/minecraft/src/BlockCactus bg
+net/minecraft/src/ThreadMonitorConnection ku
+net/minecraft/src/RecipeSorter li
+net/minecraft/src/WorldProviderHell jp
+net/minecraft/src/ChunkCache fm
+net/minecraft/src/NoiseGeneratorPerlin av
+net/minecraft/src/NBTTagShort hm
+net/minecraft/src/EntityArrow fc
+net/minecraft/src/BlockLeaves bp
+net/minecraft/src/BlockSandStone dl
+net/minecraft/src/NBTTagList fh
+net/minecraft/src/ItemBucket bh
+net/minecraft/src/WorldGenerator cb
+net/minecraft/src/EntityFish mq
+net/minecraft/src/EnumMobType ee
+net/minecraft/src/TileEntityDispenser bf
+net/minecraft/src/CraftingInventoryChestCB cf
+net/minecraft/src/EntityCreeper gy
+net/minecraft/src/Packet10Flying iv
+net/minecraft/src/TileEntityFurnace ez
+net/minecraft/src/IProgressUpdate lk
+net/minecraft/src/Packet255KickDisconnect mf
+net/minecraft/src/Packet25 ja
+net/minecraft/src/BlockMushroom gh
+net/minecraft/src/ItemBoat ig
+net/minecraft/src/Packet28 he
+net/minecraft/src/WorldGenTaiga2 ke
+net/minecraft/src/MobSpawnerTaiga g
+net/minecraft/src/BlockFlowing be
+net/minecraft/src/CraftingInventoryFurnaceCB bq
+net/minecraft/src/Packet6SpawnPosition dm
+net/minecraft/src/BlockDispenser lb
+net/minecraft/src/BlockMobSpawner di
+net/minecraft/src/ICrafting ep
+net/minecraft/src/ChunkPosition jq
+net/minecraft/src/Packet0KeepAlive mt
+net/minecraft/src/BlockStairs fi
+net/minecraft/src/ServerWindowAdapter ag
+net/minecraft/src/Packet9 bo
+net/minecraft/src/Packet8 fj
+net/minecraft/src/Packet7 a
+net/minecraft/src/WorldGenFire ld
+net/minecraft/src/Packet22Collect dq
+net/minecraft/src/WorldManager fz
+net/minecraft/src/BlockBookshelf hu
+net/minecraft/src/ItemRecord gs
+net/minecraft/src/MobSpawnerSwamp fw
+net/minecraft/src/RecipesCrafting ki
+net/minecraft/src/InventoryCraftResult ju
+net/minecraft/src/BlockLadder ea
+net/minecraft/src/EntityTrackerEntry io
+net/minecraft/src/ItemTool ec
+net/minecraft/src/ItemPickaxe bc
+net/minecraft/src/EnumMovingObjectType jr
+net/minecraft/src/InventoryLargeChest ay
+net/minecraft/src/BlockSapling hw
+net/minecraft/src/ShapelessRecipes gt
+net/minecraft/src/GuiStatsComponent ll
+net/minecraft/src/NoiseGeneratorOctaves ha
+net/minecraft/src/WorldGenForest o
+net/minecraft/src/World fv
+net/minecraft/src/ItemSaddle em
+net/minecraft/src/Packet60 dx
+net/minecraft/src/PlayerInstance at
+net/minecraft/src/EntityFireball ci
+net/minecraft/src/EnumSkyBlock eo
+net/minecraft/src/BlockGlass gb
+net/minecraft/src/BlockFlower jk
+net/minecraft/src/EntityGhast br
+net/minecraft/src/Vec3D bu
+net/minecraft/src/MathHelper iz
+net/minecraft/src/EntitySnowball by
+net/minecraft/src/ServerGuiFocusAdapter ak
+net/minecraft/src/EntityBoat gu
+net/minecraft/src/Slot hj
+net/minecraft/src/WorldProvider ko
+net/minecraft/src/BlockButton bb
+net/minecraft/src/PlayerListBox n
+net/minecraft/src/BlockWorkbench ga
+net/minecraft/src/IChunkProvider cq
+net/minecraft/src/NBTTagFloat u
+net/minecraft/src/MetadataChunkBlock fk
+net/minecraft/src/WorldGenReed je
+net/minecraft/src/Item hg
+net/minecraft/src/GuiLogFormatter ir
+net/minecraft/src/NBTTagDouble fo
+net/minecraft/src/BlockGrass jz
+net/minecraft/src/Packet4UpdateTime hz
+net/minecraft/src/NBTTagEnd lx
+net/minecraft/src/BlockLightStone ms
+net/minecraft/src/DataWatcher gx
+net/minecraft/src/PathPoint c
+net/minecraft/src/ChunkProviderLoadOrGenerate lj
+net/minecraft/src/NoiseGenerator dn
+net/minecraft/src/SlotCrafting mp
+net/minecraft/src/WorldGenBigTree iy
+net/minecraft/src/BlockNote cj
+net/minecraft/src/NetworkWriterThread kw
+net/minecraft/src/MaterialLiquid es
+net/minecraft/src/Packet18ArmAnimation z
+net/minecraft/src/Packet12PlayerLook il
+net/minecraft/src/BlockSlowSand am
+net/minecraft/src/WorldGenLiquids kz
+net/minecraft/src/ChunkProviderServer ly
+net/minecraft/src/BlockCrops w
+net/minecraft/src/BlockFence kg
+net/minecraft/src/BlockLever lc
+net/minecraft/src/EntityPlayerMP fy
+net/minecraft/src/BlockContainer eg
+net/minecraft/src/FontAllowedCharacters gg
+net/minecraft/src/IChunkLoader bj
+net/minecraft/src/Packet39 ab
+net/minecraft/src/Packet38 jo
+net/minecraft/src/ItemFlintAndSteel lm
+net/minecraft/src/NetServerHandler lp
+net/minecraft/src/NBTTagInt ch
+net/minecraft/src/BlockSand hf
+net/minecraft/src/EntityWaterMob ax
+net/minecraft/src/EntitySquid le
+net/minecraft/src/FurnaceRecipes fp
+net/minecraft/src/RecipesTools hs
+net/minecraft/src/Packet32EntityLook en
+net/minecraft/src/MobSpawnerDesert gk
+net/minecraft/src/Packet24MobSpawn jv
+net/minecraft/src/BlockBloodStone lr
+net/minecraft/src/Packet100 jh
+net/minecraft/src/Packet101 h
+net/minecraft/src/Packet102 dc
+net/minecraft/src/Packet103 in
+net/minecraft/src/Packet104 kn
+net/minecraft/src/Packet105 p
+net/minecraft/src/Packet106 bd
+net/minecraft/src/ItemFood mo
+net/minecraft/src/Packet11PlayerPosition ao
+net/minecraft/src/EntityMinecart lw
+net/minecraft/src/Packet13PlayerLookMove fl
+net/minecraft/src/IRecipe ed
+net/minecraft/src/ItemAxe fq
+net/minecraft/src/ServerCommand ba
+net/minecraft/src/MinecraftException ho
+net/minecraft/src/CraftingInventoryDispenserCB ew
+net/minecraft/src/PropertyManager ef
+net/minecraft/src/CraftingManager ib
+net/minecraft/src/NetworkListenThread ev
+net/minecraft/src/BlockPressurePlate bw
+net/minecraft/src/RecipesWeapons kp
+net/minecraft/src/Packet33RelEntityMoveLook cm
+net/minecraft/src/BlockReed dr
+net/minecraft/src/TileEntityNote gl
+net/minecraft/src/BlockStep mg
+net/minecraft/src/Packet16BlockItemSwitch ik
+net/minecraft/src/EntityPainting dd
+net/minecraft/src/MobSpawnerBase kt
+net/minecraft/src/Packet2Handshake j
+net/minecraft/src/RecipesFood au
+net/minecraft/src/BlockSoil ip
+net/minecraft/src/ItemSeeds du
+net/minecraft/src/Packet52MultiBlockChange kl
+net/minecraft/src/NextTickListEntry df
+net/minecraft/src/BlockSnow kb
+net/minecraft/src/ThreadCommandReader cv
+net/minecraft/src/BlockCloth eq
+net/minecraft/src/BlockDirt bi
+net/minecraft/src/SlotArmor ck
+net/minecraft/src/EntityMobs hq
+net/minecraft/src/Packet130 hh
+net/minecraft/src/ServerGuiCommandListener ai
+net/minecraft/src/ChunkProviderHell ct
+net/minecraft/src/ChunkProviderGenerate ln
+net/minecraft/src/ConsoleLogManager hy
+net/minecraft/src/CraftingInventoryWorkbenchCB jg
+net/minecraft/src/InventoryPlayer ji
+net/minecraft/src/StepSoundSand aq
+net/minecraft/src/Explosion dg
+net/minecraft/src/EntityTNTPrimed dh
+net/minecraft/src/Packet50PreChunk eu
+net/minecraft/src/ChunkLoader go
+net/minecraft/src/MapGenCaves ff
+net/minecraft/src/NibbleArray jt
+net/minecraft/src/CompressedStreamTools az
+net/minecraft/src/Packet30Entity hd
+net/minecraft/src/EntityFallingSand kd
+net/minecraft/src/EnumToolMaterial bv
+net/minecraft/src/ConsoleLogFormatter jx
+net/minecraft/src/BlockSponge kr
+net/minecraft/src/BlockTorch is
+net/minecraft/src/NetworkReaderThread kv
+net/minecraft/src/NetworkMasterThread ks
+net/minecraft/src/Packet5PlayerInventory v
+net/minecraft/src/WorldGenClay l
+net/minecraft/src/MobSpawnerRainforest ls
+net/minecraft/src/BlockRedstoneTorch de
+net/minecraft/src/CraftingInventoryPlayerCB ae
+net/minecraft/src/WorldGenCactus gr
+
+[FIELDS]
+net/minecraft/src/Block/slowSand bc
+net/minecraft/src/World/field_21120_L L
+net/minecraft/src/World/field_21121_K K
+net/minecraft/src/EnumMovingObjectType/field_21124_c c
+net/minecraft/src/Block/portal be
+net/minecraft/src/Item/minecartCrate aL
+net/minecraft/src/Item/minecartPowered aM
+net/minecraft/src/Item/fishRaw aS
+net/minecraft/src/Item/fishCooked aT
+net/minecraft/src/Item/recordCat aZ
+net/minecraft/src/Item/compass aO
+net/minecraft/src/Item/fishingRod aP
+net/minecraft/src/Item/pocketSundial aQ
+net/minecraft/src/Item/lightStoneDust aR
+net/minecraft/src/Block/soundWoodFootstep e
+net/minecraft/src/Block/field_9029_Z Z
+net/minecraft/src/Block/soundMetalFootstep i
+net/minecraft/src/Block/soundStoneFootstep h
+net/minecraft/src/Block/soundGrassFootstep g
+net/minecraft/src/Block/soundGravelFootstep f
+net/minecraft/src/Packet7/isLeftClick c
+net/minecraft/src/Block/soundSandFootstep l
+net/minecraft/src/Block/soundClothFootstep k
+net/minecraft/src/Block/soundGlassFootstep j
+net/minecraft/src/Entity/dataWatcher af
+net/minecraft/src/EntityMinecart/field_9158_as at
+net/minecraft/src/EntityMinecart/field_9159_ar as
+net/minecraft/src/EntityPlayer/field_9150_ao as
+net/minecraft/src/EntityPlayer/score ar
+net/minecraft/src/EntityPlayer/field_9152_am aq
+net/minecraft/src/EntityPlayerMP/field_9154_e e
+net/minecraft/src/EntityPlayerMP/field_9155_d d
+net/minecraft/src/EntityPlayerMP/field_9156_bu bD
+net/minecraft/src/NBTTagList/tagList a
+net/minecraft/src/World/field_778_L O
+net/minecraft/src/RedstoneUpdateInfo/updateTime d
+net/minecraft/src/RedstoneUpdateInfo/z c
+net/minecraft/src/RedstoneUpdateInfo/y b
+net/minecraft/src/RedstoneUpdateInfo/x a
+net/minecraft/src/Item/itemsList c
+net/minecraft/src/Item/appleRed h
+net/minecraft/src/Item/minecartEmpty ax
+net/minecraft/src/Item/gunpowder K
+net/minecraft/src/Item/silk I
+net/minecraft/src/Item/saddle ay
+net/minecraft/src/Item/feather J
+net/minecraft/src/Item/doorSteel az
+net/minecraft/src/Material/sponge j
+net/minecraft/src/Material/sand m
+net/minecraft/src/Material/fire l
+net/minecraft/src/Material/circuits n
+net/minecraft/src/Material/tnt p
+net/minecraft/src/Material/plants i
+net/minecraft/src/ServerGuiCommandListener/mcServerGui b
+net/minecraft/src/ServerGuiCommandListener/textField a
+net/minecraft/src/EnumMobType/field_990_d d
+net/minecraft/src/PropertyManager/serverPropertiesFile c
+net/minecraft/src/ServerWindowAdapter/mcServer a
+net/minecraft/src/PropertyManager/serverProperties b
+net/minecraft/src/PropertyManager/logger a
+net/minecraft/src/GuiLogOutputHandler/field_998_b b
+net/minecraft/src/GuiLogOutputHandler/field_999_a a
+net/minecraft/src/EntityPlayerMP/playerInventory bF
+net/minecraft/src/Item/doorWood at
+net/minecraft/src/Item/stick B
+net/minecraft/src/Item/bucketLava aw
+net/minecraft/src/EntityPlayer/fishEntity aE
+net/minecraft/src/Item/bucketEmpty au
+net/minecraft/src/EntityEgg/field_20080_f f
+net/minecraft/src/EntityEgg/field_20081_ak al
+net/minecraft/src/EntityEgg/field_20082_e e
+net/minecraft/src/EntityEgg/field_20083_aj ak
+net/minecraft/src/EntityEgg/field_20084_d d
+net/minecraft/src/EntityEgg/field_20085_c c
+net/minecraft/src/EntityEgg/field_20086_b b
+net/minecraft/src/EntityEgg/field_20087_a a
+net/minecraft/src/MobSpawnerBase/seasonalForest c
+net/minecraft/src/MobSpawnerBase/swampland b
+net/minecraft/src/MobSpawnerBase/tundra k
+net/minecraft/src/MobSpawnerBase/iceDesert j
+net/minecraft/src/MobSpawnerBase/plains i
+net/minecraft/src/MobSpawnerBase/desert h
+net/minecraft/src/MobSpawnerBase/taiga g
+net/minecraft/src/MobSpawnerBase/shrubland f
+net/minecraft/src/MobSpawnerBase/savanna e
+net/minecraft/src/MobSpawnerBase/forest d
+net/minecraft/src/Chunk/chunkTileEntityMap l
+net/minecraft/src/EnumArt/Aztec2 d
+net/minecraft/src/PlayerNBTManager/worldFile b
+net/minecraft/src/PlayerNBTManager/logger a
+net/minecraft/src/GuiLogOutputHandler/field_1000_d d
+net/minecraft/src/GuiLogOutputHandler/field_1001_c c
+net/minecraft/src/PathEntity/pathIndex c
+net/minecraft/src/PathPoint/isFirst j
+net/minecraft/src/PathEntity/points b
+net/minecraft/src/PathEntity/pathLength a
+net/minecraft/src/MobSpawnerBase/biomeWaterCreatures t
+net/minecraft/src/Block/blockSnow aU
+net/minecraft/src/Block/ice aT
+net/minecraft/src/Block/mushroomBrown af
+net/minecraft/src/Block/plantRed ae
+net/minecraft/src/ChunkProviderLoadOrGenerate/field_21113_i i
+net/minecraft/src/ChunkProviderLoadOrGenerate/field_21112_j j
+net/minecraft/src/Block/field_9033_V V
+net/minecraft/src/Block/field_9032_W W
+net/minecraft/src/Block/field_9031_X X
+net/minecraft/src/Block/field_9030_Y Y
+net/minecraft/src/Block/field_9037_S S
+net/minecraft/src/Block/field_9036_T T
+net/minecraft/src/Block/pumpkinLantern bf
+net/minecraft/src/Block/field_9034_U U
+net/minecraft/src/Block/sandStone Q
+net/minecraft/src/Block/musicBlock R
+net/minecraft/src/EnumMobType/everything a
+net/minecraft/src/RecipesArmor/recipePatterns a
+net/minecraft/src/WorldChunkManager/temperature a
+net/minecraft/src/EntityPlayer/field_9149_ap at
+net/minecraft/src/EntityPlayer/isSwinging au
+net/minecraft/src/EntityPlayer/swingProgressInt av
+net/minecraft/src/EntityLiving/field_9144_ba bj
+net/minecraft/src/EntityLiving/field_9143_bb bk
+net/minecraft/src/EntityLiving/field_9142_bc bl
+net/minecraft/src/EntityLiving/field_9141_bd bm
+net/minecraft/src/EntityLiving/field_9140_bf bo
+net/minecraft/src/EnumToolMaterial/STONE b
+net/minecraft/src/Path/count b
+net/minecraft/src/NBTTagInt/intValue a
+net/minecraft/src/NBTTagByte/byteValue a
+net/minecraft/src/NBTTagLong/longValue a
+net/minecraft/src/WorldGenBigTree/field_747_n n
+net/minecraft/src/WorldGenBigTree/field_746_o o
+net/minecraft/src/Path/pathPoints a
+net/minecraft/src/WorldGenBigTree/field_749_l l
+net/minecraft/src/WorldGenBigTree/field_748_m m
+net/minecraft/src/ChunkProviderGenerate/field_695_u u
+net/minecraft/src/Chunk/isLit a
+net/minecraft/src/ChunkProviderGenerate/gravelNoise s
+net/minecraft/src/ChunkProviderGenerate/stoneNoise t
+net/minecraft/src/Chunk/worldObj d
+net/minecraft/src/Chunk/data e
+net/minecraft/src/Chunk/blocks b
+net/minecraft/src/Chunk/isChunkLoaded c
+net/minecraft/src/ChunkProviderGenerate/sandNoise r
+net/minecraft/src/ChunkCoordinates/field_529_a a
+net/minecraft/src/ChunkCoordinates/field_528_b b
+net/minecraft/src/Material/rock d
+net/minecraft/src/Material/iron e
+net/minecraft/src/Material/water f
+net/minecraft/src/Material/lava g
+net/minecraft/src/GuiStatsListener/statsComponent a
+net/minecraft/src/Material/air a
+net/minecraft/src/Material/ground b
+net/minecraft/src/Material/wood c
+net/minecraft/src/EntityBoat/field_436_ad c
+net/minecraft/src/NetLoginHandler/netManager b
+net/minecraft/src/NetLoginHandler/logger a
+net/minecraft/src/NetLoginHandler/rand d
+net/minecraft/src/NetLoginHandler/finishedProcessing c
+net/minecraft/src/NetLoginHandler/mcServer e
+net/minecraft/src/NetLoginHandler/username g
+net/minecraft/src/NetLoginHandler/serverId i
+net/minecraft/src/EntityItem/delayBeforeCanPickup c
+net/minecraft/src/Packet18ArmAnimation/entityId a
+net/minecraft/src/NetworkManager/writeThread p
+net/minecraft/src/Item/egg aN
+net/minecraft/src/Item/record13 aY
+net/minecraft/src/Item/shiftedIndex ba
+net/minecraft/src/Item/maxStackSize bb
+net/minecraft/src/Item/maxDamage bc
+net/minecraft/src/Item/bFull3D be
+net/minecraft/src/Packet106/field_20035_c c
+net/minecraft/src/ConsoleLogFormatter/dateFormat a
+net/minecraft/src/MCHashTable/threshold c
+net/minecraft/src/PlayerManager/field_833_c c
+net/minecraft/src/PlayerManager/mcServer d
+net/minecraft/src/MCHashTable/slots a
+net/minecraft/src/MCHashTable/count b
+net/minecraft/src/MCHashTable/growFactor d
+net/minecraft/src/MCHashTable/versionStamp e
+net/minecraft/src/MobSpawnerBase/hell l
+net/minecraft/src/MobSpawnerBase/topBlock o
+net/minecraft/src/MobSpawnerBase/fillerBlock p
+net/minecraft/src/MobSpawnerBase/biomeMonsters r
+net/minecraft/src/MobSpawnerBase/biomeCreatures s
+net/minecraft/src/MobSpawnerBase/biomeLookupTable u
+net/minecraft/src/World/scheduledUpdatesAreImmediate a
+net/minecraft/src/PathPoint/totalPathDistance f
+net/minecraft/src/PathPoint/distanceToNext g
+net/minecraft/src/Block/oreGold G
+net/minecraft/src/Block/blockDiamond ax
+net/minecraft/src/PathPoint/yCoord b
+net/minecraft/src/EnumCreatureType/creatureMaterial f
+net/minecraft/src/NextTickListEntry/yCoord b
+net/minecraft/src/PathPoint/xCoord a
+net/minecraft/src/NextTickListEntry/tickEntryID g
+net/minecraft/src/NextTickListEntry/xCoord a
+net/minecraft/src/Block/mushroomRed ag
+net/minecraft/src/EnumCreatureType/creatureClass d
+net/minecraft/src/EnumArt/Skeleton x
+net/minecraft/src/Block/torchWood aq
+net/minecraft/src/Block/brick al
+net/minecraft/src/Block/workbench ay
+net/minecraft/src/Block/stairCompactPlanks at
+net/minecraft/src/Block/oreLapis N
+net/minecraft/src/Block/sponge L
+net/minecraft/src/Block/dispenser P
+net/minecraft/src/Block/blockLapis O
+net/minecraft/src/Block/field_9048_ac ac
+net/minecraft/src/Block/field_9049_aa aa
+net/minecraft/src/Block/signPost aD
+net/minecraft/src/PathPoint/hash d
+net/minecraft/src/WorldGenBigTree/field_754_g g
+net/minecraft/src/WorldGenBigTree/height f
+net/minecraft/src/WorldGenBigTree/field_756_e e
+net/minecraft/src/WorldGenBigTree/basePos d
+net/minecraft/src/WorldGenBigTree/field_750_k k
+net/minecraft/src/WorldGenBigTree/field_751_j j
+net/minecraft/src/WorldGenBigTree/field_752_i i
+net/minecraft/src/WorldGenBigTree/field_753_h h
+net/minecraft/src/WorldGenBigTree/worldObj c
+net/minecraft/src/WorldGenBigTree/field_759_b b
+net/minecraft/src/RecipeSorter/craftingManager a
+net/minecraft/src/PathPoint/zCoord c
+net/minecraft/src/Block/cake bg
+net/minecraft/src/EntityGhast/attackCounter f
+net/minecraft/src/Packet19/state b
+net/minecraft/src/Chunk/field_686_i i
+net/minecraft/src/Chunk/heightMap h
+net/minecraft/src/Chunk/zPosition k
+net/minecraft/src/Chunk/xPosition j
+net/minecraft/src/Chunk/entities m
+net/minecraft/src/Packet21PickupSpawn/itemDamage j
+net/minecraft/src/Chunk/isModified o
+net/minecraft/src/Chunk/isTerrainPopulated n
+net/minecraft/src/EntityGhast/aggroCooldown al
+net/minecraft/src/Chunk/blocklightMap g
+net/minecraft/src/Chunk/skylightMap f
+net/minecraft/src/Block/lightOpacity q
+net/minecraft/src/Block/isBlockContainer p
+net/minecraft/src/Block/grass u
+net/minecraft/src/Block/stone t
+net/minecraft/src/Block/lightValue s
+net/minecraft/src/Block/unusedBooleanArray r
+net/minecraft/src/Block/planks x
+net/minecraft/src/Block/cobblestone w
+net/minecraft/src/Block/dirt v
+net/minecraft/src/ThreadMonitorConnection/netManager a
+net/minecraft/src/NetworkMasterThread/netManager a
+net/minecraft/src/ChunkCache/chunkZ b
+net/minecraft/src/ChunkCache/chunkX a
+net/minecraft/src/World/field_821_y A
+net/minecraft/src/NetworkWriterThread/netManager a
+net/minecraft/src/NetworkReaderThread/netManager a
+net/minecraft/src/ChunkCache/worldObj d
+net/minecraft/src/ChunkCache/chunkArray c
+net/minecraft/src/World/worldProvider q
+net/minecraft/src/World/spawnX m
+net/minecraft/src/World/autosavePeriod j
+net/minecraft/src/World/spawnZ o
+net/minecraft/src/World/spawnY n
+net/minecraft/src/World/field_4278_h h
+net/minecraft/src/World/field_4279_g g
+net/minecraft/src/EnumCreatureType/creature b
+net/minecraft/src/WatchableObject/watchedObject c
+net/minecraft/src/WatchableObject/isWatching d
+net/minecraft/src/HashEntry2/field_1026_d d
+net/minecraft/src/HashEntry2/field_1027_c c
+net/minecraft/src/NextTickListEntry/nextTickEntryID f
+net/minecraft/src/NextTickListEntry/scheduledTime e
+net/minecraft/src/NextTickListEntry/blockID d
+net/minecraft/src/NextTickListEntry/zCoord c
+net/minecraft/src/StepSound/field_1028_b b
+net/minecraft/src/StepSound/field_1029_a a
+net/minecraft/src/Block/stairCompactCobblestone aH
+net/minecraft/src/Block/lever aJ
+net/minecraft/src/Block/button aR
+net/minecraft/src/Block/fence aZ
+net/minecraft/src/Block/pressurePlateStone aK
+net/minecraft/src/Block/pressurePlatePlanks aM
+net/minecraft/src/Entity/entityRiderYawDelta e
+net/minecraft/src/Packet54/xLocation a
+net/minecraft/src/Packet54/yLocation b
+net/minecraft/src/Packet24MobSpawn/metaData h
+net/minecraft/src/Packet24MobSpawn/receivedMetadata i
+net/minecraft/src/EntityFish/field_4125_al an
+net/minecraft/src/Packet15Place/itemStack e
+net/minecraft/src/EnumMovingObjectType/TILE a
+net/minecraft/src/Entity/preventEntitySpawning i
+net/minecraft/src/Entity/riddenByEntity j
+net/minecraft/src/Entity/ridingEntity k
+net/minecraft/src/Entity/posY q
+net/minecraft/src/Entity/posZ r
+net/minecraft/src/Entity/posX p
+net/minecraft/src/World/scheduledTickTreeSet C
+net/minecraft/src/World/scheduledTickSet D
+net/minecraft/src/World/lockTimestamp F
+net/minecraft/src/World/chunkProvider G
+net/minecraft/src/CraftingInventoryDispenserCB/field_21133_a a
+net/minecraft/src/Block/snow aS
+net/minecraft/src/ItemArmor/renderIndex bi
+net/minecraft/src/ItemArmor/armorLevel a
+net/minecraft/src/ItemArmor/armorType bg
+net/minecraft/src/ItemArmor/damageReduceAmount bh
+net/minecraft/src/Item/snowball aB
+net/minecraft/src/ItemReed/field_253_a a
+net/minecraft/src/Item/redstone aA
+net/minecraft/src/ItemArmor/damageReduceAmountArray bj
+net/minecraft/src/ItemArmor/maxDamageArray bk
+net/minecraft/src/WorldServer/field_819_z B
+net/minecraft/src/WorldServer/field_816_A C
+net/minecraft/src/World/loadedEntityList b
+net/minecraft/src/World/loadedTileEntityList c
+net/minecraft/src/World/worldTime e
+net/minecraft/src/World/skylightSubtracted f
+net/minecraft/src/Item/helmetChain X
+net/minecraft/src/TileEntityNote/note e
+net/minecraft/src/EntitySnowball/inTileSnowball e
+net/minecraft/src/Packet51MapChunk/xPosition a
+net/minecraft/src/WorldChunkManagerHell/field_4261_f f
+net/minecraft/src/WorldChunkManagerHell/field_4260_g g
+net/minecraft/src/World/field_4263_L N
+net/minecraft/src/WorldChunkManagerHell/field_4262_e e
+net/minecraft/src/World/field_4265_J J
+net/minecraft/src/World/field_4264_K M
+net/minecraft/src/EntitySnowball/xTileSnowball b
+net/minecraft/src/FontAllowedCharacters/field_20162_a a
+net/minecraft/src/EntitySheep/field_21071_a a
+net/minecraft/src/HashEntry2/field_1024_b b
+net/minecraft/src/HashEntry2/field_1025_a a
+net/minecraft/src/WatchableObject/objectType a
+net/minecraft/src/WatchableObject/dataValueId b
+net/minecraft/src/NetworkManager/readThread q
+net/minecraft/src/NetworkManager/isTerminating r
+net/minecraft/src/ThreadServerApplication/mcServer a
+net/minecraft/src/ThreadCommandReader/mcServer a
+net/minecraft/src/ThreadSleepForever/mc a
+net/minecraft/src/StepSound/field_1030_c c
+net/minecraft/src/NetworkManager/terminationReason s
+net/minecraft/src/NetworkManager/timeSinceLastRead u
+net/minecraft/src/NetworkManager/sendQueueByteLength v
+net/minecraft/src/NetworkManager/chunkDataSendCounter d
+net/minecraft/src/NetServerHandler/field_10_k k
+net/minecraft/src/NetServerHandler/field_15_f f
+net/minecraft/src/NetServerHandler/playerEntity e
+net/minecraft/src/NetServerHandler/mcServer d
+net/minecraft/src/NetServerHandler/field_18_c c
+net/minecraft/src/NetServerHandler/netManager b
+net/minecraft/src/EntityList/IDtoClassMapping c
+net/minecraft/src/EntityList/classToIDMapping d
+net/minecraft/src/Item/pickaxeStone v
+net/minecraft/src/Packet40/entityId a
+net/minecraft/src/Packet54/instrumentType d
+net/minecraft/src/Packet54/zLocation c
+net/minecraft/src/Packet25/xPosition b
+net/minecraft/src/EntityFish/field_4132_ai ak
+net/minecraft/src/Packet25/title f
+net/minecraft/src/Packet25/direction e
+net/minecraft/src/Item/swordDiamond x
+net/minecraft/src/Item/shovelDiamond y
+net/minecraft/src/EntityFireball/field_9194_ak al
+net/minecraft/src/EntityFireball/field_9195_e e
+net/minecraft/src/EntityFireball/field_9196_d d
+net/minecraft/src/EntityFireball/field_9197_aj ak
+net/minecraft/src/EntityFireball/field_9190_an ao
+net/minecraft/src/EntityFireball/field_9191_am an
+net/minecraft/src/EntityFireball/field_9192_al am
+net/minecraft/src/EntityFireball/field_9193_f f
+net/minecraft/src/EntityFireball/field_9198_c c
+net/minecraft/src/EntityFireball/field_9199_b b
+net/minecraft/src/Entity/ySize R
+net/minecraft/src/Entity/lastTickPosZ Q
+net/minecraft/src/Entity/fire Z
+net/minecraft/src/Entity/fireResistance Y
+net/minecraft/src/Entity/ticksExisted X
+net/minecraft/src/Entity/rand W
+net/minecraft/src/Entity/unusedEntityBoolean V
+net/minecraft/src/Entity/noClip T
+net/minecraft/src/Entity/stepHeight S
+net/minecraft/src/EnumArt/Alban c
+net/minecraft/src/EntityPlayerMP/field_20064_am am
+net/minecraft/src/Entity/entityId g
+net/minecraft/src/EntityPlayerMP/field_20065_bH bG
+net/minecraft/src/Entity/chunkCoordZ aj
+net/minecraft/src/Entity/width I
+net/minecraft/src/BlockFurnace/isActive a
+net/minecraft/src/Entity/isDead G
+net/minecraft/src/Packet54/pitch e
+net/minecraft/src/World/unloadedEntityList B
+net/minecraft/src/World/multiplayerWorld z
+net/minecraft/src/EntityFish/field_4129_aj al
+net/minecraft/src/World/sizeOnDisk v
+net/minecraft/src/World/randomSeed u
+net/minecraft/src/World/savePath t
+net/minecraft/src/World/worldAccesses r
+net/minecraft/src/Packet1Login/dimension e
+net/minecraft/src/EntityFish/tileZ f
+net/minecraft/src/Item/clay aG
+net/minecraft/src/Item/slimeBall aK
+net/minecraft/src/EnumCreatureType/waterCreature c
+net/minecraft/src/Packet1Login/protocolVersion a
+net/minecraft/src/Item/leather aD
+net/minecraft/src/World/rand l
+net/minecraft/src/World/difficultySetting k
+net/minecraft/src/World/playerEntities d
+net/minecraft/src/World/field_808_h i
+net/minecraft/src/WorldChunkManager/field_4254_f f
+net/minecraft/src/WorldChunkManager/field_4255_e e
+net/minecraft/src/WorldChunkManager/field_4256_d d
+net/minecraft/src/WorldChunkManager/field_4257_c c
+net/minecraft/src/WorldGenHellLava/field_4250_a a
+net/minecraft/src/WorldChunkManager/field_4253_g g
+net/minecraft/src/RecipesArmor/recipeItems b
+net/minecraft/src/WorldChunkManager/humidity b
+net/minecraft/src/NetworkManager/field_20175_w w
+net/minecraft/src/NetworkManager/field_20176_t t
+net/minecraft/src/DataWatcher/objectChanged c
+net/minecraft/src/DataWatcher/dataTypes a
+net/minecraft/src/NetworkManager/socketInputStream h
+net/minecraft/src/NetworkManager/networkSocket f
+net/minecraft/src/NetworkManager/isRunning j
+net/minecraft/src/NetworkManager/socketOutputStream i
+net/minecraft/src/NetworkManager/dataPackets l
+net/minecraft/src/NetworkManager/readPackets k
+net/minecraft/src/NetworkManager/netHandler n
+net/minecraft/src/NetworkManager/chunkDataPackets m
+net/minecraft/src/DataWatcher/watchedObjects b
+net/minecraft/src/NetworkManager/isServerTerminating o
+net/minecraft/src/EntitySkeleton/defaultHeldItem a
+net/minecraft/src/EntityLiving/field_4104_c c
+net/minecraft/src/EntityPigZombie/randomSoundDelay b
+net/minecraft/src/EntityPigZombie/angerLevel a
+net/minecraft/src/EntityPigZombie/defaultHeldItem f
+net/minecraft/src/Packet19/entityId a
+net/minecraft/src/EntityGhast/prevAttackCounter e
+net/minecraft/src/EntityGhast/waypointZ d
+net/minecraft/src/Packet5PlayerInventory/itemDamage d
+net/minecraft/src/EntityFireball/field_9189_ao ap
+net/minecraft/src/EntityPainting/xPosition b
+net/minecraft/src/EntityArrow/xTile c
+net/minecraft/src/EntityArrow/yTile d
+net/minecraft/src/EntityArrow/inGround ak
+net/minecraft/src/EntityArrow/zTile e
+net/minecraft/src/EntityPainting/yPosition c
+net/minecraft/src/EntityPainting/zPosition d
+net/minecraft/src/EntityPainting/art e
+net/minecraft/src/EntityArrow/arrowShake a
+net/minecraft/src/EntityPlayer/username aw
+net/minecraft/src/Entity/isImmuneToFire ae
+net/minecraft/src/Entity/beenAttacked E
+net/minecraft/src/Entity/field_9077_F F
+net/minecraft/src/Entity/yOffset H
+net/minecraft/src/Entity/prevDistanceWalkedModified K
+net/minecraft/src/Entity/distanceWalkedModified L
+net/minecraft/src/Entity/entityWalks M
+net/minecraft/src/Entity/fallDistance N
+net/minecraft/src/Entity/lastTickPosX O
+net/minecraft/src/Entity/lastTickPosY P
+net/minecraft/src/ChunkCoordIntPair/chunkXPos a
+net/minecraft/src/Packet3Chat/message a
+net/minecraft/src/PlayerInstance/field_1073_a a
+net/minecraft/src/ChunkCoordIntPair/chunkZPos b
+net/minecraft/src/PlayerInstance/field_1072_b b
+net/minecraft/src/EnumArt/SkullAndRoses s
+net/minecraft/src/TileEntityMobSpawner/delay e
+net/minecraft/src/TileEntityMobSpawner/mobID h
+net/minecraft/src/TileEntityMobSpawner/yaw f
+net/minecraft/src/TileEntityMobSpawner/yaw2 g
+net/minecraft/src/InventoryPlayer/player e
+net/minecraft/src/InventoryPlayer/mainInventory a
+net/minecraft/src/InventoryPlayer/armorInventory b
+net/minecraft/src/TileEntityChest/chestContents e
+net/minecraft/src/InventoryPlayer/currentItem c
+net/minecraft/src/InventoryPlayer/inventoryChanged d
+net/minecraft/src/BlockStairs/modelBlock a
+net/minecraft/src/BlockSand/fallInstantly a
+net/minecraft/src/BlockSign/isFreestanding b
+net/minecraft/src/BlockRedstoneWire/wiresProvidePower a
+net/minecraft/src/Entity/chunkCoordX ah
+net/minecraft/src/BlockSign/signEntityClass a
+net/minecraft/src/Entity/chunkCoordY ai
+net/minecraft/src/BlockChest/random a
+net/minecraft/src/BlockFlowing/field_659_a a
+net/minecraft/src/BlockFlowing/field_658_b b
+net/minecraft/src/HashEntry/valueEntry b
+net/minecraft/src/BlockBreakable/field_6084_a a
+net/minecraft/src/BlockLeavesBase/graphicsLevel a
+net/minecraft/src/Block/lightStone bd
+net/minecraft/src/ItemBlock/blockID a
+net/minecraft/src/ItemSeeds/field_271_a a
+net/minecraft/src/ItemMinecart/field_270_a a
+net/minecraft/src/Entity/addedToChunk ag
+net/minecraft/src/Item/itemName bg
+net/minecraft/src/ItemBucket/isFull a
+net/minecraft/src/TileEntity/worldObj a
+net/minecraft/src/TileEntity/xCoord b
+net/minecraft/src/EntityMinecart/cargoItems al
+net/minecraft/src/EntityMinecart/field_477_ad c
+net/minecraft/src/EntityMinecart/minecartType d
+net/minecraft/src/EntityArrow/field_437_aj am
+net/minecraft/src/WorldGenLiquids/liquidBlockId a
+net/minecraft/src/ChunkProviderHell/field_4248_a a
+net/minecraft/src/EnumArt/Wasteland g
+net/minecraft/src/ChunkProviderHell/field_4243_f f
+net/minecraft/src/ChunkProviderHell/field_4242_g g
+net/minecraft/src/ChunkProviderHell/hellRNG h
+net/minecraft/src/ChunkProviderHell/field_4240_i i
+net/minecraft/src/ChunkProviderHell/field_4247_b b
+net/minecraft/src/ChunkProviderHell/field_4246_c c
+net/minecraft/src/ChunkProviderHell/field_4245_d d
+net/minecraft/src/ChunkProviderHell/field_4244_e e
+net/minecraft/src/EntityTrackerEntry/field_909_a a
+net/minecraft/src/CraftingInventoryWorkbenchCB/field_20149_h h
+net/minecraft/src/CraftingInventoryWorkbenchCB/field_20148_i i
+net/minecraft/src/CraftingInventoryWorkbenchCB/craftResult b
+net/minecraft/src/EntityTrackerEntry/field_900_j m
+net/minecraft/src/CraftingInventoryWorkbenchCB/field_20147_j j
+net/minecraft/src/CraftingInventoryWorkbenchCB/craftMatrix a
+net/minecraft/src/CraftingInventoryFurnaceCB/field_20141_c c
+net/minecraft/src/CraftingInventoryFurnaceCB/field_20140_h h
+net/minecraft/src/CraftingInventoryPlayerCB/craftMatrix a
+net/minecraft/src/CraftingInventoryPlayerCB/craftResult b
+net/minecraft/src/ServerCommand/commandListener b
+net/minecraft/src/Vec3D/zCoord c
+net/minecraft/src/Vec3D/xCoord a
+net/minecraft/src/Vec3D/yCoord b
+net/minecraft/src/Vec3D/vectorList d
+net/minecraft/src/Vec3D/nextVector e
+net/minecraft/src/NetworkManager/numWriteThreads c
+net/minecraft/src/NetworkManager/sendQueueLock e
+net/minecraft/src/NetworkManager/threadSyncObject a
+net/minecraft/src/NetworkManager/numReadThreads b
+net/minecraft/src/Packet/packetClassToIdMap b
+net/minecraft/src/Packet/packetIdToClassMap a
+net/minecraft/src/EnumArt/Bomb e
+net/minecraft/src/BlockRedstoneWire/field_21032_b b
+net/minecraft/src/EntityPlayer/dimension ax
+net/minecraft/src/Item/axeDiamond A
+net/minecraft/src/Item/sign as
+net/minecraft/src/Item/bootsGold am
+net/minecraft/src/Item/porkCooked ap
+net/minecraft/src/Item/swordGold E
+net/minecraft/src/Item/bucketWater av
+net/minecraft/src/Item/bowlEmpty C
+net/minecraft/src/Item/bowlSoup D
+net/minecraft/src/PathPoint/previous i
+net/minecraft/src/PathPoint/distanceToTarget h
+net/minecraft/src/EntitySquid/field_21058_al al
+net/minecraft/src/Item/legsGold al
+net/minecraft/src/Entity/isCollidedVertically C
+net/minecraft/src/Entity/field_9083_ac ac
+net/minecraft/src/Entity/isCollided D
+net/minecraft/src/Entity/air ad
+net/minecraft/src/Entity/onGround A
+net/minecraft/src/Entity/maxAir aa
+net/minecraft/src/Entity/isCollidedHorizontally B
+net/minecraft/src/Entity/inWater ab
+net/minecraft/src/Entity/prevRotationPitch y
+net/minecraft/src/Entity/prevRotationYaw x
+net/minecraft/src/TileEntitySign/lineBeingEdited f
+net/minecraft/src/TileEntitySign/signText e
+net/minecraft/src/TileEntityFurnace/furnaceCookTime g
+net/minecraft/src/TileEntityFurnace/currentItemBurnTime f
+net/minecraft/src/TileEntity/classToNameMap f
+net/minecraft/src/TileEntity/nameToClassMap e
+net/minecraft/src/TileEntity/zCoord d
+net/minecraft/src/TileEntity/yCoord c
+net/minecraft/src/TileEntityFurnace/furnaceBurnTime e
+net/minecraft/src/TileEntityFurnace/furnaceItemStacks h
+net/minecraft/src/Block/stoneOvenIdle aB
+net/minecraft/src/Block/tilledField aA
+net/minecraft/src/Entity/rotationYaw v
+net/minecraft/src/Entity/motionZ u
+net/minecraft/src/BlockFire/chanceToEncourageFire a
+net/minecraft/src/Entity/boundingBox z
+net/minecraft/src/BlockFire/abilityToCatchFire b
+net/minecraft/src/BlockRedstoneTorch/torchUpdates b
+net/minecraft/src/BlockRedstoneTorch/torchActive a
+net/minecraft/src/Entity/motionY t
+net/minecraft/src/Entity/motionX s
+net/minecraft/src/Item/axeStone w
+net/minecraft/src/EnumSkyBlock/Sky a
+net/minecraft/src/ItemTool/efficiencyOnProperMaterial bh
+net/minecraft/src/ItemTool/blocksEffectiveAgainst bg
+net/minecraft/src/ItemDoor/field_260_a a
+net/minecraft/src/ItemRecord/recordName a
+net/minecraft/src/ItemTool/damageVsEntity bi
+net/minecraft/src/EntityMinecart/field_468_ak an
+net/minecraft/src/EntityMinecart/field_469_aj am
+net/minecraft/src/EntitySnowball/zTileSnowball d
+net/minecraft/src/EntitySnowball/yTileSnowball c
+net/minecraft/src/NBTTagByteArray/byteArray a
+net/minecraft/src/EnumArt/offsetX C
+net/minecraft/src/EnumArt/offsetY D
+net/minecraft/src/EnumArt/field_863_D E
+net/minecraft/src/EnumArt/sizeY B
+net/minecraft/src/ChunkProviderHell/field_4238_k k
+net/minecraft/src/ChunkProviderHell/field_4239_j j
+net/minecraft/src/ChunkProviderHell/field_4236_m m
+net/minecraft/src/ChunkProviderHell/field_4237_l l
+net/minecraft/src/ChunkProviderHell/field_4234_o o
+net/minecraft/src/ChunkProviderHell/field_4235_n n
+net/minecraft/src/ChunkProviderHell/field_4232_q q
+net/minecraft/src/ChunkProviderHell/field_4233_p p
+net/minecraft/src/ChunkProviderHell/field_4230_s s
+net/minecraft/src/ChunkProviderHell/field_4231_r r
+net/minecraft/src/ServerConfigurationManager/ops h
+net/minecraft/src/ServerConfigurationManager/bannedIPs g
+net/minecraft/src/RecipesTools/recipeItems b
+net/minecraft/src/CraftingManager/recipes b
+net/minecraft/src/CraftingManager/instance a
+net/minecraft/src/EntityTracker/field_912_d d
+net/minecraft/src/EntityTracker/mcServer c
+net/minecraft/src/RecipesTools/recipePatterns a
+net/minecraft/src/EntityTracker/field_911_a a
+net/minecraft/src/ServerConfigurationManager/bannedPlayersFile i
+net/minecraft/src/ServerConfigurationManager/playerNBTManagerObj l
+net/minecraft/src/ServerCommand/command a
+net/minecraft/src/PlayerInstance/field_1061_m m
+net/minecraft/src/PlayerInstance/field_1062_l l
+net/minecraft/src/EnumArt/Sunset k
+net/minecraft/src/PlayerInstance/field_1064_j j
+net/minecraft/src/PlayerInstance/field_1065_i i
+net/minecraft/src/PlayerInstance/field_1066_h h
+net/minecraft/src/PlayerInstance/field_1067_g g
+net/minecraft/src/ServerGUI/mcServer b
+net/minecraft/src/NetServerHandler/logger a
+net/minecraft/src/ServerGUI/logger a
+net/minecraft/src/ServerConfigurationManager/maxPlayers e
+net/minecraft/src/ServerConfigurationManager/field_9252_f f
+net/minecraft/src/ServerConfigurationManager/ipBanFile j
+net/minecraft/src/ServerConfigurationManager/opFile k
+net/minecraft/src/Item/hoeWood L
+net/minecraft/src/Item/axeGold H
+net/minecraft/src/Item/hoeSteel N
+net/minecraft/src/Item/hoeStone M
+net/minecraft/src/Item/hoeGold P
+net/minecraft/src/Item/hoeDiamond O
+net/minecraft/src/Item/plateLeather U
+net/minecraft/src/Item/helmetLeather T
+net/minecraft/src/Item/pickaxeGold G
+net/minecraft/src/Item/shovelGold F
+net/minecraft/src/Entity/prevPosY n
+net/minecraft/src/Entity/prevPosZ o
+net/minecraft/src/Entity/worldObj l
+net/minecraft/src/Entity/prevPosX m
+net/minecraft/src/EntityLiving/renderYawOffset aI
+net/minecraft/src/Entity/renderDistanceWeight h
+net/minecraft/src/EntityLiving/field_9096_ay aH
+net/minecraft/src/EntityLiving/field_9099_av aF
+net/minecraft/src/EntityLiving/field_9098_aw aG
+net/minecraft/src/Chunk/hasEntities q
+net/minecraft/src/Chunk/lastSaveTime r
+net/minecraft/src/ItemInWorldManager/field_675_a a
+net/minecraft/src/ItemInWorldManager/field_674_b b
+net/minecraft/src/ItemInWorldManager/field_673_c c
+net/minecraft/src/ItemInWorldManager/field_672_d d
+net/minecraft/src/ItemInWorldManager/field_671_e e
+net/minecraft/src/ItemInWorldManager/field_670_f f
+net/minecraft/src/EnumArt/Pointer u
+net/minecraft/src/Chunk/neverSave p
+net/minecraft/src/Block/oreDiamond aw
+net/minecraft/src/Block/leaves K
+net/minecraft/src/Block/oreCoal I
+net/minecraft/src/Block/wood J
+net/minecraft/src/Packet1Login/password c
+net/minecraft/src/Packet1Login/mapSeed d
+net/minecraft/src/ShapedRecipes/field_21144_c c
+net/minecraft/src/Packet39/vehicleEntityId b
+net/minecraft/src/Packet28/motionY c
+net/minecraft/src/Packet28/motionZ d
+net/minecraft/src/Packet28/entityId a
+net/minecraft/src/Block/sapling y
+net/minecraft/src/Packet39/entityId a
+net/minecraft/src/ShapedRecipes/field_21142_e e
+net/minecraft/src/ShapedRecipes/field_21143_d d
+net/minecraft/src/ShapedRecipes/field_21140_b b
+net/minecraft/src/ShapedRecipes/field_21141_a a
+net/minecraft/src/Entity/height J
+net/minecraft/src/Packet23VehicleSpawn/yPosition c
+net/minecraft/src/Packet23VehicleSpawn/zPosition d
+net/minecraft/src/Packet50PreChunk/xPosition a
+net/minecraft/src/Packet50PreChunk/yPosition b
+net/minecraft/src/Packet51MapChunk/yPosition b
+net/minecraft/src/Packet50PreChunk/mode c
+net/minecraft/src/Packet51MapChunk/chunkSize h
+net/minecraft/src/EntitySnowball/shakeSnowball a
+net/minecraft/src/Packet51MapChunk/zSize f
+net/minecraft/src/Packet51MapChunk/chunk g
+net/minecraft/src/EntitySnowball/field_455_ah ak
+net/minecraft/src/EntitySnowball/field_454_ai al
+net/minecraft/src/EntitySnowball/field_453_aj am
+net/minecraft/src/EntityPainting/field_452_ad f
+net/minecraft/src/Packet100/windowId a
+net/minecraft/src/Packet100/inventoryType b
+net/minecraft/src/Packet104/windowId a
+net/minecraft/src/Packet104/itemStack b
+net/minecraft/src/Packet103/windowId a
+net/minecraft/src/Packet103/itemSlot b
+net/minecraft/src/Packet100/windowTitle c
+net/minecraft/src/Packet100/slotsCount d
+net/minecraft/src/ItemStack/stackSize a
+net/minecraft/src/ItemStack/animationsToGo b
+net/minecraft/src/Packet130/yPosition b
+net/minecraft/src/Packet103/myItemStack c
+net/minecraft/src/EnumArt/title z
+net/minecraft/src/EnumArt/sizeX A
+net/minecraft/src/ItemStack/itemID c
+net/minecraft/src/ItemStack/itemDamage d
+net/minecraft/src/ChunkProviderGenerate/field_4229_d d
+net/minecraft/src/ChunkProviderGenerate/field_4228_e e
+net/minecraft/src/ChunkProviderGenerate/field_4225_h h
+net/minecraft/src/ChunkProviderGenerate/field_4224_q q
+net/minecraft/src/ChunkProviderGenerate/field_4227_f f
+net/minecraft/src/ChunkProviderGenerate/field_4226_g g
+net/minecraft/src/ChunkProviderGenerate/biomesForGeneration v
+net/minecraft/src/ChunkProviderGenerate/generatedTemperatures w
+net/minecraft/src/MovingObjectPosition/hitVec f
+net/minecraft/src/MovingObjectPosition/entityHit g
+net/minecraft/src/MovingObjectPosition/typeOfHit a
+net/minecraft/src/MovingObjectPosition/blockX b
+net/minecraft/src/ServerConfigurationManager/logger a
+net/minecraft/src/ServerConfigurationManager/playerEntities b
+net/minecraft/src/ServerConfigurationManager/mcServer c
+net/minecraft/src/ServerConfigurationManager/playerManagerObj d
+net/minecraft/src/Packet24MobSpawn/type b
+net/minecraft/src/Packet24MobSpawn/entityId a
+net/minecraft/src/PlayerInstance/field_1071_c c
+net/minecraft/src/PlayerInstance/field_1070_d d
+net/minecraft/src/Packet14BlockDig/xPosition a
+net/minecraft/src/Packet14BlockDig/status e
+net/minecraft/src/Packet14BlockDig/face d
+net/minecraft/src/Packet14BlockDig/zPosition c
+net/minecraft/src/Packet52MultiBlockChange/metadataArray e
+net/minecraft/src/Packet52MultiBlockChange/typeArray d
+net/minecraft/src/Packet52MultiBlockChange/coordinateArray c
+net/minecraft/src/Packet14BlockDig/yPosition b
+net/minecraft/src/EntityTrackerEntry/field_9226_m k
+net/minecraft/src/EntityTrackerEntry/field_9227_l j
+net/minecraft/src/EntityTrackerEntry/field_9224_q o
+net/minecraft/src/EntityTrackerEntry/field_9222_s q
+net/minecraft/src/EntityTrackerEntry/field_9223_r p
+net/minecraft/src/EntityTrackerEntry/field_9220_u s
+net/minecraft/src/EntityTrackerEntry/field_9221_t l
+net/minecraft/src/EntityTrackerEntry/field_9228_k i
+net/minecraft/src/EntityTrackerEntry/field_9229_j h
+net/minecraft/src/EntitySquid/field_21054_ap ap
+net/minecraft/src/EntitySquid/field_21055_ao ao
+net/minecraft/src/EntitySquid/field_21056_an an
+net/minecraft/src/EntitySquid/field_21057_am am
+net/minecraft/src/EntitySquid/field_21050_at at
+net/minecraft/src/EntitySquid/field_21051_as as
+net/minecraft/src/EntitySquid/field_21052_ar ar
+net/minecraft/src/EntitySquid/field_21053_aq aq
+net/minecraft/src/Item/plateGold ak
+net/minecraft/src/EntitySquid/field_21059_f f
+net/minecraft/src/EntityLiving/field_9138_bh bq
+net/minecraft/src/EntityLiving/field_9139_bg bp
+net/minecraft/src/EntityLiving/field_9132_bn bw
+net/minecraft/src/EntityLiving/field_9133_bm bv
+net/minecraft/src/EntityLiving/moveForward by
+net/minecraft/src/EntityLiving/moveStrafing bx
+net/minecraft/src/EntityLiving/field_9136_bj bs
+net/minecraft/src/EntityLiving/field_9137_bi br
+net/minecraft/src/EntityLiving/field_9134_bl bu
+net/minecraft/src/EntityLiving/field_9135_bk bt
+net/minecraft/src/EnumArt/Aztec b
+net/minecraft/src/EntitySnowball/inGroundSnowball f
+net/minecraft/src/EnumArt/Sea j
+net/minecraft/src/ShapelessRecipes/field_21138_a a
+net/minecraft/src/ItemInWorldManager/field_668_h h
+net/minecraft/src/ItemInWorldManager/field_669_g g
+net/minecraft/src/BlockFlowing/field_660_c c
+net/minecraft/src/BlockLeaves/baseIndexInPNG c
+net/minecraft/src/BlockPressurePlate/triggerMobType a
+net/minecraft/src/BlockRedstoneOre/field_665_a a
+net/minecraft/src/Block/blockName a
+net/minecraft/src/ItemInWorldManager/field_667_i i
+net/minecraft/src/ShapelessRecipes/field_21137_b b
+net/minecraft/src/Block/waterStill A
+net/minecraft/src/Block/fire ar
+net/minecraft/src/Block/waterMoving B
+net/minecraft/src/Block/mobSpawner as
+net/minecraft/src/Block/lavaStill C
+net/minecraft/src/Block/lavaMoving D
+net/minecraft/src/Block/crate au
+net/minecraft/src/Block/sand E
+net/minecraft/src/Block/redstoneWire av
+net/minecraft/server/MinecraftServer/field_6036_c c
+net/minecraft/server/MinecraftServer/field_6037_b b
+net/minecraft/server/MinecraftServer/worldMngr e
+net/minecraft/server/MinecraftServer/propertyManagerObj d
+net/minecraft/server/MinecraftServer/field_6032_g g
+net/minecraft/server/MinecraftServer/configManager f
+net/minecraft/server/MinecraftServer/logger a
+net/minecraft/src/Packet28/motionX b
+net/minecraft/src/Entity/entityCollisionReduction U
+net/minecraft/src/Packet51MapChunk/zPosition c
+net/minecraft/src/Packet1Login/username b
+net/minecraft/src/Packet51MapChunk/ySize e
+net/minecraft/src/Packet51MapChunk/xSize d
+net/minecraft/src/Packet29DestroyEntity/entityId a
+net/minecraft/src/Packet5PlayerInventory/slot b
+net/minecraft/src/EntityTNTPrimed/fuse a
+net/minecraft/src/EntityPainting/direction a
+net/minecraft/src/Packet5PlayerInventory/entityID a
+net/minecraft/src/Packet18ArmAnimation/animate b
+net/minecraft/src/EntityFish/field_6148_ao aq
+net/minecraft/src/EntityFish/field_6149_an ap
+net/minecraft/src/EntityList/classToStringMapping b
+net/minecraft/src/EntityList/stringToClassMapping a
+net/minecraft/src/NibbleArray/data a
+net/minecraft/src/Packet/creationTimeMillis k
+net/minecraft/src/ChunkPosition/x a
+net/minecraft/src/ChunkPosition/z c
+net/minecraft/src/EntityFish/field_6146_aq as
+net/minecraft/src/HashEntry/hashEntry a
+net/minecraft/src/EntityFish/field_6144_as au
+net/minecraft/src/EntityFish/field_6145_ar at
+net/minecraft/src/EntityPlayerMP/field_15004_bw bE
+net/minecraft/src/WorldGenLakes/field_15005_a a
+net/minecraft/src/ItemSword/weaponDamage a
+net/minecraft/src/Material/canBurn z
+net/minecraft/src/Material/portal x
+net/minecraft/src/Material/pumpkin w
+net/minecraft/src/Material/cactus u
+net/minecraft/src/Material/unused q
+net/minecraft/src/Material/glass o
+net/minecraft/src/Material/cloth k
+net/minecraft/src/Material/leaves h
+net/minecraft/src/MovingObjectPosition/sideHit e
+net/minecraft/src/CraftingInventoryCB/field_20135_e e
+net/minecraft/src/CraftingInventoryCB/field_20136_d d
+net/minecraft/src/CraftingInventoryChestCB/field_20137_a a
+net/minecraft/src/NoiseGeneratorPerlin/yCoord b
+net/minecraft/src/CraftingInventoryCB/field_20131_b b
+net/minecraft/src/CraftingInventoryCB/field_20132_a a
+net/minecraft/src/CraftingInventoryCB/field_20133_g g
+net/minecraft/src/NoiseGeneratorOctaves/field_938_b b
+net/minecraft/src/NoiseGeneratorOctaves/generatorCollection a
+net/minecraft/src/CraftingInventoryFurnaceCB/field_20138_b b
+net/minecraft/src/CraftingInventoryFurnaceCB/field_20139_a a
+net/minecraft/src/EnumArt/Bust p
+net/minecraft/src/Packet52MultiBlockChange/size f
+net/minecraft/src/Packet52MultiBlockChange/xPosition a
+net/minecraft/src/Packet52MultiBlockChange/zPosition b
+net/minecraft/src/Packet255KickDisconnect/reason a
+net/minecraft/src/Packet/isChunkDataPacket l
+net/minecraft/src/Item/arrow j
+net/minecraft/src/Item/bow i
+net/minecraft/src/EntityTrackerEntry/field_9231_h f
+net/minecraft/src/EntityTrackerEntry/field_9230_i g
+net/minecraft/src/EntityTrackerEntry/field_9233_f d
+net/minecraft/src/EntityTrackerEntry/field_9232_g e
+net/minecraft/src/Item/shovelStone u
+net/minecraft/src/Item/swordStone t
+net/minecraft/src/Item/axeWood s
+net/minecraft/src/Item/pickaxeWood r
+net/minecraft/src/Item/shovelWood q
+net/minecraft/src/Item/swordWood p
+net/minecraft/src/Item/swordSteel o
+net/minecraft/src/Item/ingotGold n
+net/minecraft/src/NoiseGeneratorOctaves2/field_4308_a a
+net/minecraft/src/EntityLiving/randomYawVelocity bz
+net/minecraft/src/EntityLiving/isJumping bA
+net/minecraft/src/EntityLiving/field_9121_aE aN
+net/minecraft/src/WorldProvider/worldObj a
+net/minecraft/src/EntityLiving/field_9123_aC aL
+net/minecraft/src/EntityLiving/field_9122_aD aM
+net/minecraft/src/EntityLiving/field_9125_aA aJ
+net/minecraft/src/EntityLiving/field_9124_aB aK
+net/minecraft/src/EntityLiving/defaultPitch bB
+net/minecraft/src/EntityLiving/moveSpeed bC
+net/minecraft/src/EnumToolMaterial/IRON c
+net/minecraft/src/EnumToolMaterial/GOLD e
+net/minecraft/src/World/field_4268_y y
+net/minecraft/src/RecipesIngots/recipeItems a
+net/minecraft/src/Block/jukebox aY
+net/minecraft/src/Block/cloth ab
+net/minecraft/src/ChunkProviderLoadOrGenerate/chunkLoader e
+net/minecraft/src/ChunkProviderLoadOrGenerate/chunks f
+net/minecraft/src/ChunkProviderLoadOrGenerate/blankChunk c
+net/minecraft/src/ChunkProviderLoadOrGenerate/chunkProvider d
+net/minecraft/src/ChunkProviderServer/field_725_a a
+net/minecraft/src/ChunkProviderServer/field_724_b b
+net/minecraft/src/ChunkProviderServer/field_727_f f
+net/minecraft/src/ChunkProviderServer/field_726_g g
+net/minecraft/src/ChunkProviderServer/field_729_d d
+net/minecraft/src/ChunkProviderServer/field_728_e e
+net/minecraft/server/MinecraftServer/field_6025_n o
+net/minecraft/server/MinecraftServer/onlineMode l
+net/minecraft/server/MinecraftServer/noAnimals m
+net/minecraft/server/MinecraftServer/commands q
+net/minecraft/server/MinecraftServer/field_6028_k k
+net/minecraft/src/ConsoleLogManager/logger a
+net/minecraft/src/EnumToolMaterial/WOOD a
+net/minecraft/src/Packet21PickupSpawn/yPosition c
+net/minecraft/src/Packet21PickupSpawn/zPosition d
+net/minecraft/src/Packet21PickupSpawn/rotation e
+net/minecraft/src/Packet21PickupSpawn/pitch f
+net/minecraft/src/Packet21PickupSpawn/roll g
+net/minecraft/src/EntityItem/health f
+net/minecraft/src/Packet21PickupSpawn/count i
+net/minecraft/src/EntityItem/field_432_ae d
+net/minecraft/src/EntityArrow/field_439_ah b
+net/minecraft/src/EntityArrow/field_438_ai al
+net/minecraft/src/Packet21PickupSpawn/entityId a
+net/minecraft/src/Packet21PickupSpawn/xPosition b
+net/minecraft/src/World/field_6159_E E
+net/minecraft/src/Packet106/windowId a
+net/minecraft/src/Packet105/progressBarValue c
+net/minecraft/src/Packet105/windowId a
+net/minecraft/src/Packet106/field_20033_b b
+net/minecraft/src/Packet101/windowId a
+net/minecraft/src/Entity/nextStepDistance b
+net/minecraft/src/EntityFish/field_6150_ak am
+net/minecraft/src/Item/iconIndex bd
+net/minecraft/src/EnumCreatureType/field_6155_e h
+net/minecraft/src/NoiseGeneratorPerlin/xCoord a
+net/minecraft/src/Block/tickOnLoad n
+net/minecraft/src/Block/opaqueCubeLookup o
+net/minecraft/src/Block/blocksList m
+net/minecraft/src/ItemAxe/blocksEffectiveAgainst bg
+net/minecraft/src/ItemSpade/blocksEffectiveAgainst bg
+net/minecraft/src/Item/boat aC
+net/minecraft/src/Item/bucketMilk aE
+net/minecraft/src/Item/brick aF
+net/minecraft/src/Item/reed aH
+net/minecraft/src/Item/paper aI
+net/minecraft/src/Item/book aJ
+net/minecraft/src/SlotArmor/field_20101_b b
+net/minecraft/src/Slot/field_20100_c c
+net/minecraft/src/SlotCrafting/craftMatrix a
+net/minecraft/src/SlotArmor/field_20102_a a
+net/minecraft/src/ItemPickaxe/blocksEffectiveAgainst bg
+net/minecraft/src/ChunkLoader/saveDir a
+net/minecraft/src/ChunkLoader/createIfNecessary b
+net/minecraft/src/MapGenBase/field_947_a a
+net/minecraft/src/MapGenBase/rand b
+net/minecraft/src/Pathfinder/worldMap a
+net/minecraft/src/Pathfinder/path b
+net/minecraft/src/Pathfinder/pointMap c
+net/minecraft/src/Pathfinder/pathOptions d
+net/minecraft/src/MCHashTable2/field_949_a a
+net/minecraft/src/MCHashTable2/field_948_b b
+net/minecraft/src/FurnaceRecipes/smeltingBase a
+net/minecraft/src/Packet10Flying/yPosition b
+net/minecraft/src/Packet10Flying/xPosition a
+net/minecraft/src/Packet10Flying/stance d
+net/minecraft/src/Packet10Flying/zPosition c
+net/minecraft/src/Packet4UpdateTime/time a
+net/minecraft/src/Packet15Place/yPosition b
+net/minecraft/src/Packet16BlockItemSwitch/id a
+net/minecraft/src/Packet15Place/xPosition a
+net/minecraft/src/FurnaceRecipes/smeltingList b
+net/minecraft/src/ChunkPosition/y b
+net/minecraft/src/Item/legsLeather V
+net/minecraft/src/Item/bootsLeather W
+net/minecraft/src/TileEntityNote/previousRedstoneState f
+net/minecraft/src/Item/plateChain Y
+net/minecraft/src/Item/legsChain Z
+net/minecraft/src/Item/itemRand b
+net/minecraft/src/Item/shovelSteel d
+net/minecraft/src/Item/pickaxeSteel e
+net/minecraft/src/Item/axeSteel f
+net/minecraft/src/Item/flintAndSteel g
+net/minecraft/src/HashEntry/slotHash d
+net/minecraft/src/HashEntry/nextEntry c
+net/minecraft/src/EnumArt/Pool h
+net/minecraft/src/EnumToolMaterial/field_21182_j j
+net/minecraft/src/EnumToolMaterial/damageVsEntity i
+net/minecraft/src/EnumToolMaterial/harvestLevel f
+net/minecraft/src/EnumToolMaterial/efficiencyOnProperMaterial h
+net/minecraft/src/EnumToolMaterial/maxUses g
+net/minecraft/src/EntityLiving/unusedEntityLivingBoolean aQ
+net/minecraft/src/EntityLiving/texture aP
+net/minecraft/src/EntityLiving/scoreValue aU
+net/minecraft/src/EntityLiving/field_9115_aK aT
+net/minecraft/src/EntityLiving/field_9116_aJ aS
+net/minecraft/src/EntityLiving/field_9117_aI aR
+net/minecraft/src/EntityLiving/swingProgress aY
+net/minecraft/src/EntityLiving/prevSwingProgress aX
+net/minecraft/src/EntityLiving/field_9112_aN aW
+net/minecraft/src/EntityLiving/field_9113_aM aV
+net/minecraft/src/Packet23VehicleSpawn/entityId a
+net/minecraft/src/Packet23VehicleSpawn/type e
+net/minecraft/src/Packet53BlockChange/xPosition a
+net/minecraft/src/Packet53BlockChange/metadata e
+net/minecraft/src/Packet53BlockChange/type d
+net/minecraft/src/Packet53BlockChange/zPosition c
+net/minecraft/src/Packet23VehicleSpawn/xPosition b
+net/minecraft/src/World/nbtCompoundPlayer H
+net/minecraft/src/World/field_9209_x x
+net/minecraft/src/EntityFireball/field_9200_a a
+net/minecraft/src/World/field_9207_I I
+net/minecraft/src/EnumCreatureType/field_21106_g g
+net/minecraft/src/Block/stairDouble aj
+net/minecraft/src/Block/stairSingle ak
+net/minecraft/src/Block/bookShelf an
+net/minecraft/src/Block/tnt am
+net/minecraft/src/Block/obsidian ap
+net/minecraft/src/Block/cobblestoneMossy ao
+net/minecraft/src/Entity/rotationPitch w
+net/minecraft/src/Block/stoneOvenActive aC
+net/minecraft/src/NBTTagString/stringValue a
+net/minecraft/src/Packet40/field_21018_b b
+net/minecraft/src/ChunkProviderServer/field_730_c c
+net/minecraft/src/NBTBase/key a
+net/minecraft/src/NBTTagList/tagType b
+net/minecraft/src/Block/crops az
+net/minecraft/src/NBTTagShort/shortValue a
+net/minecraft/src/NBTTagDouble/doubleValue a
+net/minecraft/src/NBTTagCompound/tagMap a
+net/minecraft/src/NBTTagFloat/floatValue a
+net/minecraft/src/EnumArt/Wanderer m
+net/minecraft/src/Entity/field_4131_c c
+net/minecraft/src/Entity/entityRiderPitchDelta d
+net/minecraft/src/Packet6SpawnPosition/yPosition b
+net/minecraft/src/Packet6SpawnPosition/xPosition a
+net/minecraft/src/Packet25/entityId a
+net/minecraft/src/Packet34EntityTeleport/xPosition b
+net/minecraft/src/Packet34EntityTeleport/entityId a
+net/minecraft/src/Packet34EntityTeleport/pitch f
+net/minecraft/src/Packet34EntityTeleport/yaw e
+net/minecraft/src/Packet34EntityTeleport/zPosition d
+net/minecraft/src/Packet34EntityTeleport/yPosition c
+net/minecraft/src/Packet22Collect/collectorEntityId b
+net/minecraft/src/Packet22Collect/collectedEntityId a
+net/minecraft/src/EntityFallingSand/fallTime b
+net/minecraft/src/EntityFallingSand/blockID a
+net/minecraft/src/EntityPlayerMP/field_425_ad c
+net/minecraft/src/EntityPlayerMP/loadedChunks f
+net/minecraft/src/Packet25/zPosition d
+net/minecraft/src/EntityPlayerMP/field_420_ah ak
+net/minecraft/src/EntityPlayer/damageRemainder a
+net/minecraft/src/Packet25/yPosition c
+net/minecraft/src/EntityItem/item a
+net/minecraft/src/WorldProvider/field_6164_h h
+net/minecraft/src/WorldProvider/worldType g
+net/minecraft/src/WorldProvider/isHellWorld d
+net/minecraft/src/WorldProvider/field_6167_c c
+net/minecraft/src/WorldServer/field_6160_D D
+net/minecraft/src/MobSpawnerBase/field_6161_q q
+net/minecraft/src/MobSpawnerBase/color n
+net/minecraft/src/MobSpawnerBase/biomeName m
+net/minecraft/src/CraftingInventoryCB/windowId f
+net/minecraft/src/MovingObjectPosition/blockZ d
+net/minecraft/src/MovingObjectPosition/blockY c
+net/minecraft/src/Block/maxY bp
+net/minecraft/src/Block/slipperiness bu
+net/minecraft/src/Block/blockMaterial bt
+net/minecraft/src/Block/soundPowderFootstep d
+net/minecraft/src/Block/maxZ bq
+net/minecraft/src/Block/blockParticleGravity bs
+net/minecraft/src/Block/stepSound br
+net/minecraft/src/NoiseGeneratorPerlin/permutations d
+net/minecraft/src/RecipesWeapons/recipePatterns a
+net/minecraft/src/NoiseGeneratorPerlin/zCoord c
+net/minecraft/src/RecipesWeapons/recipeItems b
+net/minecraft/src/MetadataChunkBlock/field_956_b b
+net/minecraft/src/MetadataChunkBlock/field_957_a a
+net/minecraft/src/PlayerListBox/updateCounter b
+net/minecraft/src/PlayerListBox/mcServer a
+net/minecraft/src/MCHashTable2/field_952_c c
+net/minecraft/src/WorldManager/mcServer a
+net/minecraft/src/MCHashTable2/field_950_e e
+net/minecraft/src/MCHashTable2/field_951_d d
+net/minecraft/src/MetadataChunkBlock/field_958_g g
+net/minecraft/src/MetadataChunkBlock/field_959_f f
+net/minecraft/src/Packet5PlayerInventory/itemID c
+net/minecraft/src/Packet105/progressBar b
+net/minecraft/src/Packet130/zPosition c
+net/minecraft/src/Packet102/inventorySlot b
+net/minecraft/src/Packet130/xPosition a
+net/minecraft/src/Packet130/signLines d
+net/minecraft/src/Packet102/action d
+net/minecraft/src/Packet102/mouseClick c
+net/minecraft/src/Packet102/window_Id a
+net/minecraft/src/Packet102/itemStack e
+net/minecraft/src/Packet10Flying/rotating i
+net/minecraft/src/Packet24MobSpawn/xPosition c
+net/minecraft/src/Packet10Flying/onGround g
+net/minecraft/src/Packet10Flying/moving h
+net/minecraft/src/Packet24MobSpawn/yaw f
+net/minecraft/src/Packet24MobSpawn/pitch g
+net/minecraft/src/Packet24MobSpawn/yPosition d
+net/minecraft/src/Packet24MobSpawn/zPosition e
+net/minecraft/src/WorldProvider/field_4306_c e
+net/minecraft/src/NoiseGeneratorOctaves2/field_4307_b b
+net/minecraft/src/WorldProvider/lightBrightnessTable f
+net/minecraft/src/Packet10Flying/yaw e
+net/minecraft/src/Packet10Flying/pitch f
+net/minecraft/src/MobSpawnerBase/rainforest a
+net/minecraft/src/WorldProvider/worldChunkMgr b
+net/minecraft/src/CraftingInventoryPlayerCB/field_20144_c c
+net/minecraft/src/TileEntityDispenser/dispenserContents e
+net/minecraft/src/TileEntityDispenser/dispenserRandom f
+net/minecraft/src/InventoryCrafting/field_21085_b b
+net/minecraft/src/Block/plantYellow ad
+net/minecraft/src/EntityLiving/field_4098_b b
+net/minecraft/src/EntityLiving/field_4099_a a
+net/minecraft/src/EntityGhast/targetedEntity ak
+net/minecraft/src/EntityLiving/attackTime bf
+net/minecraft/src/EntityLiving/field_9102_aX bg
+net/minecraft/src/EntityLiving/field_9101_aY bh
+net/minecraft/src/EntityLiving/field_9100_aZ bi
+net/minecraft/src/EntityLiving/hurtTime bb
+net/minecraft/src/EntityLiving/maxHurtTime bc
+net/minecraft/src/EntityLiving/attackedAtYaw bd
+net/minecraft/src/EntityLiving/deathTime be
+net/minecraft/src/EntityLiving/health aZ
+net/minecraft/src/EntityLiving/prevHealth ba
+net/minecraft/src/EnumArt/Stage q
+net/minecraft/src/Packet53BlockChange/yPosition b
+net/minecraft/src/Packet30Entity/yPosition c
+net/minecraft/src/Packet30Entity/entityId a
+net/minecraft/src/Packet30Entity/xPosition b
+net/minecraft/src/Packet15Place/zPosition c
+net/minecraft/src/Packet15Place/direction d
+net/minecraft/src/Packet30Entity/zPosition d
+net/minecraft/src/Packet30Entity/yaw e
+net/minecraft/src/Packet30Entity/pitch f
+net/minecraft/src/Packet30Entity/rotating g
+net/minecraft/src/PlayerManager/field_9216_a a
+net/minecraft/src/PlayerManager/field_9215_b b
+net/minecraft/src/World/field_9212_p p
+net/minecraft/src/World/worldFile s
+net/minecraft/src/World/field_9210_w w
+net/minecraft/src/Block/doorSteel aL
+net/minecraft/src/Block/oreRedstone aN
+net/minecraft/src/Block/minecartTrack aG
+net/minecraft/src/Block/doorWood aE
+net/minecraft/src/Block/ladder aF
+net/minecraft/src/EntityTrackerEntry/field_12020_u r
+net/minecraft/src/Explosion/exploder e
+net/minecraft/src/Explosion/explosionSize f
+net/minecraft/src/Explosion/destroyedBlockPositions g
+net/minecraft/src/Explosion/ExplosionRNG h
+net/minecraft/src/Explosion/explosionY c
+net/minecraft/src/Explosion/explosionZ d
+net/minecraft/src/Item/pickaxeDiamond z
+net/minecraft/src/ChunkProviderGenerate/field_707_i i
+net/minecraft/src/ChunkProviderGenerate/rand j
+net/minecraft/src/ChunkProviderGenerate/field_705_k k
+net/minecraft/src/ChunkProviderGenerate/field_704_l l
+net/minecraft/src/ChunkProviderGenerate/field_703_m m
+net/minecraft/src/ChunkProviderGenerate/field_702_n n
+net/minecraft/src/ChunkProviderGenerate/field_701_o o
+net/minecraft/src/ChunkProviderGenerate/worldObj p
+net/minecraft/src/EnumArt/Creebet l
+net/minecraft/src/EntityFish/field_4134_a a
+net/minecraft/src/ItemFood/healAmount a
+net/minecraft/src/Item/containerItem a
+net/minecraft/src/EntityPlayerMP/mcServer b
+net/minecraft/src/EntityGhast/waypointX b
+net/minecraft/src/EntityFish/tileY e
+net/minecraft/src/Packet20NamedEntitySpawn/yPosition d
+net/minecraft/src/EntityFish/field_20907_c c
+net/minecraft/src/EntityFish/tileX d
+net/minecraft/src/EntityFish/angler b
+net/minecraft/src/Packet20NamedEntitySpawn/currentItem h
+net/minecraft/src/Packet20NamedEntitySpawn/zPosition e
+net/minecraft/src/Packet20NamedEntitySpawn/rotation f
+net/minecraft/src/Packet2Handshake/username a
+net/minecraft/src/EntityPlayer/inventory an
+net/minecraft/src/Packet20NamedEntitySpawn/entityId a
+net/minecraft/src/Packet20NamedEntitySpawn/name b
+net/minecraft/src/EntityCreature/playerToAttack d
+net/minecraft/src/EntityCreature/pathToEntity a
+net/minecraft/src/EntityCreature/hasAttacked e
+net/minecraft/src/EntityLiving/field_386_ba bn
+net/minecraft/src/Entity/nextEntityID a
+net/minecraft/src/GuiLogFormatter/outputHandler a
+net/minecraft/src/MinecartTrackLogic/trackX c
+net/minecraft/src/MinecartTrackLogic/trackY d
+net/minecraft/src/MinecartTrackLogic/trackZ e
+net/minecraft/src/MinecartTrackLogic/trackMetadata f
+net/minecraft/src/EntityTrackerEntry/field_899_k n
+net/minecraft/src/EnumMobType/players c
+net/minecraft/src/Block/blockResistance bk
+net/minecraft/src/Block/minX bl
+net/minecraft/src/Block/minY bm
+net/minecraft/src/Block/minZ bn
+net/minecraft/src/Block/maxX bo
+net/minecraft/src/AxisAlignedBB/maxX d
+net/minecraft/src/AxisAlignedBB/maxY e
+net/minecraft/src/AxisAlignedBB/minY b
+net/minecraft/src/MetadataChunkBlock/field_962_c c
+net/minecraft/src/MetadataChunkBlock/field_961_d d
+net/minecraft/src/MetadataChunkBlock/field_960_e e
+net/minecraft/src/AxisAlignedBB/maxZ f
+net/minecraft/src/AxisAlignedBB/boundingBoxes g
+net/minecraft/src/AxisAlignedBB/numBoundingBoxesInUse h
+net/minecraft/src/AxisAlignedBB/minX a
+net/minecraft/src/EntityPlayer/field_20053_ao ao
+net/minecraft/src/EntityPlayer/craftingInventory ap
+net/minecraft/src/EntityPlayer/field_20051_aA aA
+net/minecraft/src/EntityPlayer/field_20050_aB aB
+net/minecraft/src/EntityTrackerEntry/field_9235_d b
+net/minecraft/src/NoiseGenerator2/field_4318_c c
+net/minecraft/src/EntityTrackerEntry/field_9234_e c
+net/minecraft/src/NoiseGenerator2/field_4315_f f
+net/minecraft/src/NoiseGenerator2/field_4314_g g
+net/minecraft/src/NoiseGenerator2/field_4317_d d
+net/minecraft/src/NoiseGenerator2/field_4316_e e
+net/minecraft/src/SpawnerAnimals/eligibleChunksForSpawning a
+net/minecraft/src/Explosion/worldObj i
+net/minecraft/src/NoiseGenerator2/field_4313_a a
+net/minecraft/src/NoiseGenerator2/field_4312_b b
+net/minecraft/src/EntitySquid/field_21061_c c
+net/minecraft/src/EntitySquid/field_21060_ak ak
+net/minecraft/src/EntitySquid/field_21063_a a
+net/minecraft/src/EntitySquid/field_21062_b b
+net/minecraft/src/Item/hasSubtypes bf
+net/minecraft/src/Item/sugar aW
+net/minecraft/src/Item/bone aV
+net/minecraft/src/Item/dyePowder aU
+net/minecraft/src/Item/cake aX
+net/minecraft/src/ItemDye/dyeColors a
+net/minecraft/src/Block/gravel F
+net/minecraft/src/Material/field_21100_y y
+net/minecraft/src/PathPoint/index e
+net/minecraft/src/Block/blockSteel ai
+net/minecraft/src/BlockPumpkin/blockType a
+net/minecraft/src/Block/signWall aI
+net/minecraft/src/EntityBoat/field_9176_d d
+net/minecraft/src/EntityBoat/field_9177_b b
+net/minecraft/src/EntityBoat/field_9174_e e
+net/minecraft/src/EntityBoat/field_9175_aj ak
+net/minecraft/src/EntityBoat/field_9172_f f
+net/minecraft/src/EntityBoat/field_9173_ak al
+net/minecraft/src/EntityItem/field_9170_e e
+net/minecraft/src/EntityBoat/field_9171_al am
+net/minecraft/src/Block/bedrock z
+net/minecraft/src/EntityBoat/field_9178_a a
+net/minecraft/src/EntityArrow/inTile f
+net/minecraft/src/EnumCreatureType/maxNumberOfCreature e
+net/minecraft/src/Block/blockGold ah
+net/minecraft/src/EnumArt/Fighters t
+net/minecraft/src/EntityFish/field_6147_ap ar
+net/minecraft/src/NetServerHandler/field_9008_h h
+net/minecraft/src/NetServerHandler/field_9009_g g
+net/minecraft/src/NetServerHandler/field_9006_j j
+net/minecraft/src/NetServerHandler/field_9007_i i
+net/minecraft/src/NetLoginHandler/field_9004_h h
+net/minecraft/src/NetLoginHandler/loginTimer f
+net/minecraft/src/EnumArt/Void r
+net/minecraft/src/Block/torchRedstoneActive aQ
+net/minecraft/src/Block/reed aX
+net/minecraft/src/Block/blockClay aW
+net/minecraft/src/Block/cactus aV
+net/minecraft/src/Block/torchRedstoneIdle aP
+net/minecraft/src/Block/oreRedstoneGlowing aO
+net/minecraft/src/Explosion/explosionX b
+net/minecraft/src/Explosion/field_12031_a a
+net/minecraft/src/NetworkManager/remoteSocketAddress g
+net/minecraft/src/ChunkProviderLoadOrGenerate/lastQueriedChunk h
+net/minecraft/src/ChunkProviderLoadOrGenerate/worldObj g
+net/minecraft/src/EnumMobType/mobs b
+net/minecraft/src/ChunkProviderGenerate/mobSpawnerNoise c
+net/minecraft/src/ChunkProviderGenerate/field_714_b b
+net/minecraft/src/ChunkProviderGenerate/field_715_a a
+net/minecraft/src/ChunkProviderLoadOrGenerate/lastQueriedChunkZPos b
+net/minecraft/src/ChunkProviderLoadOrGenerate/lastQueriedChunkXPos a
+net/minecraft/src/WorldServer/field_20912_E E
+net/minecraft/src/ItemTool/toolMaterial a
+net/minecraft/src/BlockStep/blockType a
+net/minecraft/src/WorldServer/field_20911_y A
+net/minecraft/src/EntityMobs/attackStrength c
+net/minecraft/src/EntityCreeper/lastActiveTime b
+net/minecraft/src/EntityCreeper/timeSinceIgnited a
+net/minecraft/src/EntitySlime/field_400_b b
+net/minecraft/src/EntitySlime/field_401_a a
+net/minecraft/src/EntitySlime/field_402_ae d
+net/minecraft/src/EntitySlime/slimeSize c
+net/minecraft/src/InventoryLargeChest/lowerChest c
+net/minecraft/src/EntityLiving/field_9120_aF aO
+net/minecraft/src/EntityChicken/field_394_ae f
+net/minecraft/src/EntityChicken/field_395_ad c
+net/minecraft/src/EntityChicken/timeUntilNextEgg am
+net/minecraft/src/EntityChicken/field_390_ai al
+net/minecraft/src/EntityChicken/field_391_b b
+net/minecraft/src/EntityChicken/field_392_a a
+net/minecraft/src/EntityChicken/field_393_af ak
+net/minecraft/src/EntityFish/field_4124_am ao
+net/minecraft/src/InventoryCrafting/stackList a
+net/minecraft/src/Block/blockHardness bj
+net/minecraft/src/Block/blockID bi
+net/minecraft/src/Block/blockIndexInTexture bh
+net/minecraft/src/NetworkListenThread/networkAcceptThread e
+net/minecraft/src/NetworkListenThread/serverSocket d
+net/minecraft/src/NetworkListenThread/logger a
+net/minecraft/src/NetworkListenThread/field_975_h h
+net/minecraft/src/NetworkListenThread/field_976_g g
+net/minecraft/src/NetworkListenThread/field_977_f f
+net/minecraft/src/AxisAlignedBB/minZ c
+net/minecraft/src/ThreadLoginVerifier/loginHandler b
+net/minecraft/src/ThreadLoginVerifier/loginPacket a
+net/minecraft/src/NetworkListenThread/field_973_b b
+net/minecraft/src/EnumArt/Kebab a
+net/minecraft/src/MinecartTrackLogic/minecartTrack a
+net/minecraft/src/MinecartTrackLogic/connectedTracks g
+net/minecraft/src/EntityPlayer/field_20048_aD aD
+net/minecraft/src/EntityPlayer/field_20049_aC aC
+net/minecraft/src/EntityPlayer/field_20046_az az
+net/minecraft/src/EntityPlayer/field_20047_ay ay
+net/minecraft/src/BlockLeaves/adjacentTreeBlocks b
+net/minecraft/src/MathHelper/SIN_TABLE a
+net/minecraft/src/MinecartTrackLogic/worldObj b
+net/minecraft/src/EnumArt/Graham n
+net/minecraft/src/EnumArt/BurningSkull w
+net/minecraft/src/CraftingInventoryWorkbenchCB/field_20150_c c
+net/minecraft/src/Item/helmetDiamond af
+net/minecraft/src/Item/bootsSteel ae
+net/minecraft/src/Item/legsSteel ad
+net/minecraft/src/Item/plateSteel ac
+net/minecraft/src/Item/helmetGold aj
+net/minecraft/src/Item/bootsDiamond ai
+net/minecraft/src/Item/legsDiamond ah
+net/minecraft/src/Item/plateDiamond ag
+net/minecraft/src/Item/helmetSteel ab
+net/minecraft/src/Item/bootsChain aa
+net/minecraft/src/EntityTracker/field_910_b b
+net/minecraft/src/EntityMinecart/fuel e
+net/minecraft/src/EntityMinecart/pushX f
+net/minecraft/src/EntityMinecart/field_9167_b b
+net/minecraft/src/EntityMinecart/pushZ ak
+net/minecraft/src/EntityMinecart/field_9161_ap aq
+net/minecraft/src/EntityMinecart/field_9160_aq ar
+net/minecraft/src/EntityMinecart/field_9163_an ao
+net/minecraft/src/EntityMinecart/field_9162_ao ap
+net/minecraft/src/EntityItem/age b
+net/minecraft/src/EntityMinecart/field_9168_a a
+net/minecraft/src/Block/oreIron H
+net/minecraft/src/Block/pumpkin ba
+net/minecraft/src/Block/bloodStone bb
+net/minecraft/src/Block/glass M
+net/minecraft/src/Packet7/playerEntityId a
+net/minecraft/src/Packet7/targetEntity b
+net/minecraft/server/MinecraftServer/field_9011_n n
+net/minecraft/server/MinecraftServer/field_9010_p p
+net/minecraft/server/MinecraftServer/field_9013_i i
+net/minecraft/server/MinecraftServer/field_9012_j j
+net/minecraft/src/Packet38/entityStatus b
+net/minecraft/server/MinecraftServer/deathTime h
+net/minecraft/src/Packet8/healthMP a
+net/minecraft/src/Packet38/entityId a
+net/minecraft/src/EnumArt/Plant f
+net/minecraft/src/EntityGhast/courseChangeCooldown a
+net/minecraft/src/EntityPlayerMP/field_418_ai al
+net/minecraft/src/Packet20NamedEntitySpawn/xPosition c
+net/minecraft/src/EntityGhast/waypointY c
+net/minecraft/src/Packet60/explosionSize d
+net/minecraft/src/Packet60/destroyedBlockPositions e
+net/minecraft/src/Packet60/explosionZ c
+net/minecraft/src/Packet60/explosionX a
+net/minecraft/src/Packet60/explosionY b
+net/minecraft/src/Packet20NamedEntitySpawn/pitch g
+net/minecraft/src/EntityPlayerMP/field_20908_a a
+net/minecraft/src/Packet6SpawnPosition/zPosition c
+net/minecraft/src/PlayerInstance/field_1063_k k
+net/minecraft/src/GuiStatsComponent/displayStrings c
+net/minecraft/src/WorldGenFlowers/plantBlockId a
+net/minecraft/src/WorldGenClay/clayBlockId a
+net/minecraft/src/GuiStatsComponent/memoryUse a
+net/minecraft/src/GuiStatsComponent/updateCounter b
+net/minecraft/src/WorldGenMinable/numberOfBlocks b
+net/minecraft/src/WorldGenBigTree/field_760_a a
+net/minecraft/src/WorldGenClay/numberOfBlocks b
+net/minecraft/src/WorldGenMinable/minableBlockId a
+net/minecraft/src/PlayerInstance/field_1068_f f
+net/minecraft/src/PlayerInstance/field_1069_e e
+net/minecraft/src/Item/diamond l
+net/minecraft/src/Item/ingotIron m
+net/minecraft/src/EnumSkyBlock/Block b
+net/minecraft/src/Item/coal k
+net/minecraft/src/Item/bread S
+net/minecraft/src/Item/seeds Q
+net/minecraft/src/Item/wheat R
+net/minecraft/src/Material/clay v
+net/minecraft/src/Material/builtSnow t
+net/minecraft/src/InventoryLargeChest/upperChest b
+net/minecraft/src/EnumArt/Courbet i
+net/minecraft/src/InventoryLargeChest/name a
+net/minecraft/src/Material/ice r
+net/minecraft/src/Material/snow s
+net/minecraft/src/EnumCreatureType/monster a
+net/minecraft/src/NetworkListenThread/mcServer c
+net/minecraft/src/EnumSkyBlock/field_983_d d
+net/minecraft/src/NetworkAcceptThread/field_985_b b
+net/minecraft/src/EnumSkyBlock/field_984_c c
+net/minecraft/src/ServerGuiFocusAdapter/mcServerGui a
+net/minecraft/src/NetworkAcceptThread/mcServer a
+net/minecraft/src/Packet21PickupSpawn/itemID h
+net/minecraft/src/EnumArt/Match o
+net/minecraft/src/InventoryCraftResult/stackResult a
+net/minecraft/src/InventoryPlayer/itemStack f
+net/minecraft/src/InventoryCrafting/eventHandler c
+net/minecraft/src/EnumToolMaterial/EMERALD d
+net/minecraft/src/EntityEgg/field_20079_al am
+net/minecraft/src/Item/painting aq
+net/minecraft/src/Item/appleGold ar
+net/minecraft/src/Item/porkRaw ao
+net/minecraft/src/Item/flint an
+net/minecraft/src/Slot/xDisplayPosition d
+net/minecraft/src/Slot/yDisplayPosition e
+net/minecraft/src/Slot/slotIndex a
+net/minecraft/src/Slot/inventory b
+net/minecraft/src/EnumArt/Pigscene v
+net/minecraft/src/EnumArt/DonkeyKong y
+net/minecraft/src/EnumMovingObjectType/ENTITY b
+
+[METHODS]
+net/minecraft/src/PlayerInstance/func_20178_a (Lbm;)V a
+net/minecraft/src/RecipesFood/addRecipes (Lib;)V a
+net/minecraft/src/RecipesArmor/addRecipes (Lib;)V a
+net/minecraft/src/InventoryPlayer/getItemStack ()Ljl; i
+net/minecraft/src/InventoryPlayer/setItemStack (Ljl;)V b
+net/minecraft/src/TileEntity/func_20070_f ()Lkx; g
+net/minecraft/src/EntityFish/func_6143_c ()I d
+net/minecraft/src/EntityFish/func_6142_a (DDDFF)V a
+net/minecraft/src/EntitySnowball/func_6141_a (DDDFF)V a
+net/minecraft/src/Entity/func_85_a ([F)Lfh; a
+net/minecraft/src/EntityEgg/func_20078_a (DDDFF)V a
+net/minecraft/src/InventoryPlayer/getStrVsBlock (Lhr;)F a
+net/minecraft/src/ThreadLoginVerifier/run ()V run
+net/minecraft/src/MobSpawnerBase/generateBiomeLookup ()V a
+net/minecraft/src/MobSpawnerBase/getBiomeFromLookup (DD)Lkt; a
+net/minecraft/src/WorldProviderHell/getChunkLoader (Ljava/io/File;)Lbj; a
+net/minecraft/src/WorldProviderHell/getChunkProvider ()Lcq; c
+net/minecraft/src/MobSpawnerBase/func_4080_a (I)Lkt; a
+net/minecraft/src/MobSpawnerBase/getEntitiesForType (Lma;)[Ljava/lang/Class; a
+net/minecraft/src/MobSpawnerBase/setBiomeName (Ljava/lang/String;)Lkt; a
+net/minecraft/src/MobSpawnerBase/doesNothingForMobSpawnerBase ()Lkt; b
+net/minecraft/src/WatchableObject/getObjectType ()I c
+net/minecraft/src/WorldProviderHell/generateLightBrightnessTable ()V b
+net/minecraft/src/WorldProviderHell/calculateCelestialAngle (JF)F a
+net/minecraft/server/MinecraftServer/run ()V run
+net/minecraft/src/BlockFluids/func_300_h (Lfv;III)V h
+net/minecraft/src/MapGenCavesHell/func_4105_a (II[BDDDFFFIID)V a
+net/minecraft/src/IChunkLoader/saveExtraChunkData (Lfv;Lme;)V b
+net/minecraft/src/WorldChunkManagerHell/getTemperatures ([DIIII)[D a
+net/minecraft/src/World/setEntityDead (Lfe;)V d
+net/minecraft/src/NoiseGeneratorOctaves2/func_4101_a ([DDDIIDDD)[D a
+net/minecraft/src/NoiseGeneratorOctaves2/func_4100_a ([DDDIIDDDD)[D a
+net/minecraft/src/NoiseGeneratorOctaves/func_4103_a ([DIIIIDDD)[D a
+net/minecraft/src/InventoryPlayer/writeToNBT (Lfh;)Lfh; a
+net/minecraft/src/ChunkProviderHell/func_4062_a (II[B)V a
+net/minecraft/src/ChunkProviderServer/func_4063_e (II)Lme; e
+net/minecraft/src/ChunkProviderHell/func_4060_a ([DIIIIII)[D a
+net/minecraft/src/ChunkProviderHell/func_4061_b (II[B)V b
+net/minecraft/src/WorldChunkManagerHell/func_4066_a (Lmr;)Lkt; a
+net/minecraft/src/RecipeSorter/compareRecipes (Led;Led;)I a
+net/minecraft/src/WorldChunkManagerHell/loadBlockGeneratorData ([Lkt;IIII)[Lkt; a
+net/minecraft/src/WorldChunkManagerHell/func_4065_a (IIII)[Lkt; a
+net/minecraft/src/ThreadMonitorConnection/run ()V run
+net/minecraft/src/BlockFluids/func_301_g (Lfv;III)I g
+net/minecraft/src/ChunkCoordinates/equals (Ljava/lang/Object;)Z equals
+net/minecraft/src/ServerWindowAdapter/windowClosing (Ljava/awt/event/WindowEvent;)V windowClosing
+net/minecraft/src/IWorldAccess/obtainEntitySkin (Lfe;)V a
+net/minecraft/src/ItemStack/getDamageVsEntity (Lfe;)I a
+net/minecraft/src/EntityTrackerEntry/func_9219_b (Lfy;)V c
+net/minecraft/src/ItemStack/hitEntity (Lmj;)V a
+net/minecraft/src/PlayerManager/addPlayer (Lfy;)V a
+net/minecraft/src/PlayerManager/removePlayer (Lfy;)V b
+net/minecraft/src/EntityPlayer/getCurrentEquippedItem ()Ljl; P
+net/minecraft/src/EntityPlayer/func_171_h (Lfe;)V j
+net/minecraft/src/EntityPlayerMP/displayGUIFurnace (Lez;)V a
+net/minecraft/src/EntityArrow/setArrowHeading (DDDFF)V a
+net/minecraft/src/EntityItem/func_176_g (DDD)Z g
+net/minecraft/src/EntityPlayerMP/func_175_i ()V n
+net/minecraft/src/EntityPlayerMP/displayWorkbenchGUI (III)V a
+net/minecraft/src/BlockFluids/checkForHarden (Lfv;III)V i
+net/minecraft/src/EntityPainting/func_179_a (I)V a
+net/minecraft/src/EntityTNTPrimed/explode ()V d
+net/minecraft/src/NetHandler/handleHealth (Lfj;)V a
+net/minecraft/src/NetHandler/func_9002_a (Lbo;)V a
+net/minecraft/src/NetHandler/func_9001_a (Ljo;)V a
+net/minecraft/src/ChunkCoordIntPair/func_73_a (Lfe;)D a
+net/minecraft/src/Packet39/processPacket (Lgi;)V a
+net/minecraft/src/Packet39/getPacketSize ()I a
+net/minecraft/src/Packet39/readPacketData (Ljava/io/DataInputStream;)V a
+net/minecraft/src/Item/getMaxDamage ()I d
+net/minecraft/src/ItemSword/hitBlock (Ljl;IIII)V a
+net/minecraft/src/World/handleMaterialAcceleration (Lfa;Lmh;Lfe;)Z a
+net/minecraft/src/ItemSword/getStrVsBlock (Ljl;Lhr;)F a
+net/minecraft/src/ItemBlock/onItemUse (Ljl;Lhl;Lfv;IIII)Z a
+net/minecraft/src/World/playRecord (Ljava/lang/String;III)V a
+net/minecraft/src/EntityZombieSimple/getBlockPathWeight (III)F a
+net/minecraft/src/NoiseGeneratorPerlin/generateNoise (DDD)D a
+net/minecraft/src/World/getChunkFromBlockCoords (II)Lme; b
+net/minecraft/src/ItemStack/damageItem (I)V b
+net/minecraft/src/BlockLeavesBase/shouldSideBeRendered (Lla;IIII)Z a
+net/minecraft/src/ItemStack/func_577_a (Lhl;)V a
+net/minecraft/src/ItemStack/getMaxStackSize ()I b
+net/minecraft/src/MobSpawnerTaiga/getRandomWorldGenForTrees (Ljava/util/Random;)Lcb; a
+net/minecraft/src/ItemStack/getStrVsBlock (Lhr;)F a
+net/minecraft/src/ItemStack/canHarvestBlock (Lhr;)Z b
+net/minecraft/src/ItemStack/useItem (Lhl;Lfv;IIII)Z a
+net/minecraft/src/ItemStack/getMaxDamage ()I i
+net/minecraft/src/ChunkProviderLoadOrGenerate/func_21111_c (II)Z c
+net/minecraft/src/World/checkSessionLock ()V h
+net/minecraft/src/World/getCelestialAngle (F)F b
+net/minecraft/src/World/isBlockIndirectlyGettingPowered (III)Z p
+net/minecraft/src/World/isBoundingBoxBurning (Lfa;)Z c
+net/minecraft/src/World/getClosestPlayerToEntity (Lfe;D)Lhl; a
+net/minecraft/src/World/setBlockTileEntity (IIILbm;)V a
+net/minecraft/src/World/setBlockAndMetadata (IIIII)Z a
+net/minecraft/src/NBTTagEnd/toString ()Ljava/lang/String; toString
+net/minecraft/src/NBTTagCompound/setFloat (Ljava/lang/String;F)V a
+net/minecraft/src/World/saveLevel ()V i
+net/minecraft/src/World/obtainEntitySkin (Lfe;)V b
+net/minecraft/src/NetworkListenThread/func_717_a (Lhc;)V a
+net/minecraft/src/MetadataChunkBlock/func_692_a (IIIIII)Z a
+net/minecraft/src/NetworkListenThread/func_715_a ()V a
+net/minecraft/src/BlockFluids/func_303_b (Lla;III)I b
+net/minecraft/src/NetworkListenThread/func_713_a (Lev;)Ljava/net/ServerSocket; a
+net/minecraft/src/NetHandler/func_21002_a (Lhx;)V a
+net/minecraft/src/NetworkWriterThread/run ()V run
+net/minecraft/src/IChunkLoader/loadChunk (Lfv;II)Lme; a
+net/minecraft/src/Pathfinder/addToPath (Lfe;Lc;Lc;Lc;F)Ldo; a
+net/minecraft/src/Pathfinder/createEntityPathTo (Lfe;Lfe;F)Ldo; a
+net/minecraft/src/Pathfinder/findPathOptions (Lfe;Lc;Lc;Lc;F)I b
+net/minecraft/src/Pathfinder/openPoint (III)Lc; a
+net/minecraft/src/Pathfinder/createEntityPathTo (Lfe;DDDF)Ldo; a
+net/minecraft/src/Pathfinder/createEntityPath (Lc;Lc;)Ldo; a
+net/minecraft/src/Pathfinder/getSafePoint (Lfe;IIILc;I)Lc; a
+net/minecraft/src/Pathfinder/createEntityPathTo (Lfe;IIIF)Ldo; a
+net/minecraft/src/InventoryPlayer/getDamageVsEntity (Lfe;)I a
+net/minecraft/src/TileEntityDispenser/getRandomStackFromInventory ()Ljl; e
+net/minecraft/src/NextTickListEntry/hashCode ()I hashCode
+net/minecraft/src/Block/setLightOpacity (I)Lhr; e
+net/minecraft/src/HashEntry/equals (Ljava/lang/Object;)Z equals
+net/minecraft/src/TileEntityMobSpawner/setMobID (Ljava/lang/String;)V a
+net/minecraft/src/Vec3D/toString ()Ljava/lang/String; toString
+net/minecraft/src/EntityGhast/updatePlayerActionState ()V d
+net/minecraft/src/NBTTagCompound/getString (Ljava/lang/String;)Ljava/lang/String; h
+net/minecraft/src/World/func_9206_a (Lfe;B)V a
+net/minecraft/src/Entity/hashCode ()I hashCode
+net/minecraft/src/ChunkProviderServer/func_375_a (Lme;)V a
+net/minecraft/src/ChunkProviderServer/func_374_c (II)V c
+net/minecraft/src/NBTBase/getTagName (B)Ljava/lang/String; b
+net/minecraft/src/ChunkProviderServer/loadChunk (II)Lme; d
+net/minecraft/src/ChunkProviderLoadOrGenerate/saveExtraChunkData (Lme;)V a
+net/minecraft/src/ChunkProviderLoadOrGenerate/saveChunk (Lme;)V b
+net/minecraft/src/ChunkProviderServer/func_373_b (Lme;)V b
+net/minecraft/src/BlockOre/damageDropped (I)I b
+net/minecraft/src/BlockLever/checkIfAttachedToBlock (Lfv;III)Z g
+net/minecraft/src/BlockSnow/func_275_g (Lfv;III)Z g
+net/minecraft/src/BlockFlower/func_276_g (Lfv;III)V g
+net/minecraft/src/BlockCrops/canThisPlantGrowOnThisBlockID (I)Z c
+net/minecraft/src/BlockFire/getChanceOfNeighborsEncouragingFire (Lfv;III)I h
+net/minecraft/src/BlockDoor/func_271_d (I)I d
+net/minecraft/src/BlockDoor/func_272_a (Lfv;IIIZ)V a
+net/minecraft/src/BlockDoor/func_273_b (I)V c
+net/minecraft/src/NetworkManager/getWriteThread (Lca;)Ljava/lang/Thread; f
+net/minecraft/src/Entity/getInventory ()[Ljl; I
+net/minecraft/src/World/getSavedLightValue (Leo;III)I a
+net/minecraft/src/NetworkManager/sendNetworkPacket (Lca;)V d
+net/minecraft/src/World/func_515_b (IIILbm;)V b
+net/minecraft/src/BlockMinecartTrack/func_4038_g (Lfv;III)V g
+net/minecraft/src/EntitySheep/setFleeceColor (I)V a
+net/minecraft/src/EntityTracker/func_6187_a (Lfe;II)V a
+net/minecraft/src/EntityTracker/func_6186_a (Lfe;IIZ)V a
+net/minecraft/src/NBTTagCompound/setTag (Ljava/lang/String;Lix;)V a
+net/minecraft/src/NBTTagCompound/getDouble (Ljava/lang/String;)D g
+net/minecraft/src/World/getBlockLightValue_do (IIIZ)I a
+net/minecraft/src/NBTTagCompound/setBoolean (Ljava/lang/String;Z)V a
+net/minecraft/src/NBTTagCompound/setCompoundTag (Ljava/lang/String;Lah;)V a
+net/minecraft/src/NBTTagCompound/setByteArray (Ljava/lang/String;[B)V a
+net/minecraft/src/NetHandler/handlePlayerInventory (Lv;)V a
+net/minecraft/server/MinecraftServer/func_6020_b (Ljava/lang/String;I)I b
+net/minecraft/server/MinecraftServer/commandLineParser ()V b
+net/minecraft/server/MinecraftServer/func_6022_a (Lfs;)V a
+net/minecraft/src/NBTTagCompound/setShort (Ljava/lang/String;S)V a
+net/minecraft/src/Entity/getDistanceSqToEntity (Lfe;)D b
+net/minecraft/src/World/getBlockTileEntity (III)Lbm; m
+net/minecraft/src/Slot/putStack (Ljl;)V b
+net/minecraft/src/EntityPainting/func_181_b ()Z d
+net/minecraft/src/Slot/decrStackSize (I)Ljl; a
+net/minecraft/src/World/notifyBlockChange (IIII)V f
+net/minecraft/src/NBTTagList/tagCount ()I b
+net/minecraft/src/BlockStationary/func_20040_i (Lfv;III)V i
+net/minecraft/src/Entity/setLocationAndAngles (DDDFF)V c
+net/minecraft/src/World/getIsAnyLiquid (Lfa;)Z b
+net/minecraft/src/WorldServer/func_532_d (IIIIII)Ljava/util/List; d
+net/minecraft/src/World/getClosestPlayer (DDDD)Lhl; a
+net/minecraft/src/World/rayTraceBlocks (Lbu;Lbu;)Lih; a
+net/minecraft/src/World/getEntitiesWithinAABB (Ljava/lang/Class;Lfa;)Ljava/util/List; a
+net/minecraft/src/Explosion/func_12023_a ()V a
+net/minecraft/src/Block/setStepSound (Lcy;)Lhr; a
+net/minecraft/src/BlockStairs/onBlockPlacedBy (Lfv;IIILmj;)V a
+net/minecraft/src/NextTickListEntry/equals (Ljava/lang/Object;)Z equals
+net/minecraft/src/Entity/isSneaking ()Z J
+net/minecraft/src/BlockButton/tickRate ()I b
+net/minecraft/src/BlockTNT/onBlockDestroyedByExplosion (Lfv;III)V a_
+net/minecraft/src/IWorldAccess/playSound (Ljava/lang/String;DDDFF)V a
+net/minecraft/src/NetHandler/func_21003_a (Lja;)V a
+net/minecraft/src/Entity/getDistance (DDD)D e
+net/minecraft/src/EnumToolMaterial/getEfficiencyOnProperMaterial ()F b
+net/minecraft/src/Entity/func_91_u ()Z C
+net/minecraft/src/World/func_461_b (Ljava/util/List;)V b
+net/minecraft/src/ItemStack/toString ()Ljava/lang/String; toString
+net/minecraft/src/EnumCreatureType/getMaxNumberOfCreature ()I b
+net/minecraft/src/Entity/readFromNBT (Lah;)V e
+net/minecraft/src/World/setBlockMetadata (IIII)Z d
+net/minecraft/src/IWorldAccess/releaseEntitySkin (Lfe;)V b
+net/minecraft/src/CompressedStreamTools/func_771_a (Lah;Ljava/io/DataOutput;)V a
+net/minecraft/src/BlockFluids/velocityToAddToEntity (Lfv;IIILfe;Lbu;)V a
+net/minecraft/src/World/setBlock (IIII)Z b
+net/minecraft/src/EntityList/getEntityID (Lfe;)I a
+net/minecraft/src/World/calculateInitialSkylight ()V e
+net/minecraft/src/World/getChunkFromChunkCoords (II)Lme; c
+net/minecraft/src/ThreadCommandReader/run ()V run
+net/minecraft/src/PlayerInstance/func_779_a (Lfy;)V a
+net/minecraft/src/PlayerInstance/func_775_a (III)V a
+net/minecraft/src/EnumCreatureType/getCreatureMaterial ()Lmh; c
+net/minecraft/src/World/getBlockLightValue (III)I j
+net/minecraft/src/NBTTagList/toString ()Ljava/lang/String; toString
+net/minecraft/src/CompressedStreamTools/func_774_a (Ljava/io/DataInput;)Lah; a
+net/minecraft/src/WorldGenBigTree/func_432_c ()V c
+net/minecraft/src/Entity/getDistanceSq (DDD)D d
+net/minecraft/src/WorldGenBigTree/func_430_c (I)Z c
+net/minecraft/src/WorldGenBigTree/func_431_a (I)F a
+net/minecraft/src/GuiStatsComponent/updateStats ()V a
+net/minecraft/src/IProgressUpdate/setLoadingProgress (I)V a
+net/minecraft/src/WorldGenDungeons/pickCheckLootItem (Ljava/util/Random;)Ljl; a
+net/minecraft/src/MCHashTable/clearMap ()V a
+net/minecraft/src/CompressedStreamTools/func_770_a (Ljava/io/InputStream;)Lah; a
+net/minecraft/src/IProgressUpdate/func_438_a (Ljava/lang/String;)V a
+net/minecraft/src/IProgressUpdate/displayLoadingString (Ljava/lang/String;)V b
+net/minecraft/src/Entity/setPositionAndRotation (DDDFF)V b
+net/minecraft/src/PlayerInstance/func_778_b (Lfy;)V b
+net/minecraft/src/Entity/mountEntity (Lfe;)V e
+net/minecraft/src/NBTTagShort/toString ()Ljava/lang/String; toString
+net/minecraft/src/MCHashTable2/func_672_c (J)Lda; c
+net/minecraft/src/MinecartTrackLogic/func_591_b ()V b
+net/minecraft/src/MinecartTrackLogic/isConnectedTo (Lit;)Z b
+net/minecraft/src/BlockSnowBlock/updateTick (Lfv;IIILjava/util/Random;)V a
+net/minecraft/src/BlockCactus/canBlockStay (Lfv;III)Z f
+net/minecraft/src/MinecartTrackLogic/getMinecartTrackLogic (Ljq;)Lit; a
+net/minecraft/src/MinecartTrackLogic/getAdjacentTracks ()I c
+net/minecraft/src/BlockButton/canProvidePower ()Z c
+net/minecraft/src/MinecartTrackLogic/func_596_a (Z)V a
+net/minecraft/src/EntityMinecart/func_182_g (DDD)Lbu; g
+net/minecraft/src/InventoryLargeChest/onInventoryChanged ()V d
+net/minecraft/src/Block/setBlockBounds (FFFFFF)V a
+net/minecraft/src/NetworkReaderThread/run ()V run
+net/minecraft/src/TileEntityDispenser/readFromNBT (Lah;)V a
+net/minecraft/src/TileEntity/addMapping (Ljava/lang/Class;Ljava/lang/String;)V a
+net/minecraft/src/TileEntity/updateEntity ()V f
+net/minecraft/src/TileEntity/createAndLoadEntity (Lah;)Lbm; c
+net/minecraft/src/MCHashTable2/func_676_a (I)I a
+net/minecraft/src/MCHashTable2/func_677_a (J)Ljava/lang/Object; a
+net/minecraft/src/World/func_494_a (Lbu;Lfa;)F a
+net/minecraft/src/World/releaseEntitySkin (Lfe;)V c
+net/minecraft/src/NetHandler/handleCollect (Ldq;)V a
+net/minecraft/src/Item/getItemStackLimit ()I b
+net/minecraft/src/EntitySheep/getFleeceColor ()I e_
+net/minecraft/src/EntitySheep/func_21069_f_ ()Z f_
+net/minecraft/src/NetHandler/handlePlace (Lhp;)V a
+net/minecraft/src/NetHandler/handleUpdateTime (Lhz;)V a
+net/minecraft/src/EntityPig/func_21064_a (Z)V a
+net/minecraft/src/EntityPig/func_21065_K ()Z K
+net/minecraft/src/MetadataChunkBlock/func_4107_a (Lfv;)V a
+net/minecraft/src/NetHandler/handleChat (Lbz;)V a
+net/minecraft/src/World/playSoundAtEntity (Lfe;Ljava/lang/String;FF)V a
+net/minecraft/src/World/setBlockAndMetadataWithNotify (IIIII)Z b
+net/minecraft/src/World/getChunkData (IIIIII)[B c
+net/minecraft/src/World/rayTraceBlocks_do (Lbu;Lbu;Z)Lih; a
+net/minecraft/src/EntityTrackerEntry/func_12019_a (Lfy;)V a
+net/minecraft/src/EntityTrackerEntry/func_12018_b (Lkx;)V b
+net/minecraft/src/CraftingManager/findMatchingRecipe (Lk;)Ljl; a
+net/minecraft/src/CraftingManager/addShapelessRecipe (Ljl;[Ljava/lang/Object;)V b
+net/minecraft/src/EntityPlayerMP/heal (I)V d
+net/minecraft/src/DataWatcher/getChangedObjects ()Ljava/util/ArrayList; b
+net/minecraft/src/WorldServer/func_12017_b (Lfe;Z)V b
+net/minecraft/src/Entity/isOffsetPositionInLiquid (DDD)Z b
+net/minecraft/src/World/blockExists (III)Z f
+net/minecraft/src/World/setBlockWithNotify (IIII)Z e
+net/minecraft/src/EntitySpider/getMountedYOffset ()D k
+net/minecraft/src/Vec3D/createVector (DDD)Lbu; b
+net/minecraft/src/BlockFlowing/func_312_l (Lfv;III)Z l
+net/minecraft/src/Vec3D/getIntermediateWithXValue (Lbu;D)Lbu; a
+net/minecraft/src/EntityFireball/attackEntityFrom (Lfe;I)Z a
+net/minecraft/src/Vec3D/squareDistanceTo (Lbu;)D b
+net/minecraft/src/EntityTracker/func_607_a ()V a
+net/minecraft/src/Vec3D/getIntermediateWithZValue (Lbu;D)Lbu; c
+net/minecraft/src/Vec3D/getIntermediateWithYValue (Lbu;D)Lbu; b
+net/minecraft/src/Vec3D/createVectorHelper (DDD)Lbu; a
+net/minecraft/src/Vec3D/initialize ()V a
+net/minecraft/src/BlockLeaves/removeLeaves (Lfv;III)V g
+net/minecraft/src/BlockFlowing/func_307_e (Lfv;IIII)I e
+net/minecraft/src/NoiseGeneratorPerlin/func_642_a (DD)D a
+net/minecraft/src/BlockFluids/func_298_c (Lla;III)Lbu; c
+net/minecraft/src/BlockFluids/setFluidHeight (I)F c
+net/minecraft/src/World/isBlockGettingPowered (III)Z o
+net/minecraft/src/BlockChest/isThereANeighborChest (Lfv;III)Z g
+net/minecraft/src/BlockChest/getBlockEntity ()Lbm; a_
+net/minecraft/src/BlockFurnace/updateFurnaceBlockState (ZLfv;III)V a
+net/minecraft/src/BlockRedstoneWire/updateAndPropagateCurrentStrength (Lfv;III)V g
+net/minecraft/src/BlockRedstoneWire/isPowerProviderOrWire (Lla;III)Z b
+net/minecraft/src/BlockRedstoneWire/getMaxCurrentStrength (Lfv;IIII)I f
+net/minecraft/src/BlockRedstoneWire/notifyWireNeighborsOfNeighborChange (Lfv;III)V h
+net/minecraft/src/World/entityJoinedWorld (Lfe;)Z a
+net/minecraft/src/NBTTagLong/toString ()Ljava/lang/String; toString
+net/minecraft/src/ItemBlock/getItemName ()Ljava/lang/String; a
+net/minecraft/src/World/calculateSkylightSubtracted (F)I a
+net/minecraft/src/WorldChunkManagerHell/func_4067_a (II)Lkt; a
+net/minecraft/src/BlockNote/playBlock (Lfv;IIIII)V a
+net/minecraft/src/Entity/moveFlying (FFF)V a
+net/minecraft/src/Entity/getBoundingBox ()Lfa; u
+net/minecraft/src/Entity/applyEntityCollision (Lfe;)V c
+net/minecraft/src/EmptyChunk/func_348_a ()V a
+net/minecraft/src/EmptyChunk/func_349_a (Lbm;)V a
+net/minecraft/src/EntityWaterMob/writeEntityToNBT (Lah;)V a
+net/minecraft/src/Entity/addToPlayerScore (Lfe;I)V b
+net/minecraft/src/EntityWaterMob/readEntityFromNBT (Lah;)V b
+net/minecraft/src/EmptyChunk/setBlockMetadata (IIII)V b
+net/minecraft/src/EmptyChunk/setBlockIDWithMetadata (IIIII)Z a
+net/minecraft/src/EmptyChunk/needsSaving (Z)Z a
+net/minecraft/src/EmptyChunk/getChunkData ([BIIIIIII)I a
+net/minecraft/src/EmptyChunk/getSavedLightValue (Leo;III)I a
+net/minecraft/src/EmptyChunk/getEntitiesOfTypeWithinAAAB (Ljava/lang/Class;Lfa;Ljava/util/List;)V a
+net/minecraft/src/EmptyChunk/canBlockSeeTheSky (III)Z c
+net/minecraft/src/BlockPressurePlate/setStateIfMobInteractsWithPlate (Lfv;III)V g
+net/minecraft/src/Entity/setRotation (FF)V b
+net/minecraft/src/NBTTagInt/toString ()Ljava/lang/String; toString
+net/minecraft/src/InventoryLargeChest/canInteractWith (Lhl;)Z a_
+net/minecraft/src/Block/setHardness (F)Lhr; c
+net/minecraft/src/EntityPlayerMP/func_20060_R ()V U
+net/minecraft/src/EntityPlayerMP/func_20063_a (Lbm;)V a
+net/minecraft/src/ItemInWorldManager/func_6154_a (Lhl;Lfv;Ljl;)Z a
+net/minecraft/src/World/func_6156_d ()Z d
+net/minecraft/src/World/func_6157_a (Lhl;III)Z a
+net/minecraft/src/InventoryLargeChest/decrStackSize (II)Ljl; b
+net/minecraft/src/InventoryLargeChest/getInvName ()Ljava/lang/String; b
+net/minecraft/src/ItemBucket/onItemRightClick (Ljl;Lfv;Lhl;)Ljl; a
+net/minecraft/server/MinecraftServer/func_6015_a (Lnet/minecraft/server/MinecraftServer;)Z a
+net/minecraft/server/MinecraftServer/func_6014_a (Ljava/lang/String;Ljava/lang/String;)V a
+net/minecraft/server/MinecraftServer/func_6017_c (Ljava/lang/String;)V c
+net/minecraft/server/MinecraftServer/func_6016_a ()V a
+net/minecraft/server/MinecraftServer/func_6011_e ()V e
+net/minecraft/server/MinecraftServer/addCommand (Ljava/lang/String;Lgd;)V a
+net/minecraft/server/MinecraftServer/func_6013_g ()V g
+net/minecraft/server/MinecraftServer/saveServerWorld ()V f
+net/minecraft/src/PathPoint/distanceTo (Lc;)F a
+net/minecraft/server/MinecraftServer/func_6019_a (Ljava/lang/String;I)V a
+net/minecraft/server/MinecraftServer/func_6018_h ()V h
+net/minecraft/src/HashEntry2/toString ()Ljava/lang/String; toString
+net/minecraft/src/BlockFlowing/func_20039_i (Lfv;III)V i
+net/minecraft/src/NoiseGeneratorPerlin/grad (IDDD)D a
+net/minecraft/src/World/canExistingBlockSeeTheSky (III)Z k
+net/minecraft/src/NetworkAcceptThread/run ()V run
+net/minecraft/src/Explosion/func_732_a ()V b
+net/minecraft/src/Block/isVecInsideYZBounds (Lbu;)Z a
+net/minecraft/src/AxisAlignedBB/getBoundingBoxFromPool (DDDDDD)Lfa; b
+net/minecraft/src/TileEntityDispenser/writeToNBT (Lah;)V b
+net/minecraft/src/ItemStack/areItemStacksEqual (Ljl;Ljl;)Z a
+net/minecraft/src/ItemStack/splitStack (I)Ljl; a
+net/minecraft/src/NoiseGenerator2/func_4114_a ([IDD)D a
+net/minecraft/src/MinecartTrackLogic/func_592_c (III)Z c
+net/minecraft/src/SpawnerAnimals/getRandomSpawningPointInChunk (Lfv;II)Ljq; a
+net/minecraft/src/NoiseGenerator2/wrap (D)I a
+net/minecraft/src/ChunkProviderLoadOrGenerate/func_4059_c (II)Lme; d
+net/minecraft/src/ChunkProviderGenerate/func_4058_a ([DIIIIII)[D a
+net/minecraft/src/ChunkProviderGenerate/generateTerrain (II[B[Lkt;[D)V a
+net/minecraft/src/ChunkProviderGenerate/replaceBlocksForBiome (II[B[Lkt;)V a
+net/minecraft/src/IChunkProvider/populate (Lcq;II)V a
+net/minecraft/src/RecipesWeapons/addRecipes (Lib;)V a
+net/minecraft/src/EmptyChunk/func_4053_c ()V c
+net/minecraft/src/Material/setBurning ()Lmh; f
+net/minecraft/src/Material/getBurning ()Z e
+net/minecraft/src/ItemStack/isItemStackEqual (Ljl;)Z c
+net/minecraft/src/MinecartTrackLogic/handleKeyPress (Lit;)Z c
+net/minecraft/src/Block/getBlockName ()Ljava/lang/String; e
+net/minecraft/src/Block/setLightValue (F)Lhr; a
+net/minecraft/src/PathPoint/toString ()Ljava/lang/String; toString
+net/minecraft/src/InventoryPlayer/consumeInventoryItem (I)Z b
+net/minecraft/src/InventoryPlayer/getInventorySlotContainItem (I)I d
+net/minecraft/src/MinecartTrackLogic/func_599_b (III)Z b
+net/minecraft/src/MinecartTrackLogic/func_598_d (Lit;)V d
+net/minecraft/src/EntityPainting/func_180_c (I)F d
+net/minecraft/src/EntityWaterMob/func_146_b ()I c
+net/minecraft/src/EntityLiving/faceEntity (Lfe;F)V b
+net/minecraft/src/EntitySpider/isOnLadder ()Z m
+net/minecraft/src/EntityLiving/canEntityBeSeen (Lfe;)Z i
+net/minecraft/src/EntityPlayerMP/onDeath (Lfe;)V f
+net/minecraft/src/EntityLiving/knockBack (Lfe;IDD)V a
+net/minecraft/src/EntityLiving/updateRotation (FFF)F b
+net/minecraft/src/EntityLiving/getLook (F)Lbu; c
+net/minecraft/src/World/canBlockSeeTheSky (III)Z i
+net/minecraft/src/EntityPlayerMP/func_9153_b (DZ)V b
+net/minecraft/src/Entity/func_89_d (Lfe;)Lfa; d
+net/minecraft/src/Item/setIconCoord (II)Lhg; a
+net/minecraft/src/World/scheduleBlockUpdate (IIII)V i
+net/minecraft/src/EntityFlying/moveEntityWithHeading (FF)V c
+net/minecraft/src/EntityGhast/getDropItemId ()I h
+net/minecraft/src/EntityTrackerEntry/func_605_a (Ljava/util/List;)V a
+net/minecraft/src/Block/isVecInsideXYBounds (Lbu;)Z c
+net/minecraft/src/Packet/addIdClassMapping (ILjava/lang/Class;)V a
+net/minecraft/src/Packet/readPacket (Ljava/io/DataInputStream;)Lkx; b
+net/minecraft/src/Packet/writePacket (Lkx;Ljava/io/DataOutputStream;)V a
+net/minecraft/src/Packet/getNewPacket (I)Lkx; a
+net/minecraft/src/Packet39/writePacketData (Ljava/io/DataOutputStream;)V a
+net/minecraft/src/Packet/getPacketId ()I b
+net/minecraft/src/Chunk/func_355_f (III)V f
+net/minecraft/src/NextTickListEntry/compareTo (Ljava/lang/Object;)I compareTo
+net/minecraft/src/PlayerManager/func_542_b ()I b
+net/minecraft/src/PlayerManager/func_543_c (Lfy;)V c
+net/minecraft/src/PlayerManager/getMinecraftServer (Lkj;)Lnet/minecraft/server/MinecraftServer; a
+net/minecraft/src/EntityTrackerEntry/func_606_a (Lfy;)V b
+net/minecraft/src/MCHashTable/getHash (I)I f
+net/minecraft/src/MCHashTable/insert (IILjava/lang/Object;I)V a
+net/minecraft/src/PlayerManager/func_544_a (IIII)Z a
+net/minecraft/src/MCHashTable/computeHash (I)I g
+net/minecraft/src/EnumCreatureType/getCreatureClass ()Ljava/lang/Class; a
+net/minecraft/src/EmptyChunk/func_353_b ()V b
+net/minecraft/src/MCHashTable/lookupEntry (I)Ljw; c
+net/minecraft/src/MCHashTable/copyTo ([Ljw;)V a
+net/minecraft/src/EmptyChunk/func_21101_g ()Z g
+net/minecraft/src/World/func_464_a (Ljava/util/List;)V a
+net/minecraft/src/EnumCreatureType/func_21103_d ()Z d
+net/minecraft/src/EmptyChunk/setChunkBlockTileEntity (IIILbm;)V a
+net/minecraft/src/ItemPickaxe/canHarvestBlock (Lhr;)Z a
+net/minecraft/src/NBTTagFloat/toString ()Ljava/lang/String; toString
+net/minecraft/src/EntityTrackerEntry/func_602_b ()Lkx; b
+net/minecraft/src/ConsoleLogManager/init ()V a
+net/minecraft/src/ServerConfigurationManager/func_640_a ()I a
+net/minecraft/src/BlockFlowing/func_311_f (Lfv;IIII)V f
+net/minecraft/src/GuiLogOutputHandler/publish (Ljava/util/logging/LogRecord;)V publish
+net/minecraft/src/Item/func_21088_g ()Z g
+net/minecraft/src/ItemCloth/func_21089_a (I)I a
+net/minecraft/src/NoiseGeneratorOctaves/func_647_a (DD)D a
+net/minecraft/src/NoiseGeneratorPerlin/func_646_a ([DDDDIIIDDDD)V a
+net/minecraft/src/Pathfinder/getVerticalOffset (Lfe;IIILc;)I a
+net/minecraft/src/NoiseGeneratorOctaves/generateNoiseOctaves ([DDDDIIIDDD)[D a
+net/minecraft/src/Item/setMaxStackSize (I)Lhg; c
+net/minecraft/src/Item/getContainerItem ()Lhg; f
+net/minecraft/src/InventoryPlayer/func_21082_c (Ljl;)I c
+net/minecraft/src/InventoryPlayer/func_21083_d (Ljl;)I d
+net/minecraft/src/EnumToolMaterial/getHarvestLevel ()I d
+net/minecraft/src/WatchableObject/getWatching ()Z d
+net/minecraft/src/EnumToolMaterial/getMaxUses ()I a
+net/minecraft/src/BlockCake/func_21030_c (Lfv;IIILhl;)V c
+net/minecraft/src/GuiLogOutputHandler/close ()V close
+net/minecraft/src/BlockCloth/func_21033_c (I)I c
+net/minecraft/src/BlockRedstoneWire/func_21031_a (Lfv;IIIIII)V a
+net/minecraft/src/NBTTagString/toString ()Ljava/lang/String; toString
+net/minecraft/src/NetHandler/func_20002_a (Lp;)V a
+net/minecraft/src/BlockDispenser/setDispenserDefaultDirection (Lfv;III)V g
+net/minecraft/src/BlockCloth/func_21034_d (I)I d
+net/minecraft/src/BlockFire/canBlockCatchFire (Lla;III)Z b
+net/minecraft/src/BlockFire/func_268_g (Lfv;III)Z g
+net/minecraft/src/BlockFire/setBurnRate (III)V a
+net/minecraft/src/BlockFire/tryToCatchBlockOnFire (Lfv;IIIILjava/util/Random;)V a
+net/minecraft/src/BlockFire/getChanceToEncourageFire (Lfv;IIII)I f
+net/minecraft/src/BlockStairs/getCollidingBoundingBoxes (Lfv;IIILfa;Ljava/util/ArrayList;)V a
+net/minecraft/src/BlockSlowSand/onEntityCollidedWithBlock (Lfv;IIILfe;)V a
+net/minecraft/src/BlockMinecartTrack/collisionRayTrace (Lfv;IIILbu;Lbu;)Lih; a
+net/minecraft/src/Block/unusedMethod ()Z f
+net/minecraft/src/World/markBlocksDirtyVertical (IIII)V g
+net/minecraft/src/ICrafting/func_20054_a (Lei;Ljava/util/List;)V a
+net/minecraft/src/BlockDispenser/dispenseItem (Lfv;IIILjava/util/Random;)V b
+net/minecraft/src/MinecartTrackLogic/calculateConnectedTracks ()V a
+net/minecraft/src/Entity/getDataWatcher ()Lgx; p
+net/minecraft/src/ICrafting/func_20056_a (Lei;II)V a
+net/minecraft/src/EntityPlayerMP/func_20057_k ()V l
+net/minecraft/src/NetHandler/handlePreChunk (Leu;)V a
+net/minecraft/src/ChunkCoordinates/hashCode ()I hashCode
+net/minecraft/src/EntitySheep/func_21066_a (Ljava/util/Random;)I a
+net/minecraft/src/PathEntity/incrementPathIndex ()V a
+net/minecraft/src/PathEntity/isFinished ()Z b
+net/minecraft/src/NoiseGeneratorPerlin/lerp (DDD)D b
+net/minecraft/src/EntitySheep/setSheared (Z)V a
+net/minecraft/src/PropertyManager/getIntProperty (Ljava/lang/String;I)I a
+net/minecraft/src/PropertyManager/generateNewProperties ()V a
+net/minecraft/src/PropertyManager/getStringProperty (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; a
+net/minecraft/src/PropertyManager/saveProperties ()V b
+net/minecraft/src/PlayerNBTManager/writePlayerData (Lfy;)V a
+net/minecraft/src/NetHandler/handleBlockDig (Lkf;)V a
+net/minecraft/src/PropertyManager/getBooleanProperty (Ljava/lang/String;Z)Z a
+net/minecraft/src/PlayerNBTManager/readPlayerData (Lfy;)V b
+net/minecraft/src/NetworkListenThread/func_4108_a (Llp;)V a
+net/minecraft/src/Entity/setBeenAttacked ()V y
+net/minecraft/src/NetServerHandler/func_4010_d (Ljava/lang/String;)V c
+net/minecraft/src/RecipesTools/addRecipes (Lib;)V a
+net/minecraft/src/CraftingManager/getInstance ()Lib; a
+net/minecraft/src/CraftingManager/addRecipe (Ljl;[Ljava/lang/Object;)V a
+net/minecraft/src/RecipesIngots/addRecipes (Lib;)V a
+net/minecraft/src/World/newExplosion (Lfe;DDDFZ)Ldg; a
+net/minecraft/src/IWorldAccess/func_683_a (III)V a
+net/minecraft/src/Entity/equals (Ljava/lang/Object;)Z equals
+net/minecraft/src/ItemStack/useItemRightClick (Lfv;Lhl;)Ljl; a
+net/minecraft/src/AxisAlignedBB/setBB (Lfa;)V b
+net/minecraft/src/WatchableObject/setObject (Ljava/lang/Object;)V a
+net/minecraft/src/World/playSoundEffect (DDDLjava/lang/String;FF)V a
+net/minecraft/src/World/doChunksNearChunkExist (IIII)Z a
+net/minecraft/src/World/isMaterialInBB (Lfa;Lmh;)Z a
+net/minecraft/src/Entity/writeToNBT (Lah;)V d
+net/minecraft/src/World/getEntityPathToXYZ (Lfe;IIIF)Ldo; a
+net/minecraft/src/DataWatcher/readWatchableObjects (Ljava/io/DataInputStream;)Ljava/util/List; a
+net/minecraft/src/World/setBlockMetadataWithNotify (IIII)V c
+net/minecraft/src/World/markBlockAsNeedsUpdate (III)V h
+net/minecraft/src/WorldGenBigTree/func_425_a ([I[II)V a
+net/minecraft/src/WorldGenBigTree/func_424_a ()V a
+net/minecraft/src/WorldGenBigTree/func_427_a ([I[I)I a
+net/minecraft/src/WorldGenBigTree/func_426_a (IIIFBI)V a
+net/minecraft/src/WorldGenBigTree/func_421_b ()V b
+net/minecraft/src/WorldGenerator/func_420_a (DDD)V a
+net/minecraft/src/WorldGenBigTree/func_423_a (III)V a
+net/minecraft/src/WorldGenBigTree/func_422_e ()Z e
+net/minecraft/src/CompressedStreamTools/writeGzippedCompoundToOutputStream (Lah;Ljava/io/OutputStream;)V a
+net/minecraft/src/ItemStack/copy ()Ljl; j
+net/minecraft/src/WorldGenBigTree/func_429_b (I)F b
+net/minecraft/src/WorldGenBigTree/func_428_d ()V d
+net/minecraft/src/Entity/newDoubleNBTList ([D)Lfh; a
+net/minecraft/src/World/func_21116_a (ZZ)V a
+net/minecraft/src/World/createExplosion (Lfe;DDDF)Ldg; a
+net/minecraft/src/World/playNoteAt (IIIII)V c
+net/minecraft/src/ItemStack/readFromNBT (Lah;)V b
+net/minecraft/src/MaterialLogic/isSolid ()Z a
+net/minecraft/src/MaterialLiquid/getIsLiquid ()Z d
+net/minecraft/src/Item/setFull3D ()Lhg; e
+net/minecraft/src/InventoryPlayer/dropAllItems ()V h
+net/minecraft/src/InventoryPlayer/getCurrentItem ()Ljl; e
+net/minecraft/src/InventoryPlayer/decrementAnimations ()V f
+net/minecraft/src/InventoryPlayer/damageArmor (I)V c
+net/minecraft/src/TileEntityMobSpawner/anyPlayerInRange ()Z a
+net/minecraft/src/TileEntityFurnace/getItemBurnTime (Ljl;)I a
+net/minecraft/src/TileEntityMobSpawner/updateDelay ()V b
+net/minecraft/src/TileEntityFurnace/isBurning ()Z e
+net/minecraft/src/MaterialLogic/getIsSolid ()Z c
+net/minecraft/src/MaterialLogic/getCanBlockGrass ()Z b
+net/minecraft/src/World/updateEntity (Lfe;)V f
+net/minecraft/src/World/removeBlockTileEntity (III)V n
+net/minecraft/src/ItemStack/writeToNBT (Lah;)Lah; a
+net/minecraft/src/World/markBlocksDirty (IIIIII)V b
+net/minecraft/src/NetHandler/handleFlying (Liv;)V a
+net/minecraft/src/PlayerListBox/update ()V a
+net/minecraft/src/NBTTagByte/toString ()Ljava/lang/String; toString
+net/minecraft/src/AxisAlignedBB/getOffsetBoundingBox (DDD)Lfa; c
+net/minecraft/src/AxisAlignedBB/isVecInYZ (Lbu;)Z a
+net/minecraft/src/AxisAlignedBB/func_694_e (DDD)Lfa; e
+net/minecraft/src/AxisAlignedBB/setBounds (DDDDDD)Lfa; c
+net/minecraft/src/NetHandler/handleBlockItemSwitch (Lik;)V a
+net/minecraft/src/TileEntityNote/triggerNote (Lfv;III)V a
+net/minecraft/src/NetHandler/handleMultiBlockChange (Lkl;)V a
+net/minecraft/src/NetHandler/handleBlockChange (Lgw;)V a
+net/minecraft/src/NetHandler/handleSpawnPosition (Ldm;)V a
+net/minecraft/src/World/spawnParticle (Ljava/lang/String;DDDDDD)V a
+net/minecraft/src/EntityPlayerMP/func_21073_a (I)Ljl; a
+net/minecraft/src/EntityPlayerMP/displayGUIDispenser (Lbf;)V a
+net/minecraft/src/World/getEntitiesWithinAABBExcludingEntity (Lfe;Lfa;)Ljava/util/List; b
+net/minecraft/src/EntityTracker/func_12021_a (Lfe;Lkx;)V a
+net/minecraft/src/ServerConfigurationManager/func_12022_a (DDDDLkx;)V a
+net/minecraft/src/World/isDaytime ()Z b
+net/minecraft/src/EntitySnowball/onUpdate ()V b_
+net/minecraft/src/World/getLightBrightness (III)F l
+net/minecraft/src/Entity/getEyeHeight ()F w
+net/minecraft/src/EntityTrackerEntry/equals (Ljava/lang/Object;)Z equals
+net/minecraft/src/World/func_459_b ()V c
+net/minecraft/src/Entity/getEntityBrightness (F)F b
+net/minecraft/src/Entity/getEntityString ()Ljava/lang/String; A
+net/minecraft/src/EnumToolMaterial/getDamageVsEntity ()I c
+net/minecraft/src/IWorldAccess/playRecord (Ljava/lang/String;III)V a
+net/minecraft/src/MCHashTable2/func_678_a (II)I a
+net/minecraft/src/MCHashTable2/func_679_a (IJLjava/lang/Object;I)V a
+net/minecraft/src/BlockRedstoneOre/func_321_g (Lfv;III)V g
+net/minecraft/src/Vec3D/lengthVector ()D c
+net/minecraft/src/EntityPlayer/damageEntity (I)V e
+net/minecraft/src/EntityGhast/getDeathSound ()Ljava/lang/String; g
+net/minecraft/src/PlayerInstance/func_777_a ()V a
+net/minecraft/src/PlayerInstance/func_776_a (Lkx;)V a
+net/minecraft/src/MCHashTable2/func_670_b (J)Ljava/lang/Object; b
+net/minecraft/src/MCHashTable2/func_671_e (J)I e
+net/minecraft/src/EntityGhast/getLivingSound ()Ljava/lang/String; e
+net/minecraft/src/MCHashTable2/func_673_a ([Lda;)V a
+net/minecraft/src/MCHashTable2/func_674_d (J)I d
+net/minecraft/src/MCHashTable2/func_675_a (JLjava/lang/Object;)V a
+net/minecraft/src/EntitySnowball/onCollideWithPlayer (Lhl;)V b
+net/minecraft/src/EntityCow/interact (Lhl;)Z a
+net/minecraft/src/BlockRedstoneTorch/checkForBurnout (Lfv;IIIZ)Z a
+net/minecraft/src/BlockSoil/isWaterNearby (Lfv;III)Z h
+net/minecraft/src/BlockSoil/isCropsNearby (Lfv;III)Z g
+net/minecraft/src/BlockSand/canFallBelow (Lfv;III)Z g
+net/minecraft/src/BlockSand/tryToFall (Lfv;III)V h
+net/minecraft/src/BlockJukeBox/ejectRecord (Lfv;IIII)V f
+net/minecraft/src/Entity/isInsideOfMaterial (Lmh;)Z a
+net/minecraft/src/NetworkListenThread/func_712_b (Lev;)I b
+net/minecraft/src/NBTTagCompound/setByte (Ljava/lang/String;B)V a
+net/minecraft/src/Item/setContainerItem (Lhg;)Lhg; a
+net/minecraft/src/EntityTracker/func_609_a (Lfe;Lkx;)V b
+net/minecraft/src/EmptyChunk/removeChunkBlockTileEntity (III)V e
+net/minecraft/src/EmptyChunk/onChunkLoad ()V d
+net/minecraft/src/EmptyChunk/setBlockID (IIII)Z a
+net/minecraft/src/EmptyChunk/getBlockMetadata (III)I b
+net/minecraft/src/Entity/onEntityUpdate ()V r
+net/minecraft/src/EmptyChunk/getBlockLightValue (IIII)I c
+net/minecraft/src/InventoryLargeChest/getStackInSlot (I)Ljl; a
+net/minecraft/src/InventoryLargeChest/getSizeInventory ()I h_
+net/minecraft/src/EmptyChunk/isAtLocation (II)Z a
+net/minecraft/src/EmptyChunk/func_350_b (Lfe;)V b
+net/minecraft/src/EntityPlayerMP/func_20058_J ()V M
+net/minecraft/src/EntityPlayerMP/func_20059_K ()V N
+net/minecraft/src/NetHandler/handleDestroyEntity (Leh;)V a
+net/minecraft/src/NetworkListenThread/func_716_a (Lev;Lhc;)V a
+net/minecraft/src/NetHandler/handleMapChunk (Ler;)V a
+net/minecraft/src/NetHandler/handleErrorMessage (Ljava/lang/String;[Ljava/lang/Object;)V a
+net/minecraft/src/ICommandListener/getUsername ()Ljava/lang/String; c
+net/minecraft/src/ICrafting/func_20055_a (Lei;ILjl;)V a
+net/minecraft/src/NetHandler/handleArmAnimation (Lz;)V a
+net/minecraft/src/ICommandListener/log (Ljava/lang/String;)V b
+net/minecraft/src/BlockFurnace/setDefaultDirection (Lfv;III)V g
+net/minecraft/src/AxisAlignedBB/func_706_a (Lbu;Lbu;)Lih; a
+net/minecraft/src/NBTTagByteArray/toString ()Ljava/lang/String; toString
+net/minecraft/src/NBTTagCompound/getByteArray (Ljava/lang/String;)[B i
+net/minecraft/src/Entity/moveEntity (DDD)V c
+net/minecraft/src/NetHandler/func_6006_a (La;)V a
+net/minecraft/src/NetLoginHandler/doLogin (Lan;)V b
+net/minecraft/src/NetHandler/handleHandshake (Lj;)V a
+net/minecraft/src/NetHandler/func_6002_a (Lhe;)V a
+net/minecraft/src/NetHandler/func_6003_a (Lab;)V a
+net/minecraft/src/NetHandler/registerPacket (Lkx;)V a
+net/minecraft/src/World/canBlockBePlacedAt (IIIIZ)Z a
+net/minecraft/src/AxisAlignedBB/calculateXOffset (Lfa;D)D a
+net/minecraft/src/Item/setHasSubtypes (Z)Lhg; a
+net/minecraft/server/MinecraftServer/func_6008_d ()Z d
+net/minecraft/server/MinecraftServer/getFile (Ljava/lang/String;)Ljava/io/File; a
+net/minecraft/src/BlockFlowing/func_309_k (Lfv;III)Z k
+net/minecraft/src/ServerGuiCommandListener/actionPerformed (Ljava/awt/event/ActionEvent;)V actionPerformed
+net/minecraft/src/ServerConfigurationManager/banPlayer (Ljava/lang/String;)V a
+net/minecraft/src/ServerConfigurationManager/unbanIP (Ljava/lang/String;)V d
+net/minecraft/src/ServerConfigurationManager/opPlayer (Ljava/lang/String;)V e
+net/minecraft/src/ServerConfigurationManager/func_9242_d (Lfy;)Lfy; d
+net/minecraft/src/ServerConfigurationManager/loadBannedList ()V g
+net/minecraft/src/ServerConfigurationManager/unbanPlayer (Ljava/lang/String;)V b
+net/minecraft/src/ServerConfigurationManager/banIP (Ljava/lang/String;)V c
+net/minecraft/src/ServerConfigurationManager/deopPlayer (Ljava/lang/String;)V f
+net/minecraft/src/ServerConfigurationManager/loadOps ()V i
+net/minecraft/src/ServerConfigurationManager/saveBannedList ()V h
+net/minecraft/src/Item/setMaxDamage (I)Lhg; d
+net/minecraft/src/Entity/setOnFireFromLava ()V s
+net/minecraft/src/Entity/setInPortal ()V H
+net/minecraft/src/Entity/kill ()V t
+net/minecraft/src/CraftingInventoryFurnaceCB/func_20128_a (Lep;)V a
+net/minecraft/src/EntityGhast/getMaxSpawnedInChunk ()I j
+net/minecraft/src/EntityGhast/isCourseTraversable (DDDD)Z a
+net/minecraft/src/EntityPigZombie/becomeAngryAt (Lfe;)V g
+net/minecraft/src/EntityPlayer/displayGUIEditSign (Llv;)V a
+net/minecraft/src/Item/setIconIndex (I)Lhg; b
+net/minecraft/src/CraftingInventoryPlayerCB/func_20126_b (Lhl;)Z b
+net/minecraft/src/CraftingInventoryCB/func_20127_a (Lmn;I)Lhj; a
+net/minecraft/src/CraftingInventoryCB/func_20120_a (I)Lhj; a
+net/minecraft/src/CraftingInventoryPlayerCB/onCraftMatrixChanged (Lmn;)V a
+net/minecraft/src/CraftingInventoryCB/func_20122_a (Lhj;)V a
+net/minecraft/src/CraftingInventoryCB/func_20123_a (IILhl;)Ljl; a
+net/minecraft/src/World/notifyBlockOfNeighborChange (IIII)V l
+net/minecraft/src/ItemStack/func_20117_a (Ljl;)Ljl; b
+net/minecraft/src/WatchableObject/getDataValueId ()I a
+net/minecraft/src/PathEntity/getPosition (Lfe;)Lbu; a
+net/minecraft/src/WorldGenDungeons/pickMobSpawner (Ljava/util/Random;)Ljava/lang/String; b
+net/minecraft/src/GuiLogOutputHandler/flush ()V flush
+net/minecraft/src/SpawnerAnimals/performSpawning (Lfv;ZZ)I a
+net/minecraft/src/Entity/entityDropItem (Ljl;F)Lic; a
+net/minecraft/src/EntityTracker/func_9238_a (Lfy;)V a
+net/minecraft/src/ServerConfigurationManager/saveOps ()V j
+net/minecraft/src/CraftingInventoryCB/func_20129_a (Lhl;Z)V a
+net/minecraft/src/World/countEntities (Ljava/lang/Class;)I a
+net/minecraft/src/ServerConfigurationManager/playerLoggedIn (Lfy;)V a
+net/minecraft/src/World/saveWorld (ZLlk;)V a
+net/minecraft/src/World/func_484_a (Leo;IIIIIIZ)V a
+net/minecraft/src/World/func_483_a (Leo;IIIIII)V a
+net/minecraft/src/World/getPathToEntity (Lfe;Lfe;F)Ldo; a
+net/minecraft/src/World/getCollidingBoundingBoxes (Lfe;Lfa;)Ljava/util/List; a
+net/minecraft/src/Block/setTickOnLoad (Z)V a
+net/minecraft/src/EntityPlayer/attackTargetEntityWithCurrentItem (Lfe;)V h
+net/minecraft/src/World/isBlockIndirectlyProvidingPowerTo (IIII)Z k
+net/minecraft/src/EntityPlayer/useCurrentItemOnEntity (Lfe;)V g
+net/minecraft/src/CraftingInventoryCB/func_20124_c (Lhl;)Z c
+net/minecraft/src/Entity/func_21041_a (IZ)V a
+net/minecraft/src/HashEntry/hashCode ()I hashCode
+net/minecraft/src/ServerConfigurationManager/readBannedPlayers ()V e
+net/minecraft/src/HashEntry2/equals (Ljava/lang/Object;)Z equals
+net/minecraft/src/InventoryPlayer/getTotalArmorValue ()I g
+net/minecraft/src/ServerConfigurationManager/func_622_a (III)V a
+net/minecraft/src/MCHashTable/getSlotIndex (II)I a
+net/minecraft/src/MCHashTable/addKey (ILjava/lang/Object;)V a
+net/minecraft/src/MCHashTable/removeEntry (I)Ljw; e
+net/minecraft/src/MCHashTable/containsItem (I)Z b
+net/minecraft/src/Path/isPathEmpty ()Z c
+net/minecraft/src/MCHashTable/lookup (I)Ljava/lang/Object; a
+net/minecraft/src/MCHashTable/removeObject (I)Ljava/lang/Object; d
+net/minecraft/src/MCHashTable/grow (I)V h
+net/minecraft/src/Path/changeDistance (Lc;F)V a
+net/minecraft/src/Path/dequeue ()Lc; b
+net/minecraft/src/Path/sortForward (I)V b
+net/minecraft/src/Path/clearPath ()V a
+net/minecraft/src/HashEntry/getHash ()I a
+net/minecraft/src/HashEntry/getValue ()Ljava/lang/Object; b
+net/minecraft/src/Path/sortBack (I)V a
+net/minecraft/src/Path/addPoint (Lc;)Lc; a
+net/minecraft/src/MathHelper/sqrt_float (F)F c
+net/minecraft/src/ServerConfigurationManager/login (Lhc;Ljava/lang/String;Ljava/lang/String;)Lfy; a
+net/minecraft/src/MathHelper/abs (F)F e
+net/minecraft/src/Entity/addEntityID (Lah;)Z c
+net/minecraft/src/Entity/getDistanceToEntity (Lfe;)F a
+net/minecraft/src/ItemInWorldManager/func_326_a (IIII)V a
+net/minecraft/src/ItemInWorldManager/func_327_a (Lhl;Lfv;Ljl;IIII)Z a
+net/minecraft/src/ItemInWorldManager/func_324_a (III)V a
+net/minecraft/src/ItemInWorldManager/func_325_c (III)Z c
+net/minecraft/src/ServerConfigurationManager/sendChatMessageToAllPlayers (Ljava/lang/String;)V i
+net/minecraft/src/ItemInWorldManager/func_323_b (III)Z b
+net/minecraft/src/BlockRedstoneOre/func_320_h (Lfv;III)V h
+net/minecraft/src/ServerConfigurationManager/getPlayerList ()Ljava/lang/String; c
+net/minecraft/src/ServerConfigurationManager/isOp (Ljava/lang/String;)Z g
+net/minecraft/src/ItemInWorldManager/func_328_a ()V a
+net/minecraft/src/EmptyChunk/getEntitiesWithinAABBForEntity (Lfe;Lfa;Ljava/util/List;)V a
+net/minecraft/src/EmptyChunk/getBlockID (III)I a
+net/minecraft/src/Entity/func_21043_b (Z)V b
+net/minecraft/src/ServerConfigurationManager/func_613_b (Lfy;)V b
+net/minecraft/src/ConsoleLogFormatter/format (Ljava/util/logging/LogRecord;)Ljava/lang/String; format
+net/minecraft/src/CraftingInventoryFurnaceCB/func_20125_a ()V a
+net/minecraft/src/ServerConfigurationManager/sendChatMessageToPlayer (Ljava/lang/String;Ljava/lang/String;)V a
+net/minecraft/src/EntityTracker/func_610_b (Lfe;)V b
+net/minecraft/src/BlockRedstoneTorch/isGettingPoweredFromSide (Lfv;III)Z g
+net/minecraft/src/EntityTracker/func_611_a (Lfe;)V a
+net/minecraft/src/BlockCrops/getGrowthRate (Lfv;III)F h
+net/minecraft/src/ServerConfigurationManager/playerLoggedOut (Lfy;)V c
+net/minecraft/src/Block/isVecInsideXZBounds (Lbu;)Z b
+net/minecraft/src/ChunkCoordIntPair/hashCode ()I hashCode
+net/minecraft/src/ServerConfigurationManager/savePlayerStates ()V d
+net/minecraft/src/BlockSnowBlock/idDropped (ILjava/util/Random;)I a
+net/minecraft/src/EntitySpider/findPlayerToAttack ()Lfe; l
+net/minecraft/src/BlockButton/onBlockAdded (Lfv;III)V e
+net/minecraft/src/BlockTNT/onBlockDestroyedByPlayer (Lfv;IIII)V a
+net/minecraft/src/World/isAABBInMaterial (Lfa;Lmh;)Z b
+net/minecraft/src/NetHandler/func_21001_a (Lgv;)V a
+net/minecraft/src/Block/blockStrength (Lhl;)F a
+net/minecraft/src/BlockButton/onBlockPlaced (Lfv;IIII)V c
+net/minecraft/src/World/getFirstUncoveredBlock (II)I a
+net/minecraft/src/World/setLightValue (Leo;IIII)V b
+net/minecraft/src/EntityPlayerMP/onLivingUpdate ()V o
+net/minecraft/src/BlockButton/canPlaceBlockAt (Lfv;III)Z a
+net/minecraft/src/EntityWaterMob/getCanSpawnHere ()Z b
+net/minecraft/src/EntityLiving/jump ()V S
+net/minecraft/src/EntitySpider/attackEntity (Lfe;F)V a
+net/minecraft/src/EntityLiving/spawnExplosionParticle ()V R
+net/minecraft/src/Slot/onSlotChanged ()V d
+net/minecraft/src/SlotArmor/isItemValid (Ljl;)Z a
+net/minecraft/src/NetworkMasterThread/run ()V run
+net/minecraft/src/Slot/func_20090_a (Lmn;I)Z a
+net/minecraft/src/Slot/onPickupFromSlot ()V b
+net/minecraft/src/Slot/getStack ()Ljl; c
+net/minecraft/src/SlotArmor/getSlotStackLimit ()I a
+net/minecraft/src/NetworkManager/isServerTerminating (Lca;)Z b
+net/minecraft/src/NetworkManager/readPacket ()V f
+net/minecraft/src/NetworkManager/getReadThread (Lca;)Ljava/lang/Thread; e
+net/minecraft/src/NetworkManager/isRunning (Lca;)Z a
+net/minecraft/src/NetworkManager/getNumChunkDataPackets ()I d
+net/minecraft/src/NetworkManager/addToSendQueue (Lkx;)V a
+net/minecraft/src/NetworkManager/sendPacket ()V e
+net/minecraft/src/NetworkManager/processReadPackets ()V a
+net/minecraft/src/HashEntry2/hashCode ()I hashCode
+net/minecraft/src/EntityPlayer/getCurrentPlayerStrVsBlock (Lhr;)F a
+net/minecraft/src/GuiStatsComponent/update (Lll;)V a
+net/minecraft/src/StepSound/func_739_b ()F b
+net/minecraft/src/StepSound/func_738_a ()F a
+net/minecraft/src/ServerConfigurationManager/sendPacketToPlayer (Ljava/lang/String;Lkx;)Z a
+net/minecraft/src/HashEntry2/func_735_b ()Ljava/lang/Object; b
+net/minecraft/src/NextTickListEntry/comparer (Ldf;)I a
+net/minecraft/src/StepSound/func_737_c ()Ljava/lang/String; c
+net/minecraft/src/HashEntry2/func_736_a ()J a
+net/minecraft/src/GuiLogFormatter/format (Ljava/util/logging/LogRecord;)Ljava/lang/String; format
+net/minecraft/src/PathPoint/isAssigned ()Z a
+net/minecraft/src/NextTickListEntry/setScheduledTime (J)Ldf; a
+net/minecraft/src/BlockTorch/dropTorchIfCantStay (Lfv;III)Z g
+net/minecraft/src/Vec3D/squareDistanceTo (DDD)D d
+net/minecraft/src/ServerGuiFocusAdapter/focusGained (Ljava/awt/event/FocusEvent;)V focusGained
+net/minecraft/src/NetHandler/handleKickDisconnect (Lmf;)V a
+net/minecraft/src/NetHandler/handlePickupSpawn (Lr;)V a
+net/minecraft/src/FontAllowedCharacters/func_20161_a ()Ljava/lang/String; a
+net/minecraft/src/NetHandler/handleMobSpawn (Ljv;)V a
+net/minecraft/src/NetHandler/handleEntityTeleport (Ldp;)V a
+net/minecraft/src/IRecipe/getRecipeSize ()I a
+net/minecraft/src/NetHandler/handleNamedEntitySpawn (Le;)V a
+net/minecraft/src/NetHandler/handleVehicleSpawn (Lfg;)V a
+net/minecraft/src/NetHandler/func_20003_a (Lin;)V a
+net/minecraft/src/Item/setItemName (Ljava/lang/String;)Lhg; a
+net/minecraft/src/NetHandler/func_20001_a (Lkn;)V a
+net/minecraft/src/WatchableObject/getObject ()Ljava/lang/Object; b
+net/minecraft/src/NetHandler/func_20007_a (Ldc;)V a
+net/minecraft/src/NetHandler/func_20006_a (Lh;)V a
+net/minecraft/src/NetHandler/func_20005_a (Lhh;)V a
+net/minecraft/src/NetHandler/func_20004_a (Ljh;)V a
+net/minecraft/src/NetHandler/func_20008_a (Lbd;)V a
+net/minecraft/src/BlockCrops/func_21028_c (Lfv;III)V c
+net/minecraft/src/World/checkChunksExist (IIIIII)Z a
+net/minecraft/src/NBTTagCompound/getType ()B a
+net/minecraft/src/NBTBase/createTagOfType (B)Lix; a
+net/minecraft/src/WorldProvider/registerWorld (Lfv;)V a
+net/minecraft/src/WorldProviderHell/canCoordinateBeSpawn (II)Z a
+net/minecraft/src/WorldProvider/func_4091_a (I)Lko; a
+net/minecraft/src/WorldProviderHell/registerWorldChunkManager ()V a
+net/minecraft/src/WorldServer/func_6158_a (I)Lfe; a
+net/minecraft/src/NetLoginHandler/getUserAndIPString ()Ljava/lang/String; b
+net/minecraft/src/NBTTagDouble/toString ()Ljava/lang/String; toString
+net/minecraft/src/NetHandler/func_21004_a (Ljd;)V a
+net/minecraft/src/MapGenCavesHell/func_4106_a (II[BDDD)V a
+net/minecraft/src/BlockSapling/func_21027_b (Lfv;IIILjava/util/Random;)V b
+net/minecraft/src/EntityCreeper/func_21049_a (I)V a
+net/minecraft/src/NetLoginHandler/tryLogin ()V a
+net/minecraft/src/MobSpawnerBase/setColor (I)Lkt; b
+net/minecraft/src/MobSpawnerBase/getBiome (FF)Lkt; a
+net/minecraft/src/World/tick ()V f
+net/minecraft/src/World/func_4073_g ()V g
+net/minecraft/src/World/addWorldAccess (Lce;)V a
+net/minecraft/src/World/findTopSolidBlock (II)I e
+net/minecraft/src/World/updateEntityWithOptionalForce (Lfe;Z)V a
+net/minecraft/src/World/getWorldChunkManager ()Llg; a
+net/minecraft/src/World/getChunkProvider (Ljava/io/File;)Lcq; a
+net/minecraft/src/BlockStairs/isCollidable ()Z d
+net/minecraft/src/DataWatcher/addObject (ILjava/lang/Object;)V a
+net/minecraft/src/DataWatcher/hasObjectChanged ()Z a
+net/minecraft/src/DataWatcher/writeObjectsInListToStream (Ljava/util/List;Ljava/io/DataOutputStream;)V a
+net/minecraft/src/NBTTagCompound/toString ()Ljava/lang/String; toString
+net/minecraft/src/BlockTNT/getBlockTextureFromSide (I)I a
+net/minecraft/src/EntityCreeper/func_21048_K ()I K
+net/minecraft/src/ItemSword/hitEntity (Ljl;Lmj;)V a
+net/minecraft/src/ItemSword/getDamageVsEntity (Lfe;)I a
+net/minecraft/src/ItemSaddle/saddleEntity (Ljl;Lmj;)V b
+net/minecraft/src/EntitySlime/setSlimeSize (I)V a
+net/minecraft/src/EntityPlayer/func_161_a ()V O
+net/minecraft/src/EntityPlayer/joinEntityItemWithWorld (Lic;)V a
+net/minecraft/src/EntityPlayerMP/onItemPickup (Lfe;I)V c
+net/minecraft/src/EntityPlayer/destroyCurrentEquippedItem ()V Q
+net/minecraft/src/BlockFluids/canCollideCheck (IZ)Z a
+net/minecraft/src/EntityPlayerMP/displayGUIChest (Lmn;)V a
+net/minecraft/src/EntityPlayer/canHarvestBlock (Lhr;)Z b
+net/minecraft/src/EntityPlayerMP/swingItem ()V K
+net/minecraft/src/EntityPlayer/dropPlayerItemWithRandomChoice (Ljl;Z)V a
+net/minecraft/src/DataWatcher/updateObject (ILjava/lang/Object;)V b
+net/minecraft/src/Entity/func_21042_c (I)Z c
+net/minecraft/src/IWorldAccess/doNothingWithTileEntity (IIILbm;)V a
+net/minecraft/src/AxisAlignedBB/getBoundingBox (DDDDDD)Lfa; a
+net/minecraft/src/EntityTrackerEntry/func_604_a ()V a
+net/minecraft/src/ItemStack/hitBlock (IIII)V a
+net/minecraft/src/World/getHeightValue (II)I d
+net/minecraft/src/NetworkManager/networkShutdown (Ljava/lang/String;[Ljava/lang/Object;)V a
+net/minecraft/src/MCHashTable2/func_680_b (I)V b
+net/minecraft/src/IWorldAccess/markBlockRangeNeedsUpdate (IIIIII)V a
+net/minecraft/src/IWorldAccess/updateAllRenderers ()V a
+net/minecraft/src/IWorldAccess/spawnParticle (Ljava/lang/String;DDDDDD)V a
+net/minecraft/src/Entity/updateRiderPosition ()V E
+net/minecraft/src/EntitySnowball/entityInit ()V a
+net/minecraft/src/ItemStack/getItem ()Lhg; a
+net/minecraft/src/EntityWaterMob/canBreatheUnderwater ()Z d_
+net/minecraft/src/EntitySkeleton/func_21047_g_ ()V g_
+net/minecraft/src/EntityList/getEntityString (Lfe;)Ljava/lang/String; b
+net/minecraft/src/GuiStatsComponent/paint (Ljava/awt/Graphics;)V paint
+net/minecraft/src/EntityList/createEntityFromNBT (Lah;Lfv;)Lfe; a
+net/minecraft/src/EntityList/createEntityInWorld (Ljava/lang/String;Lfv;)Lfe; a
+net/minecraft/src/NibbleArray/isValid ()Z a
+net/minecraft/src/NibbleArray/setNibble (IIII)V a
+net/minecraft/src/NibbleArray/getNibble (III)I a
+net/minecraft/src/EntityList/addMapping (Ljava/lang/Class;Ljava/lang/String;I)V a
+net/minecraft/src/Entity/updateRidden ()V D
+net/minecraft/src/Entity/fall (F)V a
+net/minecraft/src/Entity/getYOffset ()D F
+net/minecraft/src/ThreadServerApplication/run ()V run
+net/minecraft/src/World/chunkExists (II)Z f
+net/minecraft/src/ChunkCache/getBlockMetadata (III)I b
+net/minecraft/src/Entity/setSize (FF)V a
+net/minecraft/src/ChunkCache/getBlockId (III)I a
+net/minecraft/src/World/notifyBlocksOfNeighborChange (IIII)V h
+net/minecraft/src/World/isBlockProvidingPowerTo (IIII)Z j
+net/minecraft/src/Entity/handleWaterMovement ()Z v
+net/minecraft/src/Entity/setEntityDead ()V q
+net/minecraft/src/AxisAlignedBB/intersectsWith (Lfa;)Z a
+net/minecraft/src/AxisAlignedBB/isVecInXZ (Lbu;)Z b
+net/minecraft/src/World/neighborLightPropagationChanged (Leo;IIII)V a
+net/minecraft/src/FurnaceRecipes/addSmelting (ILjl;)V a
+net/minecraft/src/AxisAlignedBB/addCoord (DDD)Lfa; a
+net/minecraft/src/AxisAlignedBB/calculateYOffset (Lfa;D)D b
+net/minecraft/src/AxisAlignedBB/offset (DDD)Lfa; d
+net/minecraft/src/FurnaceRecipes/smelting ()Lfp; a
+net/minecraft/src/ChunkLoader/storeChunkInCompound (Lme;Lfv;Lah;)V a
+net/minecraft/src/IChunkLoader/saveChunk (Lfv;Lme;)V a
+net/minecraft/src/IChunkLoader/func_661_a ()V a
+net/minecraft/src/IChunkLoader/saveExtraData ()V b
+net/minecraft/src/MapGenBase/func_667_a (Lcq;Lfv;II[B)V a
+net/minecraft/src/MapGenCavesHell/func_666_a (Lfv;IIII[B)V a
+net/minecraft/src/ChunkLoader/chunkFileForXZ (II)Ljava/io/File; a
+net/minecraft/src/ChunkLoader/loadChunkIntoWorldFromCompound (Lfv;Lah;)Lme; a
+net/minecraft/src/NetworkManager/serverShutdown ()V c
+net/minecraft/src/Entity/handleLavaMovement ()Z x
+net/minecraft/src/AxisAlignedBB/isVecInXY (Lbu;)Z c
+net/minecraft/src/RecipesDyes/addRecipes (Lib;)V a
+net/minecraft/src/Entity/dropItem (II)Lic; a
+net/minecraft/src/ChunkCache/getBlockMaterial (III)Lmh; c
+net/minecraft/src/DataWatcher/writeWatchableObjects (Ljava/io/DataOutputStream;)V a
+net/minecraft/src/FurnaceRecipes/getSmeltingResult (I)Ljl; a
+net/minecraft/src/IRecipe/func_21134_a (Lk;)Z a
+net/minecraft/src/NBTTagCompound/getCompoundTag (Ljava/lang/String;)Lah; j
+net/minecraft/src/Vec3D/distanceTo (Lbu;)D a
+net/minecraft/src/NBTTagCompound/setLong (Ljava/lang/String;J)V a
+net/minecraft/src/IChunkProvider/provideChunk (II)Lme; b
+net/minecraft/src/IChunkProvider/saveChunks (ZLlk;)Z a
+net/minecraft/src/IChunkProvider/func_361_a ()Z a
+net/minecraft/src/NBTTagCompound/getInteger (Ljava/lang/String;)I d
+net/minecraft/src/IChunkProvider/func_364_b ()Z b
+net/minecraft/src/IChunkProvider/chunkExists (II)Z a
+net/minecraft/src/InventoryPlayer/addItemStackToInventory (Ljl;)Z a
+net/minecraft/src/EntityFireball/canBeCollidedWith ()Z c_
+net/minecraft/src/InventoryPlayer/readFromNBT (Lfh;)V b
+net/minecraft/src/InventoryLargeChest/getInventoryStackLimit ()I c
+net/minecraft/src/InventoryPlayer/getFirstEmptyStack ()I j
+net/minecraft/src/NetworkManager/readNetworkPacket (Lca;)V c
+net/minecraft/src/InventoryPlayer/canHarvestBlock (Lhr;)Z b
+net/minecraft/src/InventoryLargeChest/setInventorySlotContents (ILjl;)V a
+net/minecraft/src/ItemStack/isItemDamaged ()Z f
+net/minecraft/src/AxisAlignedBB/copy ()Lfa; b
+net/minecraft/src/Entity/addVelocity (DDD)V f
+net/minecraft/src/ChunkCache/isBlockOpaqueCube (III)Z d
+net/minecraft/src/ItemStack/getItemDamageForDisplay ()I g
+net/minecraft/src/EntityPlayerMP/onItemStackChanged (Ljl;)V a
+net/minecraft/src/EntityPlayer/dropPlayerItem (Ljl;)V b
+net/minecraft/src/EntityPlayerMP/func_20043_I ()V L
+net/minecraft/src/ItemStack/func_21132_c ()Z c
+net/minecraft/src/MinecartTrackLogic/getNAdjacentTracks (Lit;)I a
+net/minecraft/src/NBTTagList/tagAt (I)Lix; a
+net/minecraft/src/NBTTagCompound/getFloat (Ljava/lang/String;)F f
+net/minecraft/src/NetworkManager/getRemoteAddress ()Ljava/net/SocketAddress; b
+net/minecraft/src/NBTBase/writeTag (Lix;Ljava/io/DataOutput;)V a
+net/minecraft/src/NBTTagCompound/writeTagContents (Ljava/io/DataOutput;)V a
+net/minecraft/src/NBTTagCompound/readTagContents (Ljava/io/DataInput;)V a
+net/minecraft/src/NBTBase/readTag (Ljava/io/DataInput;)Lix; b
+net/minecraft/src/NBTBase/getKey ()Ljava/lang/String; c
+net/minecraft/src/NBTBase/setKey (Ljava/lang/String;)Lix; m
+net/minecraft/src/NBTTagList/setTag (Lix;)V a
+net/minecraft/src/WorldGenFlowers/generate (Lfv;Ljava/util/Random;III)Z a
+net/minecraft/src/SpawnerAnimals/func_21167_a (Lma;Lfv;III)Z a
+net/minecraft/src/PathPoint/hashCode ()I hashCode
+net/minecraft/src/IRecipe/func_21136_b (Lk;)Ljl; b
+net/minecraft/src/EntityTrackerEntry/func_603_a (Lkx;)V a
+net/minecraft/src/ShapedRecipes/func_21139_a (Lk;IIZ)Z a
+net/minecraft/src/SpawnerAnimals/func_21166_a (Lmj;Lfv;FFF)V a
+net/minecraft/src/ChunkCoordIntPair/equals (Ljava/lang/Object;)Z equals
+net/minecraft/src/RecipeSorter/compare (Ljava/lang/Object;Ljava/lang/Object;)I compare
+net/minecraft/src/NBTTagCompound/hasKey (Ljava/lang/String;)Z a
+net/minecraft/src/BlockLeaves/onEntityWalking (Lfv;IIILfe;)V b
+net/minecraft/src/MapGenCaves/func_669_a (II[BDDD)V a
+net/minecraft/src/NBTTagCompound/setDouble (Ljava/lang/String;D)V a
+net/minecraft/src/BlockFlowing/func_4035_j (Lfv;III)[Z j
+net/minecraft/src/BlockFlowing/func_4034_a (Lfv;IIIII)I b
+net/minecraft/src/TileEntityFurnace/canSmelt ()Z i
+net/minecraft/src/CraftingInventoryPlayerCB/onCraftGuiClosed (Lhl;)V a
+net/minecraft/src/MapGenCaves/releaseEntitySkin (II[BDDDFFFIID)V a
+net/minecraft/src/BlockPortal/tryToCreatePortal (Lfv;III)Z b_
+net/minecraft/src/BlockStationary/func_4033_j (Lfv;III)Z j
+net/minecraft/src/BlockReed/checkBlockCoordValid (Lfv;III)V g
+net/minecraft/src/DataWatcher/getWatchableObjectByte (I)B a
+net/minecraft/src/Entity/getLookVec ()Lbu; G
+net/minecraft/src/Block/setBlockName (Ljava/lang/String;)Lhr; a
+net/minecraft/src/TileEntityNote/changePitch ()V a
+net/minecraft/src/AxisAlignedBB/clearBoundingBoxPool ()V a
+net/minecraft/src/EntityGhast/getSoundVolume ()F i
+net/minecraft/src/EntityLiving/func_6101_K ()V T
+net/minecraft/src/EntityGhast/getHurtSound ()Ljava/lang/String; f
+net/minecraft/src/Entity/dealFireDamage (I)V b
+net/minecraft/src/BlockStairs/dropBlockAsItemWithChance (Lfv;IIIIF)V a
+net/minecraft/src/World/markBlockNeedsUpdate (III)V g
+net/minecraft/src/GuiStatsListener/actionPerformed (Ljava/awt/event/ActionEvent;)V actionPerformed
+net/minecraft/src/NetHandler/handleLogin (Lan;)V a
+net/minecraft/src/Item/getHasSubtypes ()Z c
+net/minecraft/src/ServerConfigurationManager/getPlayerEntity (Ljava/lang/String;)Lfy; h
+net/minecraft/src/AxisAlignedBB/expand (DDD)Lfa; b
+net/minecraft/src/World/TickUpdates (Z)Z a
+net/minecraft/src/AxisAlignedBB/calculateZOffset (Lfa;D)D c
+net/minecraft/src/Entity/setPosition (DDD)V a
+net/minecraft/src/ServerGUI/getPlayerListComponent ()Ljavax/swing/JComponent; b
+net/minecraft/src/EntityTrackerEntry/func_601_b (Ljava/util/List;)V b
+net/minecraft/src/DataWatcher/writeWatchableObject (Ljava/io/DataOutputStream;Lb;)V a
+net/minecraft/src/NetServerHandler/func_42_a ()V a
+net/minecraft/src/NetServerHandler/func_43_c (Ljava/lang/String;)V a
+net/minecraft/src/NetServerHandler/func_41_a (DDDFF)V a
+net/minecraft/src/ServerGUI/initGui (Lnet/minecraft/server/MinecraftServer;)V a
+net/minecraft/src/ServerGUI/getLogComponent ()Ljavax/swing/JComponent; d
+net/minecraft/src/ServerGUI/getMinecraftServer (Lid;)Lnet/minecraft/server/MinecraftServer; a
+net/minecraft/src/ServerGUI/getStatsComponent ()Ljavax/swing/JComponent; a
+net/minecraft/src/ItemStack/isItemEqual (Ljl;)Z a
+net/minecraft/src/ItemStack/isItemStackDamageable ()Z d
+net/minecraft/src/ItemStack/getItemDamage ()I h
+net/minecraft/src/ChunkPosition/hashCode ()I hashCode
+net/minecraft/src/NBTTagCompound/getByte (Ljava/lang/String;)B b
+net/minecraft/src/NBTTagCompound/getTagList (Ljava/lang/String;)Lfh; k
+net/minecraft/src/NBTTagCompound/getShort (Ljava/lang/String;)S c
+net/minecraft/src/NBTTagCompound/setInteger (Ljava/lang/String;I)V a
+net/minecraft/src/NBTTagCompound/getLong (Ljava/lang/String;)J e
+net/minecraft/src/NBTTagCompound/setString (Ljava/lang/String;Ljava/lang/String;)V a
+net/minecraft/src/NBTTagCompound/getBoolean (Ljava/lang/String;)Z l
+net/minecraft/src/ItemStack/useItemOnEntity (Lmj;)V b
+net/minecraft/src/ItemStack/getHasSubtypes ()Z e
+net/minecraft/src/NoiseGenerator2/func_4115_a ([DDDIIDDD)V a
+net/minecraft/src/ChunkPosition/equals (Ljava/lang/Object;)Z equals
+net/minecraft/src/ServerConfigurationManager/writeBannedPlayers ()V f
+net/minecraft/src/Block/setResistance (F)Lhr; b
+net/minecraft/src/BlockPortal/setBlockBoundsBasedOnState (Lla;III)V a
+net/minecraft/src/BlockStationary/onNeighborBlockChange (Lfv;IIII)V b
+net/minecraft/src/BlockButton/onBlockClicked (Lfv;IIILhl;)V b
+net/minecraft/src/MathHelper/floor_float (F)I d
+net/minecraft/src/MinecartTrackLogic/isMinecartTrack (III)Z a
+net/minecraft/src/BlockButton/isIndirectlyPoweringTo (Lfv;IIII)Z d
+net/minecraft/src/BlockButton/isPoweringTo (Lla;IIII)Z b
+net/minecraft/src/MathHelper/floor_double (D)I b
+net/minecraft/src/MathHelper/sin (F)F a
+net/minecraft/src/MathHelper/cos (F)F b
+net/minecraft/src/MathHelper/sqrt_double (D)F a
+net/minecraft/src/MathHelper/abs_max (DD)D a
+net/minecraft/src/World/isAirBlock (III)Z e
+net/minecraft/src/HashEntry/toString ()Ljava/lang/String; toString
+net/minecraft/src/ThreadSleepForever/run ()V run
+net/minecraft/src/EntityTrackerEntry/hashCode ()I hashCode
+net/minecraft/src/BlockButton/func_322_g (Lfv;III)Z g
+net/minecraft/src/ServerConfigurationManager/sendPacketToAllPlayers (Lkx;)V a
+net/minecraft/src/NetServerHandler/sendPacket (Lkx;)V b
+net/minecraft/src/NetServerHandler/func_38_b ()I b
+net/minecraft/src/RecipesCrafting/addRecipes (Lib;)V a
+net/minecraft/src/BlockStairs/getExplosionResistance (Lfe;)F a
+net/minecraft/src/NetLoginHandler/kickUser (Ljava/lang/String;)V a
+net/minecraft/src/ServerConfigurationManager/sentTileEntityToPlayer (IIILbm;)V a
+net/minecraft/src/NetLoginHandler/getServerId (Lhc;)Ljava/lang/String; a
+net/minecraft/src/NetLoginHandler/setLoginPacket (Lhc;Lan;)Lan; a
+net/minecraft/src/NetHandler/handleEntity (Lhd;)V a
+net/minecraft/src/PlayerManager/func_533_c (Lkj;)Ljava/util/List; c
+net/minecraft/src/BlockSnowBlock/quantityDropped (Ljava/util/Random;)I a
+net/minecraft/src/BlockStairs/dropBlockAsItem (Lfv;IIII)V a_
+net/minecraft/src/BlockButton/blockActivated (Lfv;IIILhl;)Z a
+net/minecraft/src/PlayerManager/func_537_a (IIZ)Lat; a
+net/minecraft/src/BlockLeavesBase/isOpaqueCube ()Z a
+net/minecraft/src/PlayerManager/func_535_a (III)V a
+net/minecraft/src/BlockButton/onBlockRemoval (Lfv;III)V b
+net/minecraft/src/Entity/canBePushed ()Z z
+net/minecraft/src/Block/harvestBlock (Lfv;IIII)V g
+net/minecraft/src/PlayerManager/func_539_b (Lkj;)Lgm; b
+net/minecraft/src/PlayerManager/func_538_a ()V a
+net/minecraft/src/Entity/isEntityAlive ()Z B
+net/minecraft/src/BlockSlowSand/getCollisionBoundingBoxFromPool (Lfv;III)Lfa; d
+net/minecraft/src/Entity/updateFallState (DZ)V a
+net/minecraft/src/NetHandler/func_12001_a (Ldx;)V a
+net/minecraft/src/PathPoint/equals (Ljava/lang/Object;)Z equals
+net/minecraft/src/Vec3D/normalize ()Lbu; b
+net/minecraft/src/World/func_20110_e (Lfe;)V e
+net/minecraft/src/World/checkIfAABBIsClear (Lfa;)Z a
+net/minecraft/src/ServerConfigurationManager/func_637_b ()V b
+net/minecraft/src/NetworkManager/onNetworkError (Ljava/lang/Exception;)V a
+net/minecraft/src/Vec3D/addVector (DDD)Lbu; c
+net/minecraft/src/Vec3D/setComponents (DDD)Lbu; e
+net/minecraft/src/InventoryCrafting/func_21084_a (II)Ljl; a
+net/minecraft/src/NetworkManager/setNetHandler (Lgi;)V a
+net/minecraft/src/WatchableObject/setWatching (Z)V a
+net/minecraft/src/AxisAlignedBB/toString ()Ljava/lang/String; toString
+net/minecraft/src/NoiseGeneratorPerlin/func_4102_a (IDD)D a
+net/minecraft/src/Entity/dropItemWithOffset (IIF)Lic; a
+net/minecraft/src/TileEntityFurnace/smeltItem ()V h
+net/minecraft/src/Chunk/func_339_g (III)V g
+net/minecraft/src/EmptyChunk/getChunkBlockTileEntity (III)Lbm; d
+net/minecraft/src/ServerConfigurationManager/setPlayerManager (Lgc;)V a
+net/minecraft/src/EmptyChunk/onChunkUnload ()V e
+net/minecraft/src/EmptyChunk/setLightValue (Leo;IIII)V a
+net/minecraft/src/Chunk/func_333_c (II)V c
+net/minecraft/src/EmptyChunk/func_332_a (Lfe;I)V a
+net/minecraft/src/EmptyChunk/addEntity (Lfe;)V a
+net/minecraft/src/EmptyChunk/func_334_a (J)Ljava/util/Random; a
+net/minecraft/src/EmptyChunk/getHeightValue (II)I b
+net/minecraft/src/EmptyChunk/setChunkModified ()V f
+

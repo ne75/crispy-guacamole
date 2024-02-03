@@ -1,0 +1,37 @@
+/*    */ package com.jcraft.jorbis;
+/*    */ 
+/*    */ class Util
+/*    */ {
+/*    */   static int ilog(int paramInt)
+/*    */   {
+/*  5 */     int i = 0;
+/*  6 */     while (paramInt != 0) {
+/*  7 */       i++;
+/*  8 */       paramInt >>>= 1;
+/*    */     }
+/* 10 */     return i;
+/*    */   }
+/*    */ 
+/*    */   static int ilog2(int paramInt) {
+/* 14 */     int i = 0;
+/* 15 */     while (paramInt > 1) {
+/* 16 */       i++;
+/* 17 */       paramInt >>>= 1;
+/*    */     }
+/* 19 */     return i;
+/*    */   }
+/*    */ 
+/*    */   static int icount(int paramInt) {
+/* 23 */     int i = 0;
+/* 24 */     while (paramInt != 0) {
+/* 25 */       i += (paramInt & 0x1);
+/* 26 */       paramInt >>>= 1;
+/*    */     }
+/* 28 */     return i;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     com.jcraft.jorbis.Util
+ * JD-Core Version:    0.6.0
+ */

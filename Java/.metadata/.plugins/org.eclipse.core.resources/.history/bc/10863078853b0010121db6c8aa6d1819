@@ -1,0 +1,24 @@
+/*    */ class oh
+/*    */ {
+/*    */   int a;
+/*    */   int b;
+/*    */   int c;
+/*    */   int d;
+/*    */   int e;
+/*    */   int f;
+/*    */ 
+/*    */   public oh(ix paramix, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
+/*    */   {
+/* 20 */     this.a = paramInt1;
+/* 21 */     this.b = paramInt2;
+/* 22 */     this.c = paramInt3;
+/* 23 */     this.d = 80;
+/* 24 */     this.e = paramInt4;
+/* 25 */     this.f = paramInt5;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     oh
+ * JD-Core Version:    0.6.0
+ */

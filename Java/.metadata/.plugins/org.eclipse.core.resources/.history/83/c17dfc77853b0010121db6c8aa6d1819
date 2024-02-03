@@ -1,0 +1,33 @@
+/*    */ public class af extends fz
+/*    */ {
+/*    */   public af(dn paramdn)
+/*    */   {
+/* 22 */     super(paramdn);
+/*    */   }
+/*    */ 
+/*    */   public boolean c_()
+/*    */   {
+/* 28 */     return true;
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw) {
+/* 32 */     super.a(paramjw);
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 36 */     super.b(paramjw);
+/*    */   }
+/*    */ 
+/*    */   public boolean c() {
+/* 40 */     return this.aB.a(this.aP);
+/*    */   }
+/*    */ 
+/*    */   public int d() {
+/* 44 */     return 120;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     af
+ * JD-Core Version:    0.6.0
+ */

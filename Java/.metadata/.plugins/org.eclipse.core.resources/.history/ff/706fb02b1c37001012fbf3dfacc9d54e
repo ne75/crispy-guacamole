@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class card {
+	public static void main(String arg[]){
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
+	int e = 0;
+	Random randomGenerator = new Random();
+	a = randomGenerator.nextInt(9);
+	do{
+		b = randomGenerator.nextInt(9);
+	}while ((b == a));
+	do{
+		c = randomGenerator.nextInt(9);
+	}while ((c == a) && (c == b));
+	do{
+		d = randomGenerator.nextInt(9);
+	}while ((d == a) && (d == b) && (d == c));
+	do{
+		e = randomGenerator.nextInt(9);
+	}while ((e == a) && (e == b) && (e == c) && (e == d));
+	System.out.print(a);
+	System.out.print(b);
+	System.out.print(c);
+	System.out.print(d);
+	System.out.print(e);
+	}
+}

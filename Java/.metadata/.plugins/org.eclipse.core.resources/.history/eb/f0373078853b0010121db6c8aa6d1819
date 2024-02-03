@@ -1,0 +1,131 @@
+/*     */ import java.util.HashMap;
+/*     */ import java.util.Map;
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ 
+/*     */ public class oc
+/*     */ {
+/*  52 */   private Map o = new HashMap();
+/*     */ 
+/*  54 */   public static oc a = new oc();
+/*     */   private nh p;
+/*     */   public static double b;
+/*     */   public static double c;
+/*     */   public static double d;
+/*     */   public gs e;
+/*     */   public mf f;
+/*     */   public dn g;
+/*     */   public eu h;
+/*     */   public float i;
+/*     */   public float j;
+/*     */   public hq k;
+/*     */   public double l;
+/*     */   public double m;
+/*     */   public double n;
+/*     */ 
+/*     */   private oc()
+/*     */   {
+/*  70 */     this.o.put(bn.class, new sm());
+/*  71 */     this.o.put(qk.class, new ir(new cw(), new cw(0.5F), 0.7F));
+/*  72 */     this.o.put(ch.class, new rr(new je(), new cr(), 0.7F));
+/*  73 */     this.o.put(bb.class, new po(new fe(), 0.7F));
+/*  74 */     this.o.put(qs.class, new gf(new nz(), 0.3F));
+/*  75 */     this.o.put(eh.class, new i());
+/*  76 */     this.o.put(dy.class, new q(new hu(), 0.5F));
+/*  77 */     this.o.put(pn.class, new q(new cx(), 0.5F));
+/*  78 */     this.o.put(pl.class, new iv(new jq(16), new jq(0), 0.25F));
+/*  79 */     this.o.put(eu.class, new co());
+/*  80 */     this.o.put(jv.class, new ry(new cx(), 0.5F, 6.0F));
+/*  81 */     this.o.put(av.class, new lg());
+/*  82 */     this.o.put(rm.class, new dd(new qo(), 0.7F));
+/*  83 */     this.o.put(ig.class, new ev(new dr(), 0.5F));
+/*     */ 
+/*  85 */     this.o.put(nl.class, new in());
+/*     */ 
+/*  87 */     this.o.put(ma.class, new cq());
+/*  88 */     this.o.put(nj.class, new ip());
+/*  89 */     this.o.put(bc.class, new cd(eo.aB.a(null)));
+/*  90 */     this.o.put(qa.class, new cd(eo.aN.a(null)));
+/*  91 */     this.o.put(bi.class, new hk());
+/*  92 */     this.o.put(fh.class, new al());
+/*  93 */     this.o.put(mb.class, new kj());
+/*  94 */     this.o.put(gz.class, new ep());
+/*     */ 
+/*  96 */     this.o.put(sd.class, new nx());
+/*  97 */     this.o.put(eg.class, new dp());
+/*  98 */     this.o.put(ik.class, new ld());
+/*     */ 
+/* 100 */     for (ba localba : this.o.values())
+/* 101 */       localba.a(this);
+/*     */   }
+/*     */ 
+/*     */   public ba a(Class paramClass)
+/*     */   {
+/* 107 */     ba localba = (ba)this.o.get(paramClass);
+/* 108 */     if ((localba == null) && (paramClass != nl.class)) {
+/* 109 */       localba = a(paramClass.getSuperclass());
+/* 110 */       this.o.put(paramClass, localba);
+/*     */     }
+/* 112 */     return localba;
+/*     */   }
+/*     */ 
+/*     */   public ba a(nl paramnl) {
+/* 116 */     return a(paramnl.getClass());
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, gs paramgs, nh paramnh, eu parameu, hq paramhq, float paramFloat) {
+/* 120 */     this.g = paramdn;
+/* 121 */     this.e = paramgs;
+/* 122 */     this.k = paramhq;
+/* 123 */     this.h = parameu;
+/* 124 */     this.p = paramnh;
+/*     */ 
+/* 126 */     this.i = (parameu.aN + (parameu.aL - parameu.aN) * paramFloat);
+/* 127 */     this.j = (parameu.aO + (parameu.aM - parameu.aO) * paramFloat);
+/*     */ 
+/* 129 */     this.l = (parameu.be + (parameu.aF - parameu.be) * paramFloat);
+/* 130 */     this.m = (parameu.bf + (parameu.aG - parameu.bf) * paramFloat);
+/* 131 */     this.n = (parameu.bg + (parameu.aH - parameu.bg) * paramFloat);
+/*     */   }
+/*     */ 
+/*     */   public void a(nl paramnl, float paramFloat) {
+/* 135 */     double d1 = paramnl.be + (paramnl.aF - paramnl.be) * paramFloat;
+/* 136 */     double d2 = paramnl.bf + (paramnl.aG - paramnl.bf) * paramFloat;
+/* 137 */     double d3 = paramnl.bg + (paramnl.aH - paramnl.bg) * paramFloat;
+/* 138 */     float f1 = paramnl.aN + (paramnl.aL - paramnl.aN) * paramFloat;
+/*     */ 
+/* 140 */     float f2 = paramnl.a(paramFloat);
+/*     */ 
+/* 142 */     GL11.glColor3f(f2, f2, f2);
+/*     */ 
+/* 144 */     a(paramnl, d1 - b, d2 - c, d3 - d, f1, paramFloat);
+/*     */   }
+/*     */ 
+/*     */   public void a(nl paramnl, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2) {
+/* 148 */     ba localba = a(paramnl);
+/* 149 */     if (localba != null) {
+/* 150 */       localba.a(paramnl, paramDouble1, paramDouble2, paramDouble3, paramFloat1, paramFloat2);
+/* 151 */       localba.b(paramnl, paramDouble1, paramDouble2, paramDouble3, paramFloat1, paramFloat2);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn)
+/*     */   {
+/* 157 */     this.g = paramdn;
+/*     */   }
+/*     */ 
+/*     */   public double a(double paramDouble1, double paramDouble2, double paramDouble3) {
+/* 161 */     double d1 = paramDouble1 - this.l;
+/* 162 */     double d2 = paramDouble2 - this.m;
+/* 163 */     double d3 = paramDouble3 - this.n;
+/* 164 */     return d1 * d1 + d2 * d2 + d3 * d3;
+/*     */   }
+/*     */ 
+/*     */   public nh a() {
+/* 168 */     return this.p;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     oc
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,35 @@
+package main;
+
+/**
+ * Program 213b (Quantity Ordering)
+ * Nikita Ermoshkin
+ * 11-13-12
+ * JDK 7, Mac OS 10.8
+ * 
+ * This program determines the price break of a product based on
+ * the quantity ordered.
+ * 
+ */
+
+import java.util.*;
+
+public class QuantityOrdering {
+    public static void main(String[] args) {
+	
+	Scanner s = new Scanner(System.in);
+	boolean end = false;
+	int quantity = 0;
+		
+	while (end == false){
+	    System.out.print("Enter Quantity: ");
+	   quantity = s.nextInt();
+	   
+	   if ((quantity >= 0) && (quantity < 100)) {
+	       
+	   }
+	   
+	}
+
+    }
+
+}

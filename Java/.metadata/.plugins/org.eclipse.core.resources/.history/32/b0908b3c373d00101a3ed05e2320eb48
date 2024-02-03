@@ -1,0 +1,1332 @@
+/*      */ package net.minecraft.client;
+/*      */ 
+/*      */ import ai;
+/*      */ import ax;
+/*      */ import bh;
+/*      */ import bj;
+/*      */ import bk;
+/*      */ import bm;
+/*      */ import bv;
+/*      */ import bw;
+/*      */ import by;
+/*      */ import bz;
+/*      */ import cg;
+/*      */ import cj;
+/*      */ import db;
+/*      */ import dn;
+/*      */ import dr;
+/*      */ import dz;
+/*      */ import ei;
+/*      */ import ej;
+/*      */ import es;
+/*      */ import eu;
+/*      */ import ff;
+/*      */ import fn;
+/*      */ import fo;
+/*      */ import fv;
+/*      */ import ga;
+/*      */ import gd;
+/*      */ import gl;
+/*      */ import gm;
+/*      */ import gq;
+/*      */ import gs;
+/*      */ import h;
+/*      */ import hh;
+/*      */ import hi;
+/*      */ import hn;
+/*      */ import hp;
+/*      */ import hq;
+/*      */ import hr;
+/*      */ import if;
+/*      */ import it;
+/*      */ import iw;
+/*      */ import java.awt.BorderLayout;
+/*      */ import java.awt.Canvas;
+/*      */ import java.awt.Color;
+/*      */ import java.awt.Component;
+/*      */ import java.awt.Dimension;
+/*      */ import java.awt.Frame;
+/*      */ import java.awt.Graphics;
+/*      */ import java.io.File;
+/*      */ import java.io.PrintStream;
+/*      */ import java.nio.ByteBuffer;
+/*      */ import jg;
+/*      */ import jy;
+/*      */ import kb;
+/*      */ import kf;
+/*      */ import ks;
+/*      */ import kw;
+/*      */ import la;
+/*      */ import ll;
+/*      */ import lm;
+/*      */ import lo;
+/*      */ import lr;
+/*      */ import lw;
+/*      */ import mf;
+/*      */ import nb;
+/*      */ import nh;
+/*      */ import oc;
+/*      */ import of;
+/*      */ import org.lwjgl.BufferUtils;
+/*      */ import org.lwjgl.LWJGLException;
+/*      */ import org.lwjgl.input.Controllers;
+/*      */ import org.lwjgl.input.Keyboard;
+/*      */ import org.lwjgl.input.Mouse;
+/*      */ import org.lwjgl.opengl.Display;
+/*      */ import org.lwjgl.opengl.DisplayMode;
+/*      */ import org.lwjgl.opengl.GL11;
+/*      */ import org.lwjgl.util.glu.GLU;
+/*      */ import ov;
+/*      */ import pe;
+/*      */ import ph;
+/*      */ import pi;
+/*      */ import pj;
+/*      */ import pr;
+/*      */ import py;
+/*      */ import qc;
+/*      */ import qe;
+/*      */ import qi;
+/*      */ import qp;
+/*      */ import qx;
+/*      */ import rq;
+/*      */ import sg;
+/*      */ 
+/*      */ public abstract class Minecraft
+/*      */   implements Runnable
+/*      */ {
+/*      */   public kb b;
+/*   97 */   private boolean a = false;
+/*      */   public int c;
+/*      */   public int d;
+/*      */   private bv O;
+/*  101 */   private lm P = new lm(20.0F);
+/*      */   public dn e;
+/*      */   public h f;
+/*      */   public bz g;
+/*      */   public cj h;
+/*  107 */   public es i = null;
+/*      */   public String j;
+/*      */   public Canvas k;
+/*  112 */   public boolean l = true;
+/*  113 */   public volatile boolean m = false;
+/*      */   public gs n;
+/*      */   public nh o;
+/*  116 */   public by p = null;
+/*  117 */   public iw q = new iw(this);
+/*  118 */   public ll r = new ll(this);
+/*      */   private bw Q;
+/*  120 */   private int R = 0;
+/*  121 */   private int S = 0;
+/*      */   private int T;
+/*      */   private int U;
+/*  124 */   public String s = null;
+/*  125 */   public int t = 0;
+/*      */   public pe u;
+/*  128 */   public boolean v = false;
+/*  129 */   public dr w = new dr(0.0F);
+/*  130 */   public pr x = null;
+/*      */   public hq y;
+/*      */   protected MinecraftApplet z;
+/*  133 */   public sg A = new sg();
+/*      */   public qe B;
+/*      */   public ga C;
+/*      */   public File D;
+/*  139 */   public static long[] E = new long[512];
+/*  140 */   public static long[] F = new long[512];
+/*  141 */   public static int G = 0;
+/*      */   private String V;
+/*      */   private int W;
+/*  184 */   private py X = new py();
+/*  185 */   private bj Y = new bj();
+/*      */ 
+/*  383 */   private static File Z = null;
+/*      */ 
+/*  491 */   public volatile boolean H = true;
+/*  492 */   public String I = "";
+/*      */ 
+/*  721 */   boolean J = false;
+/*      */ 
+/*  794 */   long K = -1L;
+/*      */ 
+/*  881 */   public boolean L = false;
+/*      */ 
+/* 1061 */   private int aa = 0;
+/* 1062 */   public boolean M = false;
+/*      */ 
+/* 1064 */   long N = System.currentTimeMillis();
+/* 1065 */   private int ab = 0;
+/*      */ 
+/*      */   public Minecraft(Component paramComponent, Canvas paramCanvas, MinecraftApplet paramMinecraftApplet, int paramInt1, int paramInt2, boolean paramBoolean)
+/*      */   {
+/*  144 */     this.U = paramInt2;
+/*  145 */     this.a = paramBoolean;
+/*  146 */     this.z = paramMinecraftApplet;
+/*      */ 
+/*  151 */     new hh(this, "Timer hack thread");
+/*      */ 
+/*  168 */     this.k = paramCanvas;
+/*  169 */     this.c = paramInt1;
+/*  170 */     this.d = paramInt2;
+/*  171 */     this.a = paramBoolean;
+/*      */   }
+/*      */ 
+/*      */   public abstract void a(it paramit);
+/*      */ 
+/*      */   public void a(String paramString, int paramInt)
+/*      */   {
+/*  180 */     this.V = paramString;
+/*  181 */     this.W = paramInt;
+/*      */   }
+/*      */ 
+/*      */   public void a()
+/*      */   {
+/*  188 */     if (this.k != null) {
+/*  189 */       Graphics localGraphics = this.k.getGraphics();
+/*  190 */       if (localGraphics != null) {
+/*  191 */         localGraphics.setColor(Color.BLACK);
+/*  192 */         localGraphics.fillRect(0, 0, this.c, this.d);
+/*  193 */         localGraphics.dispose();
+/*      */       }
+/*  195 */       Display.setParent(this.k);
+/*      */     }
+/*  197 */     else if (this.a) {
+/*  198 */       Display.setFullscreen(true);
+/*  199 */       this.c = Display.getDisplayMode().getWidth();
+/*  200 */       this.d = Display.getDisplayMode().getHeight();
+/*  201 */       if (this.c <= 0) this.c = 1;
+/*  202 */       if (this.d <= 0) this.d = 1; 
+/*      */     }
+/*      */     else {
+/*  204 */       Display.setDisplayMode(new DisplayMode(this.c, this.d));
+/*      */     }
+/*      */ 
+/*  208 */     Display.setTitle("Minecraft Minecraft Beta 1.2_02");
+/*      */     try
+/*      */     {
+/*  211 */       Display.create();
+/*      */     }
+/*      */     catch (LWJGLException localLWJGLException)
+/*      */     {
+/*  238 */       localLWJGLException.printStackTrace();
+/*      */       try {
+/*  240 */         Thread.sleep(1000L);
+/*      */       } catch (InterruptedException localInterruptedException) {
+/*      */       }
+/*  243 */       Display.create();
+/*      */     }
+/*      */ 
+/*  253 */     oc.a.f = new mf(this);
+/*      */ 
+/*  255 */     this.D = b();
+/*  256 */     this.y = new hq(this, this.D);
+/*  257 */     this.C = new ga(this, this.D);
+/*  258 */     this.n = new gs(this.C, this.y);
+/*  259 */     this.o = new nh(this.y, "/font/default.png", this.n);
+/*      */ 
+/*  261 */     s();
+/*      */ 
+/*  264 */     Keyboard.create();
+/*  265 */     Mouse.create();
+/*  266 */     this.B = new qe(this.k);
+/*      */     try {
+/*  268 */       Controllers.create();
+/*      */     } catch (Exception localException1) {
+/*  270 */       localException1.printStackTrace();
+/*      */     }
+/*      */ 
+/*  274 */     c("Pre startup");
+/*      */ 
+/*  279 */     GL11.glEnable(3553);
+/*  280 */     GL11.glShadeModel(7425);
+/*  281 */     GL11.glClearDepth(1.0D);
+/*  282 */     GL11.glEnable(2929);
+/*  283 */     GL11.glDepthFunc(515);
+/*  284 */     GL11.glEnable(3008);
+/*  285 */     GL11.glAlphaFunc(516, 0.1F);
+/*  286 */     GL11.glCullFace(1029);
+/*      */ 
+/*  288 */     GL11.glMatrixMode(5889);
+/*  289 */     GL11.glLoadIdentity();
+/*  290 */     GL11.glMatrixMode(5888);
+/*  291 */     c("Startup");
+/*      */ 
+/*  293 */     this.O = new bv();
+/*  294 */     this.A.a(this.y);
+/*      */ 
+/*  296 */     this.n.a(this.Y);
+/*  297 */     this.n.a(this.X);
+/*  298 */     this.n.a(new fn());
+/*  299 */     this.n.a(new ai(this));
+/*  300 */     this.n.a(new hp(this));
+/*  301 */     this.n.a(new kf());
+/*  302 */     this.n.a(new fv());
+/*  303 */     this.n.a(new nb(0));
+/*  304 */     this.n.a(new nb(1));
+/*      */ 
+/*  306 */     this.f = new h(this, this.n);
+/*      */ 
+/*  308 */     GL11.glViewport(0, 0, this.c, this.d);
+/*      */ 
+/*  310 */     this.h = new cj(this.e, this.n);
+/*      */     try {
+/*  312 */       this.Q = new bw(this.D, this);
+/*  313 */       this.Q.start();
+/*      */     }
+/*      */     catch (Exception localException2) {
+/*      */     }
+/*  317 */     c("Post startup");
+/*  318 */     this.u = new pe(this);
+/*      */ 
+/*  320 */     if (this.V != null)
+/*  321 */       a(new qc(this, this.V, this.W));
+/*      */     else
+/*  323 */       a(new dz());
+/*      */   }
+/*      */ 
+/*      */   private void s()
+/*      */   {
+/*  328 */     lw locallw = new lw(this.c, this.d);
+/*  329 */     int i1 = locallw.a();
+/*  330 */     int i2 = locallw.b();
+/*      */ 
+/*  332 */     GL11.glClear(16640);
+/*  333 */     GL11.glMatrixMode(5889);
+/*  334 */     GL11.glLoadIdentity();
+/*  335 */     GL11.glOrtho(0.0D, i1, i2, 0.0D, 1000.0D, 3000.0D);
+/*  336 */     GL11.glMatrixMode(5888);
+/*  337 */     GL11.glLoadIdentity();
+/*  338 */     GL11.glTranslatef(0.0F, 0.0F, -2000.0F);
+/*  339 */     GL11.glViewport(0, 0, this.c, this.d);
+/*  340 */     GL11.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
+/*      */ 
+/*  343 */     jy localjy = jy.a;
+/*      */ 
+/*  345 */     GL11.glDisable(2896);
+/*  346 */     GL11.glEnable(3553);
+/*  347 */     GL11.glDisable(2912);
+/*  348 */     GL11.glBindTexture(3553, this.n.a("/title/mojang.png"));
+/*  349 */     localjy.b();
+/*  350 */     localjy.b(16777215);
+/*  351 */     localjy.a(0.0D, this.d, 0.0D, 0.0D, 0.0D);
+/*  352 */     localjy.a(this.c, this.d, 0.0D, 0.0D, 0.0D);
+/*  353 */     localjy.a(this.c, 0.0D, 0.0D, 0.0D, 0.0D);
+/*  354 */     localjy.a(0.0D, 0.0D, 0.0D, 0.0D, 0.0D);
+/*  355 */     localjy.a();
+/*      */ 
+/*  357 */     int i3 = 256;
+/*  358 */     int i4 = 256;
+/*  359 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/*  360 */     localjy.b(16777215);
+/*  361 */     a((this.c / 2 - i3) / 2, (this.d / 2 - i4) / 2, 0, 0, i3, i4);
+/*  362 */     GL11.glDisable(2896);
+/*  363 */     GL11.glDisable(2912);
+/*      */ 
+/*  365 */     GL11.glEnable(3008);
+/*  366 */     GL11.glAlphaFunc(516, 0.1F);
+/*      */ 
+/*  368 */     Display.swapBuffers();
+/*      */   }
+/*      */ 
+/*      */   public void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6) {
+/*  372 */     float f1 = 0.0039063F;
+/*  373 */     float f2 = 0.0039063F;
+/*  374 */     jy localjy = jy.a;
+/*  375 */     localjy.b();
+/*  376 */     localjy.a(paramInt1 + 0, paramInt2 + paramInt6, 0.0D, (paramInt3 + 0) * f1, (paramInt4 + paramInt6) * f2);
+/*  377 */     localjy.a(paramInt1 + paramInt5, paramInt2 + paramInt6, 0.0D, (paramInt3 + paramInt5) * f1, (paramInt4 + paramInt6) * f2);
+/*  378 */     localjy.a(paramInt1 + paramInt5, paramInt2 + 0, 0.0D, (paramInt3 + paramInt5) * f1, (paramInt4 + 0) * f2);
+/*  379 */     localjy.a(paramInt1 + 0, paramInt2 + 0, 0.0D, (paramInt3 + 0) * f1, (paramInt4 + 0) * f2);
+/*  380 */     localjy.a();
+/*      */   }
+/*      */ 
+/*      */   public static File b()
+/*      */   {
+/*  386 */     if (Z == null) Z = a("minecraft");
+/*  387 */     return Z;
+/*      */   }
+/*      */ 
+/*      */   public static File a(String paramString) {
+/*  391 */     String str1 = System.getProperty("user.home", ".");
+/*      */     File localFile;
+/*  393 */     switch (ho.a[t().ordinal()]) {
+/*      */     case 1:
+/*      */     case 2:
+/*  396 */       localFile = new File(str1, '.' + paramString + '/');
+/*  397 */       break;
+/*      */     case 3:
+/*  399 */       String str2 = System.getenv("APPDATA");
+/*  400 */       if (str2 != null) localFile = new File(str2, "." + paramString + '/'); else
+/*  401 */         localFile = new File(str1, '.' + paramString + '/');
+/*  402 */       break;
+/*      */     case 4:
+/*  404 */       localFile = new File(str1, "Library/Application Support/" + paramString);
+/*  405 */       break;
+/*      */     default:
+/*  407 */       localFile = new File(str1, paramString + '/');
+/*      */     }
+/*  409 */     if ((!localFile.exists()) && (!localFile.mkdirs())) throw new RuntimeException("The working directory could not be created: " + localFile);
+/*  410 */     return localFile;
+/*      */   }
+/*      */ 
+/*      */   private static kw t() {
+/*  414 */     String str = System.getProperty("os.name").toLowerCase();
+/*  415 */     if (str.contains("win")) return kw.c;
+/*  416 */     if (str.contains("mac")) return kw.d;
+/*  417 */     if (str.contains("solaris")) return kw.b;
+/*  418 */     if (str.contains("sunos")) return kw.b;
+/*  419 */     if (str.contains("linux")) return kw.a;
+/*  420 */     if (str.contains("unix")) return kw.a;
+/*  421 */     return kw.e;
+/*      */   }
+/*      */ 
+/*      */   public void a(by paramby)
+/*      */   {
+/*  426 */     if ((this.p instanceof bh)) return;
+/*      */ 
+/*  428 */     if (this.p != null) {
+/*  429 */       this.p.h();
+/*      */     }
+/*      */ 
+/*  432 */     if ((paramby == null) && (this.e == null))
+/*  433 */       paramby = new dz();
+/*  434 */     else if ((paramby == null) && (this.g.S <= 0)) {
+/*  435 */       paramby = new bk();
+/*      */     }
+/*      */ 
+/*  438 */     this.p = paramby;
+/*  439 */     if (paramby != null) {
+/*  440 */       f();
+/*  441 */       lw locallw = new lw(this.c, this.d);
+/*  442 */       int i1 = locallw.a();
+/*  443 */       int i2 = locallw.b();
+/*  444 */       paramby.a(this, i1, i2);
+/*  445 */       this.v = false;
+/*      */     } else {
+/*  447 */       e();
+/*      */     }
+/*      */   }
+/*      */ 
+/*      */   private void c(String paramString) {
+/*  452 */     int i1 = GL11.glGetError();
+/*  453 */     if (i1 != 0) {
+/*  454 */       String str = GLU.gluErrorString(i1);
+/*  455 */       System.out.println("########## GL ERROR ##########");
+/*  456 */       System.out.println("@ " + paramString);
+/*  457 */       System.out.println(i1 + ": " + str);
+/*  458 */       System.exit(0);
+/*      */     }
+/*      */   }
+/*      */ 
+/*      */   public void c() {
+/*  463 */     if (this.z != null)
+/*  464 */       this.z.c();
+/*      */     try
+/*      */     {
+/*  467 */       if (this.Q != null)
+/*  468 */         this.Q.b();
+/*      */     }
+/*      */     catch (Exception localException1)
+/*      */     {
+/*      */     }
+/*      */     try {
+/*  474 */       System.out.println("Stopping!");
+/*  475 */       a(null);
+/*      */       try
+/*      */       {
+/*  478 */         ej.a();
+/*      */       }
+/*      */       catch (Exception localException2) {
+/*      */       }
+/*  482 */       this.A.b();
+/*  483 */       Mouse.destroy();
+/*  484 */       Keyboard.destroy();
+/*      */     } finally {
+/*  486 */       Display.destroy();
+/*      */     }
+/*  488 */     System.gc();
+/*      */   }
+/*      */ 
+/*      */   public void run()
+/*      */   {
+/*  604 */     this.H = true;
+/*      */     try {
+/*  606 */       a();
+/*      */     } catch (Exception localException) {
+/*  608 */       localException.printStackTrace();
+/*  609 */       a(new it("Failed to start game", localException));
+/*  610 */       return;
+/*      */     }
+/*      */ 
+/*      */     try
+/*      */     {
+/*  618 */       long l1 = System.currentTimeMillis();
+/*  619 */       int i1 = 0;
+/*      */ 
+/*  621 */       while ((this.H) && (
+/*  622 */         (this.z == null) || (this.z.isActive()))) {
+/*  623 */         db.a();
+/*  624 */         ax.a();
+/*      */ 
+/*  626 */         if ((this.k == null) && (Display.isCloseRequested())) {
+/*  627 */           d();
+/*      */         }
+/*      */ 
+/*  630 */         if ((this.m) && (this.e != null)) {
+/*  631 */           float f1 = this.P.c;
+/*  632 */           this.P.a();
+/*  633 */           this.P.c = f1;
+/*      */         } else {
+/*  635 */           this.P.a();
+/*      */         }
+/*      */ 
+/*  638 */         long l2 = System.nanoTime();
+/*  639 */         for (int i2 = 0; i2 < this.P.b; i2++) {
+/*  640 */           this.R += 1;
+/*      */           try {
+/*  642 */             i();
+/*      */           } catch (pi localpi) {
+/*  644 */             this.e = null;
+/*  645 */             a(null);
+/*  646 */             a(new lr());
+/*      */           }
+/*      */         }
+/*      */ 
+/*  650 */         long l3 = System.nanoTime() - l2;
+/*  651 */         c("Pre render");
+/*      */ 
+/*  655 */         this.A.a(this.g, this.P.c);
+/*      */ 
+/*  657 */         GL11.glEnable(3553);
+/*  658 */         if ((this.e != null) && (!this.e.z)) this.e.h();
+/*      */ 
+/*  660 */         if ((this.e != null) && (this.e.z)) this.e.h();
+/*      */ 
+/*  662 */         if (this.y.h) {
+/*  663 */           Thread.sleep(5L);
+/*      */         }
+/*  665 */         if (!Keyboard.isKeyDown(65)) Display.update();
+/*  666 */         if (!this.v) {
+/*  667 */           if (this.b != null) this.b.a(this.P.c);
+/*  668 */           this.r.b(this.P.c);
+/*      */         }
+/*      */ 
+/*  671 */         if (!Display.isActive()) {
+/*  672 */           if (this.a) {
+/*  673 */             h();
+/*      */           }
+/*  675 */           Thread.sleep(10L);
+/*      */         }
+/*      */ 
+/*  678 */         if (Keyboard.isKeyDown(61))
+/*  679 */           a(l3);
+/*      */         else {
+/*  681 */           this.K = System.nanoTime();
+/*      */         }
+/*      */ 
+/*  684 */         Thread.yield();
+/*      */ 
+/*  686 */         if (Keyboard.isKeyDown(65)) Display.update();
+/*      */ 
+/*  688 */         u();
+/*      */ 
+/*  690 */         if ((this.k != null) && (!this.a) && (
+/*  691 */           (this.k.getWidth() != this.c) || (this.k.getHeight() != this.d))) {
+/*  692 */           this.c = this.k.getWidth();
+/*  693 */           this.d = this.k.getHeight();
+/*  694 */           if (this.c <= 0) this.c = 1;
+/*  695 */           if (this.d <= 0) this.d = 1;
+/*      */ 
+/*  697 */           a(this.c, this.d);
+/*      */         }
+/*      */ 
+/*  700 */         c("Post render");
+/*  701 */         i1++;
+/*  702 */         this.m = ((!j()) && (this.p != null) && (this.p.b()));
+/*      */ 
+/*  704 */         while (System.currentTimeMillis() >= l1 + 1000L) {
+/*  705 */           this.I = (i1 + " fps, " + cg.b + " chunk updates");
+/*  706 */           cg.b = 0;
+/*  707 */           l1 += 1000L;
+/*  708 */           i1 = 0;
+/*      */         }
+/*      */       }
+/*      */     } catch (rq localrq) {
+/*      */     } catch (Throwable localThrowable) {
+/*  713 */       this.e = null;
+/*  714 */       localThrowable.printStackTrace();
+/*  715 */       a(new it("Unexpected error", localThrowable));
+/*      */     }
+/*      */     finally
+/*      */     {
+/*      */     }
+/*      */   }
+/*      */ 
+/*      */   private void u()
+/*      */   {
+/*  724 */     if (Keyboard.isKeyDown(60)) {
+/*  725 */       if (!this.J) {
+/*  726 */         this.J = true;
+/*  727 */         if (Keyboard.isKeyDown(42)) {
+/*  728 */           this.u.a(a(Z, this.c, this.d, 36450, 17700));
+/*      */         }
+/*      */         else
+/*  731 */           this.u.a(ff.a(Z, this.c, this.d));
+/*      */       }
+/*      */     }
+/*      */     else
+/*  735 */       this.J = false;
+/*      */   }
+/*      */ 
+/*      */   private String a(File paramFile, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*      */   {
+/*      */     try {
+/*  741 */       ByteBuffer localByteBuffer = BufferUtils.createByteBuffer(paramInt1 * paramInt2 * 3);
+/*      */ 
+/*  743 */       ff localff = new ff(paramFile, paramInt3, paramInt4, paramInt2);
+/*      */ 
+/*  745 */       double d1 = paramInt3 / paramInt1;
+/*  746 */       double d2 = paramInt4 / paramInt2;
+/*  747 */       double d3 = d1 > d2 ? d1 : d2;
+/*      */ 
+/*  753 */       for (int i1 = (paramInt4 - 1) / paramInt2 * paramInt2; i1 >= 0; i1 -= paramInt2) {
+/*  754 */         for (int i2 = 0; i2 < paramInt3; i2 += paramInt1)
+/*      */         {
+/*  759 */           int i3 = paramInt1;
+/*  760 */           int i4 = paramInt2;
+/*      */ 
+/*  762 */           GL11.glBindTexture(3553, this.n.a("/terrain.png"));
+/*      */ 
+/*  764 */           double d4 = (paramInt3 - paramInt1) / 2.0D * 2.0D - i2 * 2;
+/*  765 */           double d5 = (paramInt4 - paramInt2) / 2.0D * 2.0D - i1 * 2;
+/*  766 */           d4 /= paramInt1;
+/*  767 */           d5 /= paramInt2;
+/*  768 */           this.r.a(d3, d4, d5);
+/*  769 */           this.r.c(1.0F);
+/*  770 */           this.r.b();
+/*  771 */           Display.update();
+/*      */           try {
+/*  773 */             Thread.sleep(10L);
+/*      */           } catch (InterruptedException localInterruptedException) {
+/*  775 */             localInterruptedException.printStackTrace();
+/*      */           }
+/*  777 */           Display.update();
+/*  778 */           localByteBuffer.clear();
+/*  779 */           GL11.glPixelStorei(3333, 1);
+/*  780 */           GL11.glPixelStorei(3317, 1);
+/*  781 */           GL11.glReadPixels(0, 0, i3, i4, 32992, 5121, localByteBuffer);
+/*  782 */           localff.a(localByteBuffer, i2, i1, i3, i4);
+/*      */         }
+/*  784 */         localff.a();
+/*      */       }
+/*      */ 
+/*  787 */       return localff.b();
+/*      */     } catch (Exception localException) {
+/*  789 */       localException.printStackTrace();
+/*  790 */     }return "Failed to save image: " + localException;
+/*      */   }
+/*      */ 
+/*      */   private void a(long paramLong)
+/*      */   {
+/*  797 */     long l1 = 16666666L;
+/*  798 */     if (this.K == -1L) {
+/*  799 */       this.K = System.nanoTime();
+/*      */     }
+/*  801 */     long l2 = System.nanoTime();
+/*  802 */     F[(G & E.length - 1)] = paramLong;
+/*  803 */     E[(G++ & E.length - 1)] = (l2 - this.K);
+/*  804 */     this.K = l2;
+/*      */ 
+/*  806 */     GL11.glClear(256);
+/*  807 */     GL11.glMatrixMode(5889);
+/*  808 */     GL11.glLoadIdentity();
+/*  809 */     GL11.glOrtho(0.0D, this.c, this.d, 0.0D, 1000.0D, 3000.0D);
+/*  810 */     GL11.glMatrixMode(5888);
+/*  811 */     GL11.glLoadIdentity();
+/*  812 */     GL11.glTranslatef(0.0F, 0.0F, -2000.0F);
+/*      */ 
+/*  814 */     GL11.glLineWidth(1.0F);
+/*  815 */     GL11.glDisable(3553);
+/*  816 */     jy localjy = jy.a;
+/*  817 */     localjy.a(7);
+/*  818 */     int i1 = (int)(l1 / 200000L);
+/*  819 */     localjy.b(536870912);
+/*  820 */     localjy.a(0.0D, this.d - i1, 0.0D);
+/*  821 */     localjy.a(0.0D, this.d, 0.0D);
+/*  822 */     localjy.a(E.length, this.d, 0.0D);
+/*  823 */     localjy.a(E.length, this.d - i1, 0.0D);
+/*      */ 
+/*  825 */     localjy.b(538968064);
+/*  826 */     localjy.a(0.0D, this.d - i1 * 2, 0.0D);
+/*  827 */     localjy.a(0.0D, this.d - i1, 0.0D);
+/*  828 */     localjy.a(E.length, this.d - i1, 0.0D);
+/*  829 */     localjy.a(E.length, this.d - i1 * 2, 0.0D);
+/*      */ 
+/*  831 */     localjy.a();
+/*  832 */     long l3 = 0L;
+/*  833 */     for (int i2 = 0; i2 < E.length; i2++) {
+/*  834 */       l3 += E[i2];
+/*      */     }
+/*  836 */     i2 = (int)(l3 / 200000L / E.length);
+/*  837 */     localjy.a(7);
+/*  838 */     localjy.b(541065216);
+/*  839 */     localjy.a(0.0D, this.d - i2, 0.0D);
+/*  840 */     localjy.a(0.0D, this.d, 0.0D);
+/*  841 */     localjy.a(E.length, this.d, 0.0D);
+/*  842 */     localjy.a(E.length, this.d - i2, 0.0D);
+/*  843 */     localjy.a();
+/*  844 */     localjy.a(1);
+/*  845 */     for (int i3 = 0; i3 < E.length; i3++) {
+/*  846 */       int i4 = (i3 - G & E.length - 1) * 255 / E.length;
+/*  847 */       int i5 = i4 * i4 / 255;
+/*  848 */       i5 = i5 * i5 / 255;
+/*  849 */       int i6 = i5 * i5 / 255;
+/*  850 */       i6 = i6 * i6 / 255;
+/*  851 */       if (E[i3] > l1)
+/*  852 */         localjy.b(-16777216 + i5 * 65536);
+/*      */       else {
+/*  854 */         localjy.b(-16777216 + i5 * 256);
+/*      */       }
+/*      */ 
+/*  857 */       long l4 = E[i3] / 200000L;
+/*  858 */       long l5 = F[i3] / 200000L;
+/*      */ 
+/*  860 */       localjy.a(i3 + 0.5F, (float)(this.d - l4) + 0.5F, 0.0D);
+/*  861 */       localjy.a(i3 + 0.5F, this.d + 0.5F, 0.0D);
+/*      */ 
+/*  864 */       localjy.b(-16777216 + i5 * 65536 + i5 * 256 + i5 * 1);
+/*      */ 
+/*  868 */       localjy.a(i3 + 0.5F, (float)(this.d - l4) + 0.5F, 0.0D);
+/*  869 */       localjy.a(i3 + 0.5F, (float)(this.d - (l4 - l5)) + 0.5F, 0.0D);
+/*      */     }
+/*  871 */     localjy.a();
+/*      */ 
+/*  873 */     GL11.glEnable(3553);
+/*      */   }
+/*      */ 
+/*      */   public void d() {
+/*  877 */     this.H = false;
+/*      */   }
+/*      */ 
+/*      */   public void e()
+/*      */   {
+/*  884 */     if (!Display.isActive()) return;
+/*  885 */     if (this.L) return;
+/*  886 */     this.L = true;
+/*  887 */     this.B.a();
+/*  888 */     a(null);
+/*  889 */     this.aa = (this.R + 10000);
+/*      */   }
+/*      */ 
+/*      */   public void f() {
+/*  893 */     if (!this.L) return;
+/*  894 */     if (this.g != null) this.g.n_();
+/*  895 */     this.L = false;
+/*  896 */     this.B.b();
+/*      */   }
+/*      */ 
+/*      */   public void g() {
+/*  900 */     if (this.p != null) return;
+/*      */ 
+/*  902 */     a(new ks());
+/*      */   }
+/*      */ 
+/*      */   private void a(int paramInt, boolean paramBoolean)
+/*      */   {
+/*  907 */     if (this.b.b) return;
+/*  908 */     if ((paramInt == 0) && (this.S > 0)) return;
+/*      */ 
+/*  910 */     if ((paramBoolean) && (this.x != null) && (this.x.a == gq.a) && (paramInt == 0)) {
+/*  911 */       int i1 = this.x.b;
+/*  912 */       int i2 = this.x.c;
+/*  913 */       int i3 = this.x.d;
+/*  914 */       this.b.c(i1, i2, i3, this.x.e);
+/*  915 */       this.h.a(i1, i2, i3, this.x.e);
+/*      */     } else {
+/*  917 */       this.b.a();
+/*      */     }
+/*      */   }
+/*      */ 
+/*      */   private void a(int paramInt) {
+/*  922 */     if ((paramInt == 0) && (this.S > 0)) return;
+/*  923 */     if (paramInt == 0) this.g.E();
+/*      */ 
+/*  925 */     int i1 = 1;
+/*      */ 
+/*  933 */     if (this.x == null) {
+/*  934 */       if ((paramInt == 0) && (!(this.b instanceof la))) this.S = 10; 
+/*      */     }
+/*  935 */     else if (this.x.a == gq.b) {
+/*  936 */       if (paramInt == 0) {
+/*  937 */         this.b.b(this.g, this.x.g);
+/*      */       }
+/*  939 */       if (paramInt == 1)
+/*  940 */         this.b.a(this.g, this.x.g);
+/*      */     }
+/*  942 */     else if (this.x.a == gq.a) {
+/*  943 */       int i2 = this.x.b;
+/*  944 */       int i3 = this.x.c;
+/*  945 */       int i4 = this.x.d;
+/*  946 */       int i5 = this.x.e;
+/*      */ 
+/*  959 */       pj localpj = pj.m[this.e.a(i2, i3, i4)];
+/*  960 */       if (paramInt == 0) {
+/*  961 */         this.e.j(i2, i3, i4, this.x.e);
+/*  962 */         if ((localpj != pj.z) || (this.g.i >= 100))
+/*  963 */           this.b.a(i2, i3, i4, this.x.e);
+/*      */       }
+/*      */       else {
+/*  966 */         gm localgm2 = this.g.f.b();
+/*  967 */         int i6 = localgm2 != null ? localgm2.a : 0;
+/*  968 */         if (this.b.a(this.g, this.e, localgm2, i2, i3, i4, i5)) {
+/*  969 */           i1 = 0;
+/*  970 */           this.g.E();
+/*      */         }
+/*  972 */         if (localgm2 == null) {
+/*  973 */           return;
+/*      */         }
+/*      */ 
+/*  976 */         if (localgm2.a == 0)
+/*  977 */           this.g.f.a[this.g.f.c] = null;
+/*  978 */         else if (localgm2.a != i6) {
+/*  979 */           this.r.a.b();
+/*      */         }
+/*      */       }
+/*      */     }
+/*      */ 
+/*  984 */     if ((i1 != 0) && (paramInt == 1)) {
+/*  985 */       gm localgm1 = this.g.f.b();
+/*  986 */       if ((localgm1 != null) && 
+/*  987 */         (this.b.a(this.g, this.e, localgm1)))
+/*  988 */         this.r.a.c();
+/*      */     }
+/*      */   }
+/*      */ 
+/*      */   public void h()
+/*      */   {
+/*      */     try
+/*      */     {
+/*  997 */       this.a = (!this.a);
+/*  998 */       System.out.println("Toggle fullscreen!");
+/*  999 */       if (this.a) {
+/* 1000 */         Display.setDisplayMode(Display.getDesktopDisplayMode());
+/* 1001 */         this.c = Display.getDisplayMode().getWidth();
+/* 1002 */         this.d = Display.getDisplayMode().getHeight();
+/* 1003 */         if (this.c <= 0) this.c = 1;
+/* 1004 */         if (this.d <= 0) this.d = 1; 
+/*      */       }
+/*      */       else {
+/* 1006 */         if (this.k != null) {
+/* 1007 */           this.c = this.k.getWidth();
+/* 1008 */           this.d = this.k.getHeight();
+/*      */         } else {
+/* 1010 */           this.c = this.T;
+/* 1011 */           this.d = this.U;
+/*      */         }
+/* 1013 */         if (this.c <= 0) this.c = 1;
+/* 1014 */         if (this.d <= 0) this.d = 1;
+/* 1015 */         Display.setDisplayMode(new DisplayMode(this.T, this.U));
+/*      */       }
+/* 1017 */       f();
+/* 1018 */       Display.setFullscreen(this.a);
+/* 1019 */       Display.update();
+/* 1020 */       Thread.sleep(1000L);
+/* 1021 */       if (this.a) {
+/* 1022 */         e();
+/*      */       }
+/*      */ 
+/* 1025 */       if (this.p != null) {
+/* 1026 */         f();
+/* 1027 */         a(this.c, this.d);
+/*      */       }
+/*      */ 
+/* 1030 */       System.out.println("Size: " + this.c + ", " + this.d);
+/*      */     } catch (Exception localException) {
+/* 1032 */       localException.printStackTrace();
+/*      */     }
+/*      */   }
+/*      */ 
+/*      */   private void a(int paramInt1, int paramInt2) {
+/* 1037 */     if (paramInt1 <= 0) paramInt1 = 1;
+/* 1038 */     if (paramInt2 <= 0) paramInt2 = 1;
+/* 1039 */     this.c = paramInt1;
+/* 1040 */     this.d = paramInt2;
+/*      */ 
+/* 1042 */     if (this.p != null) {
+/* 1043 */       lw locallw = new lw(paramInt1, paramInt2);
+/* 1044 */       int i1 = locallw.a();
+/* 1045 */       int i2 = locallw.b();
+/* 1046 */       this.p.a(this, i1, i2);
+/*      */     }
+/*      */   }
+/*      */ 
+/*      */   private void v() {
+/* 1051 */     if (this.x != null) {
+/* 1052 */       int i1 = this.e.a(this.x.b, this.x.c, this.x.d);
+/* 1053 */       if (i1 == pj.u.bi) i1 = pj.v.bi;
+/* 1054 */       if (i1 == pj.aj.bi) i1 = pj.ak.bi;
+/* 1055 */       if (i1 == pj.z.bi) i1 = pj.t.bi;
+/*      */ 
+/* 1057 */       this.g.f.a(i1, this.b instanceof la);
+/*      */     }
+/*      */   }
+/*      */ 
+/*      */   public void i()
+/*      */   {
+/* 1068 */     this.u.a();
+/* 1069 */     this.r.a(1.0F);
+/*      */     int i2;
+/* 1070 */     if (this.g != null) {
+/* 1071 */       this.g.r();
+/*      */ 
+/* 1073 */       bm localbm = this.e.q();
+/* 1074 */       if ((localbm instanceof hr)) {
+/* 1075 */         hr localhr = (hr)localbm;
+/*      */ 
+/* 1077 */         i2 = gd.d((int)this.g.aF) >> 4;
+/* 1078 */         int i3 = gd.d((int)this.g.aH) >> 4;
+/* 1079 */         localhr.c(i2, i3);
+/*      */       }
+/*      */ 
+/*      */     }
+/*      */ 
+/* 1085 */     if ((!this.m) && (this.e != null)) this.b.c();
+/* 1086 */     GL11.glBindTexture(3553, this.n.a("/terrain.png"));
+/* 1087 */     if (!this.m) this.n.a();
+/*      */ 
+/* 1096 */     if ((this.p == null) && (this.g != null) && (this.g.S <= 0)) {
+/* 1097 */       a(null);
+/*      */     }
+/*      */ 
+/* 1101 */     if (this.p != null) {
+/* 1102 */       this.aa = (this.R + 10000);
+/*      */     }
+/*      */ 
+/* 1105 */     if (this.p != null) {
+/* 1106 */       this.p.d();
+/* 1107 */       if (this.p != null) this.p.g();
+/*      */ 
+/*      */     }
+/*      */ 
+/* 1111 */     if ((this.p == null) || (this.p.f)) {
+/* 1112 */       while (Mouse.next()) {
+/* 1113 */         long l1 = System.currentTimeMillis() - this.N;
+/* 1114 */         if (l1 > 200L)
+/*      */           continue;
+/* 1116 */         i2 = Mouse.getEventDWheel();
+/* 1117 */         if (i2 != 0) {
+/* 1118 */           this.g.f.b(i2);
+/*      */         }
+/*      */ 
+/* 1121 */         if (this.p == null) {
+/* 1122 */           if ((!this.L) && (Mouse.getEventButtonState())) {
+/* 1123 */             e();
+/*      */           } else {
+/* 1125 */             if ((Mouse.getEventButton() == 0) && (Mouse.getEventButtonState())) {
+/* 1126 */               a(0);
+/* 1127 */               this.aa = this.R;
+/*      */             }
+/* 1129 */             if ((Mouse.getEventButton() == 1) && (Mouse.getEventButtonState())) {
+/* 1130 */               a(1);
+/* 1131 */               this.aa = this.R;
+/*      */             }
+/* 1133 */             if ((Mouse.getEventButton() == 2) && (Mouse.getEventButtonState()))
+/* 1134 */               v();
+/*      */           }
+/*      */         }
+/* 1137 */         else if (this.p != null) {
+/* 1138 */           this.p.e();
+/*      */         }
+/*      */       }
+/*      */ 
+/* 1142 */       if (this.S > 0) this.S -= 1;
+/*      */ 
+/* 1144 */       while (Keyboard.next()) {
+/* 1145 */         this.g.a(Keyboard.getEventKey(), Keyboard.getEventKeyState());
+/* 1146 */         if (Keyboard.getEventKeyState()) {
+/* 1147 */           if (Keyboard.getEventKey() == 87) {
+/* 1148 */             h();
+/* 1149 */             continue;
+/*      */           }
+/*      */ 
+/* 1161 */           if (this.p != null) {
+/* 1162 */             this.p.f();
+/*      */           } else {
+/* 1164 */             if (Keyboard.getEventKey() == 1) {
+/* 1165 */               g();
+/*      */             }
+/*      */ 
+/* 1168 */             if ((Keyboard.getEventKey() == 31) && (Keyboard.isKeyDown(61))) {
+/* 1169 */               w();
+/*      */             }
+/*      */ 
+/* 1173 */             if (Keyboard.getEventKey() == 63) {
+/* 1174 */               this.y.x = (!this.y.x);
+/*      */             }
+/*      */ 
+/* 1177 */             if (Keyboard.getEventKey() == this.y.p.b) {
+/* 1178 */               a(new ov(this.g));
+/*      */             }
+/*      */ 
+/* 1181 */             if (Keyboard.getEventKey() == this.y.q.b) {
+/* 1182 */               this.g.z();
+/*      */             }
+/*      */ 
+/* 1185 */             if ((j()) && (Keyboard.getEventKey() == this.y.r.b)) {
+/* 1186 */               a(new ei());
+/*      */             }
+/*      */           }
+/*      */ 
+/* 1190 */           for (int i1 = 0; i1 < 9; i1++) {
+/* 1191 */             if (Keyboard.getEventKey() != 2 + i1) continue; this.g.f.c = i1;
+/*      */           }
+/* 1193 */           if (Keyboard.getEventKey() == this.y.s.b) {
+/* 1194 */             this.y.a(fo.e, (Keyboard.isKeyDown(42)) || (Keyboard.isKeyDown(54)) ? -1 : 1);
+/*      */           }
+/*      */         }
+/*      */       }
+/*      */ 
+/* 1199 */       if (this.p == null) {
+/* 1200 */         if ((Mouse.isButtonDown(0)) && (this.R - this.aa >= this.P.a / 4.0F) && (this.L)) {
+/* 1201 */           a(0);
+/* 1202 */           this.aa = this.R;
+/*      */         }
+/* 1204 */         if ((Mouse.isButtonDown(1)) && (this.R - this.aa >= this.P.a / 4.0F) && (this.L)) {
+/* 1205 */           a(1);
+/* 1206 */           this.aa = this.R;
+/*      */         }
+/*      */       }
+/*      */ 
+/* 1210 */       a(0, (this.p == null) && (Mouse.isButtonDown(0)) && (this.L));
+/*      */     }
+/*      */ 
+/* 1214 */     if (this.e != null)
+/*      */     {
+/* 1216 */       if (this.g != null) {
+/* 1217 */         this.ab += 1;
+/* 1218 */         if (this.ab == 30) {
+/* 1219 */           this.ab = 0;
+/* 1220 */           this.e.f(this.g);
+/*      */         }
+/*      */       }
+/* 1223 */       this.e.k = this.y.w;
+/* 1224 */       if (this.e.z) this.e.k = 3;
+/*      */ 
+/* 1226 */       if (!this.m) this.r.a();
+/* 1227 */       if (!this.m) this.f.d();
+/*      */ 
+/* 1233 */       if (!this.m) {
+/* 1234 */         this.e.e();
+/*      */       }
+/* 1236 */       if ((!this.m) || (j())) {
+/* 1237 */         this.e.a(this.y.w > 0, true);
+/* 1238 */         this.e.j();
+/*      */       }
+/* 1240 */       if ((!this.m) && (this.e != null)) this.e.o(gd.b(this.g.aF), gd.b(this.g.aG), gd.b(this.g.aH));
+/* 1241 */       if (!this.m) this.h.a();
+/*      */ 
+/*      */     }
+/*      */ 
+/* 1250 */     this.N = System.currentTimeMillis();
+/*      */   }
+/*      */ 
+/*      */   private void w() {
+/* 1254 */     System.out.println("FORCING RELOAD!");
+/* 1255 */     this.A = new sg();
+/* 1256 */     this.A.a(this.y);
+/* 1257 */     this.Q.a();
+/*      */   }
+/*      */ 
+/*      */   public boolean j() {
+/* 1261 */     return (this.e != null) && (this.e.z);
+/*      */   }
+/*      */ 
+/*      */   public void b(String paramString)
+/*      */   {
+/* 1272 */     a(null);
+/* 1273 */     System.gc();
+/*      */ 
+/* 1275 */     dn localdn = new dn(new File(b(), "saves"), paramString);
+/* 1276 */     if (localdn.p)
+/* 1277 */       a(localdn, "Generating level");
+/*      */     else
+/* 1279 */       a(localdn, "Loading level");
+/*      */   }
+/*      */ 
+/*      */   public void k()
+/*      */   {
+/* 1284 */     if (this.g.p == -1) this.g.p = 0; else
+/* 1285 */       this.g.p = -1;
+/* 1286 */     this.e.d(this.g);
+/* 1287 */     this.g.aW = false;
+/*      */ 
+/* 1290 */     double d1 = this.g.aF;
+/* 1291 */     double d2 = this.g.aH;
+/* 1292 */     double d3 = 8.0D;
+/*      */     dn localdn;
+/* 1293 */     if (this.g.p == -1) {
+/* 1294 */       d1 /= d3;
+/* 1295 */       d2 /= d3;
+/* 1296 */       this.g.c(d1, this.g.aG, d2, this.g.aL, this.g.aM);
+/* 1297 */       this.e.a(this.g, false);
+/*      */ 
+/* 1299 */       localdn = new dn(this.e, new qi());
+/* 1300 */       a(localdn, "Entering the Nether", this.g);
+/*      */     } else {
+/* 1302 */       d1 *= d3;
+/* 1303 */       d2 *= d3;
+/* 1304 */       this.g.c(d1, this.g.aG, d2, this.g.aL, this.g.aM);
+/* 1305 */       this.e.a(this.g, false);
+/*      */ 
+/* 1307 */       localdn = new dn(this.e, new qx());
+/* 1308 */       a(localdn, "Leaving the Nether", this.g);
+/*      */     }
+/*      */ 
+/* 1311 */     this.g.aB = this.e;
+/* 1312 */     this.g.c(d1, this.g.aG, d2, this.g.aL, this.g.aM);
+/* 1313 */     this.e.a(this.g, false);
+/* 1314 */     new ph().a(this.e, this.g);
+/*      */   }
+/*      */ 
+/*      */   public void a(dn paramdn)
+/*      */   {
+/* 1338 */     a(paramdn, "");
+/*      */   }
+/*      */ 
+/*      */   public void a(dn paramdn, String paramString) {
+/* 1342 */     a(paramdn, paramString, null);
+/*      */   }
+/*      */ 
+/*      */   public void a(dn paramdn, String paramString, eu parameu) {
+/* 1346 */     this.q.a(paramString);
+/* 1347 */     this.q.d("");
+/*      */ 
+/* 1349 */     this.A.a(null, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F);
+/*      */ 
+/* 1351 */     if (this.e != null) this.e.a(this.q);
+/* 1352 */     this.e = paramdn;
+/*      */ 
+/* 1354 */     System.out.println("Player is " + this.g);
+/*      */ 
+/* 1356 */     if (paramdn != null) {
+/* 1357 */       this.b.a(paramdn);
+/*      */ 
+/* 1359 */       if (!j()) {
+/* 1360 */         if (parameu == null) {
+/* 1361 */           this.g = ((bz)paramdn.a(bz.class));
+/*      */         }
+/*      */       }
+/* 1364 */       else if (this.g != null) {
+/* 1365 */         this.g.x();
+/*      */ 
+/* 1367 */         if (paramdn != null) {
+/* 1368 */           paramdn.a(this.g);
+/*      */         }
+/*      */ 
+/*      */       }
+/*      */ 
+/* 1373 */       if (!paramdn.z) d(paramString);
+/*      */ 
+/* 1375 */       System.out.println("Player is now " + this.g);
+/* 1376 */       if (this.g == null) {
+/* 1377 */         this.g = ((bz)this.b.b(paramdn));
+/* 1378 */         this.g.x();
+/* 1379 */         this.b.a(this.g);
+/*      */       }
+/*      */ 
+/* 1382 */       this.g.a = new if(this.y);
+/* 1383 */       if (this.f != null) this.f.a(paramdn);
+/* 1384 */       if (this.h != null) this.h.a(paramdn);
+/* 1385 */       this.b.b(this.g);
+/*      */ 
+/* 1387 */       if (parameu != null) {
+/* 1388 */         paramdn.c();
+/*      */       }
+/* 1390 */       bm localbm = paramdn.q();
+/* 1391 */       if ((localbm instanceof hr)) {
+/* 1392 */         hr localhr = (hr)localbm;
+/*      */ 
+/* 1394 */         int i1 = gd.d((int)this.g.aF) >> 4;
+/* 1395 */         int i2 = gd.d((int)this.g.aH) >> 4;
+/*      */ 
+/* 1397 */         localhr.c(i1, i2);
+/*      */       }
+/* 1399 */       paramdn.a(this.g);
+/*      */ 
+/* 1401 */       if (paramdn.p)
+/* 1402 */         paramdn.a(this.q);
+/*      */     }
+/*      */     else {
+/* 1405 */       this.g = null;
+/*      */     }
+/*      */ 
+/* 1408 */     System.gc();
+/* 1409 */     this.N = 0L;
+/*      */   }
+/*      */ 
+/*      */   private void d(String paramString)
+/*      */   {
+/* 1429 */     this.q.a(paramString);
+/* 1430 */     this.q.d("Building terrain");
+/* 1431 */     int i1 = 128;
+/* 1432 */     int i2 = 0;
+/* 1433 */     int i3 = i1 * 2 / 16 + 1;
+/* 1434 */     i3 *= i3;
+/* 1435 */     bm localbm = this.e.q();
+/*      */ 
+/* 1437 */     int i4 = this.e.m;
+/* 1438 */     int i5 = this.e.o;
+/* 1439 */     if (this.g != null) {
+/* 1440 */       i4 = (int)this.g.aF;
+/* 1441 */       i5 = (int)this.g.aH;
+/*      */     }
+/*      */ 
+/* 1444 */     if ((localbm instanceof hr)) {
+/* 1445 */       hr localhr = (hr)localbm;
+/*      */ 
+/* 1447 */       localhr.c(i4 >> 4, i5 >> 4);
+/*      */     }
+/*      */ 
+/* 1450 */     for (int i6 = -i1; i6 <= i1; i6 += 16)
+/* 1451 */       for (int i7 = -i1; i7 <= i1; i7 += 16) { this.q.a(i2++ * 100 / i3);
+/* 1453 */         this.e.a(i4 + i6, 64, i5 + i7);
+/* 1454 */         while (this.e.h());
+/*      */       }
+/* 1458 */     this.q.d("Simulating world for a bit");
+/* 1459 */     i3 = 2000;
+/* 1460 */     this.e.m();
+/*      */   }
+/*      */ 
+/*      */   public void a(String paramString, File paramFile)
+/*      */   {
+/* 1483 */     int i1 = paramString.indexOf("/");
+/* 1484 */     String str = paramString.substring(0, i1);
+/* 1485 */     paramString = paramString.substring(i1 + 1);
+/* 1486 */     if (str.equalsIgnoreCase("sound"))
+/* 1487 */       this.A.a(paramString, paramFile);
+/* 1488 */     else if (str.equalsIgnoreCase("newsound"))
+/* 1489 */       this.A.a(paramString, paramFile);
+/* 1490 */     else if (str.equalsIgnoreCase("streaming"))
+/* 1491 */       this.A.b(paramString, paramFile);
+/* 1492 */     else if (str.equalsIgnoreCase("music"))
+/* 1493 */       this.A.c(paramString, paramFile);
+/* 1494 */     else if (str.equalsIgnoreCase("newmusic"))
+/* 1495 */       this.A.c(paramString, paramFile);
+/*      */   }
+/*      */ 
+/*      */   public bv l()
+/*      */   {
+/* 1500 */     return this.O;
+/*      */   }
+/*      */ 
+/*      */   public String m() {
+/* 1504 */     return this.f.b();
+/*      */   }
+/*      */ 
+/*      */   public String n() {
+/* 1508 */     return this.f.c();
+/*      */   }
+/*      */ 
+/*      */   public String o() {
+/* 1512 */     return this.e.g();
+/*      */   }
+/*      */ 
+/*      */   public String p() {
+/* 1516 */     return "P: " + this.h.b() + ". T: " + this.e.f();
+/*      */   }
+/*      */ 
+/*      */   public void q() {
+/* 1520 */     if (!this.e.q.d()) {
+/* 1521 */       k();
+/*      */     }
+/* 1523 */     int i1 = this.e.m;
+/* 1524 */     int i2 = this.e.o;
+/*      */ 
+/* 1526 */     bm localbm = this.e.q();
+/* 1527 */     if ((localbm instanceof hr)) {
+/* 1528 */       hr localhr = (hr)localbm;
+/* 1529 */       localhr.c(i1 >> 4, i2 >> 4);
+/*      */     }
+/*      */ 
+/* 1532 */     this.e.b();
+/* 1533 */     this.e.p();
+/*      */ 
+/* 1535 */     int i3 = 0;
+/* 1536 */     if (this.g != null) {
+/* 1537 */       i3 = this.g.aw;
+/* 1538 */       this.e.d(this.g);
+/*      */     }
+/*      */ 
+/* 1541 */     this.g = ((bz)this.b.b(this.e));
+/* 1542 */     this.g.x();
+/* 1543 */     this.b.a(this.g);
+/* 1544 */     this.e.a(this.g);
+/* 1545 */     this.g.a = new if(this.y);
+/* 1546 */     this.g.aw = i3;
+/* 1547 */     this.b.b(this.g);
+/* 1548 */     d("Respawning");
+/*      */ 
+/* 1550 */     if ((this.p instanceof bk)) a(null); 
+/*      */   }
+/*      */ 
+/*      */   public static void a(String paramString1, String paramString2)
+/*      */   {
+/* 1554 */     a(paramString1, paramString2, null);
+/*      */   }
+/*      */ 
+/*      */   public static void a(String paramString1, String paramString2, String paramString3) {
+/* 1558 */     boolean bool = false;
+/* 1559 */     String str = paramString1;
+/*      */ 
+/* 1561 */     Frame localFrame = new Frame("Minecraft");
+/* 1562 */     Canvas localCanvas = new Canvas();
+/* 1563 */     localFrame.setLayout(new BorderLayout());
+/*      */ 
+/* 1565 */     localFrame.add(localCanvas, "Center");
+/*      */ 
+/* 1571 */     localCanvas.setPreferredSize(new Dimension(854, 480));
+/* 1572 */     localFrame.pack();
+/* 1573 */     localFrame.setLocationRelativeTo(null);
+/*      */ 
+/* 1576 */     hi localhi = new hi(localFrame, localCanvas, null, 854, 480, bool, localFrame);
+/*      */ 
+/* 1584 */     Thread localThread = new Thread(localhi, "Minecraft main thread");
+/* 1585 */     localThread.setPriority(10);
+/* 1586 */     localhi.j = "www.minecraft.net";
+/* 1587 */     if ((str != null) && (paramString2 != null))
+/* 1588 */       localhi.i = new es(str, paramString2);
+/*      */     else {
+/* 1590 */       localhi.i = new es("Player" + System.currentTimeMillis() % 1000L, "");
+/*      */     }
+/*      */ 
+/* 1593 */     if (paramString3 != null) {
+/* 1594 */       String[] arrayOfString = paramString3.split(":");
+/* 1595 */       localhi.a(arrayOfString[0], Integer.parseInt(arrayOfString[1]));
+/*      */     }
+/*      */ 
+/* 1598 */     localFrame.setVisible(true);
+/* 1599 */     localFrame.addWindowListener(new hn(localhi, localThread));
+/*      */ 
+/* 1611 */     localThread.start();
+/*      */   }
+/*      */ 
+/*      */   public jg r() {
+/* 1615 */     if ((this.g instanceof of)) {
+/* 1616 */       return ((of)this.g).bF;
+/*      */     }
+/* 1618 */     return null;
+/*      */   }
+/*      */ 
+/*      */   public static void main(String[] paramArrayOfString) {
+/* 1622 */     String str1 = "Player" + System.currentTimeMillis() % 1000L;
+/* 1623 */     if (paramArrayOfString.length > 0) str1 = paramArrayOfString[0];
+/* 1624 */     String str2 = "-";
+/* 1625 */     if (paramArrayOfString.length > 1) str2 = paramArrayOfString[1];
+/*      */ 
+/* 1627 */     a(str1, str2);
+/*      */   }
+/*      */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     net.minecraft.client.Minecraft
+ * JD-Core Version:    0.6.0
+ */

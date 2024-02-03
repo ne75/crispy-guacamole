@@ -1,0 +1,118 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class ny extends mv
+/*     */ {
+/*     */   private final boolean a;
+/*     */ 
+/*     */   protected ny(int paramInt, boolean paramBoolean)
+/*     */   {
+/*  17 */     super(paramInt, ic.d);
+/*  18 */     this.a = paramBoolean;
+/*  19 */     this.bh = 45;
+/*     */   }
+/*     */ 
+/*     */   public int a(int paramInt, Random paramRandom) {
+/*  23 */     return pj.aB.bi;
+/*     */   }
+/*     */ 
+/*     */   public void e(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  27 */     super.e(paramdn, paramInt1, paramInt2, paramInt3);
+/*  28 */     h(paramdn, paramInt1, paramInt2, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   private void h(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  32 */     int i = paramdn.a(paramInt1, paramInt2, paramInt3 - 1);
+/*  33 */     int j = paramdn.a(paramInt1, paramInt2, paramInt3 + 1);
+/*  34 */     int k = paramdn.a(paramInt1 - 1, paramInt2, paramInt3);
+/*  35 */     int m = paramdn.a(paramInt1 + 1, paramInt2, paramInt3);
+/*     */ 
+/*  37 */     int n = 3;
+/*  38 */     if ((pj.o[i] != 0) && (pj.o[j] == 0)) n = 3;
+/*  39 */     if ((pj.o[j] != 0) && (pj.o[i] == 0)) n = 2;
+/*  40 */     if ((pj.o[k] != 0) && (pj.o[m] == 0)) n = 5;
+/*  41 */     if ((pj.o[m] != 0) && (pj.o[k] == 0)) n = 4;
+/*  42 */     paramdn.c(paramInt1, paramInt2, paramInt3, n);
+/*     */   }
+/*     */ 
+/*     */   public int a(ri paramri, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  46 */     if (paramInt4 == 1) return this.bh + 17;
+/*  47 */     if (paramInt4 == 0) return this.bh + 17;
+/*     */ 
+/*  49 */     int i = paramri.e(paramInt1, paramInt2, paramInt3);
+/*     */ 
+/*  51 */     if (paramInt4 != i) return this.bh;
+/*  52 */     if (this.a) return this.bh + 16;
+/*  53 */     return this.bh - 1;
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3, Random paramRandom) {
+/*  57 */     if (!this.a) return;
+/*     */ 
+/*  59 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/*     */ 
+/*  61 */     float f1 = paramInt1 + 0.5F;
+/*  62 */     float f2 = paramInt2 + 0.0F + paramRandom.nextFloat() * 6.0F / 16.0F;
+/*  63 */     float f3 = paramInt3 + 0.5F;
+/*  64 */     float f4 = 0.52F;
+/*  65 */     float f5 = paramRandom.nextFloat() * 0.6F - 0.3F;
+/*     */ 
+/*  67 */     if (i == 4) {
+/*  68 */       paramdn.a("smoke", f1 - f4, f2, f3 + f5, 0.0D, 0.0D, 0.0D);
+/*  69 */       paramdn.a("flame", f1 - f4, f2, f3 + f5, 0.0D, 0.0D, 0.0D);
+/*  70 */     } else if (i == 5) {
+/*  71 */       paramdn.a("smoke", f1 + f4, f2, f3 + f5, 0.0D, 0.0D, 0.0D);
+/*  72 */       paramdn.a("flame", f1 + f4, f2, f3 + f5, 0.0D, 0.0D, 0.0D);
+/*  73 */     } else if (i == 2) {
+/*  74 */       paramdn.a("smoke", f1 + f5, f2, f3 - f4, 0.0D, 0.0D, 0.0D);
+/*  75 */       paramdn.a("flame", f1 + f5, f2, f3 - f4, 0.0D, 0.0D, 0.0D);
+/*  76 */     } else if (i == 3) {
+/*  77 */       paramdn.a("smoke", f1 + f5, f2, f3 + f4, 0.0D, 0.0D, 0.0D);
+/*  78 */       paramdn.a("flame", f1 + f5, f2, f3 + f4, 0.0D, 0.0D, 0.0D);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public int a(int paramInt) {
+/*  83 */     if (paramInt == 1) return this.bh + 17;
+/*  84 */     if (paramInt == 0) return this.bh + 17;
+/*  85 */     if (paramInt == 3) return this.bh - 1;
+/*  86 */     return this.bh;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, eu parameu) {
+/*  90 */     if (paramdn.z) {
+/*  91 */       return true;
+/*     */     }
+/*  93 */     ni localni = (ni)paramdn.b(paramInt1, paramInt2, paramInt3);
+/*  94 */     parameu.a(localni);
+/*  95 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public static void a(boolean paramBoolean, dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  99 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/* 100 */     kp localkp = paramdn.b(paramInt1, paramInt2, paramInt3);
+/*     */ 
+/* 102 */     if (paramBoolean) paramdn.e(paramInt1, paramInt2, paramInt3, pj.aC.bi); else {
+/* 103 */       paramdn.e(paramInt1, paramInt2, paramInt3, pj.aB.bi);
+/*     */     }
+/* 105 */     paramdn.c(paramInt1, paramInt2, paramInt3, i);
+/* 106 */     paramdn.a(paramInt1, paramInt2, paramInt3, localkp);
+/*     */   }
+/*     */ 
+/*     */   protected kp a_() {
+/* 110 */     return new ni();
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, ig paramig) {
+/* 114 */     int i = gd.b(paramig.aL * 4.0F / 360.0F + 0.5D) & 0x3;
+/*     */ 
+/* 116 */     if (i == 0) paramdn.c(paramInt1, paramInt2, paramInt3, 2);
+/* 117 */     if (i == 1) paramdn.c(paramInt1, paramInt2, paramInt3, 5);
+/* 118 */     if (i == 2) paramdn.c(paramInt1, paramInt2, paramInt3, 3);
+/* 119 */     if (i == 3) paramdn.c(paramInt1, paramInt2, paramInt3, 4);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ny
+ * JD-Core Version:    0.6.0
+ */

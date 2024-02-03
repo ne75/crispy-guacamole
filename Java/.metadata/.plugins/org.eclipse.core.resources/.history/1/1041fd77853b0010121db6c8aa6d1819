@@ -1,0 +1,18 @@
+/*    */ import java.net.URL;
+/*    */ 
+/*    */ public class ar
+/*    */ {
+/*    */   public String a;
+/*    */   public URL b;
+/*    */ 
+/*    */   public ar(String paramString, URL paramURL)
+/*    */   {
+/* 10 */     this.a = paramString;
+/* 11 */     this.b = paramURL;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ar
+ * JD-Core Version:    0.6.0
+ */

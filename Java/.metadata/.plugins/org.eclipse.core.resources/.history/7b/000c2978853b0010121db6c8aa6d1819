@@ -1,0 +1,88 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class ld extends ba
+/*    */ {
+/*    */   public void a(ik paramik, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2)
+/*    */   {
+/* 12 */     GL11.glPushMatrix();
+/*    */ 
+/* 14 */     GL11.glTranslatef((float)paramDouble1, (float)paramDouble2, (float)paramDouble3);
+/* 15 */     GL11.glEnable(32826);
+/* 16 */     GL11.glScalef(0.5F, 0.5F, 0.5F);
+/* 17 */     int i = 1;
+/* 18 */     int j = 2;
+/* 19 */     a("/particles.png");
+/* 20 */     jy localjy = jy.a;
+/*    */ 
+/* 22 */     float f1 = (i * 8 + 0) / 128.0F;
+/* 23 */     float f2 = (i * 8 + 8) / 128.0F;
+/* 24 */     float f3 = (j * 8 + 0) / 128.0F;
+/* 25 */     float f4 = (j * 8 + 8) / 128.0F;
+/*    */ 
+/* 28 */     float f5 = 1.0F;
+/* 29 */     float f6 = 0.5F;
+/* 30 */     float f7 = 0.5F;
+/*    */ 
+/* 34 */     GL11.glRotatef(180.0F - this.b.i, 0.0F, 1.0F, 0.0F);
+/* 35 */     GL11.glRotatef(-this.b.j, 1.0F, 0.0F, 0.0F);
+/* 36 */     localjy.b();
+/* 37 */     localjy.b(0.0F, 1.0F, 0.0F);
+/* 38 */     localjy.a(0.0F - f6, 0.0F - f7, 0.0D, f1, f4);
+/* 39 */     localjy.a(f5 - f6, 0.0F - f7, 0.0D, f2, f4);
+/* 40 */     localjy.a(f5 - f6, 1.0F - f7, 0.0D, f2, f3);
+/* 41 */     localjy.a(0.0F - f6, 1.0F - f7, 0.0D, f1, f3);
+/* 42 */     localjy.a();
+/*    */ 
+/* 44 */     GL11.glDisable(32826);
+/* 45 */     GL11.glPopMatrix();
+/*    */ 
+/* 48 */     if (paramik.b != null) {
+/* 49 */       float f8 = (paramik.b.aN + (paramik.b.aL - paramik.b.aN) * paramFloat2) * 3.141593F / 180.0F;
+/* 50 */       float f9 = (paramik.b.aO + (paramik.b.aM - paramik.b.aO) * paramFloat2) * 3.141593F / 180.0F;
+/*    */ 
+/* 52 */       double d1 = gd.a(f8);
+/* 53 */       double d2 = gd.b(f8);
+/* 54 */       double d3 = gd.a(f9);
+/* 55 */       double d4 = gd.b(f9);
+/*    */ 
+/* 57 */       double d5 = paramik.b.aC + (paramik.b.aF - paramik.b.aC) * paramFloat2 - d2 * 0.7D - d1 * 0.5D * d4;
+/* 58 */       double d6 = paramik.b.aD + (paramik.b.aG - paramik.b.aD) * paramFloat2 - d3 * 0.5D;
+/* 59 */       double d7 = paramik.b.aE + (paramik.b.aH - paramik.b.aE) * paramFloat2 - d1 * 0.7D + d2 * 0.5D * d4;
+/*    */ 
+/* 61 */       if (this.b.k.x) {
+/* 62 */         f8 = (paramik.b.C + (paramik.b.B - paramik.b.C) * paramFloat2) * 3.141593F / 180.0F;
+/* 63 */         d1 = gd.a(f8);
+/* 64 */         d2 = gd.b(f8);
+/* 65 */         d5 = paramik.b.aC + (paramik.b.aF - paramik.b.aC) * paramFloat2 - d2 * 0.35D - d1 * 0.85D;
+/* 66 */         d6 = paramik.b.aD + (paramik.b.aG - paramik.b.aD) * paramFloat2 - 0.45D;
+/* 67 */         d7 = paramik.b.aE + (paramik.b.aH - paramik.b.aE) * paramFloat2 - d1 * 0.35D + d2 * 0.85D;
+/*    */       }
+/*    */ 
+/* 70 */       double d8 = paramik.aC + (paramik.aF - paramik.aC) * paramFloat2;
+/* 71 */       double d9 = paramik.aD + (paramik.aG - paramik.aD) * paramFloat2 + 0.25D;
+/* 72 */       double d10 = paramik.aE + (paramik.aH - paramik.aE) * paramFloat2;
+/*    */ 
+/* 74 */       double d11 = (float)(d5 - d8);
+/* 75 */       double d12 = (float)(d6 - d9);
+/* 76 */       double d13 = (float)(d7 - d10);
+/*    */ 
+/* 78 */       GL11.glDisable(3553);
+/* 79 */       GL11.glDisable(2896);
+/* 80 */       localjy.a(3);
+/* 81 */       localjy.b(0);
+/* 82 */       int k = 16;
+/* 83 */       for (int m = 0; m <= k; m++) {
+/* 84 */         float f10 = m / k;
+/* 85 */         localjy.a(paramDouble1 + d11 * f10, paramDouble2 + d12 * (f10 * f10 + f10) * 0.5D + 0.25D, paramDouble3 + d13 * f10);
+/*    */       }
+/* 87 */       localjy.a();
+/* 88 */       GL11.glEnable(2896);
+/* 89 */       GL11.glEnable(3553);
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ld
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,36 @@
+/*    */ public abstract class aq extends fz
+/*    */ {
+/*    */   public aq(dn paramdn)
+/*    */   {
+/* 13 */     super(paramdn);
+/*    */   }
+/*    */ 
+/*    */   protected float a(int paramInt1, int paramInt2, int paramInt3) {
+/* 17 */     if (this.aB.a(paramInt1, paramInt2 - 1, paramInt3) == pj.u.bi) return 10.0F;
+/* 18 */     return this.aB.c(paramInt1, paramInt2, paramInt3) - 0.5F;
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw) {
+/* 22 */     super.a(paramjw);
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 26 */     super.b(paramjw);
+/*    */   }
+/*    */ 
+/*    */   public boolean c() {
+/* 30 */     int i = gd.b(this.aF);
+/* 31 */     int j = gd.b(this.aP.b);
+/* 32 */     int k = gd.b(this.aH);
+/* 33 */     return (this.aB.a(i, j - 1, k) == pj.u.bi) && (this.aB.l(i, j, k) > 8) && (super.c());
+/*    */   }
+/*    */ 
+/*    */   public int d() {
+/* 37 */     return 120;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     aq
+ * JD-Core Version:    0.6.0
+ */

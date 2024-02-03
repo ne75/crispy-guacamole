@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout 
+    	android:id="@+id/linearLayout1" 	
+    	android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	xmlns:android="http://schemas.android.com/apk/res/android">
+        <AbsoluteLayout
+        	android:id="@+id/absoluteLayout1" 
+        	android:layout_width="480dip" 
+        	android:layout_height="854dip" 
+        	android:background="@drawable/background">
+            <EditText 
+            	android:id="@+id/editText1" 
+            	android:gravity="top" 
+            	android:text="Notes:" 
+            	android:capitalize="sentences" 
+            	android:layout_height="400dip"
+            	android:layout_width="405dip" 
+            	android:layout_x="65dip" 
+            	android:layout_y="100dip"
+            	></EditText>
+            <EditText 
+            	android:id="@+id/editText2" 
+            	android:layout_width="wrap_content" 
+            	android:text="Title" 
+            	android:layout_height="wrap_content" 
+            	android:layout_x="65dip" 
+            	android:layout_y="16dip"></EditText>
+        </AbsoluteLayout>
+    </LinearLayout>
+

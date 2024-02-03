@@ -1,0 +1,60 @@
+/*    */ public class gi extends cp
+/*    */ {
+/* 12 */   public jb a = new jb(this, 3, 3);
+/* 13 */   public ij b = new qm();
+/*    */   private dn c;
+/*    */   private int h;
+/*    */   private int i;
+/*    */   private int j;
+/*    */ 
+/*    */   public gi(gl paramgl, dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*    */   {
+/* 19 */     this.c = paramdn;
+/* 20 */     this.h = paramInt1;
+/* 21 */     this.i = paramInt2;
+/* 22 */     this.j = paramInt3;
+/* 23 */     a(new sk(this.a, this.b, 0, 124, 35));
+/*    */     int m;
+/* 25 */     for (int k = 0; k < 3; k++) {
+/* 26 */       for (m = 0; m < 3; m++) {
+/* 27 */         a(new eq(this.a, m + k * 3, 30 + m * 18, 17 + k * 18));
+/*    */       }
+/*    */     }
+/*    */ 
+/* 31 */     for (k = 0; k < 3; k++) {
+/* 32 */       for (m = 0; m < 9; m++) {
+/* 33 */         a(new eq(paramgl, m + k * 9 + 9, 8 + m * 18, 84 + k * 18));
+/*    */       }
+/*    */     }
+/* 36 */     for (k = 0; k < 9; k++) {
+/* 37 */       a(new eq(paramgl, k, 8 + k * 18, 142));
+/*    */     }
+/*    */ 
+/* 40 */     a(this.a);
+/*    */   }
+/*    */ 
+/*    */   public void a(ij paramij)
+/*    */   {
+/* 53 */     this.b.a(0, fg.a().a(this.a));
+/*    */   }
+/*    */ 
+/*    */   public void a(eu parameu) {
+/* 57 */     super.a(parameu);
+/* 58 */     for (int k = 0; k < 9; k++) {
+/* 59 */       gm localgm = this.a.c_(k);
+/* 60 */       if (localgm != null)
+/* 61 */         parameu.a(localgm);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public boolean b(eu parameu)
+/*    */   {
+/* 67 */     if (this.c.a(this.h, this.i, this.j) != pj.ay.bi) return false;
+/* 68 */     return parameu.e(this.h + 0.5D, this.i + 0.5D, this.j + 0.5D) <= 64.0D;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gi
+ * JD-Core Version:    0.6.0
+ */

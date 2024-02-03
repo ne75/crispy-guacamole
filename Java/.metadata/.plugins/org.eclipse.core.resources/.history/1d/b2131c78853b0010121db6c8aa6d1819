@@ -1,0 +1,32 @@
+/*    */ public class fs
+/*    */ {
+/*    */   public ax a;
+/*    */   public float b;
+/*    */   public float c;
+/*    */ 
+/*    */   public fs(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5)
+/*    */   {
+/* 11 */     this(ax.a(paramFloat1, paramFloat2, paramFloat3), paramFloat4, paramFloat5);
+/*    */   }
+/*    */ 
+/*    */   public fs a(float paramFloat1, float paramFloat2) {
+/* 15 */     return new fs(this, paramFloat1, paramFloat2);
+/*    */   }
+/*    */ 
+/*    */   public fs(fs paramfs, float paramFloat1, float paramFloat2) {
+/* 19 */     this.a = paramfs.a;
+/* 20 */     this.b = paramFloat1;
+/* 21 */     this.c = paramFloat2;
+/*    */   }
+/*    */ 
+/*    */   public fs(ax paramax, float paramFloat1, float paramFloat2) {
+/* 25 */     this.a = paramax;
+/* 26 */     this.b = paramFloat1;
+/* 27 */     this.c = paramFloat2;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fs
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,40 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class ek extends kz
+/*    */ {
+/*    */   public boolean a(dn paramdn, Random paramRandom, int paramInt1, int paramInt2, int paramInt3)
+/*    */   {
+/* 10 */     if (!paramdn.d(paramInt1, paramInt2, paramInt3)) return false;
+/* 11 */     if (paramdn.a(paramInt1, paramInt2 + 1, paramInt3) != pj.bb.bi) return false;
+/* 12 */     paramdn.e(paramInt1, paramInt2, paramInt3, pj.bd.bi);
+/*    */ 
+/* 14 */     for (int i = 0; i < 1500; i++) {
+/* 15 */       int j = paramInt1 + paramRandom.nextInt(8) - paramRandom.nextInt(8);
+/* 16 */       int k = paramInt2 - paramRandom.nextInt(12);
+/* 17 */       int m = paramInt3 + paramRandom.nextInt(8) - paramRandom.nextInt(8);
+/* 18 */       if (paramdn.a(j, k, m) != 0)
+/*    */         continue;
+/* 20 */       int n = 0;
+/* 21 */       for (int i1 = 0; i1 < 6; i1++) {
+/* 22 */         int i2 = 0;
+/* 23 */         if (i1 == 0) i2 = paramdn.a(j - 1, k, m);
+/* 24 */         if (i1 == 1) i2 = paramdn.a(j + 1, k, m);
+/* 25 */         if (i1 == 2) i2 = paramdn.a(j, k - 1, m);
+/* 26 */         if (i1 == 3) i2 = paramdn.a(j, k + 1, m);
+/* 27 */         if (i1 == 4) i2 = paramdn.a(j, k, m - 1);
+/* 28 */         if (i1 == 5) i2 = paramdn.a(j, k, m + 1);
+/*    */ 
+/* 30 */         if (i2 != pj.bd.bi) continue; n++;
+/*    */       }
+/*    */ 
+/* 33 */       if (n != 1) continue; paramdn.e(j, k, m, pj.bd.bi);
+/*    */     }
+/*    */ 
+/* 36 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ek
+ * JD-Core Version:    0.6.0
+ */

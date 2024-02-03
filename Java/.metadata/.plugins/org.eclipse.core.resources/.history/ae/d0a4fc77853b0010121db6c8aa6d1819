@@ -1,0 +1,46 @@
+/*    */ import java.io.DataInput;
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutput;
+/*    */ import java.io.DataOutputStream;
+/*    */ import java.io.IOException;
+/*    */ import java.io.InputStream;
+/*    */ import java.io.OutputStream;
+/*    */ import java.util.zip.GZIPInputStream;
+/*    */ import java.util.zip.GZIPOutputStream;
+/*    */ 
+/*    */ public class ag
+/*    */ {
+/*    */   public static jw a(InputStream paramInputStream)
+/*    */   {
+/*  8 */     DataInputStream localDataInputStream = new DataInputStream(new GZIPInputStream(paramInputStream));
+/*    */     try {
+/* 10 */       jw localjw = a(localDataInputStream);
+/*    */       return localjw; } finally { localDataInputStream.close(); } throw localObject;
+/*    */   }
+/*    */ 
+/*    */   public static void a(jw paramjw, OutputStream paramOutputStream)
+/*    */   {
+/* 17 */     DataOutputStream localDataOutputStream = new DataOutputStream(new GZIPOutputStream(paramOutputStream));
+/*    */     try {
+/* 19 */       a(paramjw, localDataOutputStream);
+/*    */     } finally {
+/* 21 */       localDataOutputStream.close();
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public static jw a(DataInput paramDataInput)
+/*    */   {
+/* 46 */     fy localfy = fy.b(paramDataInput);
+/* 47 */     if ((localfy instanceof jw)) return (jw)localfy;
+/* 48 */     throw new IOException("Root tag must be a named compound tag");
+/*    */   }
+/*    */ 
+/*    */   public static void a(jw paramjw, DataOutput paramDataOutput) {
+/* 52 */     fy.a(paramjw, paramDataOutput);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ag
+ * JD-Core Version:    0.6.0
+ */

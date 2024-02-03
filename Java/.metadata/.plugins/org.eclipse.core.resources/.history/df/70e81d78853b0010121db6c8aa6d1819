@@ -1,0 +1,73 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ import java.util.List;
+/*    */ 
+/*    */ public class gt extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public byte b;
+/*    */   public int c;
+/*    */   public int d;
+/*    */   public int e;
+/*    */   public byte f;
+/*    */   public byte g;
+/*    */   private ot h;
+/*    */   private List i;
+/*    */ 
+/*    */   public gt()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public gt(ig paramig)
+/*    */   {
+/* 27 */     this.a = paramig.aw;
+/*    */ 
+/* 29 */     this.b = (byte)gn.a(paramig);
+/* 30 */     this.c = gd.b(paramig.aF * 32.0D);
+/* 31 */     this.d = gd.b(paramig.aG * 32.0D);
+/* 32 */     this.e = gd.b(paramig.aH * 32.0D);
+/* 33 */     this.f = (byte)(int)(paramig.aL * 256.0F / 360.0F);
+/* 34 */     this.g = (byte)(int)(paramig.aM * 256.0F / 360.0F);
+/*    */ 
+/* 36 */     this.h = paramig.O();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream) {
+/* 40 */     this.a = paramDataInputStream.readInt();
+/* 41 */     this.b = paramDataInputStream.readByte();
+/* 42 */     this.c = paramDataInputStream.readInt();
+/* 43 */     this.d = paramDataInputStream.readInt();
+/* 44 */     this.e = paramDataInputStream.readInt();
+/* 45 */     this.f = paramDataInputStream.readByte();
+/* 46 */     this.g = paramDataInputStream.readByte();
+/* 47 */     this.i = ot.a(paramDataInputStream);
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 51 */     paramDataOutputStream.writeInt(this.a);
+/* 52 */     paramDataOutputStream.writeByte(this.b);
+/* 53 */     paramDataOutputStream.writeInt(this.c);
+/* 54 */     paramDataOutputStream.writeInt(this.d);
+/* 55 */     paramDataOutputStream.writeInt(this.e);
+/* 56 */     paramDataOutputStream.writeByte(this.f);
+/* 57 */     paramDataOutputStream.writeByte(this.g);
+/* 58 */     this.h.a(paramDataOutputStream);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 62 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 66 */     return 20;
+/*    */   }
+/*    */ 
+/*    */   public List b() {
+/* 70 */     return this.i;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gt
+ * JD-Core Version:    0.6.0
+ */

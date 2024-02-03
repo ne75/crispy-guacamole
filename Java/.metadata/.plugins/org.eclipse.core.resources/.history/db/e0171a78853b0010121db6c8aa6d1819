@@ -1,0 +1,25 @@
+/*    */ public class er extends bl
+/*    */ {
+/*    */   public er(int paramInt)
+/*    */   {
+/*  8 */     super(paramInt);
+/*    */ 
+/* 10 */     d(0);
+/* 11 */     a(true);
+/*    */   }
+/*    */ 
+/*    */   public int a(gm paramgm)
+/*    */   {
+/* 16 */     return pj.J.a(2, paramgm.i());
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt)
+/*    */   {
+/* 21 */     return paramInt;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     er
+ * JD-Core Version:    0.6.0
+ */

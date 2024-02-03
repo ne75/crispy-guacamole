@@ -1,0 +1,99 @@
+/*    */ import java.util.List;
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class rt extends pn
+/*    */ {
+/* 15 */   private int a = 0;
+/* 16 */   private int b = 0;
+/*    */ 
+/* 96 */   private static final gm f = new gm(eo.E, 1);
+/*    */ 
+/*    */   public rt(dn paramdn)
+/*    */   {
+/* 19 */     super(paramdn);
+/* 20 */     this.I = "/mob/pigzombie.png";
+/* 21 */     this.av = 0.5F;
+/* 22 */     this.c = 5;
+/* 23 */     this.bw = true;
+/*    */   }
+/*    */ 
+/*    */   public void q_() {
+/* 27 */     this.av = (this.d != null ? 0.95F : 0.5F);
+/* 28 */     if ((this.b > 0) && 
+/* 29 */       (--this.b == 0)) {
+/* 30 */       this.aB.a(this, "mob.zombiepig.zpigangry", j() * 2.0F, ((this.bm.nextFloat() - this.bm.nextFloat()) * 0.2F + 1.0F) * 1.8F);
+/*    */     }
+/*    */ 
+/* 33 */     super.q_();
+/*    */   }
+/*    */ 
+/*    */   public boolean c() {
+/* 37 */     return (this.aB.k > 0) && (this.aB.a(this.aP)) && (this.aB.a(this, this.aP).size() == 0) && (!this.aB.b(this.aP));
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw) {
+/* 41 */     super.a(paramjw);
+/* 42 */     paramjw.a("Anger", (short)this.a);
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 46 */     super.b(paramjw);
+/* 47 */     this.a = paramjw.d("Anger");
+/*    */   }
+/*    */ 
+/*    */   protected nl e_() {
+/* 51 */     if (this.a == 0) return null;
+/* 52 */     return super.e_();
+/*    */   }
+/*    */ 
+/*    */   public void m() {
+/* 56 */     super.m();
+/*    */   }
+/*    */ 
+/*    */   public boolean a(nl paramnl, int paramInt) {
+/* 60 */     if ((paramnl instanceof eu)) {
+/* 61 */       List localList = this.aB.b(this, this.aP.b(32.0D, 32.0D, 32.0D));
+/* 62 */       for (int i = 0; i < localList.size(); i++) {
+/* 63 */         nl localnl = (nl)localList.get(i);
+/* 64 */         if ((localnl instanceof rt)) {
+/* 65 */           rt localrt = (rt)localnl;
+/* 66 */           localrt.c(paramnl);
+/*    */         }
+/*    */       }
+/* 69 */       c(paramnl);
+/*    */     }
+/* 71 */     return super.a(paramnl, paramInt);
+/*    */   }
+/*    */ 
+/*    */   private void c(nl paramnl) {
+/* 75 */     this.d = paramnl;
+/* 76 */     this.a = (400 + this.bm.nextInt(400));
+/* 77 */     this.b = this.bm.nextInt(40);
+/*    */   }
+/*    */ 
+/*    */   protected String f() {
+/* 81 */     return "mob.zombiepig.zpig";
+/*    */   }
+/*    */ 
+/*    */   protected String g() {
+/* 85 */     return "mob.zombiepig.zpighurt";
+/*    */   }
+/*    */ 
+/*    */   protected String h_() {
+/* 89 */     return "mob.zombiepig.zpigdeath";
+/*    */   }
+/*    */ 
+/*    */   protected int i() {
+/* 93 */     return eo.ap.ba;
+/*    */   }
+/*    */ 
+/*    */   public gm o_()
+/*    */   {
+/* 99 */     return f;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     rt
+ * JD-Core Version:    0.6.0
+ */

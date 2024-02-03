@@ -1,0 +1,73 @@
+package library;
+
+public class Patron {
+    
+    private String firstName; 
+    private String lastName;
+    private String libraryNumber;
+    private Book patBook;
+    
+    /* Constructors */
+    
+    public Patron(){
+	firstName = null;
+	lastName = null;
+	libraryNumber = null; 
+	patBook = null;
+    }
+    
+    public Patron(String fName, String lName, String lNum, Book b){
+	firstName = fName;
+	lastName = lName;
+	libraryNumber = lNum; 
+	patBook = b;
+    }
+    
+    /* Getters */
+    
+    public String getFirstName(){
+	return firstName;
+    }
+    
+    public String getLastName(){
+	return lastName;
+    }
+    
+    public String getLibraryNumber(){
+	return libraryNumber;
+    }
+    
+    public Book  getBook(){
+	return patBook;
+    }
+    
+    /* Setters */
+    public void setFirstName(String s){
+	firstName = s;
+    }
+    
+    public void setLastName(String s){
+	lastName = s;
+    }
+    
+    public void setLibraryNumber (String s){
+	libraryNumber = s;
+    }
+
+    public void setBook (Book b){
+	patBook = b;
+    }
+    
+    /* Methods */
+    
+    public String toString(){
+	String str = "The specs of the Patron are";
+	str += "\n\t First Name: " + firstName;
+	str += "\n\t Last Name: " + lastName ;
+	str += "\n\t Library Number: " + libraryNumber;
+	str += "\n\t " + patBook;
+	return str;
+    }
+    
+    
+}

@@ -1,0 +1,24 @@
+package main;
+
+/**
+ * Program 209a (Counting Numbers)
+ * Nikita Ermoshkin
+ * 11-16-12
+ * JDK 7, Mac OS 10.8
+ * 
+ * This program reads integers from a file and adds up the
+ * number of integers > 500 and the number of integers < 500 
+ * and prints these values along with the sum.
+ * 
+ */
+
+import java.util.*;
+
+public class CountingNumbers {
+    public static void main(String[] args) {
+	
+	File file = new File("p209a.dat");
+	Scanner s = new Scanner(file);
+    }
+
+}

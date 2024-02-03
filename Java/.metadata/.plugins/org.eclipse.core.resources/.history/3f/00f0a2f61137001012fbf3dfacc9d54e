@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class card {
+	public static void main(String arg[]){
+	
+	String a;
+	int n;
+		
+	Scanner in = new Scanner(System.in);
+	
+	a = in.nextLine();
+	n = Integer.parseInt(a);
+	System.out.println("Your Number is " + a);
+	}
+}

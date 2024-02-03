@@ -1,0 +1,20 @@
+package main;
+
+/**
+ * Program 213b (Quantity Ordering)
+ * Nikita Ermoshkin
+ * 11-13-12
+ * JDK 7, Mac OS 10.8
+ * 
+ * This program determines the price break of a product based on
+ * the quantity ordered.
+ * 
+ */
+
+public class StudentClassifier {
+    public static void main(String[] args) {
+	
+
+    }
+
+}

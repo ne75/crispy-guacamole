@@ -1,0 +1,243 @@
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.List;
+/*     */ 
+/*     */ public class db
+/*     */ {
+/*   7 */   private static List g = new ArrayList();
+/*   8 */   private static int h = 0;
+/*     */   public double a;
+/*     */   public double b;
+/*     */   public double c;
+/*     */   public double d;
+/*     */   public double e;
+/*     */   public double f;
+/*     */ 
+/*     */   public static db a(double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6)
+/*     */   {
+/*  11 */     return new db(paramDouble1, paramDouble2, paramDouble3, paramDouble4, paramDouble5, paramDouble6);
+/*     */   }
+/*     */ 
+/*     */   public static void a() {
+/*  15 */     h = 0;
+/*     */   }
+/*     */ 
+/*     */   public static db b(double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6) {
+/*  19 */     if (h >= g.size()) {
+/*  20 */       g.add(a(0.0D, 0.0D, 0.0D, 0.0D, 0.0D, 0.0D));
+/*     */     }
+/*  22 */     return ((db)g.get(h++)).c(paramDouble1, paramDouble2, paramDouble3, paramDouble4, paramDouble5, paramDouble6);
+/*     */   }
+/*     */ 
+/*     */   private db(double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6)
+/*     */   {
+/*  30 */     this.a = paramDouble1;
+/*  31 */     this.b = paramDouble2;
+/*  32 */     this.c = paramDouble3;
+/*  33 */     this.d = paramDouble4;
+/*  34 */     this.e = paramDouble5;
+/*  35 */     this.f = paramDouble6;
+/*     */   }
+/*     */ 
+/*     */   public db c(double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6) {
+/*  39 */     this.a = paramDouble1;
+/*  40 */     this.b = paramDouble2;
+/*  41 */     this.c = paramDouble3;
+/*  42 */     this.d = paramDouble4;
+/*  43 */     this.e = paramDouble5;
+/*  44 */     this.f = paramDouble6;
+/*  45 */     return this;
+/*     */   }
+/*     */ 
+/*     */   public db a(double paramDouble1, double paramDouble2, double paramDouble3) {
+/*  49 */     double d1 = this.a;
+/*  50 */     double d2 = this.b;
+/*  51 */     double d3 = this.c;
+/*  52 */     double d4 = this.d;
+/*  53 */     double d5 = this.e;
+/*  54 */     double d6 = this.f;
+/*     */ 
+/*  56 */     if (paramDouble1 < 0.0D) d1 += paramDouble1;
+/*  57 */     if (paramDouble1 > 0.0D) d4 += paramDouble1;
+/*     */ 
+/*  59 */     if (paramDouble2 < 0.0D) d2 += paramDouble2;
+/*  60 */     if (paramDouble2 > 0.0D) d5 += paramDouble2;
+/*     */ 
+/*  62 */     if (paramDouble3 < 0.0D) d3 += paramDouble3;
+/*  63 */     if (paramDouble3 > 0.0D) d6 += paramDouble3;
+/*     */ 
+/*  65 */     return b(d1, d2, d3, d4, d5, d6);
+/*     */   }
+/*     */ 
+/*     */   public db b(double paramDouble1, double paramDouble2, double paramDouble3) {
+/*  69 */     double d1 = this.a - paramDouble1;
+/*  70 */     double d2 = this.b - paramDouble2;
+/*  71 */     double d3 = this.c - paramDouble3;
+/*  72 */     double d4 = this.d + paramDouble1;
+/*  73 */     double d5 = this.e + paramDouble2;
+/*  74 */     double d6 = this.f + paramDouble3;
+/*     */ 
+/*  76 */     return b(d1, d2, d3, d4, d5, d6);
+/*     */   }
+/*     */ 
+/*     */   public db c(double paramDouble1, double paramDouble2, double paramDouble3) {
+/*  80 */     return b(this.a + paramDouble1, this.b + paramDouble2, this.c + paramDouble3, this.d + paramDouble1, this.e + paramDouble2, this.f + paramDouble3);
+/*     */   }
+/*     */ 
+/*     */   public double a(db paramdb, double paramDouble) {
+/*  84 */     if ((paramdb.e <= this.b) || (paramdb.b >= this.e)) return paramDouble;
+/*  85 */     if ((paramdb.f <= this.c) || (paramdb.c >= this.f)) return paramDouble;
+/*     */     double d1;
+/*  87 */     if ((paramDouble > 0.0D) && (paramdb.d <= this.a)) {
+/*  88 */       d1 = this.a - paramdb.d;
+/*  89 */       if (d1 < paramDouble) paramDouble = d1;
+/*     */     }
+/*  91 */     if ((paramDouble < 0.0D) && (paramdb.a >= this.d)) {
+/*  92 */       d1 = this.d - paramdb.a;
+/*  93 */       if (d1 > paramDouble) paramDouble = d1;
+/*     */     }
+/*     */ 
+/*  96 */     return paramDouble;
+/*     */   }
+/*     */ 
+/*     */   public double b(db paramdb, double paramDouble) {
+/* 100 */     if ((paramdb.d <= this.a) || (paramdb.a >= this.d)) return paramDouble;
+/* 101 */     if ((paramdb.f <= this.c) || (paramdb.c >= this.f)) return paramDouble;
+/*     */     double d1;
+/* 103 */     if ((paramDouble > 0.0D) && (paramdb.e <= this.b)) {
+/* 104 */       d1 = this.b - paramdb.e;
+/* 105 */       if (d1 < paramDouble) paramDouble = d1;
+/*     */     }
+/* 107 */     if ((paramDouble < 0.0D) && (paramdb.b >= this.e)) {
+/* 108 */       d1 = this.e - paramdb.b;
+/* 109 */       if (d1 > paramDouble) paramDouble = d1;
+/*     */     }
+/*     */ 
+/* 112 */     return paramDouble;
+/*     */   }
+/*     */ 
+/*     */   public double c(db paramdb, double paramDouble) {
+/* 116 */     if ((paramdb.d <= this.a) || (paramdb.a >= this.d)) return paramDouble;
+/* 117 */     if ((paramdb.e <= this.b) || (paramdb.b >= this.e)) return paramDouble;
+/*     */     double d1;
+/* 119 */     if ((paramDouble > 0.0D) && (paramdb.f <= this.c)) {
+/* 120 */       d1 = this.c - paramdb.f;
+/* 121 */       if (d1 < paramDouble) paramDouble = d1;
+/*     */     }
+/* 123 */     if ((paramDouble < 0.0D) && (paramdb.c >= this.f)) {
+/* 124 */       d1 = this.f - paramdb.c;
+/* 125 */       if (d1 > paramDouble) paramDouble = d1;
+/*     */     }
+/*     */ 
+/* 128 */     return paramDouble;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(db paramdb) {
+/* 132 */     if ((paramdb.d <= this.a) || (paramdb.a >= this.d)) return false;
+/* 133 */     if ((paramdb.e <= this.b) || (paramdb.b >= this.e)) return false;
+/* 134 */     return (paramdb.f > this.c) && (paramdb.c < this.f);
+/*     */   }
+/*     */ 
+/*     */   public db d(double paramDouble1, double paramDouble2, double paramDouble3)
+/*     */   {
+/* 146 */     this.a += paramDouble1;
+/* 147 */     this.b += paramDouble2;
+/* 148 */     this.c += paramDouble3;
+/* 149 */     this.d += paramDouble1;
+/* 150 */     this.e += paramDouble2;
+/* 151 */     this.f += paramDouble3;
+/* 152 */     return this;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(ax paramax)
+/*     */   {
+/* 163 */     if ((paramax.a <= this.a) || (paramax.a >= this.d)) return false;
+/* 164 */     if ((paramax.b <= this.b) || (paramax.b >= this.e)) return false;
+/* 165 */     return (paramax.c > this.c) && (paramax.c < this.f);
+/*     */   }
+/*     */ 
+/*     */   public double b()
+/*     */   {
+/* 170 */     double d1 = this.d - this.a;
+/* 171 */     double d2 = this.e - this.b;
+/* 172 */     double d3 = this.f - this.c;
+/* 173 */     return (d1 + d2 + d3) / 3.0D;
+/*     */   }
+/*     */ 
+/*     */   public db c()
+/*     */   {
+/* 197 */     return b(this.a, this.b, this.c, this.d, this.e, this.f);
+/*     */   }
+/*     */ 
+/*     */   public pr a(ax paramax1, ax paramax2) {
+/* 201 */     ax localax1 = paramax1.a(paramax2, this.a);
+/* 202 */     ax localax2 = paramax1.a(paramax2, this.d);
+/*     */ 
+/* 204 */     ax localax3 = paramax1.b(paramax2, this.b);
+/* 205 */     ax localax4 = paramax1.b(paramax2, this.e);
+/*     */ 
+/* 207 */     ax localax5 = paramax1.c(paramax2, this.c);
+/* 208 */     ax localax6 = paramax1.c(paramax2, this.f);
+/*     */ 
+/* 210 */     if (!b(localax1)) localax1 = null;
+/* 211 */     if (!b(localax2)) localax2 = null;
+/* 212 */     if (!c(localax3)) localax3 = null;
+/* 213 */     if (!c(localax4)) localax4 = null;
+/* 214 */     if (!d(localax5)) localax5 = null;
+/* 215 */     if (!d(localax6)) localax6 = null;
+/*     */ 
+/* 217 */     ax localax7 = null;
+/*     */ 
+/* 219 */     if ((localax1 != null) && ((localax7 == null) || (paramax1.d(localax1) < paramax1.d(localax7)))) localax7 = localax1;
+/* 220 */     if ((localax2 != null) && ((localax7 == null) || (paramax1.d(localax2) < paramax1.d(localax7)))) localax7 = localax2;
+/* 221 */     if ((localax3 != null) && ((localax7 == null) || (paramax1.d(localax3) < paramax1.d(localax7)))) localax7 = localax3;
+/* 222 */     if ((localax4 != null) && ((localax7 == null) || (paramax1.d(localax4) < paramax1.d(localax7)))) localax7 = localax4;
+/* 223 */     if ((localax5 != null) && ((localax7 == null) || (paramax1.d(localax5) < paramax1.d(localax7)))) localax7 = localax5;
+/* 224 */     if ((localax6 != null) && ((localax7 == null) || (paramax1.d(localax6) < paramax1.d(localax7)))) localax7 = localax6;
+/*     */ 
+/* 226 */     if (localax7 == null) return null;
+/*     */ 
+/* 228 */     int i = -1;
+/*     */ 
+/* 230 */     if (localax7 == localax1) i = 4;
+/* 231 */     if (localax7 == localax2) i = 5;
+/* 232 */     if (localax7 == localax3) i = 0;
+/* 233 */     if (localax7 == localax4) i = 1;
+/* 234 */     if (localax7 == localax5) i = 2;
+/* 235 */     if (localax7 == localax6) i = 3;
+/*     */ 
+/* 237 */     return new pr(0, 0, 0, i, localax7);
+/*     */   }
+/*     */ 
+/*     */   private boolean b(ax paramax) {
+/* 241 */     if (paramax == null) return false;
+/* 242 */     return (paramax.b >= this.b) && (paramax.b <= this.e) && (paramax.c >= this.c) && (paramax.c <= this.f);
+/*     */   }
+/*     */ 
+/*     */   private boolean c(ax paramax) {
+/* 246 */     if (paramax == null) return false;
+/* 247 */     return (paramax.a >= this.a) && (paramax.a <= this.d) && (paramax.c >= this.c) && (paramax.c <= this.f);
+/*     */   }
+/*     */ 
+/*     */   private boolean d(ax paramax) {
+/* 251 */     if (paramax == null) return false;
+/* 252 */     return (paramax.a >= this.a) && (paramax.a <= this.d) && (paramax.b >= this.b) && (paramax.b <= this.e);
+/*     */   }
+/*     */ 
+/*     */   public void b(db paramdb) {
+/* 256 */     this.a = paramdb.a;
+/* 257 */     this.b = paramdb.b;
+/* 258 */     this.c = paramdb.c;
+/* 259 */     this.d = paramdb.d;
+/* 260 */     this.e = paramdb.e;
+/* 261 */     this.f = paramdb.f;
+/*     */   }
+/*     */ 
+/*     */   public String toString() {
+/* 265 */     return "box[" + this.a + ", " + this.b + ", " + this.c + " -> " + this.d + ", " + this.e + ", " + this.f + "]";
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     db
+ * JD-Core Version:    0.6.0
+ */

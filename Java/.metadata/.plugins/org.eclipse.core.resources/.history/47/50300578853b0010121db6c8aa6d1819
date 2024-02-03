@@ -1,0 +1,31 @@
+/*    */ public class cm
+/*    */ {
+/* 23 */   public float[][] a = new float[16][16];
+/* 24 */   public float[] b = new float[16];
+/* 25 */   public float[] c = new float[16];
+/* 26 */   public float[] d = new float[16];
+/*    */ 
+/*    */   public boolean a(double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6)
+/*    */   {
+/* 78 */     for (int i = 0; i < 6; i++)
+/*    */     {
+/* 80 */       if ((this.a[i][0] * paramDouble1 + this.a[i][1] * paramDouble2 + this.a[i][2] * paramDouble3 + this.a[i][3] <= 0.0D) && 
+/* 81 */         (this.a[i][0] * paramDouble4 + this.a[i][1] * paramDouble2 + this.a[i][2] * paramDouble3 + this.a[i][3] <= 0.0D) && 
+/* 82 */         (this.a[i][0] * paramDouble1 + this.a[i][1] * paramDouble5 + this.a[i][2] * paramDouble3 + this.a[i][3] <= 0.0D) && 
+/* 83 */         (this.a[i][0] * paramDouble4 + this.a[i][1] * paramDouble5 + this.a[i][2] * paramDouble3 + this.a[i][3] <= 0.0D) && 
+/* 84 */         (this.a[i][0] * paramDouble1 + this.a[i][1] * paramDouble2 + this.a[i][2] * paramDouble6 + this.a[i][3] <= 0.0D) && 
+/* 85 */         (this.a[i][0] * paramDouble4 + this.a[i][1] * paramDouble2 + this.a[i][2] * paramDouble6 + this.a[i][3] <= 0.0D) && 
+/* 86 */         (this.a[i][0] * paramDouble1 + this.a[i][1] * paramDouble5 + this.a[i][2] * paramDouble6 + this.a[i][3] <= 0.0D) && 
+/* 87 */         (this.a[i][0] * paramDouble4 + this.a[i][1] * paramDouble5 + this.a[i][2] * paramDouble6 + this.a[i][3] <= 0.0D))
+/*    */       {
+/* 89 */         return false;
+/*    */       }
+/*    */     }
+/* 92 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     cm
+ * JD-Core Version:    0.6.0
+ */

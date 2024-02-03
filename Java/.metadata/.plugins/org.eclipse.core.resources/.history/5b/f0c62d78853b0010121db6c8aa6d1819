@@ -1,0 +1,22 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class mx extends pj
+/*    */ {
+/*    */   public mx(int paramInt1, int paramInt2)
+/*    */   {
+/* 10 */     super(paramInt1, paramInt2, ic.v);
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt, Random paramRandom) {
+/* 14 */     return eo.aG.ba;
+/*    */   }
+/*    */ 
+/*    */   public int a(Random paramRandom) {
+/* 18 */     return 4;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mx
+ * JD-Core Version:    0.6.0
+ */

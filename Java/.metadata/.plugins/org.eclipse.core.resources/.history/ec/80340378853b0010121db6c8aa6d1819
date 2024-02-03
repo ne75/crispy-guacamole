@@ -1,0 +1,54 @@
+/*    */ import java.util.List;
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class bk extends by
+/*    */ {
+/*    */   public void a()
+/*    */   {
+/*  8 */     this.e.clear();
+/*  9 */     this.e.add(new hg(1, this.c / 2 - 100, this.d / 4 + 72, "Respawn"));
+/* 10 */     this.e.add(new hg(2, this.c / 2 - 100, this.d / 4 + 96, "Title menu"));
+/*    */ 
+/* 12 */     if (this.b.i == null)
+/* 13 */       ((hg)this.e.get(1)).g = false;
+/*    */   }
+/*    */ 
+/*    */   protected void a(char paramChar, int paramInt)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   protected void a(hg paramhg) {
+/* 21 */     if ((paramhg.f != 0) || 
+/* 24 */       (paramhg.f == 1)) {
+/* 25 */       this.b.g.u();
+/* 26 */       this.b.a(null);
+/*    */     }
+/*    */ 
+/* 29 */     if (paramhg.f == 2) {
+/* 30 */       this.b.a(null);
+/* 31 */       this.b.a(new dz());
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt1, int paramInt2, float paramFloat) {
+/* 36 */     a(0, 0, this.c, this.d, 1615855616, -1602211792);
+/*    */ 
+/* 38 */     GL11.glPushMatrix();
+/* 39 */     GL11.glScalef(2.0F, 2.0F, 2.0F);
+/* 40 */     a(this.g, "Game over!", this.c / 2 / 2, 30, 16777215);
+/* 41 */     GL11.glPopMatrix();
+/* 42 */     a(this.g, "Score: &e" + this.b.g.y(), this.c / 2, 100, 16777215);
+/*    */ 
+/* 44 */     super.a(paramInt1, paramInt2, paramFloat);
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/* 48 */     return false;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     bk
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,31 @@
+/*    */ import java.awt.image.BufferedImage;
+/*    */ import javax.imageio.ImageIO;
+/*    */ 
+/*    */ public class fr
+/*    */ {
+/*  8 */   private static final int[] a = new int[65536];
+/*    */ 
+/*    */   public static int a(double paramDouble1, double paramDouble2)
+/*    */   {
+/* 20 */     paramDouble2 *= paramDouble1;
+/* 21 */     int i = (int)((1.0D - paramDouble1) * 255.0D);
+/* 22 */     int j = (int)((1.0D - paramDouble2) * 255.0D);
+/* 23 */     return a[(j << 8 | i)];
+/*    */   }
+/*    */ 
+/*    */   static
+/*    */   {
+/*    */     try
+/*    */     {
+/* 12 */       BufferedImage localBufferedImage = ImageIO.read(gr.class.getResource("/misc/grasscolor.png"));
+/* 13 */       localBufferedImage.getRGB(0, 0, 256, 256, a, 0, 256);
+/*    */     } catch (Exception localException) {
+/* 15 */       localException.printStackTrace();
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fr
+ * JD-Core Version:    0.6.0
+ */

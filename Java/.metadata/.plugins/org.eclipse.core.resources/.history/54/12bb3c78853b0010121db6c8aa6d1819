@@ -1,0 +1,70 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class sj extends pj
+/*    */ {
+/*    */   private boolean a;
+/*    */ 
+/*    */   public sj(int paramInt, boolean paramBoolean)
+/*    */   {
+/* 14 */     super(paramInt, 6, ic.d);
+/* 15 */     this.a = paramBoolean;
+/*    */ 
+/* 17 */     if (!paramBoolean)
+/*    */     {
+/* 19 */       a(0.0F, 0.0F, 0.0F, 1.0F, 0.5F, 1.0F);
+/*    */     }
+/* 21 */     e(255);
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt)
+/*    */   {
+/* 26 */     if (paramInt <= 1) return 6;
+/* 27 */     return 5;
+/*    */   }
+/*    */ 
+/*    */   public boolean a()
+/*    */   {
+/* 32 */     return this.a;
+/*    */   }
+/*    */ 
+/*    */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*    */   {
+/* 37 */     if (this != pj.ak) return;
+/*    */   }
+/*    */ 
+/*    */   public void e(dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*    */   {
+/* 59 */     if (this != pj.ak) super.e(paramdn, paramInt1, paramInt2, paramInt3);
+/* 60 */     int i = paramdn.a(paramInt1, paramInt2 - 1, paramInt3);
+/*    */ 
+/* 62 */     if (i == ak.bi)
+/*    */     {
+/* 64 */       paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/* 65 */       paramdn.e(paramInt1, paramInt2 - 1, paramInt3, pj.aj.bi);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt, Random paramRandom)
+/*    */   {
+/* 71 */     return pj.ak.bi;
+/*    */   }
+/*    */ 
+/*    */   public boolean b()
+/*    */   {
+/* 76 */     return this.a;
+/*    */   }
+/*    */ 
+/*    */   public boolean b(ri paramri, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*    */   {
+/* 81 */     if (this != pj.ak) super.b(paramri, paramInt1, paramInt2, paramInt3, paramInt4);
+/* 82 */     if (paramInt4 == 1) return true;
+/* 83 */     if (!super.b(paramri, paramInt1, paramInt2, paramInt3, paramInt4)) return false;
+/* 84 */     if (paramInt4 == 0) return true;
+/* 85 */     return paramri.a(paramInt1, paramInt2, paramInt3) != this.bi;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     sj
+ * JD-Core Version:    0.6.0
+ */

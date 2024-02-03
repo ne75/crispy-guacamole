@@ -1,0 +1,102 @@
+/*    */ import java.util.List;
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ import org.lwjgl.input.Keyboard;
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class rv extends by
+/*    */ {
+/* 16 */   protected String a = "Edit sign message:";
+/*    */   private sc h;
+/*    */   private int i;
+/* 19 */   private int k = 0;
+/*    */ 
+/* 51 */   private static final String l = dw.a;
+/*    */ 
+/*    */   public rv(sc paramsc)
+/*    */   {
+/* 22 */     this.h = paramsc;
+/*    */   }
+/*    */ 
+/*    */   public void a() {
+/* 26 */     this.e.clear();
+/* 27 */     Keyboard.enableRepeatEvents(true);
+/* 28 */     this.e.add(new hg(0, this.c / 2 - 100, this.d / 4 + 120, "Done"));
+/*    */   }
+/*    */ 
+/*    */   public void h() {
+/* 32 */     Keyboard.enableRepeatEvents(false);
+/* 33 */     if (this.b.e.z)
+/* 34 */       this.b.r().a(new oz(this.h.e, this.h.f, this.h.g, this.h.a));
+/*    */   }
+/*    */ 
+/*    */   public void g()
+/*    */   {
+/* 39 */     this.i += 1;
+/*    */   }
+/*    */ 
+/*    */   protected void a(hg paramhg) {
+/* 43 */     if (!paramhg.g) return;
+/*    */ 
+/* 45 */     if (paramhg.f == 0) {
+/* 46 */       this.h.r_();
+/* 47 */       this.b.a(null);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   protected void a(char paramChar, int paramInt)
+/*    */   {
+/* 54 */     if (paramInt == 200) this.k = (this.k - 1 & 0x3);
+/* 55 */     if ((paramInt == 208) || (paramInt == 28)) this.k = (this.k + 1 & 0x3);
+/* 56 */     if ((paramInt == 14) && (this.h.a[this.k].length() > 0)) {
+/* 57 */       this.h.a[this.k] = this.h.a[this.k].substring(0, this.h.a[this.k].length() - 1);
+/*    */     }
+/* 59 */     if ((l.indexOf(paramChar) >= 0) && (this.h.a[this.k].length() < 15))
+/*    */     {
+/*    */       int tmp161_158 = this.k;
+/*    */       String[] tmp161_154 = this.h.a; tmp161_154[tmp161_158] = (tmp161_154[tmp161_158] + paramChar);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt1, int paramInt2, float paramFloat) {
+/* 65 */     i();
+/*    */ 
+/* 67 */     a(this.g, this.a, this.c / 2, 40, 16777215);
+/*    */ 
+/* 69 */     GL11.glPushMatrix();
+/* 70 */     GL11.glTranslatef(this.c / 2, this.d / 2, 50.0F);
+/* 71 */     float f1 = 93.75F;
+/* 72 */     GL11.glScalef(-f1, -f1, -f1);
+/* 73 */     GL11.glRotatef(180.0F, 0.0F, 1.0F, 0.0F);
+/*    */ 
+/* 75 */     pj localpj = this.h.f();
+/*    */ 
+/* 77 */     if (localpj == pj.aD) {
+/* 78 */       float f2 = this.h.e() * 360 / 16.0F;
+/* 79 */       GL11.glRotatef(f2, 0.0F, 1.0F, 0.0F);
+/* 80 */       GL11.glTranslatef(0.0F, 0.3125F, 0.0F);
+/*    */     } else {
+/* 82 */       int j = this.h.e();
+/* 83 */       float f3 = 0.0F;
+/*    */ 
+/* 85 */       if (j == 2) f3 = 180.0F;
+/* 86 */       if (j == 4) f3 = 90.0F;
+/* 87 */       if (j == 5) f3 = -90.0F;
+/* 88 */       GL11.glRotatef(f3, 0.0F, 1.0F, 0.0F);
+/* 89 */       GL11.glTranslatef(0.0F, 0.3125F, 0.0F);
+/*    */     }
+/*    */ 
+/* 92 */     if (this.i / 6 % 2 == 0) this.h.b = this.k;
+/*    */ 
+/* 94 */     ia.a.a(this.h, -0.5D, -0.75D, -0.5D, 0.0F);
+/* 95 */     this.h.b = -1;
+/*    */ 
+/* 97 */     GL11.glPopMatrix();
+/*    */ 
+/* 99 */     super.a(paramInt1, paramInt2, paramFloat);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     rv
+ * JD-Core Version:    0.6.0
+ */

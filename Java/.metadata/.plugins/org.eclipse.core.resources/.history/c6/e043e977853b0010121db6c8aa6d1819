@@ -1,0 +1,33 @@
+/*     */ package org.lwjgl.util;
+/*     */ 
+/*     */ import org.lwjgl.opengl.DisplayMode;
+/*     */ 
+/*     */ class Display$1FieldAccessor
+/*     */ {
+/*     */   final String fieldName;
+/*     */   final int order;
+/*     */   final int preferred;
+/*     */   final boolean usePreferred;
+/*     */ 
+/*     */   int getInt(DisplayMode mode)
+/*     */   {
+/* 146 */     if ("width".equals(this.fieldName)) {
+/* 147 */       return mode.getWidth();
+/*     */     }
+/* 149 */     if ("height".equals(this.fieldName)) {
+/* 150 */       return mode.getHeight();
+/*     */     }
+/* 152 */     if ("freq".equals(this.fieldName)) {
+/* 153 */       return mode.getFrequency();
+/*     */     }
+/* 155 */     if ("bpp".equals(this.fieldName)) {
+/* 156 */       return mode.getBitsPerPixel();
+/*     */     }
+/* 158 */     throw new IllegalArgumentException("Unknown field " + this.fieldName);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/lwjgl_util.jar
+ * Qualified Name:     org.lwjgl.util.Display.1FieldAccessor
+ * JD-Core Version:    0.6.0
+ */

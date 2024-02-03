@@ -1,0 +1,17 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class d extends hf
+/*    */ {
+/*    */   public kz a(Random paramRandom)
+/*    */   {
+/* 16 */     if (paramRandom.nextInt(3) == 0) {
+/* 17 */       return new lk();
+/*    */     }
+/* 19 */     return new qr();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     d
+ * JD-Core Version:    0.6.0
+ */

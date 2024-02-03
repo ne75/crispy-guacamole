@@ -1,0 +1,153 @@
+/*     */ import java.util.List;
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class hy extends ib
+/*     */ {
+/*     */   public hy(dn paramdn, int paramInt1, int paramInt2)
+/*     */   {
+/*  15 */     super(paramdn, paramInt1, paramInt2);
+/*  16 */     this.p = true;
+/*     */   }
+/*     */ 
+/*     */   public hy(dn paramdn, byte[] paramArrayOfByte, int paramInt1, int paramInt2) {
+/*  20 */     super(paramdn, paramArrayOfByte, paramInt1, paramInt2);
+/*  21 */     this.p = true;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(int paramInt1, int paramInt2) {
+/*  25 */     return (paramInt1 == this.j) && (paramInt2 == this.k);
+/*     */   }
+/*     */ 
+/*     */   public int b(int paramInt1, int paramInt2) {
+/*  29 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public void a()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void b()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void c()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void d()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public int a(int paramInt1, int paramInt2, int paramInt3) {
+/*  49 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5) {
+/*  53 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  57 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public int b(int paramInt1, int paramInt2, int paramInt3) {
+/*  61 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public void b(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public int a(cs paramcs, int paramInt1, int paramInt2, int paramInt3) {
+/*  69 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public void a(cs paramcs, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public int c(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  77 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public void a(nl paramnl)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void b(nl paramnl)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void a(nl paramnl, int paramInt)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public boolean c(int paramInt1, int paramInt2, int paramInt3) {
+/*  93 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public kp d(int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/* 101 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public void a(kp paramkp)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, int paramInt3, kp paramkp)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void e(int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void e()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void f()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void g()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void a(nl paramnl, db paramdb, List paramList)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void a(Class paramClass, db paramdb, List paramList)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public boolean a(boolean paramBoolean)
+/*     */   {
+/* 141 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public int a(byte[] paramArrayOfByte, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6, int paramInt7)
+/*     */   {
+/* 161 */     int i = paramInt4 - paramInt1;
+/* 162 */     int j = paramInt5 - paramInt2;
+/* 163 */     int k = paramInt6 - paramInt3;
+/*     */ 
+/* 165 */     int m = i * j * k;
+/* 166 */     return m + m / 2 * 3;
+/*     */   }
+/*     */ 
+/*     */   public Random a(long paramLong) {
+/* 170 */     return new Random(this.d.u + this.j * this.j * 4987142 + this.j * 5947611 + this.k * this.k * 4392871L + this.k * 389711 ^ paramLong);
+/*     */   }
+/*     */ 
+/*     */   public boolean h() {
+/* 174 */     return true;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hy
+ * JD-Core Version:    0.6.0
+ */

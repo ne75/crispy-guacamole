@@ -1,0 +1,14 @@
+public class deckOfCards {
+	public static void main(String[] args) {
+		
+	public int[] face;
+	public char[] suit;
+	int count = 0;
+	
+	for (count = 0; count < 13; count++){
+		face[count] = face[count+1];
+		System.out.println("face = " + face[count]);
+	}
+	}
+
+}

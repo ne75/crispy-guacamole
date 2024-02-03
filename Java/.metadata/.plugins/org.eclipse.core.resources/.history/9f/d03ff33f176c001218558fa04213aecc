@@ -1,0 +1,13 @@
+package main;
+
+public class MatheyDriver {
+    public static void main(String[] args) {
+	Factorial f = new Factorial();
+	
+	int i = f.factorial(6);
+	
+	System.out.println(i);
+	
+    }
+
+}

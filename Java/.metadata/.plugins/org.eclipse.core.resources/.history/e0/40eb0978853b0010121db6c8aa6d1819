@@ -1,0 +1,73 @@
+/*    */ import java.io.IOException;
+/*    */ 
+/*    */ public class di
+/*    */   implements bm
+/*    */ {
+/* 12 */   private ib[] b = new ib[256];
+/*    */   private dn c;
+/*    */   private ao d;
+/* 26 */   byte[] a = new byte[32768];
+/*    */ 
+/*    */   public di(dn paramdn, ao paramao)
+/*    */   {
+/* 17 */     this.c = paramdn;
+/* 18 */     this.d = paramao;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(int paramInt1, int paramInt2) {
+/* 22 */     int i = paramInt1 & 0xF | (paramInt2 & 0xF) * 16;
+/* 23 */     return (this.b[i] != null) && (this.b[i].a(paramInt1, paramInt2));
+/*    */   }
+/*    */ 
+/*    */   public ib b(int paramInt1, int paramInt2)
+/*    */   {
+/* 29 */     int i = paramInt1 & 0xF | (paramInt2 & 0xF) * 16;
+/*    */     try {
+/* 31 */       if (!a(paramInt1, paramInt2)) {
+/* 32 */         Object localObject = c(paramInt1, paramInt2);
+/* 33 */         if (localObject == null) {
+/* 34 */           localObject = new hy(this.c, this.a, paramInt1, paramInt2);
+/*    */         }
+/* 36 */         this.b[i] = localObject;
+/*    */       }
+/* 38 */       return this.b[i];
+/*    */     } catch (Exception localException) {
+/* 40 */       localException.printStackTrace();
+/* 41 */     }return (ib)null;
+/*    */   }
+/*    */ 
+/*    */   private synchronized ib c(int paramInt1, int paramInt2)
+/*    */   {
+/*    */     try
+/*    */     {
+/* 48 */       return this.d.a(this.c, paramInt1, paramInt2);
+/*    */     } catch (IOException localIOException) {
+/* 50 */       localIOException.printStackTrace();
+/* 51 */     }return null;
+/*    */   }
+/*    */ 
+/*    */   public void a(bm parambm, int paramInt1, int paramInt2)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public boolean a(boolean paramBoolean, ru paramru) {
+/* 59 */     return true;
+/*    */   }
+/*    */ 
+/*    */   public boolean a() {
+/* 63 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/* 67 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public String c() {
+/* 71 */     return "ReadOnlyChunkCache";
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     di
+ * JD-Core Version:    0.6.0
+ */

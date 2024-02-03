@@ -1,0 +1,42 @@
+/*    */ public class ii extends eo
+/*    */ {
+/*    */   private int a;
+/*    */ 
+/*    */   public ii(int paramInt, pj parampj)
+/*    */   {
+/* 11 */     super(paramInt);
+/* 12 */     this.a = parampj.bi;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(gm paramgm, eu parameu, dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 16 */     if (paramdn.a(paramInt1, paramInt2, paramInt3) == pj.aS.bi) {
+/* 17 */       paramInt4 = 0;
+/*    */     } else {
+/* 19 */       if (paramInt4 == 0) paramInt2--;
+/* 20 */       if (paramInt4 == 1) paramInt2++;
+/* 21 */       if (paramInt4 == 2) paramInt3--;
+/* 22 */       if (paramInt4 == 3) paramInt3++;
+/* 23 */       if (paramInt4 == 4) paramInt1--;
+/* 24 */       if (paramInt4 == 5) paramInt1++;
+/*    */     }
+/*    */ 
+/* 27 */     if (paramgm.a == 0) return false;
+/*    */ 
+/* 30 */     if (paramdn.a(this.a, paramInt1, paramInt2, paramInt3, false)) {
+/* 31 */       pj localpj = pj.m[this.a];
+/* 32 */       if (paramdn.e(paramInt1, paramInt2, paramInt3, this.a)) {
+/* 33 */         pj.m[this.a].d(paramdn, paramInt1, paramInt2, paramInt3, paramInt4);
+/* 34 */         paramdn.a(paramInt1 + 0.5F, paramInt2 + 0.5F, paramInt3 + 0.5F, localpj.br.d(), (localpj.br.b() + 1.0F) / 2.0F, localpj.br.c() * 0.8F);
+/* 35 */         paramgm.a -= 1;
+/*    */       }
+/*    */ 
+/*    */     }
+/*    */ 
+/* 44 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ii
+ * JD-Core Version:    0.6.0
+ */

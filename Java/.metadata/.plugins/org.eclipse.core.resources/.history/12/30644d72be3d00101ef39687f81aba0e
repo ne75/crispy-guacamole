@@ -1,0 +1,18 @@
+package com.jcraft.jorbis;
+
+class Floor1$EchstateFloor1
+{
+  int[] codewords;
+  float[] curve;
+  long frameno;
+  long codes;
+
+  Floor1$EchstateFloor1(Floor1 paramFloor1)
+  {
+  }
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     com.jcraft.jorbis.Floor1.EchstateFloor1
+ * JD-Core Version:    0.6.0
+ */

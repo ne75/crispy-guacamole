@@ -1,0 +1,23 @@
+/*      */ import java.awt.Canvas;
+/*      */ import java.awt.Component;
+/*      */ import java.awt.Frame;
+/*      */ import net.minecraft.client.Minecraft;
+/*      */ import net.minecraft.client.MinecraftApplet;
+/*      */ 
+/*      */ public final class hi extends Minecraft
+/*      */ {
+/*      */   public hi(Component paramComponent, Canvas paramCanvas, MinecraftApplet paramMinecraftApplet, int paramInt1, int paramInt2, boolean paramBoolean, Frame paramFrame)
+/*      */   {
+/* 1576 */     super(paramComponent, paramCanvas, paramMinecraftApplet, paramInt1, paramInt2, paramBoolean);
+/*      */   }
+/*      */   public void a(it paramit) {
+/* 1579 */     this.a.removeAll();
+/* 1580 */     this.a.add(new be(paramit), "Center");
+/* 1581 */     this.a.validate();
+/*      */   }
+/*      */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hi
+ * JD-Core Version:    0.6.0
+ */

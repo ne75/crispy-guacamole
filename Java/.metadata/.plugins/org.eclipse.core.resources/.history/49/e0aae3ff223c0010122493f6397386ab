@@ -1,0 +1,49 @@
+/*    */ public class if extends pg
+/*    */ {
+/* 14 */   private boolean[] f = new boolean[10];
+/*    */   private hq g;
+/*    */ 
+/*    */   public if(hq paramhq)
+/*    */   {
+/* 18 */     this.g = paramhq;
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt, boolean paramBoolean) {
+/* 22 */     int i = -1;
+/* 23 */     if (paramInt == this.g.k.b) i = 0;
+/* 24 */     if (paramInt == this.g.m.b) i = 1;
+/* 25 */     if (paramInt == this.g.l.b) i = 2;
+/* 26 */     if (paramInt == this.g.n.b) i = 3;
+/* 27 */     if (paramInt == this.g.o.b) i = 4;
+/* 28 */     if (paramInt == this.g.t.b) i = 5;
+/* 29 */     if (i >= 0)
+/* 30 */       this.f[i] = paramBoolean;
+/*    */   }
+/*    */ 
+/*    */   public void a()
+/*    */   {
+/* 35 */     for (int i = 0; i < 10; i++)
+/* 36 */       this.f[i] = false;
+/*    */   }
+/*    */ 
+/*    */   public void a(eu parameu)
+/*    */   {
+/* 41 */     this.a = 0.0F;
+/* 42 */     this.b = 0.0F;
+/* 43 */     if (this.f[0] != 0) this.b += 1.0F;
+/* 44 */     if (this.f[1] != 0) this.b -= 1.0F;
+/* 45 */     if (this.f[2] != 0) this.a += 1.0F;
+/* 46 */     if (this.f[3] != 0) this.a -= 1.0F;
+/* 47 */     this.d = this.f[4];
+/* 48 */     this.e = this.f[5];
+/* 49 */     if (this.e) {
+/* 50 */       this.a = (float)(this.a * 0.3D);
+/* 51 */       this.b = (float)(this.b * 0.3D);
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     if
+ * JD-Core Version:    0.6.0
+ */

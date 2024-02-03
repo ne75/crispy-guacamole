@@ -1,0 +1,25 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class fa extends pj
+/*    */ {
+/*    */   public fa(int paramInt1, int paramInt2)
+/*    */   {
+/* 11 */     super(paramInt1, paramInt2, ic.c);
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt)
+/*    */   {
+/* 16 */     if (paramInt <= 1) return 4;
+/* 17 */     return this.bh;
+/*    */   }
+/*    */ 
+/*    */   public int a(Random paramRandom)
+/*    */   {
+/* 22 */     return 0;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fa
+ * JD-Core Version:    0.6.0
+ */

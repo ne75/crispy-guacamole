@@ -1,0 +1,205 @@
+package main;
+
+import java.util.*;
+
+public class NumToWords {
+    public static void main(String[] args){
+	
+	Scanner s = new Scanner(System.in);
+	
+	double number;
+	int cents = 0;
+	int dollars = 0;
+	int[] digits = new int[6];
+	
+	String wordAmount = "";
+	
+	while (true) {	 
+	    System.out.print("Enter Dollar Amount: ");
+	    number = s.nextDouble();
+	    number = (int)(number * 100 + 0.5)/100.0;
+	    if (number > 1000000 || number < .01){
+		System.out.println("Invalid Input\n");
+		continue;
+	    }
+	    cents = (int)((number * 100) % 100);
+	    dollars = (int)number;
+	    digits = convertToArray(dollars);
+	    wordAmount = makeNumberString(digits);
+	    System.out.println(wordAmount + "and " + cents + "/100 dollars\n");
+	}
+    }
+    
+    static int[] convertToArray(int n){
+	int[] digits = new int[6];
+	if (n > 1000000){
+	    return null;
+	}
+	
+	int num = n;
+	int i = 0;
+	
+	while ((num * 10) / 10 > 0){
+	    digits[i] = num % 10;
+	    num /= 10;
+	    i++;
+	}
+	
+	return digits;
+	
+    }
+    
+    static String makeNumberString(int[] digits){
+	String s = "";
+	String nextWord = "";
+	
+	if (digits[1] != 1){
+	    switch (digits[0]){
+	    case 1: nextWord = "One "; break;
+	    case 2: nextWord = "Two "; break;
+	    case 3: nextWord = "Three "; break;
+	    case 4: nextWord = "Four "; break;
+	    case 5: nextWord = "Five "; break;
+	    case 6: nextWord = "Six "; break;
+	    case 7: nextWord = "Seven "; break;
+	    case 8: nextWord = "Eight "; break;
+	    case 9: nextWord = "Nine "; break;
+	    case 0: nextWord = ""; break;
+	    }
+	} else {
+	    nextWord = "";
+	}
+	
+	s = nextWord + s;
+	
+	switch (digits[1]){
+	case 1:
+	    switch (digits[0]){
+		case 1: nextWord = "Eleven "; break;
+		case 2: nextWord = "Twelve "; break;
+		case 3: nextWord = "Thirteen "; break;
+		case 4: nextWord = "Fourteen "; break;
+		case 5: nextWord = "Fifteen "; break;
+		case 6: nextWord = "Sixteen "; break;
+		case 7: nextWord = "Seventeen "; break;
+		case 8: nextWord = "Eighteen "; break;
+		case 9: nextWord = "Nineteen "; break;
+		case 0: nextWord = "Ten "; break;
+		}
+	    break;
+	case 2: nextWord = "Twenty "; break;
+	case 3: nextWord = "Thirty "; break;
+	case 4: nextWord = "Forty "; break;
+	case 5: nextWord = "Fifty "; break;
+	case 6: nextWord = "Sixty "; break;
+	case 7: nextWord = "Seventy "; break;
+	case 8: nextWord = "Eighty "; break;
+	case 9: nextWord = "Ninety "; break;
+	case 0: nextWord = ""; break;
+	}
+	
+	s = nextWord + s;
+	
+	switch (digits[2]){
+	case 1: nextWord = "One hundred "; break;
+	case 2: nextWord = "Two hundred "; break;
+	case 3: nextWord = "Three hundred "; break;
+	case 4: nextWord = "Four hundred "; break;
+	case 5: nextWord = "Five hundred "; break;
+	case 6: nextWord = "Six hundred "; break;
+	case 7: nextWord = "Seven hundred "; break;
+	case 8: nextWord = "Eight hundred "; break;
+	case 9: nextWord = "Nine hundred "; break;
+	case 0: nextWord = ""; break;
+	}
+	
+	s = nextWord + s;
+	
+	switch (digits[3]){
+	case 1: nextWord = "One thousand "; break;
+	case 2: nextWord = "Two thousand "; break;
+	case 3: nextWord = "Three thousand "; break;
+	case 4: nextWord = "Four thousand "; break;
+	case 5: nextWord = "Five thousand "; break;
+	case 6: nextWord = "Six thousand "; break;
+	case 7: nextWord = "Seven thousand "; break;
+	case 8: nextWord = "Eight thousand "; break;
+	case 9: nextWord = "Nine thousand "; break;
+	case 0: nextWord = "thousand"; break;
+	}
+	
+	s = nextWord + s;
+	
+	switch (digits[4]){
+	case 1:
+	    switch (digits[3]){
+		case 1: nextWord = "Eleven thousand "; break;
+		case 2: nextWord = "Twelve thousand "; break;
+		case 3: nextWord = "Thirteen thousand "; break;
+		case 4: nextWord = "Fourteen thousand "; break;
+		case 5: nextWord = "Fifteen thousand "; break;
+		case 6: nextWord = "Sixteen thousand "; break;
+		case 7: nextWord = "Seventeen thousand "; break;
+		case 8: nextWord = "Eighteen thousand "; break;
+		case 9: nextWord = "Nineteen thousand "; break;
+		case 0: nextWord = "Ten thousand "; break;
+		}
+	    break;
+	case 2: nextWord = "Twenty "; break;
+	case 3: nextWord = "Thirty "; break;
+	case 4: nextWord = "Forty "; break;
+	case 5: nextWord = "Fifty "; break;
+	case 6: nextWord = "Sixty "; break;
+	case 7: nextWord = "Seventy "; break;
+	case 8: nextWord = "Eighty "; break;
+	case 9: nextWord = "Ninety "; break;
+	case 0: nextWord = ""; break;
+	}
+	
+	s = nextWord + s;
+	
+	switch (digits[5]){
+	case 1: nextWord = "One hundred "; break;
+	case 2: nextWord = "Two hundred "; break;
+	case 3: nextWord = "Three hundred "; break;
+	case 4: nextWord = "Four hundred "; break;
+	case 5: nextWord = "Five hundred "; break;
+	case 6: nextWord = "Six hundred "; break;
+	case 7: nextWord = "Seven hundred "; break;
+	case 8: nextWord = "Eight hundred "; break;
+	case 9: nextWord = "Nine hundred "; break;
+	case 0: nextWord = ""; break;
+	}
+	
+	s = nextWord + s;
+	
+	return s;
+    }
+}
+
+/* Sample Output */
+
+/*
+Enter Dollar Amount: 54.00
+Fifty Four and 0/100 dollars
+
+Enter Dollar Amount: 975231.10
+Nine hundred Seventy Five thousand Two hundred Thirty One and 10/100 dollars
+
+Enter Dollar Amount: 32004.99
+Thirty Two thousand Four and 99/100 dollars
+
+Enter Dollar Amount: 3018.01
+Three thousand Eighteen and 1/100 dollars
+
+Enter Dollar Amount: 3.00
+Three and 0/100 dollars
+
+Enter Dollar Amount: 1000.00
+One thousand and 0/100 dollars
+
+Enter Dollar Amount: 900001.01
+Nine hundred thousand One and 1/100 dollars
+
+Enter Dollar Amount: 
+*/

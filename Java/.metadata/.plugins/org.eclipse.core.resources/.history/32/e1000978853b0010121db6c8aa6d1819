@@ -1,0 +1,17 @@
+/*    */ public class cw extends jp
+/*    */ {
+/*    */   public cw()
+/*    */   {
+/*  7 */     super(6, 0.0F);
+/*    */   }
+/*    */ 
+/*    */   public cw(float paramFloat)
+/*    */   {
+/* 12 */     super(6, paramFloat);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     cw
+ * JD-Core Version:    0.6.0
+ */

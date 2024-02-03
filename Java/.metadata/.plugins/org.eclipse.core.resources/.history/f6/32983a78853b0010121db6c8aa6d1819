@@ -1,0 +1,28 @@
+/*    */ public class qy
+/*    */ {
+/*  7 */   private String[][] a = { { "X", "X", "#" } };
+/*    */ 
+/* 13 */   private Object[][] b = { { pj.x, pj.w, eo.m, eo.l, eo.n }, { eo.p, eo.t, eo.o, eo.x, eo.E } };
+/*    */ 
+/*    */   public void a(fg paramfg)
+/*    */   {
+/* 19 */     for (int i = 0; i < this.b[0].length; i++) {
+/* 20 */       Object localObject = this.b[0][i];
+/*    */ 
+/* 22 */       for (int j = 0; j < this.b.length - 1; j++) {
+/* 23 */         eo localeo = (eo)this.b[(j + 1)][i];
+/* 24 */         paramfg.a(new gm(localeo), new Object[] { this.a[j], Character.valueOf('#'), eo.B, Character.valueOf('X'), localObject });
+/*    */       }
+/*    */ 
+/*    */     }
+/*    */ 
+/* 32 */     paramfg.a(new gm(eo.i, 1), new Object[] { " #X", "# X", " #X", Character.valueOf('X'), eo.I, Character.valueOf('#'), eo.B });
+/*    */ 
+/* 40 */     paramfg.a(new gm(eo.j, 4), new Object[] { "X", "#", "Y", Character.valueOf('Y'), eo.J, Character.valueOf('X'), eo.an, Character.valueOf('#'), eo.B });
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qy
+ * JD-Core Version:    0.6.0
+ */

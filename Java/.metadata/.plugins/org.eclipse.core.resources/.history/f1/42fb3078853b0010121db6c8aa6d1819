@@ -1,0 +1,83 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class or
+/*    */ {
+/*  8 */   protected float j = 0.0F;
+/*    */ 
+/*    */   protected void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5) {
+/* 11 */     float f1 = (paramInt5 >> 24 & 0xFF) / 255.0F;
+/* 12 */     float f2 = (paramInt5 >> 16 & 0xFF) / 255.0F;
+/* 13 */     float f3 = (paramInt5 >> 8 & 0xFF) / 255.0F;
+/* 14 */     float f4 = (paramInt5 & 0xFF) / 255.0F;
+/* 15 */     jy localjy = jy.a;
+/* 16 */     GL11.glEnable(3042);
+/* 17 */     GL11.glDisable(3553);
+/* 18 */     GL11.glBlendFunc(770, 771);
+/* 19 */     GL11.glColor4f(f2, f3, f4, f1);
+/* 20 */     localjy.b();
+/* 21 */     localjy.a(paramInt1, paramInt4, 0.0D);
+/* 22 */     localjy.a(paramInt3, paramInt4, 0.0D);
+/* 23 */     localjy.a(paramInt3, paramInt2, 0.0D);
+/* 24 */     localjy.a(paramInt1, paramInt2, 0.0D);
+/* 25 */     localjy.a();
+/* 26 */     GL11.glEnable(3553);
+/* 27 */     GL11.glDisable(3042);
+/*    */   }
+/*    */ 
+/*    */   protected void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6) {
+/* 31 */     float f1 = (paramInt5 >> 24 & 0xFF) / 255.0F;
+/* 32 */     float f2 = (paramInt5 >> 16 & 0xFF) / 255.0F;
+/* 33 */     float f3 = (paramInt5 >> 8 & 0xFF) / 255.0F;
+/* 34 */     float f4 = (paramInt5 & 0xFF) / 255.0F;
+/*    */ 
+/* 36 */     float f5 = (paramInt6 >> 24 & 0xFF) / 255.0F;
+/* 37 */     float f6 = (paramInt6 >> 16 & 0xFF) / 255.0F;
+/* 38 */     float f7 = (paramInt6 >> 8 & 0xFF) / 255.0F;
+/* 39 */     float f8 = (paramInt6 & 0xFF) / 255.0F;
+/* 40 */     GL11.glDisable(3553);
+/* 41 */     GL11.glEnable(3042);
+/* 42 */     GL11.glDisable(3008);
+/* 43 */     GL11.glBlendFunc(770, 771);
+/* 44 */     GL11.glShadeModel(7425);
+/*    */ 
+/* 46 */     jy localjy = jy.a;
+/* 47 */     localjy.b();
+/* 48 */     localjy.a(f2, f3, f4, f1);
+/* 49 */     localjy.a(paramInt3, paramInt2, 0.0D);
+/* 50 */     localjy.a(paramInt1, paramInt2, 0.0D);
+/* 51 */     localjy.a(f6, f7, f8, f5);
+/* 52 */     localjy.a(paramInt1, paramInt4, 0.0D);
+/* 53 */     localjy.a(paramInt3, paramInt4, 0.0D);
+/* 54 */     localjy.a();
+/*    */ 
+/* 56 */     GL11.glShadeModel(7424);
+/* 57 */     GL11.glDisable(3042);
+/* 58 */     GL11.glEnable(3008);
+/* 59 */     GL11.glEnable(3553);
+/*    */   }
+/*    */ 
+/*    */   public void a(nh paramnh, String paramString, int paramInt1, int paramInt2, int paramInt3) {
+/* 63 */     paramnh.a(paramString, paramInt1 - paramnh.a(paramString) / 2, paramInt2, paramInt3);
+/*    */   }
+/*    */ 
+/*    */   public void b(nh paramnh, String paramString, int paramInt1, int paramInt2, int paramInt3) {
+/* 67 */     paramnh.a(paramString, paramInt1, paramInt2, paramInt3);
+/*    */   }
+/*    */ 
+/*    */   public void b(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6) {
+/* 71 */     float f1 = 0.0039063F;
+/* 72 */     float f2 = 0.0039063F;
+/* 73 */     jy localjy = jy.a;
+/* 74 */     localjy.b();
+/* 75 */     localjy.a(paramInt1 + 0, paramInt2 + paramInt6, this.j, (paramInt3 + 0) * f1, (paramInt4 + paramInt6) * f2);
+/* 76 */     localjy.a(paramInt1 + paramInt5, paramInt2 + paramInt6, this.j, (paramInt3 + paramInt5) * f1, (paramInt4 + paramInt6) * f2);
+/* 77 */     localjy.a(paramInt1 + paramInt5, paramInt2 + 0, this.j, (paramInt3 + paramInt5) * f1, (paramInt4 + 0) * f2);
+/* 78 */     localjy.a(paramInt1 + 0, paramInt2 + 0, this.j, (paramInt3 + 0) * f1, (paramInt4 + 0) * f2);
+/* 79 */     localjy.a();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     or
+ * JD-Core Version:    0.6.0
+ */

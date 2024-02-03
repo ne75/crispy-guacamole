@@ -1,0 +1,21 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class ry extends ev
+/*    */ {
+/*    */   private float a;
+/*    */ 
+/*    */   public ry(hl paramhl, float paramFloat1, float paramFloat2)
+/*    */   {
+/* 11 */     super(paramhl, paramFloat1 * paramFloat2);
+/* 12 */     this.a = paramFloat2;
+/*    */   }
+/*    */ 
+/*    */   protected void a(jv paramjv, float paramFloat) {
+/* 16 */     GL11.glScalef(this.a, this.a, this.a);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ry
+ * JD-Core Version:    0.6.0
+ */

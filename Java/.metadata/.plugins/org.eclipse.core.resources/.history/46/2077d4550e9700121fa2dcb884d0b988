@@ -1,0 +1,41 @@
+ package library;
+
+public class testPatron {
+    public static void main(String[] args){
+	
+	Book book = new Book("ABC", "Lucy Wells");
+	Book book2 = new Book("Hiking", "Go Trails");
+	
+	Patron pat1 = new Patron();
+        Patron pat2 = new Patron("Harry", "Wells", "nash8294", book);
+        
+        System.out.println("" + pat2);
+	
+        pat1.setFirstName("Mary");
+        pat1.setLastName("Suzel");
+        pat1.setLibraryNumber("nash8293"); 
+        pat1.setBook(book2); 
+        System.out.println("" + pat1);
+	
+    }
+
+}
+
+/* Sample Output */
+
+/*
+The specs of the Patron are
+	First Name: Harry
+	Last Name: Wells
+	Library Number: nash8294
+	The specs of the Book are
+	Title: ABC
+	Author: Lucy Wells
+The specs of the Patron are
+	First Name: Mary
+	Last Name: Suzel
+	Library Number: nash8293
+	The specs of the Book are
+	Title: Hiking
+	Author: Go Trails
+*/

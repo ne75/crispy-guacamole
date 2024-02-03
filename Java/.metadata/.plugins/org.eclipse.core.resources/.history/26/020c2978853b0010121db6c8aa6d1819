@@ -1,0 +1,37 @@
+/*    */ import java.io.DataInput;
+/*    */ import java.io.DataOutput;
+/*    */ 
+/*    */ public class lf extends fy
+/*    */ {
+/*    */   public int a;
+/*    */ 
+/*    */   public lf()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public lf(int paramInt)
+/*    */   {
+/* 12 */     this.a = paramInt;
+/*    */   }
+/*    */ 
+/*    */   void a(DataOutput paramDataOutput) {
+/* 16 */     paramDataOutput.writeInt(this.a);
+/*    */   }
+/*    */ 
+/*    */   void a(DataInput paramDataInput) {
+/* 20 */     this.a = paramDataInput.readInt();
+/*    */   }
+/*    */ 
+/*    */   public byte a() {
+/* 24 */     return 3;
+/*    */   }
+/*    */ 
+/*    */   public String toString() {
+/* 28 */     return "" + this.a;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     lf
+ * JD-Core Version:    0.6.0
+ */

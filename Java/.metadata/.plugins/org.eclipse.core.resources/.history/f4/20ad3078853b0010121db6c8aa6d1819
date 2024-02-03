@@ -1,0 +1,20 @@
+/*    */ public class ok
+/*    */ {
+/*  9 */   private Object[][] a = { { pj.ah, new gm(eo.n, 9) }, { pj.ai, new gm(eo.m, 9) }, { pj.ax, new gm(eo.l, 9) }, { pj.O, new gm(eo.aU, 9, 4) } };
+/*    */ 
+/*    */   public void a(fg paramfg)
+/*    */   {
+/* 22 */     for (int i = 0; i < this.a.length; i++) {
+/* 23 */       pj localpj = (pj)this.a[i][0];
+/* 24 */       gm localgm = (gm)this.a[i][1];
+/* 25 */       paramfg.a(new gm(localpj), new Object[] { "###", "###", "###", Character.valueOf('#'), localgm });
+/*    */ 
+/* 32 */       paramfg.a(localgm, new Object[] { "#", Character.valueOf('#'), localpj });
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ok
+ * JD-Core Version:    0.6.0
+ */

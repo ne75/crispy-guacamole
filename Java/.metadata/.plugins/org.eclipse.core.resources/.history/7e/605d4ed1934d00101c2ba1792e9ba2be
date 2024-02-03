@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+        <AbsoluteLayout android:id="@+id/absoluteLayout1" android:layout_width="480dip" android:layout_height="854dip" android:background="@drawable/background">
+            <EditText android:layout_x="0dip" android:id="@+id/editText1" android:layout_width="480dip" android:text="EditText" android:layout_height="400dip" android:layout_y="0dip" android:gravity="top" android:capitalize="sentences"></EditText>
+        </AbsoluteLayout>
+    </LinearLayout>
+

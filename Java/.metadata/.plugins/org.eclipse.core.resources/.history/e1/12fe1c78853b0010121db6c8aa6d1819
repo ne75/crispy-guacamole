@@ -1,0 +1,24 @@
+/*    */ public enum gg
+/*    */ {
+/*    */   public final String z;
+/*    */   public final int A;
+/*    */   public final int B;
+/*    */   public final int C;
+/*    */   public final int D;
+/*    */ 
+/*    */   private gg(String paramInt2, int paramInt3, int paramInt4, int arg6, int arg7)
+/*    */   {
+/* 58 */     this.z = paramInt2;
+/* 59 */     this.A = paramInt3;
+/* 60 */     this.B = paramInt4;
+/*    */     int i1;
+/* 61 */     this.C = i1;
+/*    */     int i2;
+/* 62 */     this.D = i2;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gg
+ * JD-Core Version:    0.6.0
+ */

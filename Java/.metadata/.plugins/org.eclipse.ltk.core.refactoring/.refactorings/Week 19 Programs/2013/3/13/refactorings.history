@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;Week 30 Programs/src/library&apos;&#x0A;- Original project: &apos;Week 19 Programs&apos;&#x0A;- Destination element: &apos;Week 30 Programs/src/library&apos;&#x0A;- Original elements:&#x0A;     main.testBook.java&#x0A;     main.Book.java&#x0A;     main.testPatron.java&#x0A;     main.Patron.java" description="Copy compilation units" destination="=Week 30 Programs/src&lt;library" element1="/src&lt;main{testBook.java" element2="/src&lt;main{Book.java" element3="/src&lt;main{testPatron.java" element4="/src&lt;main{Patron.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1364408508340" units="4" version="1.0"/>
+</session>

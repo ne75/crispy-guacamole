@@ -1,0 +1,30 @@
+/*    */ public class as extends bl
+/*    */ {
+/*    */   public as(int paramInt)
+/*    */   {
+/*  9 */     super(paramInt);
+/*    */ 
+/* 11 */     d(0);
+/* 12 */     a(true);
+/*    */   }
+/*    */ 
+/*    */   public int a(gm paramgm)
+/*    */   {
+/* 18 */     return pj.ab.a(2, cu.c(paramgm.i()));
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt)
+/*    */   {
+/* 24 */     return paramInt;
+/*    */   }
+/*    */ 
+/*    */   public String b(gm paramgm)
+/*    */   {
+/* 29 */     return super.a() + "." + hm.a[cu.c(paramgm.i())];
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     as
+ * JD-Core Version:    0.6.0
+ */

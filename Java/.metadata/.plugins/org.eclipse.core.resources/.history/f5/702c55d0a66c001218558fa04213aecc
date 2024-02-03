@@ -1,0 +1,54 @@
+package main;
+
+import java.util.*;
+
+public class MatheyDriver {
+    public static void main(String[] args) {
+	
+	int classChoice;
+	Scanner s = new Scanner(System.in);
+	
+	do {
+	    System.out.println(
+			"1) Basic Math\n" +
+			"2) Velocity/Diplacement\n" +
+			"3) TBD");
+
+	    System.out.print("Select a Class of Functions: ");
+
+	    classChoice = s.nextInt();
+
+	    switch (classChoice){
+	    case 1:
+		basicMath();
+		break;
+	    case 2:
+		velocityDisplacement();
+		break;
+	    case 3:
+		
+		break;
+	    default:
+		System.out.println("Invalid input");
+	    }
+		
+	} while (true);
+	
+    }
+    
+    static void basicMath(){
+	BasicMath bm = new BasicMath();
+
+	System.out.println("\n*** BasicMath Class Demo ***\n");
+	System.out.println("1. log(100, 10, 4) = " + bm.log(100, 10, 4));
+	System.out.println("2. factors(10) = " + bm.factors(10));
+	int[] temp = bm.factors(10);
+	
+    }
+    
+    static void velocityDisplacement(){
+	Velocity_Displacement vd = new Velocity_Displacement();
+	
+    }
+
+}

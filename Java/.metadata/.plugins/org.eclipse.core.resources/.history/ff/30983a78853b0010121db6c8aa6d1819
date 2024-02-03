@@ -1,0 +1,35 @@
+/*    */ import java.net.ConnectException;
+/*    */ import java.net.UnknownHostException;
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ 
+/*    */ class qw extends Thread
+/*    */ {
+/*    */   qw(qc paramqc, Minecraft paramMinecraft, String paramString, int paramInt)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void run()
+/*    */   {
+/*    */     try
+/*    */     {
+/* 23 */       qc.a(this.d, new jg(this.a, this.b, this.c));
+/* 24 */       if (qc.a(this.d)) return;
+/* 25 */       qc.b(this.d).a(new ja(this.a.i.b));
+/*    */     } catch (UnknownHostException localUnknownHostException) {
+/* 27 */       if (qc.a(this.d)) return;
+/* 28 */       this.a.a(new dh("connect.failed", "disconnect.genericReason", new Object[] { "Unknown host '" + this.b + "'" }));
+/*    */     } catch (ConnectException localConnectException) {
+/* 30 */       if (qc.a(this.d)) return;
+/* 31 */       this.a.a(new dh("connect.failed", "disconnect.genericReason", new Object[] { localConnectException.getMessage() }));
+/*    */     } catch (Exception localException) {
+/* 33 */       if (qc.a(this.d)) return;
+/* 34 */       localException.printStackTrace();
+/* 35 */       this.a.a(new dh("connect.failed", "disconnect.genericReason", new Object[] { localException.toString() }));
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qw
+ * JD-Core Version:    0.6.0
+ */

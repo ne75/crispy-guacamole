@@ -1,0 +1,61 @@
+/*    */ public class ic
+/*    */ {
+/*  4 */   public static final ic a = new ih();
+/*  5 */   public static final ic b = new ic();
+/*  6 */   public static final ic c = new ic().f();
+/*  7 */   public static final ic d = new ic();
+/*  8 */   public static final ic e = new ic();
+/*  9 */   public static final ic f = new ne();
+/* 10 */   public static final ic g = new ne();
+/* 11 */   public static final ic h = new ic().f();
+/* 12 */   public static final ic i = new ae();
+/* 13 */   public static final ic j = new ic();
+/* 14 */   public static final ic k = new ic().f();
+/* 15 */   public static final ic l = new ih();
+/* 16 */   public static final ic m = new ic();
+/* 17 */   public static final ic n = new ae();
+/* 18 */   public static final ic o = new ic();
+/* 19 */   public static final ic p = new ic().f();
+/* 20 */   public static final ic q = new ic();
+/* 21 */   public static final ic r = new ic();
+/* 22 */   public static final ic s = new ae();
+/* 23 */   public static final ic t = new ic();
+/* 24 */   public static final ic u = new ic();
+/* 25 */   public static final ic v = new ic();
+/* 26 */   public static final ic w = new ic();
+/* 27 */   public static final ic x = new ic();
+/* 28 */   public static final ic y = new ic();
+/*    */   private boolean z;
+/*    */ 
+/*    */   public boolean d()
+/*    */   {
+/* 33 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public boolean a()
+/*    */   {
+/* 41 */     return true;
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/* 45 */     return true;
+/*    */   }
+/*    */ 
+/*    */   public boolean c() {
+/* 49 */     return true;
+/*    */   }
+/*    */ 
+/*    */   private ic f() {
+/* 53 */     this.z = true;
+/* 54 */     return this;
+/*    */   }
+/*    */ 
+/*    */   public boolean e() {
+/* 58 */     return this.z;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ic
+ * JD-Core Version:    0.6.0
+ */

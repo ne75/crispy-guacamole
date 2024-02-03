@@ -1,0 +1,41 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class fc extends qg
+/*    */ {
+/*    */   protected fc(int paramInt1, int paramInt2)
+/*    */   {
+/* 12 */     super(paramInt1, paramInt2);
+/*    */ 
+/* 14 */     float f = 0.4F;
+/* 15 */     a(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
+/*    */   }
+/*    */ 
+/*    */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, Random paramRandom) {
+/* 19 */     super.a(paramdn, paramInt1, paramInt2, paramInt3, paramRandom);
+/*    */ 
+/* 21 */     if ((paramdn.l(paramInt1, paramInt2 + 1, paramInt3) >= 9) && 
+/* 22 */       (paramRandom.nextInt(5) == 0)) {
+/* 23 */       int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/* 24 */       if (i < 15)
+/* 25 */         paramdn.c(paramInt1, paramInt2, paramInt3, i + 1);
+/*    */       else
+/* 27 */         c(paramdn, paramInt1, paramInt2, paramInt3, paramRandom);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void c(dn paramdn, int paramInt1, int paramInt2, int paramInt3, Random paramRandom)
+/*    */   {
+/* 34 */     paramdn.b(paramInt1, paramInt2, paramInt3, 0);
+/* 35 */     Object localObject = new rz();
+/* 36 */     if (paramRandom.nextInt(10) == 0) {
+/* 37 */       localObject = new fx();
+/*    */     }
+/* 39 */     if (!((kz)localObject).a(paramdn, paramRandom, paramInt1, paramInt2, paramInt3))
+/* 40 */       paramdn.b(paramInt1, paramInt2, paramInt3, this.bi);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fc
+ * JD-Core Version:    0.6.0
+ */

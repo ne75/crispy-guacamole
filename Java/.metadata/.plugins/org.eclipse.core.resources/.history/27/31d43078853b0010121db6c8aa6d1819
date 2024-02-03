@@ -1,0 +1,41 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class on extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public int b;
+/*    */ 
+/*    */   public on()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public on(nl paramnl, int paramInt)
+/*    */   {
+/* 20 */     this.a = paramnl.aw;
+/* 21 */     this.b = paramInt;
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream) {
+/* 25 */     this.a = paramDataInputStream.readInt();
+/* 26 */     this.b = paramDataInputStream.readByte();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 30 */     paramDataOutputStream.writeInt(this.a);
+/* 31 */     paramDataOutputStream.writeByte(this.b);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 35 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 39 */     return 5;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     on
+ * JD-Core Version:    0.6.0
+ */

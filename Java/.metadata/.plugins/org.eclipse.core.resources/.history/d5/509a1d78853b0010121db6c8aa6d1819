@@ -1,0 +1,26 @@
+/*    */ public abstract class go
+/*    */ {
+/*    */   protected ia a;
+/*    */ 
+/*    */   public abstract void a(kp paramkp, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat);
+/*    */ 
+/*    */   protected void a(String paramString)
+/*    */   {
+/* 29 */     gs localgs = this.a.e;
+/* 30 */     localgs.b(localgs.a(paramString));
+/*    */   }
+/*    */ 
+/*    */   public void a(ia paramia)
+/*    */   {
+/* 44 */     this.a = paramia;
+/*    */   }
+/*    */ 
+/*    */   public nh a() {
+/* 48 */     return this.a.a();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     go
+ * JD-Core Version:    0.6.0
+ */

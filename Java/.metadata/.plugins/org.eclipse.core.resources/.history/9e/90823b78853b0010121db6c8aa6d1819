@@ -1,0 +1,152 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class rm extends af
+/*     */ {
+/*  15 */   public float a = 0.0F; public float b = 0.0F;
+/*  16 */   public float c = 0.0F; public float f = 0.0F;
+/*     */ 
+/*  18 */   public float g = 0.0F; public float h = 0.0F;
+/*  19 */   public float i = 0.0F; public float j = 0.0F;
+/*     */ 
+/*  21 */   private float k = 0.0F;
+/*  22 */   private float l = 0.0F;
+/*  23 */   private float m = 0.0F;
+/*     */ 
+/*  25 */   private float n = 0.0F; private float o = 0.0F; private float p = 0.0F;
+/*     */ 
+/*     */   public rm(dn paramdn) {
+/*  28 */     super(paramdn);
+/*  29 */     this.I = "/mob/squid.png";
+/*  30 */     a(0.95F, 0.95F);
+/*  31 */     this.l = (1.0F / (this.bm.nextFloat() + 1.0F) * 0.2F);
+/*     */   }
+/*     */ 
+/*     */   public void a(jw paramjw) {
+/*  35 */     super.a(paramjw);
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw) {
+/*  39 */     super.b(paramjw);
+/*     */   }
+/*     */ 
+/*     */   protected String f() {
+/*  43 */     return null;
+/*     */   }
+/*     */ 
+/*     */   protected String g() {
+/*  47 */     return null;
+/*     */   }
+/*     */ 
+/*     */   protected String h_() {
+/*  51 */     return null;
+/*     */   }
+/*     */ 
+/*     */   protected float j() {
+/*  55 */     return 0.4F;
+/*     */   }
+/*     */ 
+/*     */   protected int i() {
+/*  59 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   protected void o()
+/*     */   {
+/*  64 */     int i1 = this.bm.nextInt(3) + 1;
+/*  65 */     for (int i2 = 0; i2 < i1; i2++)
+/*  66 */       a(new gm(eo.aU, 1, 0), 0.0F);
+/*     */   }
+/*     */ 
+/*     */   public boolean a(eu parameu)
+/*     */   {
+/*  71 */     gm localgm = parameu.f.b();
+/*  72 */     if ((localgm != null) && (localgm.c == eo.au.ba)) {
+/*  73 */       parameu.f.a(parameu.f.c, new gm(eo.aE));
+/*  74 */       return true;
+/*     */     }
+/*  76 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean j_() {
+/*  80 */     return this.aB.a(this.aP.b(0.0D, -0.6000000238418579D, 0.0D), ic.f, this);
+/*     */   }
+/*     */ 
+/*     */   public void m()
+/*     */   {
+/*  86 */     super.m();
+/*     */ 
+/*  88 */     this.b = this.a;
+/*  89 */     this.f = this.c;
+/*     */ 
+/*  91 */     this.h = this.g;
+/*  92 */     this.j = this.i;
+/*     */ 
+/*  94 */     this.g += this.l;
+/*  95 */     if (this.g > 6.283186F) {
+/*  96 */       this.g -= 6.283186F;
+/*  97 */       if (this.bm.nextInt(10) == 0) this.l = (1.0F / (this.bm.nextFloat() + 1.0F) * 0.2F);
+/*     */     }
+/*     */ 
+/* 100 */     if (j_()) {
+/* 101 */       if (this.g < 3.141593F) {
+/* 102 */         f1 = this.g / 3.141593F;
+/* 103 */         this.i = (gd.a(f1 * f1 * 3.141593F) * 3.141593F * 0.25F);
+/*     */ 
+/* 105 */         if (f1 > 0.75D) {
+/* 106 */           this.k = 1.0F;
+/* 107 */           this.m = 1.0F;
+/*     */         } else {
+/* 109 */           this.m *= 0.8F;
+/*     */         }
+/*     */       } else {
+/* 112 */         this.i = 0.0F;
+/* 113 */         this.k *= 0.9F;
+/* 114 */         this.m *= 0.99F;
+/*     */       }
+/*     */ 
+/* 117 */       if (!this.P) {
+/* 118 */         this.aI = (this.n * this.k);
+/* 119 */         this.aJ = (this.o * this.k);
+/* 120 */         this.aK = (this.p * this.k);
+/*     */       }
+/*     */ 
+/* 123 */       float f1 = gd.a(this.aI * this.aI + this.aK * this.aK);
+/*     */ 
+/* 125 */       this.B += (-(float)Math.atan2(this.aI, this.aK) * 180.0F / 3.141593F - this.B) * 0.1F;
+/* 126 */       this.aL = this.B;
+/* 127 */       this.c += 3.141593F * this.m * 1.5F;
+/* 128 */       this.a += (-(float)Math.atan2(f1, this.aJ) * 180.0F / 3.141593F - this.a) * 0.1F;
+/*     */     } else {
+/* 130 */       this.i = (gd.e(gd.a(this.g)) * 3.141593F * 0.25F);
+/*     */ 
+/* 132 */       if (!this.P)
+/*     */       {
+/* 134 */         this.aI = 0.0D;
+/* 135 */         this.aJ -= 0.08D;
+/* 136 */         this.aJ *= 0.9800000190734863D;
+/* 137 */         this.aK = 0.0D;
+/*     */       }
+/*     */ 
+/* 141 */       this.a = (float)(this.a + (-90.0F - this.a) * 0.02D);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void b(float paramFloat1, float paramFloat2)
+/*     */   {
+/* 147 */     d(this.aI, this.aJ, this.aK);
+/*     */   }
+/*     */ 
+/*     */   protected void d_()
+/*     */   {
+/* 154 */     if ((this.bm.nextInt(50) == 0) || (!this.br) || ((this.n == 0.0F) && (this.o == 0.0F) && (this.p == 0.0F))) {
+/* 155 */       float f1 = this.bm.nextFloat() * 3.141593F * 2.0F;
+/* 156 */       this.n = (gd.b(f1) * 0.2F);
+/* 157 */       this.o = (-0.1F + this.bm.nextFloat() * 0.2F);
+/* 158 */       this.p = (gd.a(f1) * 0.2F);
+/*     */     }
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     rm
+ * JD-Core Version:    0.6.0
+ */

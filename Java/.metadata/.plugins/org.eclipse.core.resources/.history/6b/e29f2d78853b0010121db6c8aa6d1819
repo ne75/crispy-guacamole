@@ -1,0 +1,23 @@
+/*    */ public class mw extends eo
+/*    */ {
+/*    */   public mw(int paramInt)
+/*    */   {
+/*  9 */     super(paramInt);
+/*    */ 
+/* 11 */     a(true);
+/* 12 */     d(0);
+/*    */   }
+/*    */ 
+/*    */   public String b(gm paramgm)
+/*    */   {
+/* 18 */     if (paramgm.i() == 1) {
+/* 19 */       return "item.charcoal";
+/*    */     }
+/* 21 */     return "item.coal";
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mw
+ * JD-Core Version:    0.6.0
+ */

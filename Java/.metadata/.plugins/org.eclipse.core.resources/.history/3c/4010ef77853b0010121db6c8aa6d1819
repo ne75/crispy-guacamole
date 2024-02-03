@@ -1,0 +1,12 @@
+/*    */ package org.lwjgl.util.glu.tessellation;
+/*    */ 
+/*    */ class CachedVertex
+/*    */ {
+/* 88 */   public double[] coords = new double[3];
+/*    */   public Object data;
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/lwjgl_util.jar
+ * Qualified Name:     org.lwjgl.util.glu.tessellation.CachedVertex
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,32 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class jd extends pj
+/*    */ {
+/*    */   public jd(int paramInt1, int paramInt2)
+/*    */   {
+/* 11 */     super(paramInt1, paramInt2, ic.d);
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt, Random paramRandom) {
+/* 15 */     if (this.bi == pj.I.bi) return eo.k.ba;
+/* 16 */     if (this.bi == pj.aw.bi) return eo.l.ba;
+/* 17 */     if (this.bi == pj.N.bi) return eo.aU.ba;
+/* 18 */     return this.bi;
+/*    */   }
+/*    */ 
+/*    */   public int a(Random paramRandom) {
+/* 22 */     if (this.bi == pj.N.bi) return 4 + paramRandom.nextInt(5);
+/* 23 */     return 1;
+/*    */   }
+/*    */ 
+/*    */   protected int b(int paramInt)
+/*    */   {
+/* 29 */     if (this.bi == pj.N.bi) return 4;
+/* 30 */     return 0;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     jd
+ * JD-Core Version:    0.6.0
+ */

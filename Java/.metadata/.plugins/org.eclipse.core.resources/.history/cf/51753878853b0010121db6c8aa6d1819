@@ -1,0 +1,132 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class pl extends ig
+/*     */   implements do
+/*     */ {
+/*     */   public float a;
+/*     */   public float b;
+/*  16 */   private int d = 0;
+/*  17 */   public int c = 1;
+/*     */ 
+/*     */   public pl(dn paramdn) {
+/*  20 */     super(paramdn);
+/*  21 */     this.I = "/mob/slime.png";
+/*  22 */     this.c = (1 << this.bm.nextInt(3));
+/*  23 */     this.aX = 0.0F;
+/*  24 */     this.d = (this.bm.nextInt(20) + 10);
+/*  25 */     e(this.c);
+/*     */   }
+/*     */ 
+/*     */   public void e(int paramInt) {
+/*  29 */     this.c = paramInt;
+/*  30 */     a(0.6F * paramInt, 0.6F * paramInt);
+/*  31 */     this.S = (paramInt * paramInt);
+/*  32 */     b(this.aF, this.aG, this.aH);
+/*     */   }
+/*     */ 
+/*     */   public void a(jw paramjw) {
+/*  36 */     super.a(paramjw);
+/*  37 */     paramjw.a("Size", this.c - 1);
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw) {
+/*  41 */     super.b(paramjw);
+/*  42 */     this.c = (paramjw.e("Size") + 1);
+/*     */   }
+/*     */ 
+/*     */   public void q_() {
+/*  46 */     this.b = this.a;
+/*  47 */     boolean bool = this.aQ;
+/*  48 */     super.q_();
+/*  49 */     if ((this.aQ) && (!bool)) {
+/*  50 */       for (int i = 0; i < this.c * 8; i++) {
+/*  51 */         float f1 = this.bm.nextFloat() * 3.141593F * 2.0F;
+/*  52 */         float f2 = this.bm.nextFloat() * 0.5F + 0.5F;
+/*  53 */         float f3 = gd.a(f1) * this.c * 0.5F * f2;
+/*  54 */         float f4 = gd.b(f1) * this.c * 0.5F * f2;
+/*  55 */         this.aB.a("slime", this.aF + f3, this.aP.b, this.aH + f4, 0.0D, 0.0D, 0.0D);
+/*     */       }
+/*     */ 
+/*  58 */       if (this.c > 2) {
+/*  59 */         this.aB.a(this, "mob.slime", j(), ((this.bm.nextFloat() - this.bm.nextFloat()) * 0.2F + 1.0F) / 0.8F);
+/*     */       }
+/*  61 */       this.a = -0.5F;
+/*     */     }
+/*  63 */     this.a *= 0.6F;
+/*     */   }
+/*     */ 
+/*     */   protected void d_() {
+/*  67 */     eu localeu = this.aB.a(this, 16.0D);
+/*  68 */     if (localeu != null) {
+/*  69 */       b(localeu, 10.0F);
+/*     */     }
+/*  71 */     if ((this.aQ) && (this.d-- <= 0)) {
+/*  72 */       this.d = (this.bm.nextInt(20) + 10);
+/*  73 */       if (localeu != null) {
+/*  74 */         this.d /= 3;
+/*     */       }
+/*  76 */       this.at = true;
+/*  77 */       if (this.c > 1) {
+/*  78 */         this.aB.a(this, "mob.slime", j(), ((this.bm.nextFloat() - this.bm.nextFloat()) * 0.2F + 1.0F) * 0.8F);
+/*     */       }
+/*     */ 
+/*  81 */       this.a = 1.0F;
+/*  82 */       this.aq = (1.0F - this.bm.nextFloat() * 2.0F);
+/*  83 */       this.ar = (1 * this.c);
+/*     */     } else {
+/*  85 */       this.at = false;
+/*  86 */       if (this.aQ)
+/*  87 */         this.aq = (this.ar = 0.0F);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void F()
+/*     */   {
+/*  93 */     if ((this.c > 1) && (this.S == 0)) {
+/*  94 */       for (int i = 0; i < 4; i++) {
+/*  95 */         float f1 = (i % 2 - 0.5F) * this.c / 4.0F;
+/*  96 */         float f2 = (i / 2 - 0.5F) * this.c / 4.0F;
+/*  97 */         pl localpl = new pl(this.aB);
+/*  98 */         localpl.e(this.c / 2);
+/*  99 */         localpl.c(this.aF + f1, this.aG + 0.5D, this.aH + f2, this.bm.nextFloat() * 360.0F, 0.0F);
+/* 100 */         this.aB.a(localpl);
+/*     */       }
+/*     */     }
+/* 103 */     super.F();
+/*     */   }
+/*     */ 
+/*     */   public void b(eu parameu) {
+/* 107 */     if ((this.c > 1) && 
+/* 108 */       (e(parameu)) && (f(parameu) < 0.6D * this.c) && 
+/* 109 */       (parameu.a(this, this.c)))
+/* 110 */       this.aB.a(this, "mob.slimeattack", 1.0F, (this.bm.nextFloat() - this.bm.nextFloat()) * 0.2F + 1.0F);
+/*     */   }
+/*     */ 
+/*     */   protected String g()
+/*     */   {
+/* 118 */     return "mob.slime";
+/*     */   }
+/*     */ 
+/*     */   protected String h_() {
+/* 122 */     return "mob.slime";
+/*     */   }
+/*     */ 
+/*     */   protected int i() {
+/* 126 */     if (this.c == 1) return eo.aK.ba;
+/* 127 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public boolean c() {
+/* 131 */     ib localib = this.aB.b(gd.b(this.aF), gd.b(this.aH));
+/* 132 */     return ((this.c == 1) || (this.aB.k > 0)) && (this.bm.nextInt(10) == 0) && (localib.a(987234911L).nextInt(10) == 0) && (this.aG < 16.0D);
+/*     */   }
+/*     */ 
+/*     */   protected float j() {
+/* 136 */     return 0.6F;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     pl
+ * JD-Core Version:    0.6.0
+ */

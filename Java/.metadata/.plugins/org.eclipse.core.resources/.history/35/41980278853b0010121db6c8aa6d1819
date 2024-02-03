@@ -1,0 +1,51 @@
+/*    */ public class bb extends aq
+/*    */ {
+/*    */   public bb(dn paramdn)
+/*    */   {
+/* 13 */     super(paramdn);
+/* 14 */     this.I = "/mob/cow.png";
+/* 15 */     a(0.9F, 1.3F);
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw) {
+/* 19 */     super.a(paramjw);
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 23 */     super.b(paramjw);
+/*    */   }
+/*    */ 
+/*    */   protected String f() {
+/* 27 */     return "mob.cow";
+/*    */   }
+/*    */ 
+/*    */   protected String g() {
+/* 31 */     return "mob.cowhurt";
+/*    */   }
+/*    */ 
+/*    */   protected String h_() {
+/* 35 */     return "mob.cowhurt";
+/*    */   }
+/*    */ 
+/*    */   protected float j() {
+/* 39 */     return 0.4F;
+/*    */   }
+/*    */ 
+/*    */   protected int i() {
+/* 43 */     return eo.aD.ba;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(eu parameu) {
+/* 47 */     gm localgm = parameu.f.b();
+/* 48 */     if ((localgm != null) && (localgm.c == eo.au.ba)) {
+/* 49 */       parameu.f.a(parameu.f.c, new gm(eo.aE));
+/* 50 */       return true;
+/*    */     }
+/* 52 */     return false;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     bb
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,80 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class bn extends ey
+/*    */ {
+/*    */   public bn(dn paramdn)
+/*    */   {
+/* 12 */     super(paramdn);
+/* 13 */     this.I = "/mob/spider.png";
+/* 14 */     a(1.4F, 0.9F);
+/* 15 */     this.av = 0.8F;
+/*    */   }
+/*    */ 
+/*    */   public double l() {
+/* 19 */     return this.aZ * 0.75D - 0.5D;
+/*    */   }
+/*    */ 
+/*    */   protected nl e_() {
+/* 23 */     float f = a(1.0F);
+/* 24 */     if (f < 0.5F) {
+/* 25 */       double d = 16.0D;
+/* 26 */       return this.aB.a(this, d);
+/*    */     }
+/* 28 */     return null;
+/*    */   }
+/*    */ 
+/*    */   protected String f() {
+/* 32 */     return "mob.spider";
+/*    */   }
+/*    */ 
+/*    */   protected String g() {
+/* 36 */     return "mob.spider";
+/*    */   }
+/*    */ 
+/*    */   protected String h_() {
+/* 40 */     return "mob.spiderdeath";
+/*    */   }
+/*    */ 
+/*    */   protected void a(nl paramnl, float paramFloat) {
+/* 44 */     float f1 = a(1.0F);
+/* 45 */     if ((f1 > 0.5F) && (this.bm.nextInt(100) == 0)) {
+/* 46 */       this.d = null;
+/* 47 */       return;
+/*    */     }
+/*    */ 
+/* 50 */     if ((paramFloat > 2.0F) && (paramFloat < 6.0F) && (this.bm.nextInt(10) == 0)) {
+/* 51 */       if (this.aQ) {
+/* 52 */         double d1 = paramnl.aF - this.aF;
+/* 53 */         double d2 = paramnl.aH - this.aH;
+/* 54 */         float f2 = gd.a(d1 * d1 + d2 * d2);
+/* 55 */         this.aI = (d1 / f2 * 0.5D * 0.800000011920929D + this.aI * 0.2000000029802322D);
+/* 56 */         this.aK = (d2 / f2 * 0.5D * 0.800000011920929D + this.aK * 0.2000000029802322D);
+/* 57 */         this.aJ = 0.4000000059604645D;
+/*    */       }
+/*    */     }
+/* 60 */     else super.a(paramnl, paramFloat);
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw)
+/*    */   {
+/* 65 */     super.a(paramjw);
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 69 */     super.b(paramjw);
+/*    */   }
+/*    */ 
+/*    */   protected int i() {
+/* 73 */     return eo.I.ba;
+/*    */   }
+/*    */ 
+/*    */   public boolean n()
+/*    */   {
+/* 82 */     return this.aR;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     bn
+ * JD-Core Version:    0.6.0
+ */

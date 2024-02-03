@@ -1,0 +1,64 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class lz extends rp
+/*    */ {
+/*    */   private float a;
+/*    */ 
+/*    */   public lz(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6)
+/*    */   {
+/* 13 */     super(paramdn, paramDouble1, paramDouble2, paramDouble3, paramDouble4, paramDouble5, paramDouble6);
+/* 14 */     this.aI = (this.aI * 0.009999999776482582D + paramDouble4);
+/* 15 */     this.aJ = (this.aJ * 0.009999999776482582D + paramDouble5);
+/* 16 */     this.aK = (this.aK * 0.009999999776482582D + paramDouble6);
+/* 17 */     paramDouble1 += (this.bm.nextFloat() - this.bm.nextFloat()) * 0.05F;
+/* 18 */     paramDouble2 += (this.bm.nextFloat() - this.bm.nextFloat()) * 0.05F;
+/* 19 */     paramDouble3 += (this.bm.nextFloat() - this.bm.nextFloat()) * 0.05F;
+/*    */ 
+/* 21 */     this.a = this.g;
+/* 22 */     this.i = (this.j = this.k = 1.0F);
+/*    */ 
+/* 24 */     this.f = ((int)(8.0D / (Math.random() * 0.8D + 0.2D)) + 4);
+/* 25 */     this.bj = true;
+/* 26 */     this.b = 48;
+/*    */   }
+/*    */ 
+/*    */   public void a(jy paramjy, float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6) {
+/* 30 */     float f = (this.e + paramFloat1) / this.f;
+/* 31 */     this.g = (this.a * (1.0F - f * f * 0.5F));
+/* 32 */     super.a(paramjy, paramFloat1, paramFloat2, paramFloat3, paramFloat4, paramFloat5, paramFloat6);
+/*    */   }
+/*    */ 
+/*    */   public float a(float paramFloat) {
+/* 36 */     float f1 = (this.e + paramFloat) / this.f;
+/* 37 */     if (f1 < 0.0F) f1 = 0.0F;
+/* 38 */     if (f1 > 1.0F) f1 = 1.0F;
+/* 39 */     float f2 = super.a(paramFloat);
+/*    */ 
+/* 41 */     return f2 * f1 + (1.0F - f1);
+/*    */   }
+/*    */ 
+/*    */   public void q_()
+/*    */   {
+/* 46 */     this.aC = this.aF;
+/* 47 */     this.aD = this.aG;
+/* 48 */     this.aE = this.aH;
+/*    */ 
+/* 50 */     if (this.e++ >= this.f) F();
+/*    */ 
+/* 52 */     d(this.aI, this.aJ, this.aK);
+/* 53 */     this.aI *= 0.9599999785423279D;
+/* 54 */     this.aJ *= 0.9599999785423279D;
+/* 55 */     this.aK *= 0.9599999785423279D;
+/*    */ 
+/* 57 */     if (this.aQ)
+/*    */     {
+/* 59 */       this.aI *= 0.699999988079071D;
+/* 60 */       this.aK *= 0.699999988079071D;
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     lz
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,65 @@
+/*    */ import java.nio.ByteBuffer;
+/*    */ import java.nio.ByteOrder;
+/*    */ import java.nio.FloatBuffer;
+/*    */ import java.nio.IntBuffer;
+/*    */ import java.util.ArrayList;
+/*    */ import java.util.List;
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class ej
+/*    */ {
+/*  9 */   private static List a = new ArrayList();
+/* 10 */   private static List b = new ArrayList();
+/*    */ 
+/*    */   public static synchronized int a(int paramInt) {
+/* 13 */     int i = GL11.glGenLists(paramInt);
+/* 14 */     a.add(Integer.valueOf(i));
+/* 15 */     a.add(Integer.valueOf(paramInt));
+/* 16 */     return i;
+/*    */   }
+/*    */ 
+/*    */   public static synchronized void a(IntBuffer paramIntBuffer) {
+/* 20 */     GL11.glGenTextures(paramIntBuffer);
+/* 21 */     for (int i = paramIntBuffer.position(); i < paramIntBuffer.limit(); i++)
+/* 22 */       b.add(Integer.valueOf(paramIntBuffer.get(i)));
+/*    */   }
+/*    */ 
+/*    */   public static synchronized void a()
+/*    */   {
+/* 27 */     for (int i = 0; i < a.size(); i += 2) {
+/* 28 */       GL11.glDeleteLists(((Integer)a.get(i)).intValue(), ((Integer)a.get(i + 1)).intValue());
+/*    */     }
+/* 30 */     IntBuffer localIntBuffer = c(b.size());
+/* 31 */     localIntBuffer.flip();
+/* 32 */     GL11.glDeleteTextures(localIntBuffer);
+/* 33 */     for (int j = 0; j < b.size(); j++) {
+/* 34 */       localIntBuffer.put(((Integer)b.get(j)).intValue());
+/*    */     }
+/* 36 */     localIntBuffer.flip();
+/* 37 */     GL11.glDeleteTextures(localIntBuffer);
+/* 38 */     a.clear();
+/* 39 */     b.clear();
+/*    */   }
+/*    */ 
+/*    */   public static synchronized ByteBuffer b(int paramInt)
+/*    */   {
+/* 57 */     ByteBuffer localByteBuffer = ByteBuffer.allocateDirect(paramInt).order(ByteOrder.nativeOrder());
+/*    */ 
+/* 60 */     return localByteBuffer;
+/*    */   }
+/*    */ 
+/*    */   public static IntBuffer c(int paramInt)
+/*    */   {
+/* 72 */     return b(paramInt << 2).asIntBuffer();
+/*    */   }
+/*    */ 
+/*    */   public static FloatBuffer d(int paramInt)
+/*    */   {
+/* 80 */     return b(paramInt << 2).asFloatBuffer();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ej
+ * JD-Core Version:    0.6.0
+ */

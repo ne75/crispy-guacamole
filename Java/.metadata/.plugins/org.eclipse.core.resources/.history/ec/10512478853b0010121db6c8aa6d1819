@@ -1,0 +1,16 @@
+/*   */ public class it
+/*   */ {
+/*   */   public final String a;
+/*   */   public final Throwable b;
+/*   */ 
+/*   */   public it(String paramString, Throwable paramThrowable)
+/*   */   {
+/* 8 */     this.a = paramString;
+/* 9 */     this.b = paramThrowable;
+/*   */   }
+/*   */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     it
+ * JD-Core Version:    0.6.0
+ */

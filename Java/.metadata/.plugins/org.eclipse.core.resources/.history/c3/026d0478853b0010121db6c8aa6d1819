@@ -1,0 +1,34 @@
+/*    */ public class cc
+/*    */ {
+/*    */   private final b[] b;
+/*    */   public final int a;
+/*    */   private int c;
+/*    */ 
+/*    */   public cc(b[] paramArrayOfb)
+/*    */   {
+/* 12 */     this.b = paramArrayOfb;
+/* 13 */     this.a = paramArrayOfb.length;
+/*    */   }
+/*    */ 
+/*    */   public void a()
+/*    */   {
+/* 21 */     this.c += 1;
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/* 25 */     return this.c >= this.b.length;
+/*    */   }
+/*    */ 
+/*    */   public ax a(nl paramnl)
+/*    */   {
+/* 33 */     double d1 = this.b[this.c].a + (int)(paramnl.aY + 1.0F) * 0.5D;
+/* 34 */     double d2 = this.b[this.c].b;
+/* 35 */     double d3 = this.b[this.c].c + (int)(paramnl.aY + 1.0F) * 0.5D;
+/* 36 */     return ax.b(d1, d2, d3);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     cc
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,104 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class cf extends kz
+/*     */ {
+/*     */   private int a;
+/*     */ 
+/*     */   public cf(int paramInt)
+/*     */   {
+/*  14 */     this.a = paramInt;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(dn paramdn, Random paramRandom, int paramInt1, int paramInt2, int paramInt3) {
+/*  18 */     paramInt1 -= 8;
+/*  19 */     paramInt3 -= 8;
+/*  20 */     while ((paramInt2 > 0) && (paramdn.d(paramInt1, paramInt2, paramInt3))) {
+/*  21 */       paramInt2--;
+/*     */     }
+/*  23 */     paramInt2 -= 4;
+/*     */ 
+/*  25 */     boolean[] arrayOfBoolean = new boolean[2048];
+/*     */ 
+/*  27 */     int i = paramRandom.nextInt(4) + 4;
+/*  28 */     for (int j = 0; j < i; j++) {
+/*  29 */       double d1 = paramRandom.nextDouble() * 6.0D + 3.0D;
+/*  30 */       double d2 = paramRandom.nextDouble() * 4.0D + 2.0D;
+/*  31 */       double d3 = paramRandom.nextDouble() * 6.0D + 3.0D;
+/*     */ 
+/*  33 */       double d4 = paramRandom.nextDouble() * (16.0D - d1 - 2.0D) + 1.0D + d1 / 2.0D;
+/*  34 */       double d5 = paramRandom.nextDouble() * (8.0D - d2 - 4.0D) + 2.0D + d2 / 2.0D;
+/*  35 */       double d6 = paramRandom.nextDouble() * (16.0D - d3 - 2.0D) + 1.0D + d3 / 2.0D;
+/*     */ 
+/*  37 */       for (int i1 = 1; i1 < 15; i1++)
+/*  38 */         for (int i2 = 1; i2 < 15; i2++)
+/*  39 */           for (int i3 = 1; i3 < 7; i3++) {
+/*  40 */             double d7 = (i1 - d4) / (d1 / 2.0D);
+/*  41 */             double d8 = (i3 - d5) / (d2 / 2.0D);
+/*  42 */             double d9 = (i2 - d6) / (d3 / 2.0D);
+/*  43 */             double d10 = d7 * d7 + d8 * d8 + d9 * d9;
+/*  44 */             if (d10 >= 1.0D) continue; arrayOfBoolean[((i1 * 16 + i2) * 8 + i3)] = true;
+/*     */           }
+/*     */     }
+/*     */     int k;
+/*     */     int m;
+/*     */     int n;
+/*  50 */     for (j = 0; j < 16; j++) {
+/*  51 */       for (k = 0; k < 16; k++) {
+/*  52 */         for (m = 0; m < 8; m++) {
+/*  53 */           n = (arrayOfBoolean[((j * 16 + k) * 8 + m)] == 0) && (((j < 15) && (arrayOfBoolean[(((j + 1) * 16 + k) * 8 + m)] != 0)) || ((j > 0) && (arrayOfBoolean[(((j - 1) * 16 + k) * 8 + m)] != 0)) || ((k < 15) && (arrayOfBoolean[((j * 16 + (k + 1)) * 8 + m)] != 0)) || ((k > 0) && (arrayOfBoolean[((j * 16 + (k - 1)) * 8 + m)] != 0)) || ((m < 7) && (arrayOfBoolean[((j * 16 + k) * 8 + (m + 1))] != 0)) || ((m > 0) && (arrayOfBoolean[((j * 16 + k) * 8 + (m - 1))] != 0))) ? 1 : 0;
+/*     */ 
+/*  61 */           if (n != 0) {
+/*  62 */             ic localic = paramdn.f(paramInt1 + j, paramInt2 + m, paramInt3 + k);
+/*  63 */             if ((m >= 4) && (localic.d())) return false;
+/*  64 */             if ((m < 4) && (!localic.a()) && (paramdn.a(paramInt1 + j, paramInt2 + m, paramInt3 + k) != this.a)) return false;
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/*  71 */     for (j = 0; j < 16; j++) {
+/*  72 */       for (k = 0; k < 16; k++) {
+/*  73 */         for (m = 0; m < 8; m++) {
+/*  74 */           if (arrayOfBoolean[((j * 16 + k) * 8 + m)] != 0) {
+/*  75 */             paramdn.b(paramInt1 + j, paramInt2 + m, paramInt3 + k, m >= 4 ? 0 : this.a);
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     }
+/*     */ 
+/*  81 */     for (j = 0; j < 16; j++) {
+/*  82 */       for (k = 0; k < 16; k++) {
+/*  83 */         for (m = 4; m < 8; m++) {
+/*  84 */           if ((arrayOfBoolean[((j * 16 + k) * 8 + m)] == 0) || 
+/*  85 */             (paramdn.a(paramInt1 + j, paramInt2 + m - 1, paramInt3 + k) != pj.v.bi) || (paramdn.a(cs.a, paramInt1 + j, paramInt2 + m, paramInt3 + k) <= 0)) continue;
+/*  86 */           paramdn.b(paramInt1 + j, paramInt2 + m - 1, paramInt3 + k, pj.u.bi);
+/*     */         }
+/*     */ 
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/*  93 */     if (pj.m[this.a].bt == ic.g) {
+/*  94 */       for (j = 0; j < 16; j++) {
+/*  95 */         for (k = 0; k < 16; k++) {
+/*  96 */           for (m = 0; m < 8; m++) {
+/*  97 */             n = (arrayOfBoolean[((j * 16 + k) * 8 + m)] == 0) && (((j < 15) && (arrayOfBoolean[(((j + 1) * 16 + k) * 8 + m)] != 0)) || ((j > 0) && (arrayOfBoolean[(((j - 1) * 16 + k) * 8 + m)] != 0)) || ((k < 15) && (arrayOfBoolean[((j * 16 + (k + 1)) * 8 + m)] != 0)) || ((k > 0) && (arrayOfBoolean[((j * 16 + (k - 1)) * 8 + m)] != 0)) || ((m < 7) && (arrayOfBoolean[((j * 16 + k) * 8 + (m + 1))] != 0)) || ((m > 0) && (arrayOfBoolean[((j * 16 + k) * 8 + (m - 1))] != 0))) ? 1 : 0;
+/*     */ 
+/* 105 */             if ((n == 0) || 
+/* 106 */               ((m >= 4) && (paramRandom.nextInt(2) == 0)) || (!paramdn.f(paramInt1 + j, paramInt2 + m, paramInt3 + k).a())) continue;
+/* 107 */             paramdn.b(paramInt1 + j, paramInt2 + m, paramInt3 + k, pj.t.bi);
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/* 114 */     return true;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     cf
+ * JD-Core Version:    0.6.0
+ */

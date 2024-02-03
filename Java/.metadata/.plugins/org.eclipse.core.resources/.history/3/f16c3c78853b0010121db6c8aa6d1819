@@ -1,0 +1,27 @@
+/*    */ public class sc extends kp
+/*    */ {
+/*  9 */   public String[] a = { "", "", "", "" };
+/*    */ 
+/* 12 */   public int b = -1;
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 15 */     super.b(paramjw);
+/* 16 */     paramjw.a("Text1", this.a[0]);
+/* 17 */     paramjw.a("Text2", this.a[1]);
+/* 18 */     paramjw.a("Text3", this.a[2]);
+/* 19 */     paramjw.a("Text4", this.a[3]);
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw) {
+/* 23 */     super.a(paramjw);
+/* 24 */     for (int i = 0; i < 4; i++) {
+/* 25 */       this.a[i] = paramjw.i("Text" + (i + 1));
+/* 26 */       if (this.a[i].length() <= 15) continue; this.a[i] = this.a[i].substring(0, 15);
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     sc
+ * JD-Core Version:    0.6.0
+ */

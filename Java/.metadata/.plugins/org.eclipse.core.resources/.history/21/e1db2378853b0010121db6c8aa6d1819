@@ -1,0 +1,18 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class il extends pj
+/*    */ {
+/*    */   public il(int paramInt1, int paramInt2, ic paramic)
+/*    */   {
+/* 10 */     super(paramInt1, paramInt2, paramic);
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt, Random paramRandom) {
+/* 14 */     return eo.aR.ba;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     il
+ * JD-Core Version:    0.6.0
+ */

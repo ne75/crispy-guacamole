@@ -1,0 +1,17 @@
+public abstract interface ao
+{
+  public abstract ib a(dn paramdn, int paramInt1, int paramInt2);
+
+  public abstract void a(dn paramdn, ib paramib);
+
+  public abstract void b(dn paramdn, ib paramib);
+
+  public abstract void a();
+
+  public abstract void b();
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ao
+ * JD-Core Version:    0.6.0
+ */

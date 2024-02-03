@@ -1,0 +1,11 @@
+package org.lwjgl.opengl;
+
+public final class SUNSliceAccum
+{
+  public static final int GL_SLICE_ACCUM_SUN = 34252;
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/lwjgl.jar
+ * Qualified Name:     org.lwjgl.opengl.SUNSliceAccum
+ * JD-Core Version:    0.6.0
+ */

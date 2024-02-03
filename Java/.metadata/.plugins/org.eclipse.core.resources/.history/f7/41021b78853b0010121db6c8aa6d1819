@@ -1,0 +1,132 @@
+/*     */ import java.awt.image.BufferedImage;
+/*     */ import java.io.DataOutputStream;
+/*     */ import java.io.File;
+/*     */ import java.io.FileOutputStream;
+/*     */ import java.nio.ByteBuffer;
+/*     */ import java.text.DateFormat;
+/*     */ import java.text.SimpleDateFormat;
+/*     */ import java.util.Date;
+/*     */ import javax.imageio.ImageIO;
+/*     */ import org.lwjgl.BufferUtils;
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ 
+/*     */ public class ff
+/*     */ {
+/*  20 */   private static DateFormat a = new SimpleDateFormat("yyyy-MM-dd_HH.mm.ss");
+/*     */   private static ByteBuffer b;
+/*     */   private static byte[] c;
+/*     */   private static int[] d;
+/*     */   private int e;
+/*     */   private DataOutputStream f;
+/*     */   private byte[] g;
+/*     */   private int h;
+/*     */   private int i;
+/*     */   private File j;
+/*     */ 
+/*     */   public static String a(File paramFile, int paramInt1, int paramInt2)
+/*     */   {
+/*     */     try
+/*     */     {
+/*  27 */       File localFile1 = new File(paramFile, "screenshots");
+/*  28 */       localFile1.mkdir();
+/*     */ 
+/*  30 */       if ((b == null) || (b.capacity() < paramInt1 * paramInt2)) {
+/*  31 */         b = BufferUtils.createByteBuffer(paramInt1 * paramInt2 * 3);
+/*     */       }
+/*     */ 
+/*  34 */       if ((d == null) || (d.length < paramInt1 * paramInt2 * 3)) {
+/*  35 */         c = new byte[paramInt1 * paramInt2 * 3];
+/*  36 */         d = new int[paramInt1 * paramInt2];
+/*     */       }
+/*  38 */       GL11.glPixelStorei(3333, 1);
+/*  39 */       GL11.glPixelStorei(3317, 1);
+/*     */ 
+/*  41 */       b.clear();
+/*  42 */       GL11.glReadPixels(0, 0, paramInt1, paramInt2, 6407, 5121, b);
+/*  43 */       b.clear();
+/*     */ 
+/*  45 */       String str = "" + a.format(new Date());
+/*     */ 
+/*  47 */       int k = 1;
+/*     */       File localFile2;
+/*  48 */       while ((localFile2 = new File(localFile1, str + (k == 1 ? "" : new StringBuilder().append("_").append(k).toString()) + ".png")).exists()) {
+/*  49 */         k++;
+/*     */       }
+/*     */ 
+/*  52 */       b.get(c);
+/*  53 */       for (int m = 0; m < paramInt1; m++) {
+/*  54 */         for (int n = 0; n < paramInt2; n++) {
+/*  55 */           int i1 = m + (paramInt2 - n - 1) * paramInt1;
+/*  56 */           int i2 = c[(i1 * 3 + 0)] & 0xFF;
+/*  57 */           int i3 = c[(i1 * 3 + 1)] & 0xFF;
+/*  58 */           int i4 = c[(i1 * 3 + 2)] & 0xFF;
+/*  59 */           int i5 = 0xFF000000 | i2 << 16 | i3 << 8 | i4;
+/*  60 */           d[(m + n * paramInt1)] = i5;
+/*     */         }
+/*     */       }
+/*  63 */       BufferedImage localBufferedImage = new BufferedImage(paramInt1, paramInt2, 1);
+/*  64 */       localBufferedImage.setRGB(0, 0, paramInt1, paramInt2, d, 0, paramInt1);
+/*  65 */       ImageIO.write(localBufferedImage, "png", localFile2);
+/*     */ 
+/*  67 */       return "Saved screenshot as " + localFile2.getName();
+/*     */     } catch (Exception localException) {
+/*  69 */       localException.printStackTrace();
+/*  70 */     }return "Failed to save: " + localException;
+/*     */   }
+/*     */ 
+/*     */   public ff(File paramFile, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*  82 */     this.h = paramInt1;
+/*  83 */     this.i = paramInt2;
+/*  84 */     this.e = paramInt3;
+/*     */ 
+/*  86 */     File localFile = new File(paramFile, "screenshots");
+/*  87 */     localFile.mkdir();
+/*     */ 
+/*  89 */     String str = "huge_" + a.format(new Date());
+/*  90 */     int k = 1;
+/*  91 */     while ((this.j = new File(localFile, str + (k == 1 ? "" : new StringBuilder().append("_").append(k).toString()) + ".tga")).exists()) {
+/*  92 */       k++;
+/*     */     }
+/*     */ 
+/*  95 */     byte[] arrayOfByte = new byte[18];
+/*  96 */     arrayOfByte[2] = 2;
+/*  97 */     arrayOfByte[12] = (byte)(paramInt1 % 256);
+/*  98 */     arrayOfByte[13] = (byte)(paramInt1 / 256);
+/*  99 */     arrayOfByte[14] = (byte)(paramInt2 % 256);
+/* 100 */     arrayOfByte[15] = (byte)(paramInt2 / 256);
+/* 101 */     arrayOfByte[16] = 24;
+/*     */ 
+/* 106 */     this.g = new byte[paramInt1 * paramInt3 * 3];
+/* 107 */     this.f = new DataOutputStream(new FileOutputStream(this.j));
+/* 108 */     this.f.write(arrayOfByte);
+/*     */   }
+/*     */ 
+/*     */   public void a(ByteBuffer paramByteBuffer, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 112 */     int k = paramInt3;
+/* 113 */     int m = paramInt4;
+/* 114 */     if (k > this.h - paramInt1) k = this.h - paramInt1;
+/* 115 */     if (m > this.i - paramInt2) m = this.i - paramInt2;
+/* 116 */     this.e = m;
+/*     */ 
+/* 118 */     for (int n = 0; n < m; n++) {
+/* 119 */       paramByteBuffer.position((paramInt4 - m) * paramInt3 * 3 + n * paramInt3 * 3);
+/* 120 */       int i1 = (paramInt1 + n * this.h) * 3;
+/* 121 */       paramByteBuffer.get(this.g, i1, k * 3);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a() {
+/* 126 */     this.f.write(this.g, 0, this.h * 3 * this.e);
+/*     */   }
+/*     */ 
+/*     */   public String b() {
+/* 130 */     this.f.close();
+/* 131 */     return "Saved screenshot as " + this.j.getName();
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ff
+ * JD-Core Version:    0.6.0
+ */

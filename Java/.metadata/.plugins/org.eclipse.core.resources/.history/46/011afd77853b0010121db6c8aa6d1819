@@ -1,0 +1,29 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class ap extends kz
+/*    */ {
+/*    */   private int a;
+/*    */ 
+/*    */   public ap(int paramInt)
+/*    */   {
+/* 12 */     this.a = paramInt;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(dn paramdn, Random paramRandom, int paramInt1, int paramInt2, int paramInt3) {
+/* 16 */     for (int i = 0; i < 64; i++) {
+/* 17 */       int j = paramInt1 + paramRandom.nextInt(8) - paramRandom.nextInt(8);
+/* 18 */       int k = paramInt2 + paramRandom.nextInt(4) - paramRandom.nextInt(4);
+/* 19 */       int m = paramInt3 + paramRandom.nextInt(8) - paramRandom.nextInt(8);
+/* 20 */       if ((!paramdn.d(j, k, m)) || 
+/* 21 */         (!((qg)pj.m[this.a]).g(paramdn, j, k, m))) continue;
+/* 22 */       paramdn.b(j, k, m, this.a);
+/*    */     }
+/*    */ 
+/* 27 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ap
+ * JD-Core Version:    0.6.0
+ */

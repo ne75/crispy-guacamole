@@ -1,0 +1,19 @@
+/*    */ public class qh extends cl
+/*    */ {
+/*  6 */   private static pj[] bg = { pj.u, pj.v, pj.E, pj.F, pj.aS, pj.aU, pj.aW };
+/*    */ 
+/*    */   public qh(int paramInt, ay paramay)
+/*    */   {
+/* 11 */     super(paramInt, 1, paramay, bg);
+/*    */   }
+/*    */ 
+/*    */   public boolean a(pj parampj) {
+/* 15 */     if (parampj == pj.aS) return true;
+/* 16 */     return parampj == pj.aU;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qh
+ * JD-Core Version:    0.6.0
+ */

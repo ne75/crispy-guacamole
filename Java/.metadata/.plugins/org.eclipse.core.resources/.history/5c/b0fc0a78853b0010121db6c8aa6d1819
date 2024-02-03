@@ -1,0 +1,227 @@
+/*     */ import java.io.BufferedReader;
+/*     */ import java.io.InputStreamReader;
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.Calendar;
+/*     */ import java.util.Date;
+/*     */ import java.util.List;
+/*     */ import java.util.Random;
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ import org.lwjgl.util.glu.GLU;
+/*     */ 
+/*     */ public class dz extends by
+/*     */ {
+/*  56 */   private static final Random h = new Random();
+/*     */ 
+/*  99 */   String[] a = { " *   * * *   * *** *** *** *** *** ***", " ** ** * **  * *   *   * * * * *    * ", " * * * * * * * **  *   **  *** **   * ", " *   * * *  ** *   *   * * * * *    * ", " *   * * *   * *** *** * * * * *    * " };
+/*     */   private ng[][] i;
+/* 108 */   private float k = 0.0F;
+/*     */   private String l;
+/*     */ 
+/*     */   public dz()
+/*     */   {
+/* 115 */     this.l = "missingno";
+/*     */     try {
+/* 117 */       ArrayList localArrayList = new ArrayList();
+/* 118 */       BufferedReader localBufferedReader = new BufferedReader(new InputStreamReader(dz.class.getResourceAsStream("/title/splashes.txt")));
+/* 119 */       String str = "";
+/* 120 */       while ((str = localBufferedReader.readLine()) != null) {
+/* 121 */         str = str.trim();
+/* 122 */         if (str.length() > 0) {
+/* 123 */           localArrayList.add(str);
+/*     */         }
+/*     */       }
+/* 126 */       this.l = ((String)localArrayList.get(h.nextInt(localArrayList.size())));
+/*     */     } catch (Exception localException) {
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void g() {
+/* 132 */     this.k += 1.0F;
+/* 133 */     if (this.i != null)
+/* 134 */       for (int j = 0; j < this.i.length; j++)
+/* 135 */         for (int m = 0; m < this.i[j].length; m++)
+/* 136 */           this.i[j][m].a();
+/*     */   }
+/*     */ 
+/*     */   protected void a(char paramChar, int paramInt)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void a()
+/*     */   {
+/* 147 */     Calendar localCalendar = Calendar.getInstance();
+/* 148 */     localCalendar.setTime(new Date());
+/*     */ 
+/* 150 */     if ((localCalendar.get(2) + 1 == 11) && (localCalendar.get(5) == 9))
+/* 151 */       this.l = "Happy birthday, ez!";
+/* 152 */     else if ((localCalendar.get(2) + 1 == 6) && (localCalendar.get(5) == 1))
+/* 153 */       this.l = "Happy birthday, Notch!";
+/* 154 */     else if ((localCalendar.get(2) + 1 == 12) && (localCalendar.get(5) == 24))
+/* 155 */       this.l = "Merry X-mas!";
+/* 156 */     else if ((localCalendar.get(2) + 1 == 1) && (localCalendar.get(5) == 1)) {
+/* 157 */       this.l = "Happy new year!";
+/*     */     }
+/*     */ 
+/* 160 */     n localn = n.a();
+/*     */ 
+/* 163 */     int j = this.d / 4 + 48;
+/*     */ 
+/* 165 */     this.e.add(new hg(1, this.c / 2 - 100, j, localn.a("menu.singleplayer")));
+/* 166 */     this.e.add(new hg(2, this.c / 2 - 100, j + 24, localn.a("menu.multiplayer")));
+/* 167 */     this.e.add(new hg(3, this.c / 2 - 100, j + 48, localn.a("menu.mods")));
+/*     */ 
+/* 169 */     if (this.b.l) {
+/* 170 */       this.e.add(new hg(0, this.c / 2 - 100, j + 72, localn.a("menu.options")));
+/*     */     } else {
+/* 172 */       this.e.add(new hg(0, this.c / 2 - 100, j + 72 + 12, 98, 20, localn.a("menu.options")));
+/* 173 */       this.e.add(new hg(4, this.c / 2 + 2, j + 72 + 12, 98, 20, localn.a("menu.quit")));
+/*     */     }
+/*     */ 
+/* 176 */     if (this.b.i == null)
+/* 177 */       ((hg)this.e.get(1)).g = false;
+/*     */   }
+/*     */ 
+/*     */   protected void a(hg paramhg)
+/*     */   {
+/* 182 */     if (paramhg.f == 0) {
+/* 183 */       this.b.a(new bo(this, this.b.y));
+/*     */     }
+/* 185 */     if (paramhg.f == 1) {
+/* 186 */       this.b.a(new mr(this));
+/*     */     }
+/* 188 */     if (paramhg.f == 2) {
+/* 189 */       this.b.a(new ie(this));
+/*     */     }
+/* 191 */     if (paramhg.f == 3) {
+/* 192 */       this.b.a(new ea(this));
+/*     */     }
+/* 194 */     if (paramhg.f == 4)
+/* 195 */       this.b.d();
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2, float paramFloat)
+/*     */   {
+/* 200 */     i();
+/* 201 */     jy localjy = jy.a;
+/*     */ 
+/* 205 */     a(paramFloat);
+/* 206 */     GL11.glBindTexture(3553, this.b.n.a("/gui/logo.png"));
+/* 207 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 208 */     localjy.b(16777215);
+/* 209 */     GL11.glPushMatrix();
+/* 210 */     GL11.glTranslatef(this.c / 2 + 90, 70.0F, 0.0F);
+/*     */ 
+/* 213 */     GL11.glRotatef(-20.0F, 0.0F, 0.0F, 1.0F);
+/* 214 */     float f = 1.8F - gd.e(gd.a((float)(System.currentTimeMillis() % 1000L) / 1000.0F * 3.141593F * 2.0F) * 0.1F);
+/*     */ 
+/* 216 */     f = f * 100.0F / (this.g.a(this.l) + 32);
+/* 217 */     GL11.glScalef(f, f, f);
+/* 218 */     a(this.g, this.l, 0, -8, 16776960);
+/* 219 */     GL11.glPopMatrix();
+/*     */ 
+/* 221 */     b(this.g, "Minecraft Beta 1.2_02", 2, 2, 5263440);
+/* 222 */     String str = "Copyright Mojang AB. Do not distribute.";
+/* 223 */     b(this.g, str, this.c - this.g.a(str) - 2, this.d - 10, 16777215);
+/*     */ 
+/* 237 */     super.a(paramInt1, paramInt2, paramFloat);
+/*     */   }
+/*     */ 
+/*     */   private void a(float paramFloat) {
+/* 241 */     if (this.i == null) {
+/* 242 */       this.i = new ng[this.a[0].length()][this.a.length];
+/* 243 */       for (int j = 0; j < this.i.length; j++) {
+/* 244 */         for (m = 0; m < this.i[j].length; m++) {
+/* 245 */           this.i[j][m] = new ng(this, j, m);
+/*     */         }
+/*     */       }
+/*     */     }
+/* 249 */     GL11.glMatrixMode(5889);
+/* 250 */     GL11.glPushMatrix();
+/* 251 */     GL11.glLoadIdentity();
+/*     */ 
+/* 254 */     lw locallw = new lw(this.b.c, this.b.d);
+/*     */ 
+/* 256 */     int m = 120 * locallw.a;
+/* 257 */     GLU.gluPerspective(70.0F, this.b.c / m, 0.05F, 100.0F);
+/*     */ 
+/* 260 */     GL11.glViewport(0, this.b.d - m, this.b.c, m);
+/* 261 */     GL11.glMatrixMode(5888);
+/* 262 */     GL11.glPushMatrix();
+/* 263 */     GL11.glLoadIdentity();
+/* 264 */     GL11.glDisable(2884);
+/* 265 */     GL11.glCullFace(1029);
+/* 266 */     GL11.glDepthMask(true);
+/*     */ 
+/* 269 */     bt localbt = new bt();
+/*     */ 
+/* 272 */     for (int n = 0; n < 3; n++)
+/*     */     {
+/* 274 */       GL11.glPushMatrix();
+/*     */ 
+/* 276 */       GL11.glTranslatef(0.4F, 0.6F, -13.0F);
+/* 277 */       if (n == 0) {
+/* 278 */         GL11.glClear(256);
+/* 279 */         GL11.glTranslatef(0.0F, -0.4F, 0.0F);
+/* 280 */         GL11.glScalef(0.98F, 1.0F, 1.0F);
+/* 281 */         GL11.glEnable(3042);
+/* 282 */         GL11.glBlendFunc(770, 771);
+/*     */       }
+/* 284 */       if (n == 1) {
+/* 285 */         GL11.glDisable(3042);
+/* 286 */         GL11.glClear(256);
+/*     */       }
+/* 288 */       if (n == 2) {
+/* 289 */         GL11.glEnable(3042);
+/* 290 */         GL11.glBlendFunc(768, 1);
+/*     */       }
+/* 292 */       GL11.glScalef(1.0F, -1.0F, 1.0F);
+/*     */ 
+/* 294 */       GL11.glRotatef(15.0F, 1.0F, 0.0F, 0.0F);
+/* 295 */       GL11.glScalef(0.89F, 1.0F, 0.4F);
+/* 296 */       GL11.glTranslatef(-this.a[0].length() * 0.5F, -this.a.length * 0.5F, 0.0F);
+/* 297 */       GL11.glBindTexture(3553, this.b.n.a("/terrain.png"));
+/* 298 */       if (n == 0) {
+/* 299 */         GL11.glBindTexture(3553, this.b.n.a("/title/black.png"));
+/*     */       }
+/* 301 */       for (int i1 = 0; i1 < this.a.length; i1++) {
+/* 302 */         for (int i2 = 0; i2 < this.a[i1].length(); i2++) {
+/* 303 */           int i3 = this.a[i1].charAt(i2);
+/* 304 */           if (i3 != 32) {
+/* 305 */             GL11.glPushMatrix();
+/* 306 */             ng localng = this.i[i2][i1];
+/* 307 */             float f1 = (float)(localng.b + (localng.a - localng.b) * paramFloat);
+/* 308 */             float f2 = 1.0F;
+/* 309 */             float f3 = 1.0F;
+/* 310 */             float f4 = 0.0F;
+/* 311 */             if (n == 0) {
+/* 312 */               f2 = f1 * 0.04F + 1.0F;
+/* 313 */               f3 = 1.0F / f2;
+/* 314 */               f1 = 0.0F;
+/*     */             }
+/* 316 */             GL11.glTranslatef(i2, i1, f1);
+/* 317 */             GL11.glScalef(f2, f2, f2);
+/* 318 */             GL11.glRotatef(f4, 0.0F, 1.0F, 0.0F);
+/* 319 */             localbt.a(pj.t, f3);
+/* 320 */             GL11.glPopMatrix();
+/*     */           }
+/*     */         }
+/*     */       }
+/* 324 */       GL11.glPopMatrix();
+/*     */     }
+/*     */ 
+/* 328 */     GL11.glDisable(3042);
+/*     */ 
+/* 330 */     GL11.glMatrixMode(5889);
+/* 331 */     GL11.glPopMatrix();
+/* 332 */     GL11.glMatrixMode(5888);
+/* 333 */     GL11.glPopMatrix();
+/* 334 */     GL11.glViewport(0, 0, this.b.c, this.b.d);
+/* 335 */     GL11.glEnable(2884);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     dz
+ * JD-Core Version:    0.6.0
+ */

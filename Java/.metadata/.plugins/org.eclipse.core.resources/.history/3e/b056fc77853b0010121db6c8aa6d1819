@@ -1,0 +1,167 @@
+/*     */ import java.io.PrintStream;
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class ab extends gw
+/*     */ {
+/*     */   public ab(int paramInt1, int paramInt2)
+/*     */   {
+/*  12 */     super(paramInt1, paramInt2, ic.x, false);
+/*     */   }
+/*     */ 
+/*     */   public db d(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  16 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public void a(ri paramri, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*     */     float f1;
+/*     */     float f2;
+/*  20 */     if ((paramri.a(paramInt1 - 1, paramInt2, paramInt3) == this.bi) || (paramri.a(paramInt1 + 1, paramInt2, paramInt3) == this.bi)) {
+/*  21 */       f1 = 0.5F;
+/*  22 */       f2 = 0.125F;
+/*  23 */       a(0.5F - f1, 0.0F, 0.5F - f2, 0.5F + f1, 1.0F, 0.5F + f2);
+/*     */     } else {
+/*  25 */       f1 = 0.125F;
+/*  26 */       f2 = 0.5F;
+/*  27 */       a(0.5F - f1, 0.0F, 0.5F - f2, 0.5F + f1, 1.0F, 0.5F + f2);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public boolean a() {
+/*  32 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean b() {
+/*  36 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean a_(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  40 */     int i = 0;
+/*  41 */     int j = 0;
+/*  42 */     if ((paramdn.a(paramInt1 - 1, paramInt2, paramInt3) == pj.ap.bi) || (paramdn.a(paramInt1 + 1, paramInt2, paramInt3) == pj.ap.bi)) i = 1;
+/*  43 */     if ((paramdn.a(paramInt1, paramInt2, paramInt3 - 1) == pj.ap.bi) || (paramdn.a(paramInt1, paramInt2, paramInt3 + 1) == pj.ap.bi)) j = 1;
+/*     */ 
+/*  45 */     System.out.println(i + ", " + j);
+/*  46 */     if (i == j) return false;
+/*     */ 
+/*  48 */     if (paramdn.a(paramInt1 - i, paramInt2, paramInt3 - j) == 0) {
+/*  49 */       paramInt1 -= i;
+/*  50 */       paramInt3 -= j;
+/*     */     }
+/*     */     int m;
+/*  53 */     for (int k = -1; k <= 2; k++) {
+/*  54 */       for (m = -1; m <= 3; m++) {
+/*  55 */         int n = (k == -1) || (k == 2) || (m == -1) || (m == 3) ? 1 : 0;
+/*  56 */         if (((k == -1) || (k == 2)) && ((m == -1) || (m == 3)))
+/*     */           continue;
+/*  58 */         int i1 = paramdn.a(paramInt1 + i * k, paramInt2 + m, paramInt3 + j * k);
+/*     */ 
+/*  60 */         if (n != 0) {
+/*  61 */           if (i1 != pj.ap.bi) return false;
+/*     */         }
+/*  63 */         else if ((i1 != 0) && (i1 != pj.ar.bi)) return false;
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/*  68 */     paramdn.i = true;
+/*  69 */     for (k = 0; k < 2; k++) {
+/*  70 */       for (m = 0; m < 3; m++) {
+/*  71 */         paramdn.e(paramInt1 + i * k, paramInt2 + m, paramInt3 + j * k, pj.be.bi);
+/*     */       }
+/*     */     }
+/*  74 */     paramdn.i = false;
+/*     */ 
+/*  76 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  80 */     int i = 0;
+/*  81 */     int j = 1;
+/*  82 */     if ((paramdn.a(paramInt1 - 1, paramInt2, paramInt3) == this.bi) || (paramdn.a(paramInt1 + 1, paramInt2, paramInt3) == this.bi)) {
+/*  83 */       i = 1;
+/*  84 */       j = 0;
+/*     */     }
+/*     */ 
+/*  87 */     int k = paramInt2;
+/*  88 */     while (paramdn.a(paramInt1, k - 1, paramInt3) == this.bi) {
+/*  89 */       k--;
+/*     */     }
+/*  91 */     if (paramdn.a(paramInt1, k - 1, paramInt3) != pj.ap.bi) {
+/*  92 */       paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/*  93 */       return;
+/*     */     }
+/*     */ 
+/*  96 */     int m = 1;
+/*  97 */     while ((m < 4) && (paramdn.a(paramInt1, k + m, paramInt3) == this.bi)) {
+/*  98 */       m++;
+/*     */     }
+/* 100 */     if ((m != 3) || (paramdn.a(paramInt1, k + m, paramInt3) != pj.ap.bi)) {
+/* 101 */       paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/* 102 */       return;
+/*     */     }
+/*     */ 
+/* 105 */     int n = (paramdn.a(paramInt1 - 1, paramInt2, paramInt3) == this.bi) || (paramdn.a(paramInt1 + 1, paramInt2, paramInt3) == this.bi) ? 1 : 0;
+/* 106 */     int i1 = (paramdn.a(paramInt1, paramInt2, paramInt3 - 1) == this.bi) || (paramdn.a(paramInt1, paramInt2, paramInt3 + 1) == this.bi) ? 1 : 0;
+/* 107 */     if ((n != 0) && (i1 != 0)) {
+/* 108 */       paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/* 109 */       return;
+/*     */     }
+/*     */ 
+/* 112 */     if (((paramdn.a(paramInt1 + i, paramInt2, paramInt3 + j) != pj.ap.bi) || (paramdn.a(paramInt1 - i, paramInt2, paramInt3 - j) != this.bi)) && ((paramdn.a(paramInt1 - i, paramInt2, paramInt3 - j) != pj.ap.bi) || (paramdn.a(paramInt1 + i, paramInt2, paramInt3 + j) != this.bi)))
+/*     */     {
+/* 116 */       paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/* 117 */       return;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public boolean b(ri paramri, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 122 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public int a(Random paramRandom) {
+/* 126 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   public int c() {
+/* 130 */     return 1;
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, nl paramnl) {
+/* 134 */     if (paramdn.z) return;
+/*     */ 
+/* 136 */     paramnl.t();
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3, Random paramRandom) {
+/* 140 */     if (paramRandom.nextInt(100) == 0) {
+/* 141 */       paramdn.a(paramInt1 + 0.5D, paramInt2 + 0.5D, paramInt3 + 0.5D, "portal.portal", 1.0F, paramRandom.nextFloat() * 0.4F + 0.8F);
+/*     */     }
+/* 143 */     for (int i = 0; i < 4; i++) {
+/* 144 */       double d1 = paramInt1 + paramRandom.nextFloat();
+/* 145 */       double d2 = paramInt2 + paramRandom.nextFloat();
+/* 146 */       double d3 = paramInt3 + paramRandom.nextFloat();
+/* 147 */       double d4 = 0.0D;
+/* 148 */       double d5 = 0.0D;
+/* 149 */       double d6 = 0.0D;
+/* 150 */       int j = paramRandom.nextInt(2) * 2 - 1;
+/* 151 */       d4 = (paramRandom.nextFloat() - 0.5D) * 0.5D;
+/* 152 */       d5 = (paramRandom.nextFloat() - 0.5D) * 0.5D;
+/* 153 */       d6 = (paramRandom.nextFloat() - 0.5D) * 0.5D;
+/* 154 */       if ((paramdn.a(paramInt1 - 1, paramInt2, paramInt3) == this.bi) || (paramdn.a(paramInt1 + 1, paramInt2, paramInt3) == this.bi)) {
+/* 155 */         d3 = paramInt3 + 0.5D + 0.25D * j;
+/* 156 */         d6 = paramRandom.nextFloat() * 2.0F * j;
+/*     */       } else {
+/* 158 */         d1 = paramInt1 + 0.5D + 0.25D * j;
+/* 159 */         d4 = paramRandom.nextFloat() * 2.0F * j;
+/*     */       }
+/*     */ 
+/* 162 */       paramdn.a("portal", d1, d2, d3, d4, d5, d6);
+/*     */     }
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ab
+ * JD-Core Version:    0.6.0
+ */

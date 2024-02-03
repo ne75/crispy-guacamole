@@ -1,0 +1,15 @@
+package org.lwjgl.util.vector;
+
+public abstract interface WritableVector2f
+{
+  public abstract void setX(float paramFloat);
+
+  public abstract void setY(float paramFloat);
+
+  public abstract void set(float paramFloat1, float paramFloat2);
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/lwjgl_util.jar
+ * Qualified Name:     org.lwjgl.util.vector.WritableVector2f
+ * JD-Core Version:    0.6.0
+ */

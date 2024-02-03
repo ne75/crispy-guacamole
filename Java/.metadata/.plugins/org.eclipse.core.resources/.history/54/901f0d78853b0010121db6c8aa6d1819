@@ -1,0 +1,102 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class eh extends ey
+/*     */ {
+/*     */   int a;
+/*     */   int b;
+/*     */ 
+/*     */   public eh(dn paramdn)
+/*     */   {
+/*  18 */     super(paramdn);
+/*  19 */     this.I = "/mob/creeper.png";
+/*     */   }
+/*     */ 
+/*     */   protected void b()
+/*     */   {
+/*  24 */     super.b();
+/*     */ 
+/*  26 */     this.bx.a(16, Byte.valueOf(-1));
+/*     */   }
+/*     */ 
+/*     */   public void a(jw paramjw) {
+/*  30 */     super.a(paramjw);
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw) {
+/*  34 */     super.b(paramjw);
+/*     */   }
+/*     */ 
+/*     */   public void q_() {
+/*  38 */     this.b = this.a;
+/*  39 */     if (this.aB.z) {
+/*  40 */       int i = q();
+/*  41 */       if ((i > 0) && (this.a == 0)) {
+/*  42 */         this.aB.a(this, "random.fuse", 1.0F, 0.5F);
+/*     */       }
+/*  44 */       this.a += i;
+/*  45 */       if (this.a < 0) this.a = 0;
+/*  46 */       if (this.a >= 30) this.a = 30;
+/*     */     }
+/*  48 */     super.q_();
+/*     */   }
+/*     */ 
+/*     */   protected String g() {
+/*  52 */     return "mob.creeper";
+/*     */   }
+/*     */ 
+/*     */   protected String h_() {
+/*  56 */     return "mob.creeperdeath";
+/*     */   }
+/*     */ 
+/*     */   public void b(nl paramnl) {
+/*  60 */     super.b(paramnl);
+/*     */ 
+/*  62 */     if ((paramnl instanceof dy))
+/*  63 */       b(eo.aY.ba + this.bm.nextInt(2), 1);
+/*     */   }
+/*     */ 
+/*     */   protected void a(nl paramnl, float paramFloat)
+/*     */   {
+/*  68 */     int i = q();
+/*  69 */     if (((i <= 0) && (paramFloat < 3.0F)) || ((i > 0) && (paramFloat < 7.0F))) {
+/*  70 */       if (this.a == 0) {
+/*  71 */         this.aB.a(this, "random.fuse", 1.0F, 0.5F);
+/*     */       }
+/*  73 */       e(1);
+/*  74 */       this.a += 1;
+/*     */ 
+/*  76 */       if (this.a >= 30) {
+/*  77 */         this.aB.a(this, this.aF, this.aG, this.aH, 3.0F);
+/*  78 */         F();
+/*     */       }
+/*  80 */       this.e = true;
+/*     */     } else {
+/*  82 */       e(-1);
+/*  83 */       this.a -= 1;
+/*  84 */       if (this.a < 0)
+/*  85 */         this.a = 0;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public float b(float paramFloat)
+/*     */   {
+/*  91 */     return (this.b + (this.a - this.b) * paramFloat) / 28.0F;
+/*     */   }
+/*     */ 
+/*     */   protected int i() {
+/*  95 */     return eo.K.ba;
+/*     */   }
+/*     */ 
+/*     */   private int q() {
+/*  99 */     return this.bx.a(16);
+/*     */   }
+/*     */ 
+/*     */   private void e(int paramInt) {
+/* 103 */     this.bx.b(16, Byte.valueOf((byte)paramInt));
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     eh
+ * JD-Core Version:    0.6.0
+ */

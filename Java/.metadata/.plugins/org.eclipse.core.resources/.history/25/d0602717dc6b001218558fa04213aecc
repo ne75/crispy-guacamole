@@ -1,0 +1,23 @@
+package main;
+
+import java.util.*;
+
+public class Polynomial {
+    
+    private int[] a;
+    private int degree;
+    
+    public int[] Polynomial(String str){
+	
+	Scanner s = new Scanner(str);
+	int expIndex = str.indexOf('^');
+	if (expIndex != -1){
+	    degree = (int)(str.charAt(expIndex + 1)) - 48; 
+	}
+	
+	int[] a = new int[degree];
+	
+	return a;
+    }
+    
+}

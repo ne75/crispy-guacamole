@@ -1,0 +1,252 @@
+/*     */ import java.io.PrintStream;
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class ph
+/*     */ {
+/*  10 */   private Random a = new Random();
+/*     */ 
+/*     */   public void a(dn paramdn, nl paramnl) {
+/*  13 */     if (b(paramdn, paramnl)) {
+/*  14 */       return;
+/*     */     }
+/*     */ 
+/*  17 */     c(paramdn, paramnl);
+/*  18 */     b(paramdn, paramnl);
+/*     */   }
+/*     */ 
+/*     */   public boolean b(dn paramdn, nl paramnl)
+/*     */   {
+/*  23 */     int i = 128;
+/*  24 */     double d1 = -1.0D;
+/*  25 */     int j = 0;
+/*  26 */     double d2 = 0;
+/*  27 */     int k = 0;
+/*     */ 
+/*  29 */     int m = gd.b(paramnl.aF);
+/*  30 */     int n = gd.b(paramnl.aH);
+/*     */     double d3;
+/*     */     double d8;
+/*  32 */     for (int i1 = m - i; i1 <= m + i; i1++) {
+/*  33 */       d3 = i1 + 0.5D - paramnl.aF;
+/*  34 */       for (int i3 = n - i; i3 <= n + i; i3++) {
+/*  35 */         double d5 = i3 + 0.5D - paramnl.aH;
+/*  36 */         for (double d7 = 127; d7 >= 0; d7--) {
+/*  37 */           if (paramdn.a(i1, d7, i3) == pj.be.bi) {
+/*  38 */             while (paramdn.a(i1, d7 - 1, i3) == pj.be.bi) {
+/*  39 */               d7--;
+/*     */             }
+/*     */ 
+/*  42 */             d8 = d7 + 0.5D - paramnl.aG;
+/*  43 */             double d9 = d3 * d3 + d8 * d8 + d5 * d5;
+/*  44 */             if ((d1 < 0.0D) || (d9 < d1)) {
+/*  45 */               d1 = d9;
+/*  46 */               j = i1;
+/*  47 */               d2 = d7;
+/*  48 */               k = i3;
+/*     */             }
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     }
+/*     */ 
+/*  55 */     if (d1 >= 0.0D) {
+/*  56 */       i1 = j;
+/*  57 */       d3 = d2;
+/*  58 */       int i2 = k;
+/*     */ 
+/*  60 */       double d4 = i1 + 0.5D;
+/*  61 */       double d6 = d3 + 0.5D;
+/*  62 */       d8 = i2 + 0.5D;
+/*     */ 
+/*  64 */       if (paramdn.a(i1 - 1, d3, i2) == pj.be.bi) d4 -= 0.5D;
+/*  65 */       if (paramdn.a(i1 + 1, d3, i2) == pj.be.bi) d4 += 0.5D;
+/*     */ 
+/*  67 */       if (paramdn.a(i1, d3, i2 - 1) == pj.be.bi) d8 -= 0.5D;
+/*  68 */       if (paramdn.a(i1, d3, i2 + 1) == pj.be.bi) d8 += 0.5D;
+/*     */ 
+/*  70 */       System.out.println("Teleporting to " + d4 + ", " + d6 + ", " + d8);
+/*  71 */       paramnl.c(d4, d6, d8, paramnl.aL, 0.0F);
+/*  72 */       paramnl.aI = (paramnl.aJ = paramnl.aK = 0.0D);
+/*  73 */       return true;
+/*     */     }
+/*     */ 
+/*  76 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean c(dn paramdn, nl paramnl) {
+/*  80 */     int i = 16;
+/*  81 */     double d1 = -1.0D;
+/*     */ 
+/*  83 */     double d2 = gd.b(paramnl.aF);
+/*  84 */     int j = gd.b(paramnl.aG);
+/*  85 */     int k = gd.b(paramnl.aH);
+/*     */ 
+/*  87 */     double d3 = d2;
+/*  88 */     int m = j;
+/*  89 */     int n = k;
+/*  90 */     double d4 = 0;
+/*     */ 
+/*  92 */     int i1 = this.a.nextInt(4);
+/*     */     double d7;
+/*     */     int i7;
+/*     */     int i8;
+/*     */     int i9;
+/*     */     int i13;
+/*     */     int i17;
+/*     */     int i18;
+/*  95 */     for (double d5 = d2 - i; d5 <= d2 + i; d5++) {
+/*  96 */       d6 = d5 + 0.5D - paramnl.aF;
+/*  97 */       for (i3 = k - i; i3 <= k + i; i3++) {
+/*  98 */         d7 = i3 + 0.5D - paramnl.aH;
+/*  99 */         label418: for (i6 = 127; i6 >= 0; i6--) {
+/* 100 */           if (paramdn.d(d5, i6, i3)) {
+/* 101 */             while ((i6 > 0) && (paramdn.d(d5, i6 - 1, i3))) {
+/* 102 */               i6--;
+/*     */             }
+/*     */ 
+/* 105 */             for (i7 = i1; i7 < i1 + 4; i7++) {
+/* 106 */               i8 = i7 % 2;
+/* 107 */               i9 = 1 - i8;
+/*     */ 
+/* 109 */               if (i7 % 4 >= 2) {
+/* 110 */                 i8 = -i8;
+/* 111 */                 i9 = -i9;
+/*     */               }
+/*     */ 
+/* 115 */               for (int i10 = 0; i10 < 3; i10++) {
+/* 116 */                 for (i13 = 0; i13 < 4; i13++)
+/* 117 */                   for (int i14 = -1; i14 < 4; i14++) {
+/* 118 */                     i17 = d5 + (i13 - 1) * i8 + i10 * i9;
+/* 119 */                     i18 = i6 + i14;
+/* 120 */                     int i19 = i3 + (i13 - 1) * i9 - i10 * i8;
+/*     */ 
+/* 122 */                     if (((i14 < 0) && (!paramdn.f(i17, i18, i19).a())) || (
+/* 123 */                       (i14 >= 0) && (!paramdn.d(i17, i18, i19))))
+/*     */                       break label418;
+/*     */                   }
+/*     */               }
+/* 128 */               double d8 = i6 + 0.5D - paramnl.aG;
+/* 129 */               double d10 = d6 * d6 + d8 * d8 + d7 * d7;
+/* 130 */               if ((d1 < 0.0D) || (d10 < d1)) {
+/* 131 */                 d1 = d10;
+/* 132 */                 d3 = d5;
+/* 133 */                 m = i6;
+/* 134 */                 n = i3;
+/* 135 */                 d4 = i7 % 4;
+/*     */               }
+/*     */             }
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     }
+/*     */ 
+/* 143 */     if (d1 < 0.0D) {
+/* 144 */       for (d5 = d2 - i; d5 <= d2 + i; d5++) {
+/* 145 */         d6 = d5 + 0.5D - paramnl.aF;
+/* 146 */         for (i3 = k - i; i3 <= k + i; i3++) {
+/* 147 */           d7 = i3 + 0.5D - paramnl.aH;
+/* 148 */           label751: for (i6 = 127; i6 >= 0; i6--) {
+/* 149 */             if (paramdn.d(d5, i6, i3)) {
+/* 150 */               while (paramdn.d(d5, i6 - 1, i3)) {
+/* 151 */                 i6--;
+/*     */               }
+/*     */ 
+/* 154 */               for (i7 = i1; i7 < i1 + 2; i7++) {
+/* 155 */                 i8 = i7 % 2;
+/* 156 */                 i9 = 1 - i8;
+/* 157 */                 for (int i11 = 0; i11 < 4; i11++)
+/* 158 */                   for (i13 = -1; i13 < 4; i13++) {
+/* 159 */                     int i15 = d5 + (i11 - 1) * i8;
+/* 160 */                     i17 = i6 + i13;
+/* 161 */                     i18 = i3 + (i11 - 1) * i9;
+/*     */ 
+/* 163 */                     if (((i13 < 0) && (!paramdn.f(i15, i17, i18).a())) || (
+/* 164 */                       (i13 >= 0) && (!paramdn.d(i15, i17, i18))))
+/*     */                       break label751;
+/*     */                   }
+/* 168 */                 double d9 = i6 + 0.5D - paramnl.aG;
+/* 169 */                 double d11 = d6 * d6 + d9 * d9 + d7 * d7;
+/* 170 */                 if ((d1 < 0.0D) || (d11 < d1)) {
+/* 171 */                   d1 = d11;
+/* 172 */                   d3 = d5;
+/* 173 */                   m = i6;
+/* 174 */                   n = i3;
+/* 175 */                   d4 = i7 % 2;
+/*     */                 }
+/*     */               }
+/*     */             }
+/*     */           }
+/*     */         }
+/*     */ 
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/* 186 */     d5 = d4;
+/*     */ 
+/* 188 */     double d6 = d3;
+/* 189 */     int i2 = m;
+/* 190 */     int i3 = n;
+/*     */ 
+/* 192 */     int i4 = d5 % 2;
+/* 193 */     int i5 = 1 - i4;
+/*     */ 
+/* 195 */     if (d5 % 4 >= 2) {
+/* 196 */       i4 = -i4;
+/* 197 */       i5 = -i5;
+/*     */     }
+/*     */     int i12;
+/*     */     int i16;
+/* 201 */     if (d1 < 0.0D) {
+/* 202 */       if (m < 70) m = 70;
+/* 203 */       if (m > 118) m = 118;
+/* 204 */       i2 = m;
+/*     */ 
+/* 206 */       for (i6 = -1; i6 <= 1; i6++) {
+/* 207 */         for (i7 = 1; i7 < 3; i7++) {
+/* 208 */           for (i8 = -1; i8 < 3; i8++) {
+/* 209 */             i9 = d6 + (i7 - 1) * i4 + i6 * i5;
+/* 210 */             i12 = i2 + i8;
+/* 211 */             i13 = i3 + (i7 - 1) * i5 - i6 * i4;
+/*     */ 
+/* 213 */             i16 = i8 < 0 ? 1 : 0;
+/*     */ 
+/* 215 */             paramdn.e(i9, i12, i13, i16 != 0 ? pj.ap.bi : 0);
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     }
+/*     */ 
+/* 221 */     for (int i6 = 0; i6 < 4; i6++) {
+/* 222 */       paramdn.i = true;
+/* 223 */       for (i7 = 0; i7 < 4; i7++) {
+/* 224 */         for (i8 = -1; i8 < 4; i8++) {
+/* 225 */           i9 = d6 + (i7 - 1) * i4;
+/* 226 */           i12 = i2 + i8;
+/* 227 */           i13 = i3 + (i7 - 1) * i5;
+/*     */ 
+/* 229 */           i16 = (i7 == 0) || (i7 == 3) || (i8 == -1) || (i8 == 3) ? 1 : 0;
+/* 230 */           paramdn.e(i9, i12, i13, i16 != 0 ? pj.ap.bi : pj.be.bi);
+/*     */         }
+/*     */       }
+/* 233 */       paramdn.i = false;
+/*     */ 
+/* 235 */       for (i7 = 0; i7 < 4; i7++) {
+/* 236 */         for (i8 = -1; i8 < 4; i8++) {
+/* 237 */           i9 = d6 + (i7 - 1) * i4;
+/* 238 */           i12 = i2 + i8;
+/* 239 */           i13 = i3 + (i7 - 1) * i5;
+/*     */ 
+/* 241 */           paramdn.h(i9, i12, i13, paramdn.a(i9, i12, i13));
+/*     */         }
+/*     */       }
+/*     */     }
+/*     */ 
+/* 246 */     return true;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ph
+ * JD-Core Version:    0.6.0
+ */

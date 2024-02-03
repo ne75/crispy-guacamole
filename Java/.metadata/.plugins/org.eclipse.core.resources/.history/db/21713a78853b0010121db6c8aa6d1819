@@ -1,0 +1,16 @@
+/*    */ import java.awt.Canvas;
+/*    */ import java.awt.Dimension;
+/*    */ 
+/*    */ class qu extends Canvas
+/*    */ {
+/*    */   public qu(int paramInt)
+/*    */   {
+/* 40 */     setPreferredSize(new Dimension(paramInt, paramInt));
+/* 41 */     setMinimumSize(new Dimension(paramInt, paramInt));
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qu
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,18 @@
+/*    */ package org.lwjgl.util.glu.tessellation;
+/*    */ 
+/*    */ class GLUvertex
+/*    */ {
+/*    */   public GLUvertex next;
+/*    */   public GLUvertex prev;
+/*    */   public GLUhalfEdge anEdge;
+/*    */   public Object data;
+/* 94 */   public double[] coords = new double[3];
+/*    */   public double s;
+/*    */   public double t;
+/*    */   public int pqHandle;
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/lwjgl_util.jar
+ * Qualified Name:     org.lwjgl.util.glu.tessellation.GLUvertex
+ * JD-Core Version:    0.6.0
+ */

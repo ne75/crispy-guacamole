@@ -1,0 +1,41 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class dd extends ev
+/*    */ {
+/*    */   public dd(hl paramhl, float paramFloat)
+/*    */   {
+/*  9 */     super(paramhl, paramFloat);
+/*    */   }
+/*    */ 
+/*    */   public void a(rm paramrm, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2) {
+/* 13 */     super.a(paramrm, paramDouble1, paramDouble2, paramDouble3, paramFloat1, paramFloat2);
+/*    */   }
+/*    */ 
+/*    */   protected void a(rm paramrm, float paramFloat1, float paramFloat2, float paramFloat3)
+/*    */   {
+/* 18 */     float f1 = paramrm.b + (paramrm.a - paramrm.b) * paramFloat3;
+/* 19 */     float f2 = paramrm.f + (paramrm.c - paramrm.f) * paramFloat3;
+/*    */ 
+/* 21 */     GL11.glTranslatef(0.0F, 0.5F, 0.0F);
+/* 22 */     GL11.glRotatef(180.0F - paramFloat2, 0.0F, 1.0F, 0.0F);
+/* 23 */     GL11.glRotatef(f1, 1.0F, 0.0F, 0.0F);
+/* 24 */     GL11.glRotatef(f2, 0.0F, 1.0F, 0.0F);
+/* 25 */     GL11.glTranslatef(0.0F, -1.2F, 0.0F);
+/*    */   }
+/*    */ 
+/*    */   protected void a(rm paramrm, float paramFloat)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   protected float b(rm paramrm, float paramFloat)
+/*    */   {
+/* 36 */     float f = paramrm.j + (paramrm.i - paramrm.j) * paramFloat;
+/*    */ 
+/* 38 */     return f;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     dd
+ * JD-Core Version:    0.6.0
+ */

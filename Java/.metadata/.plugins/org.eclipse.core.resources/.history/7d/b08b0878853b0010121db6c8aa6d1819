@@ -1,0 +1,176 @@
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.HashSet;
+/*     */ import java.util.List;
+/*     */ import java.util.Set;
+/*     */ 
+/*     */ public abstract class cp
+/*     */ {
+/*  14 */   public List d = new ArrayList();
+/*  15 */   public List e = new ArrayList();
+/*  16 */   public int f = 0;
+/*  17 */   private short a = 0;
+/*     */ 
+/*  19 */   protected List g = new ArrayList();
+/*     */ 
+/* 201 */   private Set b = new HashSet();
+/*     */ 
+/*     */   protected void a(eq parameq)
+/*     */   {
+/*  22 */     parameq.a = this.e.size();
+/*  23 */     this.e.add(parameq);
+/*  24 */     this.d.add(null);
+/*     */   }
+/*     */ 
+/*     */   public void a()
+/*     */   {
+/*  46 */     for (int i = 0; i < this.e.size(); i++) {
+/*  47 */       gm localgm1 = ((eq)this.e.get(i)).b();
+/*  48 */       gm localgm2 = (gm)this.d.get(i);
+/*  49 */       if (!gm.a(localgm2, localgm1)) {
+/*  50 */         localgm2 = localgm1 == null ? null : localgm1.k();
+/*  51 */         this.d.set(i, localgm2);
+/*  52 */         for (int j = 0; j < this.g.size(); j++)
+/*  53 */           ((ct)this.g.get(j)).a(this, i, localgm2);
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public eq a(int paramInt)
+/*     */   {
+/*  70 */     return (eq)this.e.get(paramInt);
+/*     */   }
+/*     */ 
+/*     */   public gm a(int paramInt1, int paramInt2, eu parameu) {
+/*  74 */     gm localgm1 = null;
+/*  75 */     if ((paramInt2 == 0) || (paramInt2 == 1)) {
+/*  76 */       gl localgl = parameu.f;
+/*  77 */       if (paramInt1 == -999) {
+/*  78 */         if ((localgl.i() != null) && 
+/*  79 */           (paramInt1 == -999)) {
+/*  80 */           if (paramInt2 == 0) {
+/*  81 */             parameu.a(localgl.i());
+/*  82 */             localgl.b(null);
+/*     */           }
+/*  84 */           if (paramInt2 == 1) {
+/*  85 */             parameu.a(localgl.i().a(1));
+/*  86 */             if (localgl.i().a == 0) localgl.b(null);
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */       else
+/*     */       {
+/*  92 */         eq localeq = (eq)this.e.get(paramInt1);
+/*  93 */         if (localeq != null) {
+/*  94 */           localeq.d();
+/*  95 */           gm localgm2 = localeq.b();
+/*  96 */           if (localgm2 != null) localgm1 = localgm2.k();
+/*     */ 
+/*  98 */           if ((localgm2 != null) || (localgl.i() != null))
+/*     */           {
+/*     */             int i;
+/*  99 */             if ((localgm2 != null) && (localgl.i() == null)) {
+/* 100 */               i = paramInt2 == 0 ? localgm2.a : (localgm2.a + 1) / 2;
+/* 101 */               localgl.b(localeq.a(i));
+/* 102 */               if (localgm2.a == 0) localeq.b(null);
+/* 103 */               localeq.a();
+/* 104 */             } else if ((localgm2 == null) && (localgl.i() != null) && (localeq.a(localgl.i()))) {
+/* 105 */               i = paramInt2 == 0 ? localgl.i().a : 1;
+/* 106 */               if (i > localeq.e()) i = localeq.e();
+/* 107 */               localeq.b(localgl.i().a(i));
+/* 108 */               if (localgl.i().a == 0) localgl.b(null); 
+/*     */             }
+/* 109 */             else if ((localgm2 != null) && (localgl.i() != null))
+/*     */             {
+/* 111 */               if (localeq.a(localgl.i())) {
+/* 112 */                 if ((localgm2.c != localgl.i().c) || ((localgm2.f()) && (localgm2.i() != localgl.i().i()))) {
+/* 113 */                   if (localgl.i().a <= localeq.e()) {
+/* 114 */                     gm localgm3 = localgm2;
+/* 115 */                     localeq.b(localgl.i());
+/* 116 */                     localgl.b(localgm3);
+/*     */                   }
+/* 118 */                 } else if (localgm2.c == localgl.i().c)
+/*     */                 {
+/*     */                   int j;
+/* 119 */                   if (paramInt2 == 0) {
+/* 120 */                     j = localgl.i().a;
+/* 121 */                     if (j > localeq.e() - localgm2.a) j = localeq.e() - localgm2.a;
+/* 122 */                     if (j > localgl.i().c() - localgm2.a) j = localgl.i().c() - localgm2.a;
+/* 123 */                     localgl.i().a(j);
+/* 124 */                     if (localgl.i().a == 0) localgl.b(null);
+/* 125 */                     localgm2.a += j;
+/* 126 */                   } else if (paramInt2 == 1) {
+/* 127 */                     j = 1;
+/* 128 */                     if (j > localeq.e() - localgm2.a) j = localeq.e() - localgm2.a;
+/* 129 */                     if (j > localgl.i().c() - localgm2.a) j = localgl.i().c() - localgm2.a;
+/* 130 */                     localgl.i().a(j);
+/* 131 */                     if (localgl.i().a == 0) localgl.b(null);
+/* 132 */                     localgm2.a += j;
+/*     */                   }
+/*     */                 }
+/*     */               } else {
+/* 136 */                 gm localgm4 = localgl.i();
+/* 137 */                 if ((localgm2.c == localgm4.c) && (localgm4.c() > 1) && ((!localgm2.f()) || (localgm2.i() == localgm4.i()))) {
+/* 138 */                   int k = localgm2.a;
+/* 139 */                   if ((k > 0) && (k + localgm4.a <= localgm4.c())) {
+/* 140 */                     localgm4.a += k;
+/* 141 */                     localgm2.a(k);
+/* 142 */                     if (localgm2.a == 0) localeq.b(null);
+/* 143 */                     localeq.a();
+/*     */                   }
+/*     */                 }
+/*     */               }
+/*     */             }
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */     }
+/* 152 */     return localgm1;
+/*     */   }
+/*     */ 
+/*     */   public void a(eu parameu) {
+/* 156 */     gl localgl = parameu.f;
+/* 157 */     if (localgl.i() != null) {
+/* 158 */       parameu.a(localgl.i());
+/* 159 */       localgl.b(null);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a(ij paramij) {
+/* 164 */     a();
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt, gm paramgm)
+/*     */   {
+/* 172 */     a(paramInt).b(paramgm);
+/*     */   }
+/*     */ 
+/*     */   public void a(gm[] paramArrayOfgm) {
+/* 176 */     for (int i = 0; i < paramArrayOfgm.length; i++)
+/* 177 */       a(i).b(paramArrayOfgm[i]);
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public short a(gl paramgl) {
+/* 185 */     this.a = (short)(this.a + 1);
+/*     */ 
+/* 190 */     return this.a;
+/*     */   }
+/*     */ 
+/*     */   public void a(short paramShort)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void b(short paramShort)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public abstract boolean b(eu parameu);
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     cp
+ * JD-Core Version:    0.6.0
+ */

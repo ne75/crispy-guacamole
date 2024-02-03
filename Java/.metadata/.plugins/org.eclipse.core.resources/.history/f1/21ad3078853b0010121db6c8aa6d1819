@@ -1,0 +1,26 @@
+/*    */ public class ol extends eo
+/*    */ {
+/*    */   private String a;
+/*    */ 
+/*    */   protected ol(int paramInt, String paramString)
+/*    */   {
+/* 11 */     super(paramInt);
+/* 12 */     this.a = paramString;
+/* 13 */     this.bb = 1;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(gm paramgm, eu parameu, dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 17 */     if ((paramdn.a(paramInt1, paramInt2, paramInt3) == pj.aY.bi) && (paramdn.e(paramInt1, paramInt2, paramInt3) == 0)) {
+/* 18 */       paramdn.c(paramInt1, paramInt2, paramInt3, this.ba - eo.aY.ba + 1);
+/* 19 */       paramdn.a(this.a, paramInt1, paramInt2, paramInt3);
+/* 20 */       paramgm.a -= 1;
+/* 21 */       return true;
+/*    */     }
+/* 23 */     return false;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ol
+ * JD-Core Version:    0.6.0
+ */

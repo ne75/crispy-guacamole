@@ -1,0 +1,10 @@
+import java.util.*;
+
+public class card {
+	public static void main(String arg[]){
+	int a;
+	a = (int)(6*Math.random())+1;
+	
+	System.out.println(a);
+	}
+}

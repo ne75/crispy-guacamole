@@ -1,0 +1,60 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class em extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public int b;
+/*    */   public int c;
+/*    */   public int d;
+/*    */ 
+/*    */   public em()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public em(nl paramnl)
+/*    */   {
+/* 17 */     this(paramnl.aw, paramnl.aI, paramnl.aJ, paramnl.aK);
+/*    */   }
+/*    */ 
+/*    */   public em(int paramInt, double paramDouble1, double paramDouble2, double paramDouble3) {
+/* 21 */     this.a = paramInt;
+/* 22 */     double d1 = 3.9D;
+/* 23 */     if (paramDouble1 < -d1) paramDouble1 = -d1;
+/* 24 */     if (paramDouble2 < -d1) paramDouble2 = -d1;
+/* 25 */     if (paramDouble3 < -d1) paramDouble3 = -d1;
+/* 26 */     if (paramDouble1 > d1) paramDouble1 = d1;
+/* 27 */     if (paramDouble2 > d1) paramDouble2 = d1;
+/* 28 */     if (paramDouble3 > d1) paramDouble3 = d1;
+/* 29 */     this.b = (int)(paramDouble1 * 8000.0D);
+/* 30 */     this.c = (int)(paramDouble2 * 8000.0D);
+/* 31 */     this.d = (int)(paramDouble3 * 8000.0D);
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream) {
+/* 35 */     this.a = paramDataInputStream.readInt();
+/* 36 */     this.b = paramDataInputStream.readShort();
+/* 37 */     this.c = paramDataInputStream.readShort();
+/* 38 */     this.d = paramDataInputStream.readShort();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 42 */     paramDataOutputStream.writeInt(this.a);
+/* 43 */     paramDataOutputStream.writeShort(this.b);
+/* 44 */     paramDataOutputStream.writeShort(this.c);
+/* 45 */     paramDataOutputStream.writeShort(this.d);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 49 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 53 */     return 10;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     em
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,24 @@
+package main;
+
+import java.util.*;
+
+public class MatheyDriver {
+    public static void main(String[] args) {
+	BasicMath bm = new BasicMath();
+	Velocity_Displacement vd = new Velocity_Displacement();
+	
+	int classChoice;
+	Scanner s = new Scanner(System.in);
+	
+	System.out.println(
+			"1) Basic Math\n" +
+			"2) Velocity/Diplacement\n" +
+			"3) TBD");
+	
+	System.out.print("Select a Class of Functions: ");
+	
+	int = s.nextInt();
+	
+    }
+
+}

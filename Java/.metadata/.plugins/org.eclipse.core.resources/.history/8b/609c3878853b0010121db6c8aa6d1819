@@ -1,0 +1,45 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class pn extends ey
+/*    */ {
+/*    */   public pn(dn paramdn)
+/*    */   {
+/*  9 */     super(paramdn);
+/* 10 */     this.I = "/mob/zombie.png";
+/* 11 */     this.av = 0.5F;
+/* 12 */     this.c = 5;
+/*    */   }
+/*    */ 
+/*    */   public void m() {
+/* 16 */     if (this.aB.d()) {
+/* 17 */       float f = a(1.0F);
+/* 18 */       if ((f > 0.5F) && 
+/* 19 */         (this.aB.k(gd.b(this.aF), gd.b(this.aG), gd.b(this.aH))) && (this.bm.nextFloat() * 30.0F < (f - 0.4F) * 2.0F)) {
+/* 20 */         this.bp = 300;
+/*    */       }
+/*    */     }
+/*    */ 
+/* 24 */     super.m();
+/*    */   }
+/*    */ 
+/*    */   protected String f() {
+/* 28 */     return "mob.zombie";
+/*    */   }
+/*    */ 
+/*    */   protected String g() {
+/* 32 */     return "mob.zombiehurt";
+/*    */   }
+/*    */ 
+/*    */   protected String h_() {
+/* 36 */     return "mob.zombiedeath";
+/*    */   }
+/*    */ 
+/*    */   protected int i() {
+/* 40 */     return eo.J.ba;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     pn
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,74 @@
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class ov extends ft
+/*    */ {
+/*    */   private float k;
+/*    */   private float l;
+/*    */ 
+/*    */   public ov(eu parameu)
+/*    */   {
+/* 19 */     super(parameu.g);
+/* 20 */     this.f = true;
+/*    */   }
+/*    */ 
+/*    */   protected void j()
+/*    */   {
+/* 25 */     this.g.b("Crafting", 86, 16, 4210752);
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt1, int paramInt2, float paramFloat)
+/*    */   {
+/* 31 */     super.a(paramInt1, paramInt2, paramFloat);
+/* 32 */     this.k = paramInt1;
+/* 33 */     this.l = paramInt2;
+/*    */   }
+/*    */ 
+/*    */   protected void a(float paramFloat) {
+/* 37 */     int i = this.b.n.a("/gui/inventory.png");
+/* 38 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 39 */     this.b.n.b(i);
+/* 40 */     int j = (this.c - this.a) / 2;
+/* 41 */     int m = (this.d - this.h) / 2;
+/* 42 */     b(j, m, 0, 0, this.a, this.h);
+/*    */ 
+/* 44 */     GL11.glEnable(32826);
+/* 45 */     GL11.glEnable(2903);
+/*    */ 
+/* 47 */     GL11.glPushMatrix();
+/* 48 */     GL11.glTranslatef(j + 51, m + 75, 50.0F);
+/* 49 */     float f1 = 30.0F;
+/* 50 */     GL11.glScalef(-f1, f1, f1);
+/* 51 */     GL11.glRotatef(180.0F, 0.0F, 0.0F, 1.0F);
+/*    */ 
+/* 53 */     float f2 = this.b.g.B;
+/* 54 */     float f3 = this.b.g.aL;
+/* 55 */     float f4 = this.b.g.aM;
+/*    */ 
+/* 57 */     float f5 = j + 51 - this.k;
+/* 58 */     float f6 = m + 75 - 50 - this.l;
+/*    */ 
+/* 60 */     GL11.glRotatef(135.0F, 0.0F, 1.0F, 0.0F);
+/* 61 */     p.b();
+/* 62 */     GL11.glRotatef(-135.0F, 0.0F, 1.0F, 0.0F);
+/*    */ 
+/* 64 */     GL11.glRotatef(-(float)Math.atan(f6 / 40.0F) * 20.0F, 1.0F, 0.0F, 0.0F);
+/*    */ 
+/* 66 */     this.b.g.B = ((float)Math.atan(f5 / 40.0F) * 20.0F);
+/* 67 */     this.b.g.aL = ((float)Math.atan(f5 / 40.0F) * 40.0F);
+/* 68 */     this.b.g.aM = (-(float)Math.atan(f6 / 40.0F) * 20.0F);
+/* 69 */     GL11.glTranslatef(0.0F, this.b.g.aX, 0.0F);
+/* 70 */     oc.a.a(this.b.g, 0.0D, 0.0D, 0.0D, 0.0F, 1.0F);
+/* 71 */     this.b.g.B = f2;
+/* 72 */     this.b.g.aL = f3;
+/* 73 */     this.b.g.aM = f4;
+/* 74 */     GL11.glPopMatrix();
+/* 75 */     p.a();
+/* 76 */     GL11.glDisable(32826);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ov
+ * JD-Core Version:    0.6.0
+ */

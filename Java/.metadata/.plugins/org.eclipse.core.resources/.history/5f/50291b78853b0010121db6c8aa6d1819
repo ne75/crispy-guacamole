@@ -1,0 +1,204 @@
+/*     */ import java.io.PrintStream;
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.Collections;
+/*     */ import java.util.HashMap;
+/*     */ import java.util.List;
+/*     */ import java.util.Map;
+/*     */ 
+/*     */ public class fg
+/*     */ {
+/*  20 */   private static final fg a = new fg();
+/*  21 */   private List b = new ArrayList();
+/*     */ 
+/*     */   public static final fg a() {
+/*  24 */     return a;
+/*     */   }
+/*     */ 
+/*     */   private fg() {
+/*  28 */     new ez().a(this);
+/*  29 */     new qy().a(this);
+/*  30 */     new ok().a(this);
+/*  31 */     new kc().a(this);
+/*  32 */     new hd().a(this);
+/*  33 */     new s().a(this);
+/*  34 */     new jk().a(this);
+/*     */ 
+/*  36 */     a(new gm(eo.aI, 3), new Object[] { "###", Character.valueOf('#'), eo.aH });
+/*     */ 
+/*  41 */     a(new gm(eo.aJ, 1), new Object[] { "#", "#", "#", Character.valueOf('#'), eo.aI });
+/*     */ 
+/*  48 */     a(new gm(pj.aZ, 2), new Object[] { "###", "###", Character.valueOf('#'), eo.B });
+/*     */ 
+/*  54 */     a(new gm(pj.aY, 1), new Object[] { "###", "#X#", "###", Character.valueOf('#'), pj.x, Character.valueOf('X'), eo.l });
+/*     */ 
+/*  61 */     a(new gm(pj.R, 1), new Object[] { "###", "#X#", "###", Character.valueOf('#'), pj.x, Character.valueOf('X'), eo.aA });
+/*     */ 
+/*  68 */     a(new gm(pj.an, 1), new Object[] { "###", "XXX", "###", Character.valueOf('#'), pj.x, Character.valueOf('X'), eo.aJ });
+/*     */ 
+/*  75 */     a(new gm(pj.aU, 1), new Object[] { "##", "##", Character.valueOf('#'), eo.aB });
+/*     */ 
+/*  81 */     a(new gm(pj.aW, 1), new Object[] { "##", "##", Character.valueOf('#'), eo.aG });
+/*     */ 
+/*  87 */     a(new gm(pj.al, 1), new Object[] { "##", "##", Character.valueOf('#'), eo.aF });
+/*     */ 
+/*  93 */     a(new gm(pj.bd, 1), new Object[] { "###", "###", "###", Character.valueOf('#'), eo.aR });
+/*     */ 
+/* 100 */     a(new gm(pj.ab, 1), new Object[] { "###", "###", "###", Character.valueOf('#'), eo.I });
+/*     */ 
+/* 107 */     a(new gm(pj.am, 1), new Object[] { "X#X", "#X#", "X#X", Character.valueOf('X'), eo.K, Character.valueOf('#'), pj.E });
+/*     */ 
+/* 115 */     a(new gm(pj.ak, 3), new Object[] { "###", Character.valueOf('#'), pj.w });
+/*     */ 
+/* 120 */     a(new gm(pj.aF, 1), new Object[] { "# #", "###", "# #", Character.valueOf('#'), eo.B });
+/*     */ 
+/* 127 */     a(new gm(eo.at, 1), new Object[] { "##", "##", "##", Character.valueOf('#'), pj.x });
+/*     */ 
+/* 134 */     a(new gm(eo.az, 1), new Object[] { "##", "##", "##", Character.valueOf('#'), eo.m });
+/*     */ 
+/* 141 */     a(new gm(eo.as, 1), new Object[] { "###", "###", " X ", Character.valueOf('#'), pj.x, Character.valueOf('X'), eo.B });
+/*     */ 
+/* 148 */     a(new gm(eo.aX, 1), new Object[] { "AAA", "BEB", "CCC", Character.valueOf('A'), eo.aE, Character.valueOf('B'), eo.aW, Character.valueOf('C'), eo.R, Character.valueOf('E'), eo.aN });
+/*     */ 
+/* 157 */     a(new gm(eo.aW, 1), new Object[] { "#", Character.valueOf('#'), eo.aH });
+/*     */ 
+/* 162 */     a(new gm(pj.x, 4), new Object[] { "#", Character.valueOf('#'), pj.J });
+/*     */ 
+/* 167 */     a(new gm(eo.B, 4), new Object[] { "#", "#", Character.valueOf('#'), pj.x });
+/*     */ 
+/* 174 */     a(new gm(pj.aq, 4), new Object[] { "X", "#", Character.valueOf('X'), eo.k, Character.valueOf('#'), eo.B });
+/*     */ 
+/* 181 */     a(new gm(pj.aq, 4), new Object[] { "X", "#", Character.valueOf('X'), new gm(eo.k, 1, 1), Character.valueOf('#'), eo.B });
+/*     */ 
+/* 188 */     a(new gm(eo.C, 4), new Object[] { "# #", " # ", Character.valueOf('#'), pj.x });
+/*     */ 
+/* 194 */     a(new gm(pj.aG, 16), new Object[] { "X X", "X#X", "X X", Character.valueOf('X'), eo.m, Character.valueOf('#'), eo.B });
+/*     */ 
+/* 202 */     a(new gm(eo.ax, 1), new Object[] { "# #", "###", Character.valueOf('#'), eo.m });
+/*     */ 
+/* 208 */     a(new gm(pj.bf, 1), new Object[] { "A", "B", Character.valueOf('A'), pj.ba, Character.valueOf('B'), pj.aq });
+/*     */ 
+/* 214 */     a(new gm(eo.aL, 1), new Object[] { "A", "B", Character.valueOf('A'), pj.au, Character.valueOf('B'), eo.ax });
+/*     */ 
+/* 220 */     a(new gm(eo.aM, 1), new Object[] { "A", "B", Character.valueOf('A'), pj.aB, Character.valueOf('B'), eo.ax });
+/*     */ 
+/* 226 */     a(new gm(eo.aC, 1), new Object[] { "# #", "###", Character.valueOf('#'), pj.x });
+/*     */ 
+/* 232 */     a(new gm(eo.au, 1), new Object[] { "# #", " # ", Character.valueOf('#'), eo.m });
+/*     */ 
+/* 238 */     a(new gm(eo.g, 1), new Object[] { "A ", " B", Character.valueOf('A'), eo.m, Character.valueOf('B'), eo.an });
+/*     */ 
+/* 244 */     a(new gm(eo.S, 1), new Object[] { "###", Character.valueOf('#'), eo.R });
+/*     */ 
+/* 249 */     a(new gm(pj.at, 4), new Object[] { "#  ", "## ", "###", Character.valueOf('#'), pj.x });
+/*     */ 
+/* 256 */     a(new gm(eo.aP, 1), new Object[] { "  #", " #X", "# X", Character.valueOf('#'), eo.B, Character.valueOf('X'), eo.I });
+/*     */ 
+/* 263 */     a(new gm(pj.aH, 4), new Object[] { "#  ", "## ", "###", Character.valueOf('#'), pj.w });
+/*     */ 
+/* 270 */     a(new gm(eo.aq, 1), new Object[] { "###", "#X#", "###", Character.valueOf('#'), eo.B, Character.valueOf('X'), pj.ab });
+/*     */ 
+/* 277 */     a(new gm(eo.ar, 1), new Object[] { "###", "#X#", "###", Character.valueOf('#'), pj.ah, Character.valueOf('X'), eo.h });
+/*     */ 
+/* 284 */     a(new gm(pj.aJ, 1), new Object[] { "X", "#", Character.valueOf('#'), pj.w, Character.valueOf('X'), eo.B });
+/*     */ 
+/* 290 */     a(new gm(pj.aQ, 1), new Object[] { "X", "#", Character.valueOf('#'), eo.B, Character.valueOf('X'), eo.aA });
+/*     */ 
+/* 297 */     a(new gm(eo.aQ, 1), new Object[] { " # ", "#X#", " # ", Character.valueOf('#'), eo.n, Character.valueOf('X'), eo.aA });
+/*     */ 
+/* 304 */     a(new gm(eo.aO, 1), new Object[] { " # ", "#X#", " # ", Character.valueOf('#'), eo.m, Character.valueOf('X'), eo.aA });
+/*     */ 
+/* 311 */     a(new gm(pj.aR, 1), new Object[] { "#", "#", Character.valueOf('#'), pj.t });
+/*     */ 
+/* 318 */     a(new gm(pj.aK, 1), new Object[] { "###", Character.valueOf('#'), pj.t });
+/*     */ 
+/* 323 */     a(new gm(pj.aM, 1), new Object[] { "###", Character.valueOf('#'), pj.x });
+/*     */ 
+/* 328 */     a(new gm(pj.P, 1), new Object[] { "###", "#X#", "#R#", Character.valueOf('#'), pj.w, Character.valueOf('X'), eo.i, Character.valueOf('R'), eo.aA });
+/*     */ 
+/* 336 */     Collections.sort(this.b, new hs(this));
+/*     */ 
+/* 353 */     System.out.println(this.b.size() + " recipes");
+/*     */   }
+/*     */ 
+/*     */   void a(gm paramgm, Object[] paramArrayOfObject) {
+/* 357 */     String str = "";
+/* 358 */     int i = 0;
+/* 359 */     int j = 0;
+/* 360 */     int k = 0;
+/*     */     Object localObject3;
+/* 362 */     if ((paramArrayOfObject[i] instanceof String[])) {
+/* 363 */       localObject1 = (String[])(String[])paramArrayOfObject[(i++)];
+/* 364 */       for (int m = 0; m < localObject1.length; m++) {
+/* 365 */         localObject3 = localObject1[m];
+/* 366 */         k++;
+/* 367 */         j = ((String)localObject3).length();
+/* 368 */         str = str + (String)localObject3;
+/*     */       }
+/*     */     } else {
+/* 371 */       while ((paramArrayOfObject[i] instanceof String)) {
+/* 372 */         localObject1 = (String)paramArrayOfObject[(i++)];
+/* 373 */         k++;
+/* 374 */         j = ((String)localObject1).length();
+/* 375 */         str = str + (String)localObject1;
+/*     */       }
+/*     */     }
+/*     */ 
+/* 379 */     Object localObject1 = new HashMap();
+/* 380 */     for (; i < paramArrayOfObject.length; i += 2) {
+/* 381 */       localObject2 = (Character)paramArrayOfObject[i];
+/* 382 */       localObject3 = null;
+/* 383 */       if ((paramArrayOfObject[(i + 1)] instanceof eo))
+/* 384 */         localObject3 = new gm((eo)paramArrayOfObject[(i + 1)]);
+/* 385 */       else if ((paramArrayOfObject[(i + 1)] instanceof pj))
+/* 386 */         localObject3 = new gm((pj)paramArrayOfObject[(i + 1)], 1, -1);
+/* 387 */       else if ((paramArrayOfObject[(i + 1)] instanceof gm)) {
+/* 388 */         localObject3 = (gm)paramArrayOfObject[(i + 1)];
+/*     */       }
+/* 390 */       ((Map)localObject1).put(localObject2, localObject3);
+/*     */     }
+/*     */ 
+/* 393 */     Object localObject2 = new gm[j * k];
+/*     */ 
+/* 395 */     for (int n = 0; n < j * k; n++) {
+/* 396 */       char c = str.charAt(n);
+/* 397 */       if (((Map)localObject1).containsKey(Character.valueOf(c)))
+/* 398 */         localObject2[n] = ((gm)((Map)localObject1).get(Character.valueOf(c))).k();
+/*     */       else {
+/* 400 */         localObject2[n] = null;
+/*     */       }
+/*     */     }
+/* 403 */     this.b.add(new gj(j, k, localObject2, paramgm));
+/*     */   }
+/*     */ 
+/*     */   void b(gm paramgm, Object[] paramArrayOfObject)
+/*     */   {
+/* 408 */     ArrayList localArrayList = new ArrayList();
+/*     */ 
+/* 410 */     for (Object localObject : paramArrayOfObject) {
+/* 411 */       if ((localObject instanceof gm))
+/* 412 */         localArrayList.add(((gm)localObject).k());
+/* 413 */       else if ((localObject instanceof eo))
+/* 414 */         localArrayList.add(new gm((eo)localObject));
+/* 415 */       else if ((localObject instanceof pj))
+/* 416 */         localArrayList.add(new gm((pj)localObject));
+/*     */       else {
+/* 418 */         throw new RuntimeException("Invalid shapeless recipy!");
+/*     */       }
+/*     */     }
+/*     */ 
+/* 422 */     this.b.add(new om(paramgm, localArrayList));
+/*     */   }
+/*     */ 
+/*     */   public gm a(jb paramjb) {
+/* 426 */     for (int i = 0; i < this.b.size(); i++) {
+/* 427 */       cn localcn = (cn)this.b.get(i);
+/* 428 */       if (localcn.a(paramjb)) return localcn.b(paramjb);
+/*     */     }
+/* 430 */     return null;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fg
+ * JD-Core Version:    0.6.0
+ */

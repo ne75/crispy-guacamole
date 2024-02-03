@@ -1,0 +1,172 @@
+/*     */ import java.io.DataInputStream;
+/*     */ import java.io.DataOutputStream;
+/*     */ import java.net.Socket;
+/*     */ import java.net.SocketAddress;
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.Collections;
+/*     */ import java.util.List;
+/*     */ 
+/*     */ public class kx
+/*     */ {
+/*  16 */   public static final Object a = new Object();
+/*     */   public static int b;
+/*     */   public static int c;
+/*  19 */   private Object e = new Object();
+/*     */   private Socket f;
+/*     */   private final SocketAddress g;
+/*     */   private DataInputStream h;
+/*     */   private DataOutputStream i;
+/*  32 */   private boolean j = true;
+/*     */ 
+/*  34 */   private List k = Collections.synchronizedList(new ArrayList());
+/*  35 */   private List l = Collections.synchronizedList(new ArrayList());
+/*  36 */   private List m = Collections.synchronizedList(new ArrayList());
+/*     */   private od n;
+/*  39 */   private boolean o = false;
+/*     */   private Thread p;
+/*     */   private Thread q;
+/*  44 */   private boolean r = false;
+/*  45 */   private String s = "";
+/*     */   private Object[] t;
+/*  48 */   private int u = 0;
+/*  49 */   private int v = 0;
+/*     */ 
+/*  51 */   public int d = 0;
+/*     */ 
+/* 120 */   private int w = 0;
+/*     */ 
+/*     */   public kx(Socket paramSocket, String paramString, od paramod)
+/*     */   {
+/*  54 */     this.f = paramSocket;
+/*  55 */     this.g = paramSocket.getRemoteSocketAddress();
+/*  56 */     this.n = paramod;
+/*  57 */     paramSocket.setTrafficClass(24);
+/*  58 */     this.h = new DataInputStream(paramSocket.getInputStream());
+/*  59 */     this.i = new DataOutputStream(paramSocket.getOutputStream());
+/*     */ 
+/*  61 */     this.q = new rd(this, paramString + " read thread");
+/*     */ 
+/*  78 */     this.p = new rf(this, paramString + " write thread");
+/*     */ 
+/*  95 */     this.q.start();
+/*  96 */     this.p.start();
+/*     */   }
+/*     */ 
+/*     */   public void a(hj paramhj)
+/*     */   {
+/* 104 */     if (this.o) return;
+/* 105 */     synchronized (this.e) {
+/* 106 */       this.v += paramhj.a() + 1;
+/* 107 */       if (paramhj.k)
+/* 108 */         this.m.add(paramhj);
+/*     */       else
+/* 110 */         this.l.add(paramhj);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private void b()
+/*     */   {
+/*     */     try
+/*     */     {
+/* 124 */       int i1 = 1;
+/*     */       hj localhj;
+/* 125 */       if ((!this.l.isEmpty()) && ((this.d == 0) || (System.currentTimeMillis() - ((hj)this.l.get(0)).j >= this.d))) {
+/* 126 */         i1 = 0;
+/*     */ 
+/* 128 */         synchronized (this.e) {
+/* 129 */           localhj = (hj)this.l.remove(0);
+/* 130 */           this.v -= localhj.a() + 1;
+/*     */         }
+/* 132 */         hj.a(localhj, this.i);
+/*     */       }
+/*     */ 
+/* 135 */       if (((i1 != 0) || (this.w-- <= 0)) && (!this.m.isEmpty()) && ((this.d == 0) || (System.currentTimeMillis() - ((hj)this.m.get(0)).j >= this.d))) {
+/* 136 */         i1 = 0;
+/*     */ 
+/* 138 */         synchronized (this.e) {
+/* 139 */           localhj = (hj)this.m.remove(0);
+/* 140 */           this.v -= localhj.a() + 1;
+/*     */         }
+/* 142 */         hj.a(localhj, this.i);
+/* 143 */         this.w = 50;
+/*     */       }
+/*     */ 
+/* 146 */       if (i1 != 0)
+/* 147 */         Thread.sleep(10L);
+/*     */     } catch (InterruptedException localInterruptedException) {
+/*     */     }
+/*     */     catch (Exception localException) {
+/* 151 */       if (!this.r) a(localException); 
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private void c()
+/*     */   {
+/*     */     try {
+/* 157 */       hj localhj = hj.b(this.h);
+/* 158 */       if (localhj != null) this.k.add(localhj); else
+/* 159 */         a("disconnect.endOfStream", new Object[0]);
+/*     */     } catch (Exception localException) {
+/* 161 */       if (!this.r) a(localException); 
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private void a(Exception paramException)
+/*     */   {
+/* 166 */     paramException.printStackTrace();
+/* 167 */     a("disconnect.genericReason", new Object[] { "Internal exception: " + paramException.toString() });
+/*     */   }
+/*     */ 
+/*     */   public void a(String paramString, Object[] paramArrayOfObject) {
+/* 171 */     if (!this.j) return;
+/* 172 */     this.r = true;
+/* 173 */     this.s = paramString;
+/* 174 */     this.t = paramArrayOfObject;
+/*     */ 
+/* 176 */     new rc(this).start();
+/*     */ 
+/* 199 */     this.j = false;
+/*     */     try {
+/* 201 */       this.h.close();
+/* 202 */       this.h = null;
+/*     */     } catch (Throwable localThrowable1) {
+/*     */     }
+/*     */     try {
+/* 206 */       this.i.close();
+/* 207 */       this.i = null;
+/*     */     } catch (Throwable localThrowable2) {
+/*     */     }
+/*     */     try {
+/* 211 */       this.f.close();
+/* 212 */       this.f = null;
+/*     */     } catch (Throwable localThrowable3) {
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a() {
+/* 218 */     if (this.v > 1048576) {
+/* 219 */       a("disconnect.overflow", new Object[0]);
+/*     */     }
+/* 221 */     if (this.k.isEmpty()) {
+/* 222 */       if (this.u++ == 1200)
+/* 223 */         a("disconnect.timeout", new Object[0]);
+/*     */     }
+/*     */     else {
+/* 226 */       this.u = 0;
+/*     */     }
+/*     */ 
+/* 229 */     int i1 = 100;
+/* 230 */     while ((!this.k.isEmpty()) && (i1-- >= 0)) {
+/* 231 */       hj localhj = (hj)this.k.remove(0);
+/* 232 */       localhj.a(this.n);
+/*     */     }
+/*     */ 
+/* 235 */     if ((this.r) && (this.k.isEmpty()))
+/* 236 */       this.n.a(this.s, this.t);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     kx
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,42 @@
+/*    */ public class jk
+/*    */ {
+/*    */   public void a(fg paramfg)
+/*    */   {
+/* 14 */     for (int i = 0; i < 16; i++)
+/*    */     {
+/* 16 */       paramfg.b(new gm(pj.ab, 1, cu.d(i)), new Object[] { new gm(eo.aU, 1, i), new gm(eo.c[pj.ab.bi], 1, 0) });
+/*    */     }
+/*    */ 
+/* 21 */     paramfg.b(new gm(eo.aU, 2, 11), new Object[] { pj.ad });
+/* 22 */     paramfg.b(new gm(eo.aU, 2, 1), new Object[] { pj.ae });
+/* 23 */     paramfg.b(new gm(eo.aU, 3, 15), new Object[] { eo.aV });
+/* 24 */     paramfg.b(new gm(eo.aU, 2, 9), new Object[] { new gm(eo.aU, 1, 1), new gm(eo.aU, 1, 15) });
+/*    */ 
+/* 26 */     paramfg.b(new gm(eo.aU, 2, 14), new Object[] { new gm(eo.aU, 1, 1), new gm(eo.aU, 1, 11) });
+/*    */ 
+/* 28 */     paramfg.b(new gm(eo.aU, 2, 10), new Object[] { new gm(eo.aU, 1, 2), new gm(eo.aU, 1, 15) });
+/*    */ 
+/* 30 */     paramfg.b(new gm(eo.aU, 2, 8), new Object[] { new gm(eo.aU, 1, 0), new gm(eo.aU, 1, 15) });
+/*    */ 
+/* 32 */     paramfg.b(new gm(eo.aU, 2, 7), new Object[] { new gm(eo.aU, 1, 8), new gm(eo.aU, 1, 15) });
+/*    */ 
+/* 34 */     paramfg.b(new gm(eo.aU, 3, 7), new Object[] { new gm(eo.aU, 1, 0), new gm(eo.aU, 1, 15), new gm(eo.aU, 1, 15) });
+/*    */ 
+/* 40 */     paramfg.b(new gm(eo.aU, 2, 12), new Object[] { new gm(eo.aU, 1, 4), new gm(eo.aU, 1, 15) });
+/*    */ 
+/* 42 */     paramfg.b(new gm(eo.aU, 2, 6), new Object[] { new gm(eo.aU, 1, 4), new gm(eo.aU, 1, 2) });
+/*    */ 
+/* 44 */     paramfg.b(new gm(eo.aU, 2, 5), new Object[] { new gm(eo.aU, 1, 4), new gm(eo.aU, 1, 1) });
+/*    */ 
+/* 46 */     paramfg.b(new gm(eo.aU, 2, 13), new Object[] { new gm(eo.aU, 1, 5), new gm(eo.aU, 1, 9) });
+/*    */ 
+/* 48 */     paramfg.b(new gm(eo.aU, 3, 13), new Object[] { new gm(eo.aU, 1, 4), new gm(eo.aU, 1, 1), new gm(eo.aU, 1, 9) });
+/*    */ 
+/* 50 */     paramfg.b(new gm(eo.aU, 4, 13), new Object[] { new gm(eo.aU, 1, 4), new gm(eo.aU, 1, 1), new gm(eo.aU, 1, 1), new gm(eo.aU, 1, 15) });
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     jk
+ * JD-Core Version:    0.6.0
+ */

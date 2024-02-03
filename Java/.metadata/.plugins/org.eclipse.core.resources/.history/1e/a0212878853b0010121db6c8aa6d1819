@@ -1,0 +1,96 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class ku extends pj
+/*     */ {
+/*     */   protected ku(int paramInt1, int paramInt2)
+/*     */   {
+/* 241 */     super(paramInt1, paramInt2, ic.n);
+/* 242 */     a(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
+/*     */   }
+/*     */ 
+/*     */   public db d(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 246 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public boolean a()
+/*     */   {
+/* 254 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public pr a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, ax paramax1, ax paramax2) {
+/* 258 */     a(paramdn, paramInt1, paramInt2, paramInt3);
+/* 259 */     return super.a(paramdn, paramInt1, paramInt2, paramInt3, paramax1, paramax2);
+/*     */   }
+/*     */ 
+/*     */   public void a(ri paramri, int paramInt1, int paramInt2, int paramInt3) {
+/* 263 */     int i = paramri.e(paramInt1, paramInt2, paramInt3);
+/* 264 */     if ((i >= 2) && (i <= 5))
+/* 265 */       a(0.0F, 0.0F, 0.0F, 1.0F, 0.625F, 1.0F);
+/*     */     else
+/* 267 */       a(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
+/*     */   }
+/*     */ 
+/*     */   public int a(int paramInt1, int paramInt2)
+/*     */   {
+/* 272 */     if (paramInt2 >= 6) return this.bh - 16;
+/* 273 */     return this.bh;
+/*     */   }
+/*     */ 
+/*     */   public boolean b() {
+/* 277 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public int g() {
+/* 281 */     return 9;
+/*     */   }
+/*     */ 
+/*     */   public int a(Random paramRandom) {
+/* 285 */     return 1;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/* 290 */     return paramdn.g(paramInt1, paramInt2 - 1, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   public void e(dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/* 296 */     if (!paramdn.z) {
+/* 297 */       paramdn.c(paramInt1, paramInt2, paramInt3, 15);
+/* 298 */       h(paramdn, paramInt1, paramInt2, paramInt3);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 303 */     if (paramdn.z) return;
+/*     */ 
+/* 305 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/* 306 */     int j = 0;
+/*     */ 
+/* 308 */     if (!paramdn.g(paramInt1, paramInt2 - 1, paramInt3)) j = 1;
+/* 309 */     if ((i == 2) && (!paramdn.g(paramInt1 + 1, paramInt2, paramInt3))) j = 1;
+/* 310 */     if ((i == 3) && (!paramdn.g(paramInt1 - 1, paramInt2, paramInt3))) j = 1;
+/* 311 */     if ((i == 4) && (!paramdn.g(paramInt1, paramInt2, paramInt3 - 1))) j = 1;
+/* 312 */     if ((i == 5) && (!paramdn.g(paramInt1, paramInt2, paramInt3 + 1))) j = 1;
+/*     */ 
+/* 314 */     if (j != 0) {
+/* 315 */       b_(paramdn, paramInt1, paramInt2, paramInt3, paramdn.e(paramInt1, paramInt2, paramInt3));
+/* 316 */       paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/*     */     }
+/* 318 */     else if ((paramInt4 > 0) && (pj.m[paramInt4].e()) && 
+/* 319 */       (pw.a(new pw(this, paramdn, paramInt1, paramInt2, paramInt3)) == 3)) {
+/* 320 */       h(paramdn, paramInt1, paramInt2, paramInt3);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private void h(dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/* 327 */     if (paramdn.z) return;
+/* 328 */     new pw(this, paramdn, paramInt1, paramInt2, paramInt3).a(paramdn.q(paramInt1, paramInt2, paramInt3));
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ku
+ * JD-Core Version:    0.6.0
+ */

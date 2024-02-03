@@ -1,0 +1,11 @@
+public abstract interface sf
+{
+  public abstract boolean a(db paramdb);
+
+  public abstract void a(double paramDouble1, double paramDouble2, double paramDouble3);
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     sf
+ * JD-Core Version:    0.6.0
+ */

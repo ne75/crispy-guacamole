@@ -1,0 +1,69 @@
+/*    */ public class gj
+/*    */   implements cn
+/*    */ {
+/*    */   private int b;
+/*    */   private int c;
+/*    */   private gm[] d;
+/*    */   private gm e;
+/*    */   public final int a;
+/*    */ 
+/*    */   public gj(int paramInt1, int paramInt2, gm[] paramArrayOfgm, gm paramgm)
+/*    */   {
+/* 13 */     this.a = paramgm.c;
+/* 14 */     this.b = paramInt1;
+/* 15 */     this.c = paramInt2;
+/* 16 */     this.d = paramArrayOfgm;
+/* 17 */     this.e = paramgm;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(jb paramjb) {
+/* 21 */     for (int i = 0; i <= 3 - this.b; i++) {
+/* 22 */       for (int j = 0; j <= 3 - this.c; j++) {
+/* 23 */         if (a(paramjb, i, j, true)) return true;
+/* 24 */         if (a(paramjb, i, j, false)) return true;
+/*    */       }
+/*    */     }
+/* 27 */     return false;
+/*    */   }
+/*    */ 
+/*    */   private boolean a(jb paramjb, int paramInt1, int paramInt2, boolean paramBoolean) {
+/* 31 */     for (int i = 0; i < 3; i++) {
+/* 32 */       for (int j = 0; j < 3; j++) {
+/* 33 */         int k = i - paramInt1;
+/* 34 */         int m = j - paramInt2;
+/* 35 */         gm localgm1 = null;
+/* 36 */         if ((k >= 0) && (m >= 0) && (k < this.b) && (m < this.c)) {
+/* 37 */           if (paramBoolean) localgm1 = this.d[(this.b - k - 1 + m * this.b)]; else
+/* 38 */             localgm1 = this.d[(k + m * this.b)];
+/*    */         }
+/* 40 */         gm localgm2 = paramjb.b(i, j);
+/* 41 */         if ((localgm2 == null) && (localgm1 == null)) {
+/*    */           continue;
+/*    */         }
+/* 44 */         if (((localgm2 == null) && (localgm1 != null)) || ((localgm2 != null) && (localgm1 == null))) {
+/* 45 */           return false;
+/*    */         }
+/* 47 */         if (localgm1.c != localgm2.c) {
+/* 48 */           return false;
+/*    */         }
+/* 50 */         if ((localgm1.i() != -1) && (localgm1.i() != localgm2.i())) {
+/* 51 */           return false;
+/*    */         }
+/*    */       }
+/*    */     }
+/* 55 */     return true;
+/*    */   }
+/*    */ 
+/*    */   public gm b(jb paramjb) {
+/* 59 */     return new gm(this.e.c, this.e.a, this.e.i());
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 63 */     return this.b * this.c;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gj
+ * JD-Core Version:    0.6.0
+ */

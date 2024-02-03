@@ -1,0 +1,235 @@
+/*     */ import java.io.BufferedReader;
+/*     */ import java.io.File;
+/*     */ import java.io.FileReader;
+/*     */ import java.io.FileWriter;
+/*     */ import java.io.PrintStream;
+/*     */ import java.io.PrintWriter;
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ import org.lwjgl.input.Keyboard;
+/*     */ 
+/*     */ public class hq
+/*     */ {
+/*  68 */   private static final String[] z = { "options.renderDistance.far", "options.renderDistance.normal", "options.renderDistance.short", "options.renderDistance.tiny" };
+/*     */ 
+/*  71 */   private static final String[] A = { "options.difficulty.peaceful", "options.difficulty.easy", "options.difficulty.normal", "options.difficulty.hard" };
+/*     */ 
+/*  75 */   public float a = 1.0F;
+/*  76 */   public float b = 1.0F;
+/*  77 */   public float c = 0.5F;
+/*  78 */   public boolean d = false;
+/*  79 */   public int e = 0;
+/*  80 */   public boolean f = true;
+/*  81 */   public boolean g = false;
+/*  82 */   public boolean h = false;
+/*  83 */   public boolean i = true;
+/*  84 */   public String j = "Default";
+/*     */ 
+/*  86 */   public lo k = new lo("key.forward", 17);
+/*  87 */   public lo l = new lo("key.left", 30);
+/*  88 */   public lo m = new lo("key.back", 31);
+/*  89 */   public lo n = new lo("key.right", 32);
+/*  90 */   public lo o = new lo("key.jump", 57);
+/*  91 */   public lo p = new lo("key.inventory", 23);
+/*  92 */   public lo q = new lo("key.drop", 16);
+/*  93 */   public lo r = new lo("key.chat", 20);
+/*  94 */   public lo s = new lo("key.fog", 33);
+/*  95 */   public lo t = new lo("key.sneak", 42);
+/*     */ 
+/*  98 */   public lo[] u = { this.k, this.l, this.m, this.n, this.o, this.t, this.q, this.p, this.r, this.s };
+/*     */   protected Minecraft v;
+/*     */   private File B;
+/* 108 */   public int w = 2;
+/* 109 */   public boolean x = false;
+/* 110 */   public String y = "";
+/*     */ 
+/*     */   public hq(Minecraft paramMinecraft, File paramFile) {
+/* 113 */     this.v = paramMinecraft;
+/* 114 */     this.B = new File(paramFile, "options.txt");
+/* 115 */     a();
+/*     */   }
+/*     */ 
+/*     */   public hq() {
+/*     */   }
+/*     */ 
+/*     */   public String a(int paramInt) {
+/* 122 */     n localn = n.a();
+/* 123 */     return localn.a(this.u[paramInt].a);
+/*     */   }
+/*     */ 
+/*     */   public String b(int paramInt) {
+/* 127 */     return Keyboard.getKeyName(this.u[paramInt].b);
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt1, int paramInt2) {
+/* 131 */     this.u[paramInt1].b = paramInt2;
+/* 132 */     b();
+/*     */   }
+/*     */ 
+/*     */   public void a(fo paramfo, float paramFloat) {
+/* 136 */     if (paramfo == fo.a) {
+/* 137 */       this.a = paramFloat;
+/* 138 */       this.v.A.a();
+/*     */     }
+/* 140 */     if (paramfo == fo.b) {
+/* 141 */       this.b = paramFloat;
+/* 142 */       this.v.A.a();
+/*     */     }
+/* 144 */     if (paramfo == fo.d)
+/* 145 */       this.c = paramFloat;
+/*     */   }
+/*     */ 
+/*     */   public void a(fo paramfo, int paramInt)
+/*     */   {
+/* 150 */     if (paramfo == fo.c) this.d = (!this.d);
+/* 151 */     if (paramfo == fo.e) this.e = (this.e + paramInt & 0x3);
+/* 152 */     if (paramfo == fo.f) this.f = (!this.f);
+/* 153 */     if (paramfo == fo.g) {
+/* 154 */       this.g = (!this.g);
+/* 155 */       this.v.n.b();
+/*     */     }
+/* 157 */     if (paramfo == fo.h) this.h = (!this.h);
+/* 158 */     if (paramfo == fo.i) this.w = (this.w + paramInt & 0x3);
+/* 159 */     if (paramfo == fo.j) {
+/* 160 */       this.i = (!this.i);
+/* 161 */       this.v.f.a();
+/*     */     }
+/* 163 */     b();
+/*     */   }
+/*     */ 
+/*     */   public float a(fo paramfo) {
+/* 167 */     if (paramfo == fo.a) return this.a;
+/* 168 */     if (paramfo == fo.b) return this.b;
+/* 169 */     if (paramfo == fo.d) return this.c;
+/* 170 */     return 0.0F;
+/*     */   }
+/*     */ 
+/*     */   public boolean b(fo paramfo) {
+/* 174 */     switch (dx.a[paramfo.ordinal()]) {
+/*     */     case 1:
+/* 176 */       return this.d;
+/*     */     case 2:
+/* 178 */       return this.f;
+/*     */     case 3:
+/* 180 */       return this.g;
+/*     */     case 4:
+/* 182 */       return this.h;
+/*     */     }
+/* 184 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public String c(fo paramfo)
+/*     */   {
+/* 189 */     n localn = n.a();
+/* 190 */     String str = localn.a(paramfo.d()) + ": ";
+/*     */ 
+/* 192 */     if (paramfo.a()) {
+/* 193 */       float f1 = a(paramfo);
+/*     */ 
+/* 195 */       if (paramfo == fo.d) {
+/* 196 */         if (f1 == 0.0F) {
+/* 197 */           return str + localn.a("options.sensitivity.min");
+/*     */         }
+/* 199 */         if (f1 == 1.0F) {
+/* 200 */           return str + localn.a("options.sensitivity.max");
+/*     */         }
+/* 202 */         return str + (int)(f1 * 200.0F) + "%";
+/*     */       }
+/* 204 */       if (f1 == 0.0F) {
+/* 205 */         return str + localn.a("options.off");
+/*     */       }
+/* 207 */       return str + (int)(f1 * 100.0F) + "%";
+/*     */     }
+/* 209 */     if (paramfo.b())
+/*     */     {
+/* 211 */       boolean bool = b(paramfo);
+/* 212 */       if (bool) {
+/* 213 */         return str + localn.a("options.on");
+/*     */       }
+/* 215 */       return str + localn.a("options.off");
+/* 216 */     }if (paramfo == fo.e)
+/* 217 */       return str + localn.a(z[this.e]);
+/* 218 */     if (paramfo == fo.i)
+/* 219 */       return str + localn.a(A[this.w]);
+/* 220 */     if (paramfo == fo.j) {
+/* 221 */       if (this.i) {
+/* 222 */         return str + localn.a("options.graphics.fancy");
+/*     */       }
+/* 224 */       return str + localn.a("options.graphics.fast");
+/*     */     }
+/*     */ 
+/* 227 */     return str;
+/*     */   }
+/*     */ 
+/*     */   public void a()
+/*     */   {
+/*     */     try {
+/* 233 */       if (!this.B.exists()) return;
+/* 234 */       BufferedReader localBufferedReader = new BufferedReader(new FileReader(this.B));
+/* 235 */       String str = "";
+/* 236 */       while ((str = localBufferedReader.readLine()) != null) {
+/* 237 */         String[] arrayOfString = str.split(":");
+/* 238 */         if (arrayOfString[0].equals("music")) this.a = a(arrayOfString[1]);
+/* 239 */         if (arrayOfString[0].equals("sound")) this.b = a(arrayOfString[1]);
+/* 240 */         if (arrayOfString[0].equals("mouseSensitivity")) this.c = a(arrayOfString[1]);
+/* 241 */         if (arrayOfString[0].equals("invertYMouse")) this.d = arrayOfString[1].equals("true");
+/* 242 */         if (arrayOfString[0].equals("viewDistance")) this.e = Integer.parseInt(arrayOfString[1]);
+/* 243 */         if (arrayOfString[0].equals("bobView")) this.f = arrayOfString[1].equals("true");
+/* 244 */         if (arrayOfString[0].equals("anaglyph3d")) this.g = arrayOfString[1].equals("true");
+/* 245 */         if (arrayOfString[0].equals("limitFramerate")) this.h = arrayOfString[1].equals("true");
+/* 246 */         if (arrayOfString[0].equals("difficulty")) this.w = Integer.parseInt(arrayOfString[1]);
+/* 247 */         if (arrayOfString[0].equals("fancyGraphics")) this.i = arrayOfString[1].equals("true");
+/* 248 */         if (arrayOfString[0].equals("skin")) this.j = arrayOfString[1];
+/* 249 */         if (arrayOfString[0].equals("lastServer")) this.y = arrayOfString[1];
+/*     */ 
+/* 251 */         for (int i1 = 0; i1 < this.u.length; i1++) {
+/* 252 */           if (arrayOfString[0].equals("key_" + this.u[i1].a)) {
+/* 253 */             this.u[i1].b = Integer.parseInt(arrayOfString[1]);
+/*     */           }
+/*     */         }
+/*     */       }
+/* 257 */       localBufferedReader.close();
+/*     */     } catch (Exception localException) {
+/* 259 */       System.out.println("Failed to load options");
+/* 260 */       localException.printStackTrace();
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private float a(String paramString) {
+/* 265 */     if (paramString.equals("true")) return 1.0F;
+/* 266 */     if (paramString.equals("false")) return 0.0F;
+/* 267 */     return Float.parseFloat(paramString);
+/*     */   }
+/*     */ 
+/*     */   public void b() {
+/*     */     try {
+/* 272 */       PrintWriter localPrintWriter = new PrintWriter(new FileWriter(this.B));
+/*     */ 
+/* 274 */       localPrintWriter.println("music:" + this.a);
+/* 275 */       localPrintWriter.println("sound:" + this.b);
+/* 276 */       localPrintWriter.println("invertYMouse:" + this.d);
+/* 277 */       localPrintWriter.println("mouseSensitivity:" + this.c);
+/* 278 */       localPrintWriter.println("viewDistance:" + this.e);
+/* 279 */       localPrintWriter.println("bobView:" + this.f);
+/* 280 */       localPrintWriter.println("anaglyph3d:" + this.g);
+/* 281 */       localPrintWriter.println("limitFramerate:" + this.h);
+/* 282 */       localPrintWriter.println("difficulty:" + this.w);
+/* 283 */       localPrintWriter.println("fancyGraphics:" + this.i);
+/* 284 */       localPrintWriter.println("skin:" + this.j);
+/* 285 */       localPrintWriter.println("lastServer:" + this.y);
+/*     */ 
+/* 287 */       for (int i1 = 0; i1 < this.u.length; i1++) {
+/* 288 */         localPrintWriter.println("key_" + this.u[i1].a + ":" + this.u[i1].b);
+/*     */       }
+/*     */ 
+/* 291 */       localPrintWriter.close();
+/*     */     } catch (Exception localException) {
+/* 293 */       System.out.println("Failed to save options");
+/* 294 */       localException.printStackTrace();
+/*     */     }
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hq
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,21 @@
+/*    */ package org.lwjgl.opengl;
+/*    */ 
+/*    */ public final class GLSync
+/*    */   implements PointerWrapper
+/*    */ {
+/*    */   private final long sync;
+/*    */ 
+/*    */   GLSync(long sync)
+/*    */   {
+/* 42 */     this.sync = sync;
+/*    */   }
+/*    */ 
+/*    */   public long getPointer() {
+/* 46 */     return this.sync;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/lwjgl.jar
+ * Qualified Name:     org.lwjgl.opengl.GLSync
+ * JD-Core Version:    0.6.0
+ */

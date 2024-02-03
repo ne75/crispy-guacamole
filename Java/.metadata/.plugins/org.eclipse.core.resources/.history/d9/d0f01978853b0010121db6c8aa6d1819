@@ -1,0 +1,30 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class ep extends ba
+/*    */ {
+/* 12 */   private bt a = new bt();
+/*    */ 
+/*    */   public ep() {
+/* 15 */     this.c = 0.5F;
+/*    */   }
+/*    */ 
+/*    */   public void a(gz paramgz, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2) {
+/* 19 */     GL11.glPushMatrix();
+/* 20 */     GL11.glTranslatef((float)paramDouble1, (float)paramDouble2, (float)paramDouble3);
+/*    */ 
+/* 22 */     a("/terrain.png");
+/* 23 */     pj localpj = pj.m[paramgz.a];
+/*    */ 
+/* 25 */     dn localdn = paramgz.k();
+/*    */ 
+/* 27 */     GL11.glDisable(2896);
+/* 28 */     this.a.a(localpj, localdn, gd.b(paramgz.aF), gd.b(paramgz.aG), gd.b(paramgz.aH));
+/* 29 */     GL11.glEnable(2896);
+/* 30 */     GL11.glPopMatrix();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ep
+ * JD-Core Version:    0.6.0
+ */

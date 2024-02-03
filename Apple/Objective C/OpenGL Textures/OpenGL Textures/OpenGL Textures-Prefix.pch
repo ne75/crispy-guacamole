@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'OpenGL Textures' target in the 'OpenGL Textures' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

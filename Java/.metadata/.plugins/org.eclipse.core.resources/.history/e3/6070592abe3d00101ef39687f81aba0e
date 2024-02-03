@@ -1,0 +1,380 @@
+/*     */ package minecraft.com.jcraft.jorbis;
+/*     */ 
+/*     */ import com.jcraft.jogg.Buffer;
+/*     */ 
+/*     */ class Floor1 extends FuncFloor
+/*     */ {
+/*     */   static final int floor1_rangedb = 140;
+/*     */   static final int VIF_POSIT = 63;
+/* 393 */   private static float[] FLOOR_fromdB_LOOKUP = { 1.064986E-07F, 1.134195E-07F, 1.207902E-07F, 1.286398E-07F, 1.369995E-07F, 1.459025E-07F, 1.553841E-07F, 1.654818E-07F, 1.762357E-07F, 1.876886E-07F, 1.998856E-07F, 2.128753E-07F, 2.267091E-07F, 2.41442E-07F, 2.571322E-07F, 2.738421E-07F, 2.916379E-07F, 3.105902E-07F, 3.307741E-07F, 3.522697E-07F, 3.751621E-07F, 3.995423E-07F, 4.255068E-07F, 4.531586E-07F, 4.826075E-07F, 5.1397E-07F, 5.473706E-07F, 5.829419E-07F, 6.208247E-07F, 6.611694E-07F, 7.041359E-07F, 7.498946E-07F, 7.98627E-07F, 8.505263E-07F, 9.057983E-07F, 9.646622E-07F, 1.027351E-06F, 1.094114E-06F, 1.165216E-06F, 1.240938E-06F, 1.321582E-06F, 1.407465E-06F, 1.498931E-06F, 1.596339E-06F, 1.700079E-06F, 1.810559E-06F, 1.92822E-06F, 2.053526E-06F, 2.186976E-06F, 2.329098E-06F, 2.480456E-06F, 2.64165E-06F, 2.813319E-06F, 2.996144E-06F, 3.190851E-06F, 3.39821E-06F, 3.619045E-06F, 3.854231E-06F, 4.104701E-06F, 4.371447E-06F, 4.655528E-06F, 4.958071E-06F, 5.280274E-06F, 5.623416E-06F, 5.988857E-06F, 6.378047E-06F, 6.792528E-06F, 7.233945E-06F, 7.704048E-06F, 8.2047E-06F, 8.737888E-06F, 9.305725E-06F, 9.910464E-06F, 1.05545E-05F, 1.124039E-05F, 1.197086E-05F, 1.274879E-05F, 1.357728E-05F, 1.445961E-05F, 1.539927E-05F, 1.640001E-05F, 1.746577E-05F, 1.860079E-05F, 1.980958E-05F, 2.109691E-05F, 2.246791E-05F, 2.3928E-05F, 2.548298E-05F, 2.713901E-05F, 2.890265E-05F, 3.078091E-05F, 3.278123E-05F, 3.491153E-05F, 3.718028E-05F, 3.959647E-05F, 4.216967E-05F, 4.491009E-05F, 4.78286E-05F, 5.093678E-05F, 5.424693E-05F, 5.77722E-05F, 6.152657E-05F, 6.552491E-05F, 6.978308E-05F, 7.431798E-05F, 7.914758E-05F, 8.429104E-05F, 8.976875E-05F, 9.560242E-05F, 0.0001018152F, 0.0001084317F, 0.0001154782F, 0.0001229827F, 0.0001309748F, 0.0001394863F, 0.0001485509F, 0.0001582045F, 0.0001684856F, 0.0001794347F, 0.0001910954F, 0.0002035138F, 0.000216739F, 0.0002308242F, 0.0002458245F, 0.0002617996F, 0.0002788128F, 0.0002969316F, 0.0003162279F, 0.0003367782F, 0.0003586639F, 0.0003819719F, 0.0004067946F, 0.0004332304F, 0.000461384F, 0.0004913675F, 0.0005232993F, 0.0005573062F, 0.0005935231F, 0.0006320936F, 0.0006731706F, 0.000716917F, 0.0007635063F, 0.0008131233F, 0.0008659646F, 0.0009222399F, 0.0009821722F, 0.001045999F, 0.001113974F, 0.001186367F, 0.001263463F, 0.00134557F, 0.001433013F, 0.001526138F, 0.001625315F, 0.001730937F, 0.001843424F, 0.00196322F, 0.002090801F, 0.002226673F, 0.002371374F, 0.00252548F, 0.002689599F, 0.002864385F, 0.003050529F, 0.003248769F, 0.003459893F, 0.003684736F, 0.003924191F, 0.004179207F, 0.004450795F, 0.004740033F, 0.005048067F, 0.005376119F, 0.00572549F, 0.006097564F, 0.006493818F, 0.006915823F, 0.007365251F, 0.007843887F, 0.008353627F, 0.008896492F, 0.00947464F, 0.01009035F, 0.0107461F, 0.01144442F, 0.01218814F, 0.0129802F, 0.01382373F, 0.01472207F, 0.01567879F, 0.01669769F, 0.0177828F, 0.01893842F, 0.02016915F, 0.02147985F, 0.02287574F, 0.02436233F, 0.02594553F, 0.02763162F, 0.02942728F, 0.03133963F, 0.0333763F, 0.03554523F, 0.03785516F, 0.040315F, 0.04293511F, 0.04572528F, 0.04869676F, 0.05186135F, 0.0552316F, 0.05882085F, 0.06264336F, 0.06671428F, 0.0710498F, 0.07566696F, 0.08058423F, 0.08582105F, 0.0913982F, 0.09733775F, 0.103663F, 0.1103999F, 0.1175743F, 0.125215F, 0.1333522F, 0.1420181F, 0.1512473F, 0.1610762F, 0.1715438F, 0.1826917F, 0.194564F, 0.2072079F, 0.2206734F, 0.235014F, 0.2502866F, 0.2665516F, 0.2838736F, 0.3023213F, 0.3219679F, 0.3428911F, 0.3651741F, 0.388905F, 0.4141785F, 0.4410941F, 0.469759F, 0.5002865F, 0.5327979F, 0.5674221F, 0.6042964F, 0.643567F, 0.6853896F, 0.72993F, 0.777365F, 0.8278826F, 0.8816831F, 0.93898F, 1.0F };
+/*     */ 
+/*     */   void pack(Object paramObject, Buffer paramBuffer)
+/*     */   {
+/*  36 */     Floor1.InfoFloor1 localInfoFloor1 = (Floor1.InfoFloor1)paramObject;
+/*     */ 
+/*  38 */     int i = 0;
+/*     */ 
+/*  40 */     int k = localInfoFloor1.postlist[1];
+/*  41 */     int m = -1;
+/*     */ 
+/*  44 */     paramBuffer.write(localInfoFloor1.partitions, 5);
+/*  45 */     for (int n = 0; n < localInfoFloor1.partitions; n++) {
+/*  46 */       paramBuffer.write(localInfoFloor1.partitionclass[n], 4);
+/*  47 */       if (m < localInfoFloor1.partitionclass[n]) {
+/*  48 */         m = localInfoFloor1.partitionclass[n];
+/*     */       }
+/*     */     }
+/*     */ 
+/*  52 */     for (n = 0; n < m + 1; n++) {
+/*  53 */       paramBuffer.write(localInfoFloor1.class_dim[n] - 1, 3);
+/*  54 */       paramBuffer.write(localInfoFloor1.class_subs[n], 2);
+/*  55 */       if (localInfoFloor1.class_subs[n] != 0) {
+/*  56 */         paramBuffer.write(localInfoFloor1.class_book[n], 8);
+/*     */       }
+/*  58 */       for (i1 = 0; i1 < 1 << localInfoFloor1.class_subs[n]; i1++) {
+/*  59 */         paramBuffer.write(localInfoFloor1.class_subbook[n][i1] + 1, 8);
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/*  64 */     paramBuffer.write(localInfoFloor1.mult - 1, 2);
+/*  65 */     paramBuffer.write(Util.ilog2(k), 4);
+/*  66 */     int j = Util.ilog2(k);
+/*     */ 
+/*  68 */     n = 0; for (int i1 = 0; n < localInfoFloor1.partitions; n++) {
+/*  69 */       i += localInfoFloor1.class_dim[localInfoFloor1.partitionclass[n]];
+/*  70 */       for (; i1 < i; i1++)
+/*  71 */         paramBuffer.write(localInfoFloor1.postlist[(i1 + 2)], j);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   Object unpack(Info paramInfo, Buffer paramBuffer)
+/*     */   {
+/*  77 */     int i = 0; int j = -1;
+/*  78 */     Floor1.InfoFloor1 localInfoFloor1 = new Floor1.InfoFloor1(this);
+/*     */ 
+/*  81 */     localInfoFloor1.partitions = paramBuffer.read(5);
+/*  82 */     for (int m = 0; m < localInfoFloor1.partitions; m++) {
+/*  83 */       localInfoFloor1.partitionclass[m] = paramBuffer.read(4);
+/*  84 */       if (j < localInfoFloor1.partitionclass[m]) {
+/*  85 */         j = localInfoFloor1.partitionclass[m];
+/*     */       }
+/*     */     }
+/*     */ 
+/*  89 */     for (m = 0; m < j + 1; m++) {
+/*  90 */       localInfoFloor1.class_dim[m] = (paramBuffer.read(3) + 1);
+/*  91 */       localInfoFloor1.class_subs[m] = paramBuffer.read(2);
+/*  92 */       if (localInfoFloor1.class_subs[m] < 0) {
+/*  93 */         localInfoFloor1.free();
+/*  94 */         return null;
+/*     */       }
+/*  96 */       if (localInfoFloor1.class_subs[m] != 0) {
+/*  97 */         localInfoFloor1.class_book[m] = paramBuffer.read(8);
+/*     */       }
+/*  99 */       if ((localInfoFloor1.class_book[m] < 0) || (localInfoFloor1.class_book[m] >= paramInfo.books)) {
+/* 100 */         localInfoFloor1.free();
+/* 101 */         return null;
+/*     */       }
+/* 103 */       for (n = 0; n < 1 << localInfoFloor1.class_subs[m]; n++) {
+/* 104 */         localInfoFloor1.class_subbook[m][n] = (paramBuffer.read(8) - 1);
+/* 105 */         if ((localInfoFloor1.class_subbook[m][n] < -1) || (localInfoFloor1.class_subbook[m][n] >= paramInfo.books)) {
+/* 106 */           localInfoFloor1.free();
+/* 107 */           return null;
+/*     */         }
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/* 113 */     localInfoFloor1.mult = (paramBuffer.read(2) + 1);
+/* 114 */     int k = paramBuffer.read(4);
+/*     */ 
+/* 116 */     m = 0; for (int n = 0; m < localInfoFloor1.partitions; m++) {
+/* 117 */       i += localInfoFloor1.class_dim[localInfoFloor1.partitionclass[m]];
+/* 118 */       for (; n < i; n++) {
+/* 119 */         int i1 = localInfoFloor1.postlist[(n + 2)] = paramBuffer.read(k);
+/* 120 */         if ((i1 < 0) || (i1 >= 1 << k)) {
+/* 121 */           localInfoFloor1.free();
+/* 122 */           return null;
+/*     */         }
+/*     */       }
+/*     */     }
+/* 126 */     localInfoFloor1.postlist[0] = 0;
+/* 127 */     localInfoFloor1.postlist[1] = (1 << k);
+/*     */ 
+/* 129 */     return localInfoFloor1;
+/*     */   }
+/*     */ 
+/*     */   Object look(DspState paramDspState, InfoMode paramInfoMode, Object paramObject) {
+/* 133 */     int i = 0;
+/*     */ 
+/* 135 */     int[] arrayOfInt = new int[65];
+/*     */ 
+/* 139 */     Floor1.InfoFloor1 localInfoFloor1 = (Floor1.InfoFloor1)paramObject;
+/* 140 */     Floor1.LookFloor1 localLookFloor1 = new Floor1.LookFloor1(this);
+/* 141 */     localLookFloor1.vi = localInfoFloor1;
+/* 142 */     localLookFloor1.n = localInfoFloor1.postlist[1];
+/*     */ 
+/* 151 */     for (int j = 0; j < localInfoFloor1.partitions; j++) {
+/* 152 */       i += localInfoFloor1.class_dim[localInfoFloor1.partitionclass[j]];
+/*     */     }
+/* 154 */     i += 2;
+/* 155 */     localLookFloor1.posts = i;
+/*     */ 
+/* 158 */     for (j = 0; j < i; j++)
+/* 159 */       arrayOfInt[j] = j;
+/*     */     int m;
+/* 164 */     for (int k = 0; k < i - 1; k++) {
+/* 165 */       for (m = k; m < i; m++) {
+/* 166 */         if (localInfoFloor1.postlist[arrayOfInt[k]] > localInfoFloor1.postlist[arrayOfInt[m]]) {
+/* 167 */           j = arrayOfInt[m];
+/* 168 */           arrayOfInt[m] = arrayOfInt[k];
+/* 169 */           arrayOfInt[k] = j;
+/*     */         }
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/* 175 */     for (k = 0; k < i; k++) {
+/* 176 */       localLookFloor1.forward_index[k] = arrayOfInt[k];
+/*     */     }
+/*     */ 
+/* 179 */     for (k = 0; k < i; k++) {
+/* 180 */       localLookFloor1.reverse_index[localLookFloor1.forward_index[k]] = k;
+/*     */     }
+/*     */ 
+/* 183 */     for (k = 0; k < i; k++) {
+/* 184 */       localLookFloor1.sorted_index[k] = localInfoFloor1.postlist[localLookFloor1.forward_index[k]];
+/*     */     }
+/*     */ 
+/* 188 */     switch (localInfoFloor1.mult) {
+/*     */     case 1:
+/* 190 */       localLookFloor1.quant_q = 256;
+/* 191 */       break;
+/*     */     case 2:
+/* 193 */       localLookFloor1.quant_q = 128;
+/* 194 */       break;
+/*     */     case 3:
+/* 196 */       localLookFloor1.quant_q = 86;
+/* 197 */       break;
+/*     */     case 4:
+/* 199 */       localLookFloor1.quant_q = 64;
+/* 200 */       break;
+/*     */     default:
+/* 202 */       localLookFloor1.quant_q = -1;
+/*     */     }
+/*     */ 
+/* 207 */     for (k = 0; k < i - 2; k++) {
+/* 208 */       m = 0;
+/* 209 */       int n = 1;
+/* 210 */       int i1 = 0;
+/* 211 */       int i2 = localLookFloor1.n;
+/* 212 */       int i3 = localInfoFloor1.postlist[(k + 2)];
+/* 213 */       for (int i4 = 0; i4 < k + 2; i4++) {
+/* 214 */         int i5 = localInfoFloor1.postlist[i4];
+/* 215 */         if ((i5 > i1) && (i5 < i3)) {
+/* 216 */           m = i4;
+/* 217 */           i1 = i5;
+/*     */         }
+/* 219 */         if ((i5 < i2) && (i5 > i3)) {
+/* 220 */           n = i4;
+/* 221 */           i2 = i5;
+/*     */         }
+/*     */       }
+/* 224 */       localLookFloor1.loneighbor[k] = m;
+/* 225 */       localLookFloor1.hineighbor[k] = n;
+/*     */     }
+/*     */ 
+/* 228 */     return localLookFloor1;
+/*     */   }
+/*     */ 
+/*     */   void free_info(Object paramObject) {
+/*     */   }
+/*     */ 
+/*     */   void free_look(Object paramObject) {
+/*     */   }
+/*     */ 
+/*     */   void free_state(Object paramObject) {
+/*     */   }
+/*     */ 
+/*     */   int forward(Block paramBlock, Object paramObject1, float[] paramArrayOfFloat1, float[] paramArrayOfFloat2, Object paramObject2) {
+/* 241 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   Object inverse1(Block paramBlock, Object paramObject1, Object paramObject2) {
+/* 245 */     Floor1.LookFloor1 localLookFloor1 = (Floor1.LookFloor1)paramObject1;
+/* 246 */     Floor1.InfoFloor1 localInfoFloor1 = localLookFloor1.vi;
+/* 247 */     CodeBook[] arrayOfCodeBook = paramBlock.vd.fullbooks;
+/*     */ 
+/* 250 */     if (paramBlock.opb.read(1) == 1) {
+/* 251 */       int[] arrayOfInt = null;
+/* 252 */       if ((paramObject2 instanceof int[])) {
+/* 253 */         arrayOfInt = (int[])(int[])paramObject2;
+/*     */       }
+/* 255 */       if ((arrayOfInt == null) || (arrayOfInt.length < localLookFloor1.posts)) {
+/* 256 */         arrayOfInt = new int[localLookFloor1.posts];
+/*     */       }
+/*     */       else {
+/* 259 */         for (i = 0; i < arrayOfInt.length; i++) {
+/* 260 */           arrayOfInt[i] = 0;
+/*     */         }
+/*     */       }
+/* 263 */       arrayOfInt[0] = paramBlock.opb.read(Util.ilog(localLookFloor1.quant_q - 1));
+/* 264 */       arrayOfInt[1] = paramBlock.opb.read(Util.ilog(localLookFloor1.quant_q - 1));
+/*     */ 
+/* 267 */       int i = 0;
+/*     */       int k;
+/*     */       int m;
+/*     */       int n;
+/*     */       int i1;
+/* 267 */       for (int j = 2; i < localInfoFloor1.partitions; i++) {
+/* 268 */         k = localInfoFloor1.partitionclass[i];
+/* 269 */         m = localInfoFloor1.class_dim[k];
+/* 270 */         n = localInfoFloor1.class_subs[k];
+/* 271 */         i1 = 1 << n;
+/* 272 */         int i2 = 0;
+/*     */ 
+/* 275 */         if (n != 0) {
+/* 276 */           i2 = arrayOfCodeBook[localInfoFloor1.class_book[k]].decode(paramBlock.opb);
+/*     */ 
+/* 278 */           if (i2 == -1) {
+/* 279 */             return null;
+/*     */           }
+/*     */         }
+/*     */ 
+/* 283 */         for (int i3 = 0; i3 < m; i3++) {
+/* 284 */           int i4 = localInfoFloor1.class_subbook[k][(i2 & i1 - 1)];
+/* 285 */           i2 >>>= n;
+/* 286 */           if (i4 >= 0) {
+/* 287 */             if ((arrayOfInt[(j + i3)] = arrayOfCodeBook[i4].decode(paramBlock.opb)) == -1) {
+/* 288 */               return null;
+/*     */             }
+/*     */           }
+/*     */           else {
+/* 292 */             arrayOfInt[(j + i3)] = 0;
+/*     */           }
+/*     */         }
+/* 295 */         j += m;
+/*     */       }
+/*     */ 
+/* 299 */       for (i = 2; i < localLookFloor1.posts; i++) {
+/* 300 */         j = render_point(localInfoFloor1.postlist[localLookFloor1.loneighbor[(i - 2)]], localInfoFloor1.postlist[localLookFloor1.hineighbor[(i - 2)]], arrayOfInt[localLookFloor1.loneighbor[(i - 2)]], arrayOfInt[localLookFloor1.hineighbor[(i - 2)]], localInfoFloor1.postlist[i]);
+/*     */ 
+/* 304 */         k = localLookFloor1.quant_q - j;
+/* 305 */         m = j;
+/* 306 */         n = (k < m ? k : m) << 1;
+/* 307 */         i1 = arrayOfInt[i];
+/*     */ 
+/* 309 */         if (i1 != 0) {
+/* 310 */           if (i1 >= n) {
+/* 311 */             if (k > m) {
+/* 312 */               i1 -= m;
+/*     */             }
+/*     */             else {
+/* 315 */               i1 = -1 - (i1 - k);
+/*     */             }
+/*     */ 
+/*     */           }
+/* 319 */           else if ((i1 & 0x1) != 0) {
+/* 320 */             i1 = -(i1 + 1 >>> 1);
+/*     */           }
+/*     */           else {
+/* 323 */             i1 >>= 1;
+/*     */           }
+/*     */ 
+/* 327 */           arrayOfInt[i] = (i1 + j);
+/* 328 */           arrayOfInt[localLookFloor1.loneighbor[(i - 2)]] &= 32767;
+/* 329 */           arrayOfInt[localLookFloor1.hineighbor[(i - 2)]] &= 32767;
+/*     */         }
+/*     */         else {
+/* 332 */           arrayOfInt[i] = (j | 0x8000);
+/*     */         }
+/*     */       }
+/* 335 */       return arrayOfInt;
+/*     */     }
+/*     */ 
+/* 338 */     return null;
+/*     */   }
+/*     */ 
+/*     */   private static int render_point(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5) {
+/* 342 */     paramInt3 &= 32767;
+/* 343 */     paramInt4 &= 32767;
+/*     */ 
+/* 346 */     int i = paramInt4 - paramInt3;
+/* 347 */     int j = paramInt2 - paramInt1;
+/* 348 */     int k = Math.abs(i);
+/* 349 */     int m = k * (paramInt5 - paramInt1);
+/*     */ 
+/* 351 */     int n = m / j;
+/* 352 */     if (i < 0)
+/* 353 */       return paramInt3 - n;
+/* 354 */     return paramInt3 + n;
+/*     */   }
+/*     */ 
+/*     */   int inverse2(Block paramBlock, Object paramObject1, Object paramObject2, float[] paramArrayOfFloat)
+/*     */   {
+/* 359 */     Floor1.LookFloor1 localLookFloor1 = (Floor1.LookFloor1)paramObject1;
+/* 360 */     Floor1.InfoFloor1 localInfoFloor1 = localLookFloor1.vi;
+/* 361 */     int i = paramBlock.vd.vi.blocksizes[paramBlock.mode] / 2;
+/*     */ 
+/* 363 */     if (paramObject2 != null)
+/*     */     {
+/* 365 */       int[] arrayOfInt = (int[])(int[])paramObject2;
+/* 366 */       int k = 0;
+/* 367 */       int m = 0;
+/* 368 */       int n = arrayOfInt[0] * localInfoFloor1.mult;
+/* 369 */       for (int i1 = 1; i1 < localLookFloor1.posts; i1++) {
+/* 370 */         int i2 = localLookFloor1.forward_index[i1];
+/* 371 */         int i3 = arrayOfInt[i2] & 0x7FFF;
+/* 372 */         if (i3 == arrayOfInt[i2]) {
+/* 373 */           i3 *= localInfoFloor1.mult;
+/* 374 */           k = localInfoFloor1.postlist[i2];
+/*     */ 
+/* 376 */           render_line(m, k, n, i3, paramArrayOfFloat);
+/*     */ 
+/* 378 */           m = k;
+/* 379 */           n = i3;
+/*     */         }
+/*     */       }
+/* 382 */       for (i1 = k; i1 < i; i1++) {
+/* 383 */         paramArrayOfFloat[i1] *= paramArrayOfFloat[(i1 - 1)];
+/*     */       }
+/* 385 */       return 1;
+/*     */     }
+/* 387 */     for (int j = 0; j < i; j++) {
+/* 388 */       paramArrayOfFloat[j] = 0.0F;
+/*     */     }
+/* 390 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   private static void render_line(int paramInt1, int paramInt2, int paramInt3, int paramInt4, float[] paramArrayOfFloat)
+/*     */   {
+/* 456 */     int i = paramInt4 - paramInt3;
+/* 457 */     int j = paramInt2 - paramInt1;
+/* 458 */     int k = Math.abs(i);
+/* 459 */     int m = i / j;
+/* 460 */     int n = i < 0 ? m - 1 : m + 1;
+/* 461 */     int i1 = paramInt1;
+/* 462 */     int i2 = paramInt3;
+/* 463 */     int i3 = 0;
+/*     */ 
+/* 465 */     k -= Math.abs(m * j);
+/*     */ 
+/* 467 */     paramArrayOfFloat[i1] *= FLOOR_fromdB_LOOKUP[i2];
+/*     */     while (true) { i1++; if (i1 >= paramInt2) break;
+/* 469 */       i3 += k;
+/* 470 */       if (i3 >= j) {
+/* 471 */         i3 -= j;
+/* 472 */         i2 += n;
+/*     */       }
+/*     */       else {
+/* 475 */         i2 += m;
+/*     */       }
+/* 477 */       paramArrayOfFloat[i1] *= FLOOR_fromdB_LOOKUP[i2];
+/*     */     }
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     com.jcraft.jorbis.Floor1
+ * JD-Core Version:    0.6.0
+ */

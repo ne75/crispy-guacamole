@@ -1,0 +1,76 @@
+/*    */ public class jb
+/*    */   implements ij
+/*    */ {
+/*    */   private gm[] a;
+/*    */   private int b;
+/*    */   private cp c;
+/*    */ 
+/*    */   public jb(cp paramcp, int paramInt1, int paramInt2)
+/*    */   {
+/* 13 */     int i = paramInt1 * paramInt2;
+/* 14 */     this.a = new gm[i];
+/* 15 */     this.c = paramcp;
+/* 16 */     this.b = paramInt1;
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 20 */     return this.a.length;
+/*    */   }
+/*    */ 
+/*    */   public gm c_(int paramInt) {
+/* 24 */     if (paramInt >= a()) {
+/* 25 */       return null;
+/*    */     }
+/* 27 */     return this.a[paramInt];
+/*    */   }
+/*    */ 
+/*    */   public gm b(int paramInt1, int paramInt2) {
+/* 31 */     if ((paramInt1 < 0) || (paramInt1 >= this.b)) {
+/* 32 */       return null;
+/*    */     }
+/* 34 */     int i = paramInt1 + paramInt2 * this.b;
+/* 35 */     return c_(i);
+/*    */   }
+/*    */ 
+/*    */   public String c() {
+/* 39 */     return "Crafting";
+/*    */   }
+/*    */ 
+/*    */   public gm a(int paramInt1, int paramInt2) {
+/* 43 */     if (this.a[paramInt1] != null) {
+/* 44 */       if (this.a[paramInt1].a <= paramInt2) {
+/* 45 */         localgm = this.a[paramInt1];
+/* 46 */         this.a[paramInt1] = null;
+/* 47 */         this.c.a(this);
+/* 48 */         return localgm;
+/*    */       }
+/* 50 */       gm localgm = this.a[paramInt1].a(paramInt2);
+/* 51 */       if (this.a[paramInt1].a == 0) this.a[paramInt1] = null;
+/* 52 */       this.c.a(this);
+/* 53 */       return localgm;
+/*    */     }
+/*    */ 
+/* 56 */     return null;
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt, gm paramgm) {
+/* 60 */     this.a[paramInt] = paramgm;
+/* 61 */     this.c.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int d() {
+/* 65 */     return 64;
+/*    */   }
+/*    */ 
+/*    */   public void r_() {
+/*    */   }
+/*    */ 
+/*    */   public boolean a_(eu parameu) {
+/* 72 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     jb
+ * JD-Core Version:    0.6.0
+ */

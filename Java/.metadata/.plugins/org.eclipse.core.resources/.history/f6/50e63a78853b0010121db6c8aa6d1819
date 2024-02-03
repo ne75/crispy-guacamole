@@ -1,0 +1,36 @@
+/*    */ public class rb extends pj
+/*    */ {
+/*    */   protected rb(int paramInt)
+/*    */   {
+/* 12 */     super(paramInt, ic.j);
+/* 13 */     this.bh = 48;
+/*    */   }
+/*    */ 
+/*    */   public void e(dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*    */   {
+/* 18 */     int i = 2;
+/* 19 */     for (int j = paramInt1 - i; j <= paramInt1 + i; j++)
+/* 20 */       for (int k = paramInt2 - i; k <= paramInt2 + i; k++)
+/* 21 */         for (int m = paramInt3 - i; m <= paramInt3 + i; m++)
+/*    */         {
+/* 23 */           if (paramdn.f(j, k, m) != ic.f)
+/*    */             continue;
+/*    */         }
+/*    */   }
+/*    */ 
+/*    */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*    */   {
+/* 32 */     int i = 2;
+/* 33 */     for (int j = paramInt1 - i; j <= paramInt1 + i; j++)
+/* 34 */       for (int k = paramInt2 - i; k <= paramInt2 + i; k++)
+/* 35 */         for (int m = paramInt3 - i; m <= paramInt3 + i; m++)
+/*    */         {
+/* 37 */           paramdn.h(j, k, m, paramdn.a(j, k, m));
+/*    */         }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     rb
+ * JD-Core Version:    0.6.0
+ */

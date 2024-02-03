@@ -1,0 +1,45 @@
+package main;
+
+/**
+ * Program 213d (Weather Forecasting)
+ * Nikita Ermoshkin
+ * 11-13-12
+ * JDK 7, Mac OS 10.8
+ * 
+ * This program figures out the current temperature in both
+ * ¼F and ¼C and prints 
+ * 
+ */
+
+import java.util.*;
+
+public class WeatherForecasting {
+    public static void main(String[] args) {
+	
+	Scanner s = new Scanner(System.in);
+	int chirps;
+	int tempF = 0, tempC = 0;
+	boolean end = false;
+	
+	do {
+	    System.out.print("Enter number of chirps/min: ");
+	    System.out.print("Enter units completed: ");
+	    
+	    
+	    if (tempF >= 109){
+		
+	    } else if (tempF >= 81 && tempF < 109){
+		
+	    } else if (tempF >= 65 && tempF < 82){
+		
+	    } else if (tempF >= 45 && tempF < 65){
+		
+	    } else {
+		
+	    }
+	    
+	} while (end == false);
+	
+    }
+
+}

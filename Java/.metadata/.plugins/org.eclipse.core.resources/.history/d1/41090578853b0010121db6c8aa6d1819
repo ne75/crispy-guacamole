@@ -1,0 +1,46 @@
+/*    */ public class cl extends eo
+/*    */ {
+/*    */   private pj[] bg;
+/*  9 */   private float bh = 4.0F;
+/*    */   private int bi;
+/*    */   protected ay a;
+/*    */ 
+/*    */   protected cl(int paramInt1, int paramInt2, ay paramay, pj[] paramArrayOfpj)
+/*    */   {
+/* 16 */     super(paramInt1);
+/* 17 */     this.a = paramay;
+/* 18 */     this.bg = paramArrayOfpj;
+/* 19 */     this.bb = 1;
+/* 20 */     this.bc = paramay.a();
+/* 21 */     this.bh = paramay.b();
+/* 22 */     this.bi = (paramInt2 + paramay.c());
+/*    */   }
+/*    */ 
+/*    */   public float a(gm paramgm, pj parampj) {
+/* 26 */     for (int i = 0; i < this.bg.length; i++)
+/* 27 */       if (this.bg[i] == parampj) return this.bh;
+/* 28 */     return 1.0F;
+/*    */   }
+/*    */ 
+/*    */   public void a(gm paramgm, ig paramig) {
+/* 32 */     paramgm.b(2);
+/*    */   }
+/*    */ 
+/*    */   public void a(gm paramgm, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*    */   {
+/* 37 */     paramgm.b(1);
+/*    */   }
+/*    */ 
+/*    */   public int a(nl paramnl) {
+/* 41 */     return this.bi;
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/* 45 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     cl
+ * JD-Core Version:    0.6.0
+ */

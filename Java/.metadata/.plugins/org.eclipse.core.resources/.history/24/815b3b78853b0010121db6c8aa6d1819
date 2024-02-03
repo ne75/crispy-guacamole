@@ -1,0 +1,191 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class rk extends pj
+/*     */ {
+/*     */   protected rk(int paramInt1, int paramInt2)
+/*     */   {
+/*  10 */     super(paramInt1, paramInt2, ic.n);
+/*     */   }
+/*     */ 
+/*     */   public db d(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  14 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public boolean a()
+/*     */   {
+/*  22 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public boolean b() {
+/*  26 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public int g() {
+/*  30 */     return 12;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  34 */     if (paramdn.g(paramInt1 - 1, paramInt2, paramInt3))
+/*  35 */       return true;
+/*  36 */     if (paramdn.g(paramInt1 + 1, paramInt2, paramInt3))
+/*  37 */       return true;
+/*  38 */     if (paramdn.g(paramInt1, paramInt2, paramInt3 - 1))
+/*  39 */       return true;
+/*  40 */     if (paramdn.g(paramInt1, paramInt2, paramInt3 + 1)) {
+/*  41 */       return true;
+/*     */     }
+/*  43 */     return paramdn.g(paramInt1, paramInt2 - 1, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   public void d(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*     */   {
+/*  49 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/*     */ 
+/*  51 */     int j = i & 0x8;
+/*  52 */     i &= 7;
+/*     */ 
+/*  54 */     if ((paramInt4 == 1) && (paramdn.g(paramInt1, paramInt2 - 1, paramInt3))) i = 5 + paramdn.l.nextInt(2);
+/*  55 */     if ((paramInt4 == 2) && (paramdn.g(paramInt1, paramInt2, paramInt3 + 1))) i = 4;
+/*  56 */     if ((paramInt4 == 3) && (paramdn.g(paramInt1, paramInt2, paramInt3 - 1))) i = 3;
+/*  57 */     if ((paramInt4 == 4) && (paramdn.g(paramInt1 + 1, paramInt2, paramInt3))) i = 2;
+/*  58 */     if ((paramInt4 == 5) && (paramdn.g(paramInt1 - 1, paramInt2, paramInt3))) i = 1;
+/*     */ 
+/*  60 */     paramdn.c(paramInt1, paramInt2, paramInt3, i + j);
+/*     */   }
+/*     */ 
+/*     */   public void e(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  64 */     if (paramdn.g(paramInt1 - 1, paramInt2, paramInt3))
+/*  65 */       paramdn.c(paramInt1, paramInt2, paramInt3, 1);
+/*  66 */     else if (paramdn.g(paramInt1 + 1, paramInt2, paramInt3))
+/*  67 */       paramdn.c(paramInt1, paramInt2, paramInt3, 2);
+/*  68 */     else if (paramdn.g(paramInt1, paramInt2, paramInt3 - 1))
+/*  69 */       paramdn.c(paramInt1, paramInt2, paramInt3, 3);
+/*  70 */     else if (paramdn.g(paramInt1, paramInt2, paramInt3 + 1))
+/*  71 */       paramdn.c(paramInt1, paramInt2, paramInt3, 4);
+/*  72 */     else if (paramdn.g(paramInt1, paramInt2 - 1, paramInt3)) {
+/*  73 */       paramdn.c(paramInt1, paramInt2, paramInt3, 5 + paramdn.l.nextInt(2));
+/*     */     }
+/*  75 */     h(paramdn, paramInt1, paramInt2, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  79 */     if (h(paramdn, paramInt1, paramInt2, paramInt3)) {
+/*  80 */       int i = paramdn.e(paramInt1, paramInt2, paramInt3) & 0x7;
+/*  81 */       int j = 0;
+/*     */ 
+/*  83 */       if ((!paramdn.g(paramInt1 - 1, paramInt2, paramInt3)) && (i == 1)) j = 1;
+/*  84 */       if ((!paramdn.g(paramInt1 + 1, paramInt2, paramInt3)) && (i == 2)) j = 1;
+/*  85 */       if ((!paramdn.g(paramInt1, paramInt2, paramInt3 - 1)) && (i == 3)) j = 1;
+/*  86 */       if ((!paramdn.g(paramInt1, paramInt2, paramInt3 + 1)) && (i == 4)) j = 1;
+/*  87 */       if ((!paramdn.g(paramInt1, paramInt2 - 1, paramInt3)) && (i == 5)) j = 1;
+/*     */ 
+/*  89 */       if (j != 0) {
+/*  90 */         b_(paramdn, paramInt1, paramInt2, paramInt3, paramdn.e(paramInt1, paramInt2, paramInt3));
+/*  91 */         paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private boolean h(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  97 */     if (!a(paramdn, paramInt1, paramInt2, paramInt3)) {
+/*  98 */       b_(paramdn, paramInt1, paramInt2, paramInt3, paramdn.e(paramInt1, paramInt2, paramInt3));
+/*  99 */       paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/* 100 */       return false;
+/*     */     }
+/* 102 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public void a(ri paramri, int paramInt1, int paramInt2, int paramInt3) {
+/* 106 */     int i = paramri.e(paramInt1, paramInt2, paramInt3) & 0x7;
+/* 107 */     float f = 0.1875F;
+/* 108 */     if (i == 1) {
+/* 109 */       a(0.0F, 0.2F, 0.5F - f, f * 2.0F, 0.8F, 0.5F + f);
+/* 110 */     } else if (i == 2) {
+/* 111 */       a(1.0F - f * 2.0F, 0.2F, 0.5F - f, 1.0F, 0.8F, 0.5F + f);
+/* 112 */     } else if (i == 3) {
+/* 113 */       a(0.5F - f, 0.2F, 0.0F, 0.5F + f, 0.8F, f * 2.0F);
+/* 114 */     } else if (i == 4) {
+/* 115 */       a(0.5F - f, 0.2F, 1.0F - f * 2.0F, 0.5F + f, 0.8F, 1.0F);
+/*     */     } else {
+/* 117 */       f = 0.25F;
+/* 118 */       a(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.6F, 0.5F + f);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3, eu parameu) {
+/* 123 */     a(paramdn, paramInt1, paramInt2, paramInt3, parameu);
+/*     */   }
+/*     */ 
+/*     */   public boolean a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, eu parameu) {
+/* 127 */     if (paramdn.z) return true;
+/* 128 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/* 129 */     int j = i & 0x7;
+/* 130 */     int k = 8 - (i & 0x8);
+/*     */ 
+/* 132 */     paramdn.c(paramInt1, paramInt2, paramInt3, j + k);
+/* 133 */     paramdn.b(paramInt1, paramInt2, paramInt3, paramInt1, paramInt2, paramInt3);
+/*     */ 
+/* 135 */     paramdn.a(paramInt1 + 0.5D, paramInt2 + 0.5D, paramInt3 + 0.5D, "random.click", 0.3F, k > 0 ? 0.6F : 0.5F);
+/*     */ 
+/* 137 */     paramdn.h(paramInt1, paramInt2, paramInt3, this.bi);
+/* 138 */     if (j == 1)
+/* 139 */       paramdn.h(paramInt1 - 1, paramInt2, paramInt3, this.bi);
+/* 140 */     else if (j == 2)
+/* 141 */       paramdn.h(paramInt1 + 1, paramInt2, paramInt3, this.bi);
+/* 142 */     else if (j == 3)
+/* 143 */       paramdn.h(paramInt1, paramInt2, paramInt3 - 1, this.bi);
+/* 144 */     else if (j == 4)
+/* 145 */       paramdn.h(paramInt1, paramInt2, paramInt3 + 1, this.bi);
+/*     */     else {
+/* 147 */       paramdn.h(paramInt1, paramInt2 - 1, paramInt3, this.bi);
+/*     */     }
+/*     */ 
+/* 150 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 154 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/* 155 */     if ((i & 0x8) > 0) {
+/* 156 */       paramdn.h(paramInt1, paramInt2, paramInt3, this.bi);
+/* 157 */       int j = i & 0x7;
+/* 158 */       if (j == 1)
+/* 159 */         paramdn.h(paramInt1 - 1, paramInt2, paramInt3, this.bi);
+/* 160 */       else if (j == 2)
+/* 161 */         paramdn.h(paramInt1 + 1, paramInt2, paramInt3, this.bi);
+/* 162 */       else if (j == 3)
+/* 163 */         paramdn.h(paramInt1, paramInt2, paramInt3 - 1, this.bi);
+/* 164 */       else if (j == 4)
+/* 165 */         paramdn.h(paramInt1, paramInt2, paramInt3 + 1, this.bi);
+/*     */       else {
+/* 167 */         paramdn.h(paramInt1, paramInt2 - 1, paramInt3, this.bi);
+/*     */       }
+/*     */     }
+/* 170 */     super.b(paramdn, paramInt1, paramInt2, paramInt3);
+/*     */   }
+/*     */ 
+/*     */   public boolean c(ri paramri, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 174 */     return (paramri.e(paramInt1, paramInt2, paramInt3) & 0x8) > 0;
+/*     */   }
+/*     */ 
+/*     */   public boolean c(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 178 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/* 179 */     if ((i & 0x8) == 0) return false;
+/* 180 */     int j = i & 0x7;
+/*     */ 
+/* 182 */     if ((j == 5) && (paramInt4 == 1)) return true;
+/* 183 */     if ((j == 4) && (paramInt4 == 2)) return true;
+/* 184 */     if ((j == 3) && (paramInt4 == 3)) return true;
+/* 185 */     if ((j == 2) && (paramInt4 == 4)) return true;
+/* 186 */     return (j == 1) && (paramInt4 == 5);
+/*     */   }
+/*     */ 
+/*     */   public boolean e()
+/*     */   {
+/* 193 */     return true;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     rk
+ * JD-Core Version:    0.6.0
+ */

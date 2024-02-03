@@ -1,0 +1,15 @@
+/*   */ public enum cs
+/*   */ {
+/*   */   public final int c;
+/*   */ 
+/*   */   private cs(int arg3)
+/*   */   {
+/*   */     int j;
+/* 9 */     this.c = j;
+/*   */   }
+/*   */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     cs
+ * JD-Core Version:    0.6.0
+ */

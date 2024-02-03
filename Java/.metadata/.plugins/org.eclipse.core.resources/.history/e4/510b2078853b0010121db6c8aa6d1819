@@ -1,0 +1,44 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class hk extends ba
+/*    */ {
+/*    */   public void a(bi parambi, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2)
+/*    */   {
+/* 11 */     GL11.glPushMatrix();
+/*    */ 
+/* 13 */     GL11.glTranslatef((float)paramDouble1, (float)paramDouble2, (float)paramDouble3);
+/* 14 */     GL11.glEnable(32826);
+/* 15 */     float f1 = 2.0F;
+/* 16 */     GL11.glScalef(f1 / 1.0F, f1 / 1.0F, f1 / 1.0F);
+/* 17 */     int i = eo.aB.a(null);
+/* 18 */     a("/gui/items.png");
+/* 19 */     jy localjy = jy.a;
+/*    */ 
+/* 21 */     float f2 = (i % 16 * 16 + 0) / 256.0F;
+/* 22 */     float f3 = (i % 16 * 16 + 16) / 256.0F;
+/* 23 */     float f4 = (i / 16 * 16 + 0) / 256.0F;
+/* 24 */     float f5 = (i / 16 * 16 + 16) / 256.0F;
+/*    */ 
+/* 27 */     float f6 = 1.0F;
+/* 28 */     float f7 = 0.5F;
+/* 29 */     float f8 = 0.25F;
+/*    */ 
+/* 33 */     GL11.glRotatef(180.0F - this.b.i, 0.0F, 1.0F, 0.0F);
+/* 34 */     GL11.glRotatef(-this.b.j, 1.0F, 0.0F, 0.0F);
+/* 35 */     localjy.b();
+/* 36 */     localjy.b(0.0F, 1.0F, 0.0F);
+/* 37 */     localjy.a(0.0F - f7, 0.0F - f8, 0.0D, f2, f5);
+/* 38 */     localjy.a(f6 - f7, 0.0F - f8, 0.0D, f3, f5);
+/* 39 */     localjy.a(f6 - f7, 1.0F - f8, 0.0D, f3, f4);
+/* 40 */     localjy.a(0.0F - f7, 1.0F - f8, 0.0D, f2, f4);
+/* 41 */     localjy.a();
+/*    */ 
+/* 43 */     GL11.glDisable(32826);
+/* 44 */     GL11.glPopMatrix();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hk
+ * JD-Core Version:    0.6.0
+ */

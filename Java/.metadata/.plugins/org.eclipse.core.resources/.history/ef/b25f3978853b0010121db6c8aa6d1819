@@ -1,0 +1,41 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class qb extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public int b;
+/*    */   public int c;
+/*    */   public int d;
+/*    */   public int e;
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream)
+/*    */   {
+/* 22 */     this.a = paramDataInputStream.readInt();
+/* 23 */     this.b = paramDataInputStream.readShort();
+/* 24 */     this.c = paramDataInputStream.readInt();
+/* 25 */     this.d = paramDataInputStream.read();
+/* 26 */     this.e = paramDataInputStream.read();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 30 */     paramDataOutputStream.writeInt(this.a);
+/* 31 */     paramDataOutputStream.writeShort(this.b);
+/* 32 */     paramDataOutputStream.writeInt(this.c);
+/* 33 */     paramDataOutputStream.write(this.d);
+/* 34 */     paramDataOutputStream.write(this.e);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 38 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 42 */     return 12;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qb
+ * JD-Core Version:    0.6.0
+ */

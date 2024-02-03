@@ -1,0 +1,16 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class in extends ba
+/*    */ {
+/*    */   public void a(nl paramnl, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2)
+/*    */   {
+/* 12 */     GL11.glPushMatrix();
+/* 13 */     a(paramnl.aP, paramDouble1 - paramnl.be, paramDouble2 - paramnl.bf, paramDouble3 - paramnl.bg);
+/* 14 */     GL11.glPopMatrix();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     in
+ * JD-Core Version:    0.6.0
+ */

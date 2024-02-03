@@ -1,0 +1,17 @@
+/*    */ public class g extends pj
+/*    */ {
+/*    */   public g(int paramInt1, int paramInt2)
+/*    */   {
+/*  7 */     super(paramInt1, ic.e);
+/*  8 */     this.bh = paramInt2;
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt) {
+/* 12 */     return this.bh;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     g
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,12 @@
+[package]
+name = "fdtp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+byteorder = "1.4.3"
+dict = "0.1.5"
+hex = "0.4.3"
+socket2 = {version = "0.5.1", features=["all"]}

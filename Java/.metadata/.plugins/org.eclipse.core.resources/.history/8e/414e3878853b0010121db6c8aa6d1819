@@ -1,0 +1,12 @@
+/*   */ public class pi extends RuntimeException
+/*   */ {
+/*   */   public pi(String paramString)
+/*   */   {
+/* 7 */     super(paramString);
+/*   */   }
+/*   */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     pi
+ * JD-Core Version:    0.6.0
+ */

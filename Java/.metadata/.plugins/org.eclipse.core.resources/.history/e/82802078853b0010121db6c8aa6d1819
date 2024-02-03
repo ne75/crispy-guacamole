@@ -1,0 +1,52 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class ht extends eo
+/*    */ {
+/*    */   public ht(int paramInt, ay paramay)
+/*    */   {
+/* 11 */     super(paramInt);
+/* 12 */     this.bb = 1;
+/* 13 */     this.bc = paramay.a();
+/*    */   }
+/*    */ 
+/*    */   public boolean a(gm paramgm, eu parameu, dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*    */   {
+/* 18 */     int i = paramdn.a(paramInt1, paramInt2, paramInt3);
+/* 19 */     ic localic = paramdn.f(paramInt1, paramInt2 + 1, paramInt3);
+/*    */ 
+/* 21 */     if (((!localic.a()) && (i == pj.u.bi)) || (i == pj.v.bi)) {
+/* 22 */       pj localpj = pj.aA;
+/* 23 */       paramdn.a(paramInt1 + 0.5F, paramInt2 + 0.5F, paramInt3 + 0.5F, localpj.br.d(), (localpj.br.b() + 1.0F) / 2.0F, localpj.br.c() * 0.8F);
+/*    */ 
+/* 25 */       if (paramdn.z) return true;
+/* 26 */       paramdn.e(paramInt1, paramInt2, paramInt3, localpj.bi);
+/* 27 */       paramgm.b(1);
+/*    */ 
+/* 29 */       if ((paramdn.l.nextInt(8) == 0) && (i == pj.u.bi)) {
+/* 30 */         int j = 1;
+/* 31 */         for (int k = 0; k < j; k++) {
+/* 32 */           float f1 = 0.7F;
+/* 33 */           float f2 = paramdn.l.nextFloat() * f1 + (1.0F - f1) * 0.5F;
+/* 34 */           float f3 = 1.2F;
+/* 35 */           float f4 = paramdn.l.nextFloat() * f1 + (1.0F - f1) * 0.5F;
+/* 36 */           fh localfh = new fh(paramdn, paramInt1 + f2, paramInt2 + f3, paramInt3 + f4, new gm(eo.Q));
+/* 37 */           localfh.c = 10;
+/* 38 */           paramdn.a(localfh);
+/*    */         }
+/*    */       }
+/*    */ 
+/* 42 */       return true;
+/*    */     }
+/*    */ 
+/* 45 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/* 49 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ht
+ * JD-Core Version:    0.6.0
+ */

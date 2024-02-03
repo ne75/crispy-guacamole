@@ -1,0 +1,231 @@
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.List;
+/*     */ 
+/*     */ class pw
+/*     */ {
+/*     */   private dn b;
+/*     */   private int c;
+/*     */   private int d;
+/*     */   private int e;
+/*     */   private int f;
+/*  20 */   private List g = new ArrayList();
+/*     */ 
+/*     */   public pw(ku paramku, dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/*  23 */     this.b = paramdn;
+/*  24 */     this.c = paramInt1;
+/*  25 */     this.d = paramInt2;
+/*  26 */     this.e = paramInt3;
+/*     */ 
+/*  28 */     this.f = paramdn.e(paramInt1, paramInt2, paramInt3);
+/*  29 */     a();
+/*     */   }
+/*     */ 
+/*     */   private void a()
+/*     */   {
+/*  34 */     this.g.clear();
+/*  35 */     if (this.f == 0) {
+/*  36 */       this.g.add(new qj(this.c, this.d, this.e - 1));
+/*  37 */       this.g.add(new qj(this.c, this.d, this.e + 1));
+/*  38 */     } else if (this.f == 1) {
+/*  39 */       this.g.add(new qj(this.c - 1, this.d, this.e));
+/*  40 */       this.g.add(new qj(this.c + 1, this.d, this.e));
+/*  41 */     } else if (this.f == 2) {
+/*  42 */       this.g.add(new qj(this.c - 1, this.d, this.e));
+/*  43 */       this.g.add(new qj(this.c + 1, this.d + 1, this.e));
+/*  44 */     } else if (this.f == 3) {
+/*  45 */       this.g.add(new qj(this.c - 1, this.d + 1, this.e));
+/*  46 */       this.g.add(new qj(this.c + 1, this.d, this.e));
+/*  47 */     } else if (this.f == 4) {
+/*  48 */       this.g.add(new qj(this.c, this.d + 1, this.e - 1));
+/*  49 */       this.g.add(new qj(this.c, this.d, this.e + 1));
+/*  50 */     } else if (this.f == 5) {
+/*  51 */       this.g.add(new qj(this.c, this.d, this.e - 1));
+/*  52 */       this.g.add(new qj(this.c, this.d + 1, this.e + 1));
+/*  53 */     } else if (this.f == 6) {
+/*  54 */       this.g.add(new qj(this.c + 1, this.d, this.e));
+/*  55 */       this.g.add(new qj(this.c, this.d, this.e + 1));
+/*  56 */     } else if (this.f == 7) {
+/*  57 */       this.g.add(new qj(this.c - 1, this.d, this.e));
+/*  58 */       this.g.add(new qj(this.c, this.d, this.e + 1));
+/*  59 */     } else if (this.f == 8) {
+/*  60 */       this.g.add(new qj(this.c - 1, this.d, this.e));
+/*  61 */       this.g.add(new qj(this.c, this.d, this.e - 1));
+/*  62 */     } else if (this.f == 9) {
+/*  63 */       this.g.add(new qj(this.c + 1, this.d, this.e));
+/*  64 */       this.g.add(new qj(this.c, this.d, this.e - 1));
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private void b() {
+/*  69 */     for (int i = 0; i < this.g.size(); i++) {
+/*  70 */       pw localpw = a((qj)this.g.get(i));
+/*  71 */       if ((localpw == null) || (!localpw.b(this)))
+/*  72 */         this.g.remove(i--);
+/*     */       else
+/*  74 */         this.g.set(i, new qj(localpw.c, localpw.d, localpw.e));
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   private boolean a(int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*  80 */     if (this.b.a(paramInt1, paramInt2, paramInt3) == this.a.bi) return true;
+/*  81 */     if (this.b.a(paramInt1, paramInt2 + 1, paramInt3) == this.a.bi) return true;
+/*  82 */     return this.b.a(paramInt1, paramInt2 - 1, paramInt3) == this.a.bi;
+/*     */   }
+/*     */ 
+/*     */   private pw a(qj paramqj)
+/*     */   {
+/*  87 */     if (this.b.a(paramqj.a, paramqj.b, paramqj.c) == this.a.bi) return new pw(this.a, this.b, paramqj.a, paramqj.b, paramqj.c);
+/*  88 */     if (this.b.a(paramqj.a, paramqj.b + 1, paramqj.c) == this.a.bi) return new pw(this.a, this.b, paramqj.a, paramqj.b + 1, paramqj.c);
+/*  89 */     if (this.b.a(paramqj.a, paramqj.b - 1, paramqj.c) == this.a.bi) return new pw(this.a, this.b, paramqj.a, paramqj.b - 1, paramqj.c);
+/*  90 */     return null;
+/*     */   }
+/*     */ 
+/*     */   private boolean b(pw parampw) {
+/*  94 */     for (int i = 0; i < this.g.size(); i++) {
+/*  95 */       qj localqj = (qj)this.g.get(i);
+/*  96 */       if ((localqj.a == parampw.c) && (localqj.c == parampw.e)) {
+/*  97 */         return true;
+/*     */       }
+/*     */     }
+/* 100 */     return false;
+/*     */   }
+/*     */ 
+/*     */   private boolean b(int paramInt1, int paramInt2, int paramInt3) {
+/* 104 */     for (int i = 0; i < this.g.size(); i++) {
+/* 105 */       qj localqj = (qj)this.g.get(i);
+/*     */ 
+/* 107 */       if ((localqj.a == paramInt1) && (localqj.c == paramInt3)) {
+/* 108 */         return true;
+/*     */       }
+/*     */     }
+/* 111 */     return false;
+/*     */   }
+/*     */ 
+/*     */   private int c() {
+/* 115 */     int i = 0;
+/*     */ 
+/* 117 */     if (a(this.c, this.d, this.e - 1)) i++;
+/* 118 */     if (a(this.c, this.d, this.e + 1)) i++;
+/* 119 */     if (a(this.c - 1, this.d, this.e)) i++;
+/* 120 */     if (a(this.c + 1, this.d, this.e)) i++;
+/*     */ 
+/* 122 */     return i;
+/*     */   }
+/*     */ 
+/*     */   private boolean c(pw parampw) {
+/* 126 */     if (b(parampw)) return true;
+/* 127 */     if (this.g.size() == 2) {
+/* 128 */       return false;
+/*     */     }
+/* 130 */     if (this.g.size() == 0) {
+/* 131 */       return true;
+/*     */     }
+/*     */ 
+/* 134 */     qj localqj = (qj)this.g.get(0);
+/* 135 */     return (parampw.d == this.d) && (localqj.b == this.d);
+/*     */   }
+/*     */ 
+/*     */   private void d(pw parampw)
+/*     */   {
+/* 141 */     this.g.add(new qj(parampw.c, parampw.d, parampw.e));
+/*     */ 
+/* 143 */     boolean bool1 = b(this.c, this.d, this.e - 1);
+/* 144 */     boolean bool2 = b(this.c, this.d, this.e + 1);
+/* 145 */     boolean bool3 = b(this.c - 1, this.d, this.e);
+/* 146 */     boolean bool4 = b(this.c + 1, this.d, this.e);
+/*     */ 
+/* 148 */     int i = -1;
+/*     */ 
+/* 150 */     if ((bool1) || (bool2)) i = 0;
+/* 151 */     if ((bool3) || (bool4)) i = 1;
+/*     */ 
+/* 156 */     if ((bool2) && (bool4) && (!bool1) && (!bool3)) i = 6;
+/* 157 */     if ((bool2) && (bool3) && (!bool1) && (!bool4)) i = 7;
+/* 158 */     if ((bool1) && (bool3) && (!bool2) && (!bool4)) i = 8;
+/* 159 */     if ((bool1) && (bool4) && (!bool2) && (!bool3)) i = 9;
+/* 160 */     if (i == 0) {
+/* 161 */       if (this.b.a(this.c, this.d + 1, this.e - 1) == this.a.bi) i = 4;
+/* 162 */       if (this.b.a(this.c, this.d + 1, this.e + 1) == this.a.bi) i = 5;
+/*     */     }
+/* 164 */     if (i == 1) {
+/* 165 */       if (this.b.a(this.c + 1, this.d + 1, this.e) == this.a.bi) i = 2;
+/* 166 */       if (this.b.a(this.c - 1, this.d + 1, this.e) == this.a.bi) i = 3;
+/*     */     }
+/*     */ 
+/* 169 */     if (i < 0) i = 0;
+/*     */ 
+/* 171 */     this.b.c(this.c, this.d, this.e, i);
+/*     */   }
+/*     */ 
+/*     */   private boolean c(int paramInt1, int paramInt2, int paramInt3) {
+/* 175 */     pw localpw = a(new qj(paramInt1, paramInt2, paramInt3));
+/* 176 */     if (localpw == null) return false;
+/* 177 */     localpw.b();
+/* 178 */     return localpw.c(this);
+/*     */   }
+/*     */ 
+/*     */   public void a(boolean paramBoolean) {
+/* 182 */     boolean bool1 = c(this.c, this.d, this.e - 1);
+/* 183 */     boolean bool2 = c(this.c, this.d, this.e + 1);
+/* 184 */     boolean bool3 = c(this.c - 1, this.d, this.e);
+/* 185 */     boolean bool4 = c(this.c + 1, this.d, this.e);
+/*     */ 
+/* 187 */     int i = -1;
+/*     */ 
+/* 189 */     if (((bool1) || (bool2)) && (!bool3) && (!bool4)) i = 0;
+/* 190 */     if (((bool3) || (bool4)) && (!bool1) && (!bool2)) i = 1;
+/*     */ 
+/* 192 */     if ((bool2) && (bool4) && (!bool1) && (!bool3)) i = 6;
+/* 193 */     if ((bool2) && (bool3) && (!bool1) && (!bool4)) i = 7;
+/* 194 */     if ((bool1) && (bool3) && (!bool2) && (!bool4)) i = 8;
+/* 195 */     if ((bool1) && (bool4) && (!bool2) && (!bool3)) i = 9;
+/*     */ 
+/* 197 */     if (i == -1) {
+/* 198 */       if ((bool1) || (bool2)) i = 0;
+/* 199 */       if ((bool3) || (bool4)) i = 1;
+/*     */ 
+/* 201 */       if (paramBoolean) {
+/* 202 */         if ((bool2) && (bool4)) i = 6;
+/* 203 */         if ((bool3) && (bool2)) i = 7;
+/* 204 */         if ((bool4) && (bool1)) i = 9;
+/* 205 */         if ((bool1) && (bool3)) i = 8; 
+/*     */       }
+/*     */       else {
+/* 207 */         if ((bool1) && (bool3)) i = 8;
+/* 208 */         if ((bool4) && (bool1)) i = 9;
+/* 209 */         if ((bool3) && (bool2)) i = 7;
+/* 210 */         if ((bool2) && (bool4)) i = 6;
+/*     */       }
+/*     */     }
+/*     */ 
+/* 214 */     if (i == 0) {
+/* 215 */       if (this.b.a(this.c, this.d + 1, this.e - 1) == this.a.bi) i = 4;
+/* 216 */       if (this.b.a(this.c, this.d + 1, this.e + 1) == this.a.bi) i = 5;
+/*     */     }
+/* 218 */     if (i == 1) {
+/* 219 */       if (this.b.a(this.c + 1, this.d + 1, this.e) == this.a.bi) i = 2;
+/* 220 */       if (this.b.a(this.c - 1, this.d + 1, this.e) == this.a.bi) i = 3;
+/*     */     }
+/*     */ 
+/* 223 */     if (i < 0) i = 0;
+/*     */ 
+/* 225 */     this.f = i;
+/* 226 */     a();
+/*     */ 
+/* 228 */     this.b.c(this.c, this.d, this.e, i);
+/* 229 */     for (int j = 0; j < this.g.size(); j++) {
+/* 230 */       pw localpw = a((qj)this.g.get(j));
+/* 231 */       if (localpw != null) {
+/* 232 */         localpw.b();
+/* 233 */         if (localpw.c(this))
+/* 234 */           localpw.d(this);
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     pw
+ * JD-Core Version:    0.6.0
+ */

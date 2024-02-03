@@ -1,0 +1,134 @@
+/*     */ import java.io.DataInputStream;
+/*     */ import java.io.DataOutputStream;
+/*     */ import java.io.IOException;
+/*     */ import java.io.PrintStream;
+/*     */ import java.util.HashMap;
+/*     */ import java.util.Map;
+/*     */ 
+/*     */ public abstract class hj
+/*     */ {
+/*  10 */   private static Map a = new HashMap();
+/*  11 */   private static Map b = new HashMap();
+/*     */ 
+/*  81 */   public final long j = System.currentTimeMillis();
+/*     */ 
+/*  99 */   public boolean k = false;
+/*     */ 
+/*     */   static void a(int paramInt, Class paramClass)
+/*     */   {
+/*  14 */     if (a.containsKey(Integer.valueOf(paramInt))) throw new IllegalArgumentException("Duplicate packet id:" + paramInt);
+/*  15 */     if (b.containsKey(paramClass)) throw new IllegalArgumentException("Duplicate packet class:" + paramClass);
+/*  16 */     a.put(Integer.valueOf(paramInt), paramClass);
+/*  17 */     b.put(paramClass, Integer.valueOf(paramInt));
+/*     */   }
+/*     */ 
+/*     */   public static hj a(int paramInt)
+/*     */   {
+/*     */     try
+/*     */     {
+/*  85 */       Class localClass = (Class)a.get(Integer.valueOf(paramInt));
+/*  86 */       if (localClass == null) return null;
+/*  87 */       return (hj)localClass.newInstance();
+/*     */     } catch (Exception localException) {
+/*  89 */       localException.printStackTrace();
+/*  90 */       System.out.println("Skipping packet with id " + paramInt);
+/*  91 */     }return null;
+/*     */   }
+/*     */ 
+/*     */   public final int c()
+/*     */   {
+/*  96 */     return ((Integer)b.get(getClass())).intValue();
+/*     */   }
+/*     */ 
+/*     */   public static hj b(DataInputStream paramDataInputStream)
+/*     */   {
+/* 102 */     int i = paramDataInputStream.read();
+/* 103 */     if (i == -1) return null;
+/*     */ 
+/* 105 */     hj localhj = a(i);
+/* 106 */     if (localhj == null) throw new IOException("Bad packet id " + i);
+/*     */ 
+/* 108 */     localhj.a(paramDataInputStream);
+/* 109 */     return localhj;
+/*     */   }
+/*     */ 
+/*     */   public static void a(hj paramhj, DataOutputStream paramDataOutputStream) {
+/* 113 */     paramDataOutputStream.write(paramhj.c());
+/* 114 */     paramhj.a(paramDataOutputStream);
+/*     */   }
+/*     */ 
+/*     */   public abstract void a(DataInputStream paramDataInputStream);
+/*     */ 
+/*     */   public abstract void a(DataOutputStream paramDataOutputStream);
+/*     */ 
+/*     */   public abstract void a(od paramod);
+/*     */ 
+/*     */   public abstract int a();
+/*     */ 
+/*     */   static
+/*     */   {
+/*  21 */     a(0, im.class);
+/*  22 */     a(1, ka.class);
+/*  23 */     a(2, ja.class);
+/*  24 */     a(3, ky.class);
+/*  25 */     a(4, fd.class);
+/*  26 */     a(5, m.class);
+/*  27 */     a(6, mh.class);
+/*  28 */     a(7, a.class);
+/*  29 */     a(8, de.class);
+/*  30 */     a(9, kr.class);
+/*     */ 
+/*  32 */     a(10, fw.class);
+/*  33 */     a(11, x.class);
+/*  34 */     a(12, pt.class);
+/*  35 */     a(13, df.class);
+/*  36 */     a(14, ha.class);
+/*  37 */     a(15, ew.class);
+/*  38 */     a(16, fj.class);
+/*  39 */     a(18, jo.class);
+/*  40 */     a(19, on.class);
+/*     */ 
+/*  42 */     a(20, iu.class);
+/*  43 */     a(21, ji.class);
+/*  44 */     a(22, ce.class);
+/*  45 */     a(23, nm.class);
+/*  46 */     a(24, gt.class);
+/*  47 */     a(25, pz.class);
+/*  48 */     a(28, em.class);
+/*  49 */     a(29, mu.class);
+/*     */ 
+/*  51 */     a(30, oy.class);
+/*  52 */     a(31, ns.class);
+/*  53 */     a(32, mz.class);
+/*  54 */     a(33, ln.class);
+/*  55 */     a(34, ml.class);
+/*  56 */     a(38, gp.class);
+/*  57 */     a(39, ju.class);
+/*  58 */     a(40, pm.class);
+/*     */ 
+/*  60 */     a(50, nc.class);
+/*  61 */     a(51, cv.class);
+/*  62 */     a(52, qt.class);
+/*  63 */     a(53, oo.class);
+/*  64 */     a(54, qb.class);
+/*     */ 
+/*  66 */     a(60, mp.class);
+/*     */ 
+/*  68 */     a(100, gk.class);
+/*  69 */     a(101, iy.class);
+/*  70 */     a(102, ly.class);
+/*  71 */     a(103, fl.class);
+/*  72 */     a(104, he.class);
+/*  73 */     a(105, jf.class);
+/*  74 */     a(106, kg.class);
+/*     */ 
+/*  76 */     a(130, oz.class);
+/*     */ 
+/*  78 */     a(255, si.class);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hj
+ * JD-Core Version:    0.6.0
+ */

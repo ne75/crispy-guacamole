@@ -1,0 +1,50 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class he extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public gm[] b;
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream)
+/*    */   {
+/* 27 */     this.a = paramDataInputStream.readByte();
+/* 28 */     int i = paramDataInputStream.readShort();
+/* 29 */     this.b = new gm[i];
+/* 30 */     for (int j = 0; j < i; j++) {
+/* 31 */       int k = paramDataInputStream.readShort();
+/* 32 */       if (k >= 0) {
+/* 33 */         int m = paramDataInputStream.readByte();
+/* 34 */         int n = paramDataInputStream.readShort();
+/* 35 */         this.b[j] = new gm(k, m, n);
+/*    */       }
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 41 */     paramDataOutputStream.writeByte(this.a);
+/* 42 */     paramDataOutputStream.writeShort(this.b.length);
+/* 43 */     for (int i = 0; i < this.b.length; i++)
+/* 44 */       if (this.b[i] == null) {
+/* 45 */         paramDataOutputStream.writeShort(-1);
+/*    */       } else {
+/* 47 */         paramDataOutputStream.writeShort((short)this.b[i].c);
+/* 48 */         paramDataOutputStream.writeByte((byte)this.b[i].a);
+/* 49 */         paramDataOutputStream.writeShort((short)this.b[i].i());
+/*    */       }
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod)
+/*    */   {
+/* 55 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 59 */     return 3 + this.b.length * 5;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     he
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,54 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class ps extends pj
+/*    */ {
+/*    */   protected ps(int paramInt)
+/*    */   {
+/* 14 */     super(paramInt, ic.c);
+/* 15 */     this.bh = 20;
+/*    */   }
+/*    */ 
+/*    */   public int a(Random paramRandom) {
+/* 19 */     return 1;
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt, Random paramRandom) {
+/* 23 */     return pj.J.bi;
+/*    */   }
+/*    */ 
+/*    */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 27 */     int i = 4;
+/* 28 */     int j = i + 1;
+/*    */ 
+/* 30 */     if (paramdn.a(paramInt1 - j, paramInt2 - j, paramInt3 - j, paramInt1 + j, paramInt2 + j, paramInt3 + j))
+/* 31 */       for (int k = -i; k <= i; k++)
+/* 32 */         for (int m = -i; m <= i; m++)
+/* 33 */           for (int n = -i; n <= i; n++) {
+/* 34 */             int i1 = paramdn.a(paramInt1 + k, paramInt2 + m, paramInt3 + n);
+/* 35 */             if (i1 == pj.K.bi) {
+/* 36 */               int i2 = paramdn.e(paramInt1 + k, paramInt2 + m, paramInt3 + n);
+/* 37 */               if ((i2 & 0x4) == 0)
+/* 38 */                 paramdn.d(paramInt1 + k, paramInt2 + m, paramInt3 + n, i2 | 0x4);
+/*    */             }
+/*    */           }
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt1, int paramInt2)
+/*    */   {
+/* 47 */     if (paramInt1 == 1) return 21;
+/* 48 */     if (paramInt1 == 0) return 21;
+/* 49 */     if (paramInt2 == 1) return 116;
+/* 50 */     if (paramInt2 == 2) return 117;
+/* 51 */     return 20;
+/*    */   }
+/*    */ 
+/*    */   protected int b(int paramInt)
+/*    */   {
+/* 56 */     return paramInt;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ps
+ * JD-Core Version:    0.6.0
+ */

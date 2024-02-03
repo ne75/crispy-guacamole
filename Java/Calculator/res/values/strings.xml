@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="calcClear">Clear</string>
+<string name="calcPlus">+</string>
+<string name="calcDiv">/</string>
+<string name="calcDec">.</string>
+<string name="calcEnter">=</string>
+<string name="calcMin">-</string>
+<string name="hello">Hello World, gui!</string>
+<string name="value2">0</string>
+<string name="input">0</string>
+<string name="value1">0</string>
+<string name="calcMult">*</string>
+<string name="app_name">GUI</string>
+<string name="calc9">9</string>
+<string name="calc8">8</string>
+<string name="calc7">7</string>
+<string name="calc6">6</string>
+<string name="calc5">5</string>
+<string name="calc4">4</string>
+<string name="calc3">3</string>
+<string name="calc2">2</string>
+<string name="calc1">1</string>
+<string name="calc0">0</string>
+</resources>

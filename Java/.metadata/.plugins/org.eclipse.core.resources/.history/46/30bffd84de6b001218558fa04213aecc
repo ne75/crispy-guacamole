@@ -1,0 +1,57 @@
+package main;
+
+import java.util.*;
+
+public class Polynomial {
+    
+    private int[] a;
+    private int degree;
+    private String[] terms;
+    
+    /*
+     * Polynomial Object
+     * 
+     * String str must be a polynomial in the form of 
+     * "ax^n + ax^(n-1) + ... + ax + c"
+     * zeros must be included for coefficients less than
+     * the degree, i.e. "ax^2 + 0x + c"
+     * 
+     * array a of coefficients will be structured starting
+     * with the first coefficient, all the way to the constant
+     *  
+     */
+    
+    public Polynomial(String str) {
+	
+	int exp;
+	
+	
+	Scanner s = new Scanner(str);
+	int expIndex = str.indexOf('^');
+	if (expIndex != -1){
+	    degree = (int)(str.charAt(expIndex + 1)) - 48; 
+	    a = new int[degree + 1];
+	    terms = new String[degree + 1];
+	} else {
+	    degree = 0;
+	    a = new int[1];
+	}
+	
+	for (int i = 0; i <= degree; i++){
+	    a[i] = s.nextInt(); 
+	    
+	}
+	
+    }
+    
+    private int numOfTerms(String str){
+	int terms = 0;
+	
+	for (int i = 0; i < degrees; i++){
+	    if 
+	}
+	
+    }
+
+    
+}

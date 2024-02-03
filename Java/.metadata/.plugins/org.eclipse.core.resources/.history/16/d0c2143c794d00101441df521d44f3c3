@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	android:layout_width="854dip" 
+	android:layout_height="480dip" 
+	android:id="@+id/linearLayout1">
+</LinearLayout>

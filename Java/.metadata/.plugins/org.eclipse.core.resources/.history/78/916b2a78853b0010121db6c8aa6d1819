@@ -1,0 +1,180 @@
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.HashSet;
+/*     */ import java.util.List;
+/*     */ import java.util.Random;
+/*     */ import java.util.Set;
+/*     */ 
+/*     */ public class mc
+/*     */ {
+/*  12 */   public boolean a = false;
+/*  13 */   private Random h = new Random();
+/*     */   private dn i;
+/*     */   public double b;
+/*     */   public double c;
+/*     */   public double d;
+/*     */   public nl e;
+/*     */   public float f;
+/*  18 */   public Set g = new HashSet();
+/*     */ 
+/*     */   public mc(dn paramdn, nl paramnl, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat) {
+/*  21 */     this.i = paramdn;
+/*  22 */     this.e = paramnl;
+/*  23 */     this.f = paramFloat;
+/*  24 */     this.b = paramDouble1;
+/*  25 */     this.c = paramDouble2;
+/*  26 */     this.d = paramDouble3;
+/*     */   }
+/*     */ 
+/*     */   public void a()
+/*     */   {
+/*  31 */     float f1 = this.f;
+/*     */ 
+/*  33 */     int j = 16;
+/*     */     double d6;
+/*     */     double d7;
+/*     */     double d8;
+/*  34 */     for (int k = 0; k < j; k++) {
+/*  35 */       for (m = 0; m < j; m++) {
+/*  36 */         for (n = 0; n < j; n++) {
+/*  37 */           if ((k != 0) && (k != j - 1) && (m != 0) && (m != j - 1) && (n != 0) && (n != j - 1))
+/*     */             continue;
+/*  39 */           double d1 = k / (j - 1.0F) * 2.0F - 1.0F;
+/*  40 */           double d2 = m / (j - 1.0F) * 2.0F - 1.0F;
+/*  41 */           double d3 = n / (j - 1.0F) * 2.0F - 1.0F;
+/*  42 */           double d4 = Math.sqrt(d1 * d1 + d2 * d2 + d3 * d3);
+/*     */ 
+/*  44 */           d1 /= d4;
+/*  45 */           d2 /= d4;
+/*  46 */           d3 /= d4;
+/*     */ 
+/*  48 */           float f2 = this.f * (0.7F + this.i.l.nextFloat() * 0.6F);
+/*  49 */           d6 = this.b;
+/*  50 */           d7 = this.c;
+/*  51 */           d8 = this.d;
+/*     */ 
+/*  53 */           float f3 = 0.3F;
+/*  54 */           while (f2 > 0.0F) {
+/*  55 */             int i11 = gd.b(d6);
+/*  56 */             int i12 = gd.b(d7);
+/*  57 */             int i13 = gd.b(d8);
+/*  58 */             int i14 = this.i.a(i11, i12, i13);
+/*  59 */             if (i14 > 0) {
+/*  60 */               f2 -= (pj.m[i14].a(this.e) + 0.3F) * f3;
+/*     */             }
+/*  62 */             if (f2 > 0.0F) {
+/*  63 */               this.g.add(new qj(i11, i12, i13));
+/*     */             }
+/*     */ 
+/*  66 */             d6 += d1 * f3;
+/*  67 */             d7 += d2 * f3;
+/*  68 */             d8 += d3 * f3;
+/*  69 */             f2 -= f3 * 0.75F;
+/*     */           }
+/*     */         }
+/*     */       }
+/*     */ 
+/*     */     }
+/*     */ 
+/*  76 */     this.f *= 2.0F;
+/*  77 */     k = gd.b(this.b - this.f - 1.0D);
+/*  78 */     int m = gd.b(this.b + this.f + 1.0D);
+/*  79 */     int n = gd.b(this.c - this.f - 1.0D);
+/*  80 */     int i1 = gd.b(this.c + this.f + 1.0D);
+/*  81 */     int i2 = gd.b(this.d - this.f - 1.0D);
+/*  82 */     int i3 = gd.b(this.d + this.f + 1.0D);
+/*  83 */     List localList = this.i.b(this.e, db.b(k, n, i2, m, i1, i3));
+/*  84 */     ax localax = ax.b(this.b, this.c, this.d);
+/*  85 */     for (int i4 = 0; i4 < localList.size(); i4++) {
+/*  86 */       nl localnl = (nl)localList.get(i4);
+/*  87 */       double d5 = localnl.f(this.b, this.c, this.d) / this.f;
+/*  88 */       if (d5 <= 1.0D) {
+/*  89 */         d6 = localnl.aF - this.b;
+/*  90 */         d7 = localnl.aG - this.c;
+/*  91 */         d8 = localnl.aH - this.d;
+/*     */ 
+/*  93 */         double d9 = gd.a(d6 * d6 + d7 * d7 + d8 * d8);
+/*     */ 
+/*  95 */         d6 /= d9;
+/*  96 */         d7 /= d9;
+/*  97 */         d8 /= d9;
+/*     */ 
+/*  99 */         double d10 = this.i.a(localax, localnl.aP);
+/* 100 */         double d11 = (1.0D - d5) * d10;
+/* 101 */         localnl.a(this.e, (int)((d11 * d11 + d11) / 2.0D * 8.0D * this.f + 1.0D));
+/*     */ 
+/* 103 */         double d12 = d11;
+/* 104 */         localnl.aI += d6 * d12;
+/* 105 */         localnl.aJ += d7 * d12;
+/* 106 */         localnl.aK += d8 * d12;
+/*     */       }
+/*     */     }
+/* 109 */     this.f = f1;
+/*     */ 
+/* 111 */     ArrayList localArrayList = new ArrayList();
+/* 112 */     localArrayList.addAll(this.g);
+/*     */ 
+/* 114 */     if (this.a)
+/* 115 */       for (int i5 = localArrayList.size() - 1; i5 >= 0; i5--) {
+/* 116 */         qj localqj = (qj)localArrayList.get(i5);
+/* 117 */         int i6 = localqj.a;
+/* 118 */         int i7 = localqj.b;
+/* 119 */         int i8 = localqj.c;
+/* 120 */         int i9 = this.i.a(i6, i7, i8);
+/* 121 */         int i10 = this.i.a(i6, i7 - 1, i8);
+/* 122 */         if ((i9 == 0) && (pj.o[i10] != 0) && (this.h.nextInt(3) == 0))
+/* 123 */           this.i.e(i6, i7, i8, pj.ar.bi);
+/*     */       }
+/*     */   }
+/*     */ 
+/*     */   public void b()
+/*     */   {
+/* 130 */     this.i.a(this.b, this.c, this.d, "random.explode", 4.0F, (1.0F + (this.i.l.nextFloat() - this.i.l.nextFloat()) * 0.2F) * 0.7F);
+/*     */ 
+/* 132 */     ArrayList localArrayList = new ArrayList();
+/* 133 */     localArrayList.addAll(this.g);
+/* 134 */     for (int j = localArrayList.size() - 1; j >= 0; j--) {
+/* 135 */       qj localqj = (qj)localArrayList.get(j);
+/* 136 */       int k = localqj.a;
+/* 137 */       int m = localqj.b;
+/* 138 */       int n = localqj.c;
+/*     */ 
+/* 140 */       int i1 = this.i.a(k, m, n);
+/*     */ 
+/* 142 */       for (int i2 = 0; i2 < 1; i2++) {
+/* 143 */         double d1 = k + this.i.l.nextFloat();
+/* 144 */         double d2 = m + this.i.l.nextFloat();
+/* 145 */         double d3 = n + this.i.l.nextFloat();
+/*     */ 
+/* 147 */         double d4 = d1 - this.b;
+/* 148 */         double d5 = d2 - this.c;
+/* 149 */         double d6 = d3 - this.d;
+/*     */ 
+/* 151 */         double d7 = gd.a(d4 * d4 + d5 * d5 + d6 * d6);
+/*     */ 
+/* 153 */         d4 /= d7;
+/* 154 */         d5 /= d7;
+/* 155 */         d6 /= d7;
+/*     */ 
+/* 157 */         double d8 = 0.5D / (d7 / this.f + 0.1D);
+/* 158 */         d8 *= (this.i.l.nextFloat() * this.i.l.nextFloat() + 0.3F);
+/* 159 */         d4 *= d8;
+/* 160 */         d5 *= d8;
+/* 161 */         d6 *= d8;
+/*     */ 
+/* 163 */         this.i.a("explode", (d1 + this.b * 1.0D) / 2.0D, (d2 + this.c * 1.0D) / 2.0D, (d3 + this.d * 1.0D) / 2.0D, d4, d5, d6);
+/* 164 */         this.i.a("smoke", d1, d2, d3, d4, d5, d6);
+/*     */       }
+/*     */ 
+/* 167 */       if (i1 > 0) {
+/* 168 */         pj.m[i1].a(this.i, k, m, n, this.i.e(k, m, n), 0.3F);
+/* 169 */         this.i.e(k, m, n, 0);
+/* 170 */         pj.m[i1].c(this.i, k, m, n);
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mc
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,95 @@
+/*    */ import java.io.PrintStream;
+/*    */ import java.util.HashMap;
+/*    */ import java.util.Map;
+/*    */ 
+/*    */ public class kp
+/*    */ {
+/* 13 */   private static Map a = new HashMap();
+/* 14 */   private static Map b = new HashMap();
+/*    */   public dn d;
+/*    */   public int e;
+/*    */   public int f;
+/*    */   public int g;
+/*    */ 
+/*    */   private static void a(Class paramClass, String paramString)
+/*    */   {
+/* 17 */     if (b.containsKey(paramString)) throw new IllegalArgumentException("Duplicate id: " + paramString);
+/* 18 */     a.put(paramString, paramClass);
+/* 19 */     b.put(paramClass, paramString);
+/*    */   }
+/*    */ 
+/*    */   public void a(jw paramjw)
+/*    */   {
+/* 35 */     this.e = paramjw.e("x");
+/* 36 */     this.f = paramjw.e("y");
+/* 37 */     this.g = paramjw.e("z");
+/*    */   }
+/*    */ 
+/*    */   public void b(jw paramjw) {
+/* 41 */     String str = (String)b.get(getClass());
+/* 42 */     if (str == null) {
+/* 43 */       throw new RuntimeException(getClass() + " is missing a mapping! This is a bug!");
+/*    */     }
+/* 45 */     paramjw.a("id", str);
+/* 46 */     paramjw.a("x", this.e);
+/* 47 */     paramjw.a("y", this.f);
+/* 48 */     paramjw.a("z", this.g);
+/*    */   }
+/*    */ 
+/*    */   public void m_() {
+/*    */   }
+/*    */ 
+/*    */   public static kp c(jw paramjw) {
+/* 55 */     kp localkp = null;
+/*    */     try {
+/* 57 */       Class localClass = (Class)a.get(paramjw.i("id"));
+/* 58 */       if (localClass != null) localkp = (kp)localClass.newInstance(); 
+/*    */     }
+/*    */     catch (Exception localException) {
+/* 60 */       localException.printStackTrace();
+/*    */     }
+/* 62 */     if (localkp != null)
+/* 63 */       localkp.a(paramjw);
+/*    */     else {
+/* 65 */       System.out.println("Skipping TileEntity with id " + paramjw.i("id"));
+/*    */     }
+/* 67 */     return localkp;
+/*    */   }
+/*    */ 
+/*    */   public int e() {
+/* 71 */     return this.d.e(this.e, this.f, this.g);
+/*    */   }
+/*    */ 
+/*    */   public void r_()
+/*    */   {
+/* 79 */     if (this.d != null)
+/* 80 */       this.d.b(this.e, this.f, this.g, this);
+/*    */   }
+/*    */ 
+/*    */   public double a(double paramDouble1, double paramDouble2, double paramDouble3)
+/*    */   {
+/* 85 */     double d1 = this.e + 0.5D - paramDouble1;
+/* 86 */     double d2 = this.f + 0.5D - paramDouble2;
+/* 87 */     double d3 = this.g + 0.5D - paramDouble3;
+/* 88 */     return d1 * d1 + d2 * d2 + d3 * d3;
+/*    */   }
+/*    */ 
+/*    */   public pj f() {
+/* 92 */     return pj.m[this.d.a(this.e, this.f, this.g)];
+/*    */   }
+/*    */ 
+/*    */   static
+/*    */   {
+/* 23 */     a(ni.class, "Furnace");
+/* 24 */     a(gy.class, "Chest");
+/* 25 */     a(ak.class, "Trap");
+/* 26 */     a(sc.class, "Sign");
+/* 27 */     a(bu.class, "MobSpawner");
+/* 28 */     a(oi.class, "Music");
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     kp
+ * JD-Core Version:    0.6.0
+ */

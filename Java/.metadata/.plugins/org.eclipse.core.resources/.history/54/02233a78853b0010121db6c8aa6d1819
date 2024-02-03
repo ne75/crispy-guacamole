@@ -1,0 +1,53 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class qp extends pj
+/*    */ {
+/*    */   protected qp(int paramInt)
+/*    */   {
+/* 12 */     super(paramInt, ic.b);
+/* 13 */     this.bh = 3;
+/* 14 */     b(true);
+/*    */   }
+/*    */ 
+/*    */   public int a(ri paramri, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 18 */     if (paramInt4 == 1) return 0;
+/* 19 */     if (paramInt4 == 0) return 2;
+/* 20 */     ic localic = paramri.f(paramInt1, paramInt2 + 1, paramInt3);
+/* 21 */     if ((localic == ic.s) || (localic == ic.t)) return 68;
+/* 22 */     return 3;
+/*    */   }
+/*    */ 
+/*    */   public int b(ri paramri, int paramInt1, int paramInt2, int paramInt3) {
+/* 26 */     paramri.a().a(paramInt1, paramInt3, 1, 1);
+/* 27 */     double d1 = paramri.a().a[0];
+/* 28 */     double d2 = paramri.a().b[0];
+/*    */ 
+/* 30 */     return fr.a(d1, d2);
+/*    */   }
+/*    */ 
+/*    */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, Random paramRandom) {
+/* 34 */     if (paramdn.z) return;
+/*    */ 
+/* 36 */     if ((paramdn.l(paramInt1, paramInt2 + 1, paramInt3) < 4) && (paramdn.f(paramInt1, paramInt2 + 1, paramInt3).b())) {
+/* 37 */       if (paramRandom.nextInt(4) != 0) return;
+/* 38 */       paramdn.e(paramInt1, paramInt2, paramInt3, pj.v.bi);
+/*    */     }
+/* 40 */     else if (paramdn.l(paramInt1, paramInt2 + 1, paramInt3) >= 9) {
+/* 41 */       int i = paramInt1 + paramRandom.nextInt(3) - 1;
+/* 42 */       int j = paramInt2 + paramRandom.nextInt(5) - 3;
+/* 43 */       int k = paramInt3 + paramRandom.nextInt(3) - 1;
+/* 44 */       if ((paramdn.a(i, j, k) == pj.v.bi) && (paramdn.l(i, j + 1, k) >= 4) && (!paramdn.f(i, j + 1, k).b()))
+/* 45 */         paramdn.e(i, j, k, pj.u.bi);
+/*    */     }
+/*    */   }
+/*    */ 
+/*    */   public int a(int paramInt, Random paramRandom)
+/*    */   {
+/* 52 */     return pj.v.a(0, paramRandom);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qp
+ * JD-Core Version:    0.6.0
+ */

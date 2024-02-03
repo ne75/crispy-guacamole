@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ReadingFiles' target in the 'ReadingFiles' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

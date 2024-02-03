@@ -1,0 +1,194 @@
+/*     */ import java.util.ArrayList;
+/*     */ import java.util.List;
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class ma extends nl
+/*     */ {
+/*  17 */   private int f = 0;
+/*     */ 
+/*  66 */   public int a = 0;
+/*     */   public int b;
+/*     */   public int c;
+/*     */   public int d;
+/*     */   public gg e;
+/*     */ 
+/*     */   public ma(dn paramdn)
+/*     */   {
+/*  73 */     super(paramdn);
+/*  74 */     this.aX = 0.0F;
+/*  75 */     a(0.5F, 0.5F);
+/*     */   }
+/*     */ 
+/*     */   public ma(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  79 */     this(paramdn);
+/*  80 */     this.b = paramInt1;
+/*  81 */     this.c = paramInt2;
+/*  82 */     this.d = paramInt3;
+/*     */ 
+/*  84 */     ArrayList localArrayList = new ArrayList();
+/*  85 */     for (gg localgg : gg.values()) {
+/*  86 */       this.e = localgg;
+/*  87 */       b(paramInt4);
+/*  88 */       if (k()) {
+/*  89 */         localArrayList.add(localgg);
+/*     */       }
+/*     */     }
+/*  92 */     if (localArrayList.size() > 0) {
+/*  93 */       this.e = ((gg)localArrayList.get(this.bm.nextInt(localArrayList.size())));
+/*     */     }
+/*  95 */     b(paramInt4);
+/*     */   }
+/*     */ 
+/*     */   public ma(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4, String paramString) {
+/*  99 */     this(paramdn);
+/* 100 */     this.b = paramInt1;
+/* 101 */     this.c = paramInt2;
+/* 102 */     this.d = paramInt3;
+/*     */ 
+/* 104 */     for (gg localgg : gg.values()) {
+/* 105 */       if (localgg.z.equals(paramString)) {
+/* 106 */         this.e = localgg;
+/* 107 */         break;
+/*     */       }
+/*     */     }
+/* 110 */     b(paramInt4);
+/*     */   }
+/*     */ 
+/*     */   protected void b()
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public void b(int paramInt)
+/*     */   {
+/* 119 */     this.a = paramInt;
+/* 120 */     this.aN = (this.aL = paramInt * 90);
+/*     */ 
+/* 122 */     float f1 = this.e.A;
+/* 123 */     float f2 = this.e.B;
+/* 124 */     float f3 = this.e.A;
+/*     */ 
+/* 126 */     if ((paramInt == 0) || (paramInt == 2))
+/* 127 */       f3 = 0.5F;
+/*     */     else {
+/* 129 */       f1 = 0.5F;
+/*     */     }
+/*     */ 
+/* 132 */     f1 /= 32.0F;
+/* 133 */     f2 /= 32.0F;
+/* 134 */     f3 /= 32.0F;
+/*     */ 
+/* 136 */     float f4 = this.b + 0.5F;
+/* 137 */     float f5 = this.c + 0.5F;
+/* 138 */     float f6 = this.d + 0.5F;
+/*     */ 
+/* 144 */     float f7 = 0.5625F;
+/*     */ 
+/* 146 */     if (paramInt == 0) f6 -= f7;
+/* 147 */     if (paramInt == 1) f4 -= f7;
+/* 148 */     if (paramInt == 2) f6 += f7;
+/* 149 */     if (paramInt == 3) f4 += f7;
+/*     */ 
+/* 151 */     if (paramInt == 0) f4 -= c(this.e.A);
+/* 152 */     if (paramInt == 1) f6 += c(this.e.A);
+/* 153 */     if (paramInt == 2) f4 += c(this.e.A);
+/* 154 */     if (paramInt == 3) f6 -= c(this.e.A);
+/* 155 */     f5 += c(this.e.B);
+/*     */ 
+/* 157 */     b(f4, f5, f6);
+/*     */ 
+/* 159 */     float f8 = -0.00625F;
+/* 160 */     this.aP.c(f4 - f1 - f8, f5 - f2 - f8, f6 - f3 - f8, f4 + f1 + f8, f5 + f2 + f8, f6 + f3 + f8);
+/*     */   }
+/*     */ 
+/*     */   private float c(int paramInt) {
+/* 164 */     if (paramInt == 32) return 0.5F;
+/* 165 */     if (paramInt == 64) return 0.5F;
+/* 166 */     return 0.0F;
+/*     */   }
+/*     */ 
+/*     */   public void q_() {
+/* 170 */     if ((this.f++ == 100) && (!this.aB.z)) {
+/* 171 */       this.f = 0;
+/* 172 */       if (!k()) {
+/* 173 */         F();
+/* 174 */         this.aB.a(new fh(this.aB, this.aF, this.aG, this.aH, new gm(eo.aq)));
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public boolean k() {
+/* 180 */     if (this.aB.a(this, this.aP).size() > 0) {
+/* 181 */       return false;
+/*     */     }
+/* 183 */     int i = this.e.A / 16;
+/* 184 */     int j = this.e.B / 16;
+/*     */ 
+/* 186 */     int k = this.b;
+/* 187 */     int m = this.c;
+/* 188 */     int n = this.d;
+/* 189 */     if (this.a == 0) k = gd.b(this.aF - this.e.A / 32.0F);
+/* 190 */     if (this.a == 1) n = gd.b(this.aH - this.e.A / 32.0F);
+/* 191 */     if (this.a == 2) k = gd.b(this.aF - this.e.A / 32.0F);
+/* 192 */     if (this.a == 3) n = gd.b(this.aH - this.e.A / 32.0F);
+/* 193 */     m = gd.b(this.aG - this.e.B / 32.0F);
+/*     */ 
+/* 196 */     for (int i1 = 0; i1 < i; i1++)
+/* 197 */       for (i2 = 0; i2 < j; i2++)
+/*     */       {
+/*     */         ic localic;
+/* 199 */         if ((this.a == 0) || (this.a == 2))
+/* 200 */           localic = this.aB.f(k + i1, m + i2, this.d);
+/*     */         else {
+/* 202 */           localic = this.aB.f(this.b, m + i2, n + i1);
+/*     */         }
+/* 204 */         if (!localic.a()) return false;
+/*     */       }
+/* 206 */     List localList = this.aB.b(this, this.aP);
+/* 207 */     for (int i2 = 0; i2 < localList.size(); i2++) {
+/* 208 */       if ((localList.get(i2) instanceof ma)) return false;
+/*     */     }
+/*     */ 
+/* 211 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public boolean f_() {
+/* 215 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(nl paramnl, int paramInt) {
+/* 219 */     if ((!this.aW) && (!this.aB.z)) {
+/* 220 */       F();
+/* 221 */       R();
+/* 222 */       this.aB.a(new fh(this.aB, this.aF, this.aG, this.aH, new gm(eo.aq)));
+/*     */     }
+/* 224 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public void a(jw paramjw) {
+/* 228 */     paramjw.a("Dir", (byte)this.a);
+/* 229 */     paramjw.a("Motive", this.e.z);
+/* 230 */     paramjw.a("TileX", this.b);
+/* 231 */     paramjw.a("TileY", this.c);
+/* 232 */     paramjw.a("TileZ", this.d);
+/*     */   }
+/*     */ 
+/*     */   public void b(jw paramjw) {
+/* 236 */     this.a = paramjw.c("Dir");
+/* 237 */     this.b = paramjw.e("TileX");
+/* 238 */     this.c = paramjw.e("TileY");
+/* 239 */     this.d = paramjw.e("TileZ");
+/* 240 */     String str = paramjw.i("Motive");
+/* 241 */     for (gg localgg : gg.values()) {
+/* 242 */       if (localgg.z.equals(str)) {
+/* 243 */         this.e = localgg;
+/*     */       }
+/*     */     }
+/* 246 */     if (this.e == null) this.e = gg.a;
+/* 247 */     b(this.a);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ma
+ * JD-Core Version:    0.6.0
+ */

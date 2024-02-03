@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXx-wq-Pmo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="ed8-iR-T2j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Darsh 1">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="darsh1:" destination="2" eventType="touchUpInside" id="qJw-at-JWL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsL-Fj-Hpy">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Darsh 2">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgr-mj-afW">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="TDl-6e-NY6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Darsh 3">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="darsh3:" destination="2" eventType="touchUpInside" id="DyO-Yt-bH9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7f-V3-Gzc">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Darsh 4">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="darsh4:" destination="2" eventType="touchUpInside" id="ysK-ED-wa5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgM-C0-Bjn">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Darsh 5">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="darsh5:" destination="2" eventType="touchUpInside" id="hwq-ZF-kgS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-rU-8LD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="CYs-w5-sYO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Darsh 2">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="darsh2:" destination="2" eventType="touchUpInside" id="b4R-2J-cJx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s2L-rU-8LD" firstAttribute="baseline" secondItem="fsL-Fj-Hpy" secondAttribute="baseline" type="default" id="1cl-Pe-9OM"/>
+                            <constraint firstItem="s2L-rU-8LD" firstAttribute="trailing" secondItem="fsL-Fj-Hpy" secondAttribute="trailing" type="default" id="7TJ-Sy-fe8"/>
+                            <constraint firstAttribute="trailing" secondItem="jgr-mj-afW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="BNf-ba-hCA"/>
+                            <constraint firstItem="W7f-V3-Gzc" firstAttribute="trailing" secondItem="yXx-wq-Pmo" secondAttribute="trailing" type="default" id="BgS-PC-pSA"/>
+                            <constraint firstItem="jgr-mj-afW" firstAttribute="baseline" secondItem="fsL-Fj-Hpy" secondAttribute="baseline" type="default" id="CHP-dd-xbR"/>
+                            <constraint firstItem="W7f-V3-Gzc" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ce9-Ot-UQg"/>
+                            <constraint firstItem="pgM-C0-Bjn" firstAttribute="baseline" secondItem="W7f-V3-Gzc" secondAttribute="baseline" type="default" id="NXI-qL-cuO"/>
+                            <constraint firstItem="W7f-V3-Gzc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="160" id="OSd-cZ-eBM"/>
+                            <constraint firstItem="yXx-wq-Pmo" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RnQ-pB-RPu"/>
+                            <constraint firstItem="s2L-rU-8LD" firstAttribute="leading" secondItem="fsL-Fj-Hpy" secondAttribute="leading" type="default" id="Vnx-7K-zEr"/>
+                            <constraint firstItem="s2L-rU-8LD" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="ZoH-qs-YHB"/>
+                            <constraint firstAttribute="trailing" secondItem="pgM-C0-Bjn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cep-VL-CFu"/>
+                            <constraint firstItem="pgM-C0-Bjn" firstAttribute="leading" secondItem="jgr-mj-afW" secondAttribute="leading" type="default" id="egG-Od-DTi"/>
+                            <constraint firstItem="s2L-rU-8LD" firstAttribute="baseline" secondItem="yXx-wq-Pmo" secondAttribute="baseline" type="default" id="fAw-ML-uHt"/>
+                            <constraint firstItem="fsL-Fj-Hpy" firstAttribute="top" secondItem="3" secondAttribute="top" constant="60" id="jim-jq-bJZ"/>
+                            <constraint firstItem="s2L-rU-8LD" firstAttribute="top" secondItem="fsL-Fj-Hpy" secondAttribute="top" type="default" id="sq2-pV-5sa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="darsh1" destination="yXx-wq-Pmo" id="Wzt-oW-NOP"/>
+                        <outlet property="darsh2" destination="s2L-rU-8LD" id="1RZ-87-UH3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="darsh1:"/>
+                <relationship kind="action" name="darsh2:"/>
+                <relationship kind="action" name="darsh3:"/>
+                <relationship kind="action" name="darsh4:"/>
+                <relationship kind="action" name="darsh5:"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

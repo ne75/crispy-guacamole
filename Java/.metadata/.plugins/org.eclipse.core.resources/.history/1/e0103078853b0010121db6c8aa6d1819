@@ -1,0 +1,13 @@
+/*   */ public class o extends hf
+/*   */ {
+/*   */   public o()
+/*   */   {
+/* 7 */     this.r = new Class[] { av.class, rt.class };
+/* 8 */     this.s = new Class[0];
+/*   */   }
+/*   */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     o
+ * JD-Core Version:    0.6.0
+ */

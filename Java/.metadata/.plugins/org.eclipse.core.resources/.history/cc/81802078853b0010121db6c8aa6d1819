@@ -1,0 +1,28 @@
+/*     */ import java.util.Comparator;
+/*     */ 
+/*     */ class hs
+/*     */   implements Comparator
+/*     */ {
+/*     */   hs(fg paramfg)
+/*     */   {
+/*     */   }
+/*     */ 
+/*     */   public int a(cn paramcn1, cn paramcn2)
+/*     */   {
+/* 340 */     if (((paramcn1 instanceof om)) && ((paramcn2 instanceof gj))) {
+/* 341 */       return 1;
+/*     */     }
+/* 343 */     if (((paramcn2 instanceof om)) && ((paramcn1 instanceof gj))) {
+/* 344 */       return -1;
+/*     */     }
+/*     */ 
+/* 347 */     if (paramcn2.a() < paramcn1.a()) return -1;
+/* 348 */     if (paramcn2.a() > paramcn1.a()) return 1;
+/* 349 */     return 0;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     hs
+ * JD-Core Version:    0.6.0
+ */

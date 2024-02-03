@@ -1,0 +1,19 @@
+/*    */ public class nu extends ra
+/*    */ {
+/*    */   public nu(dn paramdn, double paramDouble1, double paramDouble2, double paramDouble3, double paramDouble4, double paramDouble5, double paramDouble6)
+/*    */   {
+/*  8 */     super(paramdn, paramDouble1, paramDouble2, paramDouble3);
+/*  9 */     this.h = 0.04F;
+/* 10 */     this.b += 1;
+/* 11 */     if ((paramDouble5 == 0.0D) && ((paramDouble4 != 0.0D) || (paramDouble6 != 0.0D))) {
+/* 12 */       this.aI = paramDouble4;
+/* 13 */       this.aJ = (paramDouble5 + 0.1D);
+/* 14 */       this.aK = paramDouble6;
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     nu
+ * JD-Core Version:    0.6.0
+ */

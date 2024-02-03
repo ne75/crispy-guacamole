@@ -1,0 +1,46 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class kj extends ba
+/*    */ {
+/* 21 */   private bt a = new bt();
+/*    */ 
+/*    */   public kj() {
+/* 24 */     this.c = 0.5F;
+/*    */   }
+/*    */ 
+/*    */   public void a(mb parammb, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2) {
+/* 28 */     GL11.glPushMatrix();
+/* 29 */     GL11.glTranslatef((float)paramDouble1, (float)paramDouble2, (float)paramDouble3);
+/* 30 */     if (parammb.a - paramFloat2 + 1.0F < 10.0F) {
+/* 31 */       f1 = 1.0F - (parammb.a - paramFloat2 + 1.0F) / 10.0F;
+/* 32 */       if (f1 < 0.0F) f1 = 0.0F;
+/* 33 */       if (f1 > 1.0F) f1 = 1.0F;
+/* 34 */       f1 *= f1;
+/* 35 */       f1 *= f1;
+/* 36 */       float f2 = 1.0F + f1 * 0.3F;
+/* 37 */       GL11.glScalef(f2, f2, f2);
+/*    */     }
+/*    */ 
+/* 40 */     float f1 = (1.0F - (parammb.a - paramFloat2 + 1.0F) / 100.0F) * 0.8F;
+/* 41 */     a("/terrain.png");
+/* 42 */     this.a.a(pj.am, 0);
+/* 43 */     if (parammb.a / 5 % 2 == 0) {
+/* 44 */       GL11.glDisable(3553);
+/* 45 */       GL11.glDisable(2896);
+/* 46 */       GL11.glEnable(3042);
+/* 47 */       GL11.glBlendFunc(770, 772);
+/* 48 */       GL11.glColor4f(1.0F, 1.0F, 1.0F, f1);
+/* 49 */       this.a.a(pj.am, 0);
+/* 50 */       GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 51 */       GL11.glDisable(3042);
+/* 52 */       GL11.glEnable(2896);
+/* 53 */       GL11.glEnable(3553);
+/*    */     }
+/* 55 */     GL11.glPopMatrix();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     kj
+ * JD-Core Version:    0.6.0
+ */

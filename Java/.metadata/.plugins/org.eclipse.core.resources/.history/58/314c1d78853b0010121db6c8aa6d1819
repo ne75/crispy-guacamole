@@ -1,0 +1,38 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class gk extends hj
+/*    */ {
+/*    */   public int a;
+/*    */   public int b;
+/*    */   public String c;
+/*    */   public int d;
+/*    */ 
+/*    */   public void a(od paramod)
+/*    */   {
+/* 29 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream) {
+/* 33 */     this.a = paramDataInputStream.readByte();
+/* 34 */     this.b = paramDataInputStream.readByte();
+/* 35 */     this.c = paramDataInputStream.readUTF();
+/* 36 */     this.d = paramDataInputStream.readByte();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 40 */     paramDataOutputStream.writeByte(this.a);
+/* 41 */     paramDataOutputStream.writeByte(this.b);
+/* 42 */     paramDataOutputStream.writeUTF(this.c);
+/* 43 */     paramDataOutputStream.writeByte(this.d);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 47 */     return 3 + this.c.length();
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gk
+ * JD-Core Version:    0.6.0
+ */

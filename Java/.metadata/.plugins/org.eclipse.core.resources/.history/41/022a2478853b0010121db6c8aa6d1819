@@ -1,0 +1,37 @@
+/*    */ import java.io.DataInput;
+/*    */ import java.io.DataOutput;
+/*    */ 
+/*    */ public class is extends fy
+/*    */ {
+/*    */   public long a;
+/*    */ 
+/*    */   public is()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public is(long paramLong)
+/*    */   {
+/* 12 */     this.a = paramLong;
+/*    */   }
+/*    */ 
+/*    */   void a(DataOutput paramDataOutput) {
+/* 16 */     paramDataOutput.writeLong(this.a);
+/*    */   }
+/*    */ 
+/*    */   void a(DataInput paramDataInput) {
+/* 20 */     this.a = paramDataInput.readLong();
+/*    */   }
+/*    */ 
+/*    */   public byte a() {
+/* 24 */     return 4;
+/*    */   }
+/*    */ 
+/*    */   public String toString() {
+/* 28 */     return "" + this.a;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     is
+ * JD-Core Version:    0.6.0
+ */

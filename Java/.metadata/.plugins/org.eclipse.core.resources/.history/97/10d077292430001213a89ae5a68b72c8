@@ -1,0 +1,55 @@
+package main;
+
+/**
+ * Program 213d (Weather Forecasting)
+ * Nikita Ermoshkin
+ * 11-13-12
+ * JDK 7, Mac OS 10.8
+ * 
+ * This program figures out the current temperature in both
+ * ¼F and ¼C and prints the reseults, based on the number of
+ * cricket chirps per minute
+ * 
+ */
+
+import java.util.*;
+
+public class WeatherForecasting {
+    public static void main(String[] args) {
+	
+	Scanner s = new Scanner(System.in);
+	int chirps = 0;
+	int tempF = 0, tempC = 0;
+	String condition = "";
+	boolean end = false;
+	
+	do {
+	    System.out.print("Enter number of chirps/min: ");
+	    chirps = s.nextInt();
+	    
+	    tempF = (chirps + 40)/4;
+	    System.out.println("Fahrenheit: " + tempF);
+	    
+	    tempC = ((tempF - 32) * 5)/9;
+	    System.out.println("Celcius : " + tempC);
+	    
+	    
+	    if (tempF >= 109){
+		condition = "Dead cricket";
+	    } else if (tempF >= 81 && tempF < 109){
+		condition = "Whew";
+	    } else if (tempF >= 65 && tempF < 82){
+		condition = "Ahhhh";
+	    } else if (tempF >= 45 && tempF < 65){
+		condition = "Take a jacket";
+	    } else {
+		condition = "Burrrr";
+	    }
+	    
+	    System.out.println(condition + "\n");
+	    
+	} while (end == false);
+	
+    }
+
+}

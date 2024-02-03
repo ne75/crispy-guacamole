@@ -1,0 +1,46 @@
+/*    */ public class qm
+/*    */   implements ij
+/*    */ {
+/*  8 */   private gm[] a = new gm[1];
+/*    */ 
+/*    */   public int a() {
+/* 11 */     return 1;
+/*    */   }
+/*    */ 
+/*    */   public gm c_(int paramInt) {
+/* 15 */     return this.a[paramInt];
+/*    */   }
+/*    */ 
+/*    */   public String c() {
+/* 19 */     return "Result";
+/*    */   }
+/*    */ 
+/*    */   public gm a(int paramInt1, int paramInt2) {
+/* 23 */     if (this.a[paramInt1] != null) {
+/* 24 */       gm localgm = this.a[paramInt1];
+/* 25 */       this.a[paramInt1] = null;
+/* 26 */       return localgm;
+/*    */     }
+/* 28 */     return null;
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt, gm paramgm) {
+/* 32 */     this.a[paramInt] = paramgm;
+/*    */   }
+/*    */ 
+/*    */   public int d() {
+/* 36 */     return 64;
+/*    */   }
+/*    */ 
+/*    */   public void r_() {
+/*    */   }
+/*    */ 
+/*    */   public boolean a_(eu parameu) {
+/* 43 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     qm
+ * JD-Core Version:    0.6.0
+ */

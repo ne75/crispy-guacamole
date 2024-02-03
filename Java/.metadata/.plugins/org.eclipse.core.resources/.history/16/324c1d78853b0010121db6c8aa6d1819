@@ -1,0 +1,309 @@
+/*     */ public class gl
+/*     */   implements ij
+/*     */ {
+/*  20 */   public gm[] a = new gm[36];
+/*  21 */   public gm[] b = new gm[4];
+/*     */ 
+/*  23 */   public int c = 0;
+/*     */   private eu e;
+/*     */   private gm f;
+/*  26 */   public boolean d = false;
+/*     */ 
+/*     */   public gl(eu parameu) {
+/*  29 */     this.e = parameu;
+/*     */   }
+/*     */ 
+/*     */   public gm b() {
+/*  33 */     return this.a[this.c];
+/*     */   }
+/*     */ 
+/*     */   private int f(int paramInt) {
+/*  37 */     for (int i = 0; i < this.a.length; i++) {
+/*  38 */       if ((this.a[i] != null) && (this.a[i].c == paramInt)) return i;
+/*     */     }
+/*  40 */     return -1;
+/*     */   }
+/*     */ 
+/*     */   private int c(gm paramgm) {
+/*  44 */     for (int i = 0; i < this.a.length; i++) {
+/*  45 */       if ((this.a[i] != null) && (this.a[i].c == paramgm.c) && (this.a[i].d()) && (this.a[i].a < this.a[i].c()) && (this.a[i].a < d()) && ((!this.a[i].f()) || (this.a[i].i() == paramgm.i())))
+/*     */       {
+/*  47 */         return i;
+/*     */       }
+/*     */     }
+/*  50 */     return -1;
+/*     */   }
+/*     */ 
+/*     */   private int j() {
+/*  54 */     for (int i = 0; i < this.a.length; i++) {
+/*  55 */       if (this.a[i] == null) return i;
+/*     */     }
+/*  57 */     return -1;
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt, boolean paramBoolean) {
+/*  61 */     int i = f(paramInt);
+/*  62 */     if ((i >= 0) && (i < 9)) {
+/*  63 */       this.c = i;
+/*  64 */       return;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void b(int paramInt)
+/*     */   {
+/*  75 */     if (paramInt > 0) paramInt = 1;
+/*  76 */     if (paramInt < 0) paramInt = -1;
+/*     */ 
+/*  78 */     this.c -= paramInt;
+/*     */ 
+/*  80 */     while (this.c < 0)
+/*  81 */       this.c += 9;
+/*  82 */     while (this.c >= 9)
+/*  83 */       this.c -= 9;
+/*     */   }
+/*     */ 
+/*     */   private int d(gm paramgm)
+/*     */   {
+/* 105 */     int i = paramgm.c;
+/* 106 */     int j = paramgm.a;
+/*     */ 
+/* 108 */     int k = c(paramgm);
+/* 109 */     if (k < 0) k = j();
+/* 110 */     if (k < 0) return j;
+/* 111 */     if (this.a[k] == null) {
+/* 112 */       this.a[k] = new gm(i, 0, paramgm.i());
+/*     */     }
+/*     */ 
+/* 115 */     int m = j;
+/* 116 */     if (m > this.a[k].c() - this.a[k].a) {
+/* 117 */       m = this.a[k].c() - this.a[k].a;
+/*     */     }
+/* 119 */     if (m > d() - this.a[k].a) {
+/* 120 */       m = d() - this.a[k].a;
+/*     */     }
+/*     */ 
+/* 123 */     if (m == 0) return j;
+/*     */ 
+/* 125 */     j -= m;
+/* 126 */     this.a[k].a += m;
+/* 127 */     this.a[k].b = 5;
+/*     */ 
+/* 129 */     return j;
+/*     */   }
+/*     */ 
+/*     */   public void e() {
+/* 133 */     for (int i = 0; i < this.a.length; i++) {
+/* 134 */       if ((this.a[i] == null) || (this.a[i].b <= 0)) continue; this.a[i].b -= 1;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public boolean c(int paramInt) {
+/* 138 */     int i = f(paramInt);
+/* 139 */     if (i < 0) return false;
+/* 140 */     if (--this.a[i].a <= 0) this.a[i] = null;
+/*     */ 
+/* 142 */     return true;
+/*     */   }
+/*     */ 
+/*     */   public boolean a(gm paramgm)
+/*     */   {
+/* 152 */     if (!paramgm.g()) {
+/* 153 */       paramgm.a = d(paramgm);
+/* 154 */       if (paramgm.a == 0) return true;
+/*     */     }
+/*     */ 
+/* 157 */     int i = j();
+/* 158 */     if (i >= 0) {
+/* 159 */       this.a[i] = paramgm;
+/* 160 */       this.a[i].b = 5;
+/* 161 */       return true;
+/*     */     }
+/* 163 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public gm a(int paramInt1, int paramInt2) {
+/* 167 */     gm[] arrayOfgm = this.a;
+/* 168 */     if (paramInt1 >= this.a.length) {
+/* 169 */       arrayOfgm = this.b;
+/* 170 */       paramInt1 -= this.a.length;
+/*     */     }
+/*     */ 
+/* 173 */     if (arrayOfgm[paramInt1] != null) {
+/* 174 */       if (arrayOfgm[paramInt1].a <= paramInt2) {
+/* 175 */         localgm = arrayOfgm[paramInt1];
+/* 176 */         arrayOfgm[paramInt1] = null;
+/* 177 */         return localgm;
+/*     */       }
+/* 179 */       gm localgm = arrayOfgm[paramInt1].a(paramInt2);
+/* 180 */       if (arrayOfgm[paramInt1].a == 0) arrayOfgm[paramInt1] = null;
+/* 181 */       return localgm;
+/*     */     }
+/*     */ 
+/* 184 */     return null;
+/*     */   }
+/*     */ 
+/*     */   public void a(int paramInt, gm paramgm) {
+/* 188 */     gm[] arrayOfgm = this.a;
+/* 189 */     if (paramInt >= arrayOfgm.length) {
+/* 190 */       paramInt -= arrayOfgm.length;
+/* 191 */       arrayOfgm = this.b;
+/*     */     }
+/*     */ 
+/* 194 */     arrayOfgm[paramInt] = paramgm;
+/*     */   }
+/*     */ 
+/*     */   public float a(pj parampj) {
+/* 198 */     float f1 = 1.0F;
+/* 199 */     if (this.a[this.c] != null) f1 *= this.a[this.c].a(parampj);
+/* 200 */     return f1;
+/*     */   }
+/*     */ 
+/*     */   public nn a(nn paramnn)
+/*     */   {
+/*     */     jw localjw;
+/* 204 */     for (int i = 0; i < this.a.length; i++) {
+/* 205 */       if (this.a[i] != null) {
+/* 206 */         localjw = new jw();
+/* 207 */         localjw.a("Slot", (byte)i);
+/* 208 */         this.a[i].a(localjw);
+/* 209 */         paramnn.a(localjw);
+/*     */       }
+/*     */     }
+/* 212 */     for (i = 0; i < this.b.length; i++) {
+/* 213 */       if (this.b[i] != null) {
+/* 214 */         localjw = new jw();
+/* 215 */         localjw.a("Slot", (byte)(i + 100));
+/* 216 */         this.b[i].a(localjw);
+/* 217 */         paramnn.a(localjw);
+/*     */       }
+/*     */     }
+/* 220 */     return paramnn;
+/*     */   }
+/*     */ 
+/*     */   public void b(nn paramnn) {
+/* 224 */     this.a = new gm[36];
+/* 225 */     this.b = new gm[4];
+/* 226 */     for (int i = 0; i < paramnn.c(); i++) {
+/* 227 */       jw localjw = (jw)paramnn.a(i);
+/* 228 */       int j = localjw.c("Slot") & 0xFF;
+/* 229 */       gm localgm = new gm(localjw);
+/* 230 */       if (localgm.a() != null) {
+/* 231 */         if ((j >= 0) && (j < this.a.length)) this.a[j] = localgm;
+/* 232 */         if ((j < 100) || (j >= this.b.length + 100)) continue; this.b[(j - 100)] = localgm;
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public int a() {
+/* 238 */     return this.a.length + 4;
+/*     */   }
+/*     */ 
+/*     */   public gm c_(int paramInt) {
+/* 242 */     gm[] arrayOfgm = this.a;
+/* 243 */     if (paramInt >= arrayOfgm.length) {
+/* 244 */       paramInt -= arrayOfgm.length;
+/* 245 */       arrayOfgm = this.b;
+/*     */     }
+/*     */ 
+/* 248 */     return arrayOfgm[paramInt];
+/*     */   }
+/*     */ 
+/*     */   public String c() {
+/* 252 */     return "Inventory";
+/*     */   }
+/*     */ 
+/*     */   public int d() {
+/* 256 */     return 64;
+/*     */   }
+/*     */ 
+/*     */   public int a(nl paramnl) {
+/* 260 */     gm localgm = c_(this.c);
+/* 261 */     if (localgm != null) return localgm.a(paramnl);
+/* 262 */     return 1;
+/*     */   }
+/*     */ 
+/*     */   public boolean b(pj parampj) {
+/* 266 */     if ((parampj.bt != ic.d) && (parampj.bt != ic.e) && (parampj.bt != ic.t) && (parampj.bt != ic.s)) return true;
+/*     */ 
+/* 268 */     gm localgm = c_(this.c);
+/* 269 */     if (localgm != null) return localgm.b(parampj);
+/* 270 */     return false;
+/*     */   }
+/*     */ 
+/*     */   public gm d(int paramInt) {
+/* 274 */     return this.b[paramInt];
+/*     */   }
+/*     */ 
+/*     */   public int f() {
+/* 278 */     int i = 0;
+/* 279 */     int j = 0;
+/* 280 */     int k = 0;
+/* 281 */     for (int m = 0; m < this.b.length; m++) {
+/* 282 */       if ((this.b[m] != null) && ((this.b[m].a() instanceof qf))) {
+/* 283 */         int n = this.b[m].j();
+/* 284 */         int i1 = this.b[m].h();
+/*     */ 
+/* 286 */         int i2 = n - i1;
+/* 287 */         j += i2;
+/* 288 */         k += n;
+/*     */ 
+/* 290 */         int i3 = ((qf)this.b[m].a()).bh;
+/*     */ 
+/* 292 */         i += i3;
+/*     */       }
+/*     */     }
+/* 295 */     if (k == 0) return 0;
+/* 296 */     return (i - 1) * j / k + 1;
+/*     */   }
+/*     */ 
+/*     */   public void e(int paramInt) {
+/* 300 */     for (int i = 0; i < this.b.length; i++)
+/* 301 */       if ((this.b[i] != null) && ((this.b[i].a() instanceof qf))) {
+/* 302 */         this.b[i].b(paramInt);
+/* 303 */         if (this.b[i].a == 0) {
+/* 304 */           this.b[i].a(this.e);
+/* 305 */           this.b[i] = null;
+/*     */         }
+/*     */       }
+/*     */   }
+/*     */ 
+/*     */   public void g()
+/*     */   {
+/* 312 */     for (int i = 0; i < this.a.length; i++) {
+/* 313 */       if (this.a[i] != null) {
+/* 314 */         this.e.a(this.a[i], true);
+/* 315 */         this.a[i] = null;
+/*     */       }
+/*     */     }
+/* 318 */     for (i = 0; i < this.b.length; i++)
+/* 319 */       if (this.b[i] != null) {
+/* 320 */         this.e.a(this.b[i], true);
+/* 321 */         this.b[i] = null;
+/*     */       }
+/*     */   }
+/*     */ 
+/*     */   public void r_()
+/*     */   {
+/* 327 */     this.d = true;
+/*     */   }
+/*     */ 
+/*     */   public void b(gm paramgm)
+/*     */   {
+/* 359 */     this.f = paramgm;
+/* 360 */     this.e.b(paramgm);
+/*     */   }
+/*     */ 
+/*     */   public gm i() {
+/* 364 */     return this.f;
+/*     */   }
+/*     */ 
+/*     */   public boolean a_(eu parameu) {
+/* 368 */     if (this.e.aW) return false;
+/* 369 */     return parameu.g(this.e) <= 64.0D;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gl
+ * JD-Core Version:    0.6.0
+ */

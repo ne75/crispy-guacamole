@@ -1,0 +1,10 @@
+import java.util.*;
+
+public class card {
+	public static void main(String arg[]){
+	int a;
+	static Random randGen = new Random();
+
+	a = randGen.nextInt(6) + 1;
+	}
+}

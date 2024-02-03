@@ -1,0 +1,14 @@
+/*     */ package paulscode.sound;
+/*     */ 
+/*     */ class SimpleThread$1 extends Thread
+/*     */ {
+/*     */   public void run()
+/*     */   {
+/* 115 */     SimpleThread.access$000(this.this$0);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     paulscode.sound.SimpleThread.1
+ * JD-Core Version:    0.6.0
+ */

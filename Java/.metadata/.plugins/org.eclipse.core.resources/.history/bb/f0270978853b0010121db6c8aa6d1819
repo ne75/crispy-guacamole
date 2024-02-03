@@ -1,0 +1,28 @@
+/*    */ public class cx extends dr
+/*    */ {
+/*    */   public void a(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, float paramFloat6)
+/*    */   {
+/*  7 */     super.a(paramFloat1, paramFloat2, paramFloat3, paramFloat4, paramFloat5, paramFloat6);
+/*    */ 
+/*  9 */     float f1 = gd.a(this.m * 3.141593F);
+/* 10 */     float f2 = gd.a((1.0F - (1.0F - this.m) * (1.0F - this.m)) * 3.141593F);
+/* 11 */     this.d.f = 0.0F;
+/* 12 */     this.e.f = 0.0F;
+/* 13 */     this.d.e = (-(0.1F - f1 * 0.6F));
+/* 14 */     this.e.e = (0.1F - f1 * 0.6F);
+/* 15 */     this.d.d = -1.570796F;
+/* 16 */     this.e.d = -1.570796F;
+/* 17 */     this.d.d -= f1 * 1.2F - f2 * 0.4F;
+/* 18 */     this.e.d -= f1 * 1.2F - f2 * 0.4F;
+/*    */ 
+/* 23 */     this.d.f += gd.b(paramFloat3 * 0.09F) * 0.05F + 0.05F;
+/* 24 */     this.e.f -= gd.b(paramFloat3 * 0.09F) * 0.05F + 0.05F;
+/* 25 */     this.d.d += gd.a(paramFloat3 * 0.067F) * 0.05F;
+/* 26 */     this.e.d -= gd.a(paramFloat3 * 0.067F) * 0.05F;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     cx
+ * JD-Core Version:    0.6.0
+ */

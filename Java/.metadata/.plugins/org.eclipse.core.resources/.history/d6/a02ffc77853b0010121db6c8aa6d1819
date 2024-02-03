@@ -1,0 +1,14 @@
+/*    */ final class aa extends br
+/*    */ {
+/*    */   aa(String paramString, float paramFloat1, float paramFloat2)
+/*    */   {
+/* 68 */     super(paramString, paramFloat1, paramFloat2);
+/*    */   }
+/* 70 */   public String a() { return "step.gravel";
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     aa
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,46 @@
+/*    */ import java.util.List;
+/*    */ 
+/*    */ public class el extends by
+/*    */ {
+/*    */   private jg a;
+/* 10 */   private int h = 0;
+/*    */ 
+/*    */   public el(jg paramjg) {
+/* 13 */     this.a = paramjg;
+/*    */   }
+/*    */ 
+/*    */   protected void a(char paramChar, int paramInt) {
+/*    */   }
+/*    */ 
+/*    */   public void a() {
+/* 20 */     this.e.clear();
+/*    */   }
+/*    */ 
+/*    */   public void g() {
+/* 24 */     this.h += 1;
+/* 25 */     if (this.h % 20 == 0) {
+/* 26 */       this.a.a(new im());
+/*    */     }
+/* 28 */     if (this.a != null)
+/* 29 */       this.a.a();
+/*    */   }
+/*    */ 
+/*    */   protected void a(hg paramhg)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt1, int paramInt2, float paramFloat) {
+/* 37 */     b(0);
+/*    */ 
+/* 39 */     n localn = n.a();
+/*    */ 
+/* 41 */     a(this.g, localn.a("multiplayer.downloadingTerrain"), this.c / 2, this.d / 2 - 50, 16777215);
+/*    */ 
+/* 43 */     super.a(paramInt1, paramInt2, paramFloat);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     el
+ * JD-Core Version:    0.6.0
+ */

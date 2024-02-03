@@ -1,0 +1,156 @@
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ 
+/*     */ public class ev extends ba
+/*     */ {
+/*     */   protected hl e;
+/*     */   protected hl f;
+/*     */ 
+/*     */   public ev(hl paramhl, float paramFloat)
+/*     */   {
+/*  33 */     this.e = paramhl;
+/*  34 */     this.c = paramFloat;
+/*     */   }
+/*     */ 
+/*     */   public void a(hl paramhl) {
+/*  38 */     this.f = paramhl;
+/*     */   }
+/*     */ 
+/*     */   public void a(ig paramig, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2) {
+/*  42 */     GL11.glPushMatrix();
+/*  43 */     GL11.glDisable(2884);
+/*     */ 
+/*  45 */     this.e.m = d(paramig, paramFloat2);
+/*  46 */     this.e.n = paramig.V();
+/*  47 */     if (this.f != null) this.f.n = this.e.n;
+/*     */ 
+/*     */     try
+/*     */     {
+/*  51 */       float f1 = paramig.C + (paramig.B - paramig.C) * paramFloat2;
+/*  52 */       float f2 = paramig.aN + (paramig.aL - paramig.aN) * paramFloat2;
+/*  53 */       float f3 = paramig.aO + (paramig.aM - paramig.aO) * paramFloat2;
+/*     */ 
+/*  55 */       GL11.glTranslatef((float)paramDouble1, (float)paramDouble2, (float)paramDouble3);
+/*     */ 
+/*  57 */       float f4 = c(paramig, paramFloat2);
+/*  58 */       a(paramig, f4, f1, paramFloat2);
+/*     */ 
+/*  60 */       float f5 = 0.0625F;
+/*  61 */       GL11.glEnable(32826);
+/*  62 */       GL11.glScalef(-1.0F, -1.0F, 1.0F);
+/*     */ 
+/*  64 */       a(paramig, paramFloat2);
+/*  65 */       GL11.glTranslatef(0.0F, -24.0F * f5 - 0.007813F, 0.0F);
+/*     */ 
+/*  68 */       float f6 = paramig.ae + (paramig.af - paramig.ae) * paramFloat2;
+/*  69 */       float f7 = paramig.ag - paramig.af * (1.0F - paramFloat2);
+/*     */ 
+/*  71 */       if (f6 > 1.0F) f6 = 1.0F;
+/*     */ 
+/*  73 */       a(paramig.bu, paramig.G());
+/*  74 */       GL11.glEnable(3008);
+/*     */ 
+/*  76 */       this.e.b(f7, f6, f4, f2 - f1, f3, f5);
+/*  77 */       for (int i = 0; i < 4; i++) {
+/*  78 */         if (a(paramig, i, paramFloat2)) {
+/*  79 */           this.f.b(f7, f6, f4, f2 - f1, f3, f5);
+/*  80 */           GL11.glDisable(3042);
+/*  81 */           GL11.glEnable(3008);
+/*     */         }
+/*     */       }
+/*     */ 
+/*  85 */       b(paramig, paramFloat2);
+/*  86 */       float f8 = paramig.a(paramFloat2);
+/*  87 */       int j = a(paramig, f8, paramFloat2);
+/*     */ 
+/*  89 */       if (((j >> 24 & 0xFF) > 0) || (paramig.U > 0) || (paramig.X > 0)) {
+/*  90 */         GL11.glDisable(3553);
+/*  91 */         GL11.glDisable(3008);
+/*  92 */         GL11.glEnable(3042);
+/*  93 */         GL11.glBlendFunc(770, 771);
+/*  94 */         GL11.glDepthFunc(514);
+/*     */ 
+/*  96 */         if ((paramig.U > 0) || (paramig.X > 0)) {
+/*  97 */           GL11.glColor4f(f8, 0.0F, 0.0F, 0.4F);
+/*  98 */           this.e.b(f7, f6, f4, f2 - f1, f3, f5);
+/*  99 */           for (int k = 0; k < 4; k++) {
+/* 100 */             if (a(paramig, k, paramFloat2)) {
+/* 101 */               GL11.glColor4f(f8, 0.0F, 0.0F, 0.4F);
+/* 102 */               this.f.b(f7, f6, f4, f2 - f1, f3, f5);
+/*     */             }
+/*     */           }
+/*     */         }
+/*     */ 
+/* 107 */         if ((j >> 24 & 0xFF) > 0) {
+/* 108 */           float f9 = (j >> 16 & 0xFF) / 255.0F;
+/* 109 */           float f10 = (j >> 8 & 0xFF) / 255.0F;
+/* 110 */           float f11 = (j & 0xFF) / 255.0F;
+/* 111 */           float f12 = (j >> 24 & 0xFF) / 255.0F;
+/* 112 */           GL11.glColor4f(f9, f10, f11, f12);
+/* 113 */           this.e.b(f7, f6, f4, f2 - f1, f3, f5);
+/* 114 */           for (int m = 0; m < 4; m++) {
+/* 115 */             if (a(paramig, m, paramFloat2)) {
+/* 116 */               GL11.glColor4f(f9, f10, f11, f12);
+/* 117 */               this.f.b(f7, f6, f4, f2 - f1, f3, f5);
+/*     */             }
+/*     */           }
+/*     */         }
+/*     */ 
+/* 122 */         GL11.glDepthFunc(515);
+/* 123 */         GL11.glDisable(3042);
+/* 124 */         GL11.glEnable(3008);
+/* 125 */         GL11.glEnable(3553);
+/*     */       }
+/* 127 */       GL11.glDisable(32826);
+/*     */     }
+/*     */     catch (Exception localException) {
+/* 130 */       localException.printStackTrace();
+/*     */     }
+/*     */ 
+/* 133 */     GL11.glEnable(2884);
+/*     */ 
+/* 135 */     GL11.glPopMatrix();
+/*     */   }
+/*     */ 
+/*     */   protected void a(ig paramig, float paramFloat1, float paramFloat2, float paramFloat3)
+/*     */   {
+/* 140 */     GL11.glRotatef(180.0F - paramFloat2, 0.0F, 1.0F, 0.0F);
+/* 141 */     if (paramig.X > 0) {
+/* 142 */       float f1 = (paramig.X + paramFloat3 - 1.0F) / 20.0F * 1.6F;
+/* 143 */       f1 = gd.c(f1);
+/* 144 */       if (f1 > 1.0F) f1 = 1.0F;
+/* 145 */       GL11.glRotatef(f1 * a(paramig), 0.0F, 0.0F, 1.0F);
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   protected float d(ig paramig, float paramFloat) {
+/* 150 */     return paramig.d(paramFloat);
+/*     */   }
+/*     */ 
+/*     */   protected float c(ig paramig, float paramFloat) {
+/* 154 */     return paramig.bn + paramFloat;
+/*     */   }
+/*     */ 
+/*     */   protected void b(ig paramig, float paramFloat) {
+/*     */   }
+/*     */ 
+/*     */   protected boolean a(ig paramig, int paramInt, float paramFloat) {
+/* 161 */     return false;
+/*     */   }
+/*     */ 
+/*     */   protected float a(ig paramig) {
+/* 165 */     return 90.0F;
+/*     */   }
+/*     */ 
+/*     */   protected int a(ig paramig, float paramFloat1, float paramFloat2) {
+/* 169 */     return 0;
+/*     */   }
+/*     */ 
+/*     */   protected void a(ig paramig, float paramFloat)
+/*     */   {
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ev
+ * JD-Core Version:    0.6.0
+ */

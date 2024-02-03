@@ -1,0 +1,23 @@
+/*    */ public class gf extends ev
+/*    */ {
+/*    */   public gf(hl paramhl, float paramFloat)
+/*    */   {
+/*  9 */     super(paramhl, paramFloat);
+/*    */   }
+/*    */ 
+/*    */   public void a(qs paramqs, double paramDouble1, double paramDouble2, double paramDouble3, float paramFloat1, float paramFloat2) {
+/* 13 */     super.a(paramqs, paramDouble1, paramDouble2, paramDouble3, paramFloat1, paramFloat2);
+/*    */   }
+/*    */ 
+/*    */   protected float a(qs paramqs, float paramFloat) {
+/* 17 */     float f1 = paramqs.g + (paramqs.b - paramqs.g) * paramFloat;
+/* 18 */     float f2 = paramqs.f + (paramqs.c - paramqs.f) * paramFloat;
+/*    */ 
+/* 20 */     return (gd.a(f1) + 1.0F) * f2;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gf
+ * JD-Core Version:    0.6.0
+ */

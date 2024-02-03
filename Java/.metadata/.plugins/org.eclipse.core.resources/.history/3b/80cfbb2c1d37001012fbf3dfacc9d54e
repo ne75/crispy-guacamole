@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class card {
+	public static void main(String arg[]){
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
+	int e = 0;
+	Random randomGenerator = new Random();
+	a = randomGenerator.nextInt(9);
+	b = randomGenerator.nextInt(9);
+	if (a == b){
+		b = randomGenerator.nextInt(9);
+	} else {
+		c = randomGenerator.nextInt(9);
+	}
+	if ((c == a) && (c == b)){
+		c = randomGenerator.nextInt(9);
+	} else {
+		d = randomGenerator.nextInt(9);
+	}
+	if ((d == a) && (d == b) && (d == c)){
+		d = randomGenerator.nextInt(9);
+	} else {
+		e = randomGenerator.nextInt(9);
+	}
+	if ((e == a) && (e == b) && (e == c) && (e == d)){
+		e = randomGenerator.nextInt(9);
+	}
+	System.out.print(a);
+	System.out.print(b);
+	System.out.print(c);
+	System.out.print(d);
+	System.out.print(e);
+	}
+}

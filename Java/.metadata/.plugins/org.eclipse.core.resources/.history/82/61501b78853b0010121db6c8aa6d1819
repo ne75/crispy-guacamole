@@ -1,0 +1,43 @@
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class fk extends ft
+/*    */ {
+/*    */   private ij k;
+/*    */   private ij l;
+/* 11 */   private int m = 0;
+/*    */ 
+/*    */   public fk(ij paramij1, ij paramij2) {
+/* 14 */     super(new bg(paramij1, paramij2));
+/* 15 */     this.k = paramij1;
+/* 16 */     this.l = paramij2;
+/* 17 */     this.f = false;
+/*    */ 
+/* 19 */     int i = 222;
+/* 20 */     int j = i - 108;
+/* 21 */     this.m = (paramij2.a() / 9);
+/*    */ 
+/* 23 */     this.h = (j + this.m * 18);
+/*    */   }
+/*    */ 
+/*    */   protected void j()
+/*    */   {
+/* 44 */     this.g.b(this.l.c(), 8, 6, 4210752);
+/* 45 */     this.g.b(this.k.c(), 8, this.h - 96 + 2, 4210752);
+/*    */   }
+/*    */ 
+/*    */   protected void a(float paramFloat) {
+/* 49 */     int i = this.b.n.a("/gui/container.png");
+/* 50 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 51 */     this.b.n.b(i);
+/* 52 */     int j = (this.c - this.a) / 2;
+/* 53 */     int n = (this.d - this.h) / 2;
+/* 54 */     b(j, n, 0, 0, this.a, this.m * 18 + 17);
+/* 55 */     b(j, n + this.m * 18 + 17, 0, 126, this.a, 96);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fk
+ * JD-Core Version:    0.6.0
+ */

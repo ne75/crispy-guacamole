@@ -1,0 +1,113 @@
+/*     */ import java.io.PrintStream;
+/*     */ import java.lang.reflect.Constructor;
+/*     */ import java.util.HashMap;
+/*     */ import java.util.Map;
+/*     */ 
+/*     */ public class gn
+/*     */ {
+/*  32 */   private static Map a = new HashMap();
+/*  33 */   private static Map b = new HashMap();
+/*  34 */   private static Map c = new HashMap();
+/*  35 */   private static Map d = new HashMap();
+/*     */ 
+/*     */   private static void a(Class paramClass, String paramString, int paramInt) {
+/*  38 */     a.put(paramString, paramClass);
+/*  39 */     b.put(paramClass, paramString);
+/*  40 */     c.put(Integer.valueOf(paramInt), paramClass);
+/*  41 */     d.put(paramClass, Integer.valueOf(paramInt));
+/*     */   }
+/*     */ 
+/*     */   public static nl a(String paramString, dn paramdn)
+/*     */   {
+/*  76 */     nl localnl = null;
+/*     */     try {
+/*  78 */       Class localClass = (Class)a.get(paramString);
+/*  79 */       if (localClass != null) localnl = (nl)localClass.getConstructor(new Class[] { dn.class }).newInstance(new Object[] { paramdn }); 
+/*     */     }
+/*     */     catch (Exception localException)
+/*     */     {
+/*  82 */       localException.printStackTrace();
+/*     */     }
+/*  84 */     return localnl;
+/*     */   }
+/*     */ 
+/*     */   public static nl a(jw paramjw, dn paramdn) {
+/*  88 */     nl localnl = null;
+/*     */     try {
+/*  90 */       Class localClass = (Class)a.get(paramjw.i("id"));
+/*  91 */       if (localClass != null) localnl = (nl)localClass.getConstructor(new Class[] { dn.class }).newInstance(new Object[] { paramdn }); 
+/*     */     }
+/*     */     catch (Exception localException)
+/*     */     {
+/*  94 */       localException.printStackTrace();
+/*     */     }
+/*  96 */     if (localnl != null)
+/*  97 */       localnl.e(paramjw);
+/*     */     else {
+/*  99 */       System.out.println("Skipping Entity with id " + paramjw.i("id"));
+/*     */     }
+/* 101 */     return localnl;
+/*     */   }
+/*     */ 
+/*     */   public static nl a(int paramInt, dn paramdn) {
+/* 105 */     nl localnl = null;
+/*     */     try {
+/* 107 */       Class localClass = (Class)c.get(Integer.valueOf(paramInt));
+/* 108 */       if (localClass != null) localnl = (nl)localClass.getConstructor(new Class[] { dn.class }).newInstance(new Object[] { paramdn }); 
+/*     */     }
+/*     */     catch (Exception localException)
+/*     */     {
+/* 111 */       localException.printStackTrace();
+/*     */     }
+/* 113 */     if (localnl == null)
+/*     */     {
+/* 115 */       System.out.println("Skipping Entity with id " + paramInt);
+/*     */     }
+/* 117 */     return localnl;
+/*     */   }
+/*     */ 
+/*     */   public static int a(nl paramnl) {
+/* 121 */     return ((Integer)d.get(paramnl.getClass())).intValue();
+/*     */   }
+/*     */ 
+/*     */   public static String b(nl paramnl) {
+/* 125 */     return (String)b.get(paramnl.getClass());
+/*     */   }
+/*     */ 
+/*     */   static
+/*     */   {
+/*  45 */     a(nj.class, "Arrow", 10);
+/*  46 */     a(bc.class, "Snowball", 11);
+/*  47 */     a(fh.class, "Item", 1);
+/*  48 */     a(ma.class, "Painting", 9);
+/*     */ 
+/*  50 */     a(ig.class, "Mob", 48);
+/*  51 */     a(ey.class, "Monster", 49);
+/*     */ 
+/*  53 */     a(eh.class, "Creeper", 50);
+/*  54 */     a(dy.class, "Skeleton", 51);
+/*  55 */     a(bn.class, "Spider", 52);
+/*  56 */     a(jv.class, "Giant", 53);
+/*  57 */     a(pn.class, "Zombie", 54);
+/*  58 */     a(pl.class, "Slime", 55);
+/*  59 */     a(av.class, "Ghast", 56);
+/*  60 */     a(rt.class, "PigZombie", 57);
+/*     */ 
+/*  62 */     a(qk.class, "Pig", 90);
+/*  63 */     a(ch.class, "Sheep", 91);
+/*  64 */     a(bb.class, "Cow", 92);
+/*  65 */     a(qs.class, "Chicken", 93);
+/*  66 */     a(rm.class, "Squid", 94);
+/*     */ 
+/*  68 */     a(mb.class, "PrimedTnt", 20);
+/*  69 */     a(gz.class, "FallingSand", 21);
+/*     */ 
+/*  71 */     a(sd.class, "Minecart", 40);
+/*  72 */     a(eg.class, "Boat", 41);
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gn
+ * JD-Core Version:    0.6.0
+ */

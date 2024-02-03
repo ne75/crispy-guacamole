@@ -1,0 +1,32 @@
+/*    */ import java.util.Comparator;
+/*    */ 
+/*    */ public class iq
+/*    */   implements Comparator
+/*    */ {
+/*    */   private eu a;
+/*    */ 
+/*    */   public iq(eu parameu)
+/*    */   {
+/* 12 */     this.a = parameu;
+/*    */   }
+/*    */ 
+/*    */   public int a(cg paramcg1, cg paramcg2) {
+/* 16 */     boolean bool1 = paramcg1.o;
+/* 17 */     boolean bool2 = paramcg2.o;
+/* 18 */     if ((bool1) && (!bool2)) return 1;
+/* 19 */     if ((bool2) && (!bool1)) return -1;
+/*    */ 
+/* 21 */     double d1 = paramcg1.a(this.a);
+/* 22 */     double d2 = paramcg2.a(this.a);
+/*    */ 
+/* 24 */     if (d1 < d2) return 1;
+/* 25 */     if (d1 > d2) return -1;
+/*    */ 
+/* 27 */     return paramcg1.w < paramcg2.w ? 1 : -1;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     iq
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,397 @@
+/*     */ import net.minecraft.client.Minecraft;
+/*     */ import org.lwjgl.opengl.GL11;
+/*     */ 
+/*     */ public class mf
+/*     */ {
+/*     */   private Minecraft a;
+/*  34 */   private gm b = null;
+/*  35 */   private float c = 0.0F;
+/*  36 */   private float d = 0.0F;
+/*  37 */   private bt e = new bt();
+/*     */ 
+/* 387 */   private int f = -1;
+/*     */ 
+/*     */   public mf(Minecraft paramMinecraft)
+/*     */   {
+/*  40 */     this.a = paramMinecraft;
+/*     */   }
+/*     */ 
+/*     */   public void a(gm paramgm) {
+/*  44 */     GL11.glPushMatrix();
+/*  45 */     if ((paramgm.c < 256) && (bt.a(pj.m[paramgm.c].g()))) {
+/*  46 */       GL11.glBindTexture(3553, this.a.n.a("/terrain.png"));
+/*  47 */       this.e.a(pj.m[paramgm.c], paramgm.i());
+/*     */     } else {
+/*  49 */       if (paramgm.c < 256)
+/*  50 */         GL11.glBindTexture(3553, this.a.n.a("/terrain.png"));
+/*     */       else {
+/*  52 */         GL11.glBindTexture(3553, this.a.n.a("/gui/items.png"));
+/*     */       }
+/*     */ 
+/*  55 */       jy localjy = jy.a;
+/*     */ 
+/*  58 */       float f1 = (paramgm.b() % 16 * 16 + 0.0F) / 256.0F;
+/*  59 */       float f2 = (paramgm.b() % 16 * 16 + 15.99F) / 256.0F;
+/*  60 */       float f3 = (paramgm.b() / 16 * 16 + 0.0F) / 256.0F;
+/*  61 */       float f4 = (paramgm.b() / 16 * 16 + 15.99F) / 256.0F;
+/*     */ 
+/*  64 */       float f5 = 1.0F;
+/*  65 */       float f6 = 0.0F;
+/*  66 */       float f7 = 0.3F;
+/*     */ 
+/*  68 */       GL11.glEnable(32826);
+/*  69 */       GL11.glTranslatef(-f6, -f7, 0.0F);
+/*  70 */       float f8 = 1.5F;
+/*  71 */       GL11.glScalef(f8, f8, f8);
+/*     */ 
+/*  73 */       GL11.glRotatef(50.0F, 0.0F, 1.0F, 0.0F);
+/*  74 */       GL11.glRotatef(335.0F, 0.0F, 0.0F, 1.0F);
+/*  75 */       GL11.glTranslatef(-0.9375F, -0.0625F, 0.0F);
+/*  76 */       float f9 = 0.0625F;
+/*  77 */       localjy.b();
+/*  78 */       localjy.b(0.0F, 0.0F, 1.0F);
+/*  79 */       localjy.a(0.0D, 0.0D, 0.0D, f2, f4);
+/*  80 */       localjy.a(f5, 0.0D, 0.0D, f1, f4);
+/*  81 */       localjy.a(f5, 1.0D, 0.0D, f1, f3);
+/*  82 */       localjy.a(0.0D, 1.0D, 0.0D, f2, f3);
+/*  83 */       localjy.a();
+/*     */ 
+/*  85 */       localjy.b();
+/*  86 */       localjy.b(0.0F, 0.0F, -1.0F);
+/*  87 */       localjy.a(0.0D, 1.0D, 0.0F - f9, f2, f3);
+/*  88 */       localjy.a(f5, 1.0D, 0.0F - f9, f1, f3);
+/*  89 */       localjy.a(f5, 0.0D, 0.0F - f9, f1, f4);
+/*  90 */       localjy.a(0.0D, 0.0D, 0.0F - f9, f2, f4);
+/*  91 */       localjy.a();
+/*     */ 
+/*  93 */       localjy.b();
+/*  94 */       localjy.b(-1.0F, 0.0F, 0.0F);
+/*     */       float f10;
+/*     */       float f11;
+/*     */       float f12;
+/*  95 */       for (int i = 0; i < 16; i++) {
+/*  96 */         f10 = i / 16.0F;
+/*  97 */         f11 = f2 + (f1 - f2) * f10 - 0.00195313F;
+/*  98 */         f12 = f5 * f10;
+/*  99 */         localjy.a(f12, 0.0D, 0.0F - f9, f11, f4);
+/* 100 */         localjy.a(f12, 0.0D, 0.0D, f11, f4);
+/* 101 */         localjy.a(f12, 1.0D, 0.0D, f11, f3);
+/* 102 */         localjy.a(f12, 1.0D, 0.0F - f9, f11, f3);
+/*     */       }
+/* 104 */       localjy.a();
+/*     */ 
+/* 106 */       localjy.b();
+/* 107 */       localjy.b(1.0F, 0.0F, 0.0F);
+/* 108 */       for (i = 0; i < 16; i++) {
+/* 109 */         f10 = i / 16.0F;
+/* 110 */         f11 = f2 + (f1 - f2) * f10 - 0.00195313F;
+/* 111 */         f12 = f5 * f10 + 0.0625F;
+/* 112 */         localjy.a(f12, 1.0D, 0.0F - f9, f11, f3);
+/* 113 */         localjy.a(f12, 1.0D, 0.0D, f11, f3);
+/* 114 */         localjy.a(f12, 0.0D, 0.0D, f11, f4);
+/* 115 */         localjy.a(f12, 0.0D, 0.0F - f9, f11, f4);
+/*     */       }
+/* 117 */       localjy.a();
+/*     */ 
+/* 119 */       localjy.b();
+/* 120 */       localjy.b(0.0F, 1.0F, 0.0F);
+/* 121 */       for (i = 0; i < 16; i++) {
+/* 122 */         f10 = i / 16.0F;
+/* 123 */         f11 = f4 + (f3 - f4) * f10 - 0.00195313F;
+/* 124 */         f12 = f5 * f10 + 0.0625F;
+/* 125 */         localjy.a(0.0D, f12, 0.0D, f2, f11);
+/* 126 */         localjy.a(f5, f12, 0.0D, f1, f11);
+/* 127 */         localjy.a(f5, f12, 0.0F - f9, f1, f11);
+/* 128 */         localjy.a(0.0D, f12, 0.0F - f9, f2, f11);
+/*     */       }
+/* 130 */       localjy.a();
+/*     */ 
+/* 132 */       localjy.b();
+/* 133 */       localjy.b(0.0F, -1.0F, 0.0F);
+/* 134 */       for (i = 0; i < 16; i++) {
+/* 135 */         f10 = i / 16.0F;
+/* 136 */         f11 = f4 + (f3 - f4) * f10 - 0.00195313F;
+/* 137 */         f12 = f5 * f10;
+/* 138 */         localjy.a(f5, f12, 0.0D, f1, f11);
+/* 139 */         localjy.a(0.0D, f12, 0.0D, f2, f11);
+/* 140 */         localjy.a(0.0D, f12, 0.0F - f9, f2, f11);
+/* 141 */         localjy.a(f5, f12, 0.0F - f9, f1, f11);
+/*     */       }
+/* 143 */       localjy.a();
+/*     */ 
+/* 145 */       GL11.glDisable(32826);
+/*     */     }
+/*     */ 
+/* 149 */     GL11.glPopMatrix();
+/*     */   }
+/*     */ 
+/*     */   public void a(float paramFloat) {
+/* 153 */     float f1 = this.d + (this.c - this.d) * paramFloat;
+/* 154 */     bz localbz = this.a.g;
+/*     */ 
+/* 158 */     GL11.glPushMatrix();
+/* 159 */     GL11.glRotatef(localbz.aO + (localbz.aM - localbz.aO) * paramFloat, 1.0F, 0.0F, 0.0F);
+/* 160 */     GL11.glRotatef(localbz.aN + (localbz.aL - localbz.aN) * paramFloat, 0.0F, 1.0F, 0.0F);
+/* 161 */     p.b();
+/* 162 */     GL11.glPopMatrix();
+/*     */ 
+/* 167 */     float f2 = this.a.e.c(gd.b(localbz.aF), gd.b(localbz.aG), gd.b(localbz.aH));
+/* 168 */     GL11.glColor4f(f2, f2, f2, 1.0F);
+/*     */ 
+/* 170 */     gm localgm = this.b;
+/* 171 */     if (localbz.x != null)
+/* 172 */       localgm = new gm(eo.B);
+/*     */     float f3;
+/*     */     float f4;
+/*     */     float f5;
+/*     */     float f6;
+/* 175 */     if (localgm != null) {
+/* 176 */       GL11.glPushMatrix();
+/* 177 */       f3 = 0.8F;
+/*     */ 
+/* 180 */       f4 = localbz.d(paramFloat);
+/*     */ 
+/* 182 */       f5 = gd.a(f4 * 3.141593F);
+/* 183 */       f6 = gd.a(gd.c(f4) * 3.141593F);
+/* 184 */       GL11.glTranslatef(-f6 * 0.4F, gd.a(gd.c(f4) * 3.141593F * 2.0F) * 0.2F, -f5 * 0.2F);
+/*     */ 
+/* 187 */       GL11.glTranslatef(0.7F * f3, -0.65F * f3 - (1.0F - f1) * 0.6F, -0.9F * f3);
+/*     */ 
+/* 189 */       GL11.glRotatef(45.0F, 0.0F, 1.0F, 0.0F);
+/* 190 */       GL11.glEnable(32826);
+/*     */ 
+/* 192 */       f4 = localbz.d(paramFloat);
+/* 193 */       f5 = gd.a(f4 * f4 * 3.141593F);
+/* 194 */       f6 = gd.a(gd.c(f4) * 3.141593F);
+/* 195 */       GL11.glRotatef(-f5 * 20.0F, 0.0F, 1.0F, 0.0F);
+/* 196 */       GL11.glRotatef(-f6 * 20.0F, 0.0F, 0.0F, 1.0F);
+/* 197 */       GL11.glRotatef(-f6 * 80.0F, 1.0F, 0.0F, 0.0F);
+/*     */ 
+/* 199 */       f4 = 0.4F;
+/* 200 */       GL11.glScalef(f4, f4, f4);
+/*     */ 
+/* 202 */       if (localgm.a().c()) {
+/* 203 */         GL11.glRotatef(180.0F, 0.0F, 1.0F, 0.0F);
+/*     */       }
+/* 205 */       a(localgm);
+/* 206 */       GL11.glPopMatrix();
+/*     */     } else {
+/* 208 */       GL11.glPushMatrix();
+/* 209 */       f3 = 0.8F;
+/*     */ 
+/* 212 */       f4 = localbz.d(paramFloat);
+/*     */ 
+/* 214 */       f5 = gd.a(f4 * 3.141593F);
+/* 215 */       f6 = gd.a(gd.c(f4) * 3.141593F);
+/* 216 */       GL11.glTranslatef(-f6 * 0.3F, gd.a(gd.c(f4) * 3.141593F * 2.0F) * 0.4F, -f5 * 0.4F);
+/*     */ 
+/* 219 */       GL11.glTranslatef(0.8F * f3, -0.75F * f3 - (1.0F - f1) * 0.6F, -0.9F * f3);
+/*     */ 
+/* 221 */       GL11.glRotatef(45.0F, 0.0F, 1.0F, 0.0F);
+/* 222 */       GL11.glEnable(32826);
+/*     */ 
+/* 224 */       f4 = localbz.d(paramFloat);
+/* 225 */       f5 = gd.a(f4 * f4 * 3.141593F);
+/* 226 */       f6 = gd.a(gd.c(f4) * 3.141593F);
+/* 227 */       GL11.glRotatef(f6 * 70.0F, 0.0F, 1.0F, 0.0F);
+/* 228 */       GL11.glRotatef(-f5 * 20.0F, 0.0F, 0.0F, 1.0F);
+/*     */ 
+/* 232 */       GL11.glBindTexture(3553, this.a.n.a(this.a.g.bu, this.a.g.G()));
+/* 233 */       GL11.glTranslatef(-1.0F, 3.6F, 3.5F);
+/* 234 */       GL11.glRotatef(120.0F, 0.0F, 0.0F, 1.0F);
+/* 235 */       GL11.glRotatef(200.0F, 1.0F, 0.0F, 0.0F);
+/* 236 */       GL11.glRotatef(-135.0F, 0.0F, 1.0F, 0.0F);
+/* 237 */       GL11.glScalef(1.0F, 1.0F, 1.0F);
+/* 238 */       GL11.glTranslatef(5.6F, 0.0F, 0.0F);
+/*     */ 
+/* 240 */       ba localba = oc.a.a(this.a.g);
+/* 241 */       co localco = (co)localba;
+/* 242 */       f6 = 1.0F;
+/* 243 */       GL11.glScalef(f6, f6, f6);
+/* 244 */       localco.b();
+/* 245 */       GL11.glPopMatrix();
+/*     */     }
+/*     */ 
+/* 248 */     GL11.glDisable(32826);
+/* 249 */     p.a();
+/*     */   }
+/*     */ 
+/*     */   public void b(float paramFloat) {
+/* 253 */     GL11.glDisable(3008);
+/*     */     int i;
+/* 254 */     if (this.a.g.U()) {
+/* 255 */       i = this.a.n.a("/terrain.png");
+/* 256 */       GL11.glBindTexture(3553, i);
+/* 257 */       d(paramFloat);
+/*     */     }
+/*     */ 
+/* 261 */     if (this.a.g.T())
+/*     */     {
+/* 263 */       i = gd.b(this.a.g.aF);
+/* 264 */       int j = gd.b(this.a.g.aG);
+/* 265 */       int k = gd.b(this.a.g.aH);
+/*     */ 
+/* 267 */       int m = this.a.n.a("/terrain.png");
+/* 268 */       GL11.glBindTexture(3553, m);
+/* 269 */       int n = this.a.e.a(i, j, k);
+/* 270 */       if (pj.m[n] != null) {
+/* 271 */         a(paramFloat, pj.m[n].a(2));
+/*     */       }
+/*     */     }
+/*     */ 
+/* 275 */     if (this.a.g.a(ic.f)) {
+/* 276 */       i = this.a.n.a("/misc/water.png");
+/* 277 */       GL11.glBindTexture(3553, i);
+/* 278 */       c(paramFloat);
+/*     */     }
+/* 280 */     GL11.glEnable(3008);
+/*     */   }
+/*     */ 
+/*     */   private void a(float paramFloat, int paramInt) {
+/* 284 */     jy localjy = jy.a;
+/*     */ 
+/* 286 */     float f1 = this.a.g.a(paramFloat);
+/* 287 */     f1 = 0.1F;
+/* 288 */     GL11.glColor4f(f1, f1, f1, 0.5F);
+/*     */ 
+/* 290 */     GL11.glPushMatrix();
+/*     */ 
+/* 292 */     float f2 = -1.0F;
+/* 293 */     float f3 = 1.0F;
+/* 294 */     float f4 = -1.0F;
+/* 295 */     float f5 = 1.0F;
+/* 296 */     float f6 = -0.5F;
+/*     */ 
+/* 298 */     float f7 = 0.007813F;
+/* 299 */     float f8 = paramInt % 16 / 256.0F - f7;
+/* 300 */     float f9 = (paramInt % 16 + 15.99F) / 256.0F + f7;
+/* 301 */     float f10 = paramInt / 16 / 256.0F - f7;
+/* 302 */     float f11 = (paramInt / 16 + 15.99F) / 256.0F + f7;
+/*     */ 
+/* 304 */     localjy.b();
+/* 305 */     localjy.a(f2, f4, f6, f9, f11);
+/* 306 */     localjy.a(f3, f4, f6, f8, f11);
+/* 307 */     localjy.a(f3, f5, f6, f8, f10);
+/* 308 */     localjy.a(f2, f5, f6, f9, f10);
+/* 309 */     localjy.a();
+/* 310 */     GL11.glPopMatrix();
+/*     */ 
+/* 312 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/*     */   }
+/*     */ 
+/*     */   private void c(float paramFloat)
+/*     */   {
+/* 317 */     jy localjy = jy.a;
+/*     */ 
+/* 319 */     float f1 = this.a.g.a(paramFloat);
+/* 320 */     GL11.glColor4f(f1, f1, f1, 0.5F);
+/* 321 */     GL11.glEnable(3042);
+/* 322 */     GL11.glBlendFunc(770, 771);
+/*     */ 
+/* 324 */     GL11.glPushMatrix();
+/*     */ 
+/* 326 */     float f2 = 4.0F;
+/*     */ 
+/* 328 */     float f3 = -1.0F;
+/* 329 */     float f4 = 1.0F;
+/* 330 */     float f5 = -1.0F;
+/* 331 */     float f6 = 1.0F;
+/* 332 */     float f7 = -0.5F;
+/*     */ 
+/* 334 */     float f8 = -this.a.g.aL / 64.0F;
+/* 335 */     float f9 = this.a.g.aM / 64.0F;
+/*     */ 
+/* 337 */     localjy.b();
+/* 338 */     localjy.a(f3, f5, f7, f2 + f8, f2 + f9);
+/* 339 */     localjy.a(f4, f5, f7, 0.0F + f8, f2 + f9);
+/* 340 */     localjy.a(f4, f6, f7, 0.0F + f8, 0.0F + f9);
+/* 341 */     localjy.a(f3, f6, f7, f2 + f8, 0.0F + f9);
+/* 342 */     localjy.a();
+/* 343 */     GL11.glPopMatrix();
+/*     */ 
+/* 345 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 346 */     GL11.glDisable(3042);
+/*     */   }
+/*     */ 
+/*     */   private void d(float paramFloat) {
+/* 350 */     jy localjy = jy.a;
+/* 351 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 0.9F);
+/* 352 */     GL11.glEnable(3042);
+/* 353 */     GL11.glBlendFunc(770, 771);
+/*     */ 
+/* 355 */     float f1 = 1.0F;
+/* 356 */     for (int i = 0; i < 2; i++) {
+/* 357 */       GL11.glPushMatrix();
+/* 358 */       int j = pj.ar.bh + i * 16;
+/* 359 */       int k = (j & 0xF) << 4;
+/* 360 */       int m = j & 0xF0;
+/*     */ 
+/* 362 */       float f2 = k / 256.0F;
+/* 363 */       float f3 = (k + 15.99F) / 256.0F;
+/* 364 */       float f4 = m / 256.0F;
+/* 365 */       float f5 = (m + 15.99F) / 256.0F;
+/*     */ 
+/* 367 */       float f6 = (0.0F - f1) / 2.0F;
+/* 368 */       float f7 = f6 + f1;
+/* 369 */       float f8 = 0.0F - f1 / 2.0F;
+/* 370 */       float f9 = f8 + f1;
+/* 371 */       float f10 = -0.5F;
+/* 372 */       GL11.glTranslatef(-(i * 2 - 1) * 0.24F, -0.3F, 0.0F);
+/* 373 */       GL11.glRotatef((i * 2 - 1) * 10.0F, 0.0F, 1.0F, 0.0F);
+/*     */ 
+/* 375 */       localjy.b();
+/* 376 */       localjy.a(f6, f8, f10, f3, f5);
+/* 377 */       localjy.a(f7, f8, f10, f2, f5);
+/* 378 */       localjy.a(f7, f9, f10, f2, f4);
+/* 379 */       localjy.a(f6, f9, f10, f3, f4);
+/* 380 */       localjy.a();
+/* 381 */       GL11.glPopMatrix();
+/*     */     }
+/* 383 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+/* 384 */     GL11.glDisable(3042);
+/*     */   }
+/*     */ 
+/*     */   public void a()
+/*     */   {
+/* 390 */     this.d = this.c;
+/*     */ 
+/* 393 */     bz localbz = this.a.g;
+/* 394 */     gm localgm1 = localbz.f.b();
+/*     */ 
+/* 396 */     gm localgm2 = localgm1;
+/*     */ 
+/* 399 */     int i = (this.f == localbz.f.c) && (localgm2 == this.b) ? 1 : 0;
+/* 400 */     if ((this.b == null) && (localgm2 == null)) {
+/* 401 */       i = 1;
+/*     */     }
+/* 403 */     if ((localgm2 != null) && (this.b != null) && (localgm2 != this.b) && (localgm2.c == this.b.c)) {
+/* 404 */       this.b = localgm2;
+/* 405 */       i = 1;
+/*     */     }
+/*     */ 
+/* 408 */     float f1 = 0.4F;
+/* 409 */     float f2 = i != 0 ? 1.0F : 0.0F;
+/* 410 */     float f3 = f2 - this.c;
+/* 411 */     if (f3 < -f1) f3 = -f1;
+/* 412 */     if (f3 > f1) f3 = f1;
+/*     */ 
+/* 414 */     this.c += f3;
+/* 415 */     if (this.c < 0.1F) {
+/* 416 */       this.b = localgm2;
+/* 417 */       this.f = localbz.f.c;
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void b() {
+/* 422 */     this.c = 0.0F;
+/*     */   }
+/*     */ 
+/*     */   public void c() {
+/* 426 */     this.c = 0.0F;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mf
+ * JD-Core Version:    0.6.0
+ */

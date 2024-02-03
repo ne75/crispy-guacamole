@@ -1,0 +1,94 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class ck extends pj
+/*    */ {
+/*    */   protected ck(int paramInt1, int paramInt2)
+/*    */   {
+/* 11 */     super(paramInt1, paramInt2, ic.n);
+/*    */   }
+/*    */ 
+/*    */   public db d(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 15 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/* 16 */     float f = 0.125F;
+/*    */ 
+/* 18 */     if (i == 2) a(0.0F, 0.0F, 1.0F - f, 1.0F, 1.0F, 1.0F);
+/* 19 */     if (i == 3) a(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, f);
+/* 20 */     if (i == 4) a(1.0F - f, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+/* 21 */     if (i == 5) a(0.0F, 0.0F, 0.0F, f, 1.0F, 1.0F);
+/*    */ 
+/* 23 */     return super.d(paramdn, paramInt1, paramInt2, paramInt3);
+/*    */   }
+/*    */ 
+/*    */   public db f(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 27 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/* 28 */     float f = 0.125F;
+/*    */ 
+/* 30 */     if (i == 2) a(0.0F, 0.0F, 1.0F - f, 1.0F, 1.0F, 1.0F);
+/* 31 */     if (i == 3) a(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, f);
+/* 32 */     if (i == 4) a(1.0F - f, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+/* 33 */     if (i == 5) a(0.0F, 0.0F, 0.0F, f, 1.0F, 1.0F);
+/*    */ 
+/* 35 */     return super.f(paramdn, paramInt1, paramInt2, paramInt3);
+/*    */   }
+/*    */ 
+/*    */   public boolean a()
+/*    */   {
+/* 43 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/* 47 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public int g() {
+/* 51 */     return 8;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(dn paramdn, int paramInt1, int paramInt2, int paramInt3) {
+/* 55 */     if (paramdn.g(paramInt1 - 1, paramInt2, paramInt3))
+/* 56 */       return true;
+/* 57 */     if (paramdn.g(paramInt1 + 1, paramInt2, paramInt3))
+/* 58 */       return true;
+/* 59 */     if (paramdn.g(paramInt1, paramInt2, paramInt3 - 1)) {
+/* 60 */       return true;
+/*    */     }
+/* 62 */     return paramdn.g(paramInt1, paramInt2, paramInt3 + 1);
+/*    */   }
+/*    */ 
+/*    */   public void d(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+/*    */   {
+/* 68 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/*    */ 
+/* 70 */     if (((i == 0) || (paramInt4 == 2)) && (paramdn.g(paramInt1, paramInt2, paramInt3 + 1))) i = 2;
+/* 71 */     if (((i == 0) || (paramInt4 == 3)) && (paramdn.g(paramInt1, paramInt2, paramInt3 - 1))) i = 3;
+/* 72 */     if (((i == 0) || (paramInt4 == 4)) && (paramdn.g(paramInt1 + 1, paramInt2, paramInt3))) i = 4;
+/* 73 */     if (((i == 0) || (paramInt4 == 5)) && (paramdn.g(paramInt1 - 1, paramInt2, paramInt3))) i = 5;
+/*    */ 
+/* 75 */     paramdn.c(paramInt1, paramInt2, paramInt3, i);
+/*    */   }
+/*    */ 
+/*    */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/* 79 */     int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/* 80 */     int j = 0;
+/*    */ 
+/* 82 */     if ((i == 2) && (paramdn.g(paramInt1, paramInt2, paramInt3 + 1))) j = 1;
+/* 83 */     if ((i == 3) && (paramdn.g(paramInt1, paramInt2, paramInt3 - 1))) j = 1;
+/* 84 */     if ((i == 4) && (paramdn.g(paramInt1 + 1, paramInt2, paramInt3))) j = 1;
+/* 85 */     if ((i == 5) && (paramdn.g(paramInt1 - 1, paramInt2, paramInt3))) j = 1;
+/* 86 */     if (j == 0) {
+/* 87 */       b_(paramdn, paramInt1, paramInt2, paramInt3, i);
+/* 88 */       paramdn.e(paramInt1, paramInt2, paramInt3, 0);
+/*    */     }
+/*    */ 
+/* 91 */     super.a(paramdn, paramInt1, paramInt2, paramInt3, paramInt4);
+/*    */   }
+/*    */ 
+/*    */   public int a(Random paramRandom) {
+/* 95 */     return 1;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ck
+ * JD-Core Version:    0.6.0
+ */

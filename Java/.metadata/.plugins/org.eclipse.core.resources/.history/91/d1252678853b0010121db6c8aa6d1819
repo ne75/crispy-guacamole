@@ -1,0 +1,120 @@
+/*     */ import java.util.Random;
+/*     */ 
+/*     */ public class jm extends qg
+/*     */ {
+/*     */   protected jm(int paramInt1, int paramInt2)
+/*     */   {
+/*  12 */     super(paramInt1, paramInt2);
+/*  13 */     this.bh = paramInt2;
+/*     */ 
+/*  15 */     b(true);
+/*  16 */     float f = 0.5F;
+/*  17 */     a(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.25F, 0.5F + f);
+/*     */   }
+/*     */ 
+/*     */   protected boolean c(int paramInt) {
+/*  21 */     return paramInt == pj.aA.bi;
+/*     */   }
+/*     */ 
+/*     */   public void a(dn paramdn, int paramInt1, int paramInt2, int paramInt3, Random paramRandom) {
+/*  25 */     super.a(paramdn, paramInt1, paramInt2, paramInt3, paramRandom);
+/*  26 */     if (paramdn.l(paramInt1, paramInt2 + 1, paramInt3) >= 9)
+/*     */     {
+/*  28 */       int i = paramdn.e(paramInt1, paramInt2, paramInt3);
+/*  29 */       if (i < 7) {
+/*  30 */         float f = i(paramdn, paramInt1, paramInt2, paramInt3);
+/*     */ 
+/*  32 */         if (paramRandom.nextInt((int)(100.0F / f)) == 0) {
+/*  33 */           i++;
+/*  34 */           paramdn.c(paramInt1, paramInt2, paramInt3, i);
+/*     */         }
+/*     */       }
+/*     */     }
+/*     */   }
+/*     */ 
+/*     */   public void c_(dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*  42 */     paramdn.c(paramInt1, paramInt2, paramInt3, 7);
+/*     */   }
+/*     */ 
+/*     */   private float i(dn paramdn, int paramInt1, int paramInt2, int paramInt3)
+/*     */   {
+/*  47 */     float f1 = 1.0F;
+/*     */ 
+/*  49 */     int i = paramdn.a(paramInt1, paramInt2, paramInt3 - 1);
+/*  50 */     int j = paramdn.a(paramInt1, paramInt2, paramInt3 + 1);
+/*  51 */     int k = paramdn.a(paramInt1 - 1, paramInt2, paramInt3);
+/*  52 */     int m = paramdn.a(paramInt1 + 1, paramInt2, paramInt3);
+/*     */ 
+/*  54 */     int n = paramdn.a(paramInt1 - 1, paramInt2, paramInt3 - 1);
+/*  55 */     int i1 = paramdn.a(paramInt1 + 1, paramInt2, paramInt3 - 1);
+/*  56 */     int i2 = paramdn.a(paramInt1 + 1, paramInt2, paramInt3 + 1);
+/*  57 */     int i3 = paramdn.a(paramInt1 - 1, paramInt2, paramInt3 + 1);
+/*     */ 
+/*  59 */     int i4 = (k == this.bi) || (m == this.bi) ? 1 : 0;
+/*  60 */     int i5 = (i == this.bi) || (j == this.bi) ? 1 : 0;
+/*  61 */     int i6 = (n == this.bi) || (i1 == this.bi) || (i2 == this.bi) || (i3 == this.bi) ? 1 : 0;
+/*     */ 
+/*  63 */     for (int i7 = paramInt1 - 1; i7 <= paramInt1 + 1; i7++) {
+/*  64 */       for (int i8 = paramInt3 - 1; i8 <= paramInt3 + 1; i8++) {
+/*  65 */         int i9 = paramdn.a(i7, paramInt2 - 1, i8);
+/*     */ 
+/*  67 */         float f2 = 0.0F;
+/*  68 */         if (i9 == pj.aA.bi) {
+/*  69 */           f2 = 1.0F;
+/*  70 */           if (paramdn.e(i7, paramInt2 - 1, i8) > 0) f2 = 3.0F;
+/*     */         }
+/*     */ 
+/*  73 */         if ((i7 != paramInt1) || (i8 != paramInt3)) f2 /= 4.0F;
+/*     */ 
+/*  75 */         f1 += f2;
+/*     */       }
+/*     */     }
+/*  78 */     if ((i6 != 0) || ((i4 != 0) && (i5 != 0))) f1 /= 2.0F;
+/*     */ 
+/*  80 */     return f1;
+/*     */   }
+/*     */ 
+/*     */   public int a(int paramInt1, int paramInt2) {
+/*  84 */     if (paramInt2 < 0) paramInt2 = 7;
+/*  85 */     return this.bh + paramInt2;
+/*     */   }
+/*     */ 
+/*     */   public int g() {
+/*  89 */     return 6;
+/*     */   }
+/*     */ 
+/*     */   public void b(dn paramdn, int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
+/*  93 */     super.b(paramdn, paramInt1, paramInt2, paramInt3, paramInt4);
+/*     */ 
+/*  95 */     if (!paramdn.z)
+/*  96 */       for (int i = 0; i < 3; i++)
+/*  97 */         if (paramdn.l.nextInt(15) <= paramInt4) {
+/*  98 */           float f1 = 0.7F;
+/*  99 */           float f2 = paramdn.l.nextFloat() * f1 + (1.0F - f1) * 0.5F;
+/* 100 */           float f3 = paramdn.l.nextFloat() * f1 + (1.0F - f1) * 0.5F;
+/* 101 */           float f4 = paramdn.l.nextFloat() * f1 + (1.0F - f1) * 0.5F;
+/* 102 */           fh localfh = new fh(paramdn, paramInt1 + f2, paramInt2 + f3, paramInt3 + f4, new gm(eo.Q));
+/* 103 */           localfh.c = 10;
+/* 104 */           paramdn.a(localfh);
+/*     */         }
+/*     */   }
+/*     */ 
+/*     */   public int a(int paramInt, Random paramRandom)
+/*     */   {
+/* 110 */     if (paramInt == 7) {
+/* 111 */       return eo.R.ba;
+/*     */     }
+/*     */ 
+/* 114 */     return -1;
+/*     */   }
+/*     */ 
+/*     */   public int a(Random paramRandom) {
+/* 118 */     return 1;
+/*     */   }
+/*     */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     jm
+ * JD-Core Version:    0.6.0
+ */

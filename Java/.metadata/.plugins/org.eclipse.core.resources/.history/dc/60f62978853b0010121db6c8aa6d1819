@@ -1,0 +1,72 @@
+/*    */ import java.util.List;
+/*    */ 
+/*    */ public class lu
+/*    */   implements ij
+/*    */ {
+/*    */   private String a;
+/*    */   private int b;
+/*    */   private gm[] c;
+/*    */   private List d;
+/*    */ 
+/*    */   public lu(String paramString, int paramInt)
+/*    */   {
+/* 16 */     this.a = paramString;
+/* 17 */     this.b = paramInt;
+/* 18 */     this.c = new gm[paramInt];
+/*    */   }
+/*    */ 
+/*    */   public gm c_(int paramInt)
+/*    */   {
+/* 31 */     return this.c[paramInt];
+/*    */   }
+/*    */ 
+/*    */   public gm a(int paramInt1, int paramInt2) {
+/* 35 */     if (this.c[paramInt1] != null) {
+/* 36 */       if (this.c[paramInt1].a <= paramInt2) {
+/* 37 */         localgm = this.c[paramInt1];
+/* 38 */         this.c[paramInt1] = null;
+/* 39 */         r_();
+/* 40 */         return localgm;
+/*    */       }
+/* 42 */       gm localgm = this.c[paramInt1].a(paramInt2);
+/* 43 */       if (this.c[paramInt1].a == 0) this.c[paramInt1] = null;
+/* 44 */       r_();
+/* 45 */       return localgm;
+/*    */     }
+/*    */ 
+/* 48 */     return null;
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt, gm paramgm) {
+/* 52 */     this.c[paramInt] = paramgm;
+/* 53 */     if ((paramgm != null) && (paramgm.a > d())) paramgm.a = d();
+/* 54 */     r_();
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 58 */     return this.b;
+/*    */   }
+/*    */ 
+/*    */   public String c() {
+/* 62 */     return this.a;
+/*    */   }
+/*    */ 
+/*    */   public int d() {
+/* 66 */     return 64;
+/*    */   }
+/*    */ 
+/*    */   public void r_() {
+/* 70 */     if (this.d != null) for (int i = 0; i < this.d.size(); i++)
+/* 71 */         ((fp)this.d.get(i)).a(this);
+/*    */   }
+/*    */ 
+/*    */   public boolean a_(eu parameu)
+/*    */   {
+/* 76 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     lu
+ * JD-Core Version:    0.6.0
+ */

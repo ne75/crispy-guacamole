@@ -1,0 +1,22 @@
+/*    */ public class jv extends ey
+/*    */ {
+/*    */   public jv(dn paramdn)
+/*    */   {
+/*  7 */     super(paramdn);
+/*  8 */     this.I = "/mob/zombie.png";
+/*  9 */     this.av = 0.5F;
+/* 10 */     this.c = 50;
+/* 11 */     this.S *= 10;
+/* 12 */     this.aX *= 6.0F;
+/* 13 */     a(this.aY * 6.0F, this.aZ * 6.0F);
+/*    */   }
+/*    */ 
+/*    */   protected float a(int paramInt1, int paramInt2, int paramInt3) {
+/* 17 */     return this.aB.c(paramInt1, paramInt2, paramInt3) - 0.5F;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     jv
+ * JD-Core Version:    0.6.0
+ */

@@ -1,0 +1,18 @@
+package main;
+
+import java.io.*;
+import java.util.*;
+
+public class HouseholdIncomeReport {
+    public static void main(String[] args) throws FileNotFoundException {
+	File f = new File("survey.dat");
+	
+	Scanner s = new Scanner(f);
+	
+	while (s.hasNext()){
+	    
+	}
+
+    }
+
+}

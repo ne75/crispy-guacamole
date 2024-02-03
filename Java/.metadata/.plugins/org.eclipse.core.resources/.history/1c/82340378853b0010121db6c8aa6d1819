@@ -1,0 +1,21 @@
+public abstract interface bm
+{
+  public abstract boolean a(int paramInt1, int paramInt2);
+
+  public abstract ib b(int paramInt1, int paramInt2);
+
+  public abstract void a(bm parambm, int paramInt1, int paramInt2);
+
+  public abstract boolean a(boolean paramBoolean, ru paramru);
+
+  public abstract boolean a();
+
+  public abstract boolean b();
+
+  public abstract String c();
+}
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     bm
+ * JD-Core Version:    0.6.0
+ */

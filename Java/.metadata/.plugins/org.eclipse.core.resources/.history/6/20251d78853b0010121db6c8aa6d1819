@@ -1,0 +1,34 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class gh extends kz
+/*    */ {
+/*    */   public boolean a(dn paramdn, Random paramRandom, int paramInt1, int paramInt2, int paramInt3)
+/*    */   {
+/* 11 */     for (int i = 0; i < 20; i++) {
+/* 12 */       int j = paramInt1 + paramRandom.nextInt(4) - paramRandom.nextInt(4);
+/* 13 */       int k = paramInt2;
+/* 14 */       int m = paramInt3 + paramRandom.nextInt(4) - paramRandom.nextInt(4);
+/* 15 */       if ((!paramdn.d(j, k, m)) || (
+/* 16 */         (paramdn.f(j - 1, k - 1, m) != ic.f) && (paramdn.f(j + 1, k - 1, m) != ic.f) && (paramdn.f(j, k - 1, m - 1) != ic.f) && (paramdn.f(j, k - 1, m + 1) != ic.f)))
+/*    */       {
+/*    */         continue;
+/*    */       }
+/*    */ 
+/* 21 */       int n = 2 + paramRandom.nextInt(paramRandom.nextInt(3) + 1);
+/* 22 */       for (int i1 = 0; i1 < n; i1++) {
+/* 23 */         if (pj.aX.g(paramdn, j, k + i1, m)) {
+/* 24 */           paramdn.b(j, k + i1, m, pj.aX.bi);
+/*    */         }
+/*    */ 
+/*    */       }
+/*    */ 
+/*    */     }
+/*    */ 
+/* 31 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     gh
+ * JD-Core Version:    0.6.0
+ */

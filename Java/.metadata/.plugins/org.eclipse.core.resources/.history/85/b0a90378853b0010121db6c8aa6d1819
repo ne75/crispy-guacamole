@@ -1,0 +1,38 @@
+/*    */ import java.util.Random;
+/*    */ 
+/*    */ public class bs extends eo
+/*    */ {
+/*    */   public bs(int paramInt)
+/*    */   {
+/*  9 */     super(paramInt);
+/* 10 */     this.bc = 64;
+/*    */   }
+/*    */ 
+/*    */   public boolean b() {
+/* 14 */     return true;
+/*    */   }
+/*    */ 
+/*    */   public boolean c() {
+/* 18 */     return true;
+/*    */   }
+/*    */ 
+/*    */   public gm a(gm paramgm, dn paramdn, eu parameu) {
+/* 22 */     if (parameu.x != null) {
+/* 23 */       int i = parameu.x.k();
+/* 24 */       paramgm.b(i);
+/* 25 */       parameu.E();
+/*    */     } else {
+/* 27 */       paramdn.a(parameu, "random.bow", 0.5F, 0.4F / (b.nextFloat() * 0.4F + 0.8F));
+/* 28 */       if (!paramdn.z) {
+/* 29 */         paramdn.a(new ik(paramdn, parameu));
+/*    */       }
+/* 31 */       parameu.E();
+/*    */     }
+/* 33 */     return paramgm;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     bs
+ * JD-Core Version:    0.6.0
+ */

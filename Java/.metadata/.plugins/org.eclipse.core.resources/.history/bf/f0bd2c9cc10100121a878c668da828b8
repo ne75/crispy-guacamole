@@ -1,0 +1,26 @@
+package main;
+
+/*
+ * Program 54c (Circles)
+ * Nikita Ermoshkin
+ * 09-18-12
+ * JDK 7, Mac OS 10.8
+ * 
+ * This program takes an input radius in the form of an int, and return and prints
+ * the radius, area, and circumference of the circle
+ * 
+ */
+
+import java.util.*;
+
+public class Cirlces {
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);						//new Scanner object called scanner
+		int r = scanner.nextInt();										//variable to store input radius
+		double area = (r ^ 2) * Math.PI; 								//variable to store the area
+		double circumference = 2 * r * Math.PI;							//variable to sore teh circumference
+		
+		System.out.println("");
+	}
+
+}

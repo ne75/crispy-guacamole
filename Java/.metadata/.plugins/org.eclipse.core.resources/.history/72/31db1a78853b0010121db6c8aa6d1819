@@ -1,0 +1,29 @@
+/*    */ import java.io.DataInputStream;
+/*    */ import java.io.DataOutputStream;
+/*    */ 
+/*    */ public class fd extends hj
+/*    */ {
+/*    */   public long a;
+/*    */ 
+/*    */   public void a(DataInputStream paramDataInputStream)
+/*    */   {
+/* 16 */     this.a = paramDataInputStream.readLong();
+/*    */   }
+/*    */ 
+/*    */   public void a(DataOutputStream paramDataOutputStream) {
+/* 20 */     paramDataOutputStream.writeLong(this.a);
+/*    */   }
+/*    */ 
+/*    */   public void a(od paramod) {
+/* 24 */     paramod.a(this);
+/*    */   }
+/*    */ 
+/*    */   public int a() {
+/* 28 */     return 8;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     fd
+ * JD-Core Version:    0.6.0
+ */

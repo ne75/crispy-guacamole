@@ -1,0 +1,33 @@
+/*    */ import java.awt.Canvas;
+/*    */ import java.awt.Dimension;
+/*    */ import java.awt.Graphics;
+/*    */ import java.awt.image.BufferedImage;
+/*    */ import java.io.IOException;
+/*    */ import javax.imageio.ImageIO;
+/*    */ 
+/*    */ class ef extends Canvas
+/*    */ {
+/*    */   private BufferedImage a;
+/*    */ 
+/*    */   public ef()
+/*    */   {
+/*    */     try
+/*    */     {
+/* 22 */       this.a = ImageIO.read(be.class.getResource("/gui/logo.png"));
+/*    */     } catch (IOException localIOException) {
+/*    */     }
+/* 25 */     int i = 100;
+/* 26 */     setPreferredSize(new Dimension(i, i));
+/* 27 */     setMinimumSize(new Dimension(i, i));
+/*    */   }
+/*    */ 
+/*    */   public void paint(Graphics paramGraphics) {
+/* 31 */     super.paint(paramGraphics);
+/* 32 */     paramGraphics.drawImage(this.a, getWidth() / 2 - this.a.getWidth() / 2, 32, null);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     ef
+ * JD-Core Version:    0.6.0
+ */

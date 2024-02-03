@@ -1,0 +1,7 @@
+package main;
+
+import info.gridworld.grid.UnboundedGrid;
+
+public class MyUnboundedGrid extends UnboundedGrid<E> {
+
+}

@@ -1,0 +1,89 @@
+/*    */ import java.io.File;
+/*    */ import java.util.List;
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ 
+/*    */ public class mr extends by
+/*    */ {
+/*    */   protected by a;
+/* 15 */   protected String h = "Select world";
+/* 16 */   private boolean i = false;
+/*    */ 
+/*    */   public mr(by paramby)
+/*    */   {
+/* 20 */     this.a = paramby;
+/*    */   }
+/*    */ 
+/*    */   public void a()
+/*    */   {
+/* 25 */     n localn = n.a();
+/* 26 */     this.h = localn.a("selectWorld.title");
+/*    */ 
+/* 28 */     String str1 = localn.a("selectWorld.empty");
+/* 29 */     String str2 = localn.a("selectWorld.world");
+/*    */ 
+/* 31 */     File localFile = Minecraft.b();
+/*    */ 
+/* 33 */     for (int j = 0; j < 5; j++) {
+/* 34 */       jw localjw = dn.a(localFile, "World" + (j + 1));
+/* 35 */       if (localjw == null) {
+/* 36 */         this.e.add(new hg(j, this.c / 2 - 100, this.d / 6 + 24 * j, "- " + str1 + " -"));
+/*    */       } else {
+/* 38 */         String str3 = str2 + " " + (j + 1);
+/* 39 */         long l = localjw.f("SizeOnDisk");
+/*    */ 
+/* 41 */         str3 = str3 + " (" + (float)(l / 1024L * 100L / 1024L) / 100.0F + " MB)";
+/*    */ 
+/* 43 */         this.e.add(new hg(j, this.c / 2 - 100, this.d / 6 + 24 * j, str3));
+/*    */       }
+/*    */     }
+/*    */ 
+/* 47 */     j();
+/*    */   }
+/*    */ 
+/*    */   protected String d(int paramInt) {
+/* 51 */     File localFile = Minecraft.b();
+/* 52 */     return dn.a(localFile, "World" + paramInt) != null ? "World" + paramInt : null;
+/*    */   }
+/*    */ 
+/*    */   public void j() {
+/* 56 */     n localn = n.a();
+/*    */ 
+/* 58 */     this.e.add(new hg(5, this.c / 2 - 100, this.d / 6 + 120 + 12, localn.a("selectWorld.delete")));
+/* 59 */     this.e.add(new hg(6, this.c / 2 - 100, this.d / 6 + 168, localn.a("gui.cancel")));
+/*    */   }
+/*    */ 
+/*    */   protected void a(hg paramhg) {
+/* 63 */     if (!paramhg.g) return;
+/* 64 */     if (paramhg.f < 5)
+/* 65 */       c(paramhg.f + 1);
+/* 66 */     else if (paramhg.f == 5)
+/* 67 */       this.b.a(new ko(this));
+/* 68 */     else if (paramhg.f == 6)
+/* 69 */       this.b.a(this.a);
+/*    */   }
+/*    */ 
+/*    */   public void c(int paramInt)
+/*    */   {
+/* 74 */     this.b.a(null);
+/* 75 */     if (this.i) return;
+/* 76 */     this.i = true;
+/* 77 */     this.b.b = new kn(this.b);
+/*    */ 
+/* 79 */     this.b.b("World" + paramInt);
+/* 80 */     this.b.a(null);
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt1, int paramInt2, float paramFloat)
+/*    */   {
+/* 85 */     i();
+/*    */ 
+/* 87 */     a(this.g, this.h, this.c / 2, 20, 16777215);
+/*    */ 
+/* 89 */     super.a(paramInt1, paramInt2, paramFloat);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     mr
+ * JD-Core Version:    0.6.0
+ */

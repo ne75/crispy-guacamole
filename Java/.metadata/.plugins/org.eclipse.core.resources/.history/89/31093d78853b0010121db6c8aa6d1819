@@ -1,0 +1,25 @@
+/*    */ public class sn
+/*    */ {
+/*    */   public int a;
+/*    */   public int b;
+/*    */ 
+/*    */   public sn(int paramInt1, int paramInt2)
+/*    */   {
+/*  9 */     this.a = paramInt1;
+/* 10 */     this.b = paramInt2;
+/*    */   }
+/*    */ 
+/*    */   public int hashCode() {
+/* 14 */     return this.a << 8 | this.b;
+/*    */   }
+/*    */ 
+/*    */   public boolean equals(Object paramObject) {
+/* 18 */     sn localsn = (sn)paramObject;
+/* 19 */     return (localsn.a == this.a) && (localsn.b == this.b);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     sn
+ * JD-Core Version:    0.6.0
+ */

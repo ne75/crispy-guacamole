@@ -1,0 +1,25 @@
+/*    */ public class aj extends cl
+/*    */ {
+/*  7 */   private static pj[] bg = { pj.w, pj.aj, pj.ak, pj.t, pj.ao, pj.H, pj.ai, pj.I, pj.ah, pj.G, pj.aw, pj.ax, pj.aT, pj.bb, pj.N, pj.O };
+/*    */ 
+/*    */   protected aj(int paramInt, ay paramay)
+/*    */   {
+/* 14 */     super(paramInt, 2, paramay, bg);
+/*    */   }
+/*    */ 
+/*    */   public boolean a(pj parampj) {
+/* 18 */     if (parampj == pj.ap) return this.a.d() == 3;
+/* 19 */     if ((parampj == pj.ax) || (parampj == pj.aw)) return this.a.d() >= 2;
+/* 20 */     if ((parampj == pj.ah) || (parampj == pj.G)) return this.a.d() >= 2;
+/* 21 */     if ((parampj == pj.ai) || (parampj == pj.H)) return this.a.d() >= 1;
+/* 22 */     if ((parampj == pj.O) || (parampj == pj.N)) return this.a.d() >= 1;
+/* 23 */     if ((parampj == pj.aN) || (parampj == pj.aO)) return this.a.d() >= 2;
+/* 24 */     if (parampj.bt == ic.d) return true;
+/* 25 */     return parampj.bt == ic.e;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     aj
+ * JD-Core Version:    0.6.0
+ */

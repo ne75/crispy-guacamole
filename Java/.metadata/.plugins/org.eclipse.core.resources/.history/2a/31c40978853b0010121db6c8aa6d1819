@@ -1,0 +1,54 @@
+/*    */ import java.util.List;
+/*    */ import net.minecraft.client.Minecraft;
+/*    */ 
+/*    */ public class dh extends by
+/*    */ {
+/*    */   private String a;
+/*    */   private String h;
+/*    */ 
+/*    */   public dh(String paramString1, String paramString2, Object[] paramArrayOfObject)
+/*    */   {
+/* 13 */     n localn = n.a();
+/*    */ 
+/* 15 */     this.a = localn.a(paramString1);
+/* 16 */     if (paramArrayOfObject != null)
+/* 17 */       this.h = localn.a(paramString2, paramArrayOfObject);
+/*    */     else
+/* 19 */       this.h = localn.a(paramString2);
+/*    */   }
+/*    */ 
+/*    */   public void g()
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   protected void a(char paramChar, int paramInt)
+/*    */   {
+/*    */   }
+/*    */ 
+/*    */   public void a() {
+/* 31 */     n localn = n.a();
+/*    */ 
+/* 33 */     this.e.clear();
+/* 34 */     this.e.add(new hg(0, this.c / 2 - 100, this.d / 4 + 120 + 12, localn.a("gui.toMenu")));
+/*    */   }
+/*    */ 
+/*    */   protected void a(hg paramhg) {
+/* 38 */     if (paramhg.f == 0)
+/* 39 */       this.b.a(new dz());
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt1, int paramInt2, float paramFloat)
+/*    */   {
+/* 44 */     i();
+/*    */ 
+/* 46 */     a(this.g, this.a, this.c / 2, this.d / 2 - 50, 16777215);
+/* 47 */     a(this.g, this.h, this.c / 2, this.d / 2 - 10, 16777215);
+/*    */ 
+/* 49 */     super.a(paramInt1, paramInt2, paramFloat);
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     dh
+ * JD-Core Version:    0.6.0
+ */

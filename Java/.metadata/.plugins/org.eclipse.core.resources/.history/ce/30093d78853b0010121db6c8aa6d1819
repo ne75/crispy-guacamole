@@ -1,0 +1,31 @@
+/*    */ import org.lwjgl.opengl.GL11;
+/*    */ 
+/*    */ public class sm extends ev
+/*    */ {
+/*    */   public sm()
+/*    */   {
+/*  9 */     super(new na(), 1.0F);
+/* 10 */     a(new na());
+/*    */   }
+/*    */ 
+/*    */   protected float a(bn parambn) {
+/* 14 */     return 180.0F;
+/*    */   }
+/*    */ 
+/*    */   protected boolean a(bn parambn, int paramInt, float paramFloat) {
+/* 18 */     if (paramInt != 0) return false;
+/* 19 */     if (paramInt != 0) return false;
+/* 20 */     a("/mob/spider_eyes.png");
+/* 21 */     float f = (1.0F - parambn.a(1.0F)) * 0.5F;
+/* 22 */     GL11.glEnable(3042);
+/* 23 */     GL11.glDisable(3008);
+/* 24 */     GL11.glBlendFunc(770, 771);
+/* 25 */     GL11.glColor4f(1.0F, 1.0F, 1.0F, f);
+/* 26 */     return true;
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     sm
+ * JD-Core Version:    0.6.0
+ */

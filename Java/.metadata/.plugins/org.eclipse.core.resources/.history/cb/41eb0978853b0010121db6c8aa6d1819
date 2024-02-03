@@ -1,0 +1,42 @@
+/*    */ import java.util.HashMap;
+/*    */ import java.util.Map;
+/*    */ 
+/*    */ public class dj
+/*    */ {
+/* 14 */   private static final dj a = new dj();
+/*    */ 
+/* 16 */   private Map b = new HashMap();
+/*    */ 
+/*    */   public static final dj a() {
+/* 19 */     return a;
+/*    */   }
+/*    */ 
+/*    */   private dj()
+/*    */   {
+/* 24 */     a(pj.H.bi, new gm(eo.m));
+/* 25 */     a(pj.G.bi, new gm(eo.n));
+/* 26 */     a(pj.aw.bi, new gm(eo.l));
+/* 27 */     a(pj.E.bi, new gm(pj.M));
+/* 28 */     a(eo.ao.ba, new gm(eo.ap));
+/* 29 */     a(eo.aS.ba, new gm(eo.aT));
+/* 30 */     a(pj.w.bi, new gm(pj.t));
+/* 31 */     a(eo.aG.ba, new gm(eo.aF));
+/* 32 */     a(pj.aV.bi, new gm(eo.aU, 1, 2));
+/* 33 */     a(pj.J.bi, new gm(eo.k, 1, 1));
+/*    */   }
+/*    */ 
+/*    */   public void a(int paramInt, gm paramgm)
+/*    */   {
+/* 39 */     this.b.put(Integer.valueOf(paramInt), paramgm);
+/*    */   }
+/*    */ 
+/*    */   public gm a(int paramInt)
+/*    */   {
+/* 47 */     return (gm)this.b.get(Integer.valueOf(paramInt));
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     dj
+ * JD-Core Version:    0.6.0
+ */

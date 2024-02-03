@@ -1,0 +1,32 @@
+/*    */ public class sk extends eq
+/*    */ {
+/*    */   private final ij d;
+/*    */ 
+/*    */   public sk(ij paramij1, ij paramij2, int paramInt1, int paramInt2, int paramInt3)
+/*    */   {
+/* 10 */     super(paramij2, paramInt1, paramInt2, paramInt3);
+/* 11 */     this.d = paramij1;
+/*    */   }
+/*    */ 
+/*    */   public boolean a(gm paramgm) {
+/* 15 */     return false;
+/*    */   }
+/*    */ 
+/*    */   public void a() {
+/* 19 */     for (int i = 0; i < this.d.a(); i++) {
+/* 20 */       gm localgm = this.d.c_(i);
+/* 21 */       if (localgm != null) {
+/* 22 */         this.d.a(i, 1);
+/*    */ 
+/* 24 */         if (!localgm.a().i())
+/*    */           continue;
+/* 26 */         this.d.a(i, new gm(localgm.a().h()));
+/*    */       }
+/*    */     }
+/*    */   }
+/*    */ }
+
+/* Location:           /Users/Nikita/Downloads/mcp28/jars/bin/minecraft.jar
+ * Qualified Name:     sk
+ * JD-Core Version:    0.6.0
+ */
