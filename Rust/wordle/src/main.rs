@@ -13,6 +13,15 @@ use crossterm::style::{SetForegroundColor, SetBackgroundColor, ResetColor, Color
 use std::thread::sleep;
 use std::time;
 
+/*
+ * 
+ * Keyboard layout. generate this programmatically so it's easy to change it
+
+ q  w  e  r  t  y  u  i  o  p
+  a  s  d  f  g  h  j  k  l
+   z  x  c  v  b  n  m  
+ */
+
 #[derive(Copy, Clone)]
 enum LetterResult {
     None, WrongPlace, RightPlace
